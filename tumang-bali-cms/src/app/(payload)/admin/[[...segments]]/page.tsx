@@ -29,8 +29,9 @@ const serverFunction: ServerFunctionClient = async function (args) {
   })
 }
 
-const Page = ({ params, searchParams }: Args) => (
-  <RootPage config={config} importMap={importMap} serverFunction={serverFunction} params={params} searchParams={searchParams} />
-)
+const Page = ({ params, searchParams }: Args) => {
+  const RootPageAny = RootPage as any
+  return <RootPageAny config={config} importMap={importMap} serverFunction={serverFunction} params={params} searchParams={searchParams} />
+}
 
 export default Page
