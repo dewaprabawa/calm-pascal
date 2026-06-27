@@ -38,49 +38,39 @@ async function seed() {
     data: {
       title: 'Morning Market Tour & Cooking Masterclass',
       durationHours: 5,
-      price: 65,
+      price: 350,
       instructor: instructor1.id,
       includedItems: [{ item: 'Market Tour' }, { item: 'Welcome Drink' }, { item: 'Lunch' }, { item: 'Recipe Book' }],
       excludedItems: [{ item: 'Hotel Pickup (Available for extra fee)' }],
     },
   })
 
-  const activity2 = await payload.create({
-    collection: 'activities',
-    data: {
-      title: 'Evening Vegetarian Balinese Feast',
-      durationHours: 3.5,
-      price: 55,
-      instructor: instructor2.id,
-      includedItems: [{ item: 'Welcome Drink' }, { item: 'Dinner' }, { item: 'Digital Recipes' }],
-      excludedItems: [{ item: 'Hotel Pickup' }],
-    },
-  })
+
 
   // 3. Create Recipes (Menu)
   const menuItems = [
     // Regular
-    { title: 'Sup Jamur', description: 'Mushroom Soup', type: 'regular' },
-    { title: 'Tempe Manis', description: 'Sweet Fried Tempe', type: 'regular' },
-    { title: 'Sayur Urap', description: 'Mix Vegetables in Coconut Spices', type: 'regular' },
-    { title: 'Kare Ayam', description: 'Chicken Kare', type: 'regular' },
-    { title: 'Sate Ayam', description: 'Chicken Satay', type: 'regular' },
-    { title: 'Pepes Ikan', description: 'Steamed Fish in Banana Leaf', type: 'regular' },
-    { title: 'Nasi Goreng atau Nasi Kuning', description: 'Fried Rice or Yellow Rice', type: 'regular' },
-    { title: 'Pergedel Jagung', description: 'Fried Dumpling Corn', type: 'regular' },
-    { title: 'Sambal Matah', description: 'Balinese Raw Sambal', type: 'regular' },
-    { title: 'Dadar Gulung', description: 'Rolled Cake with Coconut and Palm Sugar', type: 'regular' },
+    { title: 'Sup Jamur', description: 'Mushroom Soup', type: 'regular', ingredients: [{item: 'Oyster mushrooms', quantity: '200g'}, {item: 'Coconut milk', quantity: '100ml'}, {item: 'Lemongrass', quantity: '1 stalk'}, {item: 'Galangal', quantity: '1 slice'}, {item: 'Garlic', quantity: '2 cloves'}, {item: 'Shallots', quantity: '4 cloves'}] },
+    { title: 'Tempe Manis', description: 'Sweet Fried Tempe', type: 'regular', ingredients: [{item: 'Tempeh', quantity: '250g'}, {item: 'Sweet soy sauce (Kecap Manis)', quantity: '3 tbsp'}, {item: 'Palm sugar', quantity: '1 tbsp'}, {item: 'Garlic', quantity: '3 cloves'}, {item: 'Red chili', quantity: '2 pcs'}] },
+    { title: 'Sayur Urap', description: 'Mix Vegetables in Coconut Spices', type: 'regular', ingredients: [{item: 'Long beans', quantity: '100g'}, {item: 'Bean sprouts', quantity: '50g'}, {item: 'Grated coconut', quantity: '100g'}, {item: 'Lesser galangal (Kencur)', quantity: '1 tsp'}, {item: 'Lime leaves', quantity: '2 pcs'}, {item: 'Palm sugar', quantity: '1 tbsp'}] },
+    { title: 'Kare Ayam', description: 'Chicken Kare', type: 'regular', ingredients: [{item: 'Chicken breast', quantity: '300g'}, {item: 'Coconut milk', quantity: '200ml'}, {item: 'Turmeric', quantity: '1 inch'}, {item: 'Coriander seeds', quantity: '1 tsp'}, {item: 'Lemongrass', quantity: '1 stalk'}, {item: 'Lime juice', quantity: '1 tbsp'}] },
+    { title: 'Sate Ayam', description: 'Chicken Satay', type: 'regular', ingredients: [{item: 'Chicken breast', quantity: '300g'}, {item: 'Bamboo skewers', quantity: '10 pcs'}, {item: 'Sweet soy sauce', quantity: '2 tbsp'}, {item: 'Garlic', quantity: '2 cloves'}, {item: 'Peanut sauce', quantity: '100g'}] },
+    { title: 'Pepes Ikan', description: 'Steamed Fish in Banana Leaf', type: 'regular', ingredients: [{item: 'White fish fillet', quantity: '300g'}, {item: 'Banana leaves', quantity: '2 large'}, {item: 'Tomato', quantity: '1 pc'}, {item: 'Lemon basil (Kemangi)', quantity: '1 handful'}, {item: 'Turmeric paste', quantity: '2 tbsp'}] },
+    { title: 'Nasi Goreng atau Nasi Kuning', description: 'Fried Rice or Yellow Rice', type: 'regular', ingredients: [{item: 'Cooked white rice', quantity: '2 cups'}, {item: 'Egg', quantity: '1 pc'}, {item: 'Sweet soy sauce', quantity: '1 tbsp'}, {item: 'Shallots', quantity: '3 cloves'}, {item: 'Garlic', quantity: '2 cloves'}, {item: 'Shrimp paste (Terasi)', quantity: '1/2 tsp'}] },
+    { title: 'Pergedel Jagung', description: 'Fried Dumpling Corn', type: 'regular', ingredients: [{item: 'Sweet corn', quantity: '2 cobs'}, {item: 'Flour', quantity: '3 tbsp'}, {item: 'Egg', quantity: '1 pc'}, {item: 'Celery leaves', quantity: '1 stalk'}, {item: 'Garlic', quantity: '2 cloves'}, {item: 'White pepper', quantity: '1/2 tsp'}] },
+    { title: 'Sambal Matah', description: 'Balinese Raw Sambal', type: 'regular', ingredients: [{item: 'Shallots', quantity: '10 cloves'}, {item: "Bird's eye chili", quantity: '5 pcs'}, {item: 'Lemongrass', quantity: '2 stalks'}, {item: 'Shrimp paste', quantity: '1/2 tsp'}, {item: 'Coconut oil', quantity: '3 tbsp'}, {item: 'Kaffir lime', quantity: '1 pc'}] },
+    { title: 'Dadar Gulung', description: 'Rolled Cake with Coconut and Palm Sugar', type: 'regular', ingredients: [{item: 'Pandan juice', quantity: '50ml'}, {item: 'Flour', quantity: '1 cup'}, {item: 'Egg', quantity: '1 pc'}, {item: 'Coconut milk', quantity: '100ml'}, {item: 'Grated coconut', quantity: '1 cup'}, {item: 'Palm sugar', quantity: '100g'}] },
     // Vegetarian
-    { title: 'Sup Sayur', description: 'Vegetable Soup', type: 'vegetarian' },
-    { title: 'Tempe Manis (Veg)', description: 'Sweet Fried Tempe', type: 'vegetarian' },
-    { title: 'Sayur Urap (Veg)', description: 'Mix Vegetables in Coconut Spices', type: 'vegetarian' },
-    { title: 'Sate Tempe', description: 'Soybean Cake Skewer with Peanut Sauce', type: 'vegetarian' },
-    { title: 'Tofu Pepes', description: 'Steamed Tofu With Mushroom in Banana Leaf', type: 'vegetarian' },
-    { title: 'Kare Tahu', description: 'Tofu Kare', type: 'vegetarian' },
-    { title: 'Nasi Kuning (Veg)', description: 'Yellow Rice', type: 'vegetarian' },
-    { title: 'Pergedel Jagung (Veg)', description: 'Fried Dumpling Corn', type: 'vegetarian' },
-    { title: 'Sambal Matah (Veg)', description: 'Balinese Raw Sambal', type: 'vegetarian' },
-    { title: 'Dadar Gulung (Veg)', description: 'Rolled Cake with Coconut and Palm Sugar', type: 'vegetarian' },
+    { title: 'Sup Sayur', description: 'Vegetable Soup', type: 'vegetarian', ingredients: [{item: 'Carrots', quantity: '100g'}, {item: 'Cabbage', quantity: '100g'}, {item: 'Potatoes', quantity: '2 pcs'}, {item: 'Vegetable broth', quantity: '500ml'}, {item: 'Garlic', quantity: '2 cloves'}, {item: 'Celery', quantity: '1 stalk'}] },
+    { title: 'Tempe Manis', description: 'Sweet Fried Tempe', type: 'vegetarian', ingredients: [{item: 'Tempeh', quantity: '250g'}, {item: 'Sweet soy sauce (Kecap Manis)', quantity: '3 tbsp'}, {item: 'Palm sugar', quantity: '1 tbsp'}, {item: 'Garlic', quantity: '3 cloves'}, {item: 'Red chili', quantity: '2 pcs'}] },
+    { title: 'Sayur Urap', description: 'Mix Vegetables in Coconut Spices', type: 'vegetarian', ingredients: [{item: 'Long beans', quantity: '100g'}, {item: 'Bean sprouts', quantity: '50g'}, {item: 'Grated coconut', quantity: '100g'}, {item: 'Lesser galangal (Kencur)', quantity: '1 tsp'}, {item: 'Lime leaves', quantity: '2 pcs'}, {item: 'Palm sugar', quantity: '1 tbsp'}] },
+    { title: 'Sate Tempe', description: 'Soybean Cake Skewer with Peanut Sauce', type: 'vegetarian', ingredients: [{item: 'Tempeh', quantity: '300g'}, {item: 'Bamboo skewers', quantity: '10 pcs'}, {item: 'Sweet soy sauce', quantity: '2 tbsp'}, {item: 'Coriander powder', quantity: '1 tsp'}, {item: 'Peanut sauce', quantity: '100g'}] },
+    { title: 'Tofu Pepes', description: 'Steamed Tofu With Mushroom in Banana Leaf', type: 'vegetarian', ingredients: [{item: 'Firm Tofu', quantity: '300g'}, {item: 'Oyster mushrooms', quantity: '100g'}, {item: 'Banana leaves', quantity: '2 large'}, {item: 'Tomato', quantity: '1 pc'}, {item: 'Lemon basil (Kemangi)', quantity: '1 handful'}, {item: 'Turmeric paste', quantity: '2 tbsp'}] },
+    { title: 'Kare Tahu', description: 'Tofu Kare', type: 'vegetarian', ingredients: [{item: 'Firm Tofu', quantity: '300g'}, {item: 'Coconut milk', quantity: '200ml'}, {item: 'Turmeric', quantity: '1 inch'}, {item: 'Coriander seeds', quantity: '1 tsp'}, {item: 'Lemongrass', quantity: '1 stalk'}, {item: 'Lime juice', quantity: '1 tbsp'}] },
+    { title: 'Nasi Kuning', description: 'Yellow Rice', type: 'vegetarian', ingredients: [{item: 'White rice', quantity: '2 cups'}, {item: 'Coconut milk', quantity: '100ml'}, {item: 'Turmeric juice', quantity: '2 tbsp'}, {item: 'Lemongrass', quantity: '1 stalk'}, {item: 'Pandan leaf', quantity: '1 pc'}, {item: 'Lime leaves', quantity: '2 pcs'}] },
+    { title: 'Pergedel Jagung', description: 'Fried Dumpling Corn', type: 'vegetarian', ingredients: [{item: 'Sweet corn', quantity: '2 cobs'}, {item: 'Flour', quantity: '3 tbsp'}, {item: 'Celery leaves', quantity: '1 stalk'}, {item: 'Garlic', quantity: '2 cloves'}, {item: 'White pepper', quantity: '1/2 tsp'}] },
+    { title: 'Sambal Matah', description: 'Balinese Raw Sambal', type: 'vegetarian', ingredients: [{item: 'Shallots', quantity: '10 cloves'}, {item: "Bird's eye chili", quantity: '5 pcs'}, {item: 'Lemongrass', quantity: '2 stalks'}, {item: 'Coconut oil', quantity: '3 tbsp'}, {item: 'Kaffir lime', quantity: '1 pc'}, {item: 'Salt', quantity: '1/2 tsp'}] },
+    { title: 'Dadar Gulung', description: 'Rolled Cake with Coconut and Palm Sugar', type: 'vegetarian', ingredients: [{item: 'Pandan juice', quantity: '50ml'}, {item: 'Flour', quantity: '1 cup'}, {item: 'Coconut milk', quantity: '100ml'}, {item: 'Grated coconut', quantity: '1 cup'}, {item: 'Palm sugar', quantity: '100g'}, {item: 'Salt', quantity: '1/4 tsp'}] },
   ];
 
   for (const item of menuItems) {
@@ -89,7 +79,9 @@ async function seed() {
       data: {
         title: item.title,
         description: item.description,
+        menuType: item.type as any,
         isRequestable: true,
+        ingredients: item.ingredients,
       },
     })
   }
@@ -107,17 +99,7 @@ async function seed() {
     },
   })
 
-  await payload.create({
-    collection: 'reviews',
-    data: {
-      customerName: 'David Chen',
-      rating: 5,
-      comment: 'Made is a wonderful teacher. The vegetarian dishes were packed with flavor. Highly recommend!',
-      source: 'google',
-      status: 'published',
-      activity: activity2.id,
-    },
-  })
+
 
   // 5. External Listings
   await payload.create({
