@@ -11,6 +11,7 @@ import { Recipes } from './collections/Recipes'
 import { Bookings } from './collections/Bookings'
 import { Reviews } from './collections/Reviews'
 import { ExternalListings } from './collections/ExternalListings'
+import { Articles } from './collections/Articles'
 import { Itinerary } from './globals/Itinerary'
 
 const filename = fileURLToPath(import.meta.url)
@@ -36,6 +37,7 @@ export default buildConfig({
     Bookings,
     Reviews,
     ExternalListings,
+    Articles,
   ],
   globals: [
     Itinerary,

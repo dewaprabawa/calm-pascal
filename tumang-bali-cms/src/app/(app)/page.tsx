@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import MenuSection from './components/MenuSection'
@@ -44,6 +45,7 @@ export default async function Page() {
             <a href="#menu" className="hover:text-orange-500 transition-colors">MENU</a>
             <a href="#instructors" className="hover:text-orange-500 transition-colors">INSTRUCTORS</a>
             <a href="#reviews" className="hover:text-orange-500 transition-colors">REVIEWS</a>
+            <Link href="/blog" className="hover:text-orange-500 transition-colors">BLOG</Link>
             <a href="#faq" className="hover:text-orange-500 transition-colors">FAQ</a>
             <a href="#location" className="hover:text-orange-500 transition-colors">LOCATION</a>
           </div>
@@ -470,6 +472,33 @@ export default async function Page() {
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+      </section>
+
+      {/* Review CTA Section */}
+      <section className="py-24 px-6 max-w-7xl mx-auto border-t border-stone-200 dark:border-zinc-800">
+        <div className="bg-orange-50 dark:bg-orange-950/20 rounded-3xl p-8 md:p-16 border border-orange-100 dark:border-orange-900/30 text-center flex flex-col items-center shadow-lg shadow-orange-500/5">
+          <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">We Love Our Guests</span>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">Enjoyed your experience?</h2>
+          <p className="text-stone-600 dark:text-stone-300 max-w-2xl text-lg mb-10">
+            As a local family business, your reviews mean the world to us. They help other travelers find authentic Balinese experiences and support our community. If you loved cooking with us, please take a moment to share your story!
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full max-w-2xl mx-auto">
+            <a 
+              href="https://g.page/r/your-google-review-link/review" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center justify-center gap-3 bg-white dark:bg-zinc-900 hover:bg-stone-50 dark:hover:bg-zinc-800 border-2 border-stone-200 dark:border-zinc-700 hover:border-blue-500 dark:hover:border-blue-500 text-stone-900 dark:text-white px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-md w-full sm:w-1/2"
+            >
+              <svg className="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" /></svg>
+              Review on Google
+            </a>
+            
+            <div className="w-full sm:w-1/2 bg-white dark:bg-zinc-900 rounded-full border-2 border-stone-200 dark:border-zinc-700 p-2 flex justify-center items-center h-[60px] hover:border-green-500 transition-colors shadow-md hover:-translate-y-1">
+              <TripAdvisorWidget />
+            </div>
+          </div>
         </div>
       </section>
 
