@@ -36,14 +36,13 @@ export default function HeroVideo() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
             
-            <iframe 
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/gE24WvjYIe4?autoplay=1&mute=0" 
-              title="Promotional Video" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
+            <video 
+              className="w-full h-full object-contain bg-black"
+              src="/api/media/file/WhatsApp%20Video%202026-06-26%20at%2015.14.07.mp4" 
+              controls
+              autoPlay
+              playsInline
+            />
           </div>
         </div>
       )}
