@@ -40,9 +40,7 @@ export default function InstagramEmbed() {
               maxWidth: '540px', 
               minWidth: '326px', 
               padding: 0, 
-              width: '99.375%', 
-              WebkitCalc: '100% - 2px', 
-              calc: '100% - 2px' 
+              width: 'calc(100% - 2px)'
             }}
           >
           </blockquote>
