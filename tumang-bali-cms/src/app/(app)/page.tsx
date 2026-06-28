@@ -515,9 +515,17 @@ export default async function Page() {
               Review on Google
             </a>
             
-            <div className="w-full sm:w-1/2 bg-white dark:bg-zinc-900 rounded-full border-2 border-stone-200 dark:border-zinc-700 p-2 flex justify-center items-center h-[60px] hover:border-green-500 transition-colors shadow-md hover:-translate-y-1">
-              <TripAdvisorWidget />
-            </div>
+            <a 
+              href="https://www.tripadvisor.com/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center justify-center gap-3 bg-white dark:bg-zinc-900 hover:bg-stone-50 dark:hover:bg-zinc-800 border-2 border-stone-200 dark:border-zinc-700 hover:border-green-500 dark:hover:border-green-500 text-stone-900 dark:text-white px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-md w-full sm:w-1/2"
+            >
+              <svg className="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.5 13.5c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-1.5 0c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zm-9 0c0 2.485-2.015 4.5-4.5 4.5S3 15.985 3 13.5 5.015 9 7.5 9s4.5 2.015 4.5 4.5zm-1.5 0c0-1.657-1.343-3-3-3S4.5 11.843 4.5 13.5s1.343 3 3 3 3-1.343 3-3zM12 4.5c-2.485 0-4.5 2.015-4.5 4.5 0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5c0 .828.672 1.5 1.5 1.5s1.5-.672 1.5-1.5c0-2.485-2.015-4.5-4.5-4.5z" />
+              </svg>
+              Review on TripAdvisor
+            </a>
           </div>
         </div>
       </section>
