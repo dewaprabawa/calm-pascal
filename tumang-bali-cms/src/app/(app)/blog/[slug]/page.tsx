@@ -6,7 +6,7 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { Metadata } from 'next'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params

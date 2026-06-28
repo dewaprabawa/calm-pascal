@@ -15,18 +15,27 @@ import WhatsAppFloat from './components/WhatsAppFloat'
 import StatsCounter from './components/StatsCounter'
 import MobileMenu from './components/MobileMenu'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 export default async function Page() {
   const payload = await getPayload({ config: configPromise })
   
-  // Fetch from Payload
-  const { docs: activities } = await payload.find({ collection: 'activities', depth: 1 })
-  const { docs: instructors } = await payload.find({ collection: 'instructors' })
-  const { docs: reviews } = await payload.find({ collection: 'reviews', where: { status: { equals: 'published' } } })
-  const { docs: listings } = await payload.find({ collection: 'external-listings', where: { isActive: { equals: true } } })
-  const { docs: recipes } = await payload.find({ collection: 'recipes', limit: 100 })
-  const itinerary = await payload.findGlobal({ slug: 'itinerary', depth: 1 })
+  // Fetch from Payload concurrently for massive speed boost
+  const [
+    { docs: activities },
+    { docs: instructors },
+    { docs: reviews },
+    { docs: listings },
+    { docs: recipes },
+    itinerary
+  ] = await Promise.all([
+    payload.find({ collection: 'activities', depth: 1 }),
+    payload.find({ collection: 'instructors' }),
+    payload.find({ collection: 'reviews', where: { status: { equals: 'published' } } }),
+    payload.find({ collection: 'external-listings', where: { isActive: { equals: true } } }),
+    payload.find({ collection: 'recipes', limit: 100 }),
+    payload.findGlobal({ slug: 'itinerary', depth: 1 })
+  ])
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white">

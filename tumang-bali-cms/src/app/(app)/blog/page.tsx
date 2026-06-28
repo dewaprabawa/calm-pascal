@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Read the latest stories, recipes, and travel tips from the Tumang Bali Cooking Class in Ubud.',
 }
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
 
 export default async function BlogPage() {
   const payload = await getPayload({ config: configPromise })
