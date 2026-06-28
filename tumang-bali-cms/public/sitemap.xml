@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://tumangbaliclass.com</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://tumangbaliclass.com/</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -33,45 +33,39 @@
     </image:image>
   </url>
   <url>
-    <loc>https://tumangbaliclass.com/#classes</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://tumangbaliclass.com/id</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tumangbali.com/#itinerary</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tumangbali.com/#menu</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://tumangbaliclass.com/blog</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tumangbali.com/#instructors</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://tumangbaliclass.com/vegetarian-cooking-class-ubud</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tumangbali.com/#reviews</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://tumangbaliclass.com/private-cooking-class-ubud</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tumangbali.com/#faq</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://tumangbaliclass.com/cooking-class-with-market-tour-ubud</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tumangbali.com/#location</loc>
-    <lastmod>2026-06-27</lastmod>
+    <loc>https://tumangbaliclass.com/half-day-cooking-class-bali</loc>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>

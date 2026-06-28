@@ -6,8 +6,10 @@ import configPromise from '@/payload.config'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blog & Recipes | Tumang Bali Cooking Class',
-  description: 'Read the latest stories, recipes, and travel tips from the Tumang Bali Cooking Class in Ubud.',
+  // The layout template appends " | Tumang Bali Cooking Class Ubud", so keep
+  // this short to avoid duplicating the brand and overrunning the title length.
+  title: 'Blog & Recipes',
+  description: 'Balinese food stories, traditional recipes & Ubud travel tips from the Tumang Bali Cooking Class kitchen — the dishes, spices and culture behind our classes.',
 }
 
 export const revalidate = 60

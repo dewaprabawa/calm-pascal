@@ -571,6 +571,18 @@ export default async function Page() {
 
       {/* External Listings Footer */}
       <footer className="bg-stone-900 dark:bg-black text-stone-400 py-16 border-t border-stone-800">
+        {/* Internal links to dedicated class pages (SEO) */}
+        <div className="max-w-7xl mx-auto px-6 mb-12 pb-12 border-b border-stone-800">
+          <p className="text-sm font-semibold text-white mb-4 uppercase tracking-wider text-center md:text-left">Our Cooking Classes in Ubud</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-3 justify-center md:justify-start text-sm">
+            <Link href="/vegetarian-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Vegetarian Cooking Class</Link>
+            <Link href="/private-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Private Cooking Class</Link>
+            <Link href="/cooking-class-with-market-tour-ubud" className="hover:text-orange-500 transition-colors">Cooking Class with Market Tour</Link>
+            <Link href="/half-day-cooking-class-bali" className="hover:text-orange-500 transition-colors">Half-Day Cooking Class</Link>
+            <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
+            <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
+          </div>
+        </div>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="text-2xl font-black tracking-tighter text-white mb-2">TUMANG BALI</div>

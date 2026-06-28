@@ -102,7 +102,8 @@ export default function StructuredData() {
       url: 'https://tumangbaliclass.com',
       logo: 'https://tumangbaliclass.com/images/logo.jpg',
     },
-    courseMode: 'onsite',
+    // Note: `courseMode` is a property of CourseInstance, not Course, per
+    // schema.org. It is set on each hasCourseInstance entry below instead.
     educationalLevel: 'Beginner',
     inLanguage: ['en', 'id'],
     locationCreated: {
