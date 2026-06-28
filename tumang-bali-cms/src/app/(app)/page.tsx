@@ -547,6 +547,28 @@ export default async function Page() {
         </div>
       </section>
 
+      {/* Partner Booking CTA */}
+      <section className="py-12 px-6 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between bg-white dark:bg-zinc-900 p-8 md:p-10 rounded-3xl border border-stone-200 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
+           <div className="text-center md:text-left mb-6 md:mb-0">
+             <h3 className="text-2xl font-bold text-stone-900 dark:text-white">Prefer to book via our partners?</h3>
+             <p className="text-stone-500 dark:text-stone-400 mt-2">Check availability and book your cooking class instantly on GetYourGuide.</p>
+           </div>
+           <a 
+             href="https://www.getyourguide.com/ubud-l32246/ubud-balinese-cooking-class-with-local-chef-t1377291/?preview=Z20T720YWPOY66RHBWIETDBX34JYLJW7" 
+             target="_blank" 
+             rel="noreferrer" 
+             className="flex items-center justify-center gap-3 bg-[#FF5533] hover:bg-[#E04B2D] text-white px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-md w-full md:w-auto whitespace-nowrap"
+           >
+             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+               <path d="M9 12l2 2 4-4"/>
+             </svg>
+             Book on GetYourGuide
+           </a>
+        </div>
+      </section>
+
       {/* External Listings Footer */}
       <footer className="bg-stone-900 dark:bg-black text-stone-400 py-16 border-t border-stone-800">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
