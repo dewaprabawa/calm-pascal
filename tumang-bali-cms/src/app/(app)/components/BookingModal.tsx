@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 export type ActivityOption = {
   id: string
   title: string
+  price?: number
 }
 
 export default function BookingModal({ activities }: { activities: ActivityOption[] }) {
@@ -25,12 +26,19 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
       setIsOpen(true)
       if (e.detail?.activityTitle) {
         setSelectedActivity(e.detail.activityTitle)
+      } else if (activities.length > 0) {
+        setSelectedActivity(activities[0].title)
       }
+    }
+
+    // Auto-select on initial load if we have activities
+    if (!selectedActivity && activities.length > 0) {
+      setSelectedActivity(activities[0].title)
     }
 
     window.addEventListener('open-booking-modal', handleOpenModal)
     return () => window.removeEventListener('open-booking-modal', handleOpenModal)
-  }, [])
+  }, [activities])
 
   if (!isOpen) return null
 
@@ -90,7 +98,9 @@ Please let me know about availability!`
               >
                 <option value="" disabled>Select an experience...</option>
                 {activities.map((activity) => (
-                  <option key={activity.id} value={activity.title}>{activity.title}</option>
+                  <option key={activity.id} value={activity.title}>
+                    {activity.title} {activity.price ? `- ${activity.price.toLocaleString('id-ID')} IDR` : ''}
+                  </option>
                 ))}
               </select>
             </div>

@@ -566,7 +566,7 @@ export default async function Page() {
       <WhatsAppFloat />
 
       {/* Booking Modal */}
-      <BookingModal activities={activities.map(a => ({ id: a.id as string, title: a.title }))} />
+      <BookingModal activities={activities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number }))} />
     </div>
   )
 }
