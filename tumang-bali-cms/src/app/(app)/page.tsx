@@ -83,8 +83,8 @@ export default async function Page() {
       {/* Hero Section */}
       <header className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden min-h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 via-stone-50 to-orange-50/30 dark:from-orange-950/20 dark:via-zinc-950 dark:to-orange-900/10 -z-10" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-400/20 dark:bg-orange-500/10 rounded-full blur-3xl -z-10 animate-pulse duration-10000" />
-        <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-amber-400/20 dark:bg-amber-500/10 rounded-full blur-3xl -z-10 animate-pulse duration-10000" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-400/20 dark:bg-orange-500/10 rounded-full blur-3xl -z-10" />
+        <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-amber-400/20 dark:bg-amber-500/10 rounded-full blur-3xl -z-10" />
         
         <div className="max-w-7xl mx-auto px-6 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Text Content */}
@@ -455,7 +455,7 @@ export default async function Page() {
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-4">
                     {review.profile_photo_url ? (
-                      <img src={review.profile_photo_url} alt={review.author_name} className="w-12 h-12 rounded-full" />
+                      <img src={review.profile_photo_url} alt={review.author_name} className="w-12 h-12 rounded-full" width={48} height={48} />
                     ) : (
                       <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center font-bold text-orange-600">
                         {(review.customerName || review.author_name || 'G')[0]}
