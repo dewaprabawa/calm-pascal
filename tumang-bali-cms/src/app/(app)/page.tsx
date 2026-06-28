@@ -15,6 +15,7 @@ import WhatsAppFloat from './components/WhatsAppFloat'
 import StatsCounter from './components/StatsCounter'
 import MobileMenu from './components/MobileMenu'
 import TikTokEmbed from './components/TikTokEmbed'
+import InstagramEmbed from './components/InstagramEmbed'
 
 export const revalidate = 3600
 
@@ -358,14 +359,18 @@ export default async function Page() {
         </div>
       </section>
 
-      {/* As Seen on TikTok */}
-      <section className="py-24 px-6 max-w-4xl mx-auto">
+      {/* As Seen on Social Media */}
+      <section className="py-24 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col items-center mb-12 text-center">
           <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">As Seen On</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">TikTok</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Social Media</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Watch what our guests are saying about their cooking experience!</p>
         </div>
-        <TikTokEmbed />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-items-center">
+          <TikTokEmbed />
+          <InstagramEmbed />
+        </div>
       </section>
 
       {/* Menu / Recipes */}
