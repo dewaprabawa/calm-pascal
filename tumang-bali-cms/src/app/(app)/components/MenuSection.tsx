@@ -65,12 +65,12 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
                 <span className="text-sm font-normal text-stone-400 ml-2">← Scroll →</span>
               </h3>
             </div>
-            <div className="flex gap-4 overflow-x-auto pb-4 px-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
-              <div className="w-4 flex-shrink-0 md:w-[calc((100%-80rem)/2+1.5rem)]" />
+            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
+              <div className="w-2 flex-shrink-0 xl:w-[calc(50vw-40rem+0.5rem)]" />
               {recipes.filter(r => r.menuType !== 'vegetarian').map((item, index) => {
                 const imageUrl = getImageUrl(item, index);
                 return (
-                <div key={item.id} onClick={() => setSelectedRecipe({ ...item, imageUrl })} className="cursor-pointer flex-shrink-0 w-64 snap-start bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                <div key={item.id} onClick={() => setSelectedRecipe({ ...item, imageUrl })} className="cursor-pointer flex-shrink-0 w-64 snap-start scroll-ml-6 xl:scroll-ml-[calc(50vw-40rem+1.5rem)] bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
                   <div className="w-full h-40 relative overflow-hidden">
                     <Image src={imageUrl} alt={item.title} fill sizes="256px" className="object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
@@ -80,7 +80,7 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
                   </div>
                 </div>
               )})}
-              <div className="w-4 flex-shrink-0" />
+              <div className="w-2 flex-shrink-0 xl:w-[calc(50vw-40rem+0.5rem)]" />
             </div>
           </div>
 
@@ -95,12 +95,12 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
                 <span className="text-sm font-normal text-stone-400 ml-2">← Scroll →</span>
               </h3>
             </div>
-            <div className="flex gap-4 overflow-x-auto pb-4 px-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
-              <div className="w-4 flex-shrink-0 md:w-[calc((100%-80rem)/2+1.5rem)]" />
+            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
+              <div className="w-2 flex-shrink-0 xl:w-[calc(50vw-40rem+0.5rem)]" />
               {recipes.filter(r => r.menuType === 'vegetarian').map((item, index) => {
                 const imageUrl = getImageUrl(item, index);
                 return (
-                <div key={item.id} onClick={() => setSelectedRecipe({ ...item, imageUrl })} className="cursor-pointer flex-shrink-0 w-64 snap-start bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                <div key={item.id} onClick={() => setSelectedRecipe({ ...item, imageUrl })} className="cursor-pointer flex-shrink-0 w-64 snap-start scroll-ml-6 xl:scroll-ml-[calc(50vw-40rem+1.5rem)] bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
                   <div className="w-full h-40 relative overflow-hidden">
                     <Image src={imageUrl} alt={item.title} fill sizes="256px" className="object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
@@ -110,7 +110,7 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
                   </div>
                 </div>
               )})}
-              <div className="w-4 flex-shrink-0" />
+              <div className="w-2 flex-shrink-0 xl:w-[calc(50vw-40rem+0.5rem)]" />
             </div>
           </div>
         </div>
