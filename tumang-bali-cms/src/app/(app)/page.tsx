@@ -495,7 +495,7 @@ export default async function Page() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full max-w-2xl mx-auto">
             <a 
-              href="https://g.page/r/your-google-review-link/review" 
+              href="https://maps.app.goo.gl/4t7AQnSqF1Uxqm5h8" 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center justify-center gap-3 bg-white dark:bg-zinc-900 hover:bg-stone-50 dark:hover:bg-zinc-800 border-2 border-stone-200 dark:border-zinc-700 hover:border-blue-500 dark:hover:border-blue-500 text-stone-900 dark:text-white px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-md w-full sm:w-1/2"
