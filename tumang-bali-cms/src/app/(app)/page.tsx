@@ -14,6 +14,7 @@ import FAQSection from './components/FAQSection'
 import WhatsAppFloat from './components/WhatsAppFloat'
 import StatsCounter from './components/StatsCounter'
 import MobileMenu from './components/MobileMenu'
+import PickupSchedule from './components/PickupSchedule'
 import TikTokEmbed from './components/TikTokEmbed'
 import InstagramEmbed from './components/InstagramEmbed'
 
@@ -258,8 +259,10 @@ export default async function Page() {
         </div>
       </section>
 
-      {/* Itinerary Section */}
       <ItinerarySection steps={itinerary?.steps as any} />
+
+      {/* Pickup Schedule */}
+      <PickupSchedule />
 
       {/* Visual Gallery / Moments Section */}
       <section className="py-24 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800 overflow-hidden">
