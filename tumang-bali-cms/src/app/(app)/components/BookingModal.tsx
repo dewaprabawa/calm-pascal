@@ -99,7 +99,7 @@ Please let me know about availability!`
                 <option value="" disabled>Select an experience...</option>
                 {activities.map((activity) => (
                   <option key={activity.id} value={activity.title}>
-                    {activity.title} {activity.price ? `- ${activity.price.toLocaleString('id-ID')} IDR` : ''}
+                    {activity.title} {activity.price ? (activity.price < 1000 ? `- ${activity.price}K IDR` : `- ${activity.price.toLocaleString('id-ID')} IDR`) : ''}
                   </option>
                 ))}
               </select>
