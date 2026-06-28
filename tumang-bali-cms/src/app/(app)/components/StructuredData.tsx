@@ -5,11 +5,11 @@ export default function StructuredData() {
   const localBusiness = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'TouristAttraction', 'FoodEstablishment'],
-    '@id': 'https://tumangbali.com/#business',
+    '@id': 'https://tumangbaliclass.com/#business',
     name: 'Tumang Bali Cooking Class',
     alternateName: 'Tumang Bali',
     description: 'Top-rated authentic Balinese cooking class in Ubud. Join our hands-on cooking experience with local market tour, rice field walk, and learn to cook 10+ traditional dishes with local chefs. Vegetarian friendly. Hotel pickup included.',
-    url: 'https://tumangbali.com',
+    url: 'https://tumangbaliclass.com',
     telephone: '+62-822-1013-2418',
     email: 'info@tumangbali.com',
     address: {
@@ -54,21 +54,21 @@ export default function StructuredData() {
       },
     ],
     image: [
-      'https://tumangbali.com/images/gallery-group.jpg',
-      'https://tumangbali.com/images/gallery-chopping.jpg',
-      'https://tumangbali.com/images/gallery-girls.jpg',
-      'https://tumangbali.com/images/gallery-satay.jpg',
-      'https://tumangbali.com/images/gallery-thumbs.jpg',
+      'https://tumangbaliclass.com/images/gallery-group.jpg',
+      'https://tumangbaliclass.com/images/gallery-chopping.jpg',
+      'https://tumangbaliclass.com/images/gallery-girls.jpg',
+      'https://tumangbaliclass.com/images/gallery-satay.jpg',
+      'https://tumangbaliclass.com/images/gallery-thumbs.jpg',
     ],
     photo: {
       '@type': 'ImageObject',
-      url: 'https://tumangbali.com/images/gallery-group.jpg',
+      url: 'https://tumangbaliclass.com/images/gallery-group.jpg',
       width: 1200,
       height: 800,
     },
     logo: {
       '@type': 'ImageObject',
-      url: 'https://tumangbali.com/images/logo.jpg',
+      url: 'https://tumangbaliclass.com/images/logo.jpg',
     },
     sameAs: [
       'https://www.tripadvisor.co.id/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html',
@@ -93,14 +93,14 @@ export default function StructuredData() {
   const course = {
     '@context': 'https://schema.org',
     '@type': 'Course',
-    '@id': 'https://tumangbali.com/#course',
+    '@id': 'https://tumangbaliclass.com/#course',
     name: 'Authentic Balinese Cooking Masterclass with Market Tour',
     description: 'A 5-hour immersive culinary experience in Ubud, Bali. Visit the local morning market, walk through rice fields, and learn to cook 10+ traditional Balinese dishes from scratch with an expert local chef. Suitable for all skill levels.',
     provider: {
       '@type': 'Organization',
       name: 'Tumang Bali Cooking Class',
-      url: 'https://tumangbali.com',
-      logo: 'https://tumangbali.com/images/logo.jpg',
+      url: 'https://tumangbaliclass.com',
+      logo: 'https://tumangbaliclass.com/images/logo.jpg',
     },
     courseMode: 'onsite',
     educationalLevel: 'Beginner',
@@ -119,7 +119,7 @@ export default function StructuredData() {
         availability: 'https://schema.org/InStock',
         validFrom: '2026-01-01',
         priceValidUntil: '2027-12-31',
-        url: 'https://tumangbali.com/#classes',
+        url: 'https://tumangbaliclass.com/#classes',
       },
     ],
     hasCourseInstance: [
@@ -171,19 +171,19 @@ export default function StructuredData() {
   const webSite = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://tumangbali.com/#website',
+    '@id': 'https://tumangbaliclass.com/#website',
     name: 'Tumang Bali Cooking Class',
     alternateName: 'Best Cooking Class in Ubud Bali',
     description: 'Top-rated authentic Balinese cooking class in Ubud with market tour, rice field walk & hands-on cooking of 10+ traditional dishes.',
-    url: 'https://tumangbali.com',
+    url: 'https://tumangbaliclass.com',
     inLanguage: 'en-US',
     publisher: {
       '@type': 'Organization',
       name: 'Tumang Bali Cooking Class',
-      url: 'https://tumangbali.com',
+      url: 'https://tumangbaliclass.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tumangbali.com/images/logo.jpg',
+        url: 'https://tumangbaliclass.com/images/logo.jpg',
       },
     },
   }
@@ -193,10 +193,10 @@ export default function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://tumangbali.com' },
-      { '@type': 'ListItem', position: 2, name: 'Cooking Classes in Ubud', item: 'https://tumangbali.com/#classes' },
-      { '@type': 'ListItem', position: 3, name: 'Our Menu', item: 'https://tumangbali.com/#menu' },
-      { '@type': 'ListItem', position: 4, name: 'Book Your Experience', item: 'https://tumangbali.com/#classes' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://tumangbaliclass.com' },
+      { '@type': 'ListItem', position: 2, name: 'Cooking Classes in Ubud', item: 'https://tumangbaliclass.com/#classes' },
+      { '@type': 'ListItem', position: 3, name: 'Our Menu', item: 'https://tumangbaliclass.com/#menu' },
+      { '@type': 'ListItem', position: 4, name: 'Book Your Experience', item: 'https://tumangbaliclass.com/#classes' },
     ],
   }
 
