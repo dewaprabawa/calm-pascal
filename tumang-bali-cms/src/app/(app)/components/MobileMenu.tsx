@@ -35,7 +35,7 @@ export default function MobileMenu() {
       />
 
       {/* Slide-in Menu */}
-      <div className={`fixed top-0 right-0 z-[65] h-full w-72 bg-white dark:bg-zinc-900 shadow-2xl transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 z-[65] h-full w-72 bg-stone-50 dark:bg-zinc-950 border-l border-stone-200 dark:border-zinc-800 shadow-2xl transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex flex-col pt-24 px-6 gap-2">
           <p className="text-xs font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500 mb-2 px-4">Navigation</p>
           {[
