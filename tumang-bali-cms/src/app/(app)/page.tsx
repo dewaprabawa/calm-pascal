@@ -40,6 +40,15 @@ export default async function Page() {
     payload.findGlobal({ slug: 'itinerary', depth: 1 })
   ])
 
+  // Automatically split single generic activity into Morning and Afternoon options
+  let displayActivities = [...activities]
+  if (displayActivities.length === 1 && !displayActivities[0].title.toLowerCase().includes('afternoon')) {
+    displayActivities = [
+      { ...displayActivities[0], title: 'Morning Class', id: 'morning-class' },
+      { ...displayActivities[0], title: 'Afternoon Class', id: 'afternoon-class' }
+    ]
+  }
+
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white">
       {/* Navigation */}
@@ -191,7 +200,7 @@ export default async function Page() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {activities.length > 0 ? activities.map((activity) => (
+          {displayActivities.length > 0 ? displayActivities.map((activity) => (
             <div key={activity.id} className="group relative rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 flex flex-col">
               <div className="aspect-video bg-stone-200 dark:bg-zinc-800 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-400/30 to-amber-300/30 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply opacity-40 z-10" />
@@ -569,7 +578,7 @@ export default async function Page() {
       <WhatsAppFloat />
 
       {/* Booking Modal */}
-      <BookingModal activities={activities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number }))} />
+      <BookingModal activities={displayActivities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number }))} />
     </div>
   )
 }
