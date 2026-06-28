@@ -110,7 +110,7 @@ export default async function Page() {
                   </div>
                 </div>
                 <div className="text-xs text-left">
-                  <p className="font-bold text-stone-900 dark:text-white">500+ Happy Guests</p>
+                  <p className="font-bold text-stone-900 dark:text-white">500++ Happy Guests</p>
                   <p className="text-stone-500 dark:text-stone-400">Excellent reviews on TripAdvisor & Klook</p>
                 </div>
               </div>
