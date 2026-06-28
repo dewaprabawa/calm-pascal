@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tumangbali.com/sitemap.xml
+Sitemap: https://tumangbaliclass.com/sitemap.xml
