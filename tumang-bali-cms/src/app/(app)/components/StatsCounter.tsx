@@ -1,22 +1,32 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from "react";
 
 const stats = [
   {
-    value: 1500,
-    suffix: '+',
-    label: 'Happy Guests',
+    value: 500,
+    suffix: "+",
+    label: "Happy Guests",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      <svg
+        className="w-7 h-7"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     ),
   },
   {
     value: 5.0,
-    suffix: '',
-    label: 'TripAdvisor Rating',
+    suffix: "",
+    label: "TripAdvisor Rating",
     decimals: 1,
     icon: (
       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
@@ -26,63 +36,101 @@ const stats = [
   },
   {
     value: 10,
-    suffix: '+',
-    label: 'Dishes to Learn',
+    suffix: "+",
+    label: "Dishes to Learn",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      <svg
+        className="w-7 h-7"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+        />
       </svg>
     ),
   },
   {
     value: 5,
-    suffix: '+',
-    label: 'Years Experience',
+    suffix: "+",
+    label: "Years Experience",
     icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      <svg
+        className="w-7 h-7"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+        />
       </svg>
     ),
   },
-]
+];
 
-function useCountUp(end: number, duration: number, isVisible: boolean, decimals = 0) {
-  const [count, setCount] = useState(0)
-  const frameRef = useRef<number | null>(null)
+function useCountUp(
+  end: number,
+  duration: number,
+  isVisible: boolean,
+  decimals = 0,
+) {
+  const [count, setCount] = useState(0);
+  const frameRef = useRef<number | null>(null);
 
   useEffect(() => {
-    if (!isVisible) return
+    if (!isVisible) return;
 
-    let startTime: number | null = null
+    let startTime: number | null = null;
 
     const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp
-      const progress = Math.min((timestamp - startTime) / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3) // easeOutCubic
-      setCount(parseFloat((eased * end).toFixed(decimals)))
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+      setCount(parseFloat((eased * end).toFixed(decimals)));
       if (progress < 1) {
-        frameRef.current = requestAnimationFrame(animate)
+        frameRef.current = requestAnimationFrame(animate);
       }
-    }
+    };
 
-    frameRef.current = requestAnimationFrame(animate)
+    frameRef.current = requestAnimationFrame(animate);
     return () => {
-      if (frameRef.current) cancelAnimationFrame(frameRef.current)
-    }
-  }, [end, duration, isVisible, decimals])
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
+    };
+  }, [end, duration, isVisible, decimals]);
 
-  return count
+  return count;
 }
 
-function StatCard({ stat, isVisible, delay }: { stat: typeof stats[0]; isVisible: boolean; delay: number }) {
-  const count = useCountUp(stat.value, 2000, isVisible, (stat as any).decimals || 0)
+function StatCard({
+  stat,
+  isVisible,
+  delay,
+}: {
+  stat: (typeof stats)[0];
+  isVisible: boolean;
+  delay: number;
+}) {
+  const count = useCountUp(
+    stat.value,
+    2000,
+    isVisible,
+    (stat as any).decimals || 0,
+  );
 
   return (
     <div
       className="relative bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl rounded-3xl border border-stone-200/60 dark:border-zinc-700/40 p-6 md:p-8 text-center transition-all duration-700 hover:-translate-y-2 hover:shadow-xl hover:shadow-orange-500/10 group"
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
+        transform: isVisible ? "translateY(0)" : "translateY(30px)",
         transitionDelay: `${delay}ms`,
       }}
     >
@@ -95,32 +143,35 @@ function StatCard({ stat, isVisible, delay }: { stat: typeof stats[0]; isVisible
         </div>
       </div>
       <div className="text-4xl md:text-5xl font-black tracking-tight bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent mb-2">
-        {(stat as any).decimals ? count.toFixed((stat as any).decimals) : count.toLocaleString()}{stat.suffix}
+        {(stat as any).decimals
+          ? count.toFixed((stat as any).decimals)
+          : count.toLocaleString()}
+        {stat.suffix}
       </div>
       <div className="text-sm font-semibold text-stone-500 dark:text-stone-400 uppercase tracking-wider">
         {stat.label}
       </div>
     </div>
-  )
+  );
 }
 
 export default function StatsCounter() {
-  const [isVisible, setIsVisible] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
+          setIsVisible(true);
+          observer.disconnect();
         }
       },
-      { threshold: 0.2 }
-    )
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [])
+      { threshold: 0.2 },
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section ref={ref} className="py-16 px-6 max-w-5xl mx-auto">
@@ -130,5 +181,5 @@ export default function StatsCounter() {
         ))}
       </div>
     </section>
-  )
+  );
 }
