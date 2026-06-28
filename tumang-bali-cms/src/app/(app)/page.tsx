@@ -17,7 +17,7 @@ import MobileMenu from './components/MobileMenu'
 import TikTokEmbed from './components/TikTokEmbed'
 import InstagramEmbed from './components/InstagramEmbed'
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export default async function Page() {
   const payload = await getPayload({ config: configPromise })
