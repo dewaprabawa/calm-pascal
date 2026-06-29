@@ -30,18 +30,24 @@ with "recipe/interest" posts (drive links & long-tail traffic).
 | 3 | How to Make Base Genep (The Balinese Spice Paste Behind Every Dish) | base genep recipe | Recipe | Low | vegetarian, market-tour |
 | 4 ✅ | Sambal Matah: The Raw Balinese Sambal Recipe | sambal matah recipe | Recipe | Med | vegetarian, dishes post |
 | 5 ✅ | A Vegetarian's Guide to Eating in Ubud | vegetarian food ubud | Planning | Med | vegetarian class, sambal post |
-| 6 | Ubud Morning Market Guide: What to See, Buy & Eat | ubud market | Planning | Med | market-tour class |
-| 7 | Best Time of Year to Visit Bali (and Ubud) | best time to visit bali | Planning | High | half-day, private |
-| 8 | 2 Days in Ubud: A Food-Lover's Itinerary | ubud itinerary | Planning | Med–High | all class pages |
-| 9 | Is a Bali Cooking Class Worth It? An Honest Look | bali cooking class worth it | Decision | Low–Med | private, half-day |
-| 10 | Balinese Desserts: Dadar Gulung & Friends (Recipe) | dadar gulung recipe | Recipe | Low | vegetarian |
+| 6 ✅ | Ubud Morning Market Guide: What to See, Buy & Eat | ubud market | Planning | Med | market-tour class, dishes post |
+| 7 ✅ | Best Time of Year to Visit Bali (and Ubud) | best time to visit bali | Planning | High | half-day, private |
+| 8 ✅ | 2 Days in Ubud: A Food-Lover's Itinerary | ubud itinerary | Planning | Med–High | market-tour, what-to-expect, veg guide |
+| 9 ✅ | Is a Bali Cooking Class Worth It? An Honest Look | bali cooking class worth it | Decision | Low–Med | private, half-day, what-to-expect |
+| 10 ✅ | Dadar Gulung: The Balinese Coconut Pancake Recipe | dadar gulung recipe | Recipe | Low | vegetarian, dishes post |
 
 ## Sequencing (next ~5 months, 2/mo)
 - **Month 1:** #2, #3  (seeded by `seedBlogBatch.ts`)
 - **Month 2:** #4, #5  (seeded by `seedBlogBatch2.ts`)
-- **Month 3:** #6, #7
-- **Month 4:** #8, #9
-- **Month 5:** #10 + refresh #1 with new internal links
+- **Month 3:** #6, #7  (seeded by `seedBlogBatch3.ts`)
+- **Month 4:** #8, #9  (seeded by `seedBlogBatch3.ts`)
+- **Month 5:** #10 (seeded by `seedBlogBatch3.ts`) + refresh #1 with new internal links
+
+> All 10 calendar posts are now seeded across `seedBlog.ts`,
+> `seedBlogBatch.ts`, `seedBlogBatch2.ts`, `seedBlogBatch3.ts`. To pace them
+> like a real publishing schedule rather than dumping all 10 live at once,
+> stagger by editing each article's `publishedDate` in the Payload admin, or
+> set `status: 'draft'` for later posts and flip to `published` over time.
 
 ## How to publish a post
 Posts live in the Payload `articles` collection (DB-driven), not as repo files.
