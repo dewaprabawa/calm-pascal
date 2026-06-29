@@ -28,8 +28,8 @@ with "recipe/interest" posts (drive links & long-tail traffic).
 | 1 ✅ | What to Expect at a Bali Cooking Class (Ubud First-Timer's Guide) | what to expect bali cooking class | Planning | Low–Med | all class pages |
 | 2 | The 10 Dishes You'll Cook in a Balinese Cooking Class | balinese food / what food do you cook | Interest→book | Med | market-tour, half-day |
 | 3 | How to Make Base Genep (The Balinese Spice Paste Behind Every Dish) | base genep recipe | Recipe | Low | vegetarian, market-tour |
-| 4 | Sambal Matah: The Raw Balinese Sambal Recipe | sambal matah recipe | Recipe | Med | vegetarian |
-| 5 | A Vegetarian's Guide to Eating in Ubud | vegetarian food ubud | Planning | Med | vegetarian class |
+| 4 ✅ | Sambal Matah: The Raw Balinese Sambal Recipe | sambal matah recipe | Recipe | Med | vegetarian, dishes post |
+| 5 ✅ | A Vegetarian's Guide to Eating in Ubud | vegetarian food ubud | Planning | Med | vegetarian class, sambal post |
 | 6 | Ubud Morning Market Guide: What to See, Buy & Eat | ubud market | Planning | Med | market-tour class |
 | 7 | Best Time of Year to Visit Bali (and Ubud) | best time to visit bali | Planning | High | half-day, private |
 | 8 | 2 Days in Ubud: A Food-Lover's Itinerary | ubud itinerary | Planning | Med–High | all class pages |
@@ -38,7 +38,7 @@ with "recipe/interest" posts (drive links & long-tail traffic).
 
 ## Sequencing (next ~5 months, 2/mo)
 - **Month 1:** #2, #3  (seeded by `seedBlogBatch.ts`)
-- **Month 2:** #4, #5
+- **Month 2:** #4, #5  (seeded by `seedBlogBatch2.ts`)
 - **Month 3:** #6, #7
 - **Month 4:** #8, #9
 - **Month 5:** #10 + refresh #1 with new internal links
