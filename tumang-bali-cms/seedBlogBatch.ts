@@ -102,7 +102,7 @@ const articles: ArticleDef[] = [
     metaTitle: '10 Dishes You Cook in a Balinese Cooking Class | Tumang Bali',
     metaDescription:
       'A dish-by-dish guide to the traditional Balinese food you cook in an Ubud cooking class — satay, pepes, sayur urap, sambal matah, dadar gulung and more.',
-    image: 'gallery-satay.jpg',
+    image: 'blog/dishes.jpg',
     imageAlt: 'Traditional Balinese dishes prepared during a cooking class in Ubud',
     content: root([
       paragraph([
@@ -160,7 +160,7 @@ const articles: ArticleDef[] = [
     metaTitle: 'How to Make Base Genep — Balinese Spice Paste Recipe | Tumang Bali',
     metaDescription:
       'Learn to make Base Genep, the complete Balinese spice paste behind every dish. Ingredients, step-by-step method, and tips from an Ubud cooking class.',
-    image: 'gallery-chopping.jpg',
+    image: 'blog/base-genep.jpg',
     imageAlt: 'Fresh spices and aromatics for making Balinese Base Genep spice paste',
     content: root([
       paragraph([

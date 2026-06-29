@@ -101,7 +101,7 @@ const articles: ArticleDef[] = [
     metaTitle: 'Ubud Morning Market Guide — What to See & Buy | Tumang Bali',
     metaDescription:
       'A guide to the Ubud morning market: when to go, the ingredients and spices to look for, what to eat, and how to experience it on a cooking class tour.',
-    image: 'img2.jpg',
+    image: 'blog/ubud-market.jpg',
     imageAlt: 'Stalls of fresh produce and spices at the Ubud morning market',
     content: root([
       paragraph([
@@ -152,7 +152,7 @@ const articles: ArticleDef[] = [
     metaTitle: 'Best Time to Visit Bali & Ubud — Month by Month | Tumang Bali',
     metaDescription:
       'The best time to visit Bali and Ubud: dry vs wet season, crowds, prices and a month-by-month guide to help you plan the perfect trip.',
-    image: 'img3.jpg',
+    image: 'blog/best-time.jpg',
     imageAlt: 'Lush green rice fields near Ubud, Bali',
     content: root([
       paragraph([
@@ -199,7 +199,7 @@ const articles: ArticleDef[] = [
     metaTitle: '2 Days in Ubud: A Food-Lover’s Itinerary | Tumang Bali',
     metaDescription:
       'A food-lover’s 2-day Ubud itinerary: morning market, rice-field walks, a Balinese cooking class, warungs and local dishes — planned out for easy travel.',
-    image: 'img4.jpg',
+    image: 'blog/itinerary.jpg',
     imageAlt: 'A local Balinese meal laid out on a table in Ubud',
     content: root([
       paragraph([
@@ -246,7 +246,7 @@ const articles: ArticleDef[] = [
     metaTitle: 'Is a Bali Cooking Class Worth It? An Honest Look | Tumang Bali',
     metaDescription:
       'Is a Bali cooking class worth it? An honest look at the cost, what you get, who enjoys it most, and how to choose an authentic Ubud cooking class.',
-    image: 'gallery-group.jpg',
+    image: 'blog/worth-it.jpg',
     imageAlt: 'Happy guests at the end of a Balinese cooking class in Ubud',
     content: root([
       paragraph([
@@ -295,7 +295,7 @@ const articles: ArticleDef[] = [
     metaTitle: 'Dadar Gulung Recipe — Balinese Coconut Pancake | Tumang Bali',
     metaDescription:
       'Make dadar gulung, the Balinese pandan coconut pancake. Soft green crêpes rolled around sweet palm-sugar coconut — full recipe from an Ubud cooking class.',
-    image: 'gallery-thumbs.jpg',
+    image: 'blog/dadar-gulung.jpg',
     imageAlt: 'Green dadar gulung Balinese coconut pancakes on a plate',
     content: root([
       paragraph([
