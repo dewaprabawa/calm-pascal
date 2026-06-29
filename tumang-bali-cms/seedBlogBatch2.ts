@@ -101,7 +101,7 @@ const articles: ArticleDef[] = [
     metaTitle: 'Sambal Matah Recipe — Raw Balinese Sambal | Tumang Bali',
     metaDescription:
       'Make authentic sambal matah, Bali’s raw shallot-and-lemongrass sambal. Simple ingredients, step-by-step method and tips from an Ubud cooking class.',
-    image: 'gallery-chopping.jpg',
+    image: 'blog/sambal-matah.jpg',
     imageAlt: 'Fresh shallots, lemongrass and chilli for making Balinese sambal matah',
     content: root([
       paragraph([
@@ -156,7 +156,7 @@ const articles: ArticleDef[] = [
     metaTitle: 'Vegetarian Guide to Eating in Ubud | Tumang Bali',
     metaDescription:
       'A vegetarian’s guide to eating in Ubud, Bali — the plant-based Balinese dishes to know, what to order, and how to cook them yourself in a class.',
-    image: 'gallery-girls.jpg',
+    image: 'blog/vegetarian-ubud.jpg',
     imageAlt: 'Plant-based Balinese dishes on a table in Ubud',
     content: root([
       paragraph([
