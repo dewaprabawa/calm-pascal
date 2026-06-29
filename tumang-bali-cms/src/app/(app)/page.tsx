@@ -40,12 +40,13 @@ export default async function Page() {
     payload.findGlobal({ slug: 'itinerary', depth: 1 })
   ])
 
-  // Automatically split single generic activity into Morning and Afternoon options
+  // Automatically split single generic activity into Morning, Afternoon, and Dinner options
   let displayActivities = [...activities]
   if (displayActivities.length === 1 && !displayActivities[0].title.toLowerCase().includes('afternoon')) {
     displayActivities = [
       { ...displayActivities[0], title: 'Morning Class', id: 'morning-class' },
-      { ...displayActivities[0], title: 'Afternoon Class', id: 'afternoon-class' }
+      { ...displayActivities[0], title: 'Afternoon Class', id: 'afternoon-class' },
+      { ...displayActivities[0], title: 'Dinner and Cooking Class at 17:30', id: 'dinner-class' }
     ]
   }
 
