@@ -567,6 +567,7 @@ export default async function Page() {
             <Link href="/private-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Private Cooking Class</Link>
             <Link href="/cooking-class-with-market-tour-ubud" className="hover:text-orange-500 transition-colors">Cooking Class with Market Tour</Link>
             <Link href="/half-day-cooking-class-bali" className="hover:text-orange-500 transition-colors">Half-Day Cooking Class</Link>
+            <Link href="/recipes" className="hover:text-orange-500 transition-colors">Balinese Recipes</Link>
             <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
             <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
           </div>
