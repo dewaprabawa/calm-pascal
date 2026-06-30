@@ -198,7 +198,10 @@ export default async function Page() {
               <div className="aspect-video bg-stone-200 dark:bg-zinc-800 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-400/30 to-amber-300/30 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply opacity-40 z-10" />
                 {(() => {
-                  const imgPath = `/images/activities/grid${(index % 5) + 1}.jpg`;
+                  const cmsImage = activity.images?.[0]?.image;
+                  const imgPath = (cmsImage && typeof cmsImage === 'object' && cmsImage.url)
+                    ? cmsImage.url
+                    : `/images/activities/grid${(index % 5) + 1}.jpg`;
                   return (
                     <Image 
                       src={imgPath} 
