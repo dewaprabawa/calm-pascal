@@ -6,36 +6,7 @@ import Image from 'next/image'
 export default function MenuSection({ recipes }: { recipes: any[] }) {
   const [selectedRecipe, setSelectedRecipe] = useState<any | null>(null);
 
-  const getImageUrl = (item: any, index: number) => {
-    if (item.image && typeof item.image === 'object' && item.image.url) {
-      return item.image.url;
-    }
-    const imageMap: Record<string, string> = {
-      'Sup Jamur': 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=800',
-      'Sup Sayur': 'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=800',
-      'Tempe Manis': 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800',
-      'Sayur Urap': 'https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&q=80&w=800',
-      'Kare Ayam': 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&q=80&w=800',
-      'Kare Tahu': 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&q=80&w=800',
-      'Sate Ayam': '/images/gallery-satay.jpg',
-      'Sate Tempe': '/images/gallery-satay.jpg',
-      'Pepes Ikan': 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&q=80&w=800',
-      'Tofu Pepes': 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&q=80&w=800',
-      'Nasi Goreng atau Nasi Kuning': 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800',
-      'Nasi Kuning': 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800',
-      'Pergedel Jagung': 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&q=80&w=800',
-      'Sambal Matah': '/images/gallery-chopping.jpg',
-      'Dadar Gulung': '/images/gallery-thumbs.jpg'
-    };
-    const fallbackFoodImages = [
-      'https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&q=80&w=800',
-      '/images/gallery-satay.jpg'
-    ];
-    return imageMap[item.title] || fallbackFoodImages[index % fallbackFoodImages.length];
-  };
+  // Removed getImageUrl function as we no longer show images for menu items
 
   return (
     <>
@@ -68,15 +39,11 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
             <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
               <div className="w-2 flex-shrink-0 xl:w-[calc(50vw-40rem+0.5rem)]" />
               {recipes.filter(r => r.menuType !== 'vegetarian').map((item, index) => {
-                const imageUrl = getImageUrl(item, index);
                 return (
-                <div key={item.id} onClick={() => setSelectedRecipe({ ...item, imageUrl })} className="cursor-pointer flex-shrink-0 w-64 snap-start scroll-ml-6 xl:scroll-ml-[calc(50vw-40rem+1.5rem)] bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-                  <div className="w-full h-40 relative overflow-hidden">
-                    <Image src={imageUrl} alt={item.title} fill sizes="256px" className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-bold text-stone-900 dark:text-white text-base leading-tight group-hover:text-green-600 transition-colors">{item.title}</h4>
-                    <p className="text-sm text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">{item.description}</p>
+                <div key={item.id} onClick={() => setSelectedRecipe(item)} className="cursor-pointer flex-shrink-0 w-64 snap-start scroll-ml-6 xl:scroll-ml-[calc(50vw-40rem+1.5rem)] bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                  <div className="p-6">
+                    <h4 className="font-bold text-stone-900 dark:text-white text-lg leading-tight group-hover:text-green-600 transition-colors">{item.title}</h4>
+                    <p className="text-sm text-stone-500 dark:text-stone-400 mt-2 line-clamp-3">{item.description}</p>
                   </div>
                 </div>
               )})}
@@ -98,15 +65,11 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
             <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}>
               <div className="w-2 flex-shrink-0 xl:w-[calc(50vw-40rem+0.5rem)]" />
               {recipes.filter(r => r.menuType === 'vegetarian').map((item, index) => {
-                const imageUrl = getImageUrl(item, index);
                 return (
-                <div key={item.id} onClick={() => setSelectedRecipe({ ...item, imageUrl })} className="cursor-pointer flex-shrink-0 w-64 snap-start scroll-ml-6 xl:scroll-ml-[calc(50vw-40rem+1.5rem)] bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
-                  <div className="w-full h-40 relative overflow-hidden">
-                    <Image src={imageUrl} alt={item.title} fill sizes="256px" className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </div>
-                  <div className="p-4">
-                    <h4 className="font-bold text-stone-900 dark:text-white text-base leading-tight group-hover:text-emerald-600 transition-colors">{item.title}</h4>
-                    <p className="text-sm text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">{item.description}</p>
+                <div key={item.id} onClick={() => setSelectedRecipe(item)} className="cursor-pointer flex-shrink-0 w-64 snap-start scroll-ml-6 xl:scroll-ml-[calc(50vw-40rem+1.5rem)] bg-white dark:bg-zinc-900 border border-stone-100 dark:border-zinc-800 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                  <div className="p-6">
+                    <h4 className="font-bold text-stone-900 dark:text-white text-lg leading-tight group-hover:text-emerald-600 transition-colors">{item.title}</h4>
+                    <p className="text-sm text-stone-500 dark:text-stone-400 mt-2 line-clamp-3">{item.description}</p>
                   </div>
                 </div>
               )})}
@@ -131,11 +94,8 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
 
-            <div className="relative h-64 w-full flex-shrink-0">
-              <Image src={selectedRecipe.imageUrl} alt={selectedRecipe.title} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6 md:p-8">
-                <h3 className="text-3xl md:text-4xl font-bold text-white drop-shadow-md">{selectedRecipe.title}</h3>
-              </div>
+            <div className="p-6 md:p-8 bg-gradient-to-r from-stone-50 to-stone-100 dark:from-zinc-900 dark:to-zinc-800">
+              <h3 className="text-3xl md:text-4xl font-bold text-stone-900 dark:text-white mb-2">{selectedRecipe.title}</h3>
             </div>
 
             <div className="p-6 md:p-8 overflow-y-auto">

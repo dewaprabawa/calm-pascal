@@ -193,17 +193,12 @@ export default async function Page() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {displayActivities.length > 0 ? displayActivities.map((activity) => (
+          {displayActivities.length > 0 ? displayActivities.map((activity, index) => (
             <div key={activity.id} className="group relative rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 flex flex-col">
               <div className="aspect-video bg-stone-200 dark:bg-zinc-800 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-400/30 to-amber-300/30 group-hover:scale-105 transition-transform duration-700 mix-blend-multiply opacity-40 z-10" />
                 {(() => {
-                  let imgPath = '/images/img4.jpg';
-                  if (activity.title.toLowerCase().includes('market') || activity.title.toLowerCase().includes('masterclass')) {
-                    imgPath = '/images/img1.jpg';
-                  } else if (activity.title.toLowerCase().includes('vegetarian') || activity.title.toLowerCase().includes('feast') || activity.title.toLowerCase().includes('veg')) {
-                    imgPath = '/images/img2.jpg';
-                  }
+                  const imgPath = `/images/activities/grid${(index % 5) + 1}.jpg`;
                   return (
                     <Image 
                       src={imgPath} 
