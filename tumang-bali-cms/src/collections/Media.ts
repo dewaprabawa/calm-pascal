@@ -33,8 +33,9 @@ export const Media: CollectionConfig = {
     ],
     adminThumbnail: ({ doc }) => {
       // Fallback to the main image URL if the thumbnail size isn't generated or available yet
-      if (doc?.sizes?.thumbnail?.url) {
-        return doc.sizes.thumbnail.url as string;
+      const sizes = doc?.sizes as any;
+      if (sizes?.thumbnail?.url) {
+        return sizes.thumbnail.url as string;
       }
       return doc?.url as string;
     },
