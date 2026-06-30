@@ -21,11 +21,11 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   plugins: [
     vercelBlobStorage({
-      enabled: true,
+      enabled: !!process.env.BLOB_READ_WRITE_TOKEN,
       collections: {
         media: true,
       },
-      token: process.env.BLOB_READ_WRITE_TOKEN || 'vercel_blob_rw_a1b2c3_d4e5f6',
+      token: process.env.BLOB_READ_WRITE_TOKEN || '',
     }),
   ],
   admin: {
