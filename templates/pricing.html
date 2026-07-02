@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Pricing &amp; FAQ — Bali Cooking Class in Ubud | Tumang Bali{% endblock %}
+{% block meta_desc %}How much is a cooking class in Bali? See Tumang Bali's Ubud class prices, what's included, and answers to every question travellers ask before booking.{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="wrap-narrow">
+    <p class="crumb"><a href="{{ url_for('home') }}">Home</a> &nbsp;/&nbsp; Pricing &amp; FAQ</p>
+    <span class="eyebrow">Pricing &amp; FAQ</span>
+    <h1>Simple pricing. Everything included.</h1>
+    <p class="lead">One price covers your market tour, the hands-on class, a full meal of everything you cook, a recipe book to take home, and free pickup in the Ubud area.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap-narrow">
+    <div class="prices">
+      <div class="price-row">
+        <span class="name">Morning Class <span class="sub">Starts 8:00 AM · includes market tour + rice-field walk</span></span>
+        <span class="amt">IDR 450k <span style="font-size:var(--text-sm);color:var(--ink-muted)">/ ~$29</span></span>
+      </div>
+      <div class="price-row">
+        <span class="name">Afternoon Class <span class="sub">Starts 2:00 PM · hands-on cooking (no market tour)</span></span>
+        <span class="amt">IDR 400k <span style="font-size:var(--text-sm);color:var(--ink-muted)">/ ~$26</span></span>
+      </div>
+      <div class="price-row">
+        <span class="name">Private / Couples Class <span class="sub">Just your group · flexible timing</span></span>
+        <span class="amt">from IDR 650k <span style="font-size:var(--text-sm);color:var(--ink-muted)">/ ~$42 pp</span></span>
+      </div>
+      <div class="price-row">
+        <span class="name">Children (under 12) <span class="sub">Cooking alongside the family</span></span>
+        <span class="amt">50% off</span>
+      </div>
+    </div>
+    <p style="font-size:var(--text-sm);color:var(--ink-muted);margin-top:var(--space-4)">
+      Prices are per person and indicative — USD figures vary with the exchange rate. Vegetarian and vegan menus are available on every class at no extra cost.
+    </p>
+
+    <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-8)" id="book">
+      <a href="mailto:hello@tumangbaliclass.com?subject=Cooking%20class%20booking" class="btn btn-primary">Request a booking</a>
+      <a href="https://wa.me/" class="btn btn-ghost">Message us on WhatsApp</a>
+    </div>
+    <p style="font-size:var(--text-sm);color:var(--ink-muted);margin-top:var(--space-3)">
+      Tell us your date, number of guests, and any dietary needs — we'll confirm your spot and arrange pickup.
+    </p>
+  </div>
+</section>
+
+<section class="faq" style="background:var(--surface)">
+  <div class="wrap-narrow">
+    <div class="section-head" style="margin-bottom:var(--space-8)">
+      <span class="eyebrow">Before you book</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+    {% for f in faqs %}
+    <details {% if loop.first %}open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a|safe }}</p></details>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap-narrow">
+    <h2>Ready to cook the real Bali?</h2>
+    <p>Small groups, every day, with free Ubud pickup. Send us your date and we'll take care of the rest.</p>
+    <a href="#book" class="btn btn-primary">Request a booking</a>
+  </div>
+</section>
+{% endblock %}

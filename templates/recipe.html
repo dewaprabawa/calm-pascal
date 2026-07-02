@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}{{ r.title }} Recipe — Authentic Balinese | Tumang Bali{% endblock %}
+{% block meta_desc %}{{ r.meta }}{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="wrap-narrow">
+    <p class="crumb"><a href="{{ url_for('home') }}">Home</a> &nbsp;/&nbsp; <a href="{{ url_for('recipes_index') }}">Recipes</a> &nbsp;/&nbsp; {{ r.title }}</p>
+    <span class="eyebrow">{{ r.tag }}</span>
+    <h1>{{ r.title }}</h1>
+    <p class="lead">{{ r.blurb }}</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap-narrow">
+    <img src="{{ url_for('static', filename='img/' ~ r.img) }}" alt="{{ r.img_alt }}"
+         style="border-radius:var(--radius);aspect-ratio:16/9;object-fit:cover;width:100%;margin-bottom:var(--space-8)">
+    <div class="prose">
+      {% for para in r.intro %}<p>{{ para|safe }}</p>{% endfor %}
+
+      <div style="display:flex;gap:var(--space-8);flex-wrap:wrap;margin:var(--space-8) 0;
+                  padding:var(--space-4) 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-size:var(--text-sm)">
+        <span><strong>Serves</strong><br>{{ r.serves }}</span>
+        <span><strong>Prep</strong><br>{{ r.prep }}</span>
+        <span><strong>Cook</strong><br>{{ r.cook }}</span>
+        <span><strong>Difficulty</strong><br>{{ r.difficulty }}</span>
+      </div>
+
+      <h2>Ingredients</h2>
+      <ul>{% for i in r.ingredients %}<li>{{ i|safe }}</li>{% endfor %}</ul>
+
+      <h2>Method</h2>
+      <ol style="margin:0 0 var(--space-4) 1.1rem">
+        {% for s in r.steps %}<li style="margin-bottom:var(--space-3)">{{ s|safe }}</li>{% endfor %}
+      </ol>
+
+      {% if r.tip %}
+      <div style="background:var(--surface-2);border-radius:var(--radius);padding:var(--space-6);margin-top:var(--space-8)">
+        <h3 style="margin-top:0">Chef's tip</h3>
+        <p style="margin-bottom:0;color:var(--ink-muted)">{{ r.tip|safe }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap-narrow">
+    <h2>Learn this dish by hand, in Ubud.</h2>
+    <p>We cook {{ r.title }} — and 10+ more dishes — in our daily class. Come grind the spice paste with us.</p>
+    <a href="{{ url_for('pricing') }}#book" class="btn btn-primary">Book a class</a>
+  </div>
+</section>
+{% endblock %}

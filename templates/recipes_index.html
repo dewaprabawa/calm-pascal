@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Authentic Balinese Recipes — From Our Ubud Kitchen | Tumang Bali{% endblock %}
+{% block meta_desc %}Free authentic Balinese recipes from a local family kitchen in Ubud — base genep spice paste, sate lilit, sambal matah, black rice pudding and more.{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="wrap-narrow">
+    <p class="crumb"><a href="{{ url_for('home') }}">Home</a> &nbsp;/&nbsp; Recipes</p>
+    <span class="eyebrow">From our kitchen</span>
+    <h1>Authentic Balinese recipes, taught the way we cook them.</h1>
+    <p class="lead">The same dishes we make in class — written so you can cook them at home. Start with the spice paste; everything else builds from it.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="offers">
+      {% for r in recipes %}
+      <article class="offer reveal">
+        <img src="{{ url_for('static', filename='img/' ~ r.img) }}" alt="{{ r.img_alt }}">
+        <div class="body">
+          <span class="tag">{{ r.tag }}</span>
+          <h3>{{ r.title }}</h3>
+          <p>{{ r.blurb }}</p>
+          <a class="more" href="{{ url_for('recipe', slug=r.slug) }}">Read the recipe →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap-narrow">
+    <h2>Recipes are better with your hands in the mortar.</h2>
+    <p>Cook all of these — and more — with us in Ubud. Market tour, hands-on class, and a feast over the rice fields.</p>
+    <a href="{{ url_for('pricing') }}#book" class="btn btn-primary">Book a class</a>
+  </div>
+</section>
+{% endblock %}

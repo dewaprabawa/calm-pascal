@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %}Tumang Bali — Traditional Balinese Cooking Class in Ubud{% endblock %}
+
+{% block body %}
+<header class="hero">
+  <img class="bg" src="{{ url_for('static', filename='img/hero.jpg') }}"
+       alt="Two pairs of hands grinding turmeric and chili spice paste in a stone mortar over Ubud's rice fields">
+  <div class="wrap">
+    <span class="eyebrow" style="color:oklch(0.9 0.09 55)">Ubud · Bali</span>
+    <h1>Cook the real Bali, in a family kitchen above the rice fields.</h1>
+    <p class="lede">Walk the morning market, learn the spice paste that starts every Balinese meal, and cook 10+ dishes by hand — then share the feast you made.</p>
+    <div class="actions">
+      <a href="{{ url_for('pricing') }}#book" class="btn btn-primary">Book a class</a>
+      <a href="{{ url_for('market_tour') }}" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.4)">See the experience</a>
+    </div>
+    <div class="meta">
+      <div><b>10+</b>dishes, hands-on</div>
+      <div><b>4.9★</b>from travellers worldwide</div>
+      <div><b>Free</b>Ubud-area shuttle</div>
+    </div>
+  </div>
+</header>
+
+<!-- Story / intro -->
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">Why Tumang Bali</span>
+        <h2 style="font-size:var(--text-2xl);margin:var(--space-3) 0 var(--space-4)">Not a demo. A day inside Balinese food.</h2>
+        <p class="lead" style="margin-bottom:var(--space-4)">Most "cooking classes" sit you down and cook <em>for</em> you. We don't. You'll grind the <strong>base genep</strong> spice paste, wrap sate lilit on lemongrass, and grill over coconut-husk charcoal — guided step by step by a local family who learned these recipes from their grandmothers.</p>
+        <p style="color:var(--ink-muted)">Born and raised in Ubud, our chefs have shared this table with guests from all over the world. Beginners are welcome — it's about the culture and the laughter as much as the food.</p>
+      </div>
+      <img src="{{ url_for('static', filename='img/market.jpg') }}" alt="A local guide showing fresh chilies and spices to a traveller at Ubud's morning market" class="reveal">
+    </div>
+  </div>
+</section>
+
+<!-- How it works -->
+<section style="background:var(--surface)">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">A morning with us</span>
+      <h2>Five hours, start to shared table.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="n">1</span><h3>Hotel pickup</h3><p>Free shuttle from your Ubud-area hotel — no scooters, no stress.</p></div>
+      <div class="step reveal"><span class="n">2</span><h3>Market tour</h3><p>Walk the real local market where Balinese families shop for spices and produce.</p></div>
+      <div class="step reveal"><span class="n">3</span><h3>Rice-field walk</h3><p>A short stroll through the paddies to learn how Bali grows its rice.</p></div>
+      <div class="step reveal"><span class="n">4</span><h3>Hands-on cooking</h3><p>Two hours cooking 10+ dishes with your chef — meat or full vegetarian.</p></div>
+      <div class="step reveal"><span class="n">5</span><h3>The feast</h3><p>Sit down together over the rice fields and eat everything you made.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Offers -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Choose your class</span>
+      <h2>Four ways to spend the day.</h2>
+    </div>
+    <div class="offers">
+      <article class="offer reveal">
+        <img src="{{ url_for('static', filename='img/market.jpg') }}" alt="Baskets of chilies and turmeric at the Ubud morning market">
+        <div class="body">
+          <span class="tag">Most popular</span>
+          <h3>Market-Tour Class</h3>
+          <p>Start at the morning market, then cook a full Balinese menu from scratch.</p>
+          <a class="more" href="{{ url_for('market_tour') }}">Explore the class →</a>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <img src="{{ url_for('static', filename='img/veg.jpg') }}" alt="A colourful vegetarian Balinese feast on banana leaves">
+        <div class="body">
+          <span class="tag">100% plant-based option</span>
+          <h3>Vegetarian &amp; Vegan</h3>
+          <p>Tofu curry, tempeh satay, urab and sambal matah — a complete meat-free feast.</p>
+          <a class="more" href="{{ url_for('vegetarian') }}">Explore the class →</a>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <img src="{{ url_for('static', filename='img/couple.jpg') }}" alt="A couple laughing while grilling satay with a Balinese chef">
+        <div class="body">
+          <span class="tag">Couples &amp; honeymoons</span>
+          <h3>For Couples</h3>
+          <p>A romantic, hands-on morning for two over the rice fields.</p>
+          <a class="more" href="{{ url_for('couples') }}">Explore the class →</a>
+        </div>
+      </article>
+      <article class="offer reveal">
+        <img src="{{ url_for('static', filename='img/hero.jpg') }}" alt="Grinding spice paste in a stone mortar">
+        <div class="body">
+          <span class="tag">Prices &amp; questions</span>
+          <h3>Pricing &amp; FAQ</h3>
+          <p>What's included, how much it costs, and everything travellers ask before booking.</p>
+          <a class="more" href="{{ url_for('pricing') }}">See pricing →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Feast strip -->
+<section class="feast">
+  <div class="wrap">
+    <div class="split">
+      <img src="{{ url_for('static', filename='img/veg.jpg') }}" alt="A shared Balinese feast of many small dishes on a wooden table">
+      <div>
+        <span class="eyebrow" style="color:oklch(0.85 0.1 55)">Take it home</span>
+        <h2 style="font-size:var(--text-2xl);margin:var(--space-3) 0 var(--space-4)">You'll leave with the recipes — and know how to use them.</h2>
+        <p class="lead" style="margin-bottom:var(--space-8)">Every guest gets a recipe book to take home. Can't make it to Ubud yet? Start with our free Balinese recipes and cook the flavours from your own kitchen.</p>
+        <a href="{{ url_for('recipes_index') }}" class="btn btn-ghost">Browse free recipes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<section class="cta-band">
+  <div class="wrap-narrow">
+    <h2>Your best day in Ubud starts at the market.</h2>
+    <p>Morning and afternoon classes run every day, with free pickup in the Ubud area. Small groups — book ahead to reserve your spot.</p>
+    <div style="display:flex;gap:var(--space-3);justify-content:center;flex-wrap:wrap">
+      <a href="{{ url_for('pricing') }}#book" class="btn btn-primary">Book a class</a>
+      <a href="{{ url_for('pricing') }}" class="btn btn-ghost">See pricing &amp; FAQ</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
