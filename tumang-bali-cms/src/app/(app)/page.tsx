@@ -277,8 +277,8 @@ export default async function Page() {
             {/* Moment 1 */}
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
-                src="/images/gallery-chopping.jpg" 
-                alt="Chopping Ingredients" 
+                src="/images/cooking-stirfry.jpg" 
+                alt="Stir Frying Ingredients" 
                 fill 
                 sizes="(max-w-768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
@@ -286,16 +286,16 @@ export default async function Page() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Preparation</p>
-                <p className="text-white font-bold text-base mt-1">Hands-on Cooking</p>
-                <p className="text-white/80 text-xs mt-1">Chopping fresh ingredients together for our authentic Balinese spice paste.</p>
+                <p className="text-white font-bold text-base mt-1">Stir Frying</p>
+                <p className="text-white/80 text-xs mt-1">Stir frying fresh ingredients on our traditional Balinese gas stoves.</p>
               </div>
             </div>
 
             {/* Moment 2 */}
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
-                src="/images/gallery-group.jpg" 
-                alt="Group in Rice Fields" 
+                src="/images/dining-table.jpg" 
+                alt="Guests Dining" 
                 fill 
                 sizes="(max-w-768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
@@ -303,42 +303,42 @@ export default async function Page() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Gathering</p>
-                <p className="text-white font-bold text-base mt-1">New Friends</p>
-                <p className="text-white/80 text-xs mt-1">Sharing smiles and beautiful rice field views with guests from around the world.</p>
+                <p className="text-white font-bold text-base mt-1">Shared Feast</p>
+                <p className="text-white/80 text-xs mt-1">Savoring our hand-made traditional Balinese lunch together overlooking the sawah.</p>
               </div>
             </div>
 
             {/* Moment 3 */}
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
-                src="/images/gallery-girls.jpg" 
-                alt="Guests with Offerings" 
+                src="/images/group-shrine.jpg" 
+                alt="Group in Rice Fields" 
                 fill 
                 sizes="(max-w-768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Culture</p>
-                <p className="text-white font-bold text-base mt-1">Balinese Offerings</p>
-                <p className="text-white/80 text-xs mt-1">Holding handmade Canang Sari flower offerings by our traditional temple.</p>
+                <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Group Fun</p>
+                <p className="text-white font-bold text-base mt-1">Rice Field Shrine</p>
+                <p className="text-white/80 text-xs mt-1">Smiling and celebrating a wonderful day of cooking by our traditional stone shrine.</p>
               </div>
             </div>
 
             {/* Moment 4 */}
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
-                src="/images/gallery-thumbs.jpg" 
-                alt="Chef and Guests" 
+                src="/images/group-brochures.jpg" 
+                alt="Chef and Guests with Certificates" 
                 fill 
                 sizes="(max-w-768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
               <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Smiles</p>
-                <p className="text-white font-bold text-base mt-1">Expert Guidance</p>
-                <p className="text-white/80 text-xs mt-1">Thumbs up! Our local chefs ensure a fun, safe, and delicious experience.</p>
+                <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Graduation</p>
+                <p className="text-white font-bold text-base mt-1">Proud Certificates</p>
+                <p className="text-white/80 text-xs mt-1">Guests showing off their cooking certificates after a fun-filled day.</p>
               </div>
             </div>
 
