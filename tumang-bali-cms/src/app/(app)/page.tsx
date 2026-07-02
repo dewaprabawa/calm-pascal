@@ -403,9 +403,9 @@ export default async function Page() {
                     if (instructor.name.toLowerCase().includes('made') || instructor.name.toLowerCase().includes('ayu')) {
                       fallbackPhoto = '/images/img3.jpg';
                     } else if (instructor.name.toLowerCase().includes('wayan') || instructor.name.toLowerCase().includes('sudiana')) {
-                      fallbackPhoto = '/images/img1.jpg';
-                      // Focus on Wayan's face (the chef on the right side of the photo)
-                      objectPosition = '55% 20%';
+                      fallbackPhoto = '/images/instructor-wayan.jpg';
+                      // Focus on Wayan's face (the chef is on the left/middle of the photo)
+                      objectPosition = '41% 36%';
                     }
                     return (
                       <Image 

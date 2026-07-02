@@ -36,7 +36,7 @@ export async function generateMetadata({
   const img =
     recipe.image && typeof recipe.image === 'object' && 'url' in recipe.image
       ? (recipe.image.url as string)
-      : '/images/img1.jpg'
+      : '/images/itinerary/dadar-gulung-close.jpg'
 
   return {
     title,
