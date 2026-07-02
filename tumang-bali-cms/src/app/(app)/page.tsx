@@ -104,7 +104,7 @@ export default async function Page() {
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
-                    <Image src="/images/img3.jpg" alt="Student" fill className="object-cover" />
+                    <Image src="/images/itinerary/guest-dessert.jpg" alt="Student" fill className="object-cover" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
                     <Image src="/images/img5.jpg" alt="Student" fill className="object-cover" />
@@ -160,7 +160,7 @@ export default async function Page() {
             {/* Overlapping secondary image badge */}
             <div className="absolute -bottom-6 -left-6 w-32 md:w-40 aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-zinc-900 hidden sm:block rotate-12 hover:rotate-0 transition-transform duration-300">
               <Image 
-                src="/images/img2.jpg" 
+                src="/images/itinerary/offerings-detail.jpg" 
                 alt="Balinese Flower Offerings" 
                 fill 
                 sizes="160px"
@@ -171,7 +171,7 @@ export default async function Page() {
             {/* Overlapping third badge */}
             <div className="absolute -top-6 -right-6 w-32 md:w-36 aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-zinc-900 hidden sm:block -rotate-12 hover:rotate-0 transition-transform duration-300">
               <Image 
-                src="/images/img1.jpg" 
+                src="/images/gallery-satay.jpg" 
                 alt="Grilling Satay" 
                 fill 
                 sizes="140px"
