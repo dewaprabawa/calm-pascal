@@ -46,25 +46,25 @@ const highlights = [
     title: 'Tur Pasar Lokal',
     description:
       'Jelajahi pasar pagi tradisional Ubud dan temukan rempah, sayuran, serta bahan segar khas Bali bersama pemandu kami.',
-    image: '/images/img2.jpg',
+    image: '/images/itinerary/market.jpg',
   },
   {
     title: 'Jalan-Jalan di Sawah',
     description:
       'Nikmati jalan santai melewati hamparan sawah hijau dan pelajari cara petani Bali menanam padi sebelum kelas dimulai.',
-    image: '/images/img3.jpg',
+    image: '/images/itinerary/ricefield.jpg',
   },
   {
     title: 'Kelas Memasak Langsung',
     description:
       'Pakai celemek dan masak 10+ hidangan Bali tradisional langkah demi langkah bersama chef lokal berpengalaman.',
-    image: '/images/img1.jpg',
+    image: '/images/itinerary/cooking.jpg',
   },
   {
     title: 'Santap Bersama',
     description:
       'Duduk bersama dan nikmati hidangan yang baru Anda masak dengan pemandangan indah Ubud yang menenangkan.',
-    image: '/images/img4.jpg',
+    image: '/images/itinerary/canang.jpg',
   },
 ]
 

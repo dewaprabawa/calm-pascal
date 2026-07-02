@@ -8,9 +8,16 @@ type ItineraryStep = {
   description: string
   image: string | any
 }
-
 export default function ItinerarySection({ steps: payloadSteps }: { steps?: ItineraryStep[] }) {
-  const steps = payloadSteps && payloadSteps.length > 0 ? payloadSteps : [
+  const staticImages = [
+    '/images/img5.jpg',                 // Step 1: Hotel Pickup
+    '/images/itinerary/market.jpg',     // Step 2: Ubud Local Market
+    '/images/itinerary/ricefield.jpg',  // Step 3: Ricefield Walk
+    '/images/itinerary/cooking.jpg',    // Step 4: Cooking Class
+    '/images/itinerary/canang.jpg',     // Step 5: Local Restaurant/Dining
+  ]
+
+  const rawSteps = payloadSteps && payloadSteps.length > 0 ? payloadSteps : [
     {
       title: "Hotel Pickup",
       duration: "30–60 mins",
@@ -21,27 +28,32 @@ export default function ItinerarySection({ steps: payloadSteps }: { steps?: Itin
       title: "Stop 1: Ubud Local Market",
       duration: "45 mins",
       description: "Meet your guide and explore the traditional morning market. You will see where locals shop and buy the fresh spices, vegetables, and ingredients you need for the class.",
-      image: "/images/img2.jpg"
+      image: "/images/itinerary/market.jpg"
     },
     {
       title: "Stop 2: Ricefield Walk",
       duration: "30 mins",
       description: "Take a short, beautiful walk through the green rice paddies. Learn how Balinese farmers grow rice before arriving at the kitchen.",
-      image: "/images/img3.jpg"
+      image: "/images/itinerary/ricefield.jpg"
     },
     {
       title: "Stop 3: Cooking Class",
       duration: "2 hours",
       description: "Arrive at Tumang Balinese Kitchen. Enjoy a welcome drink, put on your apron, and learn about the ingredients. For the next two hours, you will chop, mix, and cook 4 to 5 traditional Balinese dishes step-by-step with your chef.",
-      image: "/images/img1.jpg"
+      image: "/images/itinerary/cooking.jpg"
     },
     {
       title: "Stop 4: Local Restaurant",
       duration: "1 hour",
       description: "Move to our peaceful dining area or local restaurant space. Sit down at the table with the rest of the group to eat the delicious food you just cooked. Relax, enjoy the view, and share stories before heading back to your hotel.",
-      image: "/images/img4.jpg"
+      image: "/images/itinerary/canang.jpg"
     }
   ]
+
+  const steps = rawSteps.map((step, index) => ({
+    ...step,
+    image: staticImages[index] || (typeof step.image === 'object' && step.image?.url ? step.image.url : step.image)
+  }))
 
   return (
     <section id="itinerary" className="py-24 px-6 max-w-5xl mx-auto overflow-hidden">
