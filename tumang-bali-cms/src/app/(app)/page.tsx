@@ -199,6 +199,12 @@ export default async function Page() {
             <p className="text-white/90 text-base md:text-lg font-light leading-relaxed">
               Read our guide on how we make our secret spice paste (Bumbu Bali) using authentic ingredients and traditional hand-grinding techniques.
             </p>
+            <div className="pt-2 text-sm text-orange-100 font-medium">
+              Thinking about a class?{' '}
+              <Link href="/blog/tumang-vs-ubud-cooking-class" className="text-white underline hover:text-orange-200 transition-colors">
+                Read why we choose the village setting over the town
+              </Link>.
+            </div>
           </div>
           <div className="z-10 w-full md:w-auto flex justify-center">
             <Link href="/blog/how-to-make-bumbu-bali" className="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-orange-50 text-orange-700 font-bold px-8 py-4 rounded-full transition-transform hover:-translate-y-1 shadow-lg text-center whitespace-nowrap">

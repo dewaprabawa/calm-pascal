@@ -219,6 +219,45 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           }}
         />
       )}
+
+      {/* FAQPage Schema for Tumang vs Ubud */}
+      {article.slug === 'tumang-vs-ubud-cooking-class' && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Is Tumang (Batubulan) close to Ubud?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, it is very close. Tumang is only about 10–15 minutes from the center of Ubud. We pick up guests from their hotels in the morning and drop them off after lunch.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Is the cooking class in Tumang more authentic than in Ubud?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Generally, yes. Because Tumang is a working village and not a tourism hub, the classes are often more focused on daily Balinese life and family traditions.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do I need to rent a scooter to join the Tumang cooking class?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'No. We provide free hotel pickup from the Ubud area. We drive you to the local market, then to the rice paddy kitchen, and back to your hotel.'
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      )}
     </div>
   )
 }
