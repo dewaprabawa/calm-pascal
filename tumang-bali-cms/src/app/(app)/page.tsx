@@ -185,6 +185,30 @@ export default async function Page() {
       {/* Animated Stats */}
       <StatsCounter />
 
+      {/* Spice Paste Promotion Banner */}
+      <section className="px-6 max-w-7xl mx-auto mb-16">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500 text-white p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 group">
+          <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+          <div className="space-y-4 max-w-2xl text-center md:text-left z-10">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-widest">
+              Secret Spice Paste
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+              Love the flavors of Bali?
+            </h2>
+            <p className="text-white/90 text-base md:text-lg font-light leading-relaxed">
+              Read our guide on how we make our secret spice paste (Bumbu Bali) using authentic ingredients and traditional hand-grinding techniques.
+            </p>
+          </div>
+          <div className="z-10 w-full md:w-auto flex justify-center">
+            <Link href="/blog/how-to-make-bumbu-bali" className="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-orange-50 text-orange-700 font-bold px-8 py-4 rounded-full transition-transform hover:-translate-y-1 shadow-lg text-center whitespace-nowrap">
+              Read the Guide
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7"/></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Activities / Classes */}
       <section id="classes" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">

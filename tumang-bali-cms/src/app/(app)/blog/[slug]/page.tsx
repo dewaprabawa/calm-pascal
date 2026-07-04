@@ -8,6 +8,8 @@ import { Metadata } from 'next'
 
 export const revalidate = 60
 
+const SITE = 'https://tumangbaliclass.com'
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params
   const payload = await getPayload({ config: configPromise })
@@ -23,6 +25,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: (article.meta?.title as string) || `${article.title} | Tumang Bali Blog`,
     description: (article.meta?.description as string) || article.excerpt,
+    alternates: {
+      canonical: `${SITE}/blog/${resolvedParams.slug}`,
+    },
     openGraph: {
       title: (article.meta?.title as string) || article.title,
       description: (article.meta?.description as string) || article.excerpt,
@@ -65,6 +70,21 @@ function renderLexical(node: any, index: number = 0): React.ReactNode {
       return <a key={index} href={node.fields?.url} className="text-orange-600 hover:underline">{children}</a>;
     case 'quote':
       return <blockquote key={index} className="border-l-4 border-orange-500 pl-4 italic text-stone-600 dark:text-stone-400 my-6 text-xl">{children}</blockquote>;
+    case 'upload':
+      const val = node.value;
+      if (val && typeof val === 'object' && val.url) {
+        return (
+          <div key={index} className="my-8 relative rounded-3xl overflow-hidden shadow-lg border border-stone-200 dark:border-zinc-800 aspect-[3/2] w-full max-w-2xl mx-auto">
+            <Image
+              src={val.url}
+              alt={val.alt || ''}
+              fill
+              className="object-cover"
+            />
+          </div>
+        );
+      }
+      return null;
     default:
       return <React.Fragment key={index}>{children}</React.Fragment>;
   }
@@ -136,17 +156,69 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Article',
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `https://tumangbaliclass.com/blog/${article.slug}`
+            },
             headline: article.title,
-            image: article.featuredImage && typeof article.featuredImage === 'object' ? [article.featuredImage.url] : [],
-            datePublished: article.publishedDate || article.createdAt,
-            author: [{
+            description: (article.meta?.description as string) || article.excerpt,
+            image: article.featuredImage && typeof article.featuredImage === 'object' && article.featuredImage.url ? [article.featuredImage.url] : [],
+            author: {
               '@type': 'Person',
-              name: article.author,
-              url: 'https://tumangbali.com'
-            }]
+              name: article.author
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Tumang Bali Cooking Class',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://tumangbaliclass.com/images/logo.webp'
+              }
+            },
+            datePublished: article.publishedDate ? article.publishedDate.split('T')[0] : article.createdAt.split('T')[0],
+            dateModified: article.updatedAt ? article.updatedAt.split('T')[0] : article.createdAt.split('T')[0]
           })
         }}
       />
+
+      {/* Conditionally Render FAQPage Schema */}
+      {article.slug === 'how-to-make-bumbu-bali' && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Can I make Balinese bumbu without shrimp paste (terasi)?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. While traditional savory dishes almost always include terasi, you can substitute it with a pinch of sugar and extra shallots, or simply omit it. We offer vegetarian options at our cooking class so everyone can enjoy the flavors.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What is the difference between Bumbu Bali and Bumbu Jawa (Javanese spice paste)?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Balinese bumbu generally relies more heavily on turmeric, giving it a yellow/golden color, whereas Javanese bumbu tends to be darker, richer, and relies more on shalot and sweet soy sauce (kecap manis).'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do I really need a stone mortar and pestle?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'While a high-powered blender works in a pinch, a stone mortar produces a much more aromatic and flavorful paste. For the authentic experience, we highly recommend using a cobek.'
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      )}
     </div>
   )
 }

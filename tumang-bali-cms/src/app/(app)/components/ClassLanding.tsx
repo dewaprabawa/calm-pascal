@@ -150,6 +150,16 @@ export default function ClassLanding({
             </div>
           </div>
         ))}
+
+        {/* Internal Link Callout */}
+        <div className="bg-orange-50 dark:bg-orange-950/20 border border-orange-200/60 dark:border-orange-900/30 rounded-3xl p-6 md:p-8 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-stone-800 dark:text-stone-200 font-medium text-center sm:text-left">
+            Curious about the spices we use? Check out our guide to authentic Balinese bumbu.
+          </p>
+          <Link href="/blog/how-to-make-bumbu-bali" className="inline-flex bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-full text-sm shadow-md transition-all hover:-translate-y-0.5 whitespace-nowrap">
+            Read Bumbu Guide
+          </Link>
+        </div>
       </section>
 
       {/* FAQ */}
