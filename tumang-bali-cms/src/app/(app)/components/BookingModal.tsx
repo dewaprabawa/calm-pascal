@@ -22,6 +22,10 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
   const WHATSAPP_NUMBER = '6282210132418' 
 
   useEffect(() => {
+    setDate(new Date().toISOString().split('T')[0])
+  }, [])
+
+  useEffect(() => {
     const handleOpenModal = (e: any) => {
       setIsOpen(true)
       if (e.detail?.activityTitle) {
@@ -52,7 +56,9 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
 *Number of People:* ${numPeople}
 *Pickup Location:* ${pickupLocation}
 ${notes ? `*Special Notes:* ${notes}\n` : ''}
-Please let me know about availability!`
+Please let me know about availability!
+
+_(Booking from website)_`
     
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`
