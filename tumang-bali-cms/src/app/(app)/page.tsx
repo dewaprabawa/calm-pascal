@@ -90,12 +90,14 @@ export default async function Page() {
               Authentic Balinese Cooking Class in Ubud
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] animate-fade-in-up">
-              Taste the Spirit <br/> of <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-500">Bali</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] animate-fade-in-up">
+              Experience Authentic <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-500">Balinese Cooking Classes</span>
+              <br className="hidden xl:block" /> in Ubud
             </h1>
             
             <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed animate-fade-in-up">
-              Immerse yourself in traditional flavors, fresh market ingredients, and ancient culinary secrets passed down through generations. Cook, dine, and share in the beauty of Ubud's rice fields.
+              Join a local family in our traditional Tumang village kitchen. From the morning market to the rice fields, experience real Balinese food culture.
             </p>
             
             {/* Quick Badges / Stats */}
@@ -121,12 +123,12 @@ export default async function Page() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-in-up">
-              <BookButton className="w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white text-center px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
-                Book Experience
-              </BookButton>
-              <a href="#classes" className="w-full sm:w-auto flex items-center justify-center bg-white/50 hover:bg-white/80 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/80 backdrop-blur-md border border-stone-200 dark:border-zinc-700 text-stone-800 dark:text-stone-200 px-8 py-4 rounded-full font-semibold text-lg shadow-md transition-all hover:-translate-y-1">
-                Explore Classes
-              </a>
+              <Link href="/book-your-cooking-class" className="w-full sm:w-auto text-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
+                Book Your Cooking Class
+              </Link>
+              <Link href="/half-day-cooking-class-bali" className="w-full sm:w-auto flex items-center justify-center bg-white/50 hover:bg-white/80 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/80 backdrop-blur-md border border-stone-200 dark:border-zinc-700 text-stone-800 dark:text-stone-200 px-8 py-4 rounded-full font-semibold text-lg shadow-md transition-all hover:-translate-y-1">
+                View Afternoon & Evening
+              </Link>
               <div className="w-full sm:w-auto flex items-center justify-center">
                 <HeroVideo />
               </div>
