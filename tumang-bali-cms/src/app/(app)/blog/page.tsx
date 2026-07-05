@@ -8,8 +8,8 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   // The layout template appends " | Tumang Bali Cooking Class Ubud", so keep
   // this short to avoid duplicating the brand and overrunning the title length.
-  title: 'Blog & Recipes',
-  description: 'Balinese food stories, traditional recipes & Ubud travel tips from the Tumang Bali Cooking Class kitchen — the dishes, spices and culture behind our classes.',
+  title: 'Ubud Cooking Class & Balinese Food Culture Blog',
+  description: 'Planning an authentic Ubud cooking class? Discover traditional recipes, local market tours, and the best Balinese food stories from Tumang Bali Kitchen.',
 }
 
 export const revalidate = 60
@@ -37,7 +37,7 @@ export default async function BlogPage() {
       <main className="max-w-5xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-black mb-4">Balinese Food & Culture Blog</h1>
-          <p className="text-xl text-stone-500 max-w-2xl mx-auto">Discover authentic recipes, travel tips, and stories from our kitchen in Ubud.</p>
+          <p className="text-lg text-stone-500 max-w-3xl mx-auto">Welcome to the Tumang Bali Kitchen blog — your ultimate guide to Ubud cooking classes and Balinese cuisine. Whether you are looking for a hands-on culinary experience, a traditional market tour, or just want to master authentic Balinese recipes like Sambal Matah and Base Genep, you've found the right place. Explore our latest food stories and travel tips below to find the perfect cooking class for your trip to Bali.</p>
         </div>
 
         {articles.length === 0 ? (
