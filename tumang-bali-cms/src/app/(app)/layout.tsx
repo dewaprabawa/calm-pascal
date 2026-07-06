@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tumangbaliclass.com'),
   title: {
-    default: 'Best Cooking Class in Ubud Bali | Tumang Bali',
+    default: "Authentic Balinese Cooking Class in Ubud — Market Tour & Recipes | Tumang Bali",
     template: '%s | Tumang Bali Cooking Class Ubud',
   },
-  description: 'Top-rated authentic Balinese cooking class in Ubud: local market tour, rice field walk & hands-on cooking of 10+ dishes. Vegetarian friendly, hotel pickup.',
+  description: "Top-rated authentic Balinese cooking class in Ubud: local market tour, rice field walk & hands-on cooking of 10+ traditional dishes with recipe booklet. Vegetarian friendly, hotel pickup.",
   keywords: [
     // Primary high-volume keywords
     'cooking class Ubud', 'cooking class Bali', 'Balinese cooking class', 'best cooking class in Bali',
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     'cooking class with hotel pickup Ubud', 'half day cooking class Bali',
   ],
   openGraph: {
-    title: 'Tumang Bali Cooking Class | #1 Authentic Balinese Cooking Experience in Ubud',
-    description: 'Join the best cooking class in Ubud! ⭐ 5-star rated on TripAdvisor. Market tour + rice field walk + 10+ dishes. Vegetarian options. Hotel pickup included. Book now!',
+    title: "Authentic Balinese Cooking Class in Ubud — Market Tour & Recipes",
+    description: "Join our cooking school in Ubud. Learn 10+ traditional Balinese dishes with a local chef, tour a traditional market, and take home a recipe booklet.",
     url: 'https://tumangbaliclass.com',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',

@@ -59,7 +59,7 @@ export default function ItinerarySection({ steps: payloadSteps }: { steps?: Itin
     <section id="itinerary" className="py-24 px-6 max-w-5xl mx-auto overflow-hidden">
       <div className="flex flex-col items-center mb-16 text-center">
         <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2 block">The Experience</span>
-        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4">Your Itinerary</h2>
+        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4">Your Cooking Class Itinerary</h2>
         <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg md:text-xl font-light">A step-by-step guide to your culinary adventure with Tumang Bali.</p>
       </div>
 

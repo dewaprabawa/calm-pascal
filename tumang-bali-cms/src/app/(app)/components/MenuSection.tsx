@@ -14,7 +14,7 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between mb-16 text-center md:text-left gap-6">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-green-700 dark:text-green-500">Tumang Bali Menu</h2>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-green-700 dark:text-green-500">Traditional Balinese Dishes You'll Learn</h2>
               <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">In this cooking class you will learn how to make all the above menu by your hand and you will savor for lunch or dinner.</p>
             </div>
             <a href="/api/recipes/download-pdf" target="_blank" rel="noreferrer" className="flex-shrink-0 flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">

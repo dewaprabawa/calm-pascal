@@ -97,7 +97,7 @@ export default async function Page() {
             </h1>
             
             <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed animate-fade-in-up">
-              Join a local family in our traditional Tumang village kitchen. From the morning market to the rice fields, experience real Balinese food culture.
+              Learn to cook authentic Balinese cuisine with our local chef in a traditional village kitchen. Our hands-on cooking class includes a local market tour, rice field walk, and a recipe booklet to take home.
             </p>
             
             {/* Quick Badges / Stats */}
@@ -196,7 +196,7 @@ export default async function Page() {
               Secret Spice Paste
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-              Love the flavors of Bali?
+              Why Choose Our Balinese Cooking Class?
             </h2>
             <p className="text-white/90 text-base md:text-lg font-light leading-relaxed">
               Read our guide on how we make our secret spice paste (Bumbu Bali) using authentic ingredients and traditional hand-grinding techniques.
@@ -220,7 +220,7 @@ export default async function Page() {
       {/* Activities / Classes */}
       <section id="classes" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Our Experiences</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Our Cooking Experiences & Classes</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Choose from our hand-crafted cooking experiences, designed to suit both beginners and seasoned foodies.</p>
         </div>
         
@@ -288,6 +288,83 @@ export default async function Page() {
               Classes are being updated. Check back soon!
             </div>
           )}
+        </div>
+      </section>
+
+      {/* What's Included Section */}
+      <section id="whats-included" className="py-24 px-6 max-w-7xl mx-auto border-t border-stone-200 dark:border-zinc-800">
+        <div className="flex flex-col items-center mb-16 text-center">
+          <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Everything Covered</span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">What's Included in Our Cooking Class</h2>
+          <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg font-light">
+            We provide a complete, hassle-free experience so you can focus entirely on enjoying your culinary adventure.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Hotel Pickup & Drop-off</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Complimentary transport for all major Ubud areas.</p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Market & Rice Field Tour</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Guided local market tour & authentic rice field walk.</p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Hands-on Cooking</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Learn to prepare 10+ traditional Balinese dishes step-by-step.</p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Take-Home Recipe Booklet</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Printed booklet with all recipes so you can cook them at home.</p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 5.636l-3.536 3.536m0 0A7.5 7.5 0 105.146 9.146l3.536 3.536m6.707-3.536l-3.536-3.536M9.146 9.146l-3.536-3.536m0 0L3.05 3.05M9.146 9.146l6.707 6.707M12 21a9.003 9.003 0 008.364-5.636m-16.728 0A9.003 9.003 0 0012 21z"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Welcome Drink & Feast</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Refreshing welcome drink plus lunch/dinner feast of your creations.</p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Vegetarian/Vegan Friendly</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Fully customisable plant-based menu available upon request.</p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Small Group Sizes</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Intimate and hands-on session with a maximum of 8 guests.</p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">
+            <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </span>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Local Guides & Chefs</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Learn from local Balinese experts in a warm family atmosphere.</p>
+          </div>
         </div>
       </section>
 
@@ -408,6 +485,38 @@ export default async function Page() {
         </div>
       </section>
 
+      {/* About Balinese Cuisine Section */}
+      <section id="balinese-cuisine" className="py-24 px-6 max-w-7xl mx-auto border-t border-stone-200 dark:border-zinc-800">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 space-y-6">
+            <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider block">Culinary Heritage</span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-stone-900 dark:text-white">Discover Traditional Balinese Cuisine</h2>
+            <p className="text-lg text-stone-600 dark:text-stone-300 leading-relaxed font-light">
+              Balinese cuisine is built on fresh market ingredients, aromatic spices, and centuries-old family recipes. 
+              In this class, you'll learn the secrets behind <strong className="font-semibold text-orange-600 dark:text-orange-400">Bumbu Bali</strong> (our signature spice paste), 
+              the perfect <strong className="font-semibold text-stone-800 dark:text-stone-200">Sate Ayam</strong>, <strong className="font-semibold text-stone-800 dark:text-stone-200">Pepes Ikan</strong>, and the iconic <strong className="font-semibold text-stone-800 dark:text-stone-200">Sayur Urap</strong>.
+            </p>
+            <p className="text-lg text-stone-600 dark:text-stone-300 leading-relaxed font-light">
+              Whether you're a beginner or an experienced home cook, you'll walk away with real skills and a recipe booklet to recreate these authentic flavors at home.
+            </p>
+          </div>
+          <div className="lg:col-span-5 relative h-[350px] sm:h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-900">
+            <Image 
+              src="/images/cooking-stirfry.jpg" 
+              alt="Traditional Balinese Cooking" 
+              fill 
+              sizes="(max-w-1024px) 100vw, 500px"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 text-white">
+              <p className="text-xs font-bold uppercase tracking-wider text-orange-400">Traditional Techniques</p>
+              <p className="text-base font-semibold mt-1">Grinding and cooking fresh herbs in our village kitchen</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Menu / Recipes */}
       <MenuSection recipes={recipes} />
 
@@ -415,7 +524,7 @@ export default async function Page() {
       <section id="instructors" className="py-24 bg-stone-100 dark:bg-zinc-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Meet Your Hosts</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Cook with Local Balinese Chef Wayan Suryana</h2>
             <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Local culinary experts passionate about sharing the true taste of Bali.</p>
           </div>
           
@@ -566,6 +675,49 @@ export default async function Page() {
               </svg>
               Review on TripAdvisor
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Who This Cooking Class Is For Section */}
+      <section id="who-this-is-for" className="py-24 px-6 max-w-7xl mx-auto border-t border-stone-200 dark:border-zinc-800">
+        <div className="flex flex-col items-center mb-16 text-center">
+          <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Designed For Everyone</span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Who This Cooking Class Is For</h2>
+          <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg font-light">
+            Our Ubud cooking class is perfect for travelers, food lovers, and families looking for an authentic cultural experience.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-6">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2a2.5 2.5 0 002.5-2.5V14a2 2 0 012-2h.055M11 20.055V18a2 2 0 00-2-2h-.5a2 2 0 01-2-2v-1.055M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-3">Travelers & Explorers</h3>
+            <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed font-light">
+              Dive deep into Balinese heritage. From picking ingredients at the local Ubud market to exploring scenic rice fields, it's a true cultural immersion.
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-6">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-3">Food Lovers & Cooks</h3>
+            <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed font-light">
+              Master the aromatic secrets of Balinese cuisine. Learn to blend our signature spice paste (Bumbu Bali) and cook 10+ traditional dishes from scratch.
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 rounded-2xl bg-orange-100 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 flex items-center justify-center mb-6">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-3">Families & Beginners</h3>
+            <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed font-light">
+              No prior experience needed. We guide you step-by-step. Fully welcoming to dietary options (vegetarian/vegan) and kids aged 8+.
+            </p>
           </div>
         </div>
       </section>

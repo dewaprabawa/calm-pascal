@@ -35,6 +35,22 @@ const faqs = [
     question: 'How long is the cooking class?',
     answer: 'The full experience lasts approximately 4–5 hours, which includes the market tour (45 mins), rice field walk (30 mins), cooking class (2 hours), and dining time (1 hour). It\'s a complete cultural and culinary immersion!',
   },
+  {
+    question: 'Is this cooking class suitable for beginners?',
+    answer: 'Absolutely. Our hands-on cooking class is designed for complete beginners. Chef Wayan guides you step-by-step, and by the end, you\'ll feel confident cooking traditional Balinese dishes at home. We even provide a recipe booklet!',
+  },
+  {
+    question: 'Do you offer a vegetarian or vegan cooking class?',
+    answer: 'Yes! We serve a fully plant-based Balinese menu upon request, featuring dishes like Veggie Sate, Tempe Curry, and local vegetable soups. Just let us know when you book.',
+  },
+  {
+    question: 'Can kids join the cooking class?',
+    answer: 'Kids aged 8 and above are very welcome! It\'s a fun, interactive family activity. Little hands love grinding spices and stirring the sate sauce. We provide child-friendly portions and extra guidance.',
+  },
+  {
+    question: 'Will I get a recipe booklet to take home?',
+    answer: 'Yes! Every guest receives a printed recipe booklet with all 10+ dishes we cook, so you can recreate the authentic flavors long after your cooking class in Ubud.',
+  },
 ]
 
 const faqSchema = {
