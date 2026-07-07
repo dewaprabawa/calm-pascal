@@ -11,18 +11,26 @@ export const revalidate = 60
 const SITE = 'https://tumangbaliclass.com'
 
 export const metadata: Metadata = {
-  title: 'Authentic Balinese Recipes | Tumang Bali Cooking Class',
+  title: 'Authentic Balinese Recipes',
   description:
     'Free authentic Balinese & Indonesian recipes from the chefs at Tumang Bali Cooking Class in Ubud. Nasi goreng, sate, sambal matah, pepes & more — with ingredients and step-by-step instructions.',
   alternates: { canonical: `${SITE}/recipes` },
   openGraph: {
-    title: 'Authentic Balinese Recipes | Tumang Bali Cooking Class',
+    title: 'Authentic Balinese Recipes',
     description:
       'Free authentic Balinese & Indonesian recipes from the chefs at Tumang Bali Cooking Class in Ubud.',
     url: `${SITE}/recipes`,
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/images/gallery-thumbs.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Authentic Balinese recipes from Tumang Bali Cooking Class in Ubud',
+      },
+    ],
   },
 }
 

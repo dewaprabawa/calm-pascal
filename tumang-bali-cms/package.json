@@ -22,7 +22,7 @@
     "pdfkit": "^0.19.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "sharp": "^0.35.2"
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -33,5 +33,14 @@
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "package": {
+    "allow-scripts": "{ \"sharp\": \"node install/check.js\", \"esbuild\": \"node install.js\", \"unrs-resolver\": \"node postinstall.js\" }"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "sharp@0.34.5": true,
+    "sharp@0.35.3": true,
+    "unrs-resolver@1.12.2": true
   }
 }

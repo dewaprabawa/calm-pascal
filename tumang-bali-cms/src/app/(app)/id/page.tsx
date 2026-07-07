@@ -11,7 +11,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Kelas Memasak Terbaik di Ubud Bali | Tumang Bali',
+  title: 'Kelas Memasak Terbaik di Ubud Bali',
   description:
     'Kelas memasak Bali autentik di Ubud: tur pasar lokal, jalan-jalan di sawah & memasak langsung 10+ hidangan tradisional. Ramah vegetarian, penjemputan hotel.',
   alternates: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Kelas Memasak Bali Autentik di Ubud | Tumang Bali',
+    title: 'Kelas Memasak Bali Autentik di Ubud',
     description:
       'Bergabunglah dengan kelas memasak terbaik di Ubud! Tur pasar + jalan-jalan di sawah + 10+ hidangan. Pilihan vegetarian. Penjemputan hotel termasuk.',
     url: 'https://tumangbaliclass.com/id',
@@ -80,6 +80,7 @@ export default async function IndonesianPage() {
   return (
     <div
       lang="id"
+      dir="ltr"
       className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white"
     >
       {/* Navigation */}
@@ -93,13 +94,14 @@ export default async function IndonesianPage() {
               TUMANG BALI
             </span>
           </Link>
-          <Link
+          <a
             href="/"
+            rel="alternate"
             hrefLang="en"
             className="text-sm font-semibold text-stone-500 hover:text-orange-500 transition-colors"
           >
             English
-          </Link>
+          </a>
         </div>
       </nav>
 

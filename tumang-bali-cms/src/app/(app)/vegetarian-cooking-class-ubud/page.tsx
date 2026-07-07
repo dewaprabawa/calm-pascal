@@ -8,12 +8,12 @@ import { vegetarianClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Vegetarian Cooking Class in Ubud | Tumang Bali',
+  title: 'Vegetarian Cooking Class in Ubud',
   description:
     'Plant-based Balinese cooking class in Ubud. Cook tempe, tofu, sayur urap Cook tempe, tofu, sayur urap & sambal matah from scratch with local chefs. Vegan on request. Market tour & hotel pickup. sambal matah from scratch with local chefs. Vegan on request. Hotel pickup included.',
   alternates: { canonical: 'https://tumangbaliclass.com/vegetarian-cooking-class-ubud' },
   openGraph: {
-    title: 'Vegetarian Cooking Class in Ubud | Tumang Bali',
+    title: 'Vegetarian Cooking Class in Ubud',
     description:
       'Plant-based Balinese cooking class in Ubud. Cook tempe, tofu, sayur urap Cook tempe, tofu, sayur urap & sambal matah from scratch with local chefs. Vegan on request. Market tour & hotel pickup. sambal matah from scratch with local chefs. Vegan on request. Hotel pickup included.',
     url: 'https://tumangbaliclass.com/vegetarian-cooking-class-ubud',

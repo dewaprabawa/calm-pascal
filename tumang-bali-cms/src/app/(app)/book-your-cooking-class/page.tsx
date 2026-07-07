@@ -11,7 +11,7 @@ import WhatsAppFloat from '../components/WhatsAppFloat'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Book Authentic Balinese Cooking Class in Ubud | Tumang Bali',
+  title: 'Book Your Balinese Cooking Class in Ubud',
   description: 'Join a 5-star rated authentic Balinese cooking class in Ubud. Includes market tour, hotel transport, and vegetarian options. Book your culinary adventure today!',
   alternates: { canonical: 'https://tumangbaliclass.com/book-your-cooking-class' },
 }

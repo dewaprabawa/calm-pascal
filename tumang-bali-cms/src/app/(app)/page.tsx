@@ -17,6 +17,7 @@ import MobileMenu from './components/MobileMenu'
 import PickupSchedule from './components/PickupSchedule'
 import TikTokEmbed from './components/TikTokEmbed'
 import InstagramEmbed from './components/InstagramEmbed'
+import { faqSchema } from './components/faqsData'
 
 export const revalidate = 60
 
@@ -814,6 +815,12 @@ export default async function Page() {
 
       {/* Booking Modal */}
       <BookingModal activities={displayActivities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number }))} />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </div>
   )
 }

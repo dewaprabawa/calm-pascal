@@ -36,15 +36,6 @@ export default function StructuredData() {
       bestRating: '5',
       worstRating: '1',
     },
-    review: [
-      {
-        '@type': 'Review',
-        author: { '@type': 'Person', name: 'Sarah Jenkins' },
-        datePublished: '2026-01-15',
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody: 'An absolutely incredible experience. Wayan was so knowledgeable and the market tour was eye-opening! The food we made was the best I had in Bali.',
-      },
-    ],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return { title: 'Not Found' }
 
   return {
-    title: (article.meta?.title as string) || `${article.title} | Tumang Bali Blog`,
+    title: (article.meta?.title as string) || article.title,
     description: (article.meta?.description as string) || article.excerpt,
     alternates: {
       canonical: `${SITE}/blog/${resolvedParams.slug}`,

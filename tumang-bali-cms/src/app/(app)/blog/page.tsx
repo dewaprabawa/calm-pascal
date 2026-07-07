@@ -8,7 +8,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   // The layout template appends " | Tumang Bali Cooking Class Ubud", so keep
   // this short to avoid duplicating the brand and overrunning the title length.
-  title: 'Ubud Cooking Class & Balinese Food Culture Blog',
+  title: 'Ubud Food & Culture Blog',
   description: 'Planning an authentic Ubud cooking class? Discover traditional recipes, local market tours, and the best Balinese food stories from Tumang Bali Kitchen.',
 }
 

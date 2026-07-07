@@ -1,8 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
+import { faqs } from './faqsData'
 
-const faqs = [
+const faqsLocal = faqs;
   {
     question: 'What is included in the cooking class?',
     answer: 'Our cooking class includes a guided local market tour, a welcome drink, hands-on cooking of 10+ traditional Balinese dishes (both regular and vegetarian options), a full lunch or dinner with the food you prepared, a recipe book to take home, and complimentary hotel pickup from the Ubud area.',
@@ -56,7 +57,7 @@ const faqs = [
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: faqsLocal.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -85,7 +86,7 @@ export default function FAQSection() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => {
+          {faqsLocal.map((faq, index) => {
             const isOpen = openIndex === index
             return (
               <div
