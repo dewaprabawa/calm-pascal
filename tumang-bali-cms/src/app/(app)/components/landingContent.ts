@@ -204,6 +204,154 @@ export const authenticClass: ClassLandingContent = {
   ctaSubtext: 'Small groups, local chefs, and a complete authentic Balinese menu in Ubud.',
 }
 
+export const bestCookingClass: ClassLandingContent = {
+  path: '/best-bali-cooking-class',
+  eyebrow: 'Reviewed & Compared',
+  h1: 'Best Bali Cooking Classes 2026 — Reviewed & Compared',
+  h1Plain: 'Best Bali Cooking Classes 2026 — Reviewed & Compared',
+  intro:
+    'We compared the top-rated Bali cooking classes so you don’t have to. Here’s an honest review of what to expect, what to avoid, and why Tumang Bali ranks among the best for authentic hands-on Balinese cuisine.',
+  heroImage: '/images/img1.jpg',
+  heroImageAlt: 'Guests learning Balinese cooking techniques in an authentic Ubud kitchen',
+  body: [
+    {
+      heading: 'What makes a Bali cooking class truly good?',
+      paragraphs: [
+        'Not all cooking classes in Bali are created equal. The best ones take you to a real morning market, teach you the foundational spice paste (Base Genep), and let you cook a complete traditional menu rather than a watered-down single dish. Many tourists accidentally book "demo" classes where you only watch — ours is 100% hands-on.',
+        'We also believe the class should end with everyone eating together at a shared table, surrounded by rice fields and local atmosphere. That cultural connection is what separates a cooking lesson from a genuine Balinese experience.',
+      ],
+    },
+    {
+      heading: 'How we compare',
+      paragraphs: [
+        'When evaluating Bali cooking classes, the key factors are: market tour inclusion (not just a walk past stalls), authenticity of the spice paste (pre-ground vs hand-ground), number of dishes prepared (most classes do 4–5; we do 10+), group size (smaller groups = more personal instruction), and whether you actually eat what you cook. Tumang Bali checks every box.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: '100% Hands-On', description: 'No watching — you chop, grind, cook, and eat every dish yourself.' },
+    { title: 'Complete Traditional Menu', description: '10+ authentic Balinese dishes, not a single adapted recipe.' },
+    { title: 'Real Market Tour', description: 'A guided walk through a local Ubud market, not a tourist photo stop.' },
+  ],
+  faqs: [
+    {
+      question: 'How does Tumang Bali compare to other Bali cooking classes?',
+      answer:
+        'We focus on completeness and authenticity: hand-ground spice paste, 10+ dishes, a real morning market tour, and a shared dining experience. Many classes offer only 4–5 dishes or skip the market entirely.',
+    },
+    {
+      question: 'Do all cooking classes in Bali include a market tour?',
+      answer:
+        'No. Many classes start directly at the kitchen. The market tour is what sets a truly immersive experience apart — and ours is led by a local guide who explains ingredients and Balinese daily life.',
+    },
+    {
+      question: 'What should I look for when booking a Bali cooking class?',
+      answer:
+        'Check how many dishes you will cook, whether the spice paste is pre-made or hand-ground, and if the class includes a market visit. The best classes also limit group sizes for personalized instruction.',
+    },
+  ],
+  ctaHeading: 'Join the Best-Class Experience',
+  ctaSubtext: 'Small groups, real ingredients, and a complete traditional menu in Ubud.',
+}
+
+export const whereToStayClass: ClassLandingContent = {
+  path: '/where-to-stay-bali-cooking-class',
+  eyebrow: 'Area & Hotel Guide',
+  h1: 'Where to Stay in Bali for a Cooking Class — Best Areas & Hotels',
+  h1Plain: 'Where to Stay in Bali for a Cooking Class — Best Areas & Hotels',
+  intro:
+    'Planning a cooking class in Bali but unsure where to book your hotel? Here’s a breakdown of the best areas to stay in Bali for a seamless cooking-class experience, from Ubud to Seminyak to Canggu.',
+  heroImage: '/images/gallery-girls.jpg',
+  heroImageAlt: 'Beautiful Ubud neighborhood with lush greenery and local pathways',
+  body: [
+    {
+      heading: 'Best area for cooking classes: Ubud',
+      paragraphs: [
+        'Ubud is Bali’s cultural heart and the undisputed best base for cooking classes. It is surrounded by rice terraces, traditional villages, and a morning market that most other areas simply do not have. If your primary goal is to immerse yourself in Balinese food culture, stay in Ubud.',
+      ],
+    },
+    {
+      heading: 'Other great areas for cooking-class visitors',
+      paragraphs: [
+        'Seminyak and Canggu are excellent for travelers who want beach access, surf, and a vibrant café scene alongside a cooking class. Both areas have their own cooking schools, but the authentic morning-market experience is stronger in Ubud. Budget-friendly homestays and villas are available across all three areas, making it easy to fit a cooking class into any itinerary.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Ubud Is Ideal', description: 'Rice fields, markets, temples, and the best cooking-class infrastructure.' },
+    { title: 'Pickup Included', description: 'We offer complimentary hotel pickup within Ubud, and transport from nearby areas.' },
+    { title: 'All Budgets Welcome', description: 'From $20/night guesthouses to $300+ luxury villas — your cooking class is accessible either way.' },
+  ],
+  faqs: [
+    {
+      question: 'Can I join a cooking class if I am not staying in Ubud?',
+      answer:
+        'Yes. We arrange pickup from Seminyak, Canggu, Sanur and other areas for a small transport fee. Ubud guests get complimentary pickup.',
+    },
+    {
+      question: 'What is the best neighborhood to stay in for cooking classes?',
+      answer:
+        'Ubud — specifically areas near Tegallalang or the traditional village of Tumang — puts you within easy reach of the morning market, rice fields, and our kitchen.',
+    },
+    {
+      question: 'Should I book accommodation before booking the class?',
+      answer:
+        'It does not matter. Classes run daily and have ample availability. Book whichever first — we recommend the class first so you can anchor your itinerary around it.',
+    },
+  ],
+  ctaHeading: 'Plan Your Bali Stay',
+  ctaSubtext: 'Find the perfect area for your trip, then book a hands-on Balinese cooking class.',
+}
+
+export const whatToWearClass: ClassLandingContent = {
+  path: '/what-to-wear-bali-cooking-class',
+  eyebrow: 'Practical Guide',
+  h1: 'What to Wear to a Balinese Cooking Class — Complete Packing Guide',
+  h1Plain: 'What to Wear to a Balinese Cooking Class — Complete Packing Guide',
+  intro:
+    'You are packing for Bali and wondering what to wear to a cooking class? Here is exactly what to bring, what to avoid, and how to stay comfortable during your hands-on Balinese cooking experience.',
+  heroImage: '/images/gallery-thumbs.jpg',
+  heroImageAlt: 'Hands-on cooking preparation during a Balinese cooking class',
+  body: [
+    {
+      heading: 'Comfort is key',
+      paragraphs: [
+        'A Balinese cooking class involves standing for roughly two hours, bending, chopping, and grinding spices. Wear light, breathable cotton or linen clothing that you do not mind getting a little flour or spice on. Avoid loose scarves or long hanging jewelry that could dip into bowls or the spice grinder.',
+      ],
+    },
+    {
+      heading: 'Footwear and extras',
+      paragraphs: [
+        'Closed-toe, flat shoes are strongly recommended. The kitchen involves hot stoves and heavy mortars, and open sandals increase the risk of spills. Bring a light jacket or cardigan — our kitchen can be cool under the ceiling fans. If you are visiting the morning market first, wear something you can comfortably walk and bend in.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Closed-Toe Shoes', description: 'The safest option for hot stoves and heavy stone mortars.' },
+    { title: 'Wear What You Do Not Mind Getting Stained', description: 'Cooking involves fresh spices, chili oils, and coconut.' },
+    { title: 'Light Layers', description: 'Bring a light jacket for the air-conditioned kitchen area.' },
+  ],
+  faqs: [
+    {
+      question: 'Do I need to wear anything special for a cooking class in Bali?',
+      answer:
+        'No. Comfortable, casual clothes are perfect. We provide aprons so you do not need to worry about spills or stains.',
+    },
+    {
+      question: 'Can I wear sandals to the class?',
+      answer:
+        'We recommend closed-toe shoes for safety, but if you forget, you can wear clean, flat sandals. We provide aprons and shoe covers if needed.',
+    },
+    {
+      question: 'What should I wear to the morning market tour?',
+      answer:
+        'Light, breathable clothing and comfortable walking shoes. Sun protection and a hat are recommended, as the morning market takes place outdoors in the Balinese heat.',
+    },
+  ],
+  ctaHeading: 'Pack Light, Cook Smart',
+  ctaSubtext: 'Bring comfortable clothes, closed-toe shoes, and an appetite.',
+}
+
 export const halfDayClass: ClassLandingContent = {
   path: '/half-day-cooking-class-bali',
   eyebrow: 'Half-Day Experience',
