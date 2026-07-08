@@ -563,6 +563,7 @@ export default async function Page() {
         <div className="max-w-7xl mx-auto px-6 mb-12 pb-12 border-b border-stone-800">
           <p className="text-sm font-semibold text-white mb-4 uppercase tracking-wider text-center md:text-left">Our Cooking Classes in Ubud</p>
           <div className="flex flex-wrap gap-x-6 gap-y-3 justify-center md:justify-start text-sm">
+            <Link href="/authentic-balinese-cooking-class" className="hover:text-orange-500 transition-colors">Authentic Balinese Cooking Class</Link>
             <Link href="/vegetarian-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Vegetarian Cooking Class</Link>
             <Link href="/private-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Private Cooking Class</Link>
             <Link href="/cooking-class-with-market-tour-ubud" className="hover:text-orange-500 transition-colors">Cooking Class with Market Tour</Link>

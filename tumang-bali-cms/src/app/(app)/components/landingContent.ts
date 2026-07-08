@@ -155,6 +155,55 @@ export const marketTourClass: ClassLandingContent = {
   ctaSubtext: 'A guided Ubud market tour, a rice-field walk, and hands-on Balinese cooking in one morning.',
 }
 
+export const authenticClass: ClassLandingContent = {
+  path: '/authentic-balinese-cooking-class',
+  eyebrow: 'Authentic & Traditional',
+  h1: 'Authentic Balinese Cooking Class in Ubud',
+  h1Plain: 'Authentic Balinese Cooking Class in Ubud',
+  intro:
+    'Immerse yourself in traditional Balinese flavors, fresh market ingredients, and ancient culinary secrets passed down through generations. Our authentic cooking class lets you cook, dine, and share in the beauty of Ubud’s rice fields.',
+  heroImage: '/images/img4.jpg',
+  heroImageAlt: 'Guests enjoying an authentic Balinese cooking class in Ubud overlooking rice fields',
+  body: [
+    {
+      heading: 'A true taste of Bali, not a tourist shortcut',
+      paragraphs: [
+        'Balinese home cooking is defined by the Base Genep — the complete spice paste ground fresh by hand from galangal, turmeric, shallots, shrimp paste and bird’s-eye chillies. Every dish we make that day centres on this paste, just as it does in a Balinese family kitchen.',
+        'We do not use premade spice jars or watered-down recipes. You will learn how to balance sweet, salty, sour and spicy using real ingredients, and leave with the skills to recreate these dishes in your own kitchen at home.',
+      ],
+    },
+    {
+      heading: 'What you will experience',
+      paragraphs: [
+        'Your hands-on session includes everything from preparing Balinese offerings (Canang Sari) to grinding your own spice paste, cooking 10+ traditional dishes, and sitting down to eat the full feast you created together. The experience is led by local chefs who have cooked these recipes their whole lives.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Fully Traditional Menu', description: 'No shortcuts — cook exactly what Balinese families cook for festivals and celebrations.' },
+    { title: 'Hand-Ground Spice Paste', description: 'Learn the foundation of Balinese cuisine: the Base Genep.' },
+    { title: 'Cultural Immersion', description: 'Make offerings, visit the market, and dine overlooking Ubud’s rice fields.' },
+  ],
+  faqs: [
+    {
+      question: 'Is this class suitable for complete beginners?',
+      answer:
+        'Yes — every class starts from the basics. Our local chefs guide you step by step through every technique, from chopping to grinding to balancing flavours.',
+    },
+    {
+      question: 'What is Base Genep?',
+      answer:
+        'Base Genep is the complete Balinese spice paste — the heart of nearly every savoury Balinese dish. It is ground fresh on the day using a traditional stone mortar and pestle.',
+    },
+    {
+      question: 'Do I get the recipes to take home?',
+      answer: 'Absolutely. Every guest receives a printed recipe book covering the full menu, including the spice paste, so you can cook at home.',
+    },
+  ],
+  ctaHeading: 'Taste the Spirit of Bali',
+  ctaSubtext: 'Small groups, local chefs, and a complete authentic Balinese menu in Ubud.',
+}
+
 export const halfDayClass: ClassLandingContent = {
   path: '/half-day-cooking-class-bali',
   eyebrow: 'Half-Day Experience',
