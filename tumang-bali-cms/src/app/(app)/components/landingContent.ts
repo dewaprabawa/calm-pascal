@@ -352,6 +352,53 @@ export const whatToWearClass: ClassLandingContent = {
   ctaSubtext: 'Bring comfortable clothes, closed-toe shoes, and an appetite.',
 }
 
+export const beginnersClass: ClassLandingContent = {
+  path: '/bali-cooking-class-for-beginners',
+  eyebrow: 'No Experience Needed',
+  h1: 'Bali Cooking Class for Beginners — No Experience Needed',
+  h1Plain: 'Bali Cooking Class for Beginners — No Experience Needed',
+  intro:
+    'Never cooked before? No problem. Our Bali cooking class for beginners is designed from the ground up for people who have never held a spice mortar in their life. Our patient local chefs will take you from zero to a full traditional Balinese feast, one step at a time.',
+  heroImage: '/images/img3.jpg',
+  heroImageAlt: 'Beginner guests learning to grind Balinese spice paste with a local chef',
+  body: [
+    {
+      heading: 'Zero experience required',
+      paragraphs: [
+        'Our classes are designed for complete beginners. Every step is broken down into simple, manageable instructions. You will not be thrown into the deep end — instead, our chef walks you through each technique, shows you the proper way to chop, grind, balance flavours, and cook, and then watches over you as you practice.',
+        'Over 90% of our guests have zero cooking experience before joining us. By the end of the class, you will have cooked 10+ traditional dishes and left with the confidence to recreate them at home.',
+      ],
+    },
+    {
+      heading: 'What beginners actually do on the day',
+      paragraphs: [
+        'The class starts at the local morning market, where you will learn which ingredients are fresh and what each one does. Then you move to the kitchen, where you grind your first spice paste by hand — the most important skill in Balinese cooking. From there, you prepare everything from chicken satay and vegetable curry to banana fritters for dessert. Every dish is simple enough for a beginner but authentically Balinese.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Complete Beginners Welcome', description: 'No cooking skills required — we teach everything from scratch.' },
+    { title: 'Patient Local Instructors', description: 'Step-by-step guidance in English, no rushing, no pressure.' },
+    { title: 'Take Home Real Skills', description: 'Learn the foundational spice paste and 10+ recipes you can cook anywhere.' },
+  ],
+  faqs: [
+    {
+      question: 'Do I need to know how to cook before joining?',
+      answer: 'Absolutely not. Over 90% of our guests are complete beginners. We teach everything from the very first knife cut to the final seasoning.',
+    },
+    {
+      question: 'What if I am not good with my hands or cannot follow instructions?',
+      answer: 'Our chefs are patient and experienced in teaching total beginners. If you get stuck, they will show you again — there is no rush and no judgment.',
+    },
+    {
+      question: 'Will I leave the class feeling confident?',
+      answer: 'Yes. By the end of the day you will have cooked a full meal from scratch, received a recipe book, and learned the foundational spice paste technique that is at the heart of Balinese cuisine.',
+    },
+  ],
+  ctaHeading: 'Start Cooking Today',
+  ctaSubtext: 'Zero experience required. Your Balinese cooking journey starts here.',
+}
+
 export const halfDayClass: ClassLandingContent = {
   path: '/half-day-cooking-class-bali',
   eyebrow: 'Half-Day Experience',
