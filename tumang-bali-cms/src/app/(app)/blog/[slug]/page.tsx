@@ -34,6 +34,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       publishedTime: article.publishedDate || article.createdAt,
       authors: [article.author as string],
+      url: `${SITE}/blog/${resolvedParams.slug}`,
+      siteName: 'Tumang Bali Cooking Class',
       images: article.featuredImage && typeof article.featuredImage === 'object' && article.featuredImage.url ? [article.featuredImage.url] : [],
     },
   }

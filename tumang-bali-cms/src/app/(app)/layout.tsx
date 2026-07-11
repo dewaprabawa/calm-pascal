@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Authentic Balinese Cooking Class in Ubud — Market Tour & Recipes",
-    description: "Join our cooking school in Ubud. Learn 10+ traditional Balinese dishes with a local chef, tour a traditional market, and take home a recipe booklet.",
+    description: "Join our Ubud cooking class. Learn 10+ traditional Balinese dishes with a local chef, tour a market, and take home a recipe booklet.",
     url: 'https://tumangbaliclass.com',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',

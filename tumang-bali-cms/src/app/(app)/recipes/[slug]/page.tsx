@@ -28,7 +28,7 @@ export async function generateMetadata({
   const recipe = await findRecipeBySlug(slug)
   if (!recipe) return { title: 'Recipe Not Found | Tumang Bali' }
 
-  const title = `${recipe.title} Recipe${recipe.description ? ` (${recipe.description})` : ''} | Tumang Bali`
+  const title = `${recipe.title} Recipe${recipe.description ? ` (${recipe.description})` : ''}`
   const description =
     `Authentic ${recipe.title} recipe from our Balinese cooking class in Ubud. ` +
     `${recipe.description ? recipe.description + '. ' : ''}` +
@@ -43,7 +43,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: `${SITE}/recipes/${slug}` },
     openGraph: {
-      title,
+      title: title,
       description,
       url: `${SITE}/recipes/${slug}`,
       siteName: 'Tumang Bali Cooking Class',

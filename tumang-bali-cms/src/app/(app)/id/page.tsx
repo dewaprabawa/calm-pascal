@@ -11,6 +11,10 @@ import WhatsAppFloat from '../components/WhatsAppFloat'
 export const revalidate = 60
 
 export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: 'Kelas Memasak Terbaik di Ubud Bali',
   description:
     'Kelas memasak Bali autentik di Ubud: tur pasar lokal, jalan-jalan di sawah & memasak langsung 10+ hidangan tradisional. Ramah vegetarian, penjemputan hotel.',
@@ -84,6 +88,7 @@ export default async function IndonesianPage() {
       className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white"
     >
       {/* Navigation */}
+      <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('lang','id')" }} />
       <nav className="w-full bg-white dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
         <div className="max-w-5xl mx-auto w-full flex items-center justify-between">
           <Link href="/id" className="flex items-center gap-3">
