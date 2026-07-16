@@ -449,3 +449,316 @@ export const halfDayClass: ClassLandingContent = {
   ctaHeading: 'Book a Half-Day in Ubud',
   ctaSubtext: 'The complete Balinese cooking experience in an easy half-day — morning or afternoon.',
 }
+
+export const tumangVillage: ClassLandingContent = {
+  path: '/tumang-village',
+  eyebrow: 'Discover Tumang',
+  h1: 'Tumang Village, Bali — The Authentic Setting for Our Cooking Class',
+  h1Plain: 'Tumang Village, Bali — The Authentic Setting for Our Cooking Class',
+  intro:
+    'Tumang is a traditional Balinese village 30 minutes from Ubud, where our cooking class takes place. Experience real village life, walk through rice paddies, and cook in a family kitchen surrounded by green terraces.',
+  heroImage: '/images/img4.jpg',
+  heroImageAlt: 'Tumang Village in Bali — traditional Balinese village kitchen and rice paddies',
+  body: [
+    {
+      heading: 'Where is Tumang Village?',
+      paragraphs: [
+        'Tumang is a working village located in Kabupaten Gianyar, approximately 30 minutes north of Ubud centre and 45 minutes from Ngurah Rai Airport. It sits between the popular tourist areas of Ubud and the Tegallalang Rice Terraces, making it an ideal base for a Balinese cooking experience that feels far from the tourist trail.',
+        'Unlike cooking classes held in commercial kitchens or resort spaces, our kitchen is part of a real Balinese family compound. The morning market tour walks through village stalls and local shops — exactly what residents use every day.',
+      ],
+    },
+    {
+      heading: 'Why Tumang is the best setting for a cooking class',
+      paragraphs: [
+        'The village setting gives the class its authenticity. You walk through rice paddies and irrigation channels to reach the kitchen. You see Balinese families making offerings, hear temple bells, and eat lunch with a view of the surrounding green terraces. This is the Bali most visitors never experience.',
+        'Cooking in a village kitchen — not a purpose-built studio — means the atmosphere is relaxed, the conversations are genuine, and the food tastes exactly as it would in a Balinese home.',
+      ],
+    },
+    {
+      heading: 'What to expect when you visit',
+      paragraphs: [
+        'We pick you up from your hotel in the Ubud area, then drive you to the village. The morning class begins with a market tour, followed by the rice-field walk to the kitchen. The afternoon class starts directly at the kitchen. In both cases you will cook, eat, and receive a recipe booklet to take home.',
+        'The village is accessible year-round, and classes run every day. We recommend booking in advance for the morning session, as it is the most popular option.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Real Village Setting', description: 'Not a tourist studio — a family compound surrounded by rice terraces.' },
+    { title: '30 Minutes from Ubud', description: 'Close enough for an easy day trip, far enough to feel authentic.' },
+    { title: 'Market + Rice Field Walk', description: 'The full cultural experience before you even start cooking.' },
+  ],
+  faqs: [
+    {
+      question: 'How long does it take to get to Tumang village from Ubud?',
+      answer: 'About 30 minutes by car from the centre of Ubud. We provide complimentary hotel pickup within the Ubud area.',
+    },
+    {
+      question: 'Is Tumang village worth visiting for the cooking class?',
+      answer: 'Yes — the village setting is what makes our class different from classes held in tourist areas. You get a rice-field walk, a real market tour, and a genuine Balinese home-cooking experience.',
+    },
+    {
+      question: 'Can I visit Tumang village without booking a class?',
+      answer: 'Our village is a working residential area. We recommend booking a cooking class if you want to visit, as it is the best way to experience the village with a local guide.',
+    },
+  ],
+  ctaHeading: 'Visit Tumang Village',
+  ctaSubtext: 'Join our cooking class and experience a real Balinese village — market tour, rice-field walk, and cooking in a family kitchen.',
+}
+
+export const cookingClassBali: ClassLandingContent = {
+  path: '/cooking-class-bali',
+  eyebrow: 'Cooking Class in Bali',
+  h1: 'Cooking Class in Bali — Hands-On Balinese Cooking in Ubud',
+  h1Plain: 'Cooking Class in Bali — Hands-On Balinese Cooking in Ubud',
+  intro:
+    'A cooking class in Bali is one of the best ways to experience the island beyond the beaches. Our hands-on Balinese cooking class in Ubud includes a morning market tour, rice-field walk, and cooking 10+ traditional dishes with a local chef.',
+  heroImage: '/images/img1.jpg',
+  heroImageAlt: 'Hands-on Balinese cooking class in Ubud — guests grinding spice paste',
+  body: [
+    {
+      heading: 'What makes a great cooking class in Bali?',
+      paragraphs: [
+        'The best cooking classes in Bali go beyond the kitchen. A truly immersive experience starts at the local market, where you learn about ingredients you may have never seen. The rice-field walk adds a scenic cultural element. And cooking with a local Balinese chef — not a tourist instructor — ensures the food is authentic.',
+        'Our class follows this exact flow: market tour, rice-field walk, hands-on cooking of 10+ dishes, and a shared meal. Every guest leaves with a recipe booklet and the confidence to cook Balinese food at home.',
+      ],
+    },
+    {
+      heading: 'What you will cook',
+      paragraphs: [
+        'Your menu includes Balinese favourites such as Sate Ayam (chicken satay grilled on coconut husk), Pepes Ikan (fish steamed in banana leaf), Ayam Betutu (slow-cooked spiced chicken), Nasi Goreng (fried rice), Dadar Gulung (pandan coconut pancake for dessert), and many more. We also offer a full vegetarian and vegan menu.',
+        'The foundation of every dish is the Base Genep spice paste — the complete Balinese spice blend that defines the flavour of Balinese cuisine. You will grind your own by hand in a traditional stone mortar.',
+      ],
+    },
+    {
+      heading: 'Morning or afternoon — which class is right for you?',
+      paragraphs: [
+        'The morning class starts at 8 AM and includes a full market tour (the highlight for most guests). The afternoon class starts at 2 PM and is perfect if you want to explore Ubud or do another activity in the morning. Both classes include the full cooking experience.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: '10+ Dishes', description: 'A complete traditional menu — not a single adapted recipe.' },
+    { title: 'Market Tour Included', description: 'Shop for ingredients at the traditional Ubud morning market.' },
+    { title: 'Vegetarian & Vegan Options', description: 'Full plant-based menu available on request.' },
+  ],
+  faqs: [
+    {
+      question: 'What is the best area in Bali for a cooking class?',
+      answer: 'Ubud is the best area for a cooking class. It has the best morning market, the closest access to rice fields, and the widest range of cooking schools. We pick up guests from their Ubud hotel for free.',
+    },
+    {
+      question: 'How much does a cooking class in Bali cost?',
+      answer: 'Our class starts at $35 USD (around IDR 480,000) per person, which includes everything: market tour, cooking class, lunch, recipe booklet, and hotel pickup.',
+    },
+    {
+      question: 'Do I need to book a cooking class in advance?',
+      answer: 'Yes, we recommend booking at least one day ahead, especially for the morning session. Walk-ins are occasionally possible but not guaranteed.',
+    },
+  ],
+  ctaHeading: 'Book a Cooking Class in Bali',
+  ctaSubtext: 'Hands-on cooking, market tour, rice-field walk — from $35 per person.',
+}
+
+export const balineseCookingClassUbud: ClassLandingContent = {
+  path: '/balinese-cooking-class-ubud',
+  eyebrow: 'Balinese Cooking Class in Ubud',
+  h1: 'Balinese Cooking Class in Ubud — Traditional Cooking with Local Chefs',
+  h1Plain: 'Balinese Cooking Class in Ubud — Traditional Cooking with Local Chefs',
+  intro:
+    'A traditional Balinese cooking class in Ubud is an unforgettable experience. Learn 10+ authentic dishes from scratch, grind your own spice paste, tour a morning market, and eat your creations in a village kitchen surrounded by rice paddies.',
+  heroImage: '/images/gallery-group.jpg',
+  heroImageAlt: 'Traditional Balinese cooking class in Ubud — group cooking in a village kitchen',
+  body: [
+    {
+      heading: 'What a Balinese cooking class in Ubud includes',
+      paragraphs: [
+        'Our class starts with a visit to the local Ubud morning market, where your guide teaches you about local produce and spices. Then you walk through the rice paddies to our village kitchen, where Chef Wayan and the team prepare everything you will cook.',
+        'Over roughly four hours you will grind the Base Genep spice paste, prepare 10+ dishes, and sit down to eat a full Balinese meal with your new friends. The class is led entirely by local Balinese chefs using traditional techniques.',
+      ],
+    },
+    {
+      heading: 'Why cooking with local chefs matters',
+      paragraphs: [
+        'When you cook with local chefs, you are learning the recipes that have been passed down through generations. You will not find these dishes in tourist guidebooks or cookbooks — they are the everyday food of Balinese families, served at celebrations and at the family table.',
+        'Chef Wayan has been teaching cooking classes for over ten years. He speaks fluent English, is patient with beginners, and loves sharing the stories behind each dish.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Local Balinese Chefs', description: 'Recipes passed down through generations, not tourist shortcuts.' },
+    { title: 'Morning Market + Rice Field Walk', description: 'A full cultural immersion before you even start cooking.' },
+    { title: '10+ Authentic Dishes', description: 'Sate Ayam, Pepes Ikan, Ayam Betutu, and more — all from scratch.' },
+  ],
+  faqs: [
+    {
+      question: 'Where exactly is the cooking class held in Ubud?',
+      answer: 'We are located in Tumang village, about 30 minutes from Ubud centre. We provide complimentary hotel pickup from any hotel in the Ubud area.',
+    },
+    {
+      question: 'What is Base Genep spice paste?',
+      answer: 'Base Genep is the complete Balinese spice paste — the foundation of nearly every savoury Balinese dish. It is made from turmeric, galangal, shallots, shrimp paste, bird\'s-eye chillies and other spices, ground fresh by hand.',
+    },
+    {
+      question: 'Is the Balinese cooking class suitable for children?',
+      answer: 'Yes — children aged 8 and above are very welcome. It is a fun, hands-on family activity, and the chefs are experienced in working with young guests.',
+    },
+  ],
+  ctaHeading: 'Book a Balinese Class in Ubud',
+  ctaSubtext: 'Market tour, rice-field walk, 10+ dishes, local chefs — a full day of authentic Balinese cooking.',
+}
+
+export const tumpengMakingClass: ClassLandingContent = {
+  path: '/tumpeng-making-class',
+  eyebrow: 'Ceremonial Cooking Experience',
+  h1: 'Tumpeng Making Class in Bali — Learn the Traditional Balinese Cone Rice',
+  h1Plain: 'Tumpeng Making Class in Bali — Learn the Traditional Balinese Cone Rice',
+  intro:
+    'Tumpeng is the most iconic dish in Balinese cuisine — a cone-shaped mound of yellow turmeric rice surrounded by side dishes. In our tumpeng making class in Bali, you learn to prepare the complete dish, including the spice paste, side dishes, and the art of shaping the rice cone.',
+  heroImage: '/images/img2.jpg',
+  heroImageAlt: 'Tumpeng making class in Bali — traditional Balinese cone-shaped rice dish',
+  body: [
+    {
+      heading: 'What is tumpeng and why does it matter?',
+      paragraphs: [
+        'Tumpeng is the most recognised dish in Indonesian and Balinese culture. The cone-shaped rice represents Mount Agung, the sacred volcano, and tumpeng is served at every important celebration — temple ceremonies, birthdays, graduations, and thanksgiving. Learning to make tumpeng is learning about Balinese spirituality through food.',
+        'In our class, you will not only learn the cooking technique. You will understand the cultural meaning behind every element — why the rice is shaped as a cone, what each side dish represents, and when and how tumpeng is traditionally served.',
+      ],
+    },
+    {
+      heading: 'What you will cook in the class',
+      paragraphs: [
+        'The tumpeng class includes everything you need to recreate a full tumpeng spread: the yellow turmeric rice, the traditional side dishes (such as shredded chicken, tempeh, vegetables, and egg omelette strips), the sambal, and the art of shaping the rice cone. You will also learn how to arrange everything beautifully on the platter for the full ceremonial presentation.',
+        'All the dishes are prepared fresh on the day. We source our ingredients from the morning market, and you will experience the full journey from market to table.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Cultural Significance', description: 'Learn the spiritual and ceremonial meaning behind tumpeng.' },
+    { title: 'Full Tumpeng Spread', description: 'Shape the rice cone, prepare all side dishes, and arrange the platter.' },
+    { title: 'Recipe Booklet', description: 'Take home everything you need to make tumpeng at home.' },
+  ],
+  faqs: [
+    {
+      question: 'Is tumpeng making class different from the regular cooking class?',
+      answer: 'Yes. The tumpeng class focuses on the ceremonial dish and its cultural significance, while the regular cooking class covers a wider range of everyday Balinese dishes. Both are available — choose the one that interests you most.',
+    },
+    {
+      question: 'How long is the tumpeng making class?',
+      answer: 'Approximately 3–4 hours, including the market tour, cooking session, and time to arrange and photograph the finished tumpeng platter.',
+    },
+    {
+      question: 'Can kids join the tumpeng making class?',
+      answer: 'Yes, children aged 8 and above can join. Shaping the tumpeng cone is a fun and memorable activity for all ages.',
+    },
+  ],
+  ctaHeading: 'Learn to Make Tumpeng',
+  ctaSubtext: 'A unique Balinese cooking experience — learn the ceremonial art of tumpeng in our village kitchen.',
+}
+
+export const whatIsTumangBali: ClassLandingContent = {
+  path: '/blog/what-is-tumang-bali',
+  eyebrow: 'About Tumang',
+  h1: 'What is Tumang Bali? — The Village Behind Our Famous Cooking Class',
+  h1Plain: 'What is Tumang Bali? — The Village Behind Our Famous Cooking Class',
+  intro:
+    'Tumang Bali refers to our cooking class experience in Tumang village — a traditional Balinese village in Central Bali. Tumang is located in Kabupaten Gianyar, about 30 minutes north of Ubud. The village is known for its rice paddies, authentic village life, and as the home of one of Bali\'s most authentic cooking class experiences.',
+  heroImage: '/images/gallery-girls.jpg',
+  heroImageAlt: 'Tumang Bali village — traditional Balinese village life and rice paddies',
+  body: [
+    {
+      heading: 'What is Tumang village?',
+      paragraphs: [
+        'Tumang is a real working village in Central Bali, not a tourist destination. The residents live in traditional Balinese houses, maintain daily flower offerings at family shrines, and practice the subak irrigation system that has shaped the landscape for centuries. The village sits at around 300 meters elevation, which gives it a cooler climate and stunning views of the surrounding rice terraces and distant mountains.',
+        'Most visitors hear about Tumang through our cooking class — it is how we pick up guests, how the market tour begins, and where the cooking happens. But the village itself is worth visiting for the peaceful atmosphere and authentic sense of daily Balinese life.',
+      ],
+    },
+    {
+      heading: 'Why we chose Tumang for our cooking class',
+      paragraphs: [
+        'We chose Tumang because it offers the best balance: close enough to Ubud for convenience (30 minutes), but far enough to feel like a real village. Classes held in Ubud centre often feel commercial. Classes held too far away are hard for guests to reach. Tumang sits at the perfect middle ground.',
+        'The rice paddy setting, the morning market nearby, and the warm welcome of the village community all contribute to what makes our class stand out from cooking classes in other areas of Bali.',
+      ],
+    },
+    {
+      heading: 'Things to do near Tumang village',
+      paragraphs: [
+        'If you are in the Tumang area, the Tegallalang Rice Terraces are just 20 minutes away. The Sukawati Art Market is 25 minutes south. For temple visits, you can go to Pura Tirta Empul (a holy water temple) or Pura Besakih (Bali\'s mother temple). Our class is the perfect anchor for a day of exploring Central Bali.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Real Working Village', description: 'Not a tourist attraction — a living, breathing Balinese community.' },
+    { title: '30 Minutes from Ubud', description: 'Convenient location with easy hotel pickup from Ubud.' },
+    { title: 'Rice Paddy Views', description: 'Surrounded by green terraces and distant mountain views.' },
+  ],
+  faqs: [
+    {
+      question: 'Where is Tumang village located?',
+      answer: 'Tumang is in Kabupaten Gianyar, Central Bali, approximately 30 minutes from Ubud centre and 45 minutes from Ngurah Rai Airport.',
+    },
+    {
+      question: 'What is Tumang Bali known for?',
+      answer: 'Tumang is best known for our cooking class — one of Bali\'s most authentic Balinese cooking experiences held in a real village kitchen surrounded by rice paddies.',
+    },
+    {
+      question: 'Is it worth visiting Tumang village just to see it?',
+      answer: 'Yes — but the best way to experience it is through our cooking class, which includes a market tour and rice-field walk. The village itself is peaceful and authentic.',
+    },
+  ],
+  ctaHeading: 'Experience Tumang Village',
+  ctaSubtext: 'Join our cooking class and experience the real Tumang — village life, rice paddies, and authentic Balinese cooking.',
+}
+
+export const baliCookingExperience: ClassLandingContent = {
+  path: '/bali-cooking-experience',
+  eyebrow: 'Complete Experience',
+  h1: 'Bali Cooking Experience — The Complete Balinese Cooking Class Day',
+  h1Plain: 'Bali Cooking Experience — The Complete Balinese Cooking Class Day',
+  intro:
+    'A Bali cooking experience is more than a cooking class — it is a full day of cultural immersion. Visit a local market, walk through rice paddies, cook with a local family, and share a feast of authentic dishes in a village kitchen.',
+  heroImage: '/images/gallery-chopping.jpg',
+  heroImageAlt: 'Complete Bali cooking experience — market tour and cooking in a traditional village kitchen',
+  body: [
+    {
+      heading: 'The full day — step by step',
+      paragraphs: [
+        'Your Bali cooking experience starts with hotel pickup from the Ubud area. You will be taken to the local morning market, where a guide explains the ingredients and shows you how locals shop. Then you walk through the green rice paddies to our village kitchen. Once there, you wash your hands, make a Balinese flower offering, and get started cooking.',
+        'Over roughly four hours you will grind the spice paste, prepare 10+ dishes, and sit down to eat everything you made. The experience ends with a recipe booklet, a certificate of completion, and photos to take home.',
+      ],
+    },
+    {
+      heading: 'What makes our experience different',
+      paragraphs: [
+        'Many cooking classes in Bali are held in commercial kitchens and focus only on cooking. Our experience includes every element of a Balinese food culture: the market, the rice fields, the offering, the cooking, and the shared meal. It is designed to feel like a day in the life of a Balinese family, not a tourist activity.',
+        'We also keep group sizes small — a maximum of eight guests — so everyone gets hands-on attention from the chef.',
+      ],
+    },
+    {
+      heading: 'Who is this experience for?',
+      paragraphs: [
+        'Everyone. Whether you are a complete beginner, a foodie with years of experience, a couple on honeymoon, a family with kids, or a solo traveller — our cooking experience welcomes all. Vegetarian and vegan menus are available on request.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Full Cultural Day', description: 'Market, rice field, cooking, feast — a complete cultural immersion.' },
+    { title: 'Small Groups', description: 'Maximum 8 guests for personalised instruction and a warm atmosphere.' },
+    { title: 'Take-Home Recipes', description: 'A printed booklet with every recipe you cook on the day.' },
+  ],
+  faqs: [
+    {
+      question: 'How long is the full cooking experience?',
+      answer: 'About 4–5 hours from pickup to drop-off, including the market tour, rice-field walk, cooking session, and dining time.',
+    },
+    {
+      question: 'Do you cater for dietary restrictions?',
+      answer: 'Yes — we offer full vegetarian and vegan menus. Just let us know when you book, and we will prepare everything fresh for your dietary needs.',
+    },
+    {
+      question: 'Is the Bali cooking experience suitable for families?',
+      answer: 'Absolutely. Children aged 8 and above are very welcome, and it is one of the most popular family activities in Bali. Little hands love grinding spice paste and making offerings.',
+    },
+  ],
+  ctaHeading: 'Book Your Bali Experience',
+  ctaSubtext: 'The complete Balinese cooking day — market tour, rice-field walk, cooking, and feast — from $35 per person.',
+}

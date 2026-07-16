@@ -859,6 +859,12 @@ export default async function Page() {
             <Link href="/half-day-cooking-class-bali" className="hover:text-orange-500 transition-colors">Half-Day Cooking Class</Link>
             <Link href="/where-to-stay-bali-cooking-class" className="hover:text-orange-500 transition-colors">Where to Stay in Bali</Link>
             <Link href="/what-to-wear-bali-cooking-class" className="hover:text-orange-500 transition-colors">What to Wear</Link>
+            <Link href="/cooking-class-bali" className="hover:text-orange-500 transition-colors">Cooking Class in Bali</Link>
+            <Link href="/balinese-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Balinese Cooking Class in Ubud</Link>
+            <Link href="/best-cooking-classes-bali" className="hover:text-orange-500 transition-colors">Best Cooking Classes in Bali</Link>
+            <Link href="/tumang-village" className="hover:text-orange-500 transition-colors">Tumang Village</Link>
+            <Link href="/tumpeng-making-class" className="hover:text-orange-500 transition-colors">Tumpeng Making Class</Link>
+            <Link href="/bali-cooking-experience" className="hover:text-orange-500 transition-colors">Bali Cooking Experience</Link>
             <Link href="/recipes" className="hover:text-orange-500 transition-colors">Balinese Recipes</Link>
             <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
             <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
