@@ -14,6 +14,15 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/private-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/cooking-class-with-market-tour-ubud', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/half-day-cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
+  // SERP feature landing pages
+  { path: '/cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/balinese-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/best-cooking-classes-bali', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/tumang-village', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/tumpeng-making-class', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/bali-cooking-experience', priority: 0.9, changeFrequency: 'monthly' },
+  // Blog article about Tumang
+  { path: '/blog/what-is-tumang-bali', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/id', priority: 0.6, changeFrequency: 'monthly' },
