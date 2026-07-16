@@ -107,10 +107,10 @@ export default async function Page() {
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
-                    <Image src="/images/itinerary/guest-dessert.jpg" alt="Student" fill className="object-cover" />
+                    <Image src="/images/itinerary/guest-dessert.jpg" alt="Happy guests at Balinese cooking class in Ubud" fill className="object-cover" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
-                    <Image src="/images/img5.jpg" alt="Student" fill className="object-cover" />
+                    <Image src="/images/img5.jpg" alt="Guests enjoying authentic Balinese food after cooking class" fill className="object-cover" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-orange-600 flex items-center justify-center text-[10px] font-bold text-white">
                     5★
