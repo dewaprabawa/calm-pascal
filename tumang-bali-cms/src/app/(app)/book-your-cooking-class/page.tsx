@@ -11,8 +11,8 @@ import WhatsAppFloat from '../components/WhatsAppFloat'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Book Your Balinese Cooking Class in Ubud',
-  description: 'Join a 5-star rated authentic Balinese cooking class in Ubud. Includes market tour, hotel transport, and vegetarian options. Book your culinary adventure today!',
+  title: 'Book Your Cooking Class — Tumang Bali | Prices & Availability',
+  description: 'Book your authentic Balinese cooking class in Ubud. View daily schedules, pricing, inclusions, and vegetarian options. Free hotel pickup included.',
   alternates: { canonical: 'https://tumangbaliclass.com/book-your-cooking-class' },
 }
 
@@ -93,7 +93,7 @@ export default async function Page() {
               Available Daily
             </div>
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-5">
-              Book Your Authentic Balinese Cooking Class in Ubud
+              Book Your Balinese Cooking Class in Ubud
             </h1>
             <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
               Ready to experience the flavors of Bali? Join our authentic Balinese cooking class in Ubud for a complete culinary adventure. From the traditional morning market to the rice fields, you'll learn the secrets of Balinese cuisine with a local chef.

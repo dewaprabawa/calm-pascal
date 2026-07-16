@@ -22,15 +22,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = docs[0]
   if (!article) return { title: 'Not Found' }
 
+  const rawTitle = (article.meta?.title as string) || article.title
+  // Ensure the brand suffix is present exactly once and trim if too long
+  const noSuffix = rawTitle.endsWith('| Tumang Bali')
+    ? rawTitle.slice(0, -15)  // remove the existing suffix
+    : rawTitle
+  const trimmedTitle = noSuffix.length > 65 ? noSuffix.slice(0, 62) + '...' : noSuffix
+  const finalTitle = trimmedTitle + ' | Tumang Bali'
+  const rawDesc = (article.meta?.description as string) || article.excerpt
+  const trimmedDesc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc
   return {
-    title: (article.meta?.title as string) || article.title,
-    description: (article.meta?.description as string) || article.excerpt,
+    title: finalTitle,
+    description: trimmedDesc,
     alternates: {
       canonical: `${SITE}/blog/${resolvedParams.slug}`,
     },
     openGraph: {
-      title: (article.meta?.title as string) || article.title,
-      description: (article.meta?.description as string) || article.excerpt,
+      title: finalTitle,
+      description: trimmedDesc,
       type: 'article',
       publishedTime: article.publishedDate || article.createdAt,
       authors: [article.author as string],

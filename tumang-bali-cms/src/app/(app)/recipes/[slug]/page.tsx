@@ -28,7 +28,7 @@ export async function generateMetadata({
   const recipe = await findRecipeBySlug(slug)
   if (!recipe) return { title: 'Recipe Not Found | Tumang Bali' }
 
-  const title = `${recipe.title} Recipe${recipe.description ? ` (${recipe.description})` : ''}`
+  const title = `${recipe.title} Recipe${recipe.description ? ` (${recipe.description})` : ''} | Tumang Bali`
   const description =
     `Authentic ${recipe.title} recipe from our Balinese cooking class in Ubud. ` +
     `${recipe.description ? recipe.description + '. ' : ''}` +
@@ -38,9 +38,11 @@ export async function generateMetadata({
       ? (recipe.image.url as string)
       : '/images/itinerary/dadar-gulung-close.jpg'
 
+  const trimmedDesc = description.length > 160 ? description.slice(0, 157) + '...' : description
+
   return {
     title,
-    description,
+    description: trimmedDesc,
     alternates: { canonical: `${SITE}/recipes/${slug}` },
     openGraph: {
       title: title,

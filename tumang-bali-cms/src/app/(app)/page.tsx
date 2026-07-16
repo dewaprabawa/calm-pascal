@@ -624,6 +624,90 @@ export default async function Page() {
         </section>
       )}
 
+      {/* From Our Blog — internal links for orphan pages */}
+      <section className="py-24 px-6 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center mb-16 text-center">
+            <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Explore More</span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">From Our Blog</h2>
+            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Deepen your knowledge of Balinese cuisine, cooking techniques, and the best experiences in Ubud.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/blog/how-bali-cooking-classes-work" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">01</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">How a Balinese Cooking Class Works</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">A step-by-step walkthrough of what to expect during your cooking class in Ubud.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/more-about-our-cooking-class" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">02</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">More About Our Cooking Class</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What makes our cooking experience in Ubud different from other Balinese cooking classes.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ubud-cooking-class-first-timers-guide" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">03</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">First-Timers Guide to Ubud Cooking Class</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Everything you need to know before your first Balinese cooking experience.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/cooking-with-local-family" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">04</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cook with a Local Balinese Family</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Discover the real Ubud experience — cooking in a traditional home with a local family.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/rice-field-cooking-class" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">05</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Rice Field Cooking Class in Ubud</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Outdoor cooking in the heart of Bali's iconic rice paddies.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/best-things-to-do-in-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">06</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">10 Best Things to Do in Ubud</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Beyond cooking — the top experiences and activities in Ubud.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/cooking-class-bali-faqs" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">07</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class in Bali — FAQs</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Prices, what to wear, dietary options, and everything we get asked most.</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
+              View all blog posts
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <FAQSection />
 

@@ -8,14 +8,14 @@ import { bestCookingClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Best Bali Cooking Classes 2026 — Reviewed & Compared | Tumang Bali',
+  title: 'Best Bali Cooking Classes 2026 — Review & Book | Tumang Bali',
   description:
-    'Honest review and comparison of the best Bali cooking classes in 2026. What to expect, what to avoid, and why Tumang Bali ranks among the top.',
+    'An honest review and guide to the best Bali cooking classes in 2026. What to look for, what to avoid, and how to choose the right class for your trip.',
   alternates: { canonical: 'https://tumangbaliclass.com/best-bali-cooking-class' },
   openGraph: {
-    title: 'Best Bali Cooking Classes 2026 — Reviewed & Compared | Tumang Bali',
+    title: 'Best Bali Cooking Classes 2026 — Review & Book | Tumang Bali',
     description:
-      'Honest review and comparison of the best Bali cooking classes in 2026. What to expect, what to avoid, and why Tumang Bali ranks among the top.',
+      'An honest review and guide to the best Bali cooking classes in 2026. What to look for, what to avoid, and how to choose the right class for your trip.',
     url: 'https://tumangbaliclass.com/best-bali-cooking-class',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',

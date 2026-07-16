@@ -11,12 +11,12 @@ export const revalidate = 60
 const SITE = 'https://tumangbaliclass.com'
 
 export const metadata: Metadata = {
-  title: 'Authentic Balinese Recipes',
+  title: 'Authentic Balinese Recipes | Tumang Bali',
   description:
     'Free authentic Balinese & Indonesian recipes from the chefs at Tumang Bali Cooking Class in Ubud. Nasi goreng, sate, sambal matah, pepes & more — with ingredients and step-by-step instructions.',
   alternates: { canonical: `${SITE}/recipes` },
   openGraph: {
-    title: 'Authentic Balinese Recipes',
+    title: 'Authentic Balinese Recipes | Tumang Bali',
     description:
       'Free authentic Balinese & Indonesian recipes from the chefs at Tumang Bali Cooking Class in Ubud.',
     url: `${SITE}/recipes`,

@@ -8,14 +8,14 @@ import { marketTourClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Cooking Class with Market Tour in Ubud',
+  title: 'Cooking Class with Market Tour & Rice Field Walk | Tumang Bali',
   description:
-    'Balinese cooking class with a guided Ubud morning market tour. Pick fresh ingredients, walk the rice fields, then cook 10+ dishes. Hotel pickup.',
+    'Start your Ubud cooking class with a guided morning market tour. Pick fresh ingredients, walk the rice fields, then cook 10+ traditional dishes. Hotel pickup included.',
   alternates: { canonical: 'https://tumangbaliclass.com/cooking-class-with-market-tour-ubud' },
   openGraph: {
-    title: 'Cooking Class with Market Tour in Ubud',
+    title: 'Cooking Class with Market Tour & Rice Field Walk | Tumang Bali',
     description:
-      'Balinese cooking class with a guided Ubud morning market tour. Pick fresh ingredients, walk the rice fields, then cook 10+ dishes. Hotel pickup.',
+      'Start your Ubud cooking class with a guided morning market tour. Pick fresh ingredients, walk the rice fields, then cook 10+ traditional dishes. Hotel pickup included.',
     url: 'https://tumangbaliclass.com/cooking-class-with-market-tour-ubud',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',

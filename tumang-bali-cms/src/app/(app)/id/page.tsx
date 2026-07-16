@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  title: 'Kelas Memasak Terbaik di Ubud Bali',
+  title: 'Kelas Memasak Terbaik di Ubud Bali | Tumang Bali',
   description:
     'Kelas memasak Bali autentik di Ubud: tur pasar lokal, jalan-jalan di sawah & memasak langsung 10+ hidangan tradisional. Ramah vegetarian, penjemputan hotel.',
   alternates: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Kelas Memasak Bali Autentik di Ubud',
+    title: 'Kelas Memasak Bali Autentik di Ubud | Tumang Bali',
     description:
       'Bergabunglah dengan kelas memasak terbaik di Ubud! Tur pasar + jalan-jalan di sawah + 10+ hidangan. Pilihan vegetarian. Penjemputan hotel termasuk.',
     url: 'https://tumangbaliclass.com/id',
@@ -47,25 +47,25 @@ export const metadata: Metadata = {
 
 const highlights = [
   {
-    title: 'Tur Pasar Lokal',
+    title: 'Tur Pasar Lokal | Tumang Bali',
     description:
       'Jelajahi pasar pagi tradisional Ubud dan temukan rempah, sayuran, serta bahan segar khas Bali bersama pemandu kami.',
     image: '/images/itinerary/market-fresh.jpg',
   },
   {
-    title: 'Jalan-Jalan di Sawah',
+    title: 'Jalan-Jalan di Sawah | Tumang Bali',
     description:
       'Nikmati jalan santai melewati hamparan sawah hijau dan pelajari cara petani Bali menanam padi sebelum kelas dimulai.',
     image: '/images/itinerary/offerings-detail.jpg',
   },
   {
-    title: 'Kelas Memasak Langsung',
+    title: 'Kelas Memasak Langsung | Tumang Bali',
     description:
       'Pakai celemek dan masak 10+ hidangan Bali tradisional langkah demi langkah bersama chef lokal berpengalaman.',
     image: '/images/itinerary/cooking-table.jpg',
   },
   {
-    title: 'Santap Bersama',
+    title: 'Santap Bersama | Tumang Bali',
     description:
       'Duduk bersama dan nikmati hidangan yang baru Anda masak dengan pemandangan indah Ubud yang menenangkan.',
     image: '/images/itinerary/guest-dessert.jpg',

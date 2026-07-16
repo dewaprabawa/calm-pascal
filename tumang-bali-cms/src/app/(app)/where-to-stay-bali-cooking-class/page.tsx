@@ -8,12 +8,12 @@ import { whereToStayClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Where to Stay in Bali for a Cooking Class — Best Areas & Hotels',
+  title: 'Where to Stay for a Bali Cooking Class | Tumang Bali',
   description:
     'Planning a cooking class in Bali? Best areas to stay in Ubud, Seminyak and Canggu for a seamless cooking-class experience.',
   alternates: { canonical: 'https://tumangbaliclass.com/where-to-stay-bali-cooking-class' },
   openGraph: {
-    title: 'Where to Stay in Bali for a Cooking Class — Best Areas & Hotels',
+    title: 'Where to Stay for a Bali Cooking Class | Tumang Bali',
     description:
       'Planning a cooking class in Bali? Best areas to stay in Ubud, Seminyak and Canggu for a seamless cooking-class experience.',
     url: 'https://tumangbaliclass.com/where-to-stay-bali-cooking-class',

@@ -8,14 +8,14 @@ import { authenticClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = {
-  title: 'Authentic Balinese Cooking Class in Ubud | Tumang Bali',
+  title: 'What Makes Our Balinese Class Authentic | Tumang Bali',
   description:
-    'Immerse yourself in traditional Balinese flavors with our authentic cooking class in Ubud. Hand-ground spice paste, market tour, 10+ dishes, and cultural immersion.',
+    'Discover the Base Genep spice paste that defines true Balinese cuisine. Learn how hand-ground traditional ingredients make our Ubud cooking class authentic, not a tourist shortcut.',
   alternates: { canonical: 'https://tumangbaliclass.com/authentic-balinese-cooking-class' },
   openGraph: {
-    title: 'Authentic Balinese Cooking Class in Ubud | Tumang Bali',
+    title: 'What Makes Our Balinese Class Authentic | Tumang Bali',
     description:
-      'Immerse yourself in traditional Balinese flavors with our authentic cooking class in Ubud. Hand-ground spice paste, market tour, 10+ dishes, and cultural immersion.',
+      'Discover the Base Genep spice paste that defines true Balinese cuisine. Learn how hand-ground traditional ingredients make our Ubud cooking class authentic, not a tourist shortcut.',
     url: 'https://tumangbaliclass.com/authentic-balinese-cooking-class',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',
