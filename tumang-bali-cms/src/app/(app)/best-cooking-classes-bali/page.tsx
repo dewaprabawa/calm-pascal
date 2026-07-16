@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
-import { bestCookingClass } from '../components/landingContent'
+import { bestCookingClassesBali } from '../components/landingContent'
 
 export const revalidate = 60
 
@@ -30,5 +30,5 @@ export default async function Page() {
     title: a.title as string,
     price: a.price as number,
   }))
-  return <ClassLanding content={bestCookingClass} activities={bookingActivities} />
+  return <ClassLanding content={bestCookingClassesBali} activities={bookingActivities} />
 }

@@ -709,6 +709,77 @@ export const whatIsTumangBali: ClassLandingContent = {
   ctaSubtext: 'Join our cooking class and experience the real Tumang — village life, rice paddies, and authentic Balinese cooking.',
 }
 
+export const bestCookingClassesBali: ClassLandingContent = {
+  path: '/best-cooking-classes-bali',
+  eyebrow: 'Top Rated 2026',
+  h1: 'Best Cooking Classes in Bali — Top 10 Reviewed & Compared (2026)',
+  h1Plain: 'Best Cooking Classes in Bali — Top 10 Reviewed & Compared (2026)',
+  intro:
+    'We reviewed the 10 best cooking classes in Bali so you don\'t have to. From village-based experiences to resort workshops, we rate each on authenticity, value, location, and overall experience — and explain why Tumang Bali ranks #1 for authentic hands-on Balinese cooking.',
+  heroImage: '/images/img1.jpg',
+  heroImageAlt: 'Best cooking classes in Bali 2026 — reviewed and compared options',
+  body: [
+    {
+      heading: 'What makes a great cooking class in Bali?',
+      paragraphs: [
+        'The best cooking classes in Bali share four key qualities: a real morning market tour (not just a walk past tourist stalls), authentic hand-ground spice paste (not pre-made), 10+ dishes cooked from scratch (not a single adapted recipe), and a shared dining experience in a genuine Balinese setting. Classes that skip the market, use premade spice jars, or serve the meal in a hotel restaurant miss the essence of what makes Balinese cooking special.',
+        'We evaluated each class against these criteria, plus value for money, group size, dietary flexibility, and whether the class includes hotel pickup. The results follow.',
+      ],
+    },
+    {
+      heading: '#1 Tumang Bali Cooking Class — Best Overall',
+      paragraphs: [
+        'Tumang Bali ranks first because it delivers everything: a genuine morning market tour, a rice-field walk to the kitchen, hand-ground Base Genep spice paste, 10+ authentic dishes, a shared meal in a village surrounded by terraces, complimentary hotel pickup, and a printed recipe booklet. Chef Wayan has been teaching for over ten years and consistently receives five-star reviews on TripAdvisor. From $35 per person.',
+      ],
+    },
+    {
+      heading: '#2 Paon Bali — Best Value',
+      paragraphs: [
+        'Paon Bali is set in a traditional village home with rice paddy views. Often described as "the best cooking class ever" in reviews, it offers a very similar experience to Tumang at a comparable price point. Market tour included, 8–10 dishes cooked, and a warm family atmosphere. Slightly smaller scale than Tumang but equally authentic.',
+      ],
+    },
+    {
+      heading: '#3 Art Café Bumbu Bali — Best Heritage',
+      paragraphs: [
+        'Founded by Swiss-Balinese Chef Heinz von Holzen in 1997, Art Café is the OG of Bali cooking schools. With over 2,700 classes run and five cookbooks published, it has deep roots in Ubud. The class is more structured and less rustic than Tumang — it runs from a beautiful garden kitchen in Nusa Dua. Excellent food, but less of a village experience.',
+      ],
+    },
+    {
+      heading: '#4 Casa Luna — Best Themed Classes',
+      paragraphs: [
+        'Founded by Janet DeNeefe ("Queen of Ubud"), Casa Luna is famous for unique themed classes including a food-as-medicine vegan class and a pasta-making class. The quality is high, but the location on Jalan Bisma is closer to a town setting than a village, and the classes tend to be more expensive.',
+      ],
+    },
+    {
+      heading: '#5 Sokasi at Four Seasons — Best Luxury',
+      paragraphs: [
+        'Sokasi is set in a stunning bamboo riverside pavilion in the Sayan Valley. The cooking class is undeniably beautiful and the food is excellent, but the experience is very premium — expect to pay $150+ per person. Ideal for a once-in-a-lifetime splurge, but less authentic than the village-based options.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Honest Reviews', description: 'We rate each class fairly — what they do well and where they fall short.' },
+    { title: 'Real Criteria', description: 'Market tour, hand-ground paste, 10+ dishes, village setting — the four pillars.' },
+    { title: '#1 Tumang Bali', description: 'Our class ranks first for authenticity, value, and overall experience.' },
+  ],
+  faqs: [
+    {
+      question: 'What is the best cooking class in Bali?',
+      answer: 'Tumang Bali Cooking Class ranks #1 on our list. It offers a full morning market tour, rice-field walk, hand-ground spice paste, 10+ authentic dishes, and dining in a village surrounded by rice paddies — all from $35 per person.',
+    },
+    {
+      question: 'How much does a cooking class in Bali cost?',
+      answer: 'Prices range from $35 at village-based classes like Tumang Bali and Paon Bali, to $150+ at luxury options like Sokasi at Four Seasons. Most mid-range classes in Ubud cost $50–80 per person.',
+    },
+    {
+      question: 'Is a village cooking class better than an Ubud class?',
+      answer: 'Village classes like Tumang Bali offer a more authentic experience — the market tour, rice-field walk, and kitchen setting are all genuine parts of daily Balinese life. Classes held in Ubud centre can feel more commercial.',
+    },
+  ],
+  ctaHeading: 'Book the #1 Cooking Class in Bali',
+  ctaSubtext: 'Small groups, local chefs, and a complete authentic Balinese menu in a real village.',
+}
+
 export const baliCookingExperience: ClassLandingContent = {
   path: '/bali-cooking-experience',
   eyebrow: 'Complete Experience',
