@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}{{ g.title }} | Tumang Bali{% endblock %}
+{% block meta_desc %}{{ g.meta }}{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="wrap-narrow">
+    <p class="crumb"><a href="{{ url_for('home') }}">Home</a> &nbsp;/&nbsp; Guide</p>
+    <span class="eyebrow">{{ g.eyebrow }}</span>
+    <h1>{{ g.h1 }}</h1>
+    <p class="lead">{{ g.lede }}</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap-narrow">
+    {% if g.img %}
+    <img src="{{ url_for('static', filename='img/' ~ g.img) }}" alt="{{ g.img_alt }}"
+         style="border-radius:var(--radius);aspect-ratio:16/9;object-fit:cover;width:100%;margin-bottom:var(--space-8)">
+    {% endif %}
+    <div class="prose">
+      {% for para in g.intro %}<p>{{ para|safe }}</p>{% endfor %}
+    </div>
+  </div>
+</section>
+
+{% for block in g.sections %}
+<section {% if loop.index is even %}style="background:var(--surface);"{% endif %}>
+  <div class="wrap-narrow prose">
+    <h2>{{ block.h }}</h2>
+    {% for para in block.body %}<p>{{ para|safe }}</p>{% endfor %}
+    {% if block.list %}
+    <ul>{% for item in block.list %}<li>{{ item|safe }}</li>{% endfor %}</ul>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}
+
+{% if g.faqs %}
+<section class="faq" style="background:var(--surface)">
+  <div class="wrap-narrow">
+    <div class="section-head" style="margin-bottom:var(--space-8)">
+      <span class="eyebrow">Good to know</span>
+      <h2>Common questions</h2>
+    </div>
+    {% for f in g.faqs %}
+    <details {% if loop.first %}open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a|safe }}</p></details>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="cta-band">
+  <div class="wrap-narrow">
+    <h2>{{ g.cta_head }}</h2>
+    <p>{{ g.cta_p }}</p>
+    <div style="display:flex;gap:var(--space-3);justify-content:center;flex-wrap:wrap">
+      <a href="{{ url_for('pricing') }}#book" class="btn btn-primary">Book a class</a>
+      <a href="{{ url_for('market_tour') }}" class="btn btn-ghost">Our market-tour class</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js');</script>
+  <title>{% block title %}Tumang Bali — Traditional Cooking Class in Ubud{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}Learn to cook 10+ authentic Balinese dishes with a local family in Ubud — morning market tour, rice-field walk, hands-on class and a shared feast overlooking the paddies.{% endblock %}">
+  <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='img/favicon.jpg') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+  :root{
+    --hue: 45;               /* warm spice/turmeric family */
+    --green-hue: 145;        /* jungle / rice terrace */
+    --bg:         oklch(0.985 0.006 var(--hue));      /* true warm off-white, chroma low */
+    --surface:    oklch(0.965 0.010 var(--hue));
+    --surface-2:  oklch(0.945 0.014 var(--hue));
+    --ink:        oklch(0.26 0.035 var(--green-hue)); /* deep jungle green-black */
+    --ink-muted:  oklch(0.46 0.028 var(--green-hue));
+    --accent:     oklch(0.58 0.155 42);               /* terracotta / spice red-orange */
+    --accent-deep:oklch(0.50 0.150 40);
+    --accent-ink: oklch(0.99 0.01 var(--hue));
+    --green:      oklch(0.48 0.095 var(--green-hue)); /* secondary — rice green */
+    --green-deep: oklch(0.34 0.070 var(--green-hue));
+    --border:     oklch(0.89 0.012 var(--hue));
+
+    --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem;
+    --space-6:1.5rem; --space-8:2rem; --space-12:3rem; --space-16:4rem;
+    --space-24:6rem; --space-32:8rem;
+
+    --text-sm:  clamp(0.84rem,0.81rem+0.15vw,0.92rem);
+    --text-base:clamp(1rem,0.96rem+0.25vw,1.09rem);
+    --text-lg:  clamp(1.2rem,1.08rem+0.5vw,1.45rem);
+    --text-xl:  clamp(1.55rem,1.25rem+1.3vw,2.15rem);
+    --text-2xl: clamp(2.1rem,1.5rem+2.6vw,3.2rem);
+    --text-3xl: clamp(2.6rem,1.7rem+4vw,4.6rem);
+
+    --measure:66ch; --radius:14px;
+    --ease-out:cubic-bezier(.22,1,.36,1);
+    --dur-fast:120ms; --dur:260ms; --dur-slow:420ms;
+    --z-sticky:20;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  *{margin:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    font-size:var(--text-base);line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:"Petrona",Georgia,serif;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;font-weight:600}
+  p{max-width:var(--measure);text-wrap:pretty}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+  /* ---- layout helpers ---- */
+  .wrap{max-width:1140px;margin-inline:auto;padding-inline:var(--space-6)}
+  .wrap-narrow{max-width:760px;margin-inline:auto;padding-inline:var(--space-6)}
+  section{padding-block:clamp(var(--space-16),8vw,var(--space-32))}
+  .eyebrow{font-size:var(--text-sm);font-weight:600;color:var(--accent-deep);
+    display:inline-flex;align-items:center;gap:.5rem}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);display:inline-block}
+
+  /* ---- nav ---- */
+  .nav{position:sticky;top:0;z-index:var(--z-sticky);
+    background:color-mix(in oklab,var(--bg) 88%,transparent);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+  .nav-inner{max-width:1140px;margin-inline:auto;padding:.85rem var(--space-6);
+    display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+  .brand{font-family:"Petrona",serif;font-weight:600;font-size:1.28rem;letter-spacing:-.01em;
+    display:flex;align-items:center;gap:.55rem}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--accent);flex:none}
+  .nav-links{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap}
+  .nav-links a{padding:.4rem .7rem;border-radius:9px;font-size:var(--text-sm);font-weight:500;
+    color:var(--ink-muted);transition:color var(--dur-fast),background var(--dur-fast)}
+  .nav-links a:hover{color:var(--ink);background:var(--surface-2)}
+  .nav-links a.cta{background:var(--accent);color:var(--accent-ink);font-weight:600}
+  .nav-links a.cta:hover{background:var(--accent-deep);color:var(--accent-ink)}
+  @media(max-width:640px){.nav-links a.hide-sm{display:none}}
+
+  /* ---- buttons ---- */
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:var(--text-base);
+    padding:.8rem 1.4rem;border-radius:999px;cursor:pointer;border:none;
+    transition:transform var(--dur-fast) var(--ease-out),background var(--dur-fast)}
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--border)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-deep)}
+
+  /* ---- hero ---- */
+  .hero{position:relative;isolation:isolate;color:oklch(0.98 0.01 var(--hue));
+    min-height:min(88vh,760px);display:flex;align-items:flex-end;
+    padding-block:clamp(var(--space-16),9vw,var(--space-32))}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(105deg,oklch(0.16 0.03 145/.86) 0%,oklch(0.16 0.03 145/.62) 34%,oklch(0.16 0.03 145/.18) 62%,transparent 100%),linear-gradient(0deg,oklch(0.14 0.03 145/.55) 0%,transparent 40%)}
+  .hero img.bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+  .hero .wrap{width:100%}
+  .hero h1{font-size:var(--text-3xl);max-width:16ch;font-weight:600;
+    text-shadow:0 1px 24px oklch(0.14 0.03 145/.4)}
+  .hero p.lede{font-size:var(--text-lg);max-width:42ch;margin-top:var(--space-4);
+    color:oklch(0.97 0.008 var(--hue));font-family:"Hanken Grotesk",sans-serif;
+    text-shadow:0 1px 16px oklch(0.14 0.03 145/.5)}
+  .hero .actions{display:flex;gap:var(--space-3);flex-wrap:wrap;margin-top:var(--space-8)}
+  .hero .meta{display:flex;gap:var(--space-6);flex-wrap:wrap;margin-top:var(--space-8);
+    font-size:var(--text-sm);color:oklch(0.94 0.01 var(--hue))}
+  .hero .meta b{display:block;font-family:"Petrona",serif;font-size:1.6rem;font-weight:600;line-height:1;color:oklch(0.9 0.09 55);margin-bottom:.2rem}
+
+  /* ---- generic ---- */
+  .lead{font-size:var(--text-lg);color:var(--ink-muted);max-width:52ch}
+  .section-head{max-width:60ch;margin-bottom:var(--space-12)}
+  .section-head h2{font-size:var(--text-2xl);margin-top:var(--space-3)}
+  .prose p{margin-bottom:var(--space-4);color:var(--ink)}
+  .prose h2{font-size:var(--text-xl);margin-top:var(--space-12);margin-bottom:var(--space-3)}
+  .prose h3{font-size:var(--text-lg);margin-top:var(--space-8);margin-bottom:var(--space-2)}
+  .prose ul{margin:0 0 var(--space-4) 1.1rem;color:var(--ink)}
+  .prose li{margin-bottom:.35rem}
+  .prose strong{font-weight:600}
+
+  /* ---- steps / feature rows (not identical cards) ---- */
+  .steps{display:grid;gap:var(--space-6);grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .step{display:flex;flex-direction:column;gap:var(--space-2)}
+  .step .n{font-family:"Petrona",serif;font-size:1.05rem;font-weight:600;color:var(--accent-ink);
+    width:2.1rem;height:2.1rem;border-radius:50%;background:var(--accent);
+    display:grid;place-items:center;line-height:1}
+  .step h3{font-size:var(--text-lg)}
+  .step p{font-size:var(--text-base);color:var(--ink-muted)}
+
+  /* ---- offer / class cards ---- */
+  .offers{display:grid;gap:var(--space-6);grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .offer{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface);
+    display:flex;flex-direction:column;transition:transform var(--dur) var(--ease-out)}
+  .offer:hover{transform:translateY(-4px)}
+  .offer img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .offer .body{padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-2);flex:1}
+  .offer h3{font-size:var(--text-lg)}
+  .offer p{font-size:var(--text-base);color:var(--ink-muted);flex:1}
+  .offer .tag{font-size:var(--text-sm);font-weight:600;color:var(--green-deep)}
+  .offer a.more{font-weight:600;color:var(--accent-deep);margin-top:var(--space-2)}
+
+  /* ---- split feature ---- */
+  .split{display:grid;gap:clamp(var(--space-8),5vw,var(--space-16));align-items:center;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .split img{border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;width:100%}
+
+  /* ---- feast strip ---- */
+  .feast{background:var(--green-deep);color:oklch(0.96 0.02 var(--hue))}
+  .feast h2{color:oklch(0.97 0.02 var(--hue))}
+  .feast .lead{color:oklch(0.88 0.02 var(--hue))}
+  .feast .btn-ghost{color:oklch(0.97 0.02 var(--hue));border-color:oklch(0.7 0.03 var(--green-hue))}
+  .feast .btn-ghost:hover{border-color:var(--accent);color:oklch(0.99 0.01 var(--hue))}
+
+  /* ---- FAQ ---- */
+  .faq details{border-bottom:1px solid var(--border);padding:var(--space-4) 0}
+  .faq summary{font-family:"Petrona",serif;font-weight:600;font-size:var(--text-lg);cursor:pointer;
+    list-style:none;display:flex;justify-content:space-between;gap:var(--space-4);align-items:center}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--accent);font-size:1.6rem;font-weight:400;transition:transform var(--dur)}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq details p{margin-top:var(--space-3);color:var(--ink-muted)}
+
+  /* ---- price row ---- */
+  .prices{display:grid;gap:var(--space-4)}
+  .price-row{display:flex;justify-content:space-between;align-items:baseline;gap:var(--space-4);
+    padding:var(--space-4) 0;border-bottom:1px solid var(--border)}
+  .price-row .name{font-family:"Petrona",serif;font-weight:600;font-size:var(--text-lg)}
+  .price-row .sub{font-size:var(--text-sm);color:var(--ink-muted);display:block;font-family:"Hanken Grotesk",sans-serif;font-weight:400}
+  .price-row .amt{font-family:"Petrona",serif;font-weight:600;font-size:var(--text-lg);white-space:nowrap;color:var(--accent-deep)}
+
+  /* ---- CTA band ---- */
+  .cta-band{background:var(--accent);color:var(--accent-ink);text-align:center}
+  .cta-band h2{font-size:var(--text-2xl)}
+  .cta-band p{margin:var(--space-3) auto var(--space-8);color:oklch(0.97 0.02 var(--hue));max-width:46ch}
+  .cta-band .btn-ghost{border-color:oklch(0.9 0.04 var(--hue));color:var(--accent-ink)}
+  .cta-band .btn-ghost:hover{background:oklch(0.99 0.01 var(--hue));color:var(--accent-deep);border-color:transparent}
+  .cta-band .btn-primary{background:oklch(0.99 0.01 var(--hue));color:var(--accent-deep)}
+  .cta-band .btn-primary:hover{background:var(--ink);color:var(--accent-ink)}
+
+  /* ---- breadcrumb / page hero ---- */
+  .page-hero{padding-block:var(--space-16) var(--space-8)}
+  .page-hero .eyebrow{margin-bottom:var(--space-3)}
+  .page-hero h1{font-size:var(--text-2xl);max-width:20ch}
+  .page-hero p{margin-top:var(--space-4)}
+  .crumb{font-size:var(--text-sm);color:var(--ink-muted);margin-bottom:var(--space-6)}
+  .crumb a:hover{color:var(--accent-deep)}
+
+  /* ---- footer ---- */
+  footer{background:var(--ink);color:oklch(0.9 0.02 var(--green-hue));padding-block:var(--space-16) var(--space-8)}
+  footer a{color:oklch(0.9 0.02 var(--green-hue))}
+  footer a:hover{color:oklch(0.99 0.01 var(--hue))}
+  .foot-grid{display:grid;gap:var(--space-8);grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+  .foot-grid h4{font-family:"Hanken Grotesk",sans-serif;font-size:var(--text-sm);text-transform:uppercase;
+    letter-spacing:.08em;font-weight:700;color:oklch(0.7 0.03 var(--hue));margin-bottom:var(--space-3)}
+  .foot-grid ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem;font-size:var(--text-sm)}
+  .foot-bottom{border-top:1px solid oklch(0.35 0.02 var(--green-hue));margin-top:var(--space-12);
+    padding-top:var(--space-6);font-size:var(--text-sm);color:oklch(0.65 0.02 var(--hue));
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-3)}
+
+  /* Progressive enhancement: content is visible by default; only when JS is
+     confirmed (html.js) do we hide-then-reveal on scroll. No JS = always visible. */
+  html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity var(--dur-slow) var(--ease-out),transform var(--dur-slow) var(--ease-out)}
+  html.js .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    html.js .reveal{opacity:1!important;transform:none!important}
+  }
+  </style>
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="{{ url_for('home') }}"><span class="dot"></span>Tumang Bali</a>
+      <div class="nav-links">
+        <a href="{{ url_for('market_tour') }}" class="hide-sm">Market-Tour Class</a>
+        <a href="{{ url_for('vegetarian') }}" class="hide-sm">Vegetarian &amp; Vegan</a>
+        <a href="{{ url_for('couples') }}" class="hide-sm">For Couples</a>
+        <a href="{{ url_for('pricing') }}">Pricing &amp; FAQ</a>
+        <a href="{{ url_for('recipes_index') }}" class="hide-sm">Recipes</a>
+        <a href="{{ url_for('guide_best_classes') }}" class="hide-sm">Ubud Guide</a>
+        <a href="{{ url_for('pricing') }}#book" class="cta">Book a Class</a>
+      </div>
+    </div>
+  </nav>
+
+  {% block body %}{% endblock %}
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="brand" style="color:oklch(0.97 0.01 45);margin-bottom:.75rem"><span class="dot"></span>Tumang Bali</div>
+          <p style="font-size:var(--text-sm);color:oklch(0.75 0.02 45);max-width:32ch">
+            A traditional Balinese cooking experience in the rice fields of Ubud — market tour, hands-on class and a shared feast.
+          </p>
+        </div>
+        <div>
+          <h4>Classes</h4>
+          <ul>
+            <li><a href="{{ url_for('market_tour') }}">Market-Tour Class</a></li>
+            <li><a href="{{ url_for('vegetarian') }}">Vegetarian &amp; Vegan</a></li>
+            <li><a href="{{ url_for('couples') }}">For Couples</a></li>
+            <li><a href="{{ url_for('pricing') }}">Pricing &amp; FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="{{ url_for('recipes_index') }}">Balinese Recipes</a></li>
+            <li><a href="{{ url_for('recipe', slug='balinese-spice-paste-base-genep') }}">Base Genep Spice Paste</a></li>
+            <li><a href="{{ url_for('recipe', slug='sate-lilit') }}">Sate Lilit</a></li>
+            <li><a href="{{ url_for('recipe', slug='sambal-matah') }}">Sambal Matah</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="{{ url_for('guide_best_classes') }}">Best Cooking Classes in Ubud</a></li>
+            <li><a href="{{ url_for('guide_foodie') }}">Ubud for Food Lovers</a></li>
+            <li><a href="{{ url_for('recipe', slug='nasi-goreng') }}">Nasi Goreng</a></li>
+            <li><a href="{{ url_for('recipe', slug='gado-gado') }}">Gado-Gado</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li>Ubud, Bali · Indonesia</li>
+            <li>Free shuttle in the Ubud area</li>
+            <li>Morning &amp; afternoon classes daily</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© {{ year }} Tumang Bali. All rights reserved.</span>
+        <span>Made with turmeric-stained hands in Ubud.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    var els=[].slice.call(document.querySelectorAll('.reveal'));
+    function showAll(){els.forEach(function(e){e.classList.add('in');});}
+    if(!('IntersectionObserver'in window)){showAll();return;}
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e);});
+    // Bulletproof fallback: never leave content hidden.
+    setTimeout(showAll,1400);
+  })();
+  </script>
+</body>
+</html>
