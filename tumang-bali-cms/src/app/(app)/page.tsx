@@ -98,7 +98,7 @@ export default async function Page() {
             </h1>
             
             <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed animate-fade-in-up">
-              Learn to cook authentic Balinese cuisine with our local chef in a traditional village kitchen. Our hands-on cooking class includes a local market tour, rice field walk, and a recipe booklet to take home.
+              Tumang Bali Cooking Class is a hands-on traditional Balinese cooking experience held in the village of Tumang, Central Bali. Participants learn to prepare 6–9 authentic dishes including babi guling (suckling pig), bebek betutu (slow-cooked duck), lawar (mixed salad), and traditional sambals using fresh ingredients sourced from a local morning market visit. Classes run 3–5 hours with hotel pickup from the Ubud area.
             </p>
             
             {/* Quick Badges / Stats */}
@@ -861,6 +861,12 @@ export default async function Page() {
             <Link href="/what-to-wear-bali-cooking-class" className="hover:text-orange-500 transition-colors">What to Wear</Link>
             <Link href="/recipes" className="hover:text-orange-500 transition-colors">Balinese Recipes</Link>
             <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
+            <Link href="/cooking-class-bali" className="hover:text-orange-500 transition-colors">Cooking Class in Bali</Link>
+            <Link href="/balinese-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Balinese Cooking Class Ubud</Link>
+            <Link href="/tumang-village" className="hover:text-orange-500 transition-colors">Tumang Village</Link>
+            <Link href="/blog/what-is-tumang-bali" className="hover:text-orange-500 transition-colors">What is Tumang Bali?</Link>
+            <Link href="/tumpeng-making-class" className="hover:text-orange-500 transition-colors">Tumpeng Making Class</Link>
+            <Link href="/bali-cooking-experience" className="hover:text-orange-500 transition-colors">Bali Cooking Experience</Link>
             <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
           </div>
         </div>
