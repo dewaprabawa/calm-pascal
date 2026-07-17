@@ -32,6 +32,7 @@ import { Reviews } from './collections/Reviews'
 import { ExternalListings } from './collections/ExternalListings'
 import { Articles } from './collections/Articles'
 import { Itinerary } from './globals/Itinerary'
+import { seedAISearchSchema } from './migrations/seed-20260717-ai-search-schema'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -79,5 +80,8 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || 'mongodb://127.0.0.1/tumang-bali-cms',
   }),
+  migrations: [
+    seedAISearchSchema,
+  ],
 })
 
