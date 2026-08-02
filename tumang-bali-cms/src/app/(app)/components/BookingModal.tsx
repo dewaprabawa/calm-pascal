@@ -13,9 +13,11 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
   
   // Form State
   const [selectedActivity, setSelectedActivity] = useState('')
-  const [numPeople, setNumPeople] = useState('2')
+  const [adults, setAdults] = useState('2')
+  const [kids, setKids] = useState('0')
   const [pickupLocation, setPickupLocation] = useState('')
   const [date, setDate] = useState('')
+  const [foodRestriction, setFoodRestriction] = useState('')
   const [notes, setNotes] = useState('')
   
   // Real WhatsApp number
@@ -53,7 +55,8 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
 
 *Experience:* ${selectedActivity}
 *Date:* ${date}
-*Number of People:* ${numPeople}
+*Guests:* ${adults} Adult(s)${parseInt(kids) > 0 ? `, ${kids} Kid(s)` : ''}
+*Food Restrictions:* ${foodRestriction || 'None'}
 *Pickup Location:* ${pickupLocation}
 ${notes ? `*Special Notes:* ${notes}\n` : ''}
 Please let me know about availability!
@@ -82,7 +85,9 @@ _(Booking from website)_`
           <div className="flex justify-between items-start mb-6">
             <div>
               <h2 className="text-2xl font-bold tracking-tight text-stone-900 dark:text-white">Book Your Experience</h2>
-              <p className="text-stone-500 dark:text-stone-400 text-sm mt-1">Fill out the details below and we'll confirm via WhatsApp.</p>
+              <p className="text-stone-500 dark:text-stone-400 text-sm mt-1">
+                Fill out the details below and we'll confirm via WhatsApp. Or email us at <a href="mailto:tumangbalicookingclass@gmail.com" className="text-orange-600 hover:underline">tumangbalicookingclass@gmail.com</a>
+              </p>
             </div>
             <button 
               onClick={() => setIsOpen(false)}
@@ -111,33 +116,64 @@ _(Booking from website)_`
               </select>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {/* Date */}
-              <div className="relative">
-                <label className="block text-sm font-semibold text-stone-700 dark:text-stone-300 mb-1.5">Date</label>
-                <input 
-                  type="date" 
-                  required
-                  min={new Date().toISOString().split('T')[0]}
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow [color-scheme:light] dark:[color-scheme:dark] appearance-none"
-                />
-              </div>
+            {/* Date */}
+            <div className="relative">
+              <label className="block text-sm font-semibold text-stone-700 dark:text-stone-300 mb-1.5">Date</label>
+              <input 
+                type="date" 
+                required
+                min={new Date().toISOString().split('T')[0]}
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow [color-scheme:light] dark:[color-scheme:dark] appearance-none"
+              />
+            </div>
 
-              {/* Number of People */}
+            <div className="grid grid-cols-2 gap-4">
+              {/* Adults */}
               <div>
-                <label className="block text-sm font-semibold text-stone-700 dark:text-stone-300 mb-1.5">Guests</label>
+                <label className="block text-sm font-semibold text-stone-700 dark:text-stone-300 mb-1.5">Adults</label>
                 <input 
                   type="number" 
                   min="1"
                   max="20"
                   required
-                  value={numPeople}
-                  onChange={(e) => setNumPeople(e.target.value)}
+                  value={adults}
+                  onChange={(e) => setAdults(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
                 />
               </div>
+
+              {/* Kids */}
+              <div>
+                <label className="block text-sm font-semibold text-stone-700 dark:text-stone-300 mb-1.5">Kids</label>
+                <input 
+                  type="number" 
+                  min="0"
+                  max="20"
+                  required
+                  value={kids}
+                  onChange={(e) => setKids(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
+                />
+              </div>
+            </div>
+
+            {/* Food Restrictions */}
+            <div>
+              <label className="block text-sm font-semibold text-stone-700 dark:text-stone-300 mb-1.5">Food Restrictions</label>
+              <select
+                value={foodRestriction}
+                onChange={(e) => setFoodRestriction(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow appearance-none"
+              >
+                <option value="">None</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Gluten-Free">Gluten-Free</option>
+                <option value="Halal">Halal</option>
+                <option value="Other">Other (please specify in notes)</option>
+              </select>
             </div>
 
             {/* Pickup Location */}
