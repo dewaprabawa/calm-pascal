@@ -2,8 +2,8 @@ import React from 'react'
 import { Metadata } from 'next'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
-import ClassLanding from '../components/ClassLanding'
-import { whatIsTumangBali } from '../components/landingContent'
+import ClassLanding from '../../components/ClassLanding'
+import { whatIsTumangBali } from '../../components/landingContent'
 
 export const revalidate = 60
 
