@@ -1,14 +1,21 @@
-import type { Migration } from '@payloadcms/next/types'
+import { Payload } from 'payload'
+
+type Migration = {
+  name: string
+  up: (args: { payload: Payload }) => Promise<void>
+  down?: (args: { payload: Payload }) => Promise<void>
+}
 
 export const seedAISearchSchema: Migration = {
   name: 'seed-ai-search-schema',
   up: async ({ payload }) => {
     console.log('📦 Seeding AI search schema data...')
 
-    const bumblu = await payload.findByValue({
+    const bumbluRes = await payload.find({
       collection: 'articles',
-      value: 'how-to-make-bumbu-bali',
+      where: { slug: { equals: 'how-to-make-bumbu-bali' } },
     })
+    const bumblu = bumbluRes.docs[0]
     if (bumblu) {
       await payload.update({
         collection: 'articles',
@@ -33,10 +40,11 @@ export const seedAISearchSchema: Migration = {
       console.log(`✅ Updated: how-to-make-bumbu-bali (${bumblu.id})`)
     }
 
-    const tumangVs = await payload.findByValue({
+    const tumangVsRes = await payload.find({
       collection: 'articles',
-      value: 'tumang-vs-ubud-cooking-class',
+      where: { slug: { equals: 'tumang-vs-ubud-cooking-class' } },
     })
+    const tumangVs = tumangVsRes.docs[0]
     if (tumangVs) {
       await payload.update({
         collection: 'articles',

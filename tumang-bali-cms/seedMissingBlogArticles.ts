@@ -430,12 +430,19 @@ const articles: Record<string, { title: string; slug: string; excerpt: string; m
 
       heading('h2', 'Can I take home a recipe booklet?'),
       paragraph([
-        text([
-          text(
-            'Yes — a printed recipe booklet with all the dishes you cooked is included in the class. It is one of our most popular souvenirs, and guests use it regularly after they return home. ',
-          ),
-          text('You can also buy extra booklets ', { type: 'link', version: 2, direction: 'ltr', format: '', fields: { linkType: 'custom', url: '/', newTab: true, children: [text('here')], } }, text(' before the class.', { type: 'link', version: 2, direction: 'ltr', format: '', fields: { linkType: 'custom', url: '/', newTab: true, children: [text('here')], } },)),
-        ]),
+        text(
+          'Yes — a printed recipe booklet with all the dishes you cooked is included in the class. It is one of our most popular souvenirs, and guests use it regularly after they return home. You can also buy extra booklets '
+        ),
+        {
+          type: 'link',
+          version: 2,
+          fields: { url: '/', newTab: true, linkType: 'custom' },
+          direction: 'ltr',
+          format: '',
+          indent: 0,
+          children: [text('here')],
+        },
+        text(' before the class.'),
       ]),
 
       heading('h2', 'How far in advance should I book?'),
