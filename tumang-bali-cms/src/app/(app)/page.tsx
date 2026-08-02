@@ -383,7 +383,7 @@ export default async function Page() {
             <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">A glimpse into the authentic atmosphere, colorful ingredients, and smiles in our kitchen.</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {/* Moment 1 */}
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
@@ -466,6 +466,57 @@ export default async function Page() {
                 <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Tradition</p>
                 <p className="text-white font-bold text-base mt-1">Grilling Satay</p>
                 <p className="text-white/80 text-xs mt-1">Cooking with traditional coconut husk charcoal for signature smoke flavor.</p>
+              </div>
+            </div>
+
+            {/* Moment 6 */}
+            <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <Image 
+                src="/images/bali-cooking-class-dadar-gulung.jpg" 
+                alt="Balinese Dessert Dadar Gulung in Cooking Class" 
+                fill 
+                sizes="(max-w-768px) 100vw, 250px"
+                className="object-cover group-hover:scale-110 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Dessert</p>
+                <p className="text-white font-bold text-base mt-1">Dadar Gulung</p>
+                <p className="text-white/80 text-xs mt-1">Presenting our freshly made sweet green coconut crepes.</p>
+              </div>
+            </div>
+
+            {/* Moment 7 */}
+            <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <Image 
+                src="/images/ubud-cooking-class-chopping-ingredients.jpg" 
+                alt="Tourists Chopping Fresh Ingredients in Ubud Cooking Class" 
+                fill 
+                sizes="(max-w-768px) 100vw, 250px"
+                className="object-cover group-hover:scale-110 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Teamwork</p>
+                <p className="text-white font-bold text-base mt-1">Chopping Spices</p>
+                <p className="text-white/80 text-xs mt-1">Having fun preparing the fresh ingredients for our Bumbu Bali.</p>
+              </div>
+            </div>
+
+            {/* Moment 8 */}
+            <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <Image 
+                src="/images/traditional-balinese-cooking-class-stir-fry.jpg" 
+                alt="Traditional Balinese Cooking Class Stir Fry" 
+                fill 
+                sizes="(max-w-768px) 100vw, 250px"
+                className="object-cover group-hover:scale-110 transition-transform duration-700" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">Cooking</p>
+                <p className="text-white font-bold text-base mt-1">Balinese Curry</p>
+                <p className="text-white/80 text-xs mt-1">Cooking authentic Balinese dishes with local chefs guiding you.</p>
               </div>
             </div>
           </div>
