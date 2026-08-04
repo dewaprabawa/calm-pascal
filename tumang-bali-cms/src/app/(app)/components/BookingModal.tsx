@@ -80,7 +80,7 @@ _(Booking from website)_`
       />
       
       {/* Modal Content */}
-      <div className="relative bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-lg shadow-2xl border border-stone-200 dark:border-zinc-800 overflow-hidden animate-fade-in-up">
+      <div className="relative bg-white dark:bg-zinc-900 rounded-3xl w-full max-w-lg shadow-2xl border border-stone-200 dark:border-zinc-800 overflow-y-auto max-h-full animate-fade-in-up">
         <div className="p-6 md:p-8">
           <div className="flex justify-between items-start mb-6">
             <div>
