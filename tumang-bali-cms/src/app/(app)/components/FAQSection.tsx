@@ -1,46 +1,14 @@
 'use client'
 
 import React, { useState } from 'react'
+import { faqs } from './faqsData'
 
-const faqs = [
-  {
-    question: 'What is included in the cooking class?',
-    answer: 'Our cooking class includes a guided local market tour, a welcome drink, hands-on cooking of 10+ traditional Balinese dishes (both regular and vegetarian options), a full lunch or dinner with the food you prepared, a recipe book to take home, and complimentary hotel pickup from the Ubud area.',
-  },
-  {
-    question: 'Do I need any cooking experience?',
-    answer: 'Absolutely not! Our classes are designed for all skill levels — from complete beginners to experienced home cooks. Our friendly local chefs will guide you step-by-step through every recipe. It\'s more about the fun cultural experience than perfection!',
-  },
-  {
-    question: 'Is there a vegetarian menu available?',
-    answer: 'Yes! We offer a complete vegetarian menu featuring dishes like Kare Tahu (Tofu Curry), Sate Tempe (Tempeh Satay), Tofu Pepes (Steamed Tofu in Banana Leaf), and many more. Just let us know when booking and we\'ll prepare everything fresh for you.',
-  },
-  {
-    question: 'What time does the class start?',
-    answer: 'We offer two sessions daily: a Morning Class starting at 8:00 AM (includes market tour) and an Afternoon Class starting at 2:00 PM. The morning class is our most popular option as you get to experience the vibrant local market!',
-  },
-  {
-    question: 'How do I get to the cooking class?',
-    answer: 'We offer complimentary hotel pickup and drop-off from the Ubud area. For guests staying outside Ubud, we can arrange transport for a small additional fee. You can also arrange your own transportation — we\'ll send you our exact location via WhatsApp after booking.',
-  },
-  {
-    question: 'Can I book for a group?',
-    answer: 'Absolutely! We welcome groups of any size. For groups of 6 or more, we can arrange a private cooking class exclusively for your party. Contact us via WhatsApp for special group rates and availability.',
-  },
-  {
-    question: 'What should I bring?',
-    answer: 'Just bring yourself, comfortable clothing, and a great appetite! We provide aprons, all cooking equipment, and ingredients. We recommend wearing closed-toe shoes for the market tour and bringing sunscreen and a hat for the rice field walk.',
-  },
-  {
-    question: 'How long is the cooking class?',
-    answer: 'The full experience lasts approximately 4–5 hours, which includes the market tour (45 mins), rice field walk (30 mins), cooking class (2 hours), and dining time (1 hour). It\'s a complete cultural and culinary immersion!',
-  },
-]
+const faqsLocal = faqs
 
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: faqsLocal.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
     acceptedAnswer: {
@@ -69,7 +37,7 @@ export default function FAQSection() {
         </div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => {
+          {faqsLocal.map((faq, index) => {
             const isOpen = openIndex === index
             return (
               <div

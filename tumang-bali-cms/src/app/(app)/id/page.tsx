@@ -11,6 +11,10 @@ import WhatsAppFloat from '../components/WhatsAppFloat'
 export const revalidate = 60
 
 export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+  },
   title: 'Kelas Memasak Terbaik di Ubud Bali | Tumang Bali',
   description:
     'Kelas memasak Bali autentik di Ubud: tur pasar lokal, jalan-jalan di sawah & memasak langsung 10+ hidangan tradisional. Ramah vegetarian, penjemputan hotel.',
@@ -43,28 +47,28 @@ export const metadata: Metadata = {
 
 const highlights = [
   {
-    title: 'Tur Pasar Lokal',
+    title: 'Tur Pasar Lokal | Tumang Bali',
     description:
       'Jelajahi pasar pagi tradisional Ubud dan temukan rempah, sayuran, serta bahan segar khas Bali bersama pemandu kami.',
-    image: '/images/img2.jpg',
+    image: '/images/itinerary/market-fresh.jpg',
   },
   {
-    title: 'Jalan-Jalan di Sawah',
+    title: 'Jalan-Jalan di Sawah | Tumang Bali',
     description:
       'Nikmati jalan santai melewati hamparan sawah hijau dan pelajari cara petani Bali menanam padi sebelum kelas dimulai.',
-    image: '/images/img3.jpg',
+    image: '/images/itinerary/offerings-detail.jpg',
   },
   {
-    title: 'Kelas Memasak Langsung',
+    title: 'Kelas Memasak Langsung | Tumang Bali',
     description:
       'Pakai celemek dan masak 10+ hidangan Bali tradisional langkah demi langkah bersama chef lokal berpengalaman.',
-    image: '/images/img1.jpg',
+    image: '/images/itinerary/cooking-table.jpg',
   },
   {
-    title: 'Santap Bersama',
+    title: 'Santap Bersama | Tumang Bali',
     description:
       'Duduk bersama dan nikmati hidangan yang baru Anda masak dengan pemandangan indah Ubud yang menenangkan.',
-    image: '/images/img4.jpg',
+    image: '/images/itinerary/guest-dessert.jpg',
   },
 ]
 
@@ -80,9 +84,11 @@ export default async function IndonesianPage() {
   return (
     <div
       lang="id"
+      dir="ltr"
       className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white"
     >
       {/* Navigation */}
+      <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('lang','id')" }} />
       <nav className="w-full bg-white dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
         <div className="max-w-5xl mx-auto w-full flex items-center justify-between">
           <Link href="/id" className="flex items-center gap-3">
@@ -93,13 +99,14 @@ export default async function IndonesianPage() {
               TUMANG BALI
             </span>
           </Link>
-          <Link
+          <a
             href="/"
+            rel="alternate"
             hrefLang="en"
             className="text-sm font-semibold text-stone-500 hover:text-orange-500 transition-colors"
           >
             English
-          </Link>
+          </a>
         </div>
       </nav>
 

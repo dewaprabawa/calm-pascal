@@ -10,7 +10,7 @@ export const Media: CollectionConfig = {
     read: () => true,
   },
   upload: {
-    disableLocalStorage: true,
+    disableLocalStorage: process.env.BLOB_READ_WRITE_TOKEN ? true : false,
     imageSizes: [
       {
         name: 'thumbnail',
@@ -31,7 +31,14 @@ export const Media: CollectionConfig = {
         position: 'centre',
       },
     ],
-    adminThumbnail: 'thumbnail',
+    adminThumbnail: ({ doc }) => {
+      // Fallback to the main image URL if the thumbnail size isn't generated or available yet
+      const sizes = doc?.sizes as any;
+      if (sizes?.thumbnail?.url) {
+        return sizes.thumbnail.url as string;
+      }
+      return doc?.url as string;
+    },
     mimeTypes: ['image/*', 'video/*'],
   },
   fields: [

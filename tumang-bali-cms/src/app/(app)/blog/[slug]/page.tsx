@@ -8,6 +8,8 @@ import { Metadata } from 'next'
 
 export const revalidate = 60
 
+const SITE = 'https://tumangbaliclass.com'
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params
   const payload = await getPayload({ config: configPromise })
@@ -20,15 +22,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = docs[0]
   if (!article) return { title: 'Not Found' }
 
+  const rawTitle = (article.meta?.title as string) || article.title
+  // Ensure the brand suffix is present exactly once and trim if too long
+  const noSuffix = rawTitle.endsWith('| Tumang Bali')
+    ? rawTitle.slice(0, -15)  // remove the existing suffix
+    : rawTitle
+  const trimmedTitle = noSuffix.length > 65 ? noSuffix.slice(0, 62) + '...' : noSuffix
+  const finalTitle = trimmedTitle + ' | Tumang Bali'
+  const rawDesc = (article.meta?.description as string) || article.excerpt
+  const trimmedDesc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc
   return {
-    title: (article.meta?.title as string) || `${article.title} | Tumang Bali Blog`,
-    description: (article.meta?.description as string) || article.excerpt,
+    title: finalTitle,
+    description: trimmedDesc,
+    alternates: {
+      canonical: `${SITE}/blog/${resolvedParams.slug}`,
+    },
     openGraph: {
-      title: (article.meta?.title as string) || article.title,
-      description: (article.meta?.description as string) || article.excerpt,
+      title: finalTitle,
+      description: trimmedDesc,
       type: 'article',
       publishedTime: article.publishedDate || article.createdAt,
       authors: [article.author as string],
+      url: `${SITE}/blog/${resolvedParams.slug}`,
+      siteName: 'Tumang Bali Cooking Class',
       images: article.featuredImage && typeof article.featuredImage === 'object' && article.featuredImage.url ? [article.featuredImage.url] : [],
     },
   }
@@ -65,6 +81,21 @@ function renderLexical(node: any, index: number = 0): React.ReactNode {
       return <a key={index} href={node.fields?.url} className="text-orange-600 hover:underline">{children}</a>;
     case 'quote':
       return <blockquote key={index} className="border-l-4 border-orange-500 pl-4 italic text-stone-600 dark:text-stone-400 my-6 text-xl">{children}</blockquote>;
+    case 'upload':
+      const val = node.value;
+      if (val && typeof val === 'object' && val.url) {
+        return (
+          <div key={index} className="my-8 relative rounded-3xl overflow-hidden shadow-lg border border-stone-200 dark:border-zinc-800 aspect-[3/2] w-full max-w-2xl mx-auto">
+            <Image
+              src={val.url}
+              alt={val.alt || ''}
+              fill
+              className="object-cover"
+            />
+          </div>
+        );
+      }
+      return null;
     default:
       return <React.Fragment key={index}>{children}</React.Fragment>;
   }
@@ -136,17 +167,108 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Article',
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `https://tumangbaliclass.com/blog/${article.slug}`
+            },
             headline: article.title,
-            image: article.featuredImage && typeof article.featuredImage === 'object' ? [article.featuredImage.url] : [],
-            datePublished: article.publishedDate || article.createdAt,
-            author: [{
+            description: (article.meta?.description as string) || article.excerpt,
+            image: article.featuredImage && typeof article.featuredImage === 'object' && article.featuredImage.url ? [article.featuredImage.url] : [],
+            author: {
               '@type': 'Person',
-              name: article.author,
-              url: 'https://tumangbali.com'
-            }]
+              name: article.author
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Tumang Bali Cooking Class',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://tumangbaliclass.com/images/logo.webp'
+              }
+            },
+            datePublished: article.publishedDate ? article.publishedDate.split('T')[0] : article.createdAt.split('T')[0],
+            dateModified: article.updatedAt ? article.updatedAt.split('T')[0] : article.createdAt.split('T')[0]
           })
         }}
       />
+
+      {/* Conditionally Render FAQPage Schema */}
+      {article.slug === 'how-to-make-bumbu-bali' && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Can I make Balinese bumbu without shrimp paste (terasi)?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. While traditional savory dishes almost always include terasi, you can substitute it with a pinch of sugar and extra shallots, or simply omit it. We offer vegetarian options at our cooking class so everyone can enjoy the flavors.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What is the difference between Bumbu Bali and Bumbu Jawa (Javanese spice paste)?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Balinese bumbu generally relies more heavily on turmeric, giving it a yellow/golden color, whereas Javanese bumbu tends to be darker, richer, and relies more on shalot and sweet soy sauce (kecap manis).'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do I really need a stone mortar and pestle?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'While a high-powered blender works in a pinch, a stone mortar produces a much more aromatic and flavorful paste. For the authentic experience, we highly recommend using a cobek.'
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      )}
+
+      {/* FAQPage Schema for Tumang vs Ubud */}
+      {article.slug === 'tumang-vs-ubud-cooking-class' && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Is Tumang (Batubulan) close to Ubud?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, it is very close. Tumang is only about 10–15 minutes from the center of Ubud. We pick up guests from their hotels in the morning and drop them off after lunch.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Is the cooking class in Tumang more authentic than in Ubud?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Generally, yes. Because Tumang is a working village and not a tourism hub, the classes are often more focused on daily Balinese life and family traditions.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do I need to rent a scooter to join the Tumang cooking class?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'No. We provide free hotel pickup from the Ubud area. We drive you to the local market, then to the rice paddy kitchen, and back to your hotel.'
+                  }
+                }
+              ]
+            })
+          }}
+        />
+      )}
     </div>
   )
 }

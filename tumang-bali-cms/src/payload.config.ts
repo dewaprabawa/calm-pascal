@@ -1,3 +1,21 @@
+// Patch global fetch to prevent "SharedArrayBuffer is not allowed" errors with Vercel Blob storage uploads
+if (typeof globalThis !== 'undefined' && typeof globalThis.fetch === 'function') {
+  const originalFetch = globalThis.fetch
+  globalThis.fetch = function (input, init) {
+    if (init && init.body) {
+      const body = init.body as any
+      if (
+        ArrayBuffer.isView(body) &&
+        typeof SharedArrayBuffer !== 'undefined' &&
+        body.buffer instanceof SharedArrayBuffer
+      ) {
+        init.body = Buffer.from(new Uint8Array(body as any))
+      }
+    }
+    return originalFetch.call(this, input, init)
+  }
+}
+
 import { buildConfig } from 'payload'
 import sharp from 'sharp'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
@@ -15,17 +33,18 @@ import { ExternalListings } from './collections/ExternalListings'
 import { Articles } from './collections/Articles'
 import { Itinerary } from './globals/Itinerary'
 
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
   plugins: [
     vercelBlobStorage({
-      enabled: true,
+      enabled: !!process.env.BLOB_READ_WRITE_TOKEN,
       collections: {
         media: true,
       },
-      token: process.env.BLOB_READ_WRITE_TOKEN || 'vercel_blob_rw_a1b2c3_d4e5f6',
+      token: (process.env.BLOB_READ_WRITE_TOKEN || '').replace(/"/g, ''),
     }),
   ],
   admin: {
@@ -61,5 +80,6 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || 'mongodb://127.0.0.1/tumang-bali-cms',
   }),
+
 })
 

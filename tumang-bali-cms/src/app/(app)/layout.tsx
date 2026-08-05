@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tumangbaliclass.com'),
   title: {
-    default: 'Best Cooking Class in Ubud Bali | Tumang Bali',
-    template: '%s | Tumang Bali Cooking Class Ubud',
+    default: "Authentic Balinese Cooking Class in Ubud — Market Tour & Recipes | Tumang Bali",
+    template: "%s | Tumang Bali",
   },
-  description: 'Top-rated authentic Balinese cooking class in Ubud: local market tour, rice field walk & hands-on cooking of 10+ dishes. Vegetarian friendly, hotel pickup.',
+  description: "Authentic Balinese cooking class in Ubud with market tour, rice field walk & 10+ traditional dishes. Vegetarian friendly, hotel pickup.",
   keywords: [
     // Primary high-volume keywords
     'cooking class Ubud', 'cooking class Bali', 'Balinese cooking class', 'best cooking class in Bali',
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     'cooking class with hotel pickup Ubud', 'half day cooking class Bali',
   ],
   openGraph: {
-    title: 'Tumang Bali Cooking Class | #1 Authentic Balinese Cooking Experience in Ubud',
-    description: 'Join the best cooking class in Ubud! ⭐ 5-star rated on TripAdvisor. Market tour + rice field walk + 10+ dishes. Vegetarian options. Hotel pickup included. Book now!',
+    title: "Authentic Balinese Cooking Class in Ubud — Market Tour & Recipes",
+    description: "Join our Ubud cooking class. Learn 10+ traditional Balinese dishes with a local chef, tour a market, and take home a recipe booklet.",
     url: 'https://tumangbaliclass.com',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',
@@ -115,6 +115,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://www.tripadvisor.com" />
+        <link rel="preconnect" href="https://www.tripadvisor.co.id" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

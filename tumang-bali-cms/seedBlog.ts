@@ -145,7 +145,7 @@ async function seed() {
   }
 
   // Upload a featured image from the existing public assets
-  const imgPath = path.resolve(__dirname, 'public', 'images', 'blog', 'what-to-expect.jpg')
+  const imgPath = path.resolve(__dirname, 'public', 'images', 'blog', 'what-to-expect.webp')
   let featuredImageId: string | number | undefined
   if (fs.existsSync(imgPath)) {
     const stat = fs.statSync(imgPath)
@@ -154,8 +154,8 @@ async function seed() {
       data: { alt: 'Guests at a Balinese cooking class in Ubud' },
       file: {
         data: fs.readFileSync(imgPath),
-        mimetype: 'image/jpeg',
-        name: 'blog-what-to-expect.jpg',
+        mimetype: 'image/webp',
+        name: 'blog-what-to-expect.webp',
         size: stat.size,
       },
     })
