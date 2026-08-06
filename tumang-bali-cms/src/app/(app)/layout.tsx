@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tumangbaliclass.com'),
   title: {
-    default: "Authentic Balinese Cooking Class in Ubud — Market Tour & Recipes | Tumang Bali",
+    default: "Authentic Balinese Cooking Class in Ubud | Tumang Bali",
     template: "%s | Tumang Bali",
   },
   description: "Authentic Balinese cooking class in Ubud with market tour, rice field walk & 10+ traditional dishes. Vegetarian friendly, hotel pickup.",
