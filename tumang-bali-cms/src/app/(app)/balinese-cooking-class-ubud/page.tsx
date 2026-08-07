@@ -23,12 +23,17 @@ export const metadata: Metadata = {
 }
 
 export default async function Page() {
-  const payload = await getPayload({ config: configPromise })
-  const { docs: activities } = await payload.find({ collection: 'activities' })
-  const bookingActivities = activities.map((a) => ({
-    id: a.id as string,
-    title: a.title as string,
-    price: a.price as number,
-  }))
+  let bookingActivities: any[] = []
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { docs: activities } = await payload.find({ collection: 'activities' })
+    bookingActivities = activities.map((a) => ({
+      id: a.id as string,
+      title: a.title as string,
+      price: a.price as number,
+    }))
+  } catch (err) {
+    console.error('balinese class ubud page: could not load activities from CMS', err)
+  }
   return <ClassLanding content={balineseCookingClassUbud} activities={bookingActivities} />
 }

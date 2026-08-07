@@ -73,13 +73,18 @@ const highlights = [
 ]
 
 export default async function IndonesianPage() {
-  const payload = await getPayload({ config: configPromise })
-  const { docs: activities } = await payload.find({ collection: 'activities' })
-  const bookingActivities = activities.map((a) => ({
-    id: a.id as string,
-    title: a.title as string,
-    price: a.price as number,
-  }))
+  let bookingActivities: any[] = []
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { docs: activities } = await payload.find({ collection: 'activities' })
+    bookingActivities = activities.map((a) => ({
+      id: a.id as string,
+      title: a.title as string,
+      price: a.price as number,
+    }))
+  } catch (err) {
+    console.error('id page: could not load activities from CMS', err)
+  }
 
   return (
     <div

@@ -35,8 +35,14 @@ export const metadata: Metadata = {
 }
 
 export default async function RecipesIndexPage() {
-  const payload = await getPayload({ config: configPromise })
-  const { docs: recipes } = await payload.find({ collection: 'recipes', limit: 1000 })
+  let recipes: any[] = []
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { docs } = await payload.find({ collection: 'recipes', limit: 1000 })
+    recipes = docs || []
+  } catch (err) {
+    console.error('recipes page: could not load recipes from CMS', err)
+  }
 
   const sorted = [...recipes].sort((a, b) =>
     String(a.title).localeCompare(String(b.title)),

@@ -21,24 +21,39 @@ import InstagramEmbed from './components/InstagramEmbed'
 export const revalidate = 60
 
 export default async function Page() {
-  const payload = await getPayload({ config: configPromise })
-  
-  // Fetch from Payload concurrently for massive speed boost
-  const [
-    { docs: activities },
-    { docs: instructors },
-    { docs: reviews },
-    { docs: listings },
-    { docs: recipes },
-    itinerary
-  ] = await Promise.all([
-    payload.find({ collection: 'activities', depth: 1 }),
-    payload.find({ collection: 'instructors' }),
-    payload.find({ collection: 'reviews', where: { status: { equals: 'published' } } }),
-    payload.find({ collection: 'external-listings', where: { isActive: { equals: true } } }),
-    payload.find({ collection: 'recipes', limit: 100 }),
-    payload.findGlobal({ slug: 'itinerary', depth: 1 })
-  ])
+  let activities: any[] = []
+  let instructors: any[] = []
+  let reviews: any[] = []
+  let listings: any[] = []
+  let recipes: any[] = []
+  let itinerary: any = null
+
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const [
+      actRes,
+      instRes,
+      revRes,
+      listRes,
+      recRes,
+      itinRes
+    ] = await Promise.all([
+      payload.find({ collection: 'activities', depth: 1 }),
+      payload.find({ collection: 'instructors' }),
+      payload.find({ collection: 'reviews', where: { status: { equals: 'published' } } }),
+      payload.find({ collection: 'external-listings', where: { isActive: { equals: true } } }),
+      payload.find({ collection: 'recipes', limit: 100 }),
+      payload.findGlobal({ slug: 'itinerary', depth: 1 })
+    ])
+    activities = actRes.docs || []
+    instructors = instRes.docs || []
+    reviews = revRes.docs || []
+    listings = listRes.docs || []
+    recipes = recRes.docs || []
+    itinerary = itinRes || null
+  } catch (err) {
+    console.error('homepage: could not load CMS data', err)
+  }
 
   let displayActivities = [...activities]
 

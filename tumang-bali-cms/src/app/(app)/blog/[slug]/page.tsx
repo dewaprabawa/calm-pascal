@@ -12,14 +12,19 @@ const SITE = 'https://tumangbaliclass.com'
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params
-  const payload = await getPayload({ config: configPromise })
-  const { docs } = await payload.find({
-    collection: 'articles',
-    where: { slug: { equals: resolvedParams.slug } },
-    limit: 1,
-  })
+  let article: any = null
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { docs } = await payload.find({
+      collection: 'articles',
+      where: { slug: { equals: resolvedParams.slug } },
+      limit: 1,
+    })
+    article = docs[0]
+  } catch (err) {
+    console.error('blog slug metadata: could not load article from CMS', err)
+  }
 
-  const article = docs[0]
   if (!article) return { title: 'Not Found' }
 
   const rawTitle = (article.meta?.title as string) || article.title
@@ -103,18 +108,22 @@ function renderLexical(node: any, index: number = 0): React.ReactNode {
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params
-  const payload = await getPayload({ config: configPromise })
-  
-  const { docs } = await payload.find({ 
-    collection: 'articles',
-    where: { 
-      slug: { equals: resolvedParams.slug },
-      status: { equals: 'published' }
-    },
-    limit: 1,
-  })
+  let article: any = null
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { docs } = await payload.find({ 
+      collection: 'articles',
+      where: { 
+        slug: { equals: resolvedParams.slug },
+        status: { equals: 'published' }
+      },
+      limit: 1,
+    })
+    article = docs[0]
+  } catch (err) {
+    console.error('blog slug page: could not load article from CMS', err)
+  }
 
-  const article = docs[0]
   if (!article) notFound()
 
   return (

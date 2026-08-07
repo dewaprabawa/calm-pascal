@@ -13,10 +13,15 @@ const SITE = 'https://tumangbaliclass.com'
 
 // Resolve a recipe by its derived slug (no slug field in the CMS).
 async function findRecipeBySlug(slug: string) {
-  const payload = await getPayload({ config: configPromise })
-  const { docs } = await payload.find({ collection: 'recipes', limit: 1000 })
-  const recipe = docs.find((r) => recipeSlug(r.title as string) === slug)
-  return recipe ?? null
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { docs } = await payload.find({ collection: 'recipes', limit: 1000 })
+    const recipe = docs.find((r) => recipeSlug(r.title as string) === slug)
+    return recipe ?? null
+  } catch (err) {
+    console.error('recipes slug: could not load recipe from CMS', err)
+    return null
+  }
 }
 
 export async function generateMetadata({
