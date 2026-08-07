@@ -24,9 +24,9 @@ export const Articles: CollectionConfig = {
       },
       hooks: {
         beforeValidate: [
-          ({ value, data }) => {
+          ({ value, data }: { value?: string; data?: any }) => {
             if (value) return value
-            if (data?.title) {
+            if (data?.title && typeof data.title === 'string') {
               return data.title
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-')
@@ -97,6 +97,93 @@ export const Articles: CollectionConfig = {
           admin: {
             description: 'SEO Meta Description',
           },
+        },
+      ],
+    },
+    {
+      name: 'faq',
+      type: 'array',
+      label: 'FAQ (for FAQPage rich results)',
+      admin: {
+        description: 'Add questions and answers. These generate a FAQPage schema so Google can show rich FAQ cards in search and AI Overviews.',
+        condition: (_: any, siblingData: any) => siblingData?.status === 'published',
+      },
+      fields: [
+        {
+          name: 'question',
+          type: 'text',
+          required: true,
+          label: 'Question',
+        },
+        {
+          name: 'answer',
+          type: 'textarea',
+          required: true,
+          label: 'Answer',
+          maxLength: 500,
+        },
+      ],
+    },
+    {
+      name: 'howToSteps',
+      type: 'array',
+      label: 'How-To Steps (for HowTo rich results)',
+      admin: {
+        description: 'Step-by-step instructions. Generates a HowTo schema so Google shows numbered steps in search and AI results.',
+        condition: (_: any, siblingData: any) => siblingData?.status === 'published',
+      },
+      fields: [
+        {
+          name: 'step',
+          type: 'text',
+          required: true,
+          label: 'Step text',
+        },
+        {
+          name: 'url',
+          type: 'text',
+          label: 'Optional image URL for this step',
+        },
+      ],
+    },
+    {
+      name: 'authorBio',
+      type: 'text',
+      label: 'Author Bio (for E-E-A-T)',
+      maxLength: 300,
+      admin: {
+        description: 'Brief bio shown in structured data. Helps Google associate this article with an expert.',
+      },
+    },
+    {
+      name: 'authorRole',
+      type: 'text',
+      label: 'Author Role / Title',
+      admin: {
+        description: 'e.g. "Head Chef", "Culinary Expert", "Local Food Guide"',
+      },
+    },
+    {
+      name: 'articleSection',
+      type: 'text',
+      label: 'Article Section',
+      admin: {
+        description: 'Category for Article schema (e.g. "Recipes", "Travel Guide", "Culture", "Cooking Tips")',
+      },
+    },
+    {
+      name: 'keywords',
+      type: 'array',
+      label: 'SEO Keywords',
+      maxRows: 10,
+      admin: {
+        description: 'Keywords for the Article schema (helps AI understand topic)',
+      },
+      fields: [
+        {
+          name: 'keyword',
+          type: 'text',
+          required: true,
         },
       ],
     },

@@ -10,23 +10,46 @@ export const metadata: Metadata = {
   // this short to avoid duplicating the brand and overrunning the title length.
   title: 'Ubud Food & Culture Blog',
   description: 'Planning an authentic Ubud cooking class? Discover traditional recipes, local market tours, and the best Balinese food stories from Tumang Bali Kitchen.',
+  keywords: ['Balinese cooking blog', 'Ubud cooking class tips', 'Bali food stories', 'Balinese recipes', 'Tumang Bali'],
 }
 
 export const revalidate = 60
 
+const SITE = 'https://tumangbaliclass.com'
+
+// BreadcrumbList + WebPage structured data for the blog listing
+const BlogListingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog` },
+  ],
+}
+
+const WebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${SITE}/blog#webpage`,
+  url: `${SITE}/blog`,
+  name: 'Ubud Food & Culture Blog — Tumang Bali',
+  description: 'Discover traditional Balinese recipes, cooking class tips, market tours, and authentic food stories from Tumang Bali Kitchen in Ubud, Bali.',
+  isPartOf: { '@id': `${SITE}` },
+  about: {
+    '@type': 'Thing',
+    name: 'Balinese Cuisine & Cooking',
+  },
+  inLanguage: 'en-US',
+}
+
 export default async function BlogPage() {
-  let articles: any[] = []
-  try {
-    const payload = await getPayload({ config: configPromise })
-    const { docs } = await payload.find({ 
-      collection: 'articles',
-      where: { status: { equals: 'published' } },
-      sort: '-publishedDate',
-    })
-    articles = docs || []
-  } catch (err) {
-    console.error('blog page: could not load articles from CMS', err)
-  }
+  const payload = await getPayload({ config: configPromise })
+  
+  const { docs: articles } = await payload.find({ 
+    collection: 'articles',
+    where: { status: { equals: 'published' } },
+    sort: '-publishedDate',
+  })
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans">
@@ -78,6 +101,10 @@ export default async function BlogPage() {
           </div>
         )}
       </main>
+
+      {/* ===== STRUCTURED DATA: BreadcrumbList + WebPage ===== */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BlogListingSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WebPageSchema) }} />
     </div>
   )
 }
