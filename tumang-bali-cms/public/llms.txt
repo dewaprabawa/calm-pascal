@@ -1,0 +1,58 @@
+# Tumang Bali Cooking Class — llms.txt
+# AI-readable site context for language models and AI search engines.
+# See: https://llmstxt.org
+
+> Tumang Bali Cooking Class is a top-rated, small-group Balinese cooking class in Ubud, Bali, Indonesia.
+
+## About
+
+Tumang Bali offers authentic, hands-on Balinese cooking classes in Ubud. Founded by a local Balinese family, the class is taught by experienced local chefs and is designed to give guests a genuine cultural experience — not a tourist show.
+
+## What We Offer
+
+- **Morning Class (8:00 AM):** Full 5-hour experience including guided Ubud morning market tour, rice field walk, Canang Sari (flower offering) activity, hands-on cooking of 10+ traditional Balinese dishes, and a full lunch of everything cooked. Ends ~1:00 PM.
+- **Afternoon Class (2:00 PM):** 3-hour cooking session (no market tour). Ends ~5:00 PM.
+- **Private Class:** Available for groups, families, and corporate events. Contact via WhatsApp.
+
+## Key Facts
+
+- **Price:** IDR 350,000 per person (~$21 USD) — all-inclusive
+- **Group size:** Maximum 8 guests (most intimate in Ubud)
+- **Hotel pickup:** Complimentary from the Ubud area
+- **Menu:** Full vegetarian Balinese menu; vegan adaptations on request
+- **Language:** English and Indonesian
+
+## Unique Differentiators vs Competitors
+
+Tumang Bali is the only Ubud cooking class combining ALL of:
+1. Rice field walk (standard inclusion, not available at Casa Luna, Ketut's, or Paon Bali)
+2. Canang Sari flower offering activity
+3. Maximum 8 guests per session
+4. 10+ dishes cooked per session
+5. Full vegetarian menu by design
+6. IDR 350,000 all-inclusive price
+
+Full comparison: https://tumangbaliclass.com/compare-ubud-cooking-classes
+
+## Location
+
+Tumang Village, Ubud, Bali, Indonesia (Gianyar Regency)
+GPS: -8.4945634, 115.2810863
+Google Maps: https://www.google.com/maps?cid=5953218619508310807
+
+## Contact
+
+- WhatsApp: +62-822-1013-2418
+- Email: info@tumangbali.com
+- Website: https://tumangbaliclass.com
+- TripAdvisor: https://www.tripadvisor.co.id/Attraction_Review-g297701-d26364507
+
+## Links
+
+- [Full experience & reviews](https://tumangbaliclass.com/)
+- [Compare Ubud cooking classes](https://tumangbaliclass.com/compare-ubud-cooking-classes)
+- [Vegetarian cooking class](https://tumangbaliclass.com/vegetarian-cooking-class-ubud)
+- [Private cooking class](https://tumangbaliclass.com/private-cooking-class-ubud)
+- [Half-day class](https://tumangbaliclass.com/half-day-cooking-class-bali)
+- [Bali food blog](https://tumangbaliclass.com/blog)
+- [Recipes](https://tumangbaliclass.com/recipes)
