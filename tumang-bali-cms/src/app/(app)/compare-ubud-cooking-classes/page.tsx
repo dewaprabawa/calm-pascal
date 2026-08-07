@@ -138,13 +138,18 @@ function Check({ yes }: { yes: boolean | string }) {
 }
 
 export default async function Page() {
-  const payload = await getPayload({ config: configPromise })
-  const { docs: activities } = await payload.find({ collection: 'activities' })
-  const bookingActivities: ActivityOption[] = activities.map((a) => ({
-    id: a.id as string,
-    title: a.title as string,
-    price: a.price as number,
-  }))
+  let bookingActivities: ActivityOption[] = []
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const { docs: activities } = await payload.find({ collection: 'activities' })
+    bookingActivities = activities.map((a) => ({
+      id: a.id as string,
+      title: a.title as string,
+      price: a.price as number,
+    }))
+  } catch (err) {
+    console.error('compare page: could not load activities from CMS', err)
+  }
 
   const itemListSchema = {
     '@context': 'https://schema.org',
