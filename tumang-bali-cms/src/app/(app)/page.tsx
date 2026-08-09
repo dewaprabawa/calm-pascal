@@ -16,9 +16,9 @@ import TikTokEmbed from './components/TikTokEmbed'
 import InstagramEmbed from './components/InstagramEmbed'
 import dynamic from 'next/dynamic'
 
-const BookingModal = dynamic(() => import('./components/BookingModal'), { ssr: false })
-const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'), { ssr: false })
-const StatsCounter = dynamic(() => import('./components/StatsCounter'), { ssr: false })
+const BookingModal = dynamic(() => import('./components/BookingModal'))
+const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'))
+const StatsCounter = dynamic(() => import('./components/StatsCounter'))
 
 export const revalidate = 60
 
