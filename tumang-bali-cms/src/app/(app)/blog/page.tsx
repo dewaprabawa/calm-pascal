@@ -56,7 +56,7 @@ export default async function BlogPage() {
       <nav className="w-full bg-white dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
         <Link href="/" className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full border border-orange-200 overflow-hidden relative">
-            <Image src="/images/logo.jpg" alt="Logo" fill className="object-cover" />
+            <Image src="/images/logo.jpg" alt="Tumang Bali Cooking Class Logo" fill className="object-cover" />
           </div>
           <span className="font-bold text-orange-600">Back to Home</span>
         </Link>
@@ -80,7 +80,7 @@ export default async function BlogPage() {
                   {article.featuredImage && typeof article.featuredImage === 'object' && article.featuredImage.url ? (
                     <Image src={article.featuredImage.url} alt={article.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   ) : (
-                    <Image src="/images/img4.jpg" alt="Fallback" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <Image src="/images/img4.jpg" alt="Balinese cooking class in Ubud" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   )}
                 </div>
                 <div className="p-6">

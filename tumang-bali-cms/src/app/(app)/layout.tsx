@@ -19,29 +19,6 @@ export const metadata: Metadata = {
     template: "%s | Tumang Bali",
   },
   description: "Authentic Balinese cooking class in Ubud with market tour, rice field walk & 10+ traditional dishes. Vegetarian friendly, hotel pickup.",
-  keywords: [
-    // Primary high-volume keywords
-    'cooking class Ubud', 'cooking class Bali', 'Balinese cooking class', 'best cooking class in Bali',
-    'best cooking class in Ubud', 'Bali cooking school', 'Indonesian cooking class',
-    // Long-tail experience keywords
-    'authentic Balinese cooking class', 'traditional Balinese cooking experience',
-    'cooking class with market tour', 'market tour and cooking class Ubud',
-    'farm to table cooking class Bali', 'hands-on cooking workshop Ubud',
-    'private cooking class Ubud', 'cooking class in traditional Balinese home',
-    // Dietary/specialty keywords
-    'vegetarian cooking class Bali', 'vegan cooking class Ubud', 'vegetarian Balinese cooking class',
-    // Action/booking keywords
-    'book cooking class Ubud', 'top rated cooking classes Bali', 'Ubud cooking class with pickup',
-    'affordable cooking classes in Bali', 'cooking class near Ubud center',
-    // Things to do keywords
-    'things to do in Ubud', 'Bali activities', 'Ubud activities', 'what to do in Ubud',
-    'Bali food tour', 'Ubud culinary adventure', 'Bali cultural experience',
-    // Brand keywords
-    'Tumang Bali', 'Tumang Bali cooking class', 'Tumang cooking class Ubud',
-    // Competitor comparison keywords
-    'family friendly cooking class Ubud', 'small group cooking class Bali',
-    'cooking class with hotel pickup Ubud', 'half day cooking class Bali',
-  ],
   openGraph: {
     title: "Authentic Balinese Cooking Class in Ubud — Market Tour & Recipes",
     description: "Join our Ubud cooking class. Learn 10+ traditional Balinese dishes with a local chef, tour a market, and take home a recipe booklet.",

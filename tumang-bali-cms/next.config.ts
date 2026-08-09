@@ -43,6 +43,22 @@ const nextConfig: NextConfig = {
         destination: '/authentic-balinese-cooking-class',
         permanent: true,
       },
+      // Common URL patterns that visitors and bots try — redirect to homepage anchors.
+      {
+        source: '/contact',
+        destination: '/#location',
+        permanent: true,
+      },
+      {
+        source: '/faq',
+        destination: '/#faq',
+        permanent: true,
+      },
+      {
+        source: '/reviews',
+        destination: '/#reviews',
+        permanent: true,
+      },
     ];
   },
   // Keep pdfkit external so webpack does not bundle it. Bundling rewrites the

@@ -192,7 +192,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               name: 'Tumang Bali Cooking Class',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://tumangbaliclass.com/images/logo.webp'
+                url: 'https://tumangbaliclass.com/images/logo.jpg'
               }
             },
             datePublished: article.publishedDate ? article.publishedDate.split('T')[0] : article.createdAt.split('T')[0],
