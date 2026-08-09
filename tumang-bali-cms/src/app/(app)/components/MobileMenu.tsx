@@ -44,6 +44,7 @@ export default function MobileMenu() {
             { href: '#menu', label: 'Menu', emoji: '🍽️' },
             { href: '#instructors', label: 'Instructors', emoji: '👩‍🏫' },
             { href: '#reviews', label: 'Reviews', emoji: '⭐' },
+            { href: '/compare-ubud-cooking-classes', label: 'Compare Classes', emoji: '⚖️' },
             { href: '#faq', label: 'FAQ', emoji: '❓' },
             { href: '#location', label: 'Location', emoji: '📍' },
           ].map((item) => (

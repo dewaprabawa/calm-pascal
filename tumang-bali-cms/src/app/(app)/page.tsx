@@ -77,6 +77,7 @@ export default async function Page() {
             <a href="#instructors" className="hover:text-orange-500 transition-colors">INSTRUCTORS</a>
             <a href="#reviews" className="hover:text-orange-500 transition-colors">REVIEWS</a>
             <Link href="/blog" className="hover:text-orange-500 transition-colors">BLOG</Link>
+            <Link href="/compare-ubud-cooking-classes" className="hover:text-orange-500 transition-colors">COMPARE</Link>
             <a href="#faq" className="hover:text-orange-500 transition-colors">FAQ</a>
             <a href="#location" className="hover:text-orange-500 transition-colors">LOCATION</a>
           </div>
@@ -950,6 +951,7 @@ export default async function Page() {
             <Link href="/cooking-class-bali" className="hover:text-orange-500 transition-colors">Cooking Class in Bali</Link>
             <Link href="/balinese-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Balinese Cooking Class in Ubud</Link>
             <Link href="/best-cooking-classes-bali" className="hover:text-orange-500 transition-colors">Best Cooking Classes in Bali</Link>
+            <Link href="/compare-ubud-cooking-classes" className="hover:text-orange-500 transition-colors">Compare Cooking Classes</Link>
             <Link href="/tumang-village" className="hover:text-orange-500 transition-colors">Tumang Village</Link>
             <Link href="/tumpeng-making-class" className="hover:text-orange-500 transition-colors">Tumpeng Making Class</Link>
             <Link href="/bali-cooking-experience" className="hover:text-orange-500 transition-colors">Bali Cooking Experience</Link>
