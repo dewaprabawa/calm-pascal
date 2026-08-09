@@ -6,17 +6,19 @@ import configPromise from '@/payload.config'
 import MenuSection from './components/MenuSection'
 import HeroVideo from './components/HeroVideo'
 import ItinerarySection from './components/ItinerarySection'
-import BookingModal from './components/BookingModal'
 import BookButton from './components/BookButton'
 import TripAdvisorWidget from './components/TripAdvisorWidget'
 import StructuredData from './components/StructuredData'
 import FAQSection from './components/FAQSection'
-import WhatsAppFloat from './components/WhatsAppFloat'
-import StatsCounter from './components/StatsCounter'
 import MobileMenu from './components/MobileMenu'
 import PickupSchedule from './components/PickupSchedule'
 import TikTokEmbed from './components/TikTokEmbed'
 import InstagramEmbed from './components/InstagramEmbed'
+import dynamic from 'next/dynamic'
+
+const BookingModal = dynamic(() => import('./components/BookingModal'), { ssr: false })
+const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'), { ssr: false })
+const StatsCounter = dynamic(() => import('./components/StatsCounter'), { ssr: false })
 
 export const revalidate = 60
 
@@ -163,6 +165,8 @@ export default async function Page() {
                 fill 
                 sizes="(max-w-768px) 100vw, 400px" 
                 priority
+                fetchPriority="high"
+                quality={85}
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-stone-950/0 to-stone-950/0" />

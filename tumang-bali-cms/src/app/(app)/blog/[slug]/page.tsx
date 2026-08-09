@@ -109,6 +109,7 @@ function renderLexical(node: any, index: number = 0): React.ReactNode {
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params
   let article: any = null
+  let relatedArticles: any[] = []
   try {
     const payload = await getPayload({ config: configPromise })
     const { docs } = await payload.find({ 
@@ -120,6 +121,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       limit: 1,
     })
     article = docs[0]
+
+    if (article) {
+      const { docs: relatedDocs } = await payload.find({
+        collection: 'articles',
+        where: { 
+          status: { equals: 'published' },
+          slug: { not_equals: resolvedParams.slug }
+        },
+        limit: 3,
+        sort: '-publishedDate'
+      })
+      relatedArticles = relatedDocs
+    }
   } catch (err) {
     console.error('blog slug page: could not load article from CMS', err)
   }
@@ -167,6 +181,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             Book Your Cooking Class Today
           </Link>
         </div>
+
+        {relatedArticles.length > 0 && (
+          <div className="mt-16 pt-10 border-t border-stone-200 dark:border-zinc-800">
+            <h3 className="text-2xl font-bold mb-6 text-stone-900 dark:text-white">Related Articles</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {relatedArticles.map((relArticle: any) => (
+                <Link key={relArticle.id} href={`/blog/${relArticle.slug}`} className="group block">
+                  {relArticle.featuredImage?.url && (
+                    <div className="aspect-video relative rounded-xl overflow-hidden mb-4 border border-stone-200 dark:border-zinc-800">
+                      <Image src={relArticle.featuredImage.url} alt={relArticle.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                  )}
+                  <h4 className="font-bold text-stone-900 dark:text-white group-hover:text-orange-600 transition-colors line-clamp-2">{relArticle.title}</h4>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </article>
       
       {/* Article Schema */}

@@ -37,6 +37,26 @@ export default function StructuredData() {
       bestRating: '5',
       worstRating: '1',
     },
+    review: [
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        author: { '@type': 'Person', name: 'Sarah M.' },
+        reviewBody: 'Such an amazing cooking class! Wayan was a fantastic instructor and the market tour was so insightful. Highly recommend for anyone visiting Ubud.',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        author: { '@type': 'Person', name: 'David L.' },
+        reviewBody: 'The best food we had in Bali! Loved the hands-on experience and the beautiful setting overlooking the rice fields.',
+      },
+      {
+        '@type': 'Review',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        author: { '@type': 'Person', name: 'Emma K.' },
+        reviewBody: 'Great vegetarian options and very accommodating. The recipes were easy to follow and the bumbu paste was incredible.',
+      }
+    ],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -185,9 +205,9 @@ export default function StructuredData() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://tumangbaliclass.com' },
-      { '@type': 'ListItem', position: 2, name: 'Cooking Classes in Ubud', item: 'https://tumangbaliclass.com/#classes' },
-      { '@type': 'ListItem', position: 3, name: 'Our Menu', item: 'https://tumangbaliclass.com/#menu' },
-      { '@type': 'ListItem', position: 4, name: 'Book Your Experience', item: 'https://tumangbaliclass.com/#classes' },
+      { '@type': 'ListItem', position: 2, name: 'Cooking Classes in Ubud', item: 'https://tumangbaliclass.com/authentic-balinese-cooking-class' },
+      { '@type': 'ListItem', position: 3, name: 'Our Menu', item: 'https://tumangbaliclass.com/recipes' },
+      { '@type': 'ListItem', position: 4, name: 'Book Your Experience', item: 'https://tumangbaliclass.com/book-your-cooking-class' },
     ],
   }
 
