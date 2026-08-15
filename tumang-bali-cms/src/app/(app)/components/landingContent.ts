@@ -833,3 +833,66 @@ export const baliCookingExperience: ClassLandingContent = {
   ctaHeading: 'Book Your Bali Experience',
   ctaSubtext: 'The complete Balinese cooking day — market tour, rice-field walk, cooking, and feast — from $35 per person.',
 }
+
+export const familyCookingClass: ClassLandingContent = {
+  path: '/family-cooking-class-bali',
+  eyebrow: 'Family & Kids Friendly',
+  h1: 'Family Cooking Class in Bali — Hands-On Fun for All Ages',
+  h1Plain: 'Family Cooking Class in Bali — Hands-On Fun for All Ages',
+  intro:
+    'A Bali cooking class designed for families with children. Our kid-friendly Balinese cooking experience in Ubud welcomes little chefs aged 4 and up — with patient local instructors, safe kitchen stations, and hands-on activities the whole family will love.',
+  heroImage: '/images/gallery-group.jpg',
+  heroImageAlt: 'Family enjoying a hands-on Balinese cooking class together in Ubud with children',
+  body: [
+    {
+      heading: 'Why families love our cooking class',
+      paragraphs: [
+        'Cooking together is one of the best ways to bond as a family on holiday — and a Balinese cooking class makes it an adventure. Our kitchen is set up with safe, low-height stations for younger cooks, and every child gets their own apron, mortar and pestle, and chopping board. There are no open flames within reach of small hands, and our chefs are experienced in guiding children through every step.',
+        'Parents tell us this is the highlight of their Bali trip. Kids are proud of what they made, everyone eats together, and the whole family leaves with recipes and memories that last long after the holiday ends. We have hosted hundreds of families — from toddlers to teenagers — and the class is designed to keep every age group engaged.',
+      ],
+    },
+    {
+      heading: 'What kids actually do in the class',
+      paragraphs: [
+        'Children are not spectators — they cook. Younger kids (ages 4–7) help grind spices in a mortar, shape rice into tumpeng cones, roll pandan pancakes, and make Balinese flower offerings. Older kids (8+) do everything the adults do: chop, stir-fry, grill satay, and prepare the full menu of 10+ dishes.',
+        'The morning market tour is a sensory adventure for children. They see exotic fruits, smell fresh spices, touch banana leaves, and learn where their food comes from. The rice-field walk that follows is short, flat, and safe for all ages — a perfect photo opportunity for the family.',
+      ],
+    },
+    {
+      heading: 'Ages, pricing and private family sessions',
+      paragraphs: [
+        'Children aged 4 and above are welcome in every class. Kids under 4 can attend for free but will not have their own cooking station. For families who prefer a private experience, we offer exclusive sessions where the kitchen is reserved for your family alone — ideal for birthday celebrations, multi-generational trips, or families with very young children who need extra flexibility.',
+        'Child pricing is available for kids aged 4–12. Contact us on WhatsApp for the latest family rates and to discuss any dietary requirements or allergies.',
+      ],
+    },
+  ],
+  sellingPoints: [
+    { title: 'Kid-Friendly Kitchen', description: 'Safe, low-height stations with no open flames near small hands. Every child gets their own apron and tools.' },
+    { title: 'Patient Local Chefs', description: 'Our instructors have years of experience teaching children — step by step, no rushing, lots of encouragement.' },
+    { title: 'Private Family Sessions', description: 'Book the kitchen exclusively for your family — perfect for birthdays, celebrations, or multi-generational groups.' },
+  ],
+  faqs: [
+    {
+      question: 'What is the minimum age for kids to join the cooking class?',
+      answer:
+        'Children aged 4 and above are welcome to participate with their own cooking station. Kids under 4 can attend for free and join in the fun, but will not have a dedicated station. Our chefs are experienced in working with all age groups.',
+    },
+    {
+      question: 'Is the kitchen safe for children?',
+      answer:
+        'Yes. We use low-height cooking stations, keep open flames away from children, and provide kid-sized aprons and tools. Our chefs supervise every step and are trained to work safely with young guests.',
+    },
+    {
+      question: 'Can we book a private class for just our family?',
+      answer:
+        'Absolutely. Private family sessions are one of our most popular options. The kitchen, chef, and market guide are exclusively for your family — so you can go at your own pace and customise the experience for your children.',
+    },
+    {
+      question: 'Is there a kid-friendly menu?',
+      answer:
+        'The regular menu works well for children — dishes like satay, fried rice, and pandan pancakes are family favourites. We can also adjust spice levels for younger palates. Just let us know when you book.',
+    },
+  ],
+  ctaHeading: 'Cook Together as a Family',
+  ctaSubtext: 'A kid-friendly Balinese cooking class in Ubud — safe, fun, and delicious for all ages.',
+}
