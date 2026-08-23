@@ -12,15 +12,16 @@ import PickupSchedule from './components/PickupSchedule'
 import dynamic from 'next/dynamic'
 
 // Dynamically import all client-side-only and third-party components
-// to reduce Total Blocking Time and defer non-critical JS
+import MobileMenu from './components/MobileMenu'
+import HeroVideo from './components/HeroVideo'
+import TripAdvisorWidget from './components/TripAdvisorWidget'
+import TikTokEmbed from './components/TikTokEmbed'
+import InstagramEmbed from './components/InstagramEmbed'
+
+// Dynamically import heavy interactive modals
 const BookingModal = dynamic(() => import('./components/BookingModal'))
 const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'))
 const StatsCounter = dynamic(() => import('./components/StatsCounter'))
-const MobileMenu = dynamic(() => import('./components/MobileMenu'), { ssr: false })
-const HeroVideo = dynamic(() => import('./components/HeroVideo'), { ssr: false })
-const TripAdvisorWidget = dynamic(() => import('./components/TripAdvisorWidget'), { ssr: false })
-const TikTokEmbed = dynamic(() => import('./components/TikTokEmbed'), { ssr: false })
-const InstagramEmbed = dynamic(() => import('./components/InstagramEmbed'), { ssr: false })
 
 export const revalidate = 60
 
