@@ -25,27 +25,27 @@ export default function ItinerarySection({ steps: payloadSteps }: { steps?: Itin
       image: "/images/img5.jpg"
     },
     {
-      title: "Stop 1: Ubud Local Market",
+      title: "Stop 1: Ubud Local Market (Morning Session)",
       duration: "45 mins",
-      description: "Meet your guide and explore the traditional morning market. You will see where locals shop and buy the fresh spices, vegetables, and ingredients you need for the class.",
+      description: "Meet your guide and explore the traditional morning market. You will see where locals shop and buy the fresh spices, vegetables, and ingredients you need for the class (Morning 3–4 hr class only).",
       image: "/images/itinerary/market-fresh.jpg"
     },
     {
       title: "Stop 2: Ricefield Walk",
       duration: "30 mins",
-      description: "Take a short, beautiful walk through the green rice paddies. Learn how Balinese farmers grow rice before arriving at the kitchen.",
+      description: "Take a short, beautiful walk through the green rice paddies. Learn how Balinese farmers grow rice before arriving at the village kitchen.",
       image: "/images/itinerary/offerings-detail.jpg"
     },
     {
       title: "Stop 3: Cooking Class",
       duration: "2 hours",
-      description: "Arrive at Tumang Balinese Kitchen. Enjoy a welcome drink, put on your apron, and learn about the ingredients. For the next two hours, you will chop, mix, and cook 4 to 5 traditional Balinese dishes step-by-step with your chef.",
+      description: "Arrive at Tumang Balinese Kitchen. Enjoy a welcome drink, put on your apron, and learn about traditional spices. For the next two hours, you will chop, mix, grind, and cook authentic Balinese dishes step-by-step with your chef.",
       image: "/images/itinerary/cooking-table.jpg"
     },
     {
-      title: "Stop 4: Local Restaurant",
+      title: "Stop 4: Feasting & Dining",
       duration: "1 hour",
-      description: "Move to our peaceful dining area or local restaurant space. Sit down at the table with the rest of the group to eat the delicious food you just cooked. Relax, enjoy the view, and share stories before heading back to your hotel.",
+      description: "Sit down in our open dining area overlooking the rice fields. Enjoy the delicious feast you just created with the group, relax, and savor your achievement before heading back.",
       image: "/images/itinerary/guest-dessert.jpg"
     }
   ]

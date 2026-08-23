@@ -412,8 +412,8 @@ export const halfDayClass: ClassLandingContent = {
     {
       heading: 'Everything in one easy half-day',
       paragraphs: [
-        'Travelling Bali on a tight schedule? This half-day class packs the full experience — market tour, rice-field walk, hands-on cooking and dining — into roughly 4–5 hours, leaving the rest of your day free for beaches, temples or the pool.',
-        'With morning and afternoon sessions available, it slots neatly into a busy Bali itinerary without taking over your trip.',
+        'Travelling Bali on a tight schedule? Choose our 3–4 hour Morning Class (with local market tour) or 3-hour Afternoon Class (focused cooking & dinner), leaving plenty of time in your day for beaches, temples or the pool.',
+        'With morning (08:30–12:30) and afternoon (14:30–17:30) sessions available, it slots neatly into any Bali itinerary.',
       ],
     },
     {
@@ -425,20 +425,20 @@ export const halfDayClass: ClassLandingContent = {
     },
   ],
   sellingPoints: [
-    { title: '4–5 Hours Total', description: 'The complete experience without taking over your day.' },
-    { title: 'Morning or Afternoon', description: 'Pick the session that fits your Bali itinerary.' },
-    { title: 'Hotel Pickup', description: 'Complimentary pickup and drop-off within the Ubud area.' },
+    { title: 'Morning (3–4h) or Afternoon (3h)', description: 'Pick the session that fits your Bali itinerary.' },
+    { title: '10+ Authentic Dishes', description: 'Hands-on preparation from scratch with local chefs.' },
+    { title: 'Free Ubud Hotel Pickup', description: 'Complimentary pickup and drop-off within the Ubud area.' },
   ],
   faqs: [
     {
-      question: 'How long is the half-day class?',
+      question: 'How long is the cooking class?',
       answer:
-        'About 4–5 hours including the market tour, rice-field walk, two hours of cooking and dining together.',
+        'Our Morning Class is ~3–4 hours (including the market tour, rice-field walk, cooking and lunch). Our Afternoon Class is 3 hours (direct hands-on cooking and dinner feast).',
     },
     {
       question: 'Are there morning and afternoon options?',
       answer:
-        'Yes. We offer both a morning class and an afternoon class so you can fit it around the rest of your day.',
+        'Yes! We offer a Morning Class (08:30 AM – 12:30 PM, 3–4 hours) and an Afternoon Class (14:30 PM – 17:30 PM, 3 hours).',
     },
     {
       question: 'Where in Bali is the class held?',
@@ -446,8 +446,8 @@ export const halfDayClass: ClassLandingContent = {
         'Our kitchen is in Ubud, the cultural heart of Bali. We provide complimentary pickup within the Ubud area.',
     },
   ],
-  ctaHeading: 'Book a Half-Day in Ubud',
-  ctaSubtext: 'The complete Balinese cooking experience in an easy half-day — morning or afternoon.',
+  ctaHeading: 'Book a Class in Ubud',
+  ctaSubtext: 'The complete Balinese cooking experience — choose Morning (3–4 Hours) or Afternoon (3 Hours).',
 }
 
 export const tumangVillage: ClassLandingContent = {

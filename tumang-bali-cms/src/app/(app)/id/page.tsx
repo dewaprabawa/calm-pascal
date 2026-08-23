@@ -86,6 +86,13 @@ export default async function IndonesianPage() {
     console.error('id page: could not load activities from CMS', err)
   }
 
+  if (bookingActivities.length === 0) {
+    bookingActivities = [
+      { id: 'morning-class', title: 'Kelas Pagi: Tur Pasar & Memasak (3–4 Jam)', price: 350 },
+      { id: 'afternoon-class', title: 'Kelas Sore: Memasak Masakan Bali (3 Jam)', price: 350 },
+    ]
+  }
+
   return (
     <div
       lang="id"

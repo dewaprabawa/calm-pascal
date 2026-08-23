@@ -37,11 +37,23 @@ async function seed() {
     collection: 'activities',
     data: {
       title: 'Morning Market Tour & Cooking Masterclass',
-      durationHours: 5,
+      durationHours: 4,
       price: 350,
       instructor: instructor1.id,
-      includedItems: [{ item: 'Market Tour' }, { item: 'Welcome Drink' }, { item: 'Lunch' }, { item: 'Recipe Book' }],
-      excludedItems: [{ item: 'Hotel Pickup (Available for extra fee)' }],
+      includedItems: [{ item: 'Market Tour' }, { item: 'Rice Field Walk' }, { item: 'Welcome Drink' }, { item: 'Lunch' }, { item: 'Recipe Book' }],
+      excludedItems: [],
+    },
+  })
+
+  const activity2 = await payload.create({
+    collection: 'activities',
+    data: {
+      title: 'Afternoon Balinese Cooking Class',
+      durationHours: 3,
+      price: 350,
+      instructor: instructor1.id,
+      includedItems: [{ item: 'Rice Field Walk' }, { item: 'Welcome Drink' }, { item: 'Dinner' }, { item: 'Recipe Book' }],
+      excludedItems: [],
     },
   })
 

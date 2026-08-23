@@ -30,6 +30,13 @@ export default async function Page() {
     console.error('book your class page: could not load activities from CMS', err)
   }
 
+  if (bookingActivities.length === 0) {
+    bookingActivities = [
+      { id: 'morning-class', title: 'Morning Market Tour & Cooking Class (3–4 Hours)', price: 350 },
+      { id: 'afternoon-class', title: 'Afternoon Balinese Cooking Class (3 Hours)', price: 350 },
+    ]
+  }
+
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",

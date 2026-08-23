@@ -13,6 +13,7 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
   
   // Form State
   const [selectedActivity, setSelectedActivity] = useState('')
+  const [selectedSession, setSelectedSession] = useState<'morning' | 'afternoon'>('morning')
   const [adults, setAdults] = useState('2')
   const [kids, setKids] = useState('0')
   const [pickupLocation, setPickupLocation] = useState('')
@@ -32,8 +33,17 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
       setIsOpen(true)
       if (e.detail?.activityTitle) {
         setSelectedActivity(e.detail.activityTitle)
+        if (e.detail.activityTitle.toLowerCase().includes('afternoon')) {
+          setSelectedSession('afternoon')
+        } else if (e.detail.activityTitle.toLowerCase().includes('morning')) {
+          setSelectedSession('morning')
+        }
       } else if (activities.length > 0) {
         setSelectedActivity(activities[0].title)
+      }
+
+      if (e.detail?.session === 'afternoon' || e.detail?.session === 'morning') {
+        setSelectedSession(e.detail.session)
       }
     }
 
@@ -51,9 +61,14 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     
+    const sessionLabel = selectedSession === 'morning'
+      ? 'Morning Class (3–4 Hours · 08:30 – 12:30 with Market Tour)'
+      : 'Afternoon Class (3 Hours · 14:30 – 17:30)'
+
     const message = `Hello Tumang Bali! I would like to make a booking:
 
 *Experience:* ${selectedActivity}
+*Session:* ${sessionLabel}
 *Date:* ${date}
 *Guests:* ${adults} Adult(s)${parseInt(kids) > 0 ? `, ${kids} Kid(s)` : ''}
 *Food Restrictions:* ${foodRestriction || 'None'}
@@ -114,6 +129,58 @@ _(Booking from website)_`
                   </option>
                 ))}
               </select>
+            </div>
+
+            {/* Session Option Selector (Morning 3-4 Hours vs Afternoon 3 Hours) */}
+            <div>
+              <label className="block text-sm font-semibold text-stone-700 dark:text-stone-300 mb-1.5">
+                Select Class Session / Duration
+              </label>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  type="button"
+                  onClick={() => setSelectedSession('morning')}
+                  className={`p-3.5 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between ${
+                    selectedSession === 'morning'
+                      ? 'border-orange-500 bg-orange-50/70 dark:bg-orange-950/40 text-orange-900 dark:text-orange-200 ring-2 ring-orange-500/20 shadow-sm'
+                      : 'border-stone-200 dark:border-zinc-700 bg-stone-50/50 dark:bg-zinc-800/50 text-stone-700 dark:text-stone-300 hover:border-stone-300'
+                  }`}
+                >
+                  <div className="flex items-center justify-between w-full mb-1">
+                    <span className="font-bold text-sm flex items-center gap-1.5">
+                      🌅 Morning Class
+                    </span>
+                    <span className="text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-orange-200/70 text-orange-800 dark:bg-orange-900/60 dark:text-orange-300">
+                      3–4 Hours
+                    </span>
+                  </div>
+                  <p className="text-xs text-stone-500 dark:text-stone-400">
+                    08:30 – 12:30 · Includes Market Tour & Lunch
+                  </p>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setSelectedSession('afternoon')}
+                  className={`p-3.5 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between ${
+                    selectedSession === 'afternoon'
+                      ? 'border-orange-500 bg-orange-50/70 dark:bg-orange-950/40 text-orange-900 dark:text-orange-200 ring-2 ring-orange-500/20 shadow-sm'
+                      : 'border-stone-200 dark:border-zinc-700 bg-stone-50/50 dark:bg-zinc-800/50 text-stone-700 dark:text-stone-300 hover:border-stone-300'
+                  }`}
+                >
+                  <div className="flex items-center justify-between w-full mb-1">
+                    <span className="font-bold text-sm flex items-center gap-1.5">
+                      🌇 Afternoon Class
+                    </span>
+                    <span className="text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300">
+                      3 Hours
+                    </span>
+                  </div>
+                  <p className="text-xs text-stone-500 dark:text-stone-400">
+                    14:30 – 17:30 · Cooking & Balinese Dinner
+                  </p>
+                </button>
+              </div>
             </div>
 
             {/* Date */}

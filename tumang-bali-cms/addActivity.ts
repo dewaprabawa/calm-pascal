@@ -30,7 +30,7 @@ async function run() {
         data: {
           title: existing.title.replace(' (Morning)', '') + ' (Afternoon)',
           description: existing.description,
-          durationHours: existing.durationHours,
+          durationHours: 3,
           price: existing.price,
           instructor: existing.instructor as string,
           images: existing.images,

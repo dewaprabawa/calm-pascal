@@ -57,7 +57,37 @@ export default async function Page() {
     console.error('homepage: could not load CMS data', err)
   }
 
-  let displayActivities = [...activities]
+  let displayActivities = activities.length > 0 ? [...activities] : [
+    {
+      id: 'morning-class',
+      title: 'Morning Market Tour & Balinese Cooking Masterclass',
+      durationHours: '3–4',
+      price: 350,
+      instructor: { name: 'Wayan Sudiana' },
+      includedItems: [
+        { item: 'Guided Morning Market Tour' },
+        { item: 'Scenic Rice Field Walk' },
+        { item: 'Hands-on Cooking (10+ Dishes)' },
+        { item: 'Complete Balinese Lunch Feast' },
+        { item: 'Complimentary Ubud Hotel Transport' },
+        { item: 'Printed Recipe Booklet' }
+      ]
+    },
+    {
+      id: 'afternoon-class',
+      title: 'Afternoon Balinese Cooking Class',
+      durationHours: '3',
+      price: 350,
+      instructor: { name: 'Wayan Sudiana' },
+      includedItems: [
+        { item: 'Scenic Rice Field Walk' },
+        { item: 'Hands-on Cooking (10+ Dishes)' },
+        { item: 'Complete Balinese Dinner Feast' },
+        { item: 'Complimentary Ubud Hotel Transport' },
+        { item: 'Printed Recipe Booklet' }
+      ]
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white">

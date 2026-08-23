@@ -4,16 +4,17 @@ import React from 'react'
 
 type BookButtonProps = {
   activityTitle?: string
+  session?: 'morning' | 'afternoon'
   className?: string
   children: React.ReactNode
 }
 
-export default function BookButton({ activityTitle, className, children }: BookButtonProps) {
+export default function BookButton({ activityTitle, session, className, children }: BookButtonProps) {
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault()
     window.dispatchEvent(
       new CustomEvent('open-booking-modal', { 
-        detail: { activityTitle } 
+        detail: { activityTitle, session } 
       })
     )
   }
