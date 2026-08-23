@@ -44,13 +44,19 @@ const WebPageSchema = {
 }
 
 export default async function BlogPage() {
-  const payload = await getPayload({ config: configPromise })
+  let articles: any[] = []
   
-  const { docs: articles } = await payload.find({ 
-    collection: 'articles',
-    where: { status: { equals: 'published' } },
-    sort: '-publishedDate',
-  })
+  try {
+    const payload = await getPayload({ config: configPromise })
+    const res = await payload.find({ 
+      collection: 'articles',
+      where: { status: { equals: 'published' } },
+      sort: '-publishedDate',
+    })
+    articles = res.docs || []
+  } catch (error) {
+    console.error('blog page: could not load articles from CMS', error)
+  }
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans">
