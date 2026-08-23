@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { trackBooking } from '@/lib/bookingTracking'
 
 export type ActivityOption = {
   id: string
@@ -78,10 +79,22 @@ Please let me know about availability!
 
 _(Booking from website)_`
     
+    trackBooking({
+      channel: 'whatsapp',
+      activity: selectedActivity,
+      session: sessionLabel,
+      date,
+      adults,
+      kids,
+      foodRestriction,
+      pickupLocation,
+      notes,
+      pageUrl: window.location.href,
+    })
+
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`
     
-    // Open WhatsApp in a new tab
     window.open(whatsappUrl, '_blank')
     setIsOpen(false)
   }
@@ -286,6 +299,13 @@ _(Booking from website)_`
                     href="https://www.airbnb.com/experiences/7165714?direct_open=true"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackBooking({
+                        channel: 'airbnb',
+                        pageUrl: window.location.href,
+                        linkLabel: 'Booking modal — Airbnb',
+                      })
+                    }
                     className="flex-1 flex items-center justify-center gap-2 bg-[#FF5A5F] hover:bg-[#e04e52] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
                   >
                     Airbnb
@@ -294,6 +314,13 @@ _(Booking from website)_`
                     href="https://gyg.me/dE6n3Lwg"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackBooking({
+                        channel: 'getyourguide',
+                        pageUrl: window.location.href,
+                        linkLabel: 'Booking modal — GetYourGuide',
+                      })
+                    }
                     className="flex-1 flex items-center justify-center gap-2 bg-[#FF5533] hover:bg-[#e54c2d] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
                   >
                     GetYourGuide

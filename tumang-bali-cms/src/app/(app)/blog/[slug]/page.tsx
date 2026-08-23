@@ -10,6 +10,12 @@ export const revalidate = 60
 
 const SITE = 'https://tumangbaliclass.com'
 
+function toIsoDate(value: string | Date | undefined): string {
+  if (!value) return new Date().toISOString().split('T')[0]
+  if (value instanceof Date) return value.toISOString().split('T')[0]
+  return String(value).split('T')[0]
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params
   let article: any = null
@@ -118,6 +124,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         slug: { equals: resolvedParams.slug },
         status: { equals: 'published' }
       },
+      depth: 1,
       limit: 1,
     })
     article = docs[0]
@@ -129,6 +136,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           status: { equals: 'published' },
           slug: { not_equals: resolvedParams.slug }
         },
+        depth: 1,
         limit: 3,
         sort: '-publishedDate'
       })
@@ -227,8 +235,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 url: 'https://tumangbaliclass.com/images/logo.jpg'
               }
             },
-            datePublished: article.publishedDate ? article.publishedDate.split('T')[0] : article.createdAt.split('T')[0],
-            dateModified: article.updatedAt ? article.updatedAt.split('T')[0] : article.createdAt.split('T')[0]
+            datePublished: toIsoDate(article.publishedDate || article.createdAt),
+            dateModified: toIsoDate(article.updatedAt || article.createdAt)
           })
         }}
       />

@@ -17,7 +17,7 @@ if (typeof globalThis !== 'undefined' && typeof globalThis.fetch === 'function')
 }
 
 import { buildConfig } from 'payload'
-import sharp from 'sharp'
+import { createRequire } from 'module'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
@@ -36,6 +36,18 @@ import { Itinerary } from './globals/Itinerary'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+const require = createRequire(import.meta.url)
+
+function loadSharp() {
+  try {
+    return require('sharp')
+  } catch (error) {
+    console.warn('[payload] sharp unavailable; image transforms disabled', error)
+    return undefined
+  }
+}
+
+const sharp = loadSharp()
 
 export default buildConfig({
   plugins: [

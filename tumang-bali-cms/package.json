@@ -18,15 +18,17 @@
     "cross-env": "^10.1.0",
     "graphql": "^16.14.2",
     "next": "16.2.9",
+    "nodemailer": "^9.0.5",
     "payload": "^3.85.1",
     "pdfkit": "^0.19.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "sharp": "^0.35.3"
+    "sharp": "0.34.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
@@ -40,7 +42,9 @@
   "allowScripts": {
     "esbuild@0.28.1": true,
     "sharp@0.34.5": true,
-    "sharp@0.35.3": true,
     "unrs-resolver@1.12.2": true
+  },
+  "overrides": {
+    "sharp": "0.34.5"
   }
 }
