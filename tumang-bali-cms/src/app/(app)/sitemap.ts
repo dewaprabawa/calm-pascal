@@ -24,6 +24,7 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
 // Static, hand-built routes under (app).
 const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
+  { path: '/book-your-cooking-class', priority: 0.9, changeFrequency: 'weekly' },
   { path: '/vegetarian-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/private-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/cooking-class-with-market-tour-ubud', priority: 0.9, changeFrequency: 'monthly' },

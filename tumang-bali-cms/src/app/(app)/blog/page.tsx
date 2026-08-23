@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: 'Ubud Food & Culture Blog',
   description: 'Planning an authentic Ubud cooking class? Discover traditional recipes, local market tours, and the best Balinese food stories from Tumang Bali Kitchen.',
   keywords: ['Balinese cooking blog', 'Ubud cooking class tips', 'Bali food stories', 'Balinese recipes', 'Tumang Bali'],
+  alternates: { canonical: 'https://tumangbaliclass.com/blog' },
 }
 
 export const revalidate = 60
