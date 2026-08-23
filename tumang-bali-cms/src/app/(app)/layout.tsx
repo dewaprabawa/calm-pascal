@@ -93,8 +93,18 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        {/* Preload LCP hero image — eliminates resource load delay on mobile */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/img4.jpg"
+          fetchPriority="high"
+        />
+        {/* DNS prefetch for third-party scripts */}
         <link rel="preconnect" href="https://www.tripadvisor.com" />
         <link rel="preconnect" href="https://www.tripadvisor.co.id" />
+        <link rel="dns-prefetch" href="https://www.jscache.com" />
+        <link rel="dns-prefetch" href="https://static.tacdn.com" />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

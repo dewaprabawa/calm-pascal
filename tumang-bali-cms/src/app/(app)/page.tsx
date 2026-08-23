@@ -4,21 +4,23 @@ import Link from 'next/link'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import MenuSection from './components/MenuSection'
-import HeroVideo from './components/HeroVideo'
 import ItinerarySection from './components/ItinerarySection'
 import BookButton from './components/BookButton'
-import TripAdvisorWidget from './components/TripAdvisorWidget'
 import StructuredData from './components/StructuredData'
 import FAQSection from './components/FAQSection'
-import MobileMenu from './components/MobileMenu'
 import PickupSchedule from './components/PickupSchedule'
-import TikTokEmbed from './components/TikTokEmbed'
-import InstagramEmbed from './components/InstagramEmbed'
 import dynamic from 'next/dynamic'
 
+// Dynamically import all client-side-only and third-party components
+// to reduce Total Blocking Time and defer non-critical JS
 const BookingModal = dynamic(() => import('./components/BookingModal'))
 const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'))
 const StatsCounter = dynamic(() => import('./components/StatsCounter'))
+const MobileMenu = dynamic(() => import('./components/MobileMenu'), { ssr: false })
+const HeroVideo = dynamic(() => import('./components/HeroVideo'), { ssr: false })
+const TripAdvisorWidget = dynamic(() => import('./components/TripAdvisorWidget'), { ssr: false })
+const TikTokEmbed = dynamic(() => import('./components/TikTokEmbed'), { ssr: false })
+const InstagramEmbed = dynamic(() => import('./components/InstagramEmbed'), { ssr: false })
 
 export const revalidate = 60
 
@@ -154,10 +156,10 @@ export default async function Page() {
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
-                    <Image src="/images/itinerary/guest-dessert.jpg" alt="Happy guests at Balinese cooking class in Ubud" fill className="object-cover" />
+                    <Image src="/images/itinerary/guest-dessert.jpg" alt="Happy guests at Balinese cooking class in Ubud" fill sizes="32px" loading="lazy" className="object-cover" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
-                    <Image src="/images/img5.jpg" alt="Guests enjoying authentic Balinese food after cooking class" fill className="object-cover" />
+                    <Image src="/images/img5.jpg" alt="Guests enjoying authentic Balinese food after cooking class" fill sizes="32px" loading="lazy" className="object-cover" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-orange-600 flex items-center justify-center text-[10px] font-bold text-white">
                     5★
@@ -192,12 +194,12 @@ export default async function Page() {
             <div className="relative w-full max-w-sm aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-900 bg-white/30 dark:bg-zinc-950/30 backdrop-blur-sm group hover:-rotate-1 transition-transform duration-500">
               <Image 
                 src="/images/img4.jpg" 
-                alt="Cooking Class Experience" 
+                alt="Guests enjoying an authentic Balinese cooking class in Ubud" 
                 fill 
-                sizes="(max-w-768px) 100vw, 400px" 
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" 
                 priority
                 fetchPriority="high"
-                quality={85}
+                quality={80}
                 className="object-cover group-hover:scale-105 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-stone-950/0 to-stone-950/0" />
@@ -209,24 +211,26 @@ export default async function Page() {
               </div>
             </div>
 
-            {/* Overlapping secondary image badge */}
+            {/* Overlapping secondary image badge — desktop only, lazy-loaded */}
             <div className="absolute -bottom-6 -left-6 w-32 md:w-40 aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-zinc-900 hidden sm:block rotate-12 hover:rotate-0 transition-transform duration-300">
               <Image 
                 src="/images/itinerary/offerings-detail.jpg" 
                 alt="Balinese Flower Offerings" 
                 fill 
                 sizes="160px"
+                loading="lazy"
                 className="object-cover" 
               />
             </div>
             
-            {/* Overlapping third badge */}
+            {/* Overlapping third badge — desktop only, lazy-loaded */}
             <div className="absolute -top-6 -right-6 w-32 md:w-36 aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-zinc-900 hidden sm:block -rotate-12 hover:rotate-0 transition-transform duration-300">
               <Image 
                 src="/images/gallery-satay.jpg" 
-                alt="Grilling Satay" 
+                alt="Grilling Satay on coconut husk charcoal" 
                 fill 
                 sizes="140px"
+                loading="lazy"
                 className="object-cover" 
               />
             </div>
@@ -289,7 +293,8 @@ export default async function Page() {
                       src={imgPath} 
                       alt={activity.title} 
                       fill 
-                      sizes="(max-w-768px) 100vw, 600px"
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      loading="lazy"
                       className="object-cover group-hover:scale-105 transition-transform duration-700" 
                     />
                   );
@@ -439,7 +444,7 @@ export default async function Page() {
                 src="/images/cooking-stirfry.jpg" 
                 alt="Stir Frying Ingredients" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -456,7 +461,7 @@ export default async function Page() {
                 src="/images/dining-table.jpg" 
                 alt="Guests Dining" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -473,7 +478,7 @@ export default async function Page() {
                 src="/images/group-shrine.jpg" 
                 alt="Group in Rice Fields" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -490,7 +495,7 @@ export default async function Page() {
                 src="/images/group-brochures.jpg" 
                 alt="Chef and Guests with Certificates" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -507,7 +512,7 @@ export default async function Page() {
                 src="/images/gallery-satay.jpg" 
                 alt="Grilling Satay" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -524,7 +529,7 @@ export default async function Page() {
                 src="/images/bali-cooking-class-dadar-gulung.jpg" 
                 alt="Balinese Dessert Dadar Gulung in Cooking Class" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -541,7 +546,7 @@ export default async function Page() {
                 src="/images/ubud-cooking-class-chopping-ingredients.jpg" 
                 alt="Tourists Chopping Fresh Ingredients in Ubud Cooking Class" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -558,7 +563,7 @@ export default async function Page() {
                 src="/images/traditional-balinese-cooking-class-stir-fry.jpg" 
                 alt="Traditional Balinese Cooking Class Stir Fry" 
                 fill 
-                sizes="(max-w-768px) 100vw, 250px"
+                sizes="(max-width: 768px) 100vw, 250px"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
