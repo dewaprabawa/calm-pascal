@@ -6,6 +6,7 @@ import { Metadata } from 'next'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
+import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 
 export const revalidate = 60
 
@@ -251,12 +252,14 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
               We teach this dish hands-on in our Ubud cooking class — market tour, spice paste, and all the chef&apos;s
               secrets included.
             </p>
-            <Link
-              href="/#classes"
+            <a
+              href={BOKUN_BOOK_PAGE}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold transition-transform hover:-translate-y-1 shadow-lg"
             >
               Book the Cooking Class
-            </Link>
+            </a>
           </section>
         )}
 
@@ -266,12 +269,14 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
             Join our small-group Balinese cooking class in Ubud — visit the local market, grind your own spice paste,
             and cook {recipe.title as string} the authentic way.
           </p>
-          <Link
-            href="/#classes"
+          <a
+            href={BOKUN_BOOK_PAGE}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex bg-stone-900 dark:bg-white text-white dark:text-stone-900 px-8 py-4 rounded-full font-bold transition-transform hover:scale-105 shadow-xl"
           >
             Book Your Cooking Class
-          </Link>
+          </a>
         </div>
       </article>
 

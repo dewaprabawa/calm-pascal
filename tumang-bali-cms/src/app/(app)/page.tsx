@@ -10,6 +10,7 @@ import StructuredData from './components/StructuredData'
 import FAQSection from './components/FAQSection'
 import PickupSchedule from './components/PickupSchedule'
 import TrackedBookingLink from './components/TrackedBookingLink'
+import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 import dynamic from 'next/dynamic'
 import { sortActivities } from '@/lib/sortActivities'
 
@@ -193,9 +194,9 @@ export default async function Page() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-in-up">
-              <Link href="/book-your-cooking-class" className="w-full sm:w-auto text-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
+              <a href={BOKUN_BOOK_PAGE} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto text-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
                 Book Your Cooking Class
-              </Link>
+              </a>
               <Link href="/half-day-cooking-class-bali" className="w-full sm:w-auto flex items-center justify-center bg-white/50 hover:bg-white/80 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/80 backdrop-blur-md border border-stone-200 dark:border-zinc-700 text-stone-800 dark:text-stone-200 px-8 py-4 rounded-full font-semibold text-lg shadow-md transition-all hover:-translate-y-1">
                 View Afternoon & Evening
               </Link>

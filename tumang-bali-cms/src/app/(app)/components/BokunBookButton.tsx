@@ -3,10 +3,11 @@
 import React, { useEffect, useRef } from 'react'
 import { trackBooking } from '@/lib/bookingTracking'
 
-const BOKUN_CHANNEL_UUID = '0645b8f9-315f-426f-bb3b-a4eda41f198e'
-const BOKUN_BUTTON_ID = 'bokun_c197d9eb_be16_4dda_b85f_8c37cd90c1be'
-const BOKUN_WIDGET_SRC = `https://widgets.bokun.io/online-sales/${BOKUN_CHANNEL_UUID}/experience/1267345?partialView=1`
-const BOKUN_LOADER_SRC = `https://widgets.bokun.io/assets/javascripts/apps/build/BokunWidgetsLoader.js?bookingChannelUUID=${BOKUN_CHANNEL_UUID}`
+import {
+  BOKUN_BUTTON_ID,
+  BOKUN_LOADER_SRC,
+  BOKUN_WIDGET_SRC,
+} from '@/lib/bokun'
 
 type BokunWidgetsApi = {
   initializeButton?: (el: HTMLElement) => void

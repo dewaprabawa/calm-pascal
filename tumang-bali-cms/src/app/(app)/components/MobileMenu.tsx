@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -61,9 +62,9 @@ export default function MobileMenu() {
 
           <div className="mt-6 px-4">
             <a
-              href="https://wa.me/6282210132418?text=Hi%20Tumang%20Bali!%20I%20would%20like%20to%20book%20a%20cooking%20class."
+              href={BOKUN_BOOK_PAGE}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="block w-full text-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-xl font-bold transition-colors"
               onClick={() => setIsOpen(false)}
             >

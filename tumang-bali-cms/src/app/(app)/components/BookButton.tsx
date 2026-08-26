@@ -1,6 +1,8 @@
 'use client'
 
 import React from 'react'
+import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
+import { trackBooking } from '@/lib/bookingTracking'
 
 type BookButtonProps = {
   activityTitle?: string
@@ -10,18 +12,21 @@ type BookButtonProps = {
 }
 
 export default function BookButton({ activityTitle, session, className, children }: BookButtonProps) {
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault()
-    window.dispatchEvent(
-      new CustomEvent('open-booking-modal', { 
-        detail: { activityTitle, session } 
-      })
-    )
-  }
-
   return (
-    <button onClick={handleClick} className={className}>
+    <a
+      href={BOKUN_BOOK_PAGE}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+      onClick={() =>
+        trackBooking({
+          channel: 'bokun',
+          pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          linkLabel: [activityTitle, session, 'Book now → Bokun'].filter(Boolean).join(' · '),
+        })
+      }
+    >
       {children}
-    </button>
+    </a>
   )
 }
