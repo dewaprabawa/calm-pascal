@@ -310,51 +310,51 @@ _(WhatsApp consultation from website)_`
               <p className="text-center text-xs text-stone-500 dark:text-stone-400 leading-relaxed px-1">
                 WhatsApp is a consultation to secure your spot and arrange payment — not instant checkout.
               </p>
-
-              <div className="pt-1">
-                <p className="text-center text-xs text-stone-500 dark:text-stone-400 mb-2 uppercase tracking-wider font-semibold">
-                  Or book instantly · pay securely
-                </p>
-                <BokunBookButton />
-              </div>
-              
-              <div className="mt-3">
-                <p className="text-center text-xs text-stone-500 dark:text-stone-400 mb-3 uppercase tracking-wider font-semibold">Or book on</p>
-                <div className="flex gap-3">
-                  <a 
-                    href="https://www.airbnb.com/experiences/7165714?direct_open=true"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() =>
-                      trackBooking({
-                        channel: 'airbnb',
-                        pageUrl: window.location.href,
-                        linkLabel: 'Booking modal — Airbnb',
-                      })
-                    }
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#FF5A5F] hover:bg-[#e04e52] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    Airbnb
-                  </a>
-                  <a 
-                    href="https://gyg.me/dE6n3Lwg"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() =>
-                      trackBooking({
-                        channel: 'getyourguide',
-                        pageUrl: window.location.href,
-                        linkLabel: 'Booking modal — GetYourGuide',
-                      })
-                    }
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#FF5533] hover:bg-[#e54c2d] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    GetYourGuide
-                  </a>
-                </div>
-              </div>
             </div>
           </form>
+
+          <div className="pt-4 space-y-3">
+            <p className="text-center text-xs text-stone-500 dark:text-stone-400 mb-2 uppercase tracking-wider font-semibold">
+              Or book instantly · pay securely
+            </p>
+            <BokunBookButton />
+
+            <div className="mt-3">
+              <p className="text-center text-xs text-stone-500 dark:text-stone-400 mb-3 uppercase tracking-wider font-semibold">Or book on</p>
+              <div className="flex gap-3">
+                <a 
+                  href="https://www.airbnb.com/experiences/7165714?direct_open=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackBooking({
+                      channel: 'airbnb',
+                      pageUrl: window.location.href,
+                      linkLabel: 'Booking modal — Airbnb',
+                    })
+                  }
+                  className="flex-1 flex items-center justify-center gap-2 bg-[#FF5A5F] hover:bg-[#e04e52] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  Airbnb
+                </a>
+                <a 
+                  href="https://gyg.me/dE6n3Lwg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackBooking({
+                      channel: 'getyourguide',
+                      pageUrl: window.location.href,
+                      linkLabel: 'Booking modal — GetYourGuide',
+                    })
+                  }
+                  className="flex-1 flex items-center justify-center gap-2 bg-[#FF5533] hover:bg-[#e54c2d] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  GetYourGuide
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
