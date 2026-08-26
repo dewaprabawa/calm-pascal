@@ -10,7 +10,6 @@ import StructuredData from './components/StructuredData'
 import FAQSection from './components/FAQSection'
 import PickupSchedule from './components/PickupSchedule'
 import TrackedBookingLink from './components/TrackedBookingLink'
-import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 import dynamic from 'next/dynamic'
 import { sortActivities } from '@/lib/sortActivities'
 
@@ -115,13 +114,13 @@ export default async function Page() {
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 top-0 transition-all duration-300 bg-white/70 dark:bg-black/50 backdrop-blur-md border-b border-white/20 dark:border-white/10">
+      <nav className="fixed w-full z-50 top-0 transition-all duration-300 bg-white dark:bg-zinc-950 border-b border-stone-200 dark:border-zinc-800">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="relative w-10 h-10 overflow-hidden rounded-md border-2 border-orange-200 dark:border-orange-900/30">
               <Image src="/images/logo.jpg" alt="Tumang Bali Logo" fill className="object-cover" />
             </div>
-            <div className="text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500">TUMANG BALI</div>
+            <div className="text-lg sm:text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500 truncate max-w-[52vw] sm:max-w-none">TUMANG BALI</div>
           </div>
           <div className="hidden lg:flex flex-wrap items-center gap-4 md:gap-8 font-medium text-xs md:text-sm tracking-wide mt-4 md:mt-0">
             <a href="#classes" className="hover:text-orange-500 transition-colors">CLASSES</a>
@@ -134,7 +133,7 @@ export default async function Page() {
             <a href="#faq" className="hover:text-orange-500 transition-colors">FAQ</a>
             <a href="#location" className="hover:text-orange-500 transition-colors">LOCATION</a>
           </div>
-          <BookButton className="hidden sm:inline-flex bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-transform hover:scale-105 active:scale-95 text-sm md:text-base">
+          <BookButton className="hidden sm:inline-flex cursor-pointer bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-transform hover:scale-105 active:scale-95 text-sm md:text-base">
             Book Now
           </BookButton>
           <MobileMenu />
@@ -194,9 +193,9 @@ export default async function Page() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-in-up">
-              <a href={BOKUN_BOOK_PAGE} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto text-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
+              <BookButton className="w-full sm:w-auto cursor-pointer text-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
                 Book Your Cooking Class
-              </a>
+              </BookButton>
               <Link href="/half-day-cooking-class-bali" className="w-full sm:w-auto flex items-center justify-center bg-white/50 hover:bg-white/80 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/80 backdrop-blur-md border border-stone-200 dark:border-zinc-700 text-stone-800 dark:text-stone-200 px-8 py-4 rounded-full font-semibold text-lg shadow-md transition-all hover:-translate-y-1">
                 View Afternoon & Evening
               </Link>
