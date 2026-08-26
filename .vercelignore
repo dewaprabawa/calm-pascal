@@ -1,0 +1,14 @@
+node_modules
+**/node_modules
+**/.next
+**/.env
+**/.env.*
+**/.env.local
+.git
+**/.git
+**/media
+.DS_Store
+wheels
+**/*.pem
+**/tsbuildinfo
+**/.turbo

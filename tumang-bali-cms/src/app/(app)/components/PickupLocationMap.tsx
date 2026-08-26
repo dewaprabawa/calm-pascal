@@ -20,6 +20,13 @@ type NominatimHit = {
 
 const UBUD = { lat: -8.5069, lng: 115.2625 }
 
+type LeafletNS = typeof import('leaflet')
+
+function leafletNS(mod: LeafletNS): LeafletNS {
+  const wrapped = mod as LeafletNS & { default?: LeafletNS }
+  return wrapped.default ?? mod
+}
+
 async function searchPlaces(query: string): Promise<NominatimHit[]> {
   const url = new URL('https://nominatim.openstreetmap.org/search')
   url.searchParams.set('format', 'jsonv2')
@@ -56,7 +63,7 @@ export default function PickupLocationMap({
   const mapElRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<LeafletMap | null>(null)
   const markerRef = useRef<Marker | null>(null)
-  const leafletRef = useRef<typeof import('leaflet') | null>(null)
+  const leafletRef = useRef<LeafletNS | null>(null)
   const valueRef = useRef(value)
   const onChangeRef = useRef(onChange)
   valueRef.current = value
@@ -71,7 +78,7 @@ export default function PickupLocationMap({
       const leaflet = leafletRef.current
       const map = mapRef.current
       if (leaflet && map) {
-        const L = leaflet.default
+        const L = leaflet
         if (markerRef.current) {
           markerRef.current.setLatLng([lat, lng])
         } else {
@@ -110,10 +117,10 @@ export default function PickupLocationMap({
     let cancelled = false
 
     void (async () => {
-      const leaflet = await import('leaflet')
+      const leaflet = leafletNS(await import('leaflet'))
       if (cancelled || !mapElRef.current) return
       leafletRef.current = leaflet
-      const L = leaflet.default
+      const L = leaflet
 
       const map = L.map(mapElRef.current, {
         scrollWheelZoom: false,
