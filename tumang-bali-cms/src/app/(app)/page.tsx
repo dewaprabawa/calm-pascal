@@ -11,6 +11,7 @@ import FAQSection from './components/FAQSection'
 import PickupSchedule from './components/PickupSchedule'
 import TrackedBookingLink from './components/TrackedBookingLink'
 import dynamic from 'next/dynamic'
+import { sortActivities } from '@/lib/sortActivities'
 
 // Dynamically import all client-side-only and third-party components
 import MobileMenu from './components/MobileMenu'
@@ -58,7 +59,10 @@ export default async function Page() {
     console.error('homepage: could not load CMS data', err)
   }
 
-  let displayActivities = activities.length > 0 ? [...activities] : [
+  let displayActivities = sortActivities(
+    activities.length > 0
+      ? [...activities]
+      : [
     {
       id: 'morning-class',
       title: 'Morning Market Tour & Balinese Cooking Masterclass',
@@ -105,6 +109,7 @@ export default async function Page() {
       ]
     }
   ]
+  )
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white">
@@ -1057,7 +1062,7 @@ export default async function Page() {
       <WhatsAppFloat />
 
       {/* Booking Modal */}
-      <BookingModal activities={displayActivities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number }))} />
+      <BookingModal activities={displayActivities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number, kidsPrice: a.kidsPrice as number | undefined }))} />
 
 
     </div>

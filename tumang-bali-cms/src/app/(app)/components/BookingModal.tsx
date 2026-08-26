@@ -1,11 +1,11 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import dynamic from 'next/dynamic'
 import { trackBooking } from '@/lib/bookingTracking'
 import { formatPickupForMessage } from '@/lib/bookingEmailContent'
 import BokunBookButton from './BokunBookButton'
-import type { PickupLocationValue } from './PickupLocationMap'
+import { sortActivities } from '@/lib/sortActivities'
 
 const PickupLocationMap = dynamic(() => import('./PickupLocationMap'), { ssr: false })
 
@@ -17,6 +17,7 @@ export type ActivityOption = {
 }
 
 export default function BookingModal({ activities }: { activities: ActivityOption[] }) {
+  const orderedActivities = useMemo(() => sortActivities(activities), [activities])
   const [isOpen, setIsOpen] = useState(false)
   
   // Form State
@@ -51,8 +52,8 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
         } else if (e.detail.activityTitle.toLowerCase().includes('morning')) {
           setSelectedSession('morning')
         }
-      } else if (activities.length > 0) {
-        setSelectedActivity(activities[0].title)
+      } else if (orderedActivities.length > 0) {
+        setSelectedActivity(orderedActivities[0].title)
       }
 
       if (e.detail?.session === 'afternoon' || e.detail?.session === 'morning') {
@@ -61,13 +62,13 @@ export default function BookingModal({ activities }: { activities: ActivityOptio
     }
 
     // Auto-select on initial load if we have activities
-    if (!selectedActivity && activities.length > 0) {
-      setSelectedActivity(activities[0].title)
+    if (!selectedActivity && orderedActivities.length > 0) {
+      setSelectedActivity(orderedActivities[0].title)
     }
 
     window.addEventListener('open-booking-modal', handleOpenModal)
     return () => window.removeEventListener('open-booking-modal', handleOpenModal)
-  }, [activities])
+  }, [orderedActivities])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -163,7 +164,7 @@ _(WhatsApp consultation from website)_`
                 className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow appearance-none"
               >
                 <option value="" disabled>Select an experience...</option>
-                {activities.map((activity) => (
+                {orderedActivities.map((activity) => (
                   <option key={activity.id} value={activity.title}>
                     {activity.title} {activity.price ? (activity.price < 1000 ? `- ${activity.price}K IDR` : `- ${activity.price.toLocaleString('id-ID')} IDR`) : ''}{activity.kidsPrice ? ` · kids ${activity.kidsPrice}K` : ''}
                   </option>

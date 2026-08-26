@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
+import { sortActivities } from '@/lib/sortActivities'
 import BookButton from '../components/BookButton'
 import BookingModal from '../components/BookingModal'
 import WhatsAppFloat from '../components/WhatsAppFloat'
@@ -21,12 +22,14 @@ export default async function Page() {
   try {
     const payload = await getPayload({ config: configPromise })
     const { docs: activities } = await payload.find({ collection: 'activities' })
-    bookingActivities = activities.map((a) => ({
-      id: a.id as string,
-      title: a.title as string,
-      price: a.price as number,
-      kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
-    }))
+    bookingActivities = sortActivities(
+      activities.map((a) => ({
+        id: a.id as string,
+        title: a.title as string,
+        price: a.price as number,
+        kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
+      })),
+    )
   } catch (err) {
     console.error('book your class page: could not load activities from CMS', err)
   }
