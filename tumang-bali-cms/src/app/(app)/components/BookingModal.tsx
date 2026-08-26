@@ -6,6 +6,7 @@ import { trackBooking } from '@/lib/bookingTracking'
 import { formatPickupForMessage } from '@/lib/bookingEmailContent'
 import BokunBookButton from './BokunBookButton'
 import { sortActivities } from '@/lib/sortActivities'
+import type { PickupLocationValue } from './PickupLocationMap'
 
 const PickupLocationMap = dynamic(() => import('./PickupLocationMap'), { ssr: false })
 
@@ -322,7 +323,7 @@ _(WhatsApp consultation from website)_`
 
             <div className="mt-3">
               <p className="text-center text-xs text-stone-500 dark:text-stone-400 mb-3 uppercase tracking-wider font-semibold">Or book on</p>
-              <div className="flex gap-3">
+              <div className="grid grid-cols-3 gap-2">
                 <a 
                   href="https://www.airbnb.com/experiences/7165714?direct_open=true"
                   target="_blank"
@@ -334,7 +335,7 @@ _(WhatsApp consultation from website)_`
                       linkLabel: 'Booking modal — Airbnb',
                     })
                   }
-                  className="flex-1 flex items-center justify-center gap-2 bg-[#FF5A5F] hover:bg-[#e04e52] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="flex items-center justify-center bg-[#FF5A5F] hover:bg-[#e04e52] text-white py-3 px-2 rounded-xl font-bold text-xs sm:text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
                 >
                   Airbnb
                 </a>
@@ -349,9 +350,24 @@ _(WhatsApp consultation from website)_`
                       linkLabel: 'Booking modal — GetYourGuide',
                     })
                   }
-                  className="flex-1 flex items-center justify-center gap-2 bg-[#FF5533] hover:bg-[#e54c2d] text-white py-3 px-4 rounded-xl font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="flex items-center justify-center bg-[#FF5533] hover:bg-[#e54c2d] text-white py-3 px-2 rounded-xl font-bold text-xs sm:text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
                 >
                   GetYourGuide
+                </a>
+                <a
+                  href="https://www.viator.com/tours/Ubud/Ubud-Market-to-Table-Cooking-Class-and-Local-Herb-Discovery/d5467-5690403P1?medium=social-share-copy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackBooking({
+                      channel: 'viator',
+                      pageUrl: window.location.href,
+                      linkLabel: 'Booking modal — Viator',
+                    })
+                  }
+                  className="flex items-center justify-center bg-[#00A19C] hover:bg-[#008a86] text-white py-3 px-2 rounded-xl font-bold text-xs sm:text-sm transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  Viator
                 </a>
               </div>
             </div>
