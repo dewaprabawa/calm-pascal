@@ -38,3 +38,34 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Keep Bokun checkout overlay above the site booking modal */
+#bokun-modal-container,
+#bokun-widgets-cart-wrapper {
+  z-index: 2147483000 !important;
+}
+
+/* Leaflet inside the booking modal — keep panes below the modal chrome */
+.pickup-map-wrap {
+  isolation: isolate;
+}
+.pickup-map-wrap .leaflet-container {
+  height: 220px;
+  width: 100%;
+  z-index: 0;
+  font-family: inherit;
+}
+.pickup-pin {
+  background: transparent;
+  border: none;
+}
+.pickup-pin-dot {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #ea580c;
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
+}

@@ -57,6 +57,26 @@ async function seed() {
     },
   })
 
+  await payload.create({
+    collection: 'activities',
+    data: {
+      title: 'Private Cooking Class (1 Person)',
+      durationHours: 4,
+      price: 650,
+      kidsPrice: 550,
+      instructor: instructor1.id,
+      includedItems: [
+        { item: 'Kitchen exclusive to you' },
+        { item: 'Market Tour' },
+        { item: 'Welcome Drink' },
+        { item: 'Lunch' },
+        { item: 'Kids rate IDR 550K' },
+        { item: 'Recipe Book' },
+      ],
+      excludedItems: [],
+    },
+  })
+
 
 
   // 3. Create Recipes (Menu)

@@ -105,6 +105,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.tripadvisor.co.id" />
         <link rel="dns-prefetch" href="https://www.jscache.com" />
         <link rel="dns-prefetch" href="https://static.tacdn.com" />
+        <link rel="preconnect" href="https://widgets.bokun.io" />
+        <link rel="dns-prefetch" href="https://static.bokun.io" />
+        <link rel="dns-prefetch" href="https://tile.openstreetmap.org" />
+        <link rel="dns-prefetch" href="https://nominatim.openstreetmap.org" />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

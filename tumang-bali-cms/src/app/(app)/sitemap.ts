@@ -19,6 +19,10 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'private-group-cooking-class-ubud',
   'tumang-bali-vs-casa-luna-cooking-class-ubud',
   '10-dishes-cooking-class',
+  'ubud-cooking-class-price',
+  'private-cooking-class-ubud-price',
+  'how-to-make-sate-lilit',
+  'cooking-class-ubud-from-canggu',
 ])
 
 // Static, hand-built routes under (app).

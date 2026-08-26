@@ -16,6 +16,7 @@ import dynamic from 'next/dynamic'
 import MobileMenu from './components/MobileMenu'
 import HeroVideo from './components/HeroVideo'
 import TripAdvisorWidget from './components/TripAdvisorWidget'
+import TripAdvisorWriteReviewWidget from './components/TripAdvisorWriteReviewWidget'
 import TikTokEmbed from './components/TikTokEmbed'
 import InstagramEmbed from './components/InstagramEmbed'
 
@@ -29,7 +30,6 @@ export const revalidate = 60
 export default async function Page() {
   let activities: any[] = []
   let instructors: any[] = []
-  let reviews: any[] = []
   let listings: any[] = []
   let recipes: any[] = []
   let itinerary: any = null
@@ -39,21 +39,18 @@ export default async function Page() {
     const [
       actRes,
       instRes,
-      revRes,
       listRes,
       recRes,
       itinRes
     ] = await Promise.all([
       payload.find({ collection: 'activities', depth: 1 }),
       payload.find({ collection: 'instructors' }),
-      payload.find({ collection: 'reviews', where: { status: { equals: 'published' } } }),
       payload.find({ collection: 'external-listings', where: { isActive: { equals: true } } }),
       payload.find({ collection: 'recipes', limit: 100 }),
       payload.findGlobal({ slug: 'itinerary', depth: 1 })
     ])
     activities = actRes.docs || []
     instructors = instRes.docs || []
-    reviews = revRes.docs || []
     listings = listRes.docs || []
     recipes = recRes.docs || []
     itinerary = itinRes || null
@@ -87,6 +84,22 @@ export default async function Page() {
         { item: 'Scenic Rice Field Walk' },
         { item: 'Hands-on Cooking (10+ Dishes)' },
         { item: 'Complete Balinese Dinner Feast' },
+        { item: 'Complimentary Ubud Hotel Transport' },
+        { item: 'Printed Recipe Booklet' }
+      ]
+    },
+    {
+      id: 'private-class',
+      title: 'Private Cooking Class (1 Person)',
+      durationHours: '3–4',
+      price: 650,
+      kidsPrice: 550,
+      instructor: { name: 'Wayan Sudiana' },
+      includedItems: [
+        { item: 'Kitchen exclusive to you' },
+        { item: 'Guided Morning Market Tour' },
+        { item: 'Hands-on Cooking (10+ Dishes)' },
+        { item: 'Kids rate IDR 550K' },
         { item: 'Complimentary Ubud Hotel Transport' },
         { item: 'Printed Recipe Booklet' }
       ]
@@ -280,7 +293,7 @@ export default async function Page() {
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Choose from our hand-crafted cooking experiences, designed to suit both beginners and seasoned foodies.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayActivities.length > 0 ? displayActivities.map((activity, index) => (
             <div key={activity.id} className="group relative rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 flex flex-col">
               <div className="aspect-video bg-stone-200 dark:bg-zinc-800 relative overflow-hidden">
@@ -303,9 +316,14 @@ export default async function Page() {
                 })()}
               </div>
               <div className="p-8 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-4">
+                <div className="flex justify-between items-start mb-4 gap-3">
                   <h3 className="text-2xl font-bold tracking-tight group-hover:text-orange-600 transition-colors">{activity.title}</h3>
-                  <span className="text-2xl font-black text-orange-500">IDR {activity.price}K</span>
+                  <div className="text-right flex-shrink-0">
+                    <span className="text-2xl font-black text-orange-500">IDR {activity.price}K</span>
+                    {activity.kidsPrice ? (
+                      <p className="text-xs font-semibold text-stone-500 mt-0.5">Kids IDR {activity.kidsPrice}K</p>
+                    ) : null}
+                  </div>
                 </div>
                 <div className="flex items-center gap-4 mb-6 text-sm font-medium text-stone-500 dark:text-stone-400">
                   <div className="flex items-center gap-1.5 bg-stone-100 dark:bg-zinc-800 px-3 py-1 rounded-full">
@@ -685,51 +703,18 @@ export default async function Page() {
       </section>
 
       {/* Reviews */}
-      {reviews.length > 0 && (
-        <section id="reviews" className="py-24 px-6 max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-16 text-center">Guest Stories</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {reviews.map((review: any) => (
-              <div key={review.id || review.time} className="p-8 rounded-3xl bg-stone-50 dark:bg-zinc-900/50 border border-stone-100 dark:border-zinc-800 hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-4">
-                    {review.profile_photo_url ? (
-                      <img src={review.profile_photo_url} alt={review.author_name} className="w-12 h-12 rounded-full" width={48} height={48} />
-                    ) : (
-                      <div className="w-12 h-12 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center font-bold text-orange-600">
-                        {(review.customerName || review.author_name || 'G')[0]}
-                      </div>
-                    )}
-                    <div>
-                      <h4 className="font-bold text-lg">{review.customerName || review.author_name}</h4>
-                      <div className="flex text-amber-500 mt-1">
-                        {Array.from({ length: review.rating || 5 }).map((_, i) => (
-                          <svg key={i} className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                        ))}
-                        {review.relative_time_description && (
-                          <span className="text-xs text-stone-400 ml-2 mt-0.5">{review.relative_time_description}</span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wider bg-stone-200 dark:bg-zinc-800 px-3 py-1 rounded-full flex items-center gap-1">
-                    {review.author_name ? (
-                      <>
-                        <svg className="w-3 h-3 text-blue-500" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" /></svg>
-                        Google
-                      </>
-                    ) : (
-                      review.source || 'Verified'
-                    )}
-                  </span>
-                </div>
-                <p className="text-stone-600 dark:text-stone-300 italic">"{review.comment || review.text}"</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      <section id="reviews" className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="flex flex-col items-center mb-12 text-center">
+          <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Guest Stories</span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">What travellers say</h2>
+          <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">
+            Read our TripAdvisor reviews and share your cooking class story.
+          </p>
+        </div>
+        <div className="max-w-2xl mx-auto bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-10 border border-stone-200 dark:border-zinc-800 shadow-sm">
+          <TripAdvisorWriteReviewWidget />
+        </div>
+      </section>
 
       {/* From Our Blog — internal links for orphan pages */}
       <section className="py-24 px-6 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800">
@@ -801,6 +786,42 @@ export default async function Page() {
                 <div>
                   <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class in Bali — FAQs</h3>
                   <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Prices, what to wear, dietary options, and everything we get asked most.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/ubud-cooking-class-price" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">08</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Ubud Cooking Class Prices 2026</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What a cooking class in Ubud costs — shared, private (1 person), and kids rates.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/how-to-make-sate-lilit" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">09</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">How to Make Sate Lilit</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The Balinese minced satay you will cook in class — ingredients, technique, and tips.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/private-cooking-class-ubud-price" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">10</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Private Class Price — 1 Person & Kids</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Private kitchen in Ubud: IDR 650K for 1 person, IDR 550K for kids.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/cooking-class-ubud-from-canggu" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">11</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class from Canggu or Seminyak</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Drive time, pickup, and which session works if you are staying on the coast.</p>
                 </div>
               </div>
             </Link>

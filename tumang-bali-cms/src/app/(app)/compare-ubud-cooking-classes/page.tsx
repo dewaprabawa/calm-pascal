@@ -146,6 +146,7 @@ export default async function Page() {
       id: a.id as string,
       title: a.title as string,
       price: a.price as number,
+      kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
     }))
   } catch (err) {
     console.error('compare page: could not load activities from CMS', err)
@@ -155,6 +156,7 @@ export default async function Page() {
     bookingActivities = [
       { id: 'morning-class', title: 'Morning Market Tour & Cooking Class (3–4 Hours)', price: 350 },
       { id: 'afternoon-class', title: 'Afternoon Balinese Cooking Class (3 Hours)', price: 350 },
+      { id: 'private-class', title: 'Private Cooking Class (1 Person)', price: 650, kidsPrice: 550 },
     ]
   }
 

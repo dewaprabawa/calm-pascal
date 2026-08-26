@@ -33,6 +33,7 @@ export default async function Page() {
       id: a.id as string,
       title: a.title as string,
       price: a.price as number,
+      kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
     }))
   } catch (err) {
     console.error('where to stay page: could not load activities from CMS', err)

@@ -59,35 +59,53 @@ export const privateClass: ClassLandingContent = {
   h1: 'Private Cooking Class in Ubud',
   h1Plain: 'Private Cooking Class in Ubud',
   intro:
-    'Book the kitchen for just your group. A private Balinese cooking class in Ubud for couples, families, friends and special occasions — your own chef, your pace, your menu.',
+    'Book the kitchen for just your group. A private Balinese cooking class in Ubud for one person, couples, families and special occasions — your own chef, your pace, your menu. Private class: IDR 650K per adult, IDR 550K per child.',
   heroImage: '/images/gallery-group.jpg',
   heroImageAlt: 'A private group enjoying a hands-on Balinese cooking class together in Ubud',
+  pricing: {
+    adultLabel: '1 person / adult',
+    adultPrice: 'IDR 650K',
+    kidsLabel: 'Kids',
+    kidsPrice: 'IDR 550K',
+    note: 'Private class rates. Shared group classes remain IDR 350K per person. Hotel pickup in Ubud, market tour (morning), cooking of 10+ dishes, the meal you cook, and a recipe booklet are included.',
+  },
   body: [
     {
       heading: 'Your own chef, your own pace',
       paragraphs: [
-        'A private class means the kitchen, the market guide and the chef are dedicated entirely to your group. It is ideal for families with children, couples celebrating a honeymoon or anniversary, groups of friends travelling together, and team or birthday celebrations.',
+        'A private class means the kitchen, the market guide and the chef are dedicated entirely to your group. It is ideal for a solo traveller, families with children, couples celebrating a honeymoon or anniversary, groups of friends travelling together, and team or birthday celebrations.',
         'Because it is just your party, we can slow down for younger cooks, go deeper on technique for keen foodies, and tailor the menu around your group’s tastes and dietary needs.',
+      ],
+    },
+    {
+      heading: 'Private class prices — 1 person and kids',
+      paragraphs: [
+        'A private cooking class for 1 person is IDR 650,000. Children are IDR 550,000. These rates keep the kitchen exclusive to you — no other guests — with a dedicated chef.',
+        'We host private classes for one person right up to larger parties of six or more. For bigger groups we can still run an exclusive session; message us on WhatsApp if you need a family or group quote.',
       ],
     },
     {
       heading: 'Great for groups of any size',
       paragraphs: [
-        'We host private classes for couples right up to larger parties of six or more. For bigger groups we can arrange an exclusive session and discuss special group rates.',
-        'The full experience still includes the morning market tour, the rice-field walk, hands-on cooking of 10+ dishes, and dining together on everything you made.',
+        'The full private experience still includes the morning market tour (morning session), the rice-field walk, hands-on cooking of 10+ dishes, and dining together on everything you made.',
       ],
     },
   ],
   sellingPoints: [
-    { title: 'Exclusively Your Group', description: 'No strangers — the chef and kitchen are yours for the session.' },
+    { title: 'Exclusively Your Group', description: 'No strangers — the chef and kitchen are yours for the session, even if you book as 1 person.' },
     { title: 'Tailored Menu', description: 'We adapt dishes around your tastes, allergies and dietary needs.' },
     { title: 'Perfect for Occasions', description: 'Honeymoons, birthdays, families and team days out.' },
   ],
   faqs: [
     {
+      question: 'How much is a private cooking class for 1 person?',
+      answer:
+        'A private class for 1 person is IDR 650,000. Kids are IDR 550,000. Shared (non-private) morning and afternoon classes are IDR 350,000 per person.',
+    },
+    {
       question: 'How many people can join a private class?',
       answer:
-        'Private classes work for anything from a couple to groups of six or more. For larger parties we arrange an exclusive session — contact us on WhatsApp for group rates.',
+        'Private classes work for one person, a couple, or groups of six or more. For larger parties we arrange an exclusive session — contact us on WhatsApp for group rates.',
     },
     {
       question: 'Is hotel pickup included?',
@@ -861,8 +879,8 @@ export const familyCookingClass: ClassLandingContent = {
     {
       heading: 'Ages, pricing and private family sessions',
       paragraphs: [
-        'Children aged 4 and above are welcome in every class. Kids under 4 can attend for free but will not have their own cooking station. For families who prefer a private experience, we offer exclusive sessions where the kitchen is reserved for your family alone — ideal for birthday celebrations, multi-generational trips, or families with very young children who need extra flexibility.',
-        'Child pricing is available for kids aged 4–12. Contact us on WhatsApp for the latest family rates and to discuss any dietary requirements or allergies.',
+        'Children aged 4 and above are welcome in every class. Kids under 4 can attend for free but will not have their own cooking station. For a private family session the kitchen is exclusive to you: 1 person / adult is IDR 650,000; kids are IDR 550,000. Shared morning and afternoon classes remain IDR 350,000 per person.',
+        'Private family sessions are ideal for birthday celebrations, multi-generational trips, or families with very young children who need extra flexibility. Message us on WhatsApp to book.',
       ],
     },
   ],
@@ -885,7 +903,7 @@ export const familyCookingClass: ClassLandingContent = {
     {
       question: 'Can we book a private class for just our family?',
       answer:
-        'Absolutely. Private family sessions are one of our most popular options. The kitchen, chef, and market guide are exclusively for your family — so you can go at your own pace and customise the experience for your children.',
+        'Absolutely. A private class for 1 person is IDR 650,000 and kids are IDR 550,000. The kitchen, chef, and market guide are exclusively for your family — so you can go at your own pace and customise the experience for your children.',
     },
     {
       question: 'Is there a kid-friendly menu?',

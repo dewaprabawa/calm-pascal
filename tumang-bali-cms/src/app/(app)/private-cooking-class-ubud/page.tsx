@@ -10,7 +10,7 @@ export const revalidate = 60
 export const metadata: Metadata = {
   title: 'Private Cooking Class in Ubud | Tumang Bali',
   description:
-    'Private Balinese cooking class in Ubud for couples, families & groups. Your own chef, tailored menu, market tour & hotel pickup. Perfect for special occasions.',
+    'Private Balinese cooking class in Ubud. 1 person IDR 650K, kids IDR 550K. Your own chef, tailored menu, market tour & hotel pickup.',
   alternates: { canonical: 'https://tumangbaliclass.com/private-cooking-class-ubud' },
   openGraph: {
     title: 'Private Cooking Class in Ubud | Tumang Bali',
@@ -33,6 +33,7 @@ export default async function Page() {
       id: a.id as string,
       title: a.title as string,
       price: a.price as number,
+      kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
     }))
   } catch (err) {
     console.error('private class page: could not load activities from CMS', err)

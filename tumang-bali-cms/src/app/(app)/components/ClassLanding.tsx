@@ -24,6 +24,13 @@ export type ClassLandingContent = {
   faqs: FaqItem[]
   ctaHeading: string
   ctaSubtext: string
+  pricing?: {
+    adultLabel: string
+    adultPrice: string
+    kidsLabel: string
+    kidsPrice: string
+    note: string
+  }
 }
 
 const SITE = 'https://tumangbaliclass.com'
@@ -126,6 +133,25 @@ export default function ClassLanding({
           ))}
         </div>
       </section>
+
+      {content.pricing && (
+        <section className="px-6 max-w-5xl mx-auto pb-4">
+          <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-stone-200 dark:border-zinc-800 p-6 md:p-8">
+            <h2 className="text-2xl font-black tracking-tight mb-5">Private class prices</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div className="rounded-2xl bg-orange-50 dark:bg-orange-950/30 border border-orange-200/70 dark:border-orange-900/40 p-5">
+                <p className="text-xs font-bold uppercase tracking-wider text-orange-700 dark:text-orange-400 mb-1">{content.pricing.adultLabel}</p>
+                <p className="text-3xl font-black text-orange-600">{content.pricing.adultPrice}</p>
+              </div>
+              <div className="rounded-2xl bg-stone-50 dark:bg-zinc-800 border border-stone-200 dark:border-zinc-700 p-5">
+                <p className="text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">{content.pricing.kidsLabel}</p>
+                <p className="text-3xl font-black text-stone-900 dark:text-white">{content.pricing.kidsPrice}</p>
+              </div>
+            </div>
+            <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">{content.pricing.note}</p>
+          </div>
+        </section>
+      )}
 
       {/* Body content */}
       <section className="py-8 px-6 max-w-3xl mx-auto space-y-12">

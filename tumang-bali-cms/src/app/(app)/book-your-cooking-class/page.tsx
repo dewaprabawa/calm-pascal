@@ -25,6 +25,7 @@ export default async function Page() {
       id: a.id as string,
       title: a.title as string,
       price: a.price as number,
+      kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
     }))
   } catch (err) {
     console.error('book your class page: could not load activities from CMS', err)
@@ -34,6 +35,7 @@ export default async function Page() {
     bookingActivities = [
       { id: 'morning-class', title: 'Morning Market Tour & Cooking Class (3–4 Hours)', price: 350 },
       { id: 'afternoon-class', title: 'Afternoon Balinese Cooking Class (3 Hours)', price: 350 },
+      { id: 'private-class', title: 'Private Cooking Class (1 Person)', price: 650, kidsPrice: 550 },
     ]
   }
 
@@ -43,11 +45,11 @@ export default async function Page() {
     "name": "Tumang Bali Cooking Class",
     "description": "Join an authentic 5-star rated Balinese cooking class in Ubud. Includes market tour, transport, and traditional recipes.",
     "url": "https://tumangbaliclass.com/book-your-cooking-class",
-    "priceRange": "$$",
+    "priceRange": "IDR 350000-650000",
     "telephone": "+62 82210132418", // Defaulting to the number used in WhatsApp link
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Tumang Village",
+      "streetAddress": "Banjar Laplapan, Petulu",
       "addressLocality": "Ubud",
       "addressRegion": "Bali",
       "postalCode": "80571",

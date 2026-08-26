@@ -81,6 +81,7 @@ export default async function IndonesianPage() {
       id: a.id as string,
       title: a.title as string,
       price: a.price as number,
+      kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
     }))
   } catch (err) {
     console.error('id page: could not load activities from CMS', err)
@@ -90,6 +91,7 @@ export default async function IndonesianPage() {
     bookingActivities = [
       { id: 'morning-class', title: 'Kelas Pagi: Tur Pasar & Memasak (3–4 Jam)', price: 350 },
       { id: 'afternoon-class', title: 'Kelas Sore: Memasak Masakan Bali (3 Jam)', price: 350 },
+      { id: 'private-class', title: 'Kelas Privat (1 Orang)', price: 650, kidsPrice: 550 },
     ]
   }
 
