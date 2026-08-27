@@ -28,6 +28,13 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'bali-cooking-class-for-food-travelers',
   'bali-cooking-class-for-content-creators',
   'filming-bali-cooking-class-instagram-tiktok',
+  'ubud-food-guide-what-to-eat',
+  'babi-guling-ubud-where-to-eat',
+  'nasi-campur-bali-explained',
+  'ayam-betutu-recipe-bali',
+  'lawar-balinese-salad-recipe',
+  'pepes-ikan-recipe-bali',
+  'balinese-vs-indonesian-food',
 ])
 
 // Static, hand-built routes under (app).
