@@ -1,11 +1,54 @@
+# Tumang Bali Cooking Class — https://tumangbaliclass.com
+# Allow AI search / answer engines so the site can be cited in
+# ChatGPT, Gemini, Meta AI (WhatsApp AI), Perplexity, and Claude.
+
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
-# AI crawler policy (updated August 2026)
-# Allow AI assistants that power search/answer engines (GEO benefit)
+# --- OpenAI (ChatGPT search + training) ---
+# OAI-SearchBot powers citations in ChatGPT search — keep Allow.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# --- Google (Search + Gemini / AI Overviews) ---
+User-agent: Googlebot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
+# --- Meta AI / WhatsApp AI / Facebook ---
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# --- Anthropic (Claude) ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# --- Other AI answer engines ---
 User-agent: PerplexityBot
 Allow: /
 
@@ -15,19 +58,7 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-# Block data-harvesting crawlers with no search benefit
+# Block bulk scrapers with no answer-engine benefit
 User-agent: Bytespider
 Disallow: /
 

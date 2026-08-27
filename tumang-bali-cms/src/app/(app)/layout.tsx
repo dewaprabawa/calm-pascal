@@ -84,6 +84,9 @@ export const metadata: Metadata = {
   },
 };
 
+const LLMS_TXT = 'https://tumangbaliclass.com/llms.txt'
+const LLMS_FULL = 'https://tumangbaliclass.com/llms-full.txt'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -95,6 +98,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        {/* AI / LLM discovery — ChatGPT, Gemini, Meta/WhatsApp AI, Perplexity */}
+        <link rel="describedby" href={LLMS_TXT} type="text/plain" title="llms.txt" />
+        <link rel="alternate" href={LLMS_TXT} type="text/plain" title="LLM site index" />
+        <link rel="alternate" href={LLMS_FULL} type="text/plain" title="LLM full context" />
+        <link rel="author" href={LLMS_TXT} />
         {/* DNS prefetch for third-party scripts */}
         <link rel="preconnect" href="https://www.tiktok.com" />
         <link rel="preconnect" href="https://www.tripadvisor.com" />
