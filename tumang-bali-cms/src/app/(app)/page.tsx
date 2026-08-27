@@ -15,11 +15,9 @@ import { sortActivities } from '@/lib/sortActivities'
 
 // Dynamically import all client-side-only and third-party components
 import MobileMenu from './components/MobileMenu'
-import HeroVideo from './components/HeroVideo'
 import TripAdvisorWidget from './components/TripAdvisorWidget'
 import TripAdvisorWriteReviewWidget from './components/TripAdvisorWriteReviewWidget'
 import TikTokEmbed from './components/TikTokEmbed'
-import InstagramEmbed from './components/InstagramEmbed'
 
 // Dynamically import heavy interactive modals
 const BookingModal = dynamic(() => import('./components/BookingModal'))
@@ -199,9 +197,6 @@ export default async function Page() {
               <Link href="/half-day-cooking-class-bali" className="w-full sm:w-auto flex items-center justify-center bg-white/50 hover:bg-white/80 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/80 backdrop-blur-md border border-stone-200 dark:border-zinc-700 text-stone-800 dark:text-stone-200 px-8 py-4 rounded-full font-semibold text-lg shadow-md transition-all hover:-translate-y-1">
                 View Afternoon & Evening
               </Link>
-              <div className="w-full sm:w-auto flex items-center justify-center">
-                <HeroVideo />
-              </div>
             </div>
           </div>
           
@@ -210,22 +205,10 @@ export default async function Page() {
             {/* Background decoration */}
             <div className="absolute -inset-4 bg-orange-500/5 dark:bg-orange-500/10 rounded-[2.5rem] -rotate-3 -z-10" />
             
-            {/* Main Featured Image Card */}
-            <div className="relative w-full max-w-sm aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-900 bg-white/30 dark:bg-zinc-950/30 backdrop-blur-sm group hover:-rotate-1 transition-transform duration-500">
-              <Image 
-                src="/images/img4.jpg" 
-                alt="Guests enjoying an authentic Balinese cooking class in Ubud" 
-                fill 
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" 
-                priority
-                fetchPriority="high"
-                quality={80}
-                className="object-cover group-hover:scale-105 transition-transform duration-700" 
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-stone-950/0 to-stone-950/0" />
-              
-              {/* Image Label Overlay */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg">
+            {/* Dining Experience — guest TikTok */}
+            <div className="relative w-full max-w-sm aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-900 bg-stone-900">
+              <TikTokEmbed />
+              <div className="pointer-events-none absolute top-4 left-4 right-4 z-10 p-4 rounded-2xl bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg">
                 <p className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-500">Dining Experience</p>
                 <p className="text-sm font-semibold text-stone-900 dark:text-white mt-0.5">Savoring our hand-made feast overlooking Ubud's rice fields.</p>
               </div>
@@ -599,20 +582,6 @@ export default async function Page() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* As Seen on Social Media */}
-      <section className="py-24 px-6 max-w-6xl mx-auto">
-        <div className="flex flex-col items-center mb-12 text-center">
-          <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">As Seen On</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Social Media</h2>
-          <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Watch what our guests are saying about their cooking experience!</p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-items-center">
-          <TikTokEmbed />
-          <InstagramEmbed />
         </div>
       </section>
 
