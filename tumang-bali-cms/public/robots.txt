@@ -1,4 +1,71 @@
+# Tumang Bali Cooking Class — https://tumangbaliclass.com
+# Allow AI search / answer engines so the site can be cited in
+# ChatGPT, Gemini, Meta AI (WhatsApp AI), Perplexity, and Claude.
+
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# --- OpenAI (ChatGPT search + training) ---
+# OAI-SearchBot powers citations in ChatGPT search — keep Allow.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# --- Google (Search + Gemini / AI Overviews) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# --- Meta AI / WhatsApp AI / Facebook ---
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# --- Anthropic (Claude) ---
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# --- Other AI answer engines ---
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Block bulk scrapers with no answer-engine benefit
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
 
 Sitemap: https://tumangbaliclass.com/sitemap.xml
