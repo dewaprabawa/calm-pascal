@@ -23,6 +23,11 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'private-cooking-class-ubud-price',
   'how-to-make-sate-lilit',
   'cooking-class-ubud-from-canggu',
+  'best-cooking-class-in-ubud',
+  'best-cooking-class-in-bali',
+  'bali-cooking-class-for-food-travelers',
+  'bali-cooking-class-for-content-creators',
+  'filming-bali-cooking-class-instagram-tiktok',
 ])
 
 // Static, hand-built routes under (app).
