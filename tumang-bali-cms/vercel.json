@@ -1,3 +1,9 @@
 {
-  "installCommand": "npm install --include=optional && npm rebuild sharp"
+  "installCommand": "npm install --include=optional && npm rebuild sharp",
+  "crons": [
+    {
+      "path": "/api/cron/seo-maintenance",
+      "schedule": "0 3 */2 * *"
+    }
+  ]
 }

@@ -5,18 +5,18 @@ import { runSeoSeedMaintenance } from '@/lib/seoSeedMaintenance'
 
 export const maxDuration = 300
 
-function isAuthorized(request: NextRequest): boolean {
-  const configured = process.env.SEED_ARTICLES_KEY
-  if (!configured) return false
-  const key =
-    request.headers.get('x-seed-key') ||
-    request.nextUrl.searchParams.get('key') ||
-    request.headers.get('authorization')?.replace(/^Bearer\s+/i, '')
-  return key === configured
+function isCronAuthorized(request: NextRequest): boolean {
+  const cronSecret = process.env.CRON_SECRET
+  if (!cronSecret) return false
+
+  const auth = request.headers.get('authorization') || ''
+  const bearer = auth.replace(/^Bearer\s+/i, '')
+  return bearer === cronSecret
 }
 
-export async function POST(request: NextRequest) {
-  if (!isAuthorized(request)) {
+/** Vercel Cron: sync SEO articles + meta titles every two days. */
+export async function GET(request: NextRequest) {
+  if (!isCronAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
@@ -30,8 +30,4 @@ export async function POST(request: NextRequest) {
       { status: 500 },
     )
   }
-}
-
-export async function GET(request: NextRequest) {
-  return POST(request)
 }
