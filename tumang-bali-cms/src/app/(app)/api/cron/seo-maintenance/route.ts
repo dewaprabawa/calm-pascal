@@ -2,21 +2,13 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { runSeoSeedMaintenance } from '@/lib/seoSeedMaintenance'
+import { isSeoMaintenanceAuthorized } from '@/lib/seoMaintenanceAuth'
 
 export const maxDuration = 300
 
-function isCronAuthorized(request: NextRequest): boolean {
-  const cronSecret = process.env.CRON_SECRET
-  if (!cronSecret) return false
-
-  const auth = request.headers.get('authorization') || ''
-  const bearer = auth.replace(/^Bearer\s+/i, '')
-  return bearer === cronSecret
-}
-
 /** Vercel Cron: sync SEO articles + meta titles every two days. */
 export async function GET(request: NextRequest) {
-  if (!isCronAuthorized(request)) {
+  if (!isSeoMaintenanceAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 

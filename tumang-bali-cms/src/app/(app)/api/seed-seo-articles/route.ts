@@ -2,21 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { runSeoSeedMaintenance } from '@/lib/seoSeedMaintenance'
+import { isSeoMaintenanceAuthorized } from '@/lib/seoMaintenanceAuth'
 
 export const maxDuration = 300
 
-function isAuthorized(request: NextRequest): boolean {
-  const configured = process.env.SEED_ARTICLES_KEY
-  if (!configured) return false
-  const key =
-    request.headers.get('x-seed-key') ||
-    request.nextUrl.searchParams.get('key') ||
-    request.headers.get('authorization')?.replace(/^Bearer\s+/i, '')
-  return key === configured
-}
-
 export async function POST(request: NextRequest) {
-  if (!isAuthorized(request)) {
+  if (!isSeoMaintenanceAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
