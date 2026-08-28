@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';",
+            value: "default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' https: data: blob:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https:;",
           },
           {
             key: 'X-Frame-Options',
@@ -53,6 +53,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.tumangbaliclass.com' }],
+        destination: 'https://tumangbaliclass.com/:path*',
+        permanent: true,
+      },
       // Dead blog post — redirect to the main cooking class page.
       {
         source: '/blog/dishes-you-cook-balinese-cooking-class',

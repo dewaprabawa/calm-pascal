@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { BOKUN_LOADER_SRC } from "@/lib/bokun";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -103,20 +101,9 @@ export default function RootLayout({
         <link rel="alternate" href={LLMS_TXT} type="text/plain" title="LLM site index" />
         <link rel="alternate" href={LLMS_FULL} type="text/plain" title="LLM full context" />
         <link rel="author" href={LLMS_TXT} />
-        {/* DNS prefetch for third-party scripts */}
-        <link rel="preconnect" href="https://www.tiktok.com" />
-        <link rel="preconnect" href="https://www.tripadvisor.com" />
-        <link rel="preconnect" href="https://www.tripadvisor.co.id" />
-        <link rel="dns-prefetch" href="https://www.jscache.com" />
-        <link rel="dns-prefetch" href="https://static.tacdn.com" />
-        <link rel="preconnect" href="https://widgets.bokun.io" />
-        <link rel="dns-prefetch" href="https://static.bokun.io" />
-        <link rel="dns-prefetch" href="https://tile.openstreetmap.org" />
-        <link rel="dns-prefetch" href="https://nominatim.openstreetmap.org" />
       </head>
       <body className="min-h-full flex flex-col">
         {children}
-        <Script src={BOKUN_LOADER_SRC} strategy="afterInteractive" />
       </body>
     </html>
   );

@@ -30,18 +30,21 @@ function bindBokunButton(el: HTMLElement) {
 }
 
 function loadBokunScript() {
-  if (document.querySelector('script[src*="BokunWidgetsLoader"]')) return
-  const script = document.createElement('script')
-  script.src = BOKUN_LOADER_SRC
-  script.async = true
-  document.body.appendChild(script)
+  if (document.querySelector('script[src*="BokunWidgetsLoader"]')) return Promise.resolve()
+  return new Promise<void>((resolve, reject) => {
+    const script = document.createElement('script')
+    script.src = BOKUN_LOADER_SRC
+    script.async = true
+    script.onload = () => resolve()
+    script.onerror = () => reject(new Error('Failed to load Bokun'))
+    document.body.appendChild(script)
+  })
 }
 
 export default function BokunBookButton() {
   const buttonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
-    loadBokunScript()
     const el = buttonRef.current
     if (!el) return
 
@@ -52,19 +55,18 @@ export default function BokunBookButton() {
         linkLabel: 'Booking modal — Bokun Book now',
       })
     }
-    el.addEventListener('click', track)
 
-    let tries = 0
-    const timer = window.setInterval(() => {
-      tries += 1
-      if (bindBokunButton(el) || tries > 40) {
-        window.clearInterval(timer)
-      }
-    }, 250)
+    const onClick = () => {
+      track()
+      void loadBokunScript().then(() => {
+        bindBokunButton(el)
+      })
+    }
+
+    el.addEventListener('click', onClick, { capture: true })
 
     return () => {
-      el.removeEventListener('click', track)
-      window.clearInterval(timer)
+      el.removeEventListener('click', onClick, { capture: true })
     }
   }, [])
 

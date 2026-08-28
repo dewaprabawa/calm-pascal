@@ -9,6 +9,7 @@ import BookButton from './components/BookButton'
 import StructuredData from './components/StructuredData'
 import FAQSection from './components/FAQSection'
 import PickupSchedule from './components/PickupSchedule'
+import LazyGoogleMap from './components/LazyGoogleMap'
 import TrackedBookingLink from './components/TrackedBookingLink'
 import dynamic from 'next/dynamic'
 import { sortActivities } from '@/lib/sortActivities'
@@ -150,7 +151,7 @@ export default async function Page() {
         <div className="max-w-7xl mx-auto px-6 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Text Content */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-sm font-semibold tracking-wide border border-orange-200 dark:border-orange-900/30 mb-4 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-sm font-semibold tracking-wide border border-orange-200 dark:border-orange-900/30 mb-4">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
@@ -158,18 +159,18 @@ export default async function Page() {
               Authentic Balinese Cooking Class in Ubud
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] animate-fade-in-up">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]">
               Experience Authentic <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-500">Balinese Cooking Classes</span>
               <br className="hidden xl:block" /> in Ubud
             </h1>
             
-            <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed animate-fade-in-up">
+            <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed">
               Tumang Bali Cooking Class is an authentic Balinese cooking class in Ubud, Bali. We offer hands-on cooking experiences with a local market tour, rice field walk, and the chance to learn 10+ traditional dishes from scratch. Our classes are vegetarian friendly with complimentary hotel pickup included.
             </p>
             
             {/* Quick Badges / Stats */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-2 animate-fade-in-up">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-2">
               <TripAdvisorWidget />
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
@@ -190,7 +191,7 @@ export default async function Page() {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4 animate-fade-in-up">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
               <BookButton className="w-full sm:w-auto cursor-pointer text-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
                 Book Your Cooking Class
               </BookButton>
@@ -820,14 +821,10 @@ export default async function Page() {
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Join us in the heart of Bali. We are located at Warung Tumang Bali.</p>
         </div>
         <div className="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-800 bg-stone-100 dark:bg-zinc-900 aspect-video md:aspect-[21/9]">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505094.34248964326!2d115.2810863!3d-8.4945634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d2325683733%3A0x52a86956537dd317!2sWarung%20Tumang%20Bali!5e0!3m2!1sen!2sid!4v1782035274458!5m2!1sen!2sid" 
-            className="w-full h-full"
-            style={{ border: 0 }}
-            allowFullScreen={true} 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <LazyGoogleMap
+            title="Warung Tumang Bali on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505094.34248964326!2d115.2810863!3d-8.4945634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d2325683733%3A0x52a86956537dd317!2sWarung%20Tumang%20Bali!5e0!3m2!1sen!2sid!4v1782035274458!5m2!1sen!2sid"
+          />
         </div>
       </section>
 
