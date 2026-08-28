@@ -61,6 +61,17 @@ export const Recipes: CollectionConfig = {
                   if (item.description) {
                     doc.fontSize(10).fillColor('grey').text(item.description).fillColor('black');
                   }
+                  const ingredients = Array.isArray(item.ingredients) ? item.ingredients : []
+                  if (ingredients.length > 0) {
+                    doc.fontSize(9).text(
+                      'Ingredients: ' +
+                        ingredients
+                          .map((ing: { item?: string; quantity?: string }) =>
+                            [ing.quantity, ing.item].filter(Boolean).join(' '),
+                          )
+                          .join('; '),
+                    )
+                  }
                   doc.moveDown(0.5);
                 });
                 doc.moveDown();

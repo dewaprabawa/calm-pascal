@@ -79,12 +79,26 @@ export default async function RecipesIndexPage() {
         </h1>
         <p className="text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
           Cook the real taste of Bali at home. Every recipe below comes straight from the kitchen of our
-          Ubud cooking class — handed down by local family chefs. Then come{' '}
+          Ubud cooking class — ingredients plus step-by-step methods from local family chefs. Then come{' '}
           <Link href="/#classes" className="text-orange-600 font-semibold hover:underline">
             cook them with us in person
           </Link>
           .
         </p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="/api/recipes/download-pdf"
+            className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-semibold text-sm transition-colors"
+          >
+            Download menu PDF
+          </a>
+          <Link
+            href="/balinese-cooking-class-ubud"
+            className="inline-flex border border-stone-300 dark:border-zinc-700 px-6 py-3 rounded-full font-semibold text-sm hover:border-orange-500 hover:text-orange-600 transition-colors"
+          >
+            Book a cooking class
+          </Link>
+        </div>
       </header>
 
       <main className="max-w-6xl mx-auto px-6 pb-24">

@@ -212,6 +212,14 @@ export default function ClassLanding({
                 Family cooking class
               </Link>
               <span className="text-stone-300">·</span>
+              <Link href="/blog/vegetarian-cooking-class-ubud-guide" className="text-sm font-semibold text-orange-600 hover:underline">
+                Vegetarian class
+              </Link>
+              <span className="text-stone-300">·</span>
+              <Link href="/blog/morning-cooking-class-ubud-market-tour" className="text-sm font-semibold text-orange-600 hover:underline">
+                Morning + market tour
+              </Link>
+              <span className="text-stone-300">·</span>
               <Link href="/blog/best-cooking-class-in-ubud" className="text-sm font-semibold text-orange-600 hover:underline">
                 Best cooking class in Ubud
               </Link>

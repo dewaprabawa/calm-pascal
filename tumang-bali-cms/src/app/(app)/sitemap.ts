@@ -36,6 +36,10 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'pepes-ikan-recipe-bali',
   'balinese-vs-indonesian-food',
   'cooking-class-ubud-for-couples',
+  'cooking-class-ubud-guide-2026',
+  'ubud-cooking-class-for-families',
+  'vegetarian-cooking-class-ubud-guide',
+  'morning-cooking-class-ubud-market-tour',
   'morning-vs-afternoon-tours-bali',
 ])
 
@@ -69,7 +73,8 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/llms.txt', priority: 0.5, changeFrequency: 'weekly' },
   { path: '/llms-full.txt', priority: 0.5, changeFrequency: 'weekly' },
-  { path: '/id', priority: 0.6, changeFrequency: 'monthly' },
+  { path: '/id', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/press', priority: 0.5, changeFrequency: 'monthly' },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

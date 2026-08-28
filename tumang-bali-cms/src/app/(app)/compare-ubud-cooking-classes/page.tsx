@@ -242,6 +242,42 @@ export default async function Page() {
         </div>
       </section>
 
+      {/* How we compare — linkable methodology */}
+      <section className="py-12 px-6 max-w-3xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-4">How we compared these classes</h2>
+        <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
+          This page is updated for <strong>August 2026</strong>. We scored each school on inclusions
+          travelers actually ask about: market tour, rice-field setting, max group size, dish count,
+          vegetarian depth, hotel pickup, and published price. Prices and policies change — always
+          confirm on the official site before you book.
+        </p>
+        <ul className="list-disc pl-6 space-y-2 text-stone-600 dark:text-stone-400 mb-4">
+          <li>
+            <strong>Best overall value:</strong> Tumang Bali — most inclusions at IDR 350K with max 8 guests.
+          </li>
+          <li>
+            <strong>Best for cultural depth in town:</strong> Casa Luna — long-running school with themed classes.
+          </li>
+          <li>
+            <strong>Best village-home vibe:</strong> Paon Bali — home kitchen setting with market tour.
+          </li>
+          <li>
+            <strong>Best individual stations:</strong> Ketut&apos;s — strong ratings and own cooking stations.
+          </li>
+        </ul>
+        <p className="text-sm text-stone-500">
+          Journalists and bloggers: see our{' '}
+          <Link href="/press" className="text-orange-600 font-semibold underline">
+            press &amp; media kit
+          </Link>{' '}
+          for a fact sheet and story angles. Related guides:{' '}
+          <Link href="/blog/best-cooking-class-in-ubud" className="text-orange-600 font-semibold underline">
+            best cooking class in Ubud
+          </Link>
+          .
+        </p>
+      </section>
+
       {/* Comparison Table */}
       <section id="comparison" className="py-12 px-4 max-w-6xl mx-auto">
         <h2 className="text-3xl font-black tracking-tight text-center mb-3">Feature Comparison</h2>
