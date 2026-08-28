@@ -123,14 +123,14 @@ export default async function Page() {
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white">
       {/* Navigation */}
       <nav className="fixed w-full z-50 top-0 transition-all duration-300 bg-white dark:bg-zinc-950 border-b border-stone-200 dark:border-zinc-800">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3 shrink-0 min-w-0 z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center gap-4 xl:gap-6">
+          <div className="flex items-center gap-3 shrink-0 min-w-0">
             <div className="relative w-10 h-10 overflow-hidden rounded-md border-2 border-orange-200 dark:border-orange-900/30 shrink-0">
               <Image src="/images/logo.jpg" alt="Tumang Bali Logo" fill className="object-cover" />
             </div>
             <div className="text-lg sm:text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500 truncate">TUMANG BALI</div>
           </div>
-          <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-3 xl:gap-5 font-medium text-[11px] xl:text-sm tracking-wide whitespace-nowrap">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-5 font-medium text-[11px] xl:text-xs 2xl:text-sm tracking-wide whitespace-nowrap">
             <a href="#classes" className="hover:text-orange-500 transition-colors">CLASSES</a>
             <a href="#itinerary" className="hover:text-orange-500 transition-colors">ITINERARY</a>
             <a href="#menu" className="hover:text-orange-500 transition-colors">MENU</a>
@@ -142,7 +142,7 @@ export default async function Page() {
             <a href="#faq" className="hover:text-orange-500 transition-colors">FAQ</a>
             <a href="#location" className="hover:text-orange-500 transition-colors">LOCATION</a>
           </div>
-          <div className="flex items-center gap-3 shrink-0 z-10">
+          <div className="flex items-center gap-3 shrink-0 ml-auto">
             <BookButton className="hidden sm:inline-flex cursor-pointer bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-transform hover:scale-105 active:scale-95 text-sm md:text-base">
               Book Now
             </BookButton>
