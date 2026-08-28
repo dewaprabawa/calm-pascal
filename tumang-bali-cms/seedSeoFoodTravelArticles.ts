@@ -2,6 +2,7 @@ import { getPayload } from 'payload'
 import configPromise from './src/payload.config'
 import fs from 'fs'
 import path from 'path'
+import { pathToFileURL } from 'url'
 
 // Idempotent: skips article slugs that already exist.
 // Run with: npx tsx --env-file=.env seedSeoFoodTravelArticles.ts
@@ -97,7 +98,7 @@ const root = (children: LexNode[]): LexNode => ({
   },
 })
 
-const articles: ArticleSeed[] = [
+export const articles: ArticleSeed[] = [
   {
     slug: 'best-cooking-class-in-ubud',
     title: 'Best Cooking Class in Ubud (2026) — How to Choose the Right One',
@@ -730,7 +731,12 @@ async function seed() {
   process.exit(0)
 }
 
-seed().catch((err) => {
-  console.error(err)
-  process.exit(1)
-})
+const isDirectRun =
+  process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href
+
+if (isDirectRun) {
+  seed().catch((err) => {
+    console.error(err)
+    process.exit(1)
+  })
+}
