@@ -9,14 +9,12 @@ export const maxDuration = 300
 
 function isAuthorized(request: NextRequest): boolean {
   const configured = process.env.SEED_ARTICLES_KEY
+  if (!configured) return false
   const key =
     request.headers.get('x-seed-key') ||
     request.nextUrl.searchParams.get('key') ||
     request.headers.get('authorization')?.replace(/^Bearer\s+/i, '')
-
-  if (configured) return key === configured
-  // One-time fallback when SEED_ARTICLES_KEY is not set on Vercel yet.
-  return key === 'tumang-seo-seed-aug28-2026'
+  return key === configured
 }
 
 export async function POST(request: NextRequest) {
