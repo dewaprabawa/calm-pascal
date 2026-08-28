@@ -11,9 +11,9 @@ export const revalidate = 60
 export const metadata: Metadata = buildPageMetadata({
   title: 'Cooking Class Ubud — Balinese Cooking with Local Chefs',
   description:
-    'Book the best cooking class in Ubud — morning market tour, rice field walk, 10+ traditional dishes, and hands-on cooking with local Balinese chefs in Tumang village.',
+    'Book the best cooking class in Ubud — morning market tour, rice-field walk, 10+ traditional dishes, and hands-on cooking with local chefs. From IDR 350K. Free hotel pickup.',
   path: '/balinese-cooking-class-ubud',
-  ogTitle: 'Cooking Class Ubud — Authentic Balinese Cooking Class',
+  ogTitle: 'Cooking Class Ubud — Authentic Balinese Class | TripAdvisor 2026',
   image: '/images/gallery-group.jpg',
   imageAlt: 'Cooking class in Ubud Bali with local chefs',
 })

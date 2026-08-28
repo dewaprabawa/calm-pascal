@@ -9,9 +9,9 @@ import { halfDayClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Half-Day Cooking Class in Bali',
+  title: 'Half-Day Cooking Class Ubud — Market Tour & 10 Dishes',
   description:
-    'Half-day Balinese cooking class in Ubud, Bali. Market tour, rice-field walk & 10+ dishes in 4-5 hours. Morning or afternoon sessions. Hotel pickup included.',
+    'Half-day cooking class in Ubud, Bali — 4 hours with market tour, rice-field walk and 10+ traditional dishes. Morning or afternoon. Free hotel pickup from IDR 350K.',
   path: '/half-day-cooking-class-bali',
   ogTitle: 'Half-Day Cooking Class in Bali',
   image: '/images/gallery-satay.jpg',

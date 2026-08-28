@@ -581,50 +581,73 @@ export const cookingClassBali: ClassLandingContent = {
 
 export const balineseCookingClassUbud: ClassLandingContent = {
   path: '/balinese-cooking-class-ubud',
-  eyebrow: 'Balinese Cooking Class in Ubud',
-  h1: 'Balinese Cooking Class in Ubud — Traditional Cooking with Local Chefs',
-  h1Plain: 'Balinese Cooking Class in Ubud — Traditional Cooking with Local Chefs',
+  eyebrow: 'Cooking Class Ubud · TripAdvisor Travelers\' Choice 2026',
+  h1: 'Cooking Class Ubud — Balinese Cooking with Local Chefs',
+  h1Plain: 'Cooking Class Ubud — Balinese Cooking with Local Chefs',
   intro:
-    'A traditional Balinese cooking class in Ubud is an unforgettable experience. Learn 10+ authentic dishes from scratch, grind your own spice paste, tour a morning market, and eat your creations in a village kitchen surrounded by rice paddies.',
+    'Book the best cooking class in Ubud — morning market tour, rice-field walk, hands-on cooking of 10+ traditional dishes, and a shared feast with local chefs in Tumang village. Free hotel pickup. Vegetarian friendly. From IDR 350K per person.',
   heroImage: '/images/gallery-group.jpg',
-  heroImageAlt: 'Traditional Balinese cooking class in Ubud — group cooking in a village kitchen',
+  heroImageAlt: 'Cooking class in Ubud Bali — guests learning Balinese cooking with local chefs',
   body: [
     {
-      heading: 'What a Balinese cooking class in Ubud includes',
+      heading: 'What is included in our Ubud cooking class',
       paragraphs: [
-        'Our class starts with a visit to the local Ubud morning market, where your guide teaches you about local produce and spices. Then you walk through the rice paddies to our village kitchen, where Chef Wayan and the team prepare everything you will cook.',
-        'Over roughly four hours you will grind the Base Genep spice paste, prepare 10+ dishes, and sit down to eat a full Balinese meal with your new friends. The class is led entirely by local Balinese chefs using traditional techniques.',
+        'Our cooking class in Ubud starts at the local morning market, where your guide explains Balinese ingredients you will cook with that day. You then walk through rice paddies to our village kitchen in Tumang, where Chef Wayan and the team guide you step by step.',
+        'Over roughly four hours you grind Base Genep spice paste by hand, prepare 10+ authentic dishes, and sit down to eat everything you made. Every guest receives a printed recipe booklet to take home.',
       ],
     },
     {
-      heading: 'Why cooking with local chefs matters',
+      heading: 'Ubud cooking class price (2026)',
       paragraphs: [
-        'When you cook with local chefs, you are learning the recipes that have been passed down through generations. You will not find these dishes in tourist guidebooks or cookbooks — they are the everyday food of Balinese families, served at celebrations and at the family table.',
-        'Chef Wayan has been teaching cooking classes for over ten years. He speaks fluent English, is patient with beginners, and loves sharing the stories behind each dish.',
+        'Shared morning or afternoon class: IDR 350,000 per person (includes market tour, cooking, lunch or dinner, pickup, and recipes). Private class for one person: IDR 650,000. Kids rate: IDR 550,000. See our full price guide for details on what is included and how we compare to other Ubud cooking classes.',
+      ],
+    },
+    {
+      heading: 'Why travelers choose Tumang Bali for a cooking class in Ubud',
+      paragraphs: [
+        'Unlike demo-style classes in town, ours is 100% hands-on in a real Balinese village. You cook with local family chefs, not tour-bus instructors. Small groups (max 8), real market tour, and rice-field setting — the experience food travelers and couples consistently rate five stars on TripAdvisor.',
       ],
     },
   ],
   sellingPoints: [
-    { title: 'Local Balinese Chefs', description: 'Recipes passed down through generations, not tourist shortcuts.' },
-    { title: 'Morning Market + Rice Field Walk', description: 'A full cultural immersion before you even start cooking.' },
-    { title: '10+ Authentic Dishes', description: 'Sate Ayam, Pepes Ikan, Ayam Betutu, and more — all from scratch.' },
+    { title: 'IDR 350K All-Inclusive', description: 'Market tour, 10+ dishes, meal, pickup, and recipe booklet included.' },
+    { title: 'Morning Market + Rice Fields', description: 'A full cultural immersion before you even start cooking.' },
+    { title: 'Local Balinese Chefs', description: 'Chef Wayan — 10+ years teaching, fluent English, patient with beginners.' },
   ],
+  pricing: {
+    adultLabel: 'Shared class (morning or afternoon)',
+    adultPrice: 'IDR 350K',
+    kidsLabel: 'Kids (8+)',
+    kidsPrice: 'IDR 550K',
+    note: 'Private class for 1 person: IDR 650K. Complimentary pickup from Ubud hotels.',
+  },
   faqs: [
+    {
+      question: 'What is the best cooking class in Ubud?',
+      answer:
+        'The best cooking class in Ubud includes a real morning market tour, hand-ground spice paste, 10+ dishes cooked from scratch, small groups, and a village setting — not a hotel demo kitchen. Tumang Bali offers all of this with complimentary hotel pickup from IDR 350K.',
+    },
+    {
+      question: 'How much does a cooking class in Ubud cost?',
+      answer:
+        'Our shared Ubud cooking class is IDR 350,000 per person in 2026, including market tour, all ingredients, the full meal, hotel pickup, and a recipe booklet. Private class for one person is IDR 650,000; kids are IDR 550,000.',
+    },
     {
       question: 'Where exactly is the cooking class held in Ubud?',
       answer: 'We are located in Tumang village, about 30 minutes from Ubud centre. We provide complimentary hotel pickup from any hotel in the Ubud area.',
     },
     {
-      question: 'What is Base Genep spice paste?',
-      answer: 'Base Genep is the complete Balinese spice paste — the foundation of nearly every savoury Balinese dish. It is made from turmeric, galangal, shallots, shrimp paste, bird\'s-eye chillies and other spices, ground fresh by hand.',
+      question: 'Is this cooking class good for couples?',
+      answer:
+        'Yes — couples love the shared cooking and dining experience overlooking the rice fields. It is romantic, hands-on, and a memorable date activity in Ubud. Book the morning class for the market tour or the afternoon class for a sunset dinner feast.',
     },
     {
-      question: 'Is the Balinese cooking class suitable for children?',
-      answer: 'Yes — children aged 8 and above are very welcome. It is a fun, hands-on family activity, and the chefs are experienced in working with young guests.',
+      question: 'Is the cooking class suitable for beginners and children?',
+      answer: 'No experience needed. Chefs guide you step by step. Children aged 8+ are welcome. Vegetarian and vegan menus available on request.',
     },
   ],
-  ctaHeading: 'Book a Balinese Class in Ubud',
-  ctaSubtext: 'Market tour, rice-field walk, 10+ dishes, local chefs — a full day of authentic Balinese cooking.',
+  ctaHeading: 'Book Your Cooking Class in Ubud',
+  ctaSubtext: 'Market tour · 10+ dishes · local chefs · IDR 350K — TripAdvisor Travelers\' Choice 2026.',
 }
 
 export const tumpengMakingClass: ClassLandingContent = {

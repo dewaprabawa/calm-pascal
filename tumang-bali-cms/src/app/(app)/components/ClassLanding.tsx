@@ -4,6 +4,13 @@ import Link from 'next/link'
 import BookButton from './BookButton'
 import BookingModal, { ActivityOption } from './BookingModal'
 import WhatsAppFloat from './WhatsAppFloat'
+import { PRIMARY_COOKING_CLASS_PATH, SITE } from '@/lib/seoMetadata'
+import {
+  buildLandingBreadcrumb,
+  buildLandingCourseSchema,
+  buildLandingFaqSchema,
+  buildLandingLocalBusinessRef,
+} from '@/lib/landingPageSchema'
 
 export type FaqItem = { question: string; answer: string }
 export type SellingPoint = { title: string; description: string }
@@ -33,8 +40,6 @@ export type ClassLandingContent = {
   }
 }
 
-import { PRIMARY_COOKING_CLASS_PATH, SITE } from '@/lib/seoMetadata'
-
 export default function ClassLanding({
   content,
   activities,
@@ -42,27 +47,15 @@ export default function ClassLanding({
   content: ClassLandingContent
   activities: ActivityOption[]
 }) {
-  const breadcrumb = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
-      { '@type': 'ListItem', position: 2, name: content.h1Plain, item: `${SITE}${content.path}` },
-    ],
-  }
-
-  const faqSchema =
-    content.faqs.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: content.faqs.map((f) => ({
-            '@type': 'Question',
-            name: f.question,
-            acceptedAnswer: { '@type': 'Answer', text: f.answer },
-          })),
-        }
-      : null
+  const breadcrumb = buildLandingBreadcrumb(content.h1Plain, content.path)
+  const faqSchema = buildLandingFaqSchema(content.faqs)
+  const courseSchema = buildLandingCourseSchema({
+    name: content.h1Plain,
+    description: content.intro,
+    pagePath: content.path,
+    priceIdr: content.path === PRIMARY_COOKING_CLASS_PATH ? 350000 : undefined,
+  })
+  const localBusinessSchema = buildLandingLocalBusinessRef(content.path, content.h1Plain)
 
 
   return (
@@ -195,6 +188,33 @@ export default function ClassLanding({
           </div>
         )}
 
+        {content.path === PRIMARY_COOKING_CLASS_PATH && (
+          <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 rounded-3xl p-6 md:p-8 mt-8">
+            <p className="text-sm font-bold uppercase tracking-wider text-orange-600 mb-4">Plan your Ubud cooking class</p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/blog/ubud-cooking-class-price" className="text-sm font-semibold text-orange-600 hover:underline">
+                Ubud cooking class price 2026
+              </Link>
+              <span className="text-stone-300">·</span>
+              <Link href="/blog/morning-vs-afternoon-tours-bali" className="text-sm font-semibold text-orange-600 hover:underline">
+                Morning vs afternoon class
+              </Link>
+              <span className="text-stone-300">·</span>
+              <Link href="/blog/cooking-class-ubud-for-couples" className="text-sm font-semibold text-orange-600 hover:underline">
+                Cooking class for couples
+              </Link>
+              <span className="text-stone-300">·</span>
+              <Link href="/blog/best-cooking-class-in-ubud" className="text-sm font-semibold text-orange-600 hover:underline">
+                Best cooking class in Ubud
+              </Link>
+              <span className="text-stone-300">·</span>
+              <Link href="/compare-ubud-cooking-classes" className="text-sm font-semibold text-orange-600 hover:underline">
+                Compare Ubud classes
+              </Link>
+            </div>
+          </div>
+        )}
+
         {/* Internal Link Callout */}
         <div className="bg-orange-50 dark:bg-orange-950/20 border border-orange-200/60 dark:border-orange-900/30 rounded-3xl p-6 md:p-8 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-stone-800 dark:text-stone-200 font-medium text-center sm:text-left">
@@ -252,6 +272,8 @@ export default function ClassLanding({
       </footer>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       {faqSchema ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       ) : null}

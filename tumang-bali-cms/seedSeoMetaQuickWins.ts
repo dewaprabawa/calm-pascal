@@ -50,6 +50,36 @@ const META_UPDATES: { slug: string; metaTitle: string; metaDescription: string }
     metaDescription:
       'The best Bali cooking classes include a real market tour and hands-on cooking with local chefs. See why travelers choose Tumang Bali in Ubud village.',
   },
+  {
+    slug: 'ubud-cooking-class-price',
+    metaTitle: 'Ubud Cooking Class Price 2026 — IDR 350K Shared, Private Rates',
+    metaDescription:
+      'How much is a cooking class in Ubud in 2026? Shared class IDR 350K, private IDR 650K, kids IDR 550K. Full inclusions: market tour, 10+ dishes, pickup, recipes.',
+  },
+  {
+    slug: 'morning-vs-afternoon-tours-bali',
+    metaTitle: 'Morning vs Afternoon Cooking Class Ubud — Which to Book?',
+    metaDescription:
+      'Morning class includes market tour and rice-field walk. Afternoon class is cook-and-dine without the market. Compare times, menus, and which suits your Ubud itinerary.',
+  },
+  {
+    slug: 'is-a-bali-cooking-class-worth-it',
+    metaTitle: 'Is a Bali Cooking Class Worth It? Honest 2026 Answer',
+    metaDescription:
+      'Weighing cost vs experience for a Bali cooking class. What you get for IDR 350K, who should book, and when a class is not worth it — honest guide from Tumang Bali.',
+  },
+  {
+    slug: 'what-to-expect-bali-cooking-class',
+    metaTitle: 'What to Expect at a Bali Cooking Class — Full Day Guide',
+    metaDescription:
+      'Step-by-step: market tour, spice grinding, 10+ dishes, and shared feast. What to wear, how long it takes, and what makes Tumang Bali different in Ubud.',
+  },
+  {
+    slug: 'ubud-morning-market-guide',
+    metaTitle: 'Ubud Morning Market Guide — What to See Before Your Cooking Class',
+    metaDescription:
+      'Guide to Ubud\'s traditional morning market — ingredients, spices, and what you will buy before cooking. Pairs with our Balinese cooking class in Tumang village.',
+  },
 ]
 
 async function main() {

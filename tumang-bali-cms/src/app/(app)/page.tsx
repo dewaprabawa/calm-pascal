@@ -770,6 +770,15 @@ export default async function Page() {
                 </div>
               </div>
             </Link>
+            <Link href="/blog/cooking-class-ubud-for-couples" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">05</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class Ubud for Couples</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Romantic date idea — cook and dine together overlooking rice fields.</p>
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/how-bali-cooking-classes-work" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">01</div>

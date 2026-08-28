@@ -35,6 +35,8 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'lawar-balinese-salad-recipe',
   'pepes-ikan-recipe-bali',
   'balinese-vs-indonesian-food',
+  'cooking-class-ubud-for-couples',
+  'morning-vs-afternoon-tours-bali',
 ])
 
 // Static, hand-built routes under (app).
