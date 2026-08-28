@@ -412,7 +412,7 @@ export const articles: ArticleSeed[] = [
       heading('h2', 'Why cooking class guests recognise nasi campur better'),
       paragraph([
         text('In our class you cook several of the sides that appear on nasi campur plates — coconut vegetable salads, sate lilit, sambals, and spice pastes. After that, every warung display looks familiar. See '),
-        link('dishes you cook in a Balinese cooking class', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('dishes you cook in a Balinese cooking class', '/blog/10-dishes-cooking-class'),
         text(' and '),
         link('book a class', '/book-your-cooking-class'),
         text('.'),

@@ -400,7 +400,7 @@ export const articles: ArticleSeed[] = [
       ]),
       paragraph([
         text('Full dish list from our class: '),
-        link('10 dishes you cook in a Balinese cooking class', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('10 dishes you cook in a Balinese cooking class', '/blog/10-dishes-cooking-class'),
         text('.'),
       ]),
       heading('h2', 'Food traveler tips for the Ubud morning market'),
@@ -529,7 +529,7 @@ export const articles: ArticleSeed[] = [
         text('Shared or private — '),
         link('book your cooking class', '/book-your-cooking-class'),
         text('. See all '),
-        link('dishes you will cook', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('dishes you will cook', '/blog/10-dishes-cooking-class'),
         text(' for menu planning your content.'),
       ]),
     ]),

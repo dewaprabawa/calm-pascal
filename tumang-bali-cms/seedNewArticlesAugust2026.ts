@@ -229,7 +229,7 @@ const articles = [
         text('Book a '),
         link('cooking class with market tour', '/cooking-class-with-market-tour-ubud'),
         text(' to buy the coconut and spices yourself, then grill lilit the same morning. Full dish list: '),
-        link('what you cook in class', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('what you cook in class', '/blog/10-dishes-cooking-class'),
         text('.'),
       ]),
     ]),

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import { pageTitle, truncateDescription } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
@@ -32,26 +33,27 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const recipe = await findRecipeBySlug(slug)
-  if (!recipe) return { title: 'Recipe Not Found | Tumang Bali' }
+  if (!recipe) return { title: pageTitle('Recipe Not Found') }
 
-  const title = `${recipe.title} Recipe${recipe.description ? ` (${recipe.description})` : ''} | Tumang Bali`
-  const description =
+  const titleBase = `${recipe.title} Recipe — Balinese Cooking Class`
+  const description = truncateDescription(
     `Authentic ${recipe.title} recipe from our Balinese cooking class in Ubud. ` +
-    `${recipe.description ? recipe.description + '. ' : ''}` +
-    `Real ingredients and step-by-step instructions from local chefs.`
+      `${recipe.description ? `${recipe.description}. ` : ''}` +
+      `Real ingredients and step-by-step instructions from local chefs.`,
+  )
   const img =
     recipe.image && typeof recipe.image === 'object' && 'url' in recipe.image
       ? (recipe.image.url as string)
       : '/images/itinerary/dadar-gulung-close.jpg'
 
-  const trimmedDesc = description.length > 160 ? description.slice(0, 157) + '...' : description
+  const trimmedDesc = description
 
   return {
-    title,
+    title: pageTitle(titleBase),
     description: trimmedDesc,
     alternates: { canonical: `${SITE}/recipes/${slug}` },
     openGraph: {
-      title: title,
+      title: titleBase + ' | Tumang Bali',
       description,
       url: `${SITE}/recipes/${slug}`,
       siteName: 'Tumang Bali Cooking Class',
@@ -158,6 +160,10 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     recipeCategory: recipe.menuType === 'vegetarian' ? 'Vegetarian' : 'Main',
     author: { '@type': 'Organization', name: 'Tumang Bali Cooking Class', url: SITE },
     keywords: `${recipe.title} recipe, balinese recipe, indonesian recipe`,
+    prepTime: 'PT20M',
+    cookTime: 'PT30M',
+    totalTime: 'PT50M',
+    recipeYield: '4 servings',
     recipeIngredient: ingredients
       .map((i) => [i.quantity, i.item].filter(Boolean).join(' ').trim())
       .filter(Boolean),

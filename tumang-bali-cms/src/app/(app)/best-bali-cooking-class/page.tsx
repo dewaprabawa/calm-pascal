@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
@@ -7,22 +8,15 @@ import { bestCookingClass } from '../components/landingContent'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Best Bali Cooking Classes 2026 — Review & Book | Tumang Bali',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Best Bali Cooking Class 2026 — Market Tour & 10 Dishes',
   description:
-    'An honest review and guide to the best Bali cooking classes in 2026. What to look for, what to avoid, and how to choose the right class for your trip.',
-  alternates: { canonical: 'https://tumangbaliclass.com/best-bali-cooking-class' },
-  openGraph: {
-    title: 'Best Bali Cooking Classes 2026 — Review & Book | Tumang Bali',
-    description:
-      'An honest review and guide to the best Bali cooking classes in 2026. What to look for, what to avoid, and how to choose the right class for your trip.',
-    url: 'https://tumangbaliclass.com/best-bali-cooking-class',
-    siteName: 'Tumang Bali Cooking Class',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/images/img1.jpg', width: 1200, height: 630, alt: 'Best Bali cooking class review 2026' }],
-  },
-}
+    'Honest guide to the best Bali cooking class in 2026. Compare market tours, hands-on cooking, and authentic dishes — then book Tumang Bali in Ubud village.',
+  path: '/best-bali-cooking-class',
+  ogTitle: 'Best Bali Cooking Class 2026 — Review & Book in Ubud',
+  image: '/images/img1.jpg',
+  imageAlt: 'Best Bali cooking class review 2026',
+})
 
 export default async function Page() {
   let bookingActivities: any[] = []

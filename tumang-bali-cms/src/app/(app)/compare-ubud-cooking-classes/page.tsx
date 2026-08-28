@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seoMetadata'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getPayload } from 'payload'
@@ -10,29 +11,15 @@ import WhatsAppFloat from '../components/WhatsAppFloat'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Best Cooking Classes in Ubud 2026 — Tumang Bali vs Casa Luna vs Paon vs Ketut\'s',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Best Cooking Classes in Ubud 2026 — Compared & Ranked',
   description:
-    'Honest comparison of the best cooking classes in Ubud: Tumang Bali, Casa Luna, Paon Bali & Ketut\'s. Feature matrix, pricing (as of Aug 2026), group sizes, and who each class is best for.',
-  alternates: { canonical: 'https://tumangbaliclass.com/compare-ubud-cooking-classes' },
-  openGraph: {
-    title: 'Best Cooking Classes in Ubud 2026 — Compared & Ranked',
-    description:
-      'Side-by-side comparison of the top Ubud cooking classes. See features, pricing, group sizes, and unique inclusions to find the best class for you.',
-    url: 'https://tumangbaliclass.com/compare-ubud-cooking-classes',
-    siteName: 'Tumang Bali Cooking Class',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: '/images/gallery-group.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Best cooking classes in Ubud Bali — compared and ranked 2026',
-      },
-    ],
-  },
-}
+    'Honest comparison of the best cooking classes in Ubud: Tumang Bali, Casa Luna, Paon Bali & Ketut\'s. Feature matrix, pricing, group sizes, and who each class is best for.',
+  path: '/compare-ubud-cooking-classes',
+  ogTitle: 'Best Cooking Classes in Ubud 2026 — Compared & Ranked',
+  image: '/images/gallery-group.jpg',
+  imageAlt: 'Best cooking classes in Ubud Bali — compared and ranked 2026',
+})
 
 const SITE = 'https://tumangbaliclass.com'
 

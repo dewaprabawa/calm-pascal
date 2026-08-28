@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
@@ -7,22 +8,15 @@ import { privateClass } from '../components/landingContent'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Private Cooking Class in Ubud | Tumang Bali',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Private Cooking Class in Ubud',
   description:
     'Private Balinese cooking class in Ubud. 1 person IDR 650K, kids IDR 550K. Your own chef, tailored menu, market tour & hotel pickup.',
-  alternates: { canonical: 'https://tumangbaliclass.com/private-cooking-class-ubud' },
-  openGraph: {
-    title: 'Private Cooking Class in Ubud | Tumang Bali',
-    description:
-      'Private Balinese cooking class in Ubud for couples, families & groups. Your own chef, tailored menu, market tour & hotel pickup. Perfect for special occasions.',
-    url: 'https://tumangbaliclass.com/private-cooking-class-ubud',
-    siteName: 'Tumang Bali Cooking Class',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/images/gallery-group.jpg', width: 1200, height: 630, alt: 'Private Balinese cooking class for a group in Ubud' }],
-  },
-}
+  path: '/private-cooking-class-ubud',
+  ogTitle: 'Private Cooking Class in Ubud',
+  image: '/images/gallery-group.jpg',
+  imageAlt: 'Private Balinese cooking class for a group in Ubud',
+})
 
 export default async function Page() {
   let bookingActivities: any[] = []

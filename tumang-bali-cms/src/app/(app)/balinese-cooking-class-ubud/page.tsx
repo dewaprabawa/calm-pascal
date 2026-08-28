@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
@@ -7,20 +8,15 @@ import { balineseCookingClassUbud } from '../components/landingContent'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Balinese Cooking Class in Ubud — Traditional Cooking with Local Chefs | Tumang Bali',
-  description: 'A traditional Balinese cooking class in Ubud with local chefs. Learn 10+ authentic dishes, grind your own spice paste, tour a morning market, and eat in a village kitchen.',
-  alternates: { canonical: 'https://tumangbaliclass.com/balinese-cooking-class-ubud' },
-  openGraph: {
-    title: 'Balinese Cooking Class in Ubud — Traditional Cooking with Local Chefs',
-    description: 'A traditional Balinese cooking class in Ubud with local chefs. Learn 10+ authentic dishes, grind your own spice paste, tour a morning market, and eat in a village kitchen.',
-    url: 'https://tumangbaliclass.com/balinese-cooking-class-ubud',
-    siteName: 'Tumang Bali Cooking Class',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/images/gallery-group.jpg', width: 1200, height: 630, alt: 'Balinese cooking class in Ubud with local chefs' }],
-  },
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Cooking Class Ubud — Balinese Cooking with Local Chefs',
+  description:
+    'Book the best cooking class in Ubud — morning market tour, rice field walk, 10+ traditional dishes, and hands-on cooking with local Balinese chefs in Tumang village.',
+  path: '/balinese-cooking-class-ubud',
+  ogTitle: 'Cooking Class Ubud — Authentic Balinese Cooking Class',
+  image: '/images/gallery-group.jpg',
+  imageAlt: 'Cooking class in Ubud Bali with local chefs',
+})
 
 export default async function Page() {
   let bookingActivities: any[] = []

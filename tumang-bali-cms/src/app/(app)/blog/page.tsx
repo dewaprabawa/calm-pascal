@@ -4,12 +4,11 @@ import Link from 'next/link'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { Metadata } from 'next'
+import { pageTitle, truncateDescription } from '@/lib/seoMetadata'
 
 export const metadata: Metadata = {
-  // The layout template appends " | Tumang Bali Cooking Class Ubud", so keep
-  // this short to avoid duplicating the brand and overrunning the title length.
-  title: 'Ubud Food & Culture Blog',
-  description: 'Planning an authentic Ubud cooking class? Discover traditional recipes, local market tours, and the best Balinese food stories from Tumang Bali Kitchen.',
+  title: pageTitle('Ubud Food & Culture Blog'),
+  description: truncateDescription('Planning an authentic Ubud cooking class? Discover traditional recipes, local market tours, and the best Balinese food stories from Tumang Bali Kitchen.'),
   keywords: ['Balinese cooking blog', 'Ubud cooking class tips', 'Bali food stories', 'Balinese recipes', 'Tumang Bali'],
   alternates: { canonical: 'https://tumangbaliclass.com/blog' },
 }

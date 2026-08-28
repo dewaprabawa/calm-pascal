@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
@@ -7,22 +8,15 @@ import { beginnersClass } from '../components/landingContent'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Bali Cooking Class for Beginners — No Experience Needed | Tumang Bali',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Bali Cooking Class for Beginners — No Experience Needed',
   description:
     'Never cooked before? Our Bali cooking class for beginners requires zero experience. Our patient local chefs take you from zero to a full traditional Balinese feast, step by step.',
-  alternates: { canonical: 'https://tumangbaliclass.com/bali-cooking-class-for-beginners' },
-  openGraph: {
-    title: 'Bali Cooking Class for Beginners — No Experience Needed | Tumang Bali',
-    description:
-      'Never cooked before? Our Bali cooking class for beginners requires zero experience. Our patient local chefs take you from zero to a full traditional Balinese feast, step by step.',
-    url: 'https://tumangbaliclass.com/bali-cooking-class-for-beginners',
-    siteName: 'Tumang Bali Cooking Class',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/images/img3.jpg', width: 1200, height: 630, alt: 'Bali cooking class for beginners' }],
-  },
-}
+  path: '/bali-cooking-class-for-beginners',
+  ogTitle: 'Bali Cooking Class for Beginners — No Experience Needed',
+  image: '/images/img3.jpg',
+  imageAlt: 'Bali cooking class for beginners',
+})
 
 export default async function Page() {
   let bookingActivities: any[] = []

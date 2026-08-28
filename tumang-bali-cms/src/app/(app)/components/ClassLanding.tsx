@@ -33,7 +33,7 @@ export type ClassLandingContent = {
   }
 }
 
-const SITE = 'https://tumangbaliclass.com'
+import { PRIMARY_COOKING_CLASS_PATH, SITE } from '@/lib/seoMetadata'
 
 export default function ClassLanding({
   content,
@@ -50,6 +50,19 @@ export default function ClassLanding({
       { '@type': 'ListItem', position: 2, name: content.h1Plain, item: `${SITE}${content.path}` },
     ],
   }
+
+  const faqSchema =
+    content.faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: content.faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer },
+          })),
+        }
+      : null
 
 
   return (
@@ -168,6 +181,20 @@ export default function ClassLanding({
           </div>
         ))}
 
+        {content.path !== PRIMARY_COOKING_CLASS_PATH && (
+          <div className="bg-stone-100 dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 rounded-3xl p-6 md:p-8 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-stone-800 dark:text-stone-200 font-medium text-center sm:text-left">
+              Ready to book? Our main cooking class in Ubud includes the market tour, rice-field walk, and 10+ dishes.
+            </p>
+            <Link
+              href={PRIMARY_COOKING_CLASS_PATH}
+              className="inline-flex bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-full text-sm shadow-md transition-all hover:-translate-y-0.5 whitespace-nowrap"
+            >
+              View Cooking Class Ubud
+            </Link>
+          </div>
+        )}
+
         {/* Internal Link Callout */}
         <div className="bg-orange-50 dark:bg-orange-950/20 border border-orange-200/60 dark:border-orange-900/30 rounded-3xl p-6 md:p-8 mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-stone-800 dark:text-stone-200 font-medium text-center sm:text-left">
@@ -205,6 +232,10 @@ export default function ClassLanding({
           </BookButton>
           <p className="mt-8 text-sm text-stone-500">
             Explore more:{' '}
+            <Link href={PRIMARY_COOKING_CLASS_PATH} className="text-orange-600 font-semibold underline">
+              our Ubud cooking class
+            </Link>{' '}
+            ·{' '}
             <Link href="/" className="text-orange-600 font-semibold underline">
               full experience &amp; reviews
             </Link>{' '}
@@ -221,6 +252,9 @@ export default function ClassLanding({
       </footer>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      {faqSchema ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      ) : null}
 
       <BookingModal activities={activities} />
       <WhatsAppFloat />

@@ -243,6 +243,7 @@ export const bestCookingClass: ClassLandingContent = {
       heading: 'How we compare',
       paragraphs: [
         'When evaluating Bali cooking classes, the key factors are: market tour inclusion (not just a walk past stalls), authenticity of the spice paste (pre-ground vs hand-ground), number of dishes prepared (most classes do 4–5; we do 10+), group size (smaller groups = more personal instruction), and whether you actually eat what you cook. Tumang Bali checks every box.',
+        'For the full hands-on experience — market tour, rice-field walk, and cooking with local chefs — see our primary Ubud cooking class page.',
       ],
     },
   ],
@@ -551,6 +552,7 @@ export const cookingClassBali: ClassLandingContent = {
       heading: 'Morning or afternoon — which class is right for you?',
       paragraphs: [
         'The morning class starts at 8 AM and includes a full market tour (the highlight for most guests). The afternoon class starts at 2 PM and is perfect if you want to explore Ubud or do another activity in the morning. Both classes include the full cooking experience.',
+        'Ready to book? Our main cooking class in Ubud includes everything above — visit the dedicated class page for prices, schedule, and booking.',
       ],
     },
   ],

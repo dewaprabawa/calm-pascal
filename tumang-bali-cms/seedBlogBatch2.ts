@@ -139,7 +139,7 @@ const articles: ArticleDef[] = [
       heading('h2', 'What to serve it with'),
       paragraph([
         text('Sambal matah is brilliant with grilled fish, '),
-        link('chicken or tempe satay', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('chicken or tempe satay', '/blog/10-dishes-cooking-class'),
         text(', rice, or simply spooned over anything that needs a lift. It’s a staple of our '),
         link('vegetarian cooking class', '/vegetarian-cooking-class-ubud'),
         text(' too. Want to make it alongside a full Balinese spread? Join a '),

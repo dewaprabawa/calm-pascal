@@ -139,7 +139,7 @@ const articles: ArticleDef[] = [
         text(
           ' starts right here — you pick the ingredients, then cook them. Curious what comes next? Read about ',
         ),
-        link('the dishes you’ll cook', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('the dishes you’ll cook', '/blog/10-dishes-cooking-class'),
         text('.'),
       ]),
     ]),
@@ -337,7 +337,7 @@ const articles: ArticleDef[] = [
         text('Dadar gulung is on the menu in our classes, including the '),
         link('vegetarian cooking class', '/vegetarian-cooking-class-ubud'),
         text(' (easily made vegan). See '),
-        link('all the dishes you’ll cook', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('all the dishes you’ll cook', '/blog/10-dishes-cooking-class'),
         text(' for the full spread.'),
       ]),
     ]),

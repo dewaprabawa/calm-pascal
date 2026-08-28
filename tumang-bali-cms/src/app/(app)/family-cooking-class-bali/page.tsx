@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
@@ -7,22 +8,15 @@ import { familyCookingClass } from '../components/landingContent'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Family Cooking Class in Bali — Kids Welcome, Ages 4+ | Tumang Bali',
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Family Cooking Class in Bali — Kids Welcome, Ages 4+',
   description:
     'Bali cooking class for families with children aged 4+. Hands-on, kid-friendly Balinese cooking in Ubud with market tour, rice field walk & 10+ dishes. Private options available.',
-  alternates: { canonical: 'https://tumangbaliclass.com/family-cooking-class-bali' },
-  openGraph: {
-    title: 'Family Cooking Class in Bali — Kids Welcome, Ages 4+',
-    description:
-      'Bali cooking class for families with children aged 4+. Hands-on, kid-friendly Balinese cooking in Ubud with market tour, rice field walk & 10+ dishes. Private options available.',
-    url: 'https://tumangbaliclass.com/family-cooking-class-bali',
-    siteName: 'Tumang Bali Cooking Class',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/images/gallery-group.jpg', width: 1200, height: 630, alt: 'Family cooking class in Bali — kids and parents cooking together in Ubud' }],
-  },
-}
+  path: '/family-cooking-class-bali',
+  ogTitle: 'Family Cooking Class in Bali — Kids Welcome, Ages 4+',
+  image: '/images/gallery-group.jpg',
+  imageAlt: 'Family cooking class in Bali — kids and parents cooking together in Ubud',
+})
 
 export default async function Page() {
   let bookingActivities: any[] = []

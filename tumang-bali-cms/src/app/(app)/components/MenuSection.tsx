@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { recipeSlug } from '@/lib/recipeSlug'
 
 export default function MenuSection({ recipes }: { recipes: any[] }) {
   const [selectedRecipe, setSelectedRecipe] = useState<any | null>(null);
@@ -44,6 +46,13 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
                   <div className="p-6">
                     <h4 className="font-bold text-stone-900 dark:text-white text-lg leading-tight group-hover:text-green-600 transition-colors">{item.title}</h4>
                     <p className="text-sm text-stone-500 dark:text-stone-400 mt-2 line-clamp-3">{item.description}</p>
+                    <Link
+                      href={`/recipes/${recipeSlug(item.title)}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex mt-4 text-sm font-semibold text-orange-600 hover:text-orange-700"
+                    >
+                      View full recipe →
+                    </Link>
                   </div>
                 </div>
               )})}
@@ -70,6 +79,13 @@ export default function MenuSection({ recipes }: { recipes: any[] }) {
                   <div className="p-6">
                     <h4 className="font-bold text-stone-900 dark:text-white text-lg leading-tight group-hover:text-emerald-600 transition-colors">{item.title}</h4>
                     <p className="text-sm text-stone-500 dark:text-stone-400 mt-2 line-clamp-3">{item.description}</p>
+                    <Link
+                      href={`/recipes/${recipeSlug(item.title)}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex mt-4 text-sm font-semibold text-orange-600 hover:text-orange-700"
+                    >
+                      View full recipe →
+                    </Link>
                   </div>
                 </div>
               )})}

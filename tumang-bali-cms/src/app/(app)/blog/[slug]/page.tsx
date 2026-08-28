@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { Metadata } from 'next'
+import { pageTitle, truncateDescription } from '@/lib/seoMetadata'
 import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 
 export const revalidate = 60
@@ -35,22 +36,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!article) return { title: 'Not Found' }
 
   const rawTitle = (article.meta?.title as string) || article.title
-  // Ensure the brand suffix is present exactly once and trim if too long
-  const noSuffix = rawTitle.endsWith('| Tumang Bali')
-    ? rawTitle.slice(0, -15)  // remove the existing suffix
-    : rawTitle
-  const trimmedTitle = noSuffix.length > 65 ? noSuffix.slice(0, 62) + '...' : noSuffix
-  const finalTitle = trimmedTitle + ' | Tumang Bali'
-  const rawDesc = (article.meta?.description as string) || article.excerpt
-  const trimmedDesc = rawDesc.length > 160 ? rawDesc.slice(0, 157) + '...' : rawDesc
+  const noSuffix = rawTitle.replace(/\s*\|\s*Tumang Bali\s*$/i, '').trim()
+  const trimmedDesc = truncateDescription((article.meta?.description as string) || article.excerpt)
   return {
-    title: finalTitle,
+    title: pageTitle(noSuffix),
     description: trimmedDesc,
     alternates: {
       canonical: `${SITE}/blog/${resolvedParams.slug}`,
     },
     openGraph: {
-      title: finalTitle,
+      title: typeof pageTitle(noSuffix) === 'object' ? noSuffix + ' | Tumang Bali' : noSuffix,
       description: trimmedDesc,
       type: 'article',
       publishedTime: article.publishedDate || article.createdAt,
@@ -241,6 +236,25 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           })
         }}
       />
+      {Array.isArray(article.faq) && article.faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: article.faq.map((item: { question: string; answer: string }) => ({
+                '@type': 'Question',
+                name: item.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: item.answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
     </div>
   )
 }

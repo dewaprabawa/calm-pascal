@@ -210,7 +210,7 @@ const articles: ArticleDef[] = [
         text('Grinding Base Genep by hand is the heart of every one of our classes. Join a '),
         link('cooking class with market tour', '/cooking-class-with-market-tour-ubud'),
         text(' to source the ingredients yourself, or read about '),
-        link('the dishes you’ll cook with it', '/blog/dishes-you-cook-balinese-cooking-class'),
+        link('the dishes you’ll cook with it', '/blog/10-dishes-cooking-class'),
         text('.'),
       ]),
     ]),

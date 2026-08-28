@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import { buildPageMetadata } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
@@ -7,20 +8,15 @@ import { bestCookingClassesBali } from '../components/landingContent'
 
 export const revalidate = 60
 
-export const metadata: Metadata = {
-  title: 'Best Cooking Classes in Bali 2026 — Reviewed & Compared | Tumang Bali',
-  description: 'We compared the best cooking classes in Bali so you don\'t have to. An honest review of what to expect, what to avoid, and why Tumang Bali ranks among the best for authentic hands-on Balinese cuisine.',
-  alternates: { canonical: 'https://tumangbaliclass.com/best-cooking-classes-bali' },
-  openGraph: {
-    title: 'Best Cooking Classes in Bali 2026 — Reviewed & Compared',
-    description: 'We compared the best cooking classes in Bali so you don\'t have to. An honest review of what to expect, what to avoid, and why Tumang Bali ranks among the best.',
-    url: 'https://tumangbaliclass.com/best-cooking-classes-bali',
-    siteName: 'Tumang Bali Cooking Class',
-    locale: 'en_US',
-    type: 'website',
-    images: [{ url: '/images/img1.jpg', width: 1200, height: 630, alt: 'Best cooking classes in Bali 2026 — reviewed and compared' }],
-  },
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Best Cooking Classes in Bali 2026 — Reviewed & Compared',
+  description:
+    'We compared the best cooking classes in Bali so you do not have to. See what to look for, how classes rank, and why Tumang Bali leads for authentic hands-on cooking in Ubud village.',
+  path: '/best-cooking-classes-bali',
+  ogTitle: 'Best Cooking Classes in Bali 2026 — Reviewed & Compared',
+  image: '/images/img1.jpg',
+  imageAlt: 'Best cooking classes in Bali 2026 — reviewed and compared',
+})
 
 export default async function Page() {
   let bookingActivities: any[] = []
