@@ -3,24 +3,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
-import MenuSection from './components/MenuSection'
 import ItinerarySection from './components/ItinerarySection'
 import BookButton from './components/BookButton'
 import StructuredData from './components/StructuredData'
-import FAQSection from './components/FAQSection'
-import PickupSchedule from './components/PickupSchedule'
-import LazyGoogleMap from './components/LazyGoogleMap'
+import TripAdvisorWidget from './components/TripAdvisorWidget'
+import TripAdvisorWriteReviewWidget from './components/TripAdvisorWriteReviewWidget'
 import TrackedBookingLink from './components/TrackedBookingLink'
 import dynamic from 'next/dynamic'
 import { sortActivities } from '@/lib/sortActivities'
 
-// Dynamically import all client-side-only and third-party components
-import MobileMenu from './components/MobileMenu'
-import TripAdvisorWidget from './components/TripAdvisorWidget'
-import TripAdvisorWriteReviewWidget from './components/TripAdvisorWriteReviewWidget'
-import TikTokEmbed from './components/TikTokEmbed'
-
-// Dynamically import heavy interactive modals
+const MobileMenu = dynamic(() => import('./components/MobileMenu'))
+const TikTokEmbed = dynamic(() => import('./components/TikTokEmbed'))
+const MenuSection = dynamic(() => import('./components/MenuSection'))
+const FAQSection = dynamic(() => import('./components/FAQSection'))
+const PickupSchedule = dynamic(() => import('./components/PickupSchedule'))
+const LazyGoogleMap = dynamic(() => import('./components/LazyGoogleMap'))
 const BookingModal = dynamic(() => import('./components/BookingModal'))
 const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'))
 const StatsCounter = dynamic(() => import('./components/StatsCounter'))
@@ -46,7 +43,7 @@ export default async function Page() {
       payload.find({ collection: 'activities', depth: 1 }),
       payload.find({ collection: 'instructors' }),
       payload.find({ collection: 'external-listings', where: { isActive: { equals: true } } }),
-      payload.find({ collection: 'recipes', limit: 100 }),
+      payload.find({ collection: 'recipes', limit: 40 }),
       payload.findGlobal({ slug: 'itinerary', depth: 1 })
     ])
     activities = actRes.docs || []
@@ -243,7 +240,9 @@ export default async function Page() {
       </header>
 
       {/* Animated Stats */}
-      <StatsCounter />
+      <div className="perf-defer">
+        <StatsCounter />
+      </div>
 
       {/* Spice Paste Promotion Banner */}
       <section className="px-6 max-w-7xl mx-auto mb-16">
@@ -297,7 +296,7 @@ export default async function Page() {
                       src={imgPath} 
                       alt={activity.title} 
                       fill 
-                      sizes="(max-width: 768px) 100vw, 600px"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
                       loading="lazy"
                       className="object-cover group-hover:scale-105 transition-transform duration-700" 
                     />
@@ -435,10 +434,12 @@ export default async function Page() {
       <ItinerarySection steps={itinerary?.steps as any} />
 
       {/* Pickup Schedule */}
-      <PickupSchedule />
+      <div className="perf-defer">
+        <PickupSchedule />
+      </div>
 
       {/* Visual Gallery / Moments Section */}
-      <section className="py-24 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800 overflow-hidden">
+      <section className="perf-defer py-24 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center mb-16 text-center">
             <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider">Photo Gallery</span>
@@ -453,7 +454,8 @@ export default async function Page() {
                 src="/images/cooking-stirfry.jpg" 
                 alt="Stir Frying Ingredients" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -470,7 +472,8 @@ export default async function Page() {
                 src="/images/dining-table.jpg" 
                 alt="Guests Dining" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -487,7 +490,8 @@ export default async function Page() {
                 src="/images/group-shrine.jpg" 
                 alt="Group in Rice Fields" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -504,7 +508,8 @@ export default async function Page() {
                 src="/images/group-brochures.jpg" 
                 alt="Chef and Guests with Certificates" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -521,7 +526,8 @@ export default async function Page() {
                 src="/images/gallery-satay.jpg" 
                 alt="Grilling Satay" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -538,7 +544,8 @@ export default async function Page() {
                 src="/images/bali-cooking-class-dadar-gulung.jpg" 
                 alt="Balinese Dessert Dadar Gulung in Cooking Class" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -555,7 +562,8 @@ export default async function Page() {
                 src="/images/ubud-cooking-class-chopping-ingredients.jpg" 
                 alt="Tourists Chopping Fresh Ingredients in Ubud Cooking Class" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -572,7 +580,8 @@ export default async function Page() {
                 src="/images/traditional-balinese-cooking-class-stir-fry.jpg" 
                 alt="Traditional Balinese Cooking Class Stir Fry" 
                 fill 
-                sizes="(max-width: 768px) 100vw, 250px"
+                sizes="(max-width: 768px) 50vw, 250px"
+                loading="lazy"
                 className="object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6" />
@@ -619,7 +628,9 @@ export default async function Page() {
       </section>
 
       {/* Menu / Recipes */}
-      <MenuSection recipes={recipes} />
+      <div className="perf-defer">
+        <MenuSection recipes={recipes} />
+      </div>
 
       {/* Instructors */}
       <section id="instructors" className="py-24 bg-stone-100 dark:bg-zinc-900">
@@ -692,7 +703,7 @@ export default async function Page() {
       </section>
 
       {/* From Our Blog — internal links for orphan pages */}
-      <section className="py-24 px-6 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800">
+      <section className="perf-defer py-24 px-6 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-16 text-center">
             <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Explore More</span>
@@ -812,10 +823,12 @@ export default async function Page() {
       </section>
 
       {/* FAQ Section */}
-      <FAQSection />
+      <div className="perf-defer">
+        <FAQSection />
+      </div>
 
       {/* Location */}
-      <section id="location" className="py-24 px-6 max-w-7xl mx-auto">
+      <section id="location" className="perf-defer py-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Find Us</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Join us in the heart of Bali. We are located at Warung Tumang Bali.</p>
@@ -945,14 +958,14 @@ export default async function Page() {
            
            <div className="flex flex-wrap justify-center gap-6 mt-2 pt-8 border-t border-stone-100 dark:border-zinc-800 w-full">
              <TrackedBookingLink href="https://www.getyourguide.com/-s775245" channel="getyourguide" linkLabel="Homepage — GYG badge 1" className="hover:opacity-90 transition-opacity">
-               <img src="https://gyg.me/DFO5LFuz" width={160} style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Cooking Class" />
+               <img src="https://gyg.me/DFO5LFuz" width={160} height={160} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Cooking Class" />
              </TrackedBookingLink>
              <TrackedBookingLink href="https://www.getyourguide.com/-s775245" channel="getyourguide" linkLabel="Homepage — GYG badge 2" className="hover:opacity-90 transition-opacity">
-               <img src="https://gyg.me/kUtga42u" width={160} style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Cooking Class" />
+               <img src="https://gyg.me/kUtga42u" width={160} height={57} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Cooking Class" />
              </TrackedBookingLink>
              <TrackedBookingLink href="https://www.getyourguide.com/ubud-l32246/ubud-balinese-cooking-class-with-rice-terrace-walk-t1384252/" channel="getyourguide" linkLabel="Homepage — GYG rice terrace walk" className="hover:opacity-90 transition-opacity">
                <div style={{ position: "relative", width: "fit-content" }}>
-                 <img src="https://gyg.me/pQw3KK9K" width={160} style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Ubud: Balinese Cooking Class with Rice Terrace Walk"/>
+                 <img src="https://gyg.me/pQw3KK9K" width={160} height={160} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Ubud: Balinese Cooking Class with Rice Terrace Walk"/>
                  <p style={{ position: "absolute", fontSize: "0.5rem", fontWeight: 500, color: "#000000", fontFamily: "Arial, sans-serif", zIndex: 999, margin: "0 auto", right: "0.2rem", top: "0.2rem", width: "60%" }}>
                    Ubud: Balinese Cooking Class with Rice Terrace Walk
                  </p>

@@ -94,7 +94,7 @@ const nextConfig: NextConfig = {
     '/api/recipes/download-pdf': ['./node_modules/pdfkit/js/data/**'],
   },
   images: {
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 86400,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     remotePatterns: [
       {

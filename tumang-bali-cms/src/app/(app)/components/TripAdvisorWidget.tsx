@@ -1,7 +1,3 @@
-'use client'
-
-import React from 'react'
-
 const TRIPADVISOR_URL =
   'https://www.tripadvisor.co.id/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html'
 

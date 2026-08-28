@@ -1,5 +1,3 @@
-'use client'
-
 const TRIPADVISOR_REVIEW_URL =
   'https://www.tripadvisor.com/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html'
 

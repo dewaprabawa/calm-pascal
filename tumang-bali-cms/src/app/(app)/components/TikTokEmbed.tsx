@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const TIKTOK_VIDEO_ID = '7368745244579335441'
-const POSTER_SRC = '/images/gallery-girls.jpg'
+const POSTER_SRC = '/images/gallery-girls.jpg.webp'
 
 export default function TikTokEmbed() {
   const [loaded, setLoaded] = useState(false)
@@ -21,7 +21,7 @@ export default function TikTokEmbed() {
           src={POSTER_SRC}
           alt="Guests enjoying a Balinese cooking class feast in Ubud"
           fill
-          priority
+          loading="lazy"
           sizes="(max-width: 768px) 90vw, 384px"
           className="object-cover"
         />

@@ -37,6 +37,12 @@ body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
+/* Skip rendering below-the-fold sections until they enter the viewport */
+.perf-defer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
 /* Keep Bokun checkout overlay above the site booking modal */
 #bokun-modal-container,
 #bokun-widgets-cart-wrapper {
