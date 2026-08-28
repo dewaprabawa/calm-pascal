@@ -200,8 +200,16 @@ export default function ClassLanding({
                 Morning vs afternoon class
               </Link>
               <span className="text-stone-300">·</span>
+              <Link href="/blog/cooking-class-ubud-guide-2026" className="text-sm font-semibold text-orange-600 hover:underline">
+                Cooking class Ubud guide
+              </Link>
+              <span className="text-stone-300">·</span>
               <Link href="/blog/cooking-class-ubud-for-couples" className="text-sm font-semibold text-orange-600 hover:underline">
                 Cooking class for couples
+              </Link>
+              <span className="text-stone-300">·</span>
+              <Link href="/blog/ubud-cooking-class-for-families" className="text-sm font-semibold text-orange-600 hover:underline">
+                Family cooking class
               </Link>
               <span className="text-stone-300">·</span>
               <Link href="/blog/best-cooking-class-in-ubud" className="text-sm font-semibold text-orange-600 hover:underline">
