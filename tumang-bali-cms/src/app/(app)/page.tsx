@@ -799,6 +799,24 @@ export default async function Page() {
                 </div>
               </div>
             </Link>
+            <Link href="/blog/vegetarian-cooking-class-ubud-guide" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">08</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Vegetarian Cooking Class Ubud</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Full plant-based Balinese menu — not a side salad. Vegan options available.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/morning-cooking-class-ubud-market-tour" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">09</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Morning Class + Market Tour</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The classic Ubud morning session — market, rice fields, 10+ dishes, lunch.</p>
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/how-bali-cooking-classes-work" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">01</div>
@@ -1089,6 +1107,7 @@ export default async function Page() {
             <Link href="/recipes" className="hover:text-orange-500 transition-colors">Balinese Recipes</Link>
             <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
             <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
+            <Link href="/press" className="hover:text-orange-500 transition-colors">Press</Link>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">

@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  title: 'Kelas Memasak Terbaik di Ubud Bali | Tumang Bali',
+  title: 'Kelas Memasak Ubud Bali — Harga IDR 350K | Tumang Bali',
   description:
-    'Kelas memasak Bali autentik di Ubud: tur pasar lokal, jalan-jalan di sawah & memasak langsung 10+ hidangan tradisional. Ramah vegetarian, penjemputan hotel.',
+    'Kelas memasak Bali di Ubud: tur pasar pagi, jalan sawah, masak 10+ hidangan tradisional. Harga IDR 350K, vegetarian, penjemputan hotel gratis. TripAdvisor Travelers\' Choice 2026.',
   alternates: {
     canonical: 'https://tumangbaliclass.com/id',
     languages: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kelas Memasak Bali Autentik di Ubud | Tumang Bali',
     description:
-      'Bergabunglah dengan kelas memasak terbaik di Ubud! Tur pasar + jalan-jalan di sawah + 10+ hidangan. Pilihan vegetarian. Penjemputan hotel termasuk.',
+      'Tur pasar + jalan sawah + 10+ hidangan. Harga IDR 350K. Menu vegetarian. Penjemputan hotel termasuk.',
     url: 'https://tumangbaliclass.com/id',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'id_ID',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: '/images/gallery-group.jpg',
         width: 1200,
         height: 630,
-        alt: 'Kelas Memasak Tumang Bali - Tamu menikmati pengalaman memasak Bali autentik di sawah Ubud',
+        alt: 'Kelas Memasak Tumang Bali di desa dekat Ubud',
       },
     ],
   },
@@ -48,28 +48,56 @@ export const metadata: Metadata = {
 
 const highlights = [
   {
-    title: 'Tur Pasar Lokal | Tumang Bali',
+    title: 'Tur Pasar Lokal',
     description:
-      'Jelajahi pasar pagi tradisional Ubud dan temukan rempah, sayuran, serta bahan segar khas Bali bersama pemandu kami.',
+      'Jelajahi pasar pagi tradisional dan kenali rempah, sayuran, serta bahan segar khas Bali bersama pemandu kami.',
     image: '/images/itinerary/market-fresh.jpg',
   },
   {
-    title: 'Jalan-Jalan di Sawah | Tumang Bali',
+    title: 'Jalan-Jalan di Sawah',
     description:
       'Nikmati jalan santai melewati hamparan sawah hijau dan pelajari cara petani Bali menanam padi sebelum kelas dimulai.',
     image: '/images/itinerary/offerings-detail.jpg',
   },
   {
-    title: 'Kelas Memasak Langsung | Tumang Bali',
+    title: 'Kelas Memasak Langsung',
     description:
       'Pakai celemek dan masak 10+ hidangan Bali tradisional langkah demi langkah bersama chef lokal berpengalaman.',
     image: '/images/itinerary/cooking-table.jpg',
   },
   {
-    title: 'Santap Bersama | Tumang Bali',
+    title: 'Santap Bersama',
     description:
-      'Duduk bersama dan nikmati hidangan yang baru Anda masak dengan pemandangan indah Ubud yang menenangkan.',
+      'Duduk bersama dan nikmati hidangan yang baru Anda masak dengan pemandangan desa Tumang yang menenangkan.',
     image: '/images/itinerary/guest-dessert.jpg',
+  },
+]
+
+const faqs = [
+  {
+    question: 'Berapa harga kelas memasak di Ubud?',
+    answer:
+      'Kelas bersama pagi atau sore: IDR 350.000 per orang (termasuk tur pasar untuk sesi pagi, masak 10+ hidangan, makan, penjemputan hotel Ubud, dan buku resep). Kelas privat 1 orang: IDR 650.000. Anak 8+: IDR 550.000.',
+  },
+  {
+    question: 'Apa perbedaan kelas pagi dan sore?',
+    answer:
+      'Kelas pagi (±08:30–12:30) termasuk tur pasar dan jalan sawah — cocok untuk kunjungan pertama. Kelas sore (±14:30–17:30) fokus tur pasar tetapi tetap masak menu lengkap dan makan malam bersama.',
+  },
+  {
+    question: 'Apakah ada menu vegetarian atau vegan?',
+    answer:
+      'Ya. Kami menyiapkan menu nabati lengkap (bukan sekadar pilihan sampingan). Untuk vegan, beri tahu kami saat pesan agar pasta udang dan bahan hewani diganti.',
+  },
+  {
+    question: 'Di mana lokasi kelas dan apakah ada penjemputan?',
+    answer:
+      'Dapur kami di desa Tumang, sekitar 30 menit dari pusat Ubud. Penjemputan gratis dari hotel di kawasan Ubud. Area lain bisa diatur dengan biaya tambahan.',
+  },
+  {
+    question: 'Apakah cocok untuk pemula dan anak-anak?',
+    answer:
+      'Ya. Tidak perlu pengalaman memasak. Anak usia 8 tahun ke atas dipersilakan. Kelompok kecil maksimal 8 orang agar setiap tamu mendapat panduan langsung dari chef.',
   },
 ]
 
@@ -98,14 +126,52 @@ export default async function IndonesianPage() {
     ]
   }
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  }
+
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Kelas Memasak Bali di Ubud — Tumang Bali',
+    description:
+      'Kelas memasak tradisional Bali dengan tur pasar, jalan sawah, dan 10+ hidangan. Harga dari IDR 350.000.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Tumang Bali Cooking Class',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Ubud',
+        addressRegion: 'Bali',
+        addressCountry: 'ID',
+      },
+      telephone: '+62-822-1013-2418',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: 350000,
+      priceCurrency: 'IDR',
+      availability: 'https://schema.org/InStock',
+      url: 'https://tumangbaliclass.com/book-your-cooking-class',
+    },
+  }
+
   return (
     <div
       lang="id"
       dir="ltr"
       className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white"
     >
-      {/* Navigation */}
       <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('lang','id')" }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+
       <nav className="w-full bg-white dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
         <div className="max-w-5xl mx-auto w-full flex items-center justify-between">
           <Link href="/id" className="flex items-center gap-3">
@@ -116,40 +182,48 @@ export default async function IndonesianPage() {
               TUMANG BALI
             </span>
           </Link>
-          <a
-            href="/"
-            rel="alternate"
-            hrefLang="en"
-            className="text-sm font-semibold text-stone-500 hover:text-orange-500 transition-colors"
-          >
-            English
-          </a>
+          <div className="flex items-center gap-4 text-sm font-semibold">
+            <a href="#harga" className="hidden sm:inline hover:text-orange-500 transition-colors">
+              Harga
+            </a>
+            <a href="#faq" className="hidden sm:inline hover:text-orange-500 transition-colors">
+              FAQ
+            </a>
+            <a
+              href="/"
+              rel="alternate"
+              hrefLang="en"
+              className="text-stone-500 hover:text-orange-500 transition-colors"
+            >
+              English
+            </a>
+          </div>
         </div>
       </nav>
 
-      {/* Hero */}
       <header className="relative pt-20 pb-16 md:pt-28 md:pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 via-stone-50 to-orange-50/30 dark:from-orange-950/20 dark:via-zinc-950 dark:to-orange-900/10 -z-10" />
         <div className="max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-sm font-semibold tracking-wide border border-orange-200 dark:border-orange-900/30 mb-6">
-            Kelas Memasak Bali Autentik di Ubud
+            Kelas Memasak Bali Autentik di Ubud · TripAdvisor 2026
           </div>
           <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6">
-            Rasakan Jiwa{' '}
+            Kelas Memasak di{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-500">
-              Bali
-            </span>
+              Ubud
+            </span>{' '}
+            — Dari IDR 350K
           </h1>
           <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-2xl font-light leading-relaxed mb-8">
-            Selami cita rasa tradisional, bahan-bahan segar dari pasar, dan rahasia kuliner kuno yang
-            diwariskan turun-temurun. Memasak, bersantap, dan berbagi keindahan sawah Ubud.
+            Tur pasar pagi, jalan di sawah, dan masak 10+ hidangan Bali tradisional bersama chef
+            lokal di desa Tumang. Kelompok kecil, ramah vegetarian, penjemputan hotel gratis.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <BookButton className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-transform hover:scale-105 active:scale-95">
               Pesan Sekarang
             </BookButton>
             <a
-              href="https://wa.me/6282210132418"
+              href="https://wa.me/6282210132418?text=Halo%20Tumang%20Bali%2C%20saya%20ingin%20pesan%20kelas%20memasak."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-white/60 hover:bg-white border border-stone-200 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:-translate-y-1"
@@ -160,7 +234,23 @@ export default async function IndonesianPage() {
         </div>
       </header>
 
-      {/* Highlights / Itinerary */}
+      <section className="py-12 px-6 max-w-3xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-4 text-center">
+          Mengapa memilih kelas memasak di Ubud bersama Tumang Bali?
+        </h2>
+        <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
+          Ubud adalah pusat budaya Bali — pasar tradisional, sistem irigasi subak, dan dapur keluarga
+          yang masih menggiling bumbu di cobek. Kelas memasak di desa Tumang (sekitar 30 menit dari
+          pusat Ubud) memberi pengalaman yang jarang didapat di dapur hotel: tur pasar sungguhan,
+          jalan sawah, dan masak 10+ hidangan dari nol termasuk Base Genep.
+        </p>
+        <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+          Cocok untuk pasangan, keluarga dengan anak 8+, wisatawan kuliner, dan pemula. Menu bisa
+          disesuaikan vegetarian atau vegan tanpa biaya tambahan. Setiap tamu membawa pulang buku
+          resep cetak.
+        </p>
+      </section>
+
       <section className="py-16 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2 block">
@@ -195,24 +285,65 @@ export default async function IndonesianPage() {
         </div>
       </section>
 
-      {/* What's included */}
-      <section className="py-16 px-6 bg-white dark:bg-zinc-900 border-y border-stone-200 dark:border-zinc-800">
+      <section id="harga" className="py-16 px-6 bg-white dark:bg-zinc-900 border-y border-stone-200 dark:border-zinc-800">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-center mb-4">
+            Harga Kelas Memasak Ubud 2026
+          </h2>
+          <p className="text-center text-stone-500 mb-10 max-w-2xl mx-auto">
+            Semua harga dalam Rupiah. Termasuk bahan, makan, dan buku resep. Penjemputan hotel Ubud
+            gratis.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                label: 'Kelas Bersama',
+                price: 'IDR 350K',
+                note: 'Pagi atau sore · maks. 8 orang',
+              },
+              {
+                label: 'Anak (8+)',
+                price: 'IDR 550K',
+                note: 'Menu & aktivitas yang sama',
+              },
+              {
+                label: 'Kelas Privat',
+                price: 'IDR 650K',
+                note: '1 orang · dapur eksklusif',
+              },
+            ].map((tier) => (
+              <div
+                key={tier.label}
+                className="rounded-3xl border border-stone-200 dark:border-zinc-800 bg-stone-50 dark:bg-zinc-950 p-8 text-center"
+              >
+                <p className="text-sm font-bold uppercase tracking-wider text-orange-600 mb-2">
+                  {tier.label}
+                </p>
+                <p className="text-3xl font-black mb-2">{tier.price}</p>
+                <p className="text-sm text-stone-500">{tier.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-6 bg-stone-50 dark:bg-zinc-950">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-black tracking-tight text-center mb-10">
             Sudah Termasuk
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
             {[
-              'Menu Vegetarian',
-              'Penjemputan Hotel',
-              'Tur Pasar',
+              'Menu Vegetarian / Vegan',
+              'Penjemputan Hotel Ubud',
+              'Tur Pasar (kelas pagi)',
               'Jalan-Jalan di Sawah',
-              'Buku Resep',
-              'Kelompok Kecil',
+              'Buku Resep Cetak',
+              'Kelompok Kecil (maks. 8)',
             ].map((feature) => (
               <div
                 key={feature}
-                className="bg-stone-50 dark:bg-zinc-950 rounded-2xl p-5 border border-stone-200 dark:border-zinc-800 font-semibold"
+                className="bg-white dark:bg-zinc-900 rounded-2xl p-5 border border-stone-200 dark:border-zinc-800 font-semibold"
               >
                 {feature}
               </div>
@@ -221,30 +352,67 @@ export default async function IndonesianPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      <section id="faq" className="py-16 px-6 max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-black tracking-tight text-center mb-10">
+          Pertanyaan yang Sering Diajukan
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((f) => (
+            <div
+              key={f.question}
+              className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800"
+            >
+              <h3 className="font-bold text-lg mb-2">{f.question}</h3>
+              <p className="text-stone-600 dark:text-stone-400 leading-relaxed">{f.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-12 px-6 max-w-3xl mx-auto text-center">
+        <h2 className="text-2xl font-black mb-4">Jelajahi lebih lanjut</h2>
+        <p className="text-stone-500 mb-6 text-sm">
+          Halaman bahasa Inggris dengan menu lengkap, resep, dan ulasan:
+        </p>
+        <div className="flex flex-wrap justify-center gap-3 text-sm font-semibold">
+          <Link href="/balinese-cooking-class-ubud" className="text-orange-600 hover:underline">
+            Cooking Class Ubud
+          </Link>
+          <span className="text-stone-300">·</span>
+          <Link href="/recipes" className="text-orange-600 hover:underline">
+            Resep
+          </Link>
+          <span className="text-stone-300">·</span>
+          <Link href="/blog" className="text-orange-600 hover:underline">
+            Blog
+          </Link>
+          <span className="text-stone-300">·</span>
+          <Link href="/compare-ubud-cooking-classes" className="text-orange-600 hover:underline">
+            Bandingkan Kelas
+          </Link>
+        </div>
+      </section>
+
       <section className="py-20 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
             Siap Memasak Bersama Kami?
           </h2>
           <p className="text-lg text-stone-600 dark:text-stone-400 mb-8">
-            Pengalaman kuliner setengah hari yang tak terlupakan di Ubud. Tempat terbatas untuk
-            kelompok kecil setiap harinya.
+            Pengalaman kuliner setengah hari yang tak terlupakan di Ubud. Tempat terbatas setiap
+            harinya.
           </p>
           <BookButton className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 active:scale-95">
             Pesan Kelas Anda
           </BookButton>
-          <p className="mt-8 text-sm text-stone-500">
-            Ingin melihat detail lengkap, menu, dan ulasan?{' '}
-            <Link href="/" hrefLang="en" className="text-orange-600 font-semibold underline">
-              Kunjungi situs lengkap kami (Bahasa Inggris)
-            </Link>
-          </p>
         </div>
       </section>
 
       <footer className="py-10 px-6 border-t border-stone-200 dark:border-zinc-800 text-center text-sm text-stone-500">
-        © {new Date().getFullYear()} Tumang Bali Cooking Class · Ubud, Bali
+        © {new Date().getFullYear()} Tumang Bali Cooking Class · Desa Tumang, Ubud, Bali ·{' '}
+        <a href="/" hrefLang="en" className="text-orange-600 hover:underline">
+          English site
+        </a>
       </footer>
 
       <BookingModal activities={bookingActivities} />
