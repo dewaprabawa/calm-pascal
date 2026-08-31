@@ -177,7 +177,7 @@ export default async function Page() {
               <br className="hidden xl:block" /> in Ubud
             </h1>
             
-            <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed" data-speakable>
               Tumang Bali Cooking Class is an authentic Balinese cooking class in Ubud, Bali. We offer hands-on cooking experiences with a local market tour, rice field walk, and the chance to learn 10+ traditional dishes from scratch. Our classes are vegetarian friendly with complimentary hotel pickup included.
             </p>
             

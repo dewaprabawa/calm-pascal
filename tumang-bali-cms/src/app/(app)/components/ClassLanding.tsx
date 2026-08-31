@@ -96,7 +96,7 @@ export default function ClassLanding({
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-5">
               {content.h1}
             </h1>
-            <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-7">
+            <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-7" data-speakable>
               {content.intro}
             </p>
             <div className="flex flex-wrap items-center gap-4">
@@ -141,7 +141,7 @@ export default function ClassLanding({
       </section>
 
       {content.pricing && (
-        <section className="px-6 max-w-5xl mx-auto pb-4">
+        <section className="px-6 max-w-5xl mx-auto pb-4" data-speakable>
           <div className="bg-white dark:bg-zinc-900 rounded-3xl border border-stone-200 dark:border-zinc-800 p-6 md:p-8">
             <h2 className="text-2xl font-black tracking-tight mb-5">Private class prices</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
