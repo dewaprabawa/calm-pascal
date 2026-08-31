@@ -413,10 +413,6 @@ export default async function IndonesianPage() {
         <a href="/" hrefLang="en" className="text-orange-600 hover:underline">
           English site
         </a>
-        {' · '}
-        <a href="/llms.txt" className="text-orange-600 hover:underline" title="Indeks situs untuk AI / ChatGPT, Gemini, Perplexity">
-          Indeks AI
-        </a>
       </footer>
 
       <BookingModal activities={bookingActivities} />

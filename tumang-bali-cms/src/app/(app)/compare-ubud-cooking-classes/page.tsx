@@ -516,10 +516,7 @@ export default async function Page() {
       </section>
 
       <footer className="py-10 px-6 border-t border-stone-200 dark:border-zinc-800 text-center text-sm text-stone-500">
-        © {new Date().getFullYear()} Tumang Bali Cooking Class · Ubud, Bali ·{' '}
-        <a href="/llms.txt" className="text-orange-600 hover:underline" title="AI site index for ChatGPT, Gemini, Perplexity">
-          AI index
-        </a>
+        © {new Date().getFullYear()} Tumang Bali Cooking Class · Ubud, Bali
       </footer>
 
       <BookingModal activities={bookingActivities} />
