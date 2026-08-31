@@ -1108,6 +1108,7 @@ export default async function Page() {
             <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
             <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
             <Link href="/press" className="hover:text-orange-500 transition-colors">Press</Link>
+            <a href="/llms.txt" className="hover:text-orange-500 transition-colors" title="AI site index for ChatGPT, Gemini, Perplexity">AI index</a>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
