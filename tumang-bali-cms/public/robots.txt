@@ -1,4 +1,6 @@
 # Tumang Bali Cooking Class — https://tumangbaliclass.com
+# AI citation index: https://tumangbaliclass.com/llms.txt
+# Full AI context: https://tumangbaliclass.com/llms-full.txt
 # Allow AI search / answer engines so the site can be cited in
 # ChatGPT, Gemini, Meta AI (WhatsApp AI), Perplexity, and Claude.
 

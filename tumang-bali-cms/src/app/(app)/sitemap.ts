@@ -71,8 +71,8 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/blog/what-is-tumang-bali', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
-  { path: '/llms.txt', priority: 0.5, changeFrequency: 'weekly' },
-  { path: '/llms-full.txt', priority: 0.5, changeFrequency: 'weekly' },
+  { path: '/llms.txt', priority: 0.7, changeFrequency: 'weekly' },
+  { path: '/llms-full.txt', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/id', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/press', priority: 0.5, changeFrequency: 'monthly' },
 ]
