@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { STATIC_COMMERCIAL_SLUGS } from '@/lib/staticCommercialSlugs'
 
 export type StaticFaq = { question: string; answer: string }
 
@@ -18,15 +19,4 @@ export type StaticArticle = {
   body: ReactNode
 }
 
-export const STATIC_COMMERCIAL_SLUGS = [
-  'cooking-class-ubud-for-couples',
-  'cooking-class-ubud-guide-2026',
-  'ubud-cooking-class-for-families',
-  'vegetarian-cooking-class-ubud-guide',
-  'morning-cooking-class-ubud-market-tour',
-  'lemongrass-cooking-class-ubud',
-  'tumang-bali-cooking-class-experience',
-  'sambal-matah-cooking-class-ubud',
-  'small-group-cooking-class-ubud',
-  'balinese-spice-paste-cooking-class',
-] as const
+export { STATIC_COMMERCIAL_SLUGS }

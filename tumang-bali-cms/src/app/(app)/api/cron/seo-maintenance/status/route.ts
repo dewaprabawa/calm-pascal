@@ -1,27 +1,30 @@
 import { NextResponse } from 'next/server'
 import { seoMaintenanceConfigured } from '@/lib/seoMaintenanceAuth'
+import { STATIC_COMMERCIAL_SLUGS } from '@/lib/staticCommercialSlugs'
 
 /** Public health check — no secrets exposed. */
 export async function GET() {
   const configured = seoMaintenanceConfigured()
 
-  if (configured) {
-    return NextResponse.json({
-      seoMaintenanceConfigured: true,
-      cronEndpoint: '/api/cron/seo-maintenance',
-      auth: 'Authorization: Bearer <CRON_SECRET or SEED_ARTICLES_KEY>',
-    })
-  }
-
   return NextResponse.json({
-    seoMaintenanceConfigured: false,
-    setupRequired: true,
-    instructions: [
-      'In Vercel → Project → Settings → Environment Variables, add CRON_SECRET and/or SEED_ARTICLES_KEY for Production.',
-      'Redeploy production after saving env vars.',
-      'Run once: GET /api/cron/seo-maintenance with header Authorization: Bearer <your-secret>',
-      'This seeds Month 1/2 commercial articles, meta updates, and recipe step-by-step content into MongoDB.',
-    ],
-    verifyAfterSetup: 'https://tumangbaliclass.com/api/cron/seo-maintenance/status',
+    seoMaintenanceConfigured: configured,
+    /** Commercial SEO content is static — not blocked by cron/MongoDB. */
+    seoContentReady: true,
+    contentDelivery: 'static-first',
+    staticCommercialArticleCount: STATIC_COMMERCIAL_SLUGS.length,
+    staticCommercialPaths: STATIC_COMMERCIAL_SLUGS.map((s) => `/blog/${s}`),
+    contentHealthUrl: '/api/seo-content-health',
+    cronEndpoint: '/api/cron/seo-maintenance',
+    ...(configured
+      ? {
+          auth: 'Authorization: Bearer <CRON_SECRET or SEED_ARTICLES_KEY>',
+          note: 'CMS cron ready for optional meta/recipe sync.',
+        }
+      : {
+          optionalSetup: [
+            'CMS cron is optional. Commercial articles already live as static pages.',
+            'To enable optional CMS seed: set CRON_SECRET, SEED_ARTICLES_KEY, and MONGODB_URI on tumang-bali-cms Production, then redeploy.',
+          ],
+        }),
   })
 }

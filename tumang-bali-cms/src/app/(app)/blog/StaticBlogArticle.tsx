@@ -19,6 +19,11 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
       '@type': 'Person',
       name: article.author,
       jobTitle: article.authorRole,
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Tumang Bali Cooking Class',
+        url: SITE,
+      },
     },
     publisher: {
       '@type': 'Organization',
@@ -27,6 +32,11 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
     },
     mainEntityOfPage: url,
     keywords: article.keywords.join(', '),
+    about: {
+      '@type': 'Thing',
+      name: 'Balinese cooking class in Ubud',
+      sameAs: `${SITE}/llms-full.txt`,
+    },
   }
 
   const faqSchema = {
@@ -53,11 +63,22 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
     },
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog` },
+      { '@type': 'ListItem', position: 3, name: article.title, item: url },
+    ],
+  }
+
   return (
     <article className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <nav className="w-full bg-white dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
         <div className="max-w-3xl mx-auto w-full flex items-center justify-between">
@@ -76,6 +97,17 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
       </nav>
 
       <header className="max-w-3xl mx-auto px-6 pt-12 pb-8">
+        <p className="text-sm text-stone-500 mb-3">
+          <Link href="/" className="hover:text-orange-600">
+            Home
+          </Link>
+          {' / '}
+          <Link href="/blog" className="hover:text-orange-600">
+            Blog
+          </Link>
+          {' / '}
+          <span className="text-stone-700 dark:text-stone-300">{article.slug.replace(/-/g, ' ')}</span>
+        </p>
         <p className="text-sm font-semibold text-orange-600 mb-3 uppercase tracking-wider">
           {article.authorRole} · Updated August 2026
         </p>
@@ -88,7 +120,14 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
 
       <div className="max-w-3xl mx-auto px-6 mb-10">
         <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-stone-200 dark:border-zinc-800 shadow-lg">
-          <Image src={article.image} alt={article.imageAlt} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 768px" />
+          <Image
+            src={article.image}
+            alt={article.imageAlt}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
         </div>
       </div>
 
