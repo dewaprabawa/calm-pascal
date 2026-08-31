@@ -214,7 +214,7 @@ export default async function IndonesianPage() {
             </span>{' '}
             — Dari IDR 350K
           </h1>
-          <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-2xl font-light leading-relaxed mb-8">
+          <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-2xl font-light leading-relaxed mb-8" data-speakable>
             Tur pasar pagi, jalan di sawah, dan masak 10+ hidangan Bali tradisional bersama chef
             lokal di desa Tumang. Kelompok kecil, ramah vegetarian, penjemputan hotel gratis.
           </p>
@@ -412,6 +412,10 @@ export default async function IndonesianPage() {
         © {new Date().getFullYear()} Tumang Bali Cooking Class · Desa Tumang, Ubud, Bali ·{' '}
         <a href="/" hrefLang="en" className="text-orange-600 hover:underline">
           English site
+        </a>
+        {' · '}
+        <a href="/llms.txt" className="text-orange-600 hover:underline" title="Indeks situs untuk AI / ChatGPT, Gemini, Perplexity">
+          Indeks AI
         </a>
       </footer>
 

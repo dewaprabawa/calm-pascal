@@ -208,7 +208,7 @@ export default async function Page() {
           <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-5">
             Best Cooking Classes in Ubud, Bali (2026)
           </h1>
-          <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mx-auto mb-8" data-speakable>
             We compared the top-rated cooking classes in Ubud side-by-side — features, pricing, group size, and what makes each one unique — so you can book with confidence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -498,7 +498,10 @@ export default async function Page() {
       </section>
 
       <footer className="py-10 px-6 border-t border-stone-200 dark:border-zinc-800 text-center text-sm text-stone-500">
-        © {new Date().getFullYear()} Tumang Bali Cooking Class · Ubud, Bali
+        © {new Date().getFullYear()} Tumang Bali Cooking Class · Ubud, Bali ·{' '}
+        <a href="/llms.txt" className="text-orange-600 hover:underline" title="AI site index for ChatGPT, Gemini, Perplexity">
+          AI index
+        </a>
       </footer>
 
       <BookingModal activities={bookingActivities} />
