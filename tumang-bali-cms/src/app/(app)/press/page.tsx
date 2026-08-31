@@ -119,11 +119,6 @@ export default function PressPage() {
               Free Balinese recipe hub
             </Link>
           </li>
-          <li>
-            <Link href="/llms.txt" className="text-orange-600 font-semibold hover:underline">
-              llms.txt (AI / research summary)
-            </Link>
-          </li>
         </ul>
       </section>
 

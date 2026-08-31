@@ -100,10 +100,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        {/* AI / LLM discovery — ChatGPT, Gemini, Meta/WhatsApp AI, Perplexity */}
-        <link rel="describedby" href={LLMS_TXT} type="text/plain" title="llms.txt" />
-        <link rel="alternate" href={LLMS_TXT} type="text/plain" title="LLM site index" />
-        <link rel="alternate" href={LLMS_FULL} type="text/plain" title="LLM full context" />
+        {/* Site summary files for crawlers */}
+        <link rel="describedby" href={LLMS_TXT} type="text/plain" title="Site summary" />
+        <link rel="alternate" href={LLMS_TXT} type="text/plain" title="Site summary" />
+        <link rel="alternate" href={LLMS_FULL} type="text/plain" title="Full site summary" />
         <link rel="author" href={LLMS_TXT} />
       </head>
       <body className="min-h-full flex flex-col">
