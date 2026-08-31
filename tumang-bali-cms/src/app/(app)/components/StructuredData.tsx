@@ -1,4 +1,5 @@
 import React from 'react'
+import { SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 
 export default function StructuredData() {
   // Schema 1: LocalBusiness + TouristAttraction
@@ -270,6 +271,7 @@ export default function StructuredData() {
     ],
     description: 'Top-rated authentic Balinese cooking class in Ubud with market tour, rice field walk & hands-on cooking of 10+ traditional dishes. Shared IDR 350,000. Private 1 person IDR 650,000.',
     url: 'https://tumangbaliclass.com',
+    dateModified: SITE_CONTENT_UPDATED,
     inLanguage: ['en-US', 'id-ID'],
     about: {
       '@type': 'Thing',

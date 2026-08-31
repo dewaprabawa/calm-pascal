@@ -10,6 +10,7 @@ import {
   buildLandingCourseSchema,
   buildLandingFaqSchema,
   buildLandingLocalBusinessRef,
+  buildLandingWebPageSchema,
 } from '@/lib/landingPageSchema'
 
 export type FaqItem = { question: string; answer: string }
@@ -27,6 +28,8 @@ export type ClassLandingContent = {
   heroImageAlt: string
   /** 2–4 paragraphs of genuine body copy */
   body: { heading: string; paragraphs: string[] }[]
+  /** Optional 134–167 word self-contained block for AI/voice citation (primary money pages) */
+  citabilityBlock?: string
   sellingPoints: SellingPoint[]
   faqs: FaqItem[]
   ctaHeading: string
@@ -56,6 +59,11 @@ export default function ClassLanding({
     priceIdr: content.path === PRIMARY_COOKING_CLASS_PATH ? 350000 : undefined,
   })
   const localBusinessSchema = buildLandingLocalBusinessRef(content.path, content.h1Plain)
+  const webPageSchema = buildLandingWebPageSchema({
+    name: content.h1Plain,
+    description: content.intro,
+    pagePath: content.path,
+  })
 
 
   return (
@@ -124,6 +132,15 @@ export default function ClassLanding({
           </div>
         </div>
       </header>
+
+      {content.citabilityBlock ? (
+        <section className="px-6 max-w-3xl mx-auto pb-2">
+          <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-lg" data-speakable>
+            {content.citabilityBlock}
+          </p>
+          <p className="text-xs text-stone-400 mt-3">Last updated August 2026</p>
+        </section>
+      ) : null}
 
       {/* Selling points */}
       <section className="py-14 px-6 max-w-5xl mx-auto">
@@ -288,6 +305,7 @@ export default function ClassLanding({
       </footer>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       {faqSchema ? (

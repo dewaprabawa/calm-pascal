@@ -8,6 +8,7 @@ import configPromise from '@/payload.config'
 import BookButton from '../components/BookButton'
 import BookingModal, { ActivityOption } from '../components/BookingModal'
 import WhatsAppFloat from '../components/WhatsAppFloat'
+import { SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 
 export const revalidate = 60
 
@@ -171,6 +172,22 @@ export default async function Page() {
     ],
   }
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE}/compare-ubud-cooking-classes#webpage`,
+    url: `${SITE}/compare-ubud-cooking-classes`,
+    name: 'Best Cooking Classes in Ubud 2026 — Compared & Ranked',
+    description:
+      'Honest comparison of Tumang Bali, Casa Luna, Paon Bali and Ketut\'s cooking classes in Ubud — pricing, group size, market tour, and inclusions.',
+    dateModified: SITE_CONTENT_UPDATED,
+    isPartOf: { '@id': `${SITE}/#website` },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '[data-speakable]'],
+    },
+  }
+
   // FAQPage schema removed — Google restricted FAQPage rich results to
   // government and healthcare authority sites only (August 2023).
   // The FAQ content remains as visible HTML below.
@@ -180,6 +197,7 @@ export default async function Page() {
       {/* Structured Data — ItemList + BreadcrumbList only (FAQPage removed per Google Aug 2023 policy) */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       {/* Nav */}
       <nav className="w-full bg-white dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
@@ -245,11 +263,11 @@ export default async function Page() {
       {/* How we compare — linkable methodology */}
       <section className="py-12 px-6 max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-4">How we compared these classes</h2>
-        <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
-          This page is updated for <strong>August 2026</strong>. We scored each school on inclusions
-          travelers actually ask about: market tour, rice-field setting, max group size, dish count,
-          vegetarian depth, hotel pickup, and published price. Prices and policies change — always
-          confirm on the official site before you book.
+        <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-4" data-speakable>
+          This page is updated for <strong>August 2026</strong>. Tumang Bali ranks best overall value among Ubud cooking classes at IDR 350,000 with a real morning market tour, rice-field walk, max 8 guests, and 10+ dishes cooked from scratch. Casa Luna suits travelers who want an established in-town school with themed classes. Paon Bali offers a home-kitchen village vibe with market tour. Ketut&apos;s gives each guest an individual cooking station. We scored each school on inclusions travelers actually ask about: market tour, rice-field setting, max group size, dish count, vegetarian depth, hotel pickup, and published price.
+        </p>
+        <p className="text-sm text-stone-500 mb-4">
+          Prices and policies change — always confirm on the official site before you book.
         </p>
         <ul className="list-disc pl-6 space-y-2 text-stone-600 dark:text-stone-400 mb-4">
           <li>
