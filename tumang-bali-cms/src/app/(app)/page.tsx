@@ -817,6 +817,51 @@ export default async function Page() {
                 </div>
               </div>
             </Link>
+            <Link href="/blog/lemongrass-cooking-class-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">10</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Lemongrass Cooking Class Ubud</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Sate lilit on serai stalks, sambal matah, and fresh market lemongrass at Tumang.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/tumang-bali-cooking-class-experience" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">11</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Tumang Bali Cooking Class Experience</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Village kitchen near Ubud — market, rice fields, Chef Wayan, max 8 guests.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/sambal-matah-cooking-class-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">12</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Sambal Matah Cooking Class</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Learn Bali&apos;s raw chili relish hands-on — shallot, chili, lemongrass.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/small-group-cooking-class-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">13</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Small Group Cooking Class (Max 8)</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Intimate hands-on class — not a crowded tourist demo.</p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/blog/balinese-spice-paste-cooking-class" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">14</div>
+                <div>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Balinese Spice Paste Class</h3>
+                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Grind Base Genep (bumbu) by hand on a stone mortar.</p>
+                </div>
+              </div>
+            </Link>
             <Link href="/blog/how-bali-cooking-classes-work" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">01</div>
