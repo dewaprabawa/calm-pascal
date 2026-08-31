@@ -69,6 +69,12 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/family-cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
   // Blog article about Tumang
   { path: '/blog/what-is-tumang-bali', priority: 0.7, changeFrequency: 'monthly' },
+  // Static commercial articles (no CMS/cron required)
+  { path: '/blog/cooking-class-ubud-for-couples', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/cooking-class-ubud-guide-2026', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/ubud-cooking-class-for-families', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/vegetarian-cooking-class-ubud-guide', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/morning-cooking-class-ubud-market-tour', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/llms.txt', priority: 0.7, changeFrequency: 'weekly' },
