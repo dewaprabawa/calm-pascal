@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 
 export const SITE = 'https://tumangbaliclass.com'
+/** ISO date for schema dateModified and visible freshness signals. */
+export const SITE_CONTENT_UPDATED = '2026-08-31'
 export const BRAND = 'Tumang Bali'
 export const BRAND_SUFFIX = ` | ${BRAND}`
 

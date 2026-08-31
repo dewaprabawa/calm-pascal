@@ -1,4 +1,4 @@
-import { SITE } from '@/lib/seoMetadata'
+import { SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 
 const BUSINESS_ID = `${SITE}/#business`
 
@@ -78,6 +78,27 @@ export function buildLandingLocalBusinessRef(pagePath: string, pageName: string)
       reviewCount: '500',
       bestRating: '5',
       worstRating: '1',
+    },
+  }
+}
+
+export function buildLandingWebPageSchema(opts: {
+  name: string
+  description: string
+  pagePath: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE}${opts.pagePath}#webpage`,
+    url: `${SITE}${opts.pagePath}`,
+    name: opts.name,
+    description: opts.description,
+    dateModified: SITE_CONTENT_UPDATED,
+    isPartOf: { '@id': `${SITE}/#website` },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '[data-speakable]'],
     },
   }
 }
