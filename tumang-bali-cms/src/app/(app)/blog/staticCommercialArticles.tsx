@@ -24,4 +24,9 @@ export const STATIC_COMMERCIAL_SLUGS = [
   'ubud-cooking-class-for-families',
   'vegetarian-cooking-class-ubud-guide',
   'morning-cooking-class-ubud-market-tour',
+  'lemongrass-cooking-class-ubud',
+  'tumang-bali-cooking-class-experience',
+  'sambal-matah-cooking-class-ubud',
+  'small-group-cooking-class-ubud',
+  'balinese-spice-paste-cooking-class',
 ] as const

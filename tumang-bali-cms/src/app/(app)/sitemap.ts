@@ -40,6 +40,11 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'ubud-cooking-class-for-families',
   'vegetarian-cooking-class-ubud-guide',
   'morning-cooking-class-ubud-market-tour',
+  'lemongrass-cooking-class-ubud',
+  'tumang-bali-cooking-class-experience',
+  'sambal-matah-cooking-class-ubud',
+  'small-group-cooking-class-ubud',
+  'balinese-spice-paste-cooking-class',
   'morning-vs-afternoon-tours-bali',
 ])
 
@@ -75,6 +80,11 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/blog/ubud-cooking-class-for-families', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/blog/vegetarian-cooking-class-ubud-guide', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/blog/morning-cooking-class-ubud-market-tour', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/lemongrass-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/tumang-bali-cooking-class-experience', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/sambal-matah-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/small-group-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/balinese-spice-paste-cooking-class', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/llms.txt', priority: 0.7, changeFrequency: 'weekly' },

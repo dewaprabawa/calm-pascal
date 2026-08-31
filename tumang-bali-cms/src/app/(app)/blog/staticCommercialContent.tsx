@@ -452,12 +452,395 @@ export const morningCookingClassUbudMarketTour: StaticArticle = {
   ),
 }
 
+export const lemongrassCookingClassUbud: StaticArticle = {
+  slug: 'lemongrass-cooking-class-ubud',
+  title: 'Lemongrass Cooking Class in Ubud — Sate Lilit & Balinese Flavours at Tumang',
+  metaTitle: 'Lemongrass Cooking Class Ubud — Sate Lilit at Tumang Bali',
+  metaDescription:
+    'Learn lemongrass cooking in Ubud at Tumang Bali: wrap sate lilit on fresh serai stalks, cook sambal matah, and grind spice paste. IDR 350K. Free hotel pickup.',
+  excerpt:
+    'Lemongrass (serai) is the signature stalk of Balinese cooking — from sate lilit skewers to sambal matah. At Tumang Bali Cooking Class near Ubud you cook with fresh lemongrass from the market, then grill over charcoal.',
+  image: '/images/gallery-satay.jpg',
+  imageAlt: 'Sate lilit wrapped on lemongrass stalks grilling at Tumang Bali cooking class in Ubud',
+  author: 'Chef Wayan',
+  authorRole: 'Head Chef',
+  publishedDate: '2026-08-31',
+  keywords: [
+    'lemongrass cooking class ubud',
+    'lemongrass cooking class bali',
+    'sate lilit cooking class',
+    'serai cooking class ubud',
+    'balinese lemongrass class',
+  ],
+  faqs: [
+    {
+      question: 'What is a lemongrass cooking class in Ubud?',
+      answer:
+        'At Tumang Bali it means a hands-on Balinese class where lemongrass (serai) is a hero ingredient — wrapping sate lilit on fresh stalks, slicing it into sambal matah, and bruising stalks for soups and spice pastes. Shared class from IDR 350,000.',
+    },
+    {
+      question: 'Do you make sate lilit on lemongrass?',
+      answer:
+        'Yes. Guests mince fish or chicken (or tempeh for vegetarian), season with bumbu, wrap the mix around lemongrass stalks, and grill over coconut-husk charcoal until fragrant and charred.',
+    },
+    {
+      question: 'Is lemongrass used in vegetarian menus too?',
+      answer:
+        'Absolutely. Vegetarian and vegan guests use lemongrass for sate tempe, sambal matah without shrimp paste, sayur soups, and spice pastes — same aromatic foundation as the classic menu.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        A <strong>lemongrass cooking class in Ubud</strong> at Tumang Bali puts fresh serai at the centre
+        of the kitchen. You shop for lemongrass at the morning market, wrap{' '}
+        <Link href="/blog/how-to-make-sate-lilit">sate lilit</Link> around the stalks, slice it into{' '}
+        <Link href="/blog/sambal-matah-cooking-class-ubud">sambal matah</Link>, and taste why Balinese food
+        smells like citrus, smoke, and chili at the same time.
+      </p>
+      <h2>Why lemongrass matters in Balinese cooking</h2>
+      <ul>
+        <li>Sate lilit — minced satay wrapped and grilled on lemongrass stalks</li>
+        <li>Sambal matah — raw shallot-chili relish with finely sliced serai</li>
+        <li>Soups and curries — bruised stalks for fragrance without bitterness</li>
+        <li>Spice pastes — lemongrass joins turmeric, galangal, and chili in Base Genep</li>
+        <li>Offerings and aroma — lemongrass is everyday village flavour, not a garnish</li>
+      </ul>
+      <h2>What you cook with lemongrass at Tumang</h2>
+      <p>
+        In our village kitchen near Ubud you grind bumbu by hand, wrap sate lilit (or tempeh for plant-based
+        guests), make sambal matah, and cook 10+ dishes from scratch. The morning class includes a market
+        tour so you see how locals choose firm, pale stalks — not dried supermarket sticks.
+      </p>
+      <h2>Sate lilit on lemongrass — the highlight</h2>
+      <p>
+        Guests often say wrapping sate lilit is the most fun step of the day. You learn the texture of the
+        mince, how tight to wrap, and when charcoal heat is right. Take the technique home with our printed
+        recipe booklet — and practice with our{' '}
+        <Link href="/blog/how-to-make-sate-lilit">sate lilit recipe guide</Link>.
+      </p>
+      <h2>Price and how to book</h2>
+      <p>
+        Shared class IDR 350,000 · Private from IDR 650,000 · Free Ubud hotel pickup · Max 8 guests. Read
+        the <Link href={priceGuide}>price guide</Link>, compare schools on{' '}
+        <Link href="/compare-ubud-cooking-classes">compare Ubud cooking classes</Link>, then{' '}
+        <Link href={money}>book your Tumang Bali cooking class</Link> or{' '}
+        <Link href={book}>reserve online</Link>.
+      </p>
+    </>
+  ),
+}
+
+export const tumangBaliCookingClassExperience: StaticArticle = {
+  slug: 'tumang-bali-cooking-class-experience',
+  title: 'Tumang Bali Cooking Class Experience — Village Kitchen Near Ubud',
+  metaTitle: 'Tumang Bali Cooking Class Experience — Village Kitchen Ubud',
+  metaDescription:
+    'What to expect at Tumang Bali Cooking Class: market tour, rice fields, 10+ dishes, max 8 guests, IDR 350K. Family-run village kitchen near Ubud. Book today.',
+  excerpt:
+    'Tumang Bali Cooking Class is a family-run school in Tumang village near Ubud — not a hotel demo. Market tour, rice-field walk, hands-on cooking with Chef Wayan, and a shared feast you made yourself.',
+  image: '/images/gallery-group.jpg',
+  imageAlt: 'Guests at Tumang Bali Cooking Class experience in village kitchen near Ubud',
+  author: 'Tumang Bali Team',
+  authorRole: 'Local Food Guide',
+  publishedDate: '2026-08-31',
+  keywords: [
+    'tumang bali cooking class',
+    'tumang bali cooking class experience',
+    'cooking class tumang village',
+    'tumang ubud cooking class',
+    'family cooking school ubud',
+  ],
+  faqs: [
+    {
+      question: 'Where is Tumang Bali Cooking Class?',
+      answer:
+        'In Tumang village near Ubud (Banjar Laplapan, Petulu area), about 30 minutes from central Ubud. Complimentary hotel pickup is included for Ubud-area hotels.',
+    },
+    {
+      question: 'What makes the Tumang Bali experience different?',
+      answer:
+        'Small groups (max 8), a real morning market tour, rice-field walk, hand-ground Base Genep, and 10+ dishes cooked from scratch with local family chefs — not a tourist-show kitchen in town.',
+    },
+    {
+      question: 'How much is the Tumang Bali cooking class?',
+      answer:
+        'Shared morning or afternoon class IDR 350,000 per person. Private class for one person IDR 650,000; kids IDR 550,000. All-inclusive of pickup (Ubud area), cooking, meal, and recipe booklet.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        The <strong>Tumang Bali Cooking Class experience</strong> is a half-day in a real Balinese village
+        kitchen near Ubud. You meet your guide at the morning market, walk rice paddies, grind spice paste
+        with Chef Wayan Sudiana, cook 10+ dishes, and eat together overlooking the fields. Shared class from
+        IDR 350,000.
+      </p>
+      <h2>What happens during the day</h2>
+      <ul>
+        <li>Pickup from your Ubud hotel</li>
+        <li>Guided market tour (morning class)</li>
+        <li>Rice-field walk and Canang Sari flower offering</li>
+        <li>Hands-on cooking — bumbu, sate lilit, sambal, pepes, and more</li>
+        <li>Shared feast + printed recipe booklet</li>
+      </ul>
+      <h2>Who Tumang Bali is for</h2>
+      <p>
+        Couples, families with kids 8+, food travellers, vegetarians, and first-time Bali visitors. English
+        spoken. Beginners welcome. See our guides for{' '}
+        <Link href="/blog/cooking-class-ubud-for-couples">couples</Link>,{' '}
+        <Link href="/blog/ubud-cooking-class-for-families">families</Link>, and{' '}
+        <Link href="/blog/vegetarian-cooking-class-ubud-guide">vegetarian menus</Link>.
+      </p>
+      <h2>Tumang village vs central Ubud classes</h2>
+      <p>
+        Learn more about the village in <Link href="/blog/what-is-tumang-bali">What is Tumang Bali?</Link>{' '}
+        and compare options on{' '}
+        <Link href="/compare-ubud-cooking-classes">best cooking classes in Ubud</Link>. For a deep dive on
+        booking logistics, read the{' '}
+        <Link href="/blog/cooking-class-ubud-guide-2026">cooking class Ubud 2026 guide</Link>.
+      </p>
+      <h2>Book the Tumang Bali experience</h2>
+      <p>
+        TripAdvisor Travelers&apos; Choice 2026 · 5.0 rating · Max 8 guests.{' '}
+        <Link href={money}>Book cooking class Ubud</Link> or <Link href={book}>reserve online</Link>.
+      </p>
+    </>
+  ),
+}
+
+export const sambalMatahCookingClassUbud: StaticArticle = {
+  slug: 'sambal-matah-cooking-class-ubud',
+  title: 'Sambal Matah Cooking Class in Ubud — Learn Bali’s Raw Chili Relish',
+  metaTitle: 'Sambal Matah Cooking Class Ubud — Learn at Tumang Bali',
+  metaDescription:
+    'Learn sambal matah in an Ubud cooking class at Tumang Bali — shallot, chili, lemongrass, lime. Full hands-on menu from IDR 350K. Vegetarian & vegan options.',
+  excerpt:
+    'Sambal matah is Bali’s famous raw sambal — shallots, bird’s-eye chili, lemongrass, and coconut oil. At Tumang Bali Cooking Class in Ubud you make it from scratch as part of a full 10+ dish menu.',
+  image: '/images/blog/sambal-matah.jpg.webp',
+  imageAlt: 'Fresh sambal matah prepared in a Balinese cooking class near Ubud',
+  author: 'Made Ayu',
+  authorRole: 'Cooking Instructor',
+  publishedDate: '2026-08-31',
+  keywords: [
+    'sambal matah cooking class',
+    'sambal matah class ubud',
+    'learn sambal matah bali',
+    'balinese sambal cooking class',
+    'raw sambal ubud',
+  ],
+  faqs: [
+    {
+      question: 'Can I learn sambal matah in an Ubud cooking class?',
+      answer:
+        'Yes. At Tumang Bali every guest makes sambal matah by hand — slicing shallots, chili, and lemongrass, then finishing with hot coconut oil. It is part of the standard shared class menu.',
+    },
+    {
+      question: 'Is sambal matah very spicy?',
+      answer:
+        'It can be. We adjust chili heat for your group — milder for kids and spice-sensitive guests, hotter for chilli lovers. Vegetarian and vegan versions omit shrimp paste.',
+    },
+    {
+      question: 'Do I get the sambal matah recipe to take home?',
+      answer:
+        'Yes. Every guest receives a printed recipe booklet covering sambal matah and the full menu you cooked that day.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        A <strong>sambal matah cooking class in Ubud</strong> at Tumang Bali teaches you Bali&apos;s iconic
+        raw chili relish the village way: paper-thin shallots, bird&apos;s-eye chili, lemongrass, lime
+        leaves, and sizzling coconut oil. You make it yourself — then eat it with the feast you cooked.
+      </p>
+      <h2>What is sambal matah?</h2>
+      <p>
+        Sambal matah means &quot;raw sambal.&quot; Unlike cooked Javanese sambals, it stays bright and
+        aromatic. It pairs with grilled fish, sate lilit, rice, and tempeh. Practice at home with our{' '}
+        <Link href="/blog/sambal-matah-recipe">sambal matah recipe</Link> after class.
+      </p>
+      <h2>How we teach it at Tumang</h2>
+      <ul>
+        <li>Knife skills — even slices so flavours bloom evenly</li>
+        <li>Balancing heat, salt, and citrus</li>
+        <li>Hot oil finish for fragrance</li>
+        <li>Vegetarian / vegan adaptation without terasi (shrimp paste)</li>
+        <li>Pairing with dishes from the same class menu</li>
+      </ul>
+      <h2>More than one sambal</h2>
+      <p>
+        Sambal matah is a highlight, but the class also covers spice paste, sate, pepes, and dessert. See
+        the full <Link href="/blog/tumang-bali-cooking-class-experience">Tumang Bali experience</Link> and{' '}
+        <Link href="/blog/lemongrass-cooking-class-ubud">lemongrass cooking class</Link> guides.
+      </p>
+      <h2>Book and learn sambal matah in Ubud</h2>
+      <p>
+        Shared class IDR 350K · Free pickup · Recipe booklet included.{' '}
+        <Link href={money}>Book Tumang Bali</Link> or <Link href={book}>reserve online</Link>.
+      </p>
+    </>
+  ),
+}
+
+export const smallGroupCookingClassUbud: StaticArticle = {
+  slug: 'small-group-cooking-class-ubud',
+  title: 'Small Group Cooking Class in Ubud — Max 8 Guests at Tumang Bali',
+  metaTitle: 'Small Group Cooking Class Ubud — Max 8 Guests | Tumang Bali',
+  metaDescription:
+    'Prefer a small group cooking class in Ubud? Tumang Bali caps shared classes at 8 guests. Hands-on market tour, 10+ dishes, IDR 350K. Private kitchen available.',
+  excerpt:
+    'Large demo classes leave you watching from the back. Tumang Bali Cooking Class keeps shared groups to a maximum of 8 guests so everyone grinds, wraps, and plates for real.',
+  image: '/images/gallery-girls.jpg',
+  imageAlt: 'Small group Balinese cooking class with max 8 guests at Tumang Bali near Ubud',
+  author: 'Tumang Bali Team',
+  authorRole: 'Local Food Guide',
+  publishedDate: '2026-08-31',
+  keywords: [
+    'small group cooking class ubud',
+    'intimate cooking class bali',
+    'max 8 cooking class ubud',
+    'private small group cooking class bali',
+    'tumang bali small group',
+  ],
+  faqs: [
+    {
+      question: 'How many people are in a Tumang Bali cooking class?',
+      answer:
+        'Shared classes are capped at 8 guests. That keeps the kitchen calm and ensures every person gets hands-on time with the chef — not a lecture from the back row.',
+    },
+    {
+      question: 'Can I book a private small group?',
+      answer:
+        'Yes. Private classes give your party the kitchen exclusively — ideal for couples, families, and friend groups. Private rate starts at IDR 650,000 for one person.',
+    },
+    {
+      question: 'Why choose a small group cooking class in Ubud?',
+      answer:
+        'You ask more questions, get corrections on technique, and actually cook every dish. Small groups also photograph better and feel more like a village meal than a tourist bus stop.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        A <strong>small group cooking class in Ubud</strong> at Tumang Bali means max 8 guests in a village
+        kitchen — everyone grinds Base Genep, wraps sate lilit, and sits down to a feast you made together.
+        Shared class from IDR 350,000 with free hotel pickup.
+      </p>
+      <h2>Why max 8 matters</h2>
+      <ul>
+        <li>Real hands-on time — not watching a chef demo from afar</li>
+        <li>Safer knife and charcoal work with proper supervision</li>
+        <li>Dietary needs (vegetarian, vegan, allergies) handled carefully</li>
+        <li>Quieter rice-field setting for conversation and photos</li>
+        <li>Faster pacing — you finish dishes while they are hot and fragrant</li>
+      </ul>
+      <h2>Shared small group vs private</h2>
+      <p>
+        Shared (max 8) is social and best value at IDR 350K. Private is perfect for{' '}
+        <Link href="/blog/cooking-class-ubud-for-couples">couples</Link> and{' '}
+        <Link href="/blog/ubud-cooking-class-for-families">families</Link> who want the kitchen to
+        themselves — see <Link href="/private-cooking-class-ubud">private cooking class Ubud</Link>.
+      </p>
+      <h2>Compare before you book</h2>
+      <p>
+        Many Ubud classes run 12–20+ guests. Check group size on our{' '}
+        <Link href="/compare-ubud-cooking-classes">comparison page</Link> before you pay for a crowded demo.
+      </p>
+      <h2>Book a small group class</h2>
+      <p>
+        <Link href={money}>Book Tumang Bali</Link> · <Link href={book}>Online booking</Link> ·{' '}
+        <Link href={priceGuide}>2026 prices</Link>
+      </p>
+    </>
+  ),
+}
+
+export const balineseSpicePasteCookingClass: StaticArticle = {
+  slug: 'balinese-spice-paste-cooking-class',
+  title: 'Balinese Spice Paste Cooking Class — Learn Base Genep at Tumang Bali',
+  metaTitle: 'Balinese Spice Paste Cooking Class — Base Genep in Ubud',
+  metaDescription:
+    'Learn Balinese spice paste (Base Genep / bumbu) in an Ubud cooking class at Tumang Bali. Hand-ground on stone mortar. 10+ dishes from IDR 350K.',
+  excerpt:
+    'Base Genep is the complete Balinese spice paste behind almost every village dish. At Tumang Bali near Ubud you grind it by hand on a cobek — then cook a full menu from that same paste.',
+  image: '/images/blog/bumbu-action-shot.webp',
+  imageAlt: 'Guests grinding Balinese spice paste Base Genep at Tumang Bali cooking class',
+  author: 'Chef Wayan',
+  authorRole: 'Head Chef',
+  publishedDate: '2026-08-31',
+  keywords: [
+    'balinese spice paste cooking class',
+    'base genep cooking class',
+    'bumbu bali cooking class ubud',
+    'learn spice paste bali',
+    'cobek cooking class ubud',
+  ],
+  faqs: [
+    {
+      question: 'What is Base Genep?',
+      answer:
+        'Base Genep (also called bumbu Bali) is the complete Balinese spice paste — turmeric, galangal, ginger, lemongrass, chili, shallot, garlic, and more — ground together as the flavour base for many dishes.',
+    },
+    {
+      question: 'Do you grind spice paste by hand in class?',
+      answer:
+        'Yes. Tumang Bali guests use a traditional stone mortar (cobek) and pestle. No food-processor shortcut — you feel the texture change as oils release.',
+    },
+    {
+      question: 'Can beginners learn Balinese spice paste?',
+      answer:
+        'Absolutely. Chefs guide every step. Beginners and kids 8+ enjoy pounding spices — it is noisy, aromatic, and memorable. See our beginners landing page for more.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        A <strong>Balinese spice paste cooking class</strong> at Tumang Bali teaches Base Genep — the
+        heart of village cooking. You toast and grind spices by hand, then use that paste across sate,
+        lawar, pepes, and curries in a single half-day near Ubud. Shared class from IDR 350,000.
+      </p>
+      <h2>What goes into Base Genep</h2>
+      <ul>
+        <li>Turmeric, galangal, ginger, and lemongrass</li>
+        <li>Shallot, garlic, and chili</li>
+        <li>Candlenut, coriander, and pepper</li>
+        <li>Shrimp paste for traditional versions (optional for vegetarian/vegan)</li>
+        <li>Salt and oil to bind the paste</li>
+      </ul>
+      <h2>Why learn it in a class (not only from a blog)</h2>
+      <p>
+        Texture and aroma are hard to learn from photos alone. In class you smell when the paste is ready
+        and taste how it changes each dish. Deepen at home with{' '}
+        <Link href="/blog/how-to-make-base-genep">how to make Base Genep</Link> and{' '}
+        <Link href="/blog/how-to-make-bumbu-bali">how to make bumbu Bali</Link>.
+      </p>
+      <h2>From paste to full feast</h2>
+      <p>
+        Spice paste is step one. The Tumang menu continues with{' '}
+        <Link href="/blog/lemongrass-cooking-class-ubud">lemongrass sate lilit</Link>,{' '}
+        <Link href="/blog/sambal-matah-cooking-class-ubud">sambal matah</Link>, and dessert. Overview:{' '}
+        <Link href="/blog/tumang-bali-cooking-class-experience">Tumang Bali cooking class experience</Link>.
+      </p>
+      <h2>Book your spice-paste class in Ubud</h2>
+      <p>
+        <Link href={money}>Book now</Link> · <Link href={book}>Online booking</Link> · Beginners welcome
+        via <Link href="/bali-cooking-class-for-beginners">cooking class for beginners</Link>.
+      </p>
+    </>
+  ),
+}
+
 export const staticCommercialArticles: StaticArticle[] = [
   cookingClassUbudForCouples,
   cookingClassUbudGuide2026,
   ubudCookingClassForFamilies,
   vegetarianCookingClassUbudGuide,
   morningCookingClassUbudMarketTour,
+  lemongrassCookingClassUbud,
+  tumangBaliCookingClassExperience,
+  sambalMatahCookingClassUbud,
+  smallGroupCookingClassUbud,
+  balineseSpicePasteCookingClass,
 ]
 
 export function getStaticCommercialArticle(slug: string): StaticArticle | undefined {
