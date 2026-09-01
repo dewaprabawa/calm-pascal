@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { trackBooking, type BookingChannel } from '@/lib/bookingTracking'
+import OtaChannelIcon from './OtaChannelIcon'
 
 type TrackedBookingLinkProps = {
   href: string
@@ -9,6 +10,7 @@ type TrackedBookingLinkProps = {
   linkLabel?: string
   className?: string
   id?: string
+  showIcon?: boolean
   children: React.ReactNode
 }
 
@@ -18,6 +20,7 @@ export default function TrackedBookingLink({
   linkLabel,
   className,
   id,
+  showIcon = false,
   children,
 }: TrackedBookingLinkProps) {
   const handleClick = () => {
@@ -34,9 +37,10 @@ export default function TrackedBookingLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={className}
+      className={showIcon ? `inline-flex items-center gap-2 ${className ?? ''}` : className}
       onClick={handleClick}
     >
+      {showIcon ? <OtaChannelIcon channel={channel} className="w-5 h-5 shrink-0" /> : null}
       {children}
     </a>
   )

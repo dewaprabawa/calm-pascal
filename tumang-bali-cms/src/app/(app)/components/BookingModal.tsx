@@ -7,6 +7,7 @@ import { formatPickupForMessage } from '@/lib/bookingEmailContent'
 import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 import { sortActivities } from '@/lib/sortActivities'
 import type { PickupLocationValue } from './PickupLocationMap'
+import OtaChannelIcon from './OtaChannelIcon'
 
 const PickupLocationMap = dynamic(() => import('./PickupLocationMap'), { ssr: false })
 
@@ -230,8 +231,9 @@ _(WhatsApp consultation from website)_`
                       linkLabel: `Booking chooser — ${partner.label}`,
                     })
                   }
-                  className={`flex w-full items-center justify-center py-4 px-6 rounded-xl font-bold text-white text-lg transition-transform hover:scale-[1.02] active:scale-[0.98] ${partner.className}`}
+                  className={`flex w-full items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-white text-lg transition-transform hover:scale-[1.02] active:scale-[0.98] ${partner.className}`}
                 >
+                  <OtaChannelIcon channel={partner.channel} className="w-6 h-6" />
                   {partner.label}
                 </a>
               ))}

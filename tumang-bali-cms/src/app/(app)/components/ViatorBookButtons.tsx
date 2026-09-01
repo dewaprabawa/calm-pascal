@@ -5,7 +5,7 @@ import OtaPricingNotice from './OtaPricingNotice'
 import { OTA_LINKS } from '@/lib/otaBookingLinks'
 
 const viatorBtn =
-  'inline-flex items-center justify-center bg-[#00A19C] hover:bg-[#008a86] text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg'
+  'inline-flex items-center justify-center gap-2 bg-[#00A19C] hover:bg-[#008a86] text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 shadow-lg'
 
 type Props = {
   /** GA4 / booking tracking label prefix, e.g. "TripAdvisor page" */
@@ -29,6 +29,7 @@ export default function ViatorBookButtons({
       <TrackedBookingLink
         href={OTA_LINKS.viator.marketToTable}
         channel="viator"
+        showIcon
         linkLabel={`${context} — Viator Market to Table`}
         className={viatorBtn}
       >
@@ -37,6 +38,7 @@ export default function ViatorBookButtons({
       <TrackedBookingLink
         href={OTA_LINKS.viator.marketToTableDirect}
         channel="viator"
+        showIcon
         linkLabel={`${context} — Viator direct link`}
         className={`${viatorBtn} bg-[#008a86] hover:bg-[#007570]`}
       >

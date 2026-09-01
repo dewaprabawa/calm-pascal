@@ -8,6 +8,7 @@ import TripAdvisorWidget from '../components/TripAdvisorWidget'
 import TripAdvisorWriteReviewWidget from '../components/TripAdvisorWriteReviewWidget'
 import ViatorBookButtons from '../components/ViatorBookButtons'
 import OtaPricingNotice from '../components/OtaPricingNotice'
+import OtaBookingLink from '../components/OtaBookingLink'
 import WhatsAppFloat from '../components/WhatsAppFloat'
 
 export const revalidate = 3600
@@ -134,24 +135,14 @@ export default function TripAdvisorCookingClassPage() {
           </p>
           <ul className="space-y-3">
             <li>
-              <a
-                href={OTA_LINKS.tripadvisor.reviewsEn}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-600 font-semibold underline hover:text-orange-700"
-              >
+              <OtaBookingLink channel="tripadvisor" href={OTA_LINKS.tripadvisor.reviewsEn}>
                 TripAdvisor.com — reviews &amp; photos
-              </a>
+              </OtaBookingLink>
             </li>
             <li>
-              <a
-                href={OTA_LINKS.tripadvisor.reviewsId}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-orange-600 font-semibold underline hover:text-orange-700"
-              >
+              <OtaBookingLink channel="tripadvisor" href={OTA_LINKS.tripadvisor.reviewsId}>
                 TripAdvisor.co.id — ulasan Bahasa Indonesia
-              </a>
+              </OtaBookingLink>
             </li>
           </ul>
         </div>
