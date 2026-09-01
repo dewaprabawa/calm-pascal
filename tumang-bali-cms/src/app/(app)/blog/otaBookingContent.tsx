@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
 import { OTA_LINKS } from '@/lib/otaBookingLinks'
+import ViatorBookButtons from '../components/ViatorBookButtons'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -110,12 +111,12 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
 
 export const bookCookingClassUbudTripAdvisor: StaticArticle = {
   slug: 'book-cooking-class-ubud-tripadvisor',
-  title: 'Book Tumang Bali on TripAdvisor — Travelers’ Choice Cooking Class Ubud 2026',
-  metaTitle: 'Book Cooking Class Ubud on TripAdvisor — Tumang Bali 2026',
+  title: 'Tumang Bali on TripAdvisor — Travelers’ Choice Cooking Class Ubud 2026',
+  metaTitle: 'TripAdvisor Cooking Class Ubud — Tumang Bali | Book on Viator',
   metaDescription:
-    'Book and review Tumang Bali Cooking Class on TripAdvisor — Travelers’ Choice 2026, 5.0 rating, market tour, max 8 guests. Official TripAdvisor page links for English & Indonesian.',
+    'TripAdvisor Travelers’ Choice 2026 — Tumang Bali Cooking Class near Ubud. 5.0 rating, 1500+ reviews. Read on TripAdvisor, book instantly on Viator. Market tour, max 8 guests.',
   excerpt:
-    'Tumang Bali is a TripAdvisor Travelers’ Choice 2026 cooking class near Ubud. Read 1500+ five-star reviews and book through our official TripAdvisor attraction page.',
+    'Dedicated TripAdvisor guide for Tumang Bali — Travelers’ Choice 2026, 5.0 stars, 1500+ reviews. Read on TripAdvisor and book our Ubud cooking class on Viator.',
   image: '/images/gallery-girls.jpg',
   imageAlt: 'Happy guests at Tumang Bali Cooking Class TripAdvisor Travelers Choice Ubud',
   author: 'Tumang Bali Team',
@@ -137,7 +138,7 @@ export const bookCookingClassUbudTripAdvisor: StaticArticle = {
     {
       question: 'How do I book Tumang Bali through TripAdvisor?',
       answer:
-        'Open our official TripAdvisor attraction page (English or Indonesian link below), then use the “Check availability” or booking option on that page. TripAdvisor may route checkout through a partner platform — you are still booking the Tumang Bali village cooking class with market tour and 10+ dishes.',
+        'Read reviews on our official TripAdvisor page, then book instantly on Viator using the buttons on this page — the same Market-to-Table class with market tour and 10+ dishes. TripAdvisor and Viator are part of the same travel group.',
     },
     {
       question: 'Why is Tumang Bali Travelers’ Choice on TripAdvisor?',
@@ -149,11 +150,23 @@ export const bookCookingClassUbudTripAdvisor: StaticArticle = {
     <>
       <p data-speakable>
         <strong>Tumang Bali Cooking Class on TripAdvisor</strong> is one of the highest-rated Ubud cooking
-        experiences for foreign travellers — Travelers&apos; Choice 2026, 5.0 stars, 1500+ reviews. We teach
-        hands-on Balinese cooking in a village kitchen with a morning market tour, rice-field walk, and 10+
-        dishes. Shared class IDR 350,000 · max 8 guests · free Ubud pickup.
+        experiences for foreign travellers — Travelers&apos; Choice 2026, 5.0 stars, 1500+ reviews. Read
+        reviews on TripAdvisor, then <strong>book on Viator</strong> for instant confirmation. Village
+        kitchen, morning market tour, rice-field walk, 10+ dishes. Shared class IDR 350,000 · max 8 guests
+        · free Ubud pickup.
       </p>
-      <h2>Official TripAdvisor pages — read reviews &amp; book</h2>
+      <p>
+        <Link href="/tripadvisor-cooking-class-ubud" className="font-semibold">
+          → Dedicated TripAdvisor page with Viator booking
+        </Link>
+      </p>
+      <h2>Book on Viator (TripAdvisor checkout)</h2>
+      <p>
+        Most travellers who find us on TripAdvisor book through Viator — secure payment and instant
+        confirmation for our Ubud Market-to-Table cooking class:
+      </p>
+      <ViatorBookButtons context="TripAdvisor blog article" />
+      <h2>Official TripAdvisor pages — read reviews</h2>
       <ul>
         <li>
           <strong>TripAdvisor (English / international)</strong> — reviews, photos, check availability:{' '}
@@ -182,10 +195,10 @@ export const bookCookingClassUbudTripAdvisor: StaticArticle = {
       </p>
       <h2>Other ways to book</h2>
       <p>
-        Prefer another platform? See our guides for{' '}
-        <Link href="/blog/book-cooking-class-ubud-getyourguide">GetYourGuide</Link>,{' '}
-        <Link href="/blog/book-cooking-class-ubud-viator">Viator</Link>, and{' '}
-        <Link href="/blog/book-cooking-class-ubud-airbnb">Airbnb Experiences</Link>. Or{' '}
+        See our{' '}
+        <Link href="/blog/book-cooking-class-ubud-getyourguide">GetYourGuide</Link> and{' '}
+        <Link href="/blog/book-cooking-class-ubud-airbnb">Airbnb Experiences</Link> guides. Full Viator
+        details: <Link href="/blog/book-cooking-class-ubud-viator">Viator booking guide</Link>. Or{' '}
         <Link href={money}>book direct</Link> on our website.
       </p>
     </>
