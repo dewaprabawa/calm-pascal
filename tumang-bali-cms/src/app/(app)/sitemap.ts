@@ -74,6 +74,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/bali-cooking-experience', priority: 0.9, changeFrequency: 'monthly' },
   // Competitor comparison page
   { path: '/compare-ubud-cooking-classes', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/tripadvisor-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },
   // Family & kids cooking class
   { path: '/family-cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
   // Blog article about Tumang

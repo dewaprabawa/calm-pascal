@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
 import { PRIMARY_COOKING_CLASS_PATH, SITE } from '@/lib/seoMetadata'
+import ViatorBookButtons from '../components/ViatorBookButtons'
 
 export function StaticBlogArticle({ article }: { article: StaticArticle }) {
   const url = `${SITE}/blog/${article.slug}`
@@ -156,12 +157,24 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
           <p className="text-stone-600 dark:text-stone-400 mb-6">
             Shared class from IDR 350K · Free Ubud hotel pickup · TripAdvisor Travelers&apos; Choice 2026
           </p>
-          <Link
-            href={PRIMARY_COOKING_CLASS_PATH}
-            className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105"
-          >
-            Book Cooking Class Ubud
-          </Link>
+          {article.slug === 'book-cooking-class-ubud-tripadvisor' ? (
+            <>
+              <ViatorBookButtons context="TripAdvisor article footer" layout="row" />
+              <p className="mt-6 text-sm text-stone-500">
+                Or{' '}
+                <Link href={PRIMARY_COOKING_CLASS_PATH} className="text-orange-600 font-semibold underline">
+                  book direct on our website
+                </Link>
+              </p>
+            </>
+          ) : (
+            <Link
+              href={PRIMARY_COOKING_CLASS_PATH}
+              className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105"
+            >
+              Book Cooking Class Ubud
+            </Link>
+          )}
         </div>
       </section>
 
