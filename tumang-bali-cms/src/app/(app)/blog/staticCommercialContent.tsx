@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
+import { otaBookingArticles } from './otaBookingContent'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -841,6 +842,7 @@ export const staticCommercialArticles: StaticArticle[] = [
   sambalMatahCookingClassUbud,
   smallGroupCookingClassUbud,
   balineseSpicePasteCookingClass,
+  ...otaBookingArticles,
 ]
 
 export function getStaticCommercialArticle(slug: string): StaticArticle | undefined {
