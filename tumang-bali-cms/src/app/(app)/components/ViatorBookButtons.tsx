@@ -1,6 +1,7 @@
 'use client'
 
 import TrackedBookingLink from './TrackedBookingLink'
+import OtaPricingNotice from './OtaPricingNotice'
 import { OTA_LINKS } from '@/lib/otaBookingLinks'
 
 const viatorBtn =
@@ -10,9 +11,14 @@ type Props = {
   /** GA4 / booking tracking label prefix, e.g. "TripAdvisor page" */
   context?: string
   layout?: 'row' | 'stack'
+  showPricingNote?: boolean
 }
 
-export default function ViatorBookButtons({ context = 'Page', layout = 'stack' }: Props) {
+export default function ViatorBookButtons({
+  context = 'Page',
+  layout = 'stack',
+  showPricingNote = true,
+}: Props) {
   const wrapClass =
     layout === 'row'
       ? 'flex flex-col sm:flex-row flex-wrap gap-3 justify-center'
@@ -36,6 +42,9 @@ export default function ViatorBookButtons({ context = 'Page', layout = 'stack' }
       >
         Book on Viator — Check dates and pay
       </TrackedBookingLink>
+      {showPricingNote ? (
+        <OtaPricingNotice compact className="mt-4 text-center max-w-xl mx-auto" />
+      ) : null}
     </div>
   )
 }

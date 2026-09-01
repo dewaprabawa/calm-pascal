@@ -7,6 +7,7 @@ import configPromise from '@/payload.config'
 import { sortActivities } from '@/lib/sortActivities'
 import BookButton from '../components/BookButton'
 import BookingModal from '../components/BookingModal'
+import OtaPricingNotice from '../components/OtaPricingNotice'
 import WhatsAppFloat from '../components/WhatsAppFloat'
 
 export const revalidate = 60
@@ -207,6 +208,15 @@ export default async function Page() {
             <h3 className="font-bold text-lg mb-2">Q: Do you provide transport?</h3>
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">A: Yes, we offer free hotel pickup and drop-off for all guests staying in central Ubud.</p>
           </div>
+          <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800">
+            <h3 className="font-bold text-lg mb-2">Q: Why is the price higher on GetYourGuide or Viator?</h3>
+            <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
+              A: Third-party platforms (Bokun, GetYourGuide, Viator, Airbnb) charge a booking commission, so
+              their listed price may be slightly above our direct rate of IDR 350,000. You get the same class
+              — the difference is the platform fee, not us charging you more.
+            </p>
+          </div>
+          <OtaPricingNotice />
         </div>
       </section>
 
