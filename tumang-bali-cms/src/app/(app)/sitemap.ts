@@ -45,6 +45,10 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'sambal-matah-cooking-class-ubud',
   'small-group-cooking-class-ubud',
   'balinese-spice-paste-cooking-class',
+  'book-cooking-class-ubud-getyourguide',
+  'book-cooking-class-ubud-tripadvisor',
+  'book-cooking-class-ubud-viator',
+  'book-cooking-class-ubud-airbnb',
   'morning-vs-afternoon-tours-bali',
 ])
 
@@ -85,6 +89,10 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/blog/sambal-matah-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/blog/small-group-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/blog/balinese-spice-paste-cooking-class', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/book-cooking-class-ubud-getyourguide', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/book-cooking-class-ubud-tripadvisor', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/book-cooking-class-ubud-viator', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/blog/book-cooking-class-ubud-airbnb', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/llms.txt', priority: 0.7, changeFrequency: 'weekly' },
