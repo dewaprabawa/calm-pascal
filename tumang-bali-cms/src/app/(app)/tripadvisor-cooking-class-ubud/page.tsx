@@ -7,6 +7,7 @@ import { OTA_LINKS } from '@/lib/otaBookingLinks'
 import TripAdvisorWidget from '../components/TripAdvisorWidget'
 import TripAdvisorWriteReviewWidget from '../components/TripAdvisorWriteReviewWidget'
 import ViatorBookButtons from '../components/ViatorBookButtons'
+import OtaPricingNotice from '../components/OtaPricingNotice'
 import WhatsAppFloat from '../components/WhatsAppFloat'
 
 export const revalidate = 3600
@@ -41,6 +42,11 @@ const faqs = [
     question: 'Is the Viator listing the same class as on TripAdvisor?',
     answer:
       'Yes. Our Viator tour “Ubud Market-to-Table Cooking Class and Local Herb Discovery” is the same Tumang Bali village experience listed on TripAdvisor — same kitchen, chefs, menu, and Ubud hotel pickup.',
+  },
+  {
+    question: 'Why is the Viator price higher than booking direct on your website?',
+    answer:
+      'Viator and other OTAs (Bokun, GetYourGuide, Airbnb) charge a booking commission. Their listed price may be slightly above our direct rate of IDR 350,000 per shared class. Same experience — the difference is the platform fee, not Tumang Bali charging you more.',
   },
 ]
 
@@ -113,7 +119,8 @@ export default function TripAdvisorCookingClassPage() {
             TripAdvisor travellers often book through <strong>Viator</strong> — instant confirmation, secure
             checkout, and the same Tumang Bali Market-to-Table class.
           </p>
-          <ViatorBookButtons context="TripAdvisor landing page" layout="row" />
+          <ViatorBookButtons context="TripAdvisor landing page" layout="row" showPricingNote={false} />
+          <OtaPricingNotice className="mt-6 text-left max-w-2xl mx-auto" />
         </div>
       </section>
 

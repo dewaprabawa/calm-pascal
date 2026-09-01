@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
-import { OTA_LINKS } from '@/lib/otaBookingLinks'
+import { OTA_LINKS, OTA_PRICING_FAQ } from '@/lib/otaBookingLinks'
 import ViatorBookButtons from '../components/ViatorBookButtons'
+import OtaPricingNotice from '../components/OtaPricingNotice'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -53,8 +54,9 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
     {
       question: 'What is included when I book Tumang Bali on GetYourGuide?',
       answer:
-        'Shared class IDR 350,000 per person (pricing on GYG may show in USD). Includes Ubud-area hotel pickup, ingredients, hands-on cooking of 10+ dishes, shared meal, recipe booklet, and English-speaking chefs. Morning sessions include a traditional market tour.',
+        'Shared class IDR 350,000 per person direct (GYG may show a slightly higher price in USD due to platform commission). Includes Ubud-area hotel pickup, ingredients, hands-on cooking of 10+ dishes, shared meal, recipe booklet, and English-speaking chefs. Morning sessions include a traditional market tour.',
     },
+    OTA_PRICING_FAQ,
   ],
   body: (
     <>
@@ -64,6 +66,7 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
         near Ubud — morning market tour, rice-field walk, max 8 guests, and 10+ hands-on Balinese dishes
         including sate lilit, sambal matah, and Base Genep spice paste.
       </p>
+      <OtaPricingNotice />
       <h2>Official GetYourGuide booking links</h2>
       <p>Use either official listing below — both are Tumang Bali Cooking Class near Ubud:</p>
       <ul>
@@ -145,6 +148,7 @@ export const bookCookingClassUbudTripAdvisor: StaticArticle = {
       answer:
         'Guests consistently praise the real market tour, small groups (max 8), hands-on spice grinding, and village rice-field setting — not a hotel demo kitchen. That feedback earned Travelers’ Choice 2026 among Ubud cooking classes.',
     },
+    OTA_PRICING_FAQ,
   ],
   body: (
     <>
@@ -155,6 +159,7 @@ export const bookCookingClassUbudTripAdvisor: StaticArticle = {
         kitchen, morning market tour, rice-field walk, 10+ dishes. Shared class IDR 350,000 · max 8 guests
         · free Ubud pickup.
       </p>
+      <OtaPricingNotice />
       <p>
         <Link href="/tripadvisor-cooking-class-ubud" className="font-semibold">
           → Dedicated TripAdvisor page with Viator booking
@@ -239,8 +244,9 @@ export const bookCookingClassUbudViator: StaticArticle = {
     {
       question: 'Viator vs booking direct — which is better?',
       answer:
-        'Same class and chefs. Viator suits travellers who want Viator’s checkout, cancellation policy, and app. Direct booking at tumangbaliclass.com or WhatsApp +62 822-1013-2418 may offer more flexible date messaging.',
+        'Same class and chefs. Viator suits travellers who want Viator’s checkout, cancellation policy, and app. Direct booking at tumangbaliclass.com or WhatsApp +62 822-1013-2418 is usually the lowest price (IDR 350,000 shared) because Viator adds a platform commission to the listed price.',
     },
+    OTA_PRICING_FAQ,
   ],
   body: (
     <>
@@ -250,6 +256,7 @@ export const bookCookingClassUbudViator: StaticArticle = {
         10+ Balinese dishes in a village kitchen. Max 8 guests · IDR 350,000 shared · TripAdvisor
         Travelers&apos; Choice 2026.
       </p>
+      <OtaPricingNotice />
       <h2>Official Viator booking links</h2>
       <ul>
         <li>
@@ -324,6 +331,7 @@ export const bookCookingClassUbudAirbnb: StaticArticle = {
       answer:
         'Shared hands-on Balinese cooking class, 10+ dishes, shared meal, recipe booklet, Ubud-area pickup, morning market tour on AM sessions, and rice-field walk. Vegetarian/vegan menu on request. Max 8 guests.',
     },
+    OTA_PRICING_FAQ,
   ],
   body: (
     <>
@@ -333,6 +341,7 @@ export const bookCookingClassUbudAirbnb: StaticArticle = {
         rice terraces, max 8 guests, and 10+ authentic Balinese dishes. Shared from IDR 350,000 equivalent ·
         Travelers&apos; Choice 2026 on TripAdvisor.
       </p>
+      <OtaPricingNotice />
       <h2>Official Airbnb Experiences booking links</h2>
       <ul>
         <li>

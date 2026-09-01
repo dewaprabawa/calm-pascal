@@ -248,6 +248,11 @@ _(WhatsApp consultation from website)_`
               <p className="text-center text-xs text-stone-500 dark:text-stone-400 leading-relaxed px-1 pt-1">
                 WhatsApp is a consultation to secure your spot and arrange payment — not instant checkout.
               </p>
+              <p className="text-center text-xs text-stone-500 dark:text-stone-400 leading-relaxed px-1 pt-2 border-t border-stone-200 dark:border-zinc-800 mt-3">
+                Prices on Bokun, GetYourGuide, Viator, and Airbnb may be slightly higher than booking direct
+                on tumangbaliclass.com (IDR 350,000 shared) because those platforms charge a booking
+                commission. Same class — you are not being overcharged by us.
+              </p>
             </div>
           ) : (
           <form onSubmit={handleSubmit} className="space-y-5">
