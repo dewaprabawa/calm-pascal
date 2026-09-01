@@ -1123,9 +1123,10 @@ export default async function Page() {
              </TrackedBookingLink>
            </div>
            <p className="text-xs text-stone-500 dark:text-stone-400 text-center w-full max-w-2xl mx-auto leading-relaxed">
-             Partner prices on Bokun, GetYourGuide, Viator, and Airbnb may be slightly higher than our direct
-             rate (IDR 350,000 shared) because those platforms charge a booking commission. Same class — you
-             are not being overcharged by Tumang Bali.
+             <strong>Use an OTA</strong> (Bokun, GetYourGuide, Viator, Airbnb) to secure your spot with{' '}
+             <strong>instant checkout</strong>. Partner prices may be slightly higher than our direct rate
+             (IDR 350,000 shared) due to platform commission. Same class — you are not being overcharged by
+             Tumang Bali.
            </p>
         </div>
       </section>

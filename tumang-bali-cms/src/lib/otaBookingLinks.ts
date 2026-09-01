@@ -5,8 +5,12 @@ export const DIRECT_SHARED_CLASS_IDR = 350_000
 export const OTA_PRICING_FAQ = {
   question: 'Why is the price on Bokun, GetYourGuide, Viator, or Airbnb higher than booking direct?',
   answer:
-    'Third-party booking platforms charge a commission on each sale. The price shown on Bokun, GetYourGuide, Viator, and Airbnb Experiences may therefore be slightly higher than our direct website rate (IDR 350,000 per person for a shared class, August 2026). You receive the same class, menu, and inclusions — Tumang Bali is not charging you extra; the difference is the platform fee.',
+    'Third-party booking platforms charge a commission on each sale. The price shown on Bokun, GetYourGuide, Viator, and Airbnb Experiences may therefore be slightly higher than our direct website rate (IDR 350,000 per person for a shared class, August 2026). You receive the same class, menu, and inclusions — Tumang Bali is not charging you extra; the difference is the platform fee. Use an OTA when you want instant checkout to secure your spot immediately.',
 } as const
+
+/** When to book via OTA vs direct — shared sitewide copy. */
+export const OTA_INSTANT_CHECKOUT_NOTE =
+  'Use Bokun, GetYourGuide, Viator, or Airbnb Experiences when you want to secure your spot right away with instant checkout and payment confirmation.'
 
 export const OTA_LINKS = {
   getyourguide: {

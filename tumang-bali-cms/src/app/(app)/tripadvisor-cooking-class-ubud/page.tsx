@@ -117,7 +117,8 @@ export default function TripAdvisorCookingClassPage() {
           <h2 className="text-2xl md:text-3xl font-black mb-3">Book on Viator</h2>
           <p className="text-stone-600 dark:text-stone-400 mb-6 max-w-xl mx-auto">
             TripAdvisor travellers often book through <strong>Viator</strong> — instant confirmation, secure
-            checkout, and the same Tumang Bali Market-to-Table class.
+            checkout, and the same Tumang Bali Market-to-Table class. Use an OTA when you want to secure your
+            spot with instant checkout.
           </p>
           <ViatorBookButtons context="TripAdvisor landing page" layout="row" showPricingNote={false} />
           <OtaPricingNotice className="mt-6 text-left max-w-2xl mx-auto" />
