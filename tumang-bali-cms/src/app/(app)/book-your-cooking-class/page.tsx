@@ -213,7 +213,8 @@ export default async function Page() {
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
               A: Third-party platforms (Bokun, GetYourGuide, Viator, Airbnb) charge a booking commission, so
               their listed price may be slightly above our direct rate of IDR 350,000. You get the same class
-              — the difference is the platform fee, not us charging you more.
+              — the difference is the platform fee, not us charging you more. Use an OTA when you want instant
+              checkout to secure your spot immediately.
             </p>
           </div>
           <OtaPricingNotice />

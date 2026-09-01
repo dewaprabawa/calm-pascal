@@ -7,6 +7,7 @@ import { formatPickupForMessage } from '@/lib/bookingEmailContent'
 import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 import { sortActivities } from '@/lib/sortActivities'
 import type { PickupLocationValue } from './PickupLocationMap'
+import OtaChannelIcon from './OtaChannelIcon'
 
 const PickupLocationMap = dynamic(() => import('./PickupLocationMap'), { ssr: false })
 
@@ -230,8 +231,9 @@ _(WhatsApp consultation from website)_`
                       linkLabel: `Booking chooser — ${partner.label}`,
                     })
                   }
-                  className={`flex w-full items-center justify-center py-4 px-6 rounded-xl font-bold text-white text-lg transition-transform hover:scale-[1.02] active:scale-[0.98] ${partner.className}`}
+                  className={`flex w-full items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-white text-lg transition-transform hover:scale-[1.02] active:scale-[0.98] ${partner.className}`}
                 >
+                  <OtaChannelIcon channel={partner.channel} className="w-6 h-6" />
                   {partner.label}
                 </a>
               ))}
@@ -249,9 +251,10 @@ _(WhatsApp consultation from website)_`
                 WhatsApp is a consultation to secure your spot and arrange payment — not instant checkout.
               </p>
               <p className="text-center text-xs text-stone-500 dark:text-stone-400 leading-relaxed px-1 pt-2 border-t border-stone-200 dark:border-zinc-800 mt-3">
-                Prices on Bokun, GetYourGuide, Viator, and Airbnb may be slightly higher than booking direct
-                on tumangbaliclass.com (IDR 350,000 shared) because those platforms charge a booking
-                commission. Same class — you are not being overcharged by us.
+                <strong>Use an OTA above</strong> (Bokun, GetYourGuide, Viator, Airbnb) to secure your spot
+                with <strong>instant checkout</strong>. Prices may be slightly higher than booking direct
+                (IDR 350,000 shared) because those platforms charge a commission. Same class — you are not
+                being overcharged by us.
               </p>
             </div>
           ) : (

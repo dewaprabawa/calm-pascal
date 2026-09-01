@@ -4,21 +4,11 @@ import type { StaticArticle } from './staticCommercialArticles'
 import { OTA_LINKS, OTA_PRICING_FAQ } from '@/lib/otaBookingLinks'
 import ViatorBookButtons from '../components/ViatorBookButtons'
 import OtaPricingNotice from '../components/OtaPricingNotice'
+import OtaBookingLink from '../components/OtaBookingLink'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
 const compare = '/compare-ubud-cooking-classes'
-
-const otaLinkClass =
-  'inline-block bg-stone-900 dark:bg-white text-white dark:text-stone-900 px-5 py-3 rounded-full font-bold text-base hover:opacity-90 transition-opacity mr-2 mb-2'
-
-function OtaAnchor({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={otaLinkClass}>
-      {children}
-    </a>
-  )
-}
 
 export const bookCookingClassUbudGetYourGuide: StaticArticle = {
   slug: 'book-cooking-class-ubud-getyourguide',
@@ -73,19 +63,23 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
         <li>
           <strong>Balinese Cooking Class with Local Chef</strong> — main morning/afternoon class with market
           tour (morning):{' '}
-          <OtaAnchor href={OTA_LINKS.getyourguide.localChef}>Book on GetYourGuide — Local Chef</OtaAnchor>
+          <OtaBookingLink channel="getyourguide" href={OTA_LINKS.getyourguide.localChef}>
+            Book on GetYourGuide — Local Chef
+          </OtaBookingLink>
         </li>
         <li>
           <strong>Balinese Cooking Class with Rice Terrace Walk</strong> — village kitchen + terrace walk
           highlight:{' '}
-          <OtaAnchor href={OTA_LINKS.getyourguide.riceTerraceWalk}>
+          <OtaBookingLink channel="getyourguide" href={OTA_LINKS.getyourguide.riceTerraceWalk}>
             Book on GetYourGuide — Rice Terrace Walk
-          </OtaAnchor>
+          </OtaBookingLink>
         </li>
       </ul>
       <p>
         Short link (same experience):{' '}
-        <OtaAnchor href={OTA_LINKS.getyourguide.shortLink}>GetYourGuide — Quick book</OtaAnchor>
+        <OtaBookingLink channel="getyourguide" href={OTA_LINKS.getyourguide.shortLink}>
+          GetYourGuide — Quick book
+        </OtaBookingLink>
       </p>
       <h2>Why book Tumang Bali on GetYourGuide?</h2>
       <ul>
@@ -175,15 +169,15 @@ export const bookCookingClassUbudTripAdvisor: StaticArticle = {
       <ul>
         <li>
           <strong>TripAdvisor (English / international)</strong> — reviews, photos, check availability:{' '}
-          <OtaAnchor href={OTA_LINKS.tripadvisor.reviewsEn}>
+          <OtaBookingLink channel="tripadvisor" href={OTA_LINKS.tripadvisor.reviewsEn}>
             Tumang Bali on TripAdvisor.com
-          </OtaAnchor>
+          </OtaBookingLink>
         </li>
         <li>
           <strong>TripAdvisor Indonesia (Bahasa)</strong> — same class, localized reviews:{' '}
-          <OtaAnchor href={OTA_LINKS.tripadvisor.reviewsId}>
+          <OtaBookingLink channel="tripadvisor" href={OTA_LINKS.tripadvisor.reviewsId}>
             Tumang Bali on TripAdvisor.co.id
-          </OtaAnchor>
+          </OtaBookingLink>
         </li>
       </ul>
       <h2>What guests say on TripAdvisor</h2>
@@ -262,13 +256,15 @@ export const bookCookingClassUbudViator: StaticArticle = {
         <li>
           <strong>Ubud Market-to-Table Cooking Class &amp; Local Herb Discovery</strong> (recommended share
           link):{' '}
-          <OtaAnchor href={OTA_LINKS.viator.marketToTable}>Book on Viator — Market to Table</OtaAnchor>
+          <OtaBookingLink channel="viator" href={OTA_LINKS.viator.marketToTable}>
+            Book on Viator — Market to Table
+          </OtaBookingLink>
         </li>
         <li>
           <strong>Same Viator tour — direct listing URL</strong>:{' '}
-          <OtaAnchor href={OTA_LINKS.viator.marketToTableDirect}>
+          <OtaBookingLink channel="viator" href={OTA_LINKS.viator.marketToTableDirect}>
             Book on Viator — Direct link
-          </OtaAnchor>
+          </OtaBookingLink>
         </li>
       </ul>
       <h2>What to expect (Viator listing matches our class)</h2>
@@ -346,11 +342,15 @@ export const bookCookingClassUbudAirbnb: StaticArticle = {
       <ul>
         <li>
           <strong>Airbnb Experience — direct book page</strong>:{' '}
-          <OtaAnchor href={OTA_LINKS.airbnb.experience}>Book on Airbnb Experiences</OtaAnchor>
+          <OtaBookingLink channel="airbnb" href={OTA_LINKS.airbnb.experience}>
+            Book on Airbnb Experiences
+          </OtaBookingLink>
         </li>
         <li>
           <strong>Airbnb — host experience referral link</strong> (same class):{' '}
-          <OtaAnchor href={OTA_LINKS.airbnb.hostReferral}>Book on Airbnb — Referral link</OtaAnchor>
+          <OtaBookingLink channel="airbnb" href={OTA_LINKS.airbnb.hostReferral}>
+            Book on Airbnb — Referral link
+          </OtaBookingLink>
         </li>
       </ul>
       <h2>Why travellers book us on Airbnb</h2>
