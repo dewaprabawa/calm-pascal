@@ -49,7 +49,7 @@ export const faqs = [
   },
   {
     question: 'What is your cancellation and refund policy?',
-    answer: 'Cancellations made at least 24 hours before the class starts receive a 100% refund for direct Tumang Bali bookings. Cancel via WhatsApp (+62 822-1013-2418) or email tumangbalicookingclass@gmail.com. Bookings made on GetYourGuide, Viator, Airbnb, or other partners follow that platform’s refund rules. Full details: /refund-policy.',
+    answer: 'Cancellations made at least 24 hours before the class starts receive a 100% refund for direct Tumang Bali bookings. Cancel via WhatsApp (+62 822-1013-2418) or email tumangbalicookingclass@gmail.com. Bookings made on GetYourGuide, Viator, Airbnb, or other partners follow that platform’s refund rules. Full details are on our Refund Policy page.',
   },
 ]
 
