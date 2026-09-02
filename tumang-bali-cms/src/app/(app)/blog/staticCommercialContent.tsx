@@ -2,6 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
 import { otaBookingArticles } from './otaBookingContent'
+import { salesGeoCommercialArticles } from './salesGeoCommercialContent'
+
+export {
+  ubudCookingClassPrice,
+  privateCookingClassUbudPrice,
+  bestCookingClassInUbud,
+  bestCookingClassInBali,
+  cookingClassUbudFromCanggu,
+  isABaliCookingClassWorthIt,
+  morningVsAfternoonToursBali,
+  salesGeoCommercialArticles,
+} from './salesGeoCommercialContent'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -843,6 +855,7 @@ export const staticCommercialArticles: StaticArticle[] = [
   smallGroupCookingClassUbud,
   balineseSpicePasteCookingClass,
   ...otaBookingArticles,
+  ...salesGeoCommercialArticles,
 ]
 
 export function getStaticCommercialArticle(slug: string): StaticArticle | undefined {

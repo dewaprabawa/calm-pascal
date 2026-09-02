@@ -14,6 +14,14 @@ export const STATIC_COMMERCIAL_SLUGS = [
   'book-cooking-class-ubud-tripadvisor',
   'book-cooking-class-ubud-viator',
   'book-cooking-class-ubud-airbnb',
+  // Sales + GEO / LLM citability cluster (formerly CMS-only)
+  'ubud-cooking-class-price',
+  'private-cooking-class-ubud-price',
+  'best-cooking-class-in-ubud',
+  'best-cooking-class-in-bali',
+  'cooking-class-ubud-from-canggu',
+  'is-a-bali-cooking-class-worth-it',
+  'morning-vs-afternoon-tours-bali',
 ] as const
 
 export type StaticCommercialSlug = (typeof STATIC_COMMERCIAL_SLUGS)[number]
