@@ -50,6 +50,27 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'book-cooking-class-ubud-viator',
   'book-cooking-class-ubud-airbnb',
   'morning-vs-afternoon-tours-bali',
+  // Foreign search intent cluster (top Bali queries → cooking class funnel)
+  'bali-villas-guide-where-to-stay',
+  'best-time-to-visit-bali',
+  'things-to-do-in-bali',
+  'bali-resorts-guide',
+  'ubud-vs-canggu-vs-seminyak',
+  'bali-visa-requirements',
+  'bali-new-tourist-rules-2026',
+  'is-bali-cheap-or-expensive',
+  'how-to-pay-in-bali',
+  'how-to-get-around-bali',
+  'how-to-avoid-bali-belly',
+  'bali-scooter-rental-rules',
+  'can-you-drink-tap-water-bali',
+  'dangerous-animals-bali',
+  'where-is-bali-located',
+  'best-beaches-in-bali',
+  'what-to-wear-in-bali-temples',
+  'is-bali-safe-for-tourists',
+  'what-religion-is-bali',
+  'bali-day-of-silence-nyepi',
 ])
 
 // Static, hand-built routes under (app).
