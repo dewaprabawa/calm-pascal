@@ -128,6 +128,9 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/llms-full.txt', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/id', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/press', priority: 0.5, changeFrequency: 'monthly' },
+  { path: '/contact', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/refund-policy', priority: 0.6, changeFrequency: 'yearly' },
+  { path: '/privacy-policy', priority: 0.6, changeFrequency: 'yearly' },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

@@ -410,6 +410,18 @@ export default async function IndonesianPage() {
 
       <footer className="py-10 px-6 border-t border-stone-200 dark:border-zinc-800 text-center text-sm text-stone-500">
         © {new Date().getFullYear()} Tumang Bali Cooking Class · Desa Tumang, Ubud, Bali ·{' '}
+        <a href="/contact" className="text-orange-600 hover:underline">
+          Kontak
+        </a>{' '}
+        ·{' '}
+        <a href="/refund-policy" className="text-orange-600 hover:underline">
+          Refund
+        </a>{' '}
+        ·{' '}
+        <a href="/privacy-policy" className="text-orange-600 hover:underline">
+          Privasi
+        </a>{' '}
+        ·{' '}
         <a href="/" hrefLang="en" className="text-orange-600 hover:underline">
           English site
         </a>
