@@ -67,11 +67,6 @@ const nextConfig: NextConfig = {
       },
       // Common URL patterns that visitors and bots try — redirect to homepage anchors.
       {
-        source: '/contact',
-        destination: '/#location',
-        permanent: true,
-      },
-      {
         source: '/faq',
         destination: '/#faq',
         permanent: true,

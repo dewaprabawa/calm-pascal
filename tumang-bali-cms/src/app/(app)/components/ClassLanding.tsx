@@ -301,7 +301,18 @@ export default function ClassLanding({
       </section>
 
       <footer className="py-10 px-6 border-t border-stone-200 dark:border-zinc-800 text-center text-sm text-stone-500">
-        © {new Date().getFullYear()} Tumang Bali Cooking Class · Ubud, Bali
+        © {new Date().getFullYear()} Tumang Bali Cooking Class · Ubud, Bali ·{' '}
+        <Link href="/contact" className="text-orange-600 hover:underline">
+          Contact
+        </Link>{' '}
+        ·{' '}
+        <Link href="/refund-policy" className="text-orange-600 hover:underline">
+          Refund Policy
+        </Link>{' '}
+        ·{' '}
+        <Link href="/privacy-policy" className="text-orange-600 hover:underline">
+          Privacy Policy
+        </Link>
       </footer>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />

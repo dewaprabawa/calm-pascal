@@ -981,7 +981,28 @@ export default async function Page() {
       <section id="location" className="perf-defer py-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Find Us</h2>
-          <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Join us in the heart of Bali. We are located at Warung Tumang Bali.</p>
+          <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">
+            Join us at Warung Tumang Bali — Banjar Laplapan, Petulu, Ubud, Bali.
+          </p>
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-stone-600 dark:text-stone-300">
+            <a
+              href="https://wa.me/6282210132418?text=Hi%20Tumang%20Bali%20%E2%80%94%20I%20would%20like%20to%20book%20a%20cooking%20class"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-orange-600 hover:underline"
+            >
+              WhatsApp +62 822-1013-2418
+            </a>
+            <a
+              href="mailto:tumangbalicookingclass@gmail.com"
+              className="font-semibold text-orange-600 hover:underline"
+            >
+              tumangbalicookingclass@gmail.com
+            </a>
+            <Link href="/contact" className="font-semibold text-orange-600 hover:underline">
+              Full contact details
+            </Link>
+          </div>
         </div>
         <div className="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-800 bg-stone-100 dark:bg-zinc-900 aspect-video md:aspect-[21/9]">
           <LazyGoogleMap
@@ -1154,12 +1175,30 @@ export default async function Page() {
             <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
             <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
             <Link href="/press" className="hover:text-orange-500 transition-colors">Press</Link>
+            <Link href="/contact" className="hover:text-orange-500 transition-colors">Contact</Link>
+            <Link href="/refund-policy" className="hover:text-orange-500 transition-colors">Refund Policy</Link>
+            <Link href="/privacy-policy" className="hover:text-orange-500 transition-colors">Privacy Policy</Link>
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="text-2xl font-black tracking-tighter text-white mb-2">TUMANG BALI</div>
             <p className="text-sm">Authentic Cooking Classes in the heart of Bali.</p>
+            <div className="mt-4 space-y-1 text-sm">
+              <p>
+                WhatsApp:{' '}
+                <a href="https://wa.me/6282210132418" target="_blank" rel="noreferrer" className="text-orange-500 hover:text-orange-400">
+                  +62 822-1013-2418
+                </a>
+              </p>
+              <p>
+                Email:{' '}
+                <a href="mailto:tumangbalicookingclass@gmail.com" className="text-orange-500 hover:text-orange-400">
+                  tumangbalicookingclass@gmail.com
+                </a>
+              </p>
+              <p>Warung Tumang Bali, Banjar Laplapan, Petulu, Ubud, Bali</p>
+            </div>
           </div>
           
           <div className="flex flex-col items-center md:items-end">
