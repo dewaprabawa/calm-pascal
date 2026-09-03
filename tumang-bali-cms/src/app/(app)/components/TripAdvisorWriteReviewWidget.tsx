@@ -10,7 +10,6 @@ export default function TripAdvisorWriteReviewWidget() {
         rel="noreferrer noopener"
         className="inline-flex items-center gap-3 rounded-full border-2 border-green-600 bg-white px-8 py-4 font-bold text-stone-900 shadow-md transition-all hover:-translate-y-0.5 hover:bg-green-50 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800"
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
           alt=""
