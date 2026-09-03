@@ -47,6 +47,21 @@ export default function ZapierChatbotPositioner() {
         pointerEvents: 'auto',
       })
 
+      // Make the visible launcher look like a circle
+      if (launcher instanceof HTMLElement && launcher.tagName !== 'IFRAME') {
+        setStyle(launcher, {
+          borderRadius: '9999px',
+          overflow: 'hidden',
+        })
+      }
+
+      if (launcher instanceof HTMLElement && launcher.tagName !== 'IFRAME') {
+        setStyle(launcher, {
+          width: isMobile ? '54px' : '62px',
+          height: isMobile ? '54px' : '62px',
+        })
+      }
+
       // Move close button too (when open)
       setStyle(close, {
         position: 'fixed',
@@ -55,6 +70,7 @@ export default function ZapierChatbotPositioner() {
         bottom,
         zIndex: '2147483601',
         pointerEvents: 'auto',
+        borderRadius: '9999px',
       })
 
       return true
