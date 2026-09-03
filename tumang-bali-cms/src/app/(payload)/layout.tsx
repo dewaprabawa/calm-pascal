@@ -33,7 +33,12 @@ const Layout = ({ children }: Args) => (
       src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
     />
     <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
-      <div className="flex flex-col items-start sm:items-end gap-1">
+      <button
+        id="zapier-chatbot-open-label"
+        type="button"
+        className="flex flex-col items-start sm:items-end gap-1 cursor-pointer pointer-events-auto focus:outline-none"
+        aria-label="Open AI chat"
+      >
         <div className="w-9 h-9 rounded-full bg-orange-600/95 flex items-center justify-center shadow-lg border border-orange-500/40">
           <svg
             viewBox="0 0 24 24"
@@ -51,7 +56,7 @@ const Layout = ({ children }: Args) => (
         <div className="rounded-full bg-orange-600/95 text-white text-[10px] font-bold px-2 py-0.5 sm:px-3 sm:py-1 shadow-lg border border-orange-500/40 whitespace-nowrap">
           Ask AI agent here
         </div>
-      </div>
+      </button>
       <ZapierChatbotEmbed
         is-popup="true"
         chatbot-id="cmtlla8tc0084rm7xj52d7m6w"
