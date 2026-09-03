@@ -643,9 +643,9 @@ export default async function Page() {
           <div className="lg:col-span-5 relative h-[350px] sm:h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-900">
             <Image 
               src="/images/cooking-stirfry.jpg" 
-              alt="Traditional Balinese Cooking" 
+              alt="Traditional Balinese stir-fry in the village kitchen" 
               fill 
-              sizes="(max-w-1024px) 100vw, 500px"
+              sizes="(max-width: 1024px) 100vw, 500px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -680,7 +680,7 @@ export default async function Page() {
                   {(() => {
                     const hasPhoto = instructor.photo && typeof instructor.photo === 'object' && instructor.photo.url;
                     if (hasPhoto) {
-                      return <Image src={instructor.photo.url} alt={instructor.name} fill className="object-cover" />;
+                      return <Image src={instructor.photo.url} alt={instructor.name} fill sizes="128px" className="object-cover" />;
                     }
                     
                     // Fallback to our custom images
@@ -697,7 +697,8 @@ export default async function Page() {
                       <Image 
                         src={fallbackPhoto} 
                         alt={instructor.name} 
-                        fill 
+                        fill
+                        sizes="128px" 
                         style={{ objectPosition }}
                         className="object-cover" 
                       />

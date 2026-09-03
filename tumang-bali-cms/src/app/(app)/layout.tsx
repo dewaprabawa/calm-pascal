@@ -102,12 +102,6 @@ export default function RootLayout({
         <link rel="alternate" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_FULL} type="text/plain" title="Full site summary" />
         <link rel="author" href={LLMS_TXT} />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/gallery-girls.jpg.webp"
-          fetchPriority="high"
-        />
       </head>
       <body className="min-h-full flex flex-col">
         <a

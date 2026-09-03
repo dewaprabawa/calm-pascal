@@ -24,7 +24,7 @@ export default function LegalPageShell({
         <div className="max-w-3xl mx-auto w-full flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <div className="relative w-9 h-9 overflow-hidden rounded-md border-2 border-orange-200 dark:border-orange-900/30">
-              <Image src="/images/logo.jpg" alt="Tumang Bali Logo" fill className="object-cover" />
+              <Image src="/images/logo.jpg" alt="Tumang Bali Logo" width={36} height={36} className="object-cover w-full h-full" />
             </div>
             <span className="text-xl font-black tracking-tighter text-orange-600 dark:text-orange-500">
               TUMANG BALI
