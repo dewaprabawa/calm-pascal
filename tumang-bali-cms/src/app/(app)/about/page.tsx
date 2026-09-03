@@ -8,11 +8,11 @@ import { SITE_CONTACT } from '@/lib/siteContact'
 export const revalidate = 3600
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'About Us',
+  title: 'About Tumang Bali',
   description:
     'Meet the Tumang Bali family and Chef Wayan Sudiana — Ubud-born instructors sharing Balinese spice pastes, market sourcing, and village kitchen traditions.',
   path: '/about',
-  ogTitle: 'About Tumang Bali',
+  ogTitle: 'About Tumang Bali | Family Cooking School',
   image: '/images/instructor-wayan.jpg',
   imageAlt: 'Chef Wayan Sudiana teaching Balinese cooking near Ubud',
 })
