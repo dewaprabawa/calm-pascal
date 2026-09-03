@@ -25,7 +25,7 @@ export default function ItinerarySection({ steps: payloadSteps }: { steps?: Itin
       image: "/images/img5.jpg"
     },
     {
-      title: "Stop 1: Ubud Local Market (Morning Class Only)",
+      title: "Stop 1: Ubud Local Market (Morning Session Only)",
       duration: "45 mins",
       description: "Morning classes only: meet your guide and explore the traditional morning market. See where locals shop and pick the fresh spices, vegetables, and ingredients you will cook with. Afternoon classes skip the market and begin with the rice-field walk.",
       image: "/images/itinerary/market-fresh.jpg"
@@ -37,7 +37,7 @@ export default function ItinerarySection({ steps: payloadSteps }: { steps?: Itin
       image: "/images/itinerary/offerings-detail.jpg"
     },
     {
-      title: "Stop 3: Cooking Class (Taught in English)",
+      title: "Stop 3: Village Kitchen (Taught in English)",
       duration: "2 hours",
       description: "Arrive at Tumang Balinese Kitchen. Enjoy a welcome drink, put on your apron, and learn about traditional spices. For the next two hours, your chef teaches in English as you chop, mix, grind, and cook authentic Balinese dishes step-by-step.",
       image: "/images/itinerary/cooking-table.jpg"
@@ -59,7 +59,7 @@ export default function ItinerarySection({ steps: payloadSteps }: { steps?: Itin
     <section id="itinerary" className="py-24 px-6 max-w-5xl mx-auto overflow-hidden">
       <div className="flex flex-col items-center mb-16 text-center">
         <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2 block">The Experience</span>
-        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4">Your Cooking Class Itinerary</h2>
+        <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-4">Your Day Itinerary</h2>
         <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg md:text-xl font-light">A step-by-step guide to your culinary adventure with Tumang Bali.</p>
       </div>
 
