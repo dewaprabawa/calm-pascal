@@ -16,6 +16,33 @@ function setStyle(el: Element | null, styles: Partial<CSSStyleDeclaration>) {
  */
 export default function ZapierChatbotPositioner() {
   useEffect(() => {
+    const openChat = () => {
+      const bot = document.querySelector('zapier-interfaces-chatbot-embed') as any
+      const shadow: ShadowRoot | null = bot?.shadowRoot ?? null
+      if (!shadow) return
+
+      const launcher =
+        shadow.querySelector('[part="launcher"]') ||
+        shadow.querySelector('.launcher') ||
+        shadow.querySelector('button') ||
+        shadow.querySelector('a')
+
+      if (launcher instanceof HTMLElement) {
+        launcher.click()
+      }
+    }
+
+    const labelEl = document.getElementById('zapier-chatbot-open-label')
+    const onLabelClick = (e: MouseEvent) => {
+      e.preventDefault()
+      e.stopPropagation()
+      openChat()
+    }
+
+    if (labelEl) {
+      labelEl.addEventListener('click', onLabelClick)
+    }
+
     const apply = () => {
       const bot = document.querySelector('zapier-interfaces-chatbot-embed') as any
       const shadow: ShadowRoot | null = bot?.shadowRoot ?? null
@@ -100,6 +127,7 @@ export default function ZapierChatbotPositioner() {
     return () => {
       cancelled = true
       observer.disconnect()
+      labelEl?.removeEventListener('click', onLabelClick)
     }
   }, [])
 
