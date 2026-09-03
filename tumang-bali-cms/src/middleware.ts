@@ -55,7 +55,9 @@ export function middleware(request: NextRequest) {
 
   if (cookie === 'en') return NextResponse.next()
 
-  if (cookie === 'id' || preferredLocale(request.headers.get('accept-language')) === 'id') {
+  // Default to English (/) unless the user explicitly chose Indonesian before.
+  // (We intentionally ignore Accept-Language to prevent "first visit" from landing on /id.)
+  if (cookie === 'id') {
     const url = request.nextUrl.clone()
     url.pathname = '/id'
     return withLocaleCookie(NextResponse.redirect(url), 'id')
