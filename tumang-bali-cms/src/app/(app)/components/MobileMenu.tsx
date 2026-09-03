@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import BookButton from './BookButton'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const NAV_ITEMS = [
   { href: '#classes', label: 'Classes', emoji: '👨‍🍳' },
@@ -81,6 +82,13 @@ export default function MobileMenu() {
               {item.label}
             </a>
           ))}
+
+          <div className="mt-4 px-4" onClick={close}>
+            <LanguageSwitcher
+              current="en"
+              className="flex items-center gap-3 rounded-xl px-4 py-3 text-base font-medium text-stone-700 transition-colors hover:bg-orange-50 hover:text-orange-600 dark:text-stone-200 dark:hover:bg-orange-950/30 dark:hover:text-orange-400"
+            />
+          </div>
 
           <div className="mt-6 px-4">
             <BookButton

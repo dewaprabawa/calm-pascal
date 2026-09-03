@@ -39,7 +39,7 @@ export default function PickupSchedule() {
               08:30 am — 12:30 pm
             </div>
             <p className="text-sm text-stone-600 dark:text-stone-400 mb-6 font-medium">
-              ✨ Includes guided local morning market tour, rice field walk, hands-on cooking of 10+ dishes, and full lunch feast.
+              Includes guided local morning market tour (morning classes only), rice field walk, hands-on cooking of 10+ dishes in English, and a full lunch feast.
             </p>
             <div className="space-y-3 relative z-10 border-t border-stone-100 dark:border-zinc-800 pt-4 mb-6">
               <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Pickup Times by Area</p>
@@ -76,7 +76,7 @@ export default function PickupSchedule() {
               14:30 pm — 17:30 pm
             </div>
             <p className="text-sm text-stone-600 dark:text-stone-400 mb-6 font-medium">
-              ✨ Focused hands-on culinary masterclass, rice paddy views, traditional spice grinding, and Balinese dinner feast.
+              No market visit — afternoon classes start with the rice-field walk, then hands-on cooking in English, spice grinding, and a Balinese dinner feast.
             </p>
             <div className="space-y-3 relative z-10 border-t border-stone-100 dark:border-zinc-800 pt-4 mb-6">
               <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Pickup Times by Area</p>

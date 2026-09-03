@@ -7,6 +7,7 @@ import configPromise from '@/payload.config'
 import { sortActivities } from '@/lib/sortActivities'
 import BookButton from '../components/BookButton'
 import BookingModal from '../components/BookingModal'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 import WhatsAppFloat from '../components/WhatsAppFloat'
 import { SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 
@@ -49,9 +50,9 @@ export const metadata: Metadata = {
 
 const highlights = [
   {
-    title: 'Tur Pasar Lokal',
+    title: 'Tur Pasar Lokal (Kelas Pagi Saja)',
     description:
-      'Jelajahi pasar pagi tradisional dan kenali rempah, sayuran, serta bahan segar khas Bali bersama pemandu kami.',
+      'Hanya di kelas pagi: jelajahi pasar pagi tradisional dan kenali rempah, sayuran, serta bahan segar khas Bali bersama pemandu kami. Kelas sore tidak termasuk tur pasar.',
     image: '/images/itinerary/market-fresh.jpg',
   },
   {
@@ -61,9 +62,9 @@ const highlights = [
     image: '/images/itinerary/offerings-detail.jpg',
   },
   {
-    title: 'Kelas Memasak Langsung',
+    title: 'Kelas Memasak dalam Bahasa Inggris',
     description:
-      'Pakai celemek dan masak 10+ hidangan Bali tradisional langkah demi langkah bersama chef lokal berpengalaman.',
+      'Pakai celemek dan masak 10+ hidangan Bali tradisional langkah demi langkah. Chef mengajar dalam bahasa Inggris agar tamu internasional mudah mengikuti.',
     image: '/images/itinerary/cooking-table.jpg',
   },
   {
@@ -78,12 +79,17 @@ const faqs = [
   {
     question: 'Berapa harga kelas memasak di Ubud?',
     answer:
-      'Kelas bersama pagi atau sore: IDR 350.000 per orang (termasuk tur pasar untuk sesi pagi, masak 10+ hidangan, makan, penjemputan hotel Ubud, dan buku resep). Kelas privat 1 orang: IDR 650.000. Anak 8+: IDR 550.000.',
+      'Kelas bersama pagi atau sore: IDR 350.000 per orang (termasuk tur pasar untuk sesi pagi saja, masak 10+ hidangan, makan, penjemputan hotel Ubud, dan buku resep). Kelas privat 1 orang: IDR 650.000. Anak 8+: IDR 550.000.',
   },
   {
     question: 'Apa perbedaan kelas pagi dan sore?',
     answer:
-      'Kelas pagi (±08:30–12:30) termasuk tur pasar dan jalan sawah — cocok untuk kunjungan pertama. Kelas sore (±14:30–17:30) fokus tur pasar tetapi tetap masak menu lengkap dan makan malam bersama.',
+      'Kelas pagi (±08:30–12:30) termasuk tur pasar pagi dan jalan sawah — cocok untuk kunjungan pertama. Kelas sore (±14:30–17:30) tidak termasuk tur pasar; fokus jalan sawah, masak menu lengkap, dan makan malam bersama.',
+  },
+  {
+    question: 'Apakah kelas diajarkan dalam bahasa Inggris?',
+    answer:
+      'Ya. Kelas memasak diajarkan dalam bahasa Inggris oleh chef lokal kami, sehingga tamu internasional dapat mengikuti setiap langkah dengan jelas. Tim kami juga dapat membantu dalam bahasa Indonesia jika diperlukan.',
   },
   {
     question: 'Apakah ada menu vegetarian atau vegan?',
@@ -207,14 +213,10 @@ export default async function IndonesianPage() {
             <a href="#faq" className="hidden sm:inline hover:text-orange-500 transition-colors">
               FAQ
             </a>
-            <a
-              href="/"
-              rel="alternate"
-              hrefLang="en"
+            <LanguageSwitcher
+              current="id"
               className="text-stone-500 hover:text-orange-500 transition-colors"
-            >
-              English
-            </a>
+            />
           </div>
         </div>
       </nav>
@@ -233,8 +235,9 @@ export default async function IndonesianPage() {
             — Dari IDR 350K
           </h1>
           <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-2xl font-light leading-relaxed mb-8" data-speakable>
-            Tur pasar pagi, jalan di sawah, dan masak 10+ hidangan Bali tradisional bersama chef
-            lokal di desa Tumang. Kelompok kecil, ramah vegetarian, penjemputan hotel gratis.
+            Tur pasar hanya di kelas pagi, jalan di sawah, dan masak 10+ hidangan Bali tradisional
+            bersama chef lokal (diajarkan dalam bahasa Inggris) di desa Tumang. Kelompok kecil, ramah
+            vegetarian, penjemputan hotel gratis.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <BookButton className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-transform hover:scale-105 active:scale-95">
@@ -259,8 +262,9 @@ export default async function IndonesianPage() {
         <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-4">
           Ubud adalah pusat budaya Bali — pasar tradisional, sistem irigasi subak, dan dapur keluarga
           yang masih menggiling bumbu di cobek. Kelas memasak di desa Tumang (sekitar 30 menit dari
-          pusat Ubud) memberi pengalaman yang jarang didapat di dapur hotel: tur pasar sungguhan,
-          jalan sawah, dan masak 10+ hidangan dari nol termasuk Base Genep.
+          pusat Ubud) memberi pengalaman yang jarang didapat di dapur hotel: tur pasar pagi
+          (kelas pagi saja), jalan sawah, dan masak 10+ hidangan dari nol termasuk Base Genep —
+          diajarkan dalam bahasa Inggris.
         </p>
         <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
           Cocok untuk pasangan, keluarga dengan anak 8+, wisatawan kuliner, dan pemula. Menu bisa
@@ -440,9 +444,7 @@ export default async function IndonesianPage() {
           Privasi
         </a>{' '}
         ·{' '}
-        <a href="/" hrefLang="en" className="text-orange-600 hover:underline">
-          English site
-        </a>
+        <LanguageSwitcher current="id" className="text-orange-600 hover:underline" />
       </footer>
 
       <BookingModal activities={bookingActivities} />

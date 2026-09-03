@@ -13,7 +13,11 @@ export const faqs = [
   },
   {
     question: 'What time does the class start?',
-    answer: 'We offer two daily sessions: the Morning Class (08:30 AM – 12:30 PM, ~3–4 hours, includes the traditional market tour & lunch) and the Afternoon Class (14:30 PM – 17:30 PM, ~3 hours, hands-on cooking & dinner). Both options include complimentary Ubud pickup and hands-on preparation of 10+ authentic dishes!',
+    answer: 'We offer two daily sessions: the Morning Class (08:30 AM – 12:30 PM, ~3–4 hours, includes the traditional market tour & lunch) and the Afternoon Class (14:30 PM – 17:30 PM, ~3 hours, hands-on cooking & dinner). The market visit is morning classes only — afternoon guests start with the rice-field walk and cooking. Both options include complimentary Ubud pickup and hands-on preparation of 10+ authentic dishes!',
+  },
+  {
+    question: 'Is the cooking class taught in English?',
+    answer: 'Yes. Classes are taught in English by our local chefs, so international guests can follow every step clearly. Our team can also help in Indonesian when needed.',
   },
   {
     question: 'How do I get to the cooking class?',
@@ -29,7 +33,7 @@ export const faqs = [
   },
   {
     question: 'How long is the cooking class?',
-    answer: 'Our Morning Class lasts approximately 3–4 hours (including the 45-minute Ubud market tour, rice field walk, 2 hours of cooking, and dining time). Our Afternoon Class is a focused 3-hour experience starting directly with the rice field walk, cooking masterclass, and dinner feast.',
+    answer: 'Our Morning Class lasts approximately 3–4 hours (including the 45-minute Ubud market tour — morning only — plus rice field walk, 2 hours of cooking, and dining time). Our Afternoon Class is a focused 3-hour experience with no market visit: rice field walk, cooking masterclass, and dinner feast.',
   },
   {
     question: 'Is this cooking class suitable for beginners?',

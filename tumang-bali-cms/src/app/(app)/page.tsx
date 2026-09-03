@@ -15,6 +15,7 @@ import dynamic from 'next/dynamic'
 import { sortActivities } from '@/lib/sortActivities'
 
 const MobileMenu = dynamic(() => import('./components/MobileMenu'))
+const LanguageSwitcher = dynamic(() => import('./components/LanguageSwitcher'))
 const TikTokEmbed = dynamic(() => import('./components/TikTokEmbed'))
 const MenuSection = dynamic(() => import('./components/MenuSection'))
 const FAQSection = dynamic(() => import('./components/FAQSection'))
@@ -143,6 +144,11 @@ export default async function Page() {
             <a href="#location" className="hover:text-orange-500 transition-colors">LOCATION</a>
           </div>
           <div className="flex items-center gap-3 shrink-0 ml-auto">
+            <LanguageSwitcher
+              current="en"
+              compact
+              className="hidden sm:inline text-xs font-bold tracking-wide text-stone-500 hover:text-orange-500 transition-colors"
+            />
             <BookButton className="hidden sm:inline-flex cursor-pointer bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-transform hover:scale-105 active:scale-95 text-sm md:text-base">
               Book Now
             </BookButton>
@@ -1173,7 +1179,7 @@ export default async function Page() {
             <Link href="/bali-cooking-experience" className="hover:text-orange-500 transition-colors">Bali Cooking Experience</Link>
             <Link href="/recipes" className="hover:text-orange-500 transition-colors">Balinese Recipes</Link>
             <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
-            <Link href="/id" hrefLang="id" className="hover:text-orange-500 transition-colors">Bahasa Indonesia</Link>
+            <LanguageSwitcher current="en" className="hover:text-orange-500 transition-colors" />
             <Link href="/press" className="hover:text-orange-500 transition-colors">Press</Link>
             <Link href="/contact" className="hover:text-orange-500 transition-colors">Contact</Link>
             <Link href="/refund-policy" className="hover:text-orange-500 transition-colors">Refund Policy</Link>
