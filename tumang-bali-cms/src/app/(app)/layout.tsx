@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
+// Zapier custom element (web component) doesn't exist in JSX intrinsic types by default.
+// Typing it as `any` keeps Next/TS builds passing.
+const ZapierChatbotEmbed = "zapier-interfaces-chatbot-embed" as any;
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -95,6 +99,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        {/* Zapier chatbot embed (site-wide) */}
+        <script
+          async
+          type="module"
+          src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
+        />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Site summary files for crawlers */}
@@ -117,6 +127,20 @@ export default function RootLayout({
           Skip to main content
         </a>
         {children}
+
+        {/* Fixed-position chatbot on the left side */}
+        <div className="fixed left-2 top-1/2 -translate-y-1/2 z-[1600] flex flex-col items-center gap-2 pointer-events-auto">
+          <div className="hidden sm:block">
+            <div className="rounded-full bg-orange-600/95 text-white text-[11px] font-bold px-3 py-1 shadow-lg border border-orange-500/40">
+              Ask anything
+            </div>
+          </div>
+          <ZapierChatbotEmbed
+            is-popup="true"
+            chatbot-id="cmtlla8tc0084rm7xj52d7m6w"
+          />
+        </div>
+
         <GoogleAnalytics />
       </body>
     </html>
