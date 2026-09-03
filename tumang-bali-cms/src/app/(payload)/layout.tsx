@@ -32,8 +32,8 @@ const Layout = ({ children }: Args) => (
       src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
     />
     <div className="fixed left-2 top-1/2 -translate-y-1/2 z-[1600] flex flex-col items-center gap-2 pointer-events-auto">
-      <div className="hidden sm:block">
-        <div className="rounded-full bg-orange-600/95 text-white text-[11px] font-bold px-3 py-1 shadow-lg border border-orange-500/40">
+      <div className="block">
+        <div className="rounded-full bg-orange-600/95 text-white text-[10px] sm:text-[11px] font-bold px-2 py-0.5 sm:px-3 sm:py-1 shadow-lg border border-orange-500/40">
           Ask anything
         </div>
       </div>
