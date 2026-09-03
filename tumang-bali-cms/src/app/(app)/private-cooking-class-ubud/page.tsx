@@ -9,13 +9,20 @@ import { privateClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Private Cooking Class in Ubud',
+  title: 'Private Cooking Class in Ubud — 1 Person IDR 650K',
   description:
-    'Private Balinese cooking class in Ubud. 1 person IDR 650K, kids IDR 550K. Your own chef, tailored menu, market tour & hotel pickup.',
+    'Private Balinese cooking class in Ubud. 1 person IDR 650K, kids IDR 550K. Your own chef, tailored menu, market tour & hotel pickup. Ideal for honeymoon and solo travellers.',
   path: '/private-cooking-class-ubud',
   ogTitle: 'Private Cooking Class in Ubud',
   image: '/images/gallery-group.jpg',
   imageAlt: 'Private Balinese cooking class for a group in Ubud',
+  keywords: [
+    'private cooking class ubud',
+    'private balinese cooking class',
+    'solo cooking class ubud',
+    'private chef cooking class bali',
+    'honeymoon private cooking class ubud',
+  ],
 })
 
 export default async function Page() {

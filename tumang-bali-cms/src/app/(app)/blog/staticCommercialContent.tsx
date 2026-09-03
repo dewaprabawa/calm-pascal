@@ -3,6 +3,7 @@ import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
 import { otaBookingArticles } from './otaBookingContent'
 import { salesGeoCommercialArticles } from './salesGeoCommercialContent'
+import { relatedKeywordArticles } from './relatedKeywordArticles'
 
 export {
   ubudCookingClassPrice,
@@ -14,6 +15,12 @@ export {
   morningVsAfternoonToursBali,
   salesGeoCommercialArticles,
 } from './salesGeoCommercialContent'
+
+export {
+  riceTerraceCookingClassUbud,
+  balineseHomeCookingClassUbud,
+  relatedKeywordArticles,
+} from './relatedKeywordArticles'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -37,8 +44,10 @@ export const cookingClassUbudForCouples: StaticArticle = {
     'cooking class ubud couples',
     'couples cooking class bali',
     'romantic cooking class ubud',
+    'honeymoon cooking class ubud',
     'date idea ubud',
     'cooking class for two bali',
+    'anniversary cooking class bali',
   ],
   faqs: [
     {
@@ -123,6 +132,8 @@ export const cookingClassUbudGuide2026: StaticArticle = {
     'ubud cooking class',
     'balinese cooking class ubud',
     'cooking class ubud price',
+    'things to do in ubud cooking class',
+    'best things to do ubud food',
   ],
   faqs: [
     {
@@ -318,6 +329,8 @@ export const vegetarianCookingClassUbudGuide: StaticArticle = {
     'plant based cooking class ubud',
     'vegetarian balinese cooking class',
     'vegan cooking class ubud',
+    'vegan balinese cooking class',
+    'gluten free cooking class bali',
   ],
   faqs: [
     {
@@ -402,6 +415,8 @@ export const morningCookingClassUbudMarketTour: StaticArticle = {
     'ubud market cooking class',
     'morning market tour cooking class bali',
     'cooking class ubud morning',
+    'pasar cooking class ubud',
+    'hotel transfer cooking class ubud',
   ],
   faqs: [
     {
@@ -856,6 +871,7 @@ export const staticCommercialArticles: StaticArticle[] = [
   balineseSpicePasteCookingClass,
   ...otaBookingArticles,
   ...salesGeoCommercialArticles,
+  ...relatedKeywordArticles,
 ]
 
 export function getStaticCommercialArticle(slug: string): StaticArticle | undefined {

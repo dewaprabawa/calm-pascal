@@ -6,6 +6,8 @@ import configPromise from '@/payload.config'
 import { Metadata } from 'next'
 import { pageTitle, truncateDescription, SITE, SITE_CONTENT_UPDATED, SITE_CONTENT_UPDATED_LABEL } from '@/lib/seoMetadata'
 import { staticCommercialArticles } from './staticCommercialContent'
+import { foreignSearchArticles } from './foreignSearchContent'
+import type { StaticArticle } from './staticCommercialArticles'
 
 export const metadata: Metadata = {
   title: pageTitle('Ubud Food & Culture Blog'),
@@ -54,6 +56,35 @@ const WebPageSchema = {
   inLanguage: 'en-US',
 }
 
+function StaticArticleCard({ article }: { article: StaticArticle }) {
+  return (
+    <Link
+      href={`/blog/${article.slug}`}
+      className="group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-stone-200 dark:border-zinc-800 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300"
+    >
+      <div className="aspect-video relative bg-stone-200 dark:bg-zinc-800 overflow-hidden">
+        <Image
+          src={article.image}
+          alt={article.imageAlt}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
+      <div className="p-6">
+        <div className="text-xs font-bold text-orange-500 mb-2 uppercase tracking-wide">
+          Updated {SITE_CONTENT_UPDATED_LABEL}
+        </div>
+        <h3 className="text-xl font-bold mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
+          {article.title}
+        </h3>
+        <p className="text-stone-600 dark:text-stone-400 text-sm line-clamp-3 mb-4">{article.excerpt}</p>
+        <div className="text-xs font-semibold text-stone-500">{article.author}</div>
+      </div>
+    </Link>
+  )
+}
+
 export default async function BlogPage() {
   let cmsArticles: any[] = []
 
@@ -70,7 +101,7 @@ export default async function BlogPage() {
     console.error('blog page: could not load articles from CMS', error)
   }
 
-  const staticSlugs = new Set(staticCommercialArticles.map((a) => a.slug))
+  const staticSlugs = new Set([...staticCommercialArticles, ...foreignSearchArticles].map((a) => a.slug))
   const cmsOnly = cmsArticles.filter((a) => !staticSlugs.has(a.slug as string))
 
   const itemListSchema = {
@@ -111,31 +142,20 @@ export default async function BlogPage() {
           <h2 className="text-2xl font-black tracking-tight mb-6">Essential cooking class guides</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {staticCommercialArticles.map((article) => (
-              <Link
-                key={article.slug}
-                href={`/blog/${article.slug}`}
-                className="group bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden border border-stone-200 dark:border-zinc-800 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-300"
-              >
-                <div className="aspect-video relative bg-stone-200 dark:bg-zinc-800 overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.imageAlt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-xs font-bold text-orange-500 mb-2 uppercase tracking-wide">
-                    Updated {SITE_CONTENT_UPDATED_LABEL}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
-                    {article.title}
-                  </h3>
-                  <p className="text-stone-600 dark:text-stone-400 text-sm line-clamp-3 mb-4">{article.excerpt}</p>
-                  <div className="text-xs font-semibold text-stone-500">{article.author}</div>
-                </div>
-              </Link>
+              <StaticArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-black tracking-tight mb-2">Planning your Bali trip</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-6">
+            Visas, budgets, transport, safety, and culture — the practical guides travellers read before booking
+            an Ubud cooking class.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {foreignSearchArticles.map((article) => (
+              <StaticArticleCard key={article.slug} article={article} />
             ))}
           </div>
         </section>

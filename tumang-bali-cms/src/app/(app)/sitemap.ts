@@ -3,6 +3,7 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
 import { STATIC_COMMERCIAL_SLUGS } from '@/lib/staticCommercialSlugs'
+import { FOREIGN_SEARCH_SLUGS } from '@/lib/foreignSearchSlugs'
 
 export const revalidate = 3600
 
@@ -51,6 +52,8 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'book-cooking-class-ubud-viator',
   'book-cooking-class-ubud-airbnb',
   'morning-vs-afternoon-tours-bali',
+  'rice-terrace-cooking-class-ubud',
+  'balinese-home-cooking-class-ubud',
   // Foreign search intent cluster (top Bali queries → cooking class funnel)
   'bali-villas-guide-where-to-stay',
   'best-time-to-visit-bali',
@@ -105,6 +108,12 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   ...STATIC_COMMERCIAL_SLUGS.map((slug) => ({
     path: `/blog/${slug}`,
     priority: 0.8,
+    changeFrequency: 'monthly' as const,
+  })),
+  // Bali trip-planning cluster — top-of-funnel volume feeding the cooking class pages
+  ...FOREIGN_SEARCH_SLUGS.map((slug) => ({
+    path: `/blog/${slug}`,
+    priority: 0.7,
     changeFrequency: 'monthly' as const,
   })),
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },

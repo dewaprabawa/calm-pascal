@@ -9,13 +9,20 @@ import { authenticClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'What Makes Our Balinese Class Authentic',
+  title: 'Authentic Balinese Cooking Class Ubud — Base Genep & Village Kitchen',
   description:
-    'Discover the Base Genep spice paste that defines true Balinese cuisine. Learn how hand-ground traditional ingredients make our Ubud cooking class authentic, not a tourist shortcut.',
+    'Authentic Balinese cooking class in Ubud — hand-ground Base Genep spice paste, market tour, rice-field walk, 10+ dishes in a village kitchen. From IDR 350K.',
   path: '/authentic-balinese-cooking-class',
-  ogTitle: 'What Makes Our Balinese Class Authentic',
+  ogTitle: 'Authentic Balinese Cooking Class in Ubud',
   image: '/images/img4.jpg',
   imageAlt: 'Authentic Balinese cooking class in Ubud',
+  keywords: [
+    'authentic balinese cooking class',
+    'authentic cooking class ubud',
+    'traditional balinese cooking class',
+    'base genep cooking class',
+    'village cooking class ubud',
+  ],
 })
 
 export default async function Page() {

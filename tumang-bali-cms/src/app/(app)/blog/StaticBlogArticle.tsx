@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
 import { PRIMARY_COOKING_CLASS_PATH, SITE, SITE_CONTENT_UPDATED, SITE_CONTENT_UPDATED_LABEL } from '@/lib/seoMetadata'
 import ViatorBookButtons from '../components/ViatorBookButtons'
+import RelatedKeywordLinks from '../components/RelatedKeywordLinks'
 
 export function StaticBlogArticle({ article }: { article: StaticArticle }) {
   const url = `${SITE}/blog/${article.slug}`
@@ -149,6 +150,10 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-6 pb-10">
+        <RelatedKeywordLinks slug={article.slug} />
       </section>
 
       <section className="max-w-3xl mx-auto px-6 pb-20 text-center">

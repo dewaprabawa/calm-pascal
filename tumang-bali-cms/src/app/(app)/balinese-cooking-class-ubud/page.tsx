@@ -16,6 +16,16 @@ export const metadata: Metadata = buildPageMetadata({
   ogTitle: 'Cooking Class Ubud — Authentic Balinese Class | TripAdvisor 2026',
   image: '/images/gallery-group.jpg',
   imageAlt: 'Cooking class in Ubud Bali with local chefs',
+  keywords: [
+    'cooking class ubud',
+    'balinese cooking class ubud',
+    'best cooking class in ubud',
+    'cooking class with market tour ubud',
+    'rice terrace cooking class ubud',
+    'balinese home cooking class',
+    'half day cooking class bali',
+    'private cooking class ubud',
+  ],
 })
 
 export default async function Page() {
