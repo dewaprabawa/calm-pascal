@@ -188,8 +188,12 @@ export async function GET() {
     (traditionalSeoContent + llmsCitationTargets + geoStaticCitability + contentDeliveryWithoutCron) / 4,
   )
 
+  // A slug advertised in the sitemap with no route behind it is a 404, not a score deduction.
   const seoContentReady =
-    traditionalSeoContent >= 80 && llmsCitationTargets >= 80 && geoStaticCitability >= 80
+    slugsWithoutRoute.length === 0 &&
+    traditionalSeoContent >= 80 &&
+    llmsCitationTargets >= 80 &&
+    geoStaticCitability >= 80
 
   return NextResponse.json({
     ok: seoContentReady,
