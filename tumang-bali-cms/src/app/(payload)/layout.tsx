@@ -32,8 +32,8 @@ const Layout = ({ children }: Args) => (
       type="module"
       src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
     />
-    <div className="fixed left-4 bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto">
-      <div className="flex flex-col items-start gap-1">
+    <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
+      <div className="flex flex-col items-start sm:items-end gap-1">
         <div className="w-9 h-9 rounded-full bg-orange-600/95 flex items-center justify-center shadow-lg border border-orange-500/40">
           <svg
             viewBox="0 0 24 24"

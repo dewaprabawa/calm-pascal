@@ -22,7 +22,8 @@ export default function ZapierChatbotPositioner() {
       if (!shadow) return false
 
       const isMobile = window.innerWidth < 640
-      const left = isMobile ? '12px' : '20px'
+      const left = isMobile ? '12px' : 'auto'
+      const right = isMobile ? 'auto' : '20px'
       const bottom = isMobile ? '20px' : '24px'
 
       const launcher =
@@ -41,7 +42,7 @@ export default function ZapierChatbotPositioner() {
       setStyle(launcher, {
         position: 'fixed',
         left,
-        right: 'auto',
+        right,
         bottom,
         zIndex: '2147483600',
         pointerEvents: 'auto',
@@ -66,7 +67,7 @@ export default function ZapierChatbotPositioner() {
       setStyle(close, {
         position: 'fixed',
         left,
-        right: 'auto',
+        right,
         bottom,
         zIndex: '2147483601',
         pointerEvents: 'auto',
