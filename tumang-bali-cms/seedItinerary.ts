@@ -51,9 +51,9 @@ async function seed() {
           image: media5 || '',
         },
         {
-          title: "Stop 1: Ubud Local Market",
+          title: "Stop 1: Ubud Local Market (Morning Class Only)",
           duration: "45 mins",
-          description: "Meet your guide and explore the traditional morning market. You will see where locals shop and buy the fresh spices, vegetables, and ingredients you need for the class.",
+          description: "Morning classes only: meet your guide and explore the traditional morning market. See where locals shop and pick the fresh spices, vegetables, and ingredients you will cook with. Afternoon classes skip the market and begin with the rice-field walk.",
           image: media2 || '',
         },
         {
@@ -63,9 +63,9 @@ async function seed() {
           image: media3 || '',
         },
         {
-          title: "Stop 3: Cooking Class",
+          title: "Stop 3: Cooking Class (Taught in English)",
           duration: "2 hours",
-          description: "Arrive at Tumang Balinese Kitchen. Enjoy a welcome drink, put on your apron, and learn about the ingredients. For the next two hours, you will chop, mix, and cook 4 to 5 traditional Balinese dishes step-by-step with your chef.",
+          description: "Arrive at Tumang Balinese Kitchen. Enjoy a welcome drink, put on your apron, and learn about the ingredients. For the next two hours, your chef teaches in English as you chop, mix, and cook traditional Balinese dishes step-by-step.",
           image: media1 || '',
         },
         {

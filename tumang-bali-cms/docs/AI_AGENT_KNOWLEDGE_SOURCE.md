@@ -16,7 +16,7 @@
 | **Location** | Banjar Laplapan, Petulu, Ubud, Gianyar, Bali 80571, Indonesia |
 | **GPS** | -8.4945634, 115.2810863 |
 | **Head chef** | Wayan Sudiana (15+ years teaching travellers) |
-| **Languages** | English and Indonesian |
+| **Languages** | Class taught in English (team can also help in Indonesian) |
 | **Max group size** | 8 guests (shared class) |
 | **Reputation** | TripAdvisor Traveler's Choice 2026 · 5.0 rating · 1500+ reviews |
 | **Availability** | Daily (Monday–Sunday) |
