@@ -66,8 +66,6 @@ export default function PickupLocationMap({
   const leafletRef = useRef<LeafletNS | null>(null)
   const valueRef = useRef(value)
   const onChangeRef = useRef(onChange)
-  valueRef.current = value
-  onChangeRef.current = onChange
 
   const [suggestions, setSuggestions] = useState<NominatimHit[]>([])
   const [searching, setSearching] = useState(false)
@@ -111,6 +109,11 @@ export default function PickupLocationMap({
       })
     },
   )
+
+  useEffect(() => {
+    valueRef.current = value
+    onChangeRef.current = onChange
+  }, [value, onChange])
 
   useEffect(() => {
     if (!active || !mapElRef.current || mapRef.current) return

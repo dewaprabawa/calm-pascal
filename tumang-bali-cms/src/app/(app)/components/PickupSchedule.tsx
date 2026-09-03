@@ -15,9 +15,9 @@ export default function PickupSchedule() {
     <section className="py-24 px-6 max-w-5xl mx-auto border-t border-stone-200 dark:border-zinc-800">
       <div className="flex flex-col items-center mb-16 text-center">
         <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2 block">Daily Sessions & Transport</span>
-        <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4">Class Schedule & Pickup Times</h2>
+        <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4">Session Schedule & Pickup Times</h2>
         <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg font-light">
-          Choose between our immersive <strong className="font-bold text-stone-900 dark:text-white">Morning Class (3–4 Hours)</strong> or focused <strong className="font-bold text-stone-900 dark:text-white">Afternoon Class (3 Hours)</strong>. <strong className="font-bold text-stone-900 dark:text-white">Free shuttle service</strong> is available for the Ubud area.
+          Choose between our immersive <strong className="font-bold text-stone-900 dark:text-white">Morning Session (3–4 Hours)</strong> or focused <strong className="font-bold text-stone-900 dark:text-white">Afternoon Session (3 Hours)</strong>. <strong className="font-bold text-stone-900 dark:text-white">Free shuttle service</strong> is available for the Ubud area.
         </p>
       </div>
 
@@ -29,7 +29,7 @@ export default function PickupSchedule() {
           </div>
           <div>
             <div className="flex items-center justify-between gap-2 mb-2 relative z-10">
-              <h3 className="text-2xl font-black text-stone-900 dark:text-white">Morning Class</h3>
+              <h3 className="text-2xl font-black text-stone-900 dark:text-white">Morning Session</h3>
               <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950/60 text-orange-700 dark:text-orange-300 border border-orange-200/50 dark:border-orange-800/50">
                 3–4 Hours
               </span>
@@ -55,7 +55,7 @@ export default function PickupSchedule() {
             </div>
           </div>
           <BookButton session="morning" className="w-full py-3 px-4 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98] text-center shadow-md">
-            Book Morning Class (3–4 Hrs)
+            Book Morning Session (3–4 Hrs)
           </BookButton>
         </div>
 
@@ -66,7 +66,7 @@ export default function PickupSchedule() {
           </div>
           <div>
             <div className="flex items-center justify-between gap-2 mb-2 relative z-10">
-              <h3 className="text-2xl font-black text-stone-900 dark:text-white">Afternoon Class</h3>
+              <h3 className="text-2xl font-black text-stone-900 dark:text-white">Afternoon Session</h3>
               <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200/50 dark:border-blue-800/50">
                 3 Hours
               </span>
@@ -92,7 +92,7 @@ export default function PickupSchedule() {
             </div>
           </div>
           <BookButton session="afternoon" className="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm transition-transform hover:scale-[1.02] active:scale-[0.98] text-center shadow-md">
-            Book Afternoon Class (3 Hrs)
+            Book Afternoon Session (3 Hrs)
           </BookButton>
         </div>
       </div>

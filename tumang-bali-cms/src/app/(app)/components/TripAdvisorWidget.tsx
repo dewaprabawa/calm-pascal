@@ -11,7 +11,6 @@ export default function TripAdvisorWidget() {
         className="inline-block"
         aria-label="TripAdvisor Travelers' Choice 2026 — Tumang Bali Cooking Class"
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2026_LL.png"
           alt="TripAdvisor Travelers' Choice 2026"

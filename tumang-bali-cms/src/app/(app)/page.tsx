@@ -74,14 +74,14 @@ export default async function Page() {
       : [
     {
       id: 'morning-class',
-      title: 'Morning Market Tour & Balinese Cooking Masterclass',
+      title: 'Morning Market Tour & Balinese Kitchen Masterclass',
       durationHours: '3–4',
       price: 350,
       instructor: { name: 'Wayan Sudiana' },
       includedItems: [
         { item: 'Guided Morning Market Tour' },
         { item: 'Scenic Rice Field Walk' },
-        { item: 'Hands-on Cooking (10+ Dishes)' },
+        { item: 'Hands-on prep (10+ dishes)' },
         { item: 'Complete Balinese Lunch Feast' },
         { item: 'Complimentary Ubud Hotel Transport' },
         { item: 'Printed Recipe Booklet' }
@@ -89,13 +89,13 @@ export default async function Page() {
     },
     {
       id: 'afternoon-class',
-      title: 'Afternoon Balinese Cooking Class',
+      title: 'Afternoon Balinese Kitchen Session',
       durationHours: '3',
       price: 350,
       instructor: { name: 'Wayan Sudiana' },
       includedItems: [
         { item: 'Scenic Rice Field Walk' },
-        { item: 'Hands-on Cooking (10+ Dishes)' },
+        { item: 'Hands-on prep (10+ dishes)' },
         { item: 'Complete Balinese Dinner Feast' },
         { item: 'Complimentary Ubud Hotel Transport' },
         { item: 'Printed Recipe Booklet' }
@@ -103,7 +103,7 @@ export default async function Page() {
     },
     {
       id: 'private-class',
-      title: 'Private Cooking Class (1 Person)',
+      title: 'Private Kitchen Session (1 Person)',
       durationHours: '3–4',
       price: 650,
       kidsPrice: 550,
@@ -111,7 +111,7 @@ export default async function Page() {
       includedItems: [
         { item: 'Kitchen exclusive to you' },
         { item: 'Guided Morning Market Tour' },
-        { item: 'Hands-on Cooking (10+ Dishes)' },
+        { item: 'Hands-on prep (10+ dishes)' },
         { item: 'Kids rate IDR 550K' },
         { item: 'Complimentary Ubud Hotel Transport' },
         { item: 'Printed Recipe Booklet' }
@@ -415,7 +415,7 @@ export default async function Page() {
             <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
             </span>
-            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Hands-on Cooking</h3>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Hands-on Prep</h3>
             <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Learn to prepare 10+ traditional Balinese dishes step-by-step.</p>
           </div>
 
@@ -572,7 +572,7 @@ export default async function Page() {
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
                 src="/images/bali-cooking-class-dadar-gulung.jpg" 
-                alt="Balinese Dessert Dadar Gulung in Cooking Class" 
+                alt="Balinese dessert Dadar Gulung prepared by guests" 
                 fill 
                 sizes="(max-width: 768px) 50vw, 250px"
                 loading="lazy"
@@ -590,7 +590,7 @@ export default async function Page() {
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
                 src="/images/ubud-cooking-class-chopping-ingredients.jpg" 
-                alt="Tourists Chopping Fresh Ingredients in Ubud Cooking Class" 
+                alt="Guests chopping fresh ingredients in our Ubud kitchen" 
                 fill 
                 sizes="(max-width: 768px) 50vw, 250px"
                 loading="lazy"
@@ -608,7 +608,7 @@ export default async function Page() {
             <div className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
               <Image 
                 src="/images/traditional-balinese-cooking-class-stir-fry.jpg" 
-                alt="Traditional Balinese Cooking Class Stir Fry" 
+                alt="Traditional Balinese stir-fry in the village kitchen" 
                 fill 
                 sizes="(max-width: 768px) 50vw, 250px"
                 loading="lazy"
@@ -643,9 +643,9 @@ export default async function Page() {
           <div className="lg:col-span-5 relative h-[350px] sm:h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-zinc-900">
             <Image 
               src="/images/cooking-stirfry.jpg" 
-              alt="Traditional Balinese Cooking" 
+              alt="Traditional Balinese stir-fry in the village kitchen" 
               fill 
-              sizes="(max-w-1024px) 100vw, 500px"
+              sizes="(max-width: 1024px) 100vw, 500px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -680,7 +680,7 @@ export default async function Page() {
                   {(() => {
                     const hasPhoto = instructor.photo && typeof instructor.photo === 'object' && instructor.photo.url;
                     if (hasPhoto) {
-                      return <Image src={instructor.photo.url} alt={instructor.name} fill className="object-cover" />;
+                      return <Image src={instructor.photo.url} alt={instructor.name} fill sizes="128px" className="object-cover" />;
                     }
                     
                     // Fallback to our custom images
@@ -697,7 +697,8 @@ export default async function Page() {
                       <Image 
                         src={fallbackPhoto} 
                         alt={instructor.name} 
-                        fill 
+                        fill
+                        sizes="128px" 
                         style={{ objectPosition }}
                         className="object-cover" 
                       />
@@ -727,7 +728,7 @@ export default async function Page() {
           <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Guest Stories</span>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">What travellers say</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">
-            Read our TripAdvisor reviews and share your cooking class story.
+            Read our TripAdvisor reviews and share your village kitchen story.
           </p>
         </div>
         <div className="max-w-2xl mx-auto bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-10 border border-stone-200 dark:border-zinc-800 shadow-sm">
@@ -913,7 +914,7 @@ export default async function Page() {
            <div className="flex flex-col md:flex-row items-center justify-between w-full gap-6">
              <div className="text-center md:text-left mb-6 md:mb-0">
                <h3 className="text-2xl font-bold text-stone-900 dark:text-white">Prefer to book via our partners?</h3>
-               <p className="text-stone-500 dark:text-stone-400 mt-2">Check availability and book your cooking class instantly on Airbnb or GetYourGuide.</p>
+               <p className="text-stone-500 dark:text-stone-400 mt-2">Check availability and book your session instantly on Airbnb or GetYourGuide.</p>
              </div>
              <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
                <TrackedBookingLink
@@ -941,16 +942,16 @@ export default async function Page() {
            
            <div className="flex flex-wrap justify-center gap-6 mt-2 pt-8 border-t border-stone-100 dark:border-zinc-800 w-full">
              <TrackedBookingLink href="https://www.getyourguide.com/-s775245" channel="getyourguide" linkLabel="Homepage — GYG badge 1" className="hover:opacity-90 transition-opacity">
-               <img src="https://gyg.me/DFO5LFuz" width={160} height={160} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Cooking Class" />
+               <img src="https://gyg.me/DFO5LFuz" width={160} height={160} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Bali kitchen experience" />
              </TrackedBookingLink>
              <TrackedBookingLink href="https://www.getyourguide.com/-s775245" channel="getyourguide" linkLabel="Homepage — GYG badge 2" className="hover:opacity-90 transition-opacity">
-               <img src="https://gyg.me/kUtga42u" width={160} height={57} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Cooking Class" />
+               <img src="https://gyg.me/kUtga42u" width={160} height={57} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Tumang Bali kitchen experience" />
              </TrackedBookingLink>
              <TrackedBookingLink href="https://www.getyourguide.com/ubud-l32246/ubud-balinese-cooking-class-with-rice-terrace-walk-t1384252/" channel="getyourguide" linkLabel="Homepage — GYG rice terrace walk" className="hover:opacity-90 transition-opacity">
                <div style={{ position: "relative", width: "fit-content" }}>
-                 <img src="https://gyg.me/pQw3KK9K" width={160} height={160} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Ubud: Balinese Cooking Class with Rice Terrace Walk"/>
+                 <img src="https://gyg.me/pQw3KK9K" width={160} height={160} loading="lazy" decoding="async" style={{ border: "1px solid #c6c8d0", height: "auto" }} alt="GetYourGuide | Ubud Balinese kitchen experience with rice terrace walk"/>
                  <p style={{ position: "absolute", fontSize: "0.5rem", fontWeight: 500, color: "#000000", fontFamily: "Arial, sans-serif", zIndex: 999, margin: "0 auto", right: "0.2rem", top: "0.2rem", width: "60%" }}>
-                   Ubud: Balinese Cooking Class with Rice Terrace Walk
+                   Ubud: Balinese kitchen experience with rice terrace walk
                  </p>
                </div>
              </TrackedBookingLink>
@@ -991,7 +992,7 @@ export default async function Page() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="text-2xl font-black tracking-tighter text-white mb-2">TUMANG BALI</div>
-            <p className="text-sm">Authentic Cooking Classes in the heart of Bali.</p>
+            <p className="text-sm">Authentic village kitchen experiences in the heart of Bali.</p>
             <div className="mt-4 space-y-1 text-sm">
               <p>
                 WhatsApp:{' '}

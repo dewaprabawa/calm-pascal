@@ -102,10 +102,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // @ts-expect-error - eslint is not recognized in this version's NextConfig type
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 export default withPayload(nextConfig);
