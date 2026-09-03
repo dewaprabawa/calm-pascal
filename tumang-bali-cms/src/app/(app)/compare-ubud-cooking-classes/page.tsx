@@ -115,7 +115,7 @@ const faqs = [
   {
     question: 'How much does a cooking class in Ubud cost in 2026?',
     answer:
-      'Prices range from IDR 350,000 (~$21 USD) at Tumang Bali and Ketut\'s, up to IDR 450,000–650,000 (~$28–$40) at Casa Luna. All prices are as of August 2026 — verify via official websites.',
+      'Prices range from IDR 350,000 (~$21 USD) at Tumang Bali and Ketut\'s, up to IDR 450,000–650,000 (~$28–$40) at Casa Luna. All prices are as of September 2026 — verify via official websites.',
   },
 ]
 
@@ -221,7 +221,7 @@ export default async function Page() {
         <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 via-stone-50 to-orange-50/30 dark:from-orange-950/20 dark:via-zinc-950 dark:to-orange-900/10 -z-10" />
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-sm font-semibold tracking-wide border border-orange-200 dark:border-orange-900/30 mb-5">
-            Ubud Cooking Class Comparison · August 2026
+            Ubud Cooking Class Comparison · September 2026
           </div>
           <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-5">
             Best Cooking Classes in Ubud, Bali (2026)
@@ -264,7 +264,7 @@ export default async function Page() {
       <section className="py-12 px-6 max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-4">How we compared these classes</h2>
         <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-4" data-speakable>
-          This page is updated for <strong>August 2026</strong>. Tumang Bali ranks best overall value among Ubud cooking classes at IDR 350,000 with a real morning market tour, rice-field walk, max 8 guests, and 10+ dishes cooked from scratch. Casa Luna suits travelers who want an established in-town school with themed classes. Paon Bali offers a home-kitchen village vibe with market tour. Ketut&apos;s gives each guest an individual cooking station. We scored each school on inclusions travelers actually ask about: market tour, rice-field setting, max group size, dish count, vegetarian depth, hotel pickup, and published price.
+          This page is updated for <strong>September 2026</strong>. Tumang Bali ranks best overall value among Ubud cooking classes at IDR 350,000 with a real morning market tour, rice-field walk, max 8 guests, and 10+ dishes cooked from scratch. Casa Luna suits travelers who want an established in-town school with themed classes. Paon Bali offers a home-kitchen village vibe with market tour. Ketut&apos;s gives each guest an individual cooking station. We scored each school on inclusions travelers actually ask about: market tour, rice-field setting, max group size, dish count, vegetarian depth, hotel pickup, and published price.
         </p>
         <p className="text-sm text-stone-500 mb-4">
           Prices and policies change — always confirm on the official site before you book.
@@ -299,7 +299,7 @@ export default async function Page() {
       {/* Comparison Table */}
       <section id="comparison" className="py-12 px-4 max-w-6xl mx-auto">
         <h2 className="text-3xl font-black tracking-tight text-center mb-3">Feature Comparison</h2>
-        <p className="text-center text-stone-500 text-sm mb-8">All pricing as of August 2026. Verify via official websites before booking.</p>
+        <p className="text-center text-stone-500 text-sm mb-8">All pricing as of September 2026. Verify via official websites before booking.</p>
         <div className="overflow-x-auto rounded-3xl border border-stone-200 dark:border-zinc-800 shadow-sm">
           <table className="w-full min-w-[680px] text-sm">
             <thead>

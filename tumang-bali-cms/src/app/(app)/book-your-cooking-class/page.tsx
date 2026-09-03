@@ -9,6 +9,7 @@ import BookButton from '../components/BookButton'
 import BookingModal from '../components/BookingModal'
 import OtaPricingNotice from '../components/OtaPricingNotice'
 import WhatsAppFloat from '../components/WhatsAppFloat'
+import { SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 
 export const revalidate = 60
 
@@ -75,6 +76,21 @@ export default async function Page() {
     }
   }
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE}/book-your-cooking-class#webpage`,
+    url: `${SITE}/book-your-cooking-class`,
+    name: 'Book Your Cooking Class — Tumang Bali',
+    description:
+      'Book your authentic Balinese cooking class in Ubud. Shared IDR 350,000 · private IDR 650,000. Free hotel pickup.',
+    dateModified: SITE_CONTENT_UPDATED,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '[data-speakable]'],
+    },
+  }
+
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans selection:bg-orange-500 selection:text-white">
       {/* Navigation */}
@@ -113,8 +129,8 @@ export default async function Page() {
             <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.1] mb-5">
               Book Your Balinese Cooking Class in Ubud
             </h1>
-            <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-6">
-              Ready to experience the flavors of Bali? Join our authentic Balinese cooking class in Ubud for a complete culinary adventure. From the traditional morning market to the rice fields, you'll learn the secrets of Balinese cuisine with a local chef.
+            <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-6" data-speakable>
+              Ready to experience the flavors of Bali? Join our authentic Balinese cooking class in Ubud for a complete culinary adventure. From the traditional morning market to the rice fields, you'll learn the secrets of Balinese cuisine with a local chef. Shared class from IDR 350,000 · private from IDR 650,000.
             </p>
             <div className="mb-8">
               <p className="font-bold text-stone-800 dark:text-stone-200 mb-3">What's included in your class:</p>
@@ -228,6 +244,7 @@ export default async function Page() {
 
       {/* Schema Markup */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       <BookingModal activities={bookingActivities} />
       <WhatsAppFloat />

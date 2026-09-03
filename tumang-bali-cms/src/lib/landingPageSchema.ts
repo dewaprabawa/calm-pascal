@@ -1,4 +1,4 @@
-import { SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
+import { SITE, SITE_CONTENT_UPDATED, TRIPADVISOR_REVIEW_COUNT } from '@/lib/seoMetadata'
 
 const BUSINESS_ID = `${SITE}/#business`
 
@@ -75,7 +75,7 @@ export function buildLandingLocalBusinessRef(pagePath: string, pageName: string)
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '500',
+      reviewCount: TRIPADVISOR_REVIEW_COUNT,
       bestRating: '5',
       worstRating: '1',
     },
