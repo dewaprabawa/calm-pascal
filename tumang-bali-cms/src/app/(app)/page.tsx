@@ -28,13 +28,13 @@ const StatsCounter = dynamic(() => import('./components/StatsCounter'))
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cooking Class Ubud Bali — Authentic Balinese Cooking Class',
+  title: 'Cooking Class Ubud',
   description:
-    'Book an authentic cooking class in Ubud, Bali — morning market tour, rice field walk, 10+ traditional dishes, vegetarian friendly, and free hotel pickup. TripAdvisor Travelers\' Choice 2026.',
+    'Hands-on Balinese cooking in Ubud: market tour, rice paddies, 10+ dishes, veg options & free hotel pickup. TripAdvisor Choice 2026.',
   path: '/',
-  ogTitle: 'Cooking Class Ubud Bali — Tumang Bali Cooking Class',
+  ogTitle: 'Cooking Class Ubud | Tumang Bali',
   image: '/images/gallery-group.jpg',
-  imageAlt: 'Authentic Balinese cooking class in Ubud Bali',
+  imageAlt: 'Guests cooking traditional Balinese dishes near Ubud',
 })
 
 export default async function Page() {
@@ -127,7 +127,15 @@ export default async function Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center gap-4 xl:gap-6">
           <div className="flex items-center gap-3 shrink-0 min-w-0">
             <div className="relative w-10 h-10 overflow-hidden rounded-md border-2 border-orange-200 dark:border-orange-900/30 shrink-0">
-              <Image src="/images/logo.jpg" alt="Tumang Bali Logo" fill className="object-cover" />
+              <Image
+                src="/images/logo.jpg"
+                alt="Tumang Bali Logo"
+                width={40}
+                height={40}
+                priority
+                fetchPriority="high"
+                className="object-cover w-full h-full"
+              />
             </div>
             <div className="text-lg sm:text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500 truncate">TUMANG BALI</div>
           </div>
@@ -135,11 +143,11 @@ export default async function Page() {
             <a href="#classes" className="hover:text-orange-500 transition-colors">CLASSES</a>
             <a href="#itinerary" className="hover:text-orange-500 transition-colors">ITINERARY</a>
             <a href="#menu" className="hover:text-orange-500 transition-colors">MENU</a>
-            <a href="#instructors" className="hover:text-orange-500 transition-colors">INSTRUCTORS</a>
+            <a href="#instructors" className="hover:text-orange-500 transition-colors">CHEFS</a>
             <a href="#reviews" className="hover:text-orange-500 transition-colors">REVIEWS</a>
             <Link href="/blog" className="hover:text-orange-500 transition-colors">BLOG</Link>
-            <Link href="/balinese-cooking-class-ubud" className="hidden xl:inline hover:text-orange-500 transition-colors">COOKING CLASS</Link>
-            <Link href="/compare-ubud-cooking-classes" className="hidden xl:inline hover:text-orange-500 transition-colors">COMPARE</Link>
+            <Link href="/about" className="hidden xl:inline hover:text-orange-500 transition-colors">ABOUT</Link>
+            <Link href="/balinese-cooking-class-ubud" className="hidden xl:inline hover:text-orange-500 transition-colors">DETAILS</Link>
             <a href="#faq" className="hover:text-orange-500 transition-colors">FAQ</a>
             <a href="#location" className="hover:text-orange-500 transition-colors">LOCATION</a>
           </div>
@@ -160,6 +168,7 @@ export default async function Page() {
       {/* SEO Structured Data */}
       <StructuredData />
 
+      <main id="main-content">
       {/* Hero Section */}
       <header className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden min-h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-100/50 via-stone-50 to-orange-50/30 dark:from-orange-950/20 dark:via-zinc-950 dark:to-orange-900/10 -z-10" />
@@ -174,17 +183,17 @@ export default async function Page() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
               </span>
-              Authentic Balinese Cooking Class in Ubud
+              TripAdvisor Travelers&apos; Choice 2026
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05]">
               Experience Authentic <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-500">Balinese Cooking Classes</span>
-              <br className="hidden xl:block" /> in Ubud
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-500">Balinese Cuisine</span>
+              <br className="hidden xl:block" /> near Ubud
             </h1>
             
             <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed" data-speakable>
-              Tumang Bali Cooking Class is an authentic Balinese cooking class in Ubud, Bali. We offer hands-on cooking experiences with a local market tour, rice field walk, and the chance to learn 10+ traditional dishes from scratch. Our classes are vegetarian friendly with complimentary hotel pickup included.
+              Join Tumang Bali for a hands-on village kitchen session. Shop a morning pasar, stroll the paddies, then prepare 10+ traditional dishes from scratch — vegetarian options and complimentary hotel pickup included.
             </p>
             
             {/* Quick Badges / Stats */}
@@ -193,10 +202,10 @@ export default async function Page() {
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
-                    <Image src="/images/itinerary/guest-dessert.jpg" alt="Happy guests at Balinese cooking class in Ubud" fill sizes="32px" loading="lazy" className="object-cover" />
+                    <Image src="/images/itinerary/guest-dessert.jpg" alt="Happy guests after a Balinese feast" width={32} height={32} loading="lazy" className="object-cover w-full h-full" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-stone-200 relative overflow-hidden">
-                    <Image src="/images/img5.jpg" alt="Guests enjoying authentic Balinese food after cooking class" fill sizes="32px" loading="lazy" className="object-cover" />
+                    <Image src="/images/img5.jpg" alt="Guests tasting dishes they prepared" width={32} height={32} loading="lazy" className="object-cover w-full h-full" />
                   </div>
                   <div className="w-8 h-8 rounded-full border-2 border-white dark:border-zinc-950 bg-orange-600 flex items-center justify-center text-[10px] font-bold text-white">
                     5★
@@ -211,10 +220,10 @@ export default async function Page() {
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
               <BookButton className="w-full sm:w-auto cursor-pointer text-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all hover:-translate-y-1">
-                Book Your Cooking Class
+                Book Your Experience
               </BookButton>
               <Link href="/balinese-cooking-class-ubud" className="w-full sm:w-auto flex items-center justify-center bg-white/50 hover:bg-white/80 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/80 backdrop-blur-md border border-stone-200 dark:border-zinc-700 text-stone-800 dark:text-stone-200 px-8 py-4 rounded-full font-semibold text-lg shadow-md transition-all hover:-translate-y-1">
-                Cooking Class Ubud
+                See class details
               </Link>
             </div>
           </div>
@@ -274,7 +283,7 @@ export default async function Page() {
               Secret Spice Paste
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-              Why Choose Our Balinese Cooking Class?
+              Why Choose Our Village Kitchen Experience?
             </h2>
             <p className="text-white/90 text-base md:text-lg font-light leading-relaxed">
               Read our guide on how we make our secret spice paste (Bumbu Bali) using authentic ingredients and traditional hand-grinding techniques.
@@ -298,7 +307,7 @@ export default async function Page() {
       {/* Activities / Classes */}
       <section id="classes" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Our Cooking Experiences & Classes</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Our Culinary Experiences</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Choose from our hand-crafted cooking experiences, designed to suit both beginners and seasoned foodies.</p>
         </div>
         
@@ -379,7 +388,7 @@ export default async function Page() {
       <section id="whats-included" className="py-24 px-6 max-w-7xl mx-auto border-t border-stone-200 dark:border-zinc-800">
         <div className="flex flex-col items-center mb-16 text-center">
           <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Everything Covered</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">What's Included in Our Cooking Class</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">What&apos;s Included in Your Session</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg font-light">
             We provide a complete, hassle-free experience so you can focus entirely on enjoying your culinary adventure.
           </p>
@@ -658,7 +667,10 @@ export default async function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Cook with Local Balinese Chef Wayan Suryana</h2>
-            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Local culinary experts passionate about sharing the true taste of Bali.</p>
+            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Led by Chef Wayan Sudiana — Ubud-born instructor with 15+ years teaching Balinese spice pastes, market sourcing, and traditional techniques in English for international guests.</p>
+            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-sm mt-3">
+              <Link href="/about" className="text-orange-600 hover:underline font-semibold">Read our story &amp; chef credentials</Link>
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -723,13 +735,13 @@ export default async function Page() {
         </div>
       </section>
 
-      {/* From Our Blog — internal links for orphan pages */}
+      {/* From Our Blog — curated internal links */}
       <section className="perf-defer py-24 px-6 bg-stone-100/50 dark:bg-zinc-900/30 border-t border-b border-stone-200 dark:border-zinc-800">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-16 text-center">
-            <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Explore More</span>
+            <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Guides & Stories</span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">From Our Blog</h2>
-            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Deepen your knowledge of Balinese cuisine, cooking techniques, and the best experiences in Ubud.</p>
+            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Practical tips on Balinese cuisine, village kitchen techniques, and planning your half-day culinary adventure.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -737,242 +749,41 @@ export default async function Page() {
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-xl bg-orange-600 flex items-center justify-center text-white text-lg font-bold flex-shrink-0">★</div>
                 <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors text-lg">Cooking Class Ubud — Our Main Experience</h3>
-                  <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Market tour, rice-field walk, 10+ dishes, and hands-on cooking with local chefs in Tumang village. The page to book our authentic Ubud cooking class.</p>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors text-lg">Our main Ubud culinary experience</h3>
+                  <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">Market visit, rice-field walk, 10+ dishes, and hands-on prep with local chefs in Tumang village — the page to compare inclusions and book.</p>
                 </div>
               </div>
             </Link>
             <Link href="/blog/best-cooking-class-in-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">01</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Best Cooking Class in Ubud 2026</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What to look for, how classes compare, and why travelers choose Tumang Bali.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/best-cooking-class-in-bali" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">02</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Best Cooking Class in Bali</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Guide for travelers comparing Bali cooking classes — market tours, authenticity, and value.</p>
-                </div>
-              </div>
+              <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">How to choose a great Ubud kitchen class</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What to look for, how schools compare, and why travelers pick Tumang Bali.</p>
             </Link>
             <Link href="/blog/ubud-food-guide-what-to-eat" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">03</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Ubud Food Guide — What to Eat</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Essential Balinese dishes for foreign travelers visiting Ubud and Bali.</p>
-                </div>
-              </div>
+              <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Ubud food guide — what to eat</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Essential dishes for foreign travelers visiting the Gianyar highlands.</p>
             </Link>
-            <Link href="/blog/bali-cooking-class-for-food-travelers" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">04</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Bali Cooking Class for Food Travelers</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Why a cooking class belongs on every food-focused Bali itinerary.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/cooking-class-ubud-guide-2026" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">05</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class Ubud — Complete Guide 2026</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Price, what is included, morning vs afternoon — everything to book a cooking class in Ubud.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/cooking-class-ubud-for-couples" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">06</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class Ubud for Couples</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Romantic date idea — cook and dine together overlooking rice fields.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ubud-cooking-class-for-families" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">07</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Ubud Cooking Class for Families</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Kids 8+ welcome — hands-on cooking the whole family will remember.</p>
-                </div>
-              </div>
+            <Link href="/blog/how-to-make-bumbu-bali" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">How we make Bumbu Bali spice paste</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Hand-grinding Base Genep with traditional tools in our village kitchen.</p>
             </Link>
             <Link href="/blog/vegetarian-cooking-class-ubud-guide" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">08</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Vegetarian Cooking Class Ubud</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Full plant-based Balinese menu — not a side salad. Vegan options available.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/morning-cooking-class-ubud-market-tour" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">09</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Morning Class + Market Tour</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The classic Ubud morning session — market, rice fields, 10+ dishes, lunch.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/lemongrass-cooking-class-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">10</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Lemongrass Cooking Class Ubud</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Sate lilit on serai stalks, sambal matah, and fresh market lemongrass at Tumang.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/tumang-bali-cooking-class-experience" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">11</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Tumang Bali Cooking Class Experience</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Village kitchen near Ubud — market, rice fields, Chef Wayan, max 8 guests.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/sambal-matah-cooking-class-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">12</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Sambal Matah Cooking Class</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Learn Bali&apos;s raw chili relish hands-on — shallot, chili, lemongrass.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/small-group-cooking-class-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">13</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Small Group Cooking Class (Max 8)</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Intimate hands-on class — not a crowded tourist demo.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/balinese-spice-paste-cooking-class" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">14</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Balinese Spice Paste Class</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Grind Base Genep (bumbu) by hand on a stone mortar.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/how-bali-cooking-classes-work" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">01</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">How a Balinese Cooking Class Works</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">A step-by-step walkthrough of what to expect during your cooking class in Ubud.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/more-about-our-cooking-class" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">02</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">More About Our Cooking Class</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What makes our cooking experience in Ubud different from other Balinese cooking classes.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/ubud-cooking-class-first-timers-guide" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">03</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">First-Timers Guide to Ubud Cooking Class</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Everything you need to know before your first Balinese cooking experience.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/cooking-with-local-family" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">04</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cook with a Local Balinese Family</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Discover the real Ubud experience — cooking in a traditional home with a local family.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/rice-field-cooking-class" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">05</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Rice Field Cooking Class in Ubud</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Outdoor cooking in the heart of Bali's iconic rice paddies.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/best-things-to-do-in-ubud" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">06</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">10 Best Things to Do in Ubud</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Beyond cooking — the top experiences and activities in Ubud.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/cooking-class-bali-faqs" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">07</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class in Bali — FAQs</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Prices, what to wear, dietary options, and everything we get asked most.</p>
-                </div>
-              </div>
+              <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Vegetarian & vegan menu options</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">A full plant-based feast with the same spice techniques and market tour.</p>
             </Link>
             <Link href="/blog/ubud-cooking-class-price" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">08</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Ubud Cooking Class Prices 2026</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What a cooking class in Ubud costs — shared, private (1 person), and kids rates.</p>
-                </div>
-              </div>
+              <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">2026 pricing & what is included</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Shared and private rates, hotel pickup, and how OTA prices compare.</p>
             </Link>
-            <Link href="/blog/how-to-make-sate-lilit" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">09</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">How to Make Sate Lilit</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">The Balinese minced satay you will cook in class — ingredients, technique, and tips.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/private-cooking-class-ubud-price" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">10</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Private Class Price — 1 Person & Kids</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Private kitchen in Ubud: IDR 650K for 1 person, IDR 550K for kids.</p>
-                </div>
-              </div>
-            </Link>
-            <Link href="/blog/cooking-class-ubud-from-canggu" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 flex items-center justify-center text-orange-600 dark:text-orange-400 text-lg font-bold flex-shrink-0">11</div>
-                <div>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Cooking Class from Canggu or Seminyak</h3>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Drive time, pickup, and which session works if you are staying on the coast.</p>
-                </div>
-              </div>
+            <Link href="/about" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Meet the Tumang Bali family</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Chef credentials, village roots, and why we teach in English for travelers.</p>
             </Link>
           </div>
 
           <div className="text-center mt-10">
             <Link href="/blog" className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold transition-colors">
               View all blog posts
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
           </div>
         </div>
@@ -994,7 +805,7 @@ export default async function Page() {
             <a
               href="https://wa.me/6282210132418?text=Hi%20Tumang%20Bali%20%E2%80%94%20I%20would%20like%20to%20book%20a%20cooking%20class"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="font-semibold text-orange-600 hover:underline"
             >
               WhatsApp +62 822-1013-2418
@@ -1031,7 +842,7 @@ export default async function Page() {
             <a 
               href="https://maps.app.goo.gl/4t7AQnSqF1Uxqm5h8" 
               target="_blank" 
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 bg-white dark:bg-zinc-900 hover:bg-stone-50 dark:hover:bg-zinc-800 border-2 border-stone-200 dark:border-zinc-700 hover:border-blue-500 dark:hover:border-blue-500 text-stone-900 dark:text-white px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-md w-full sm:w-1/2"
             >
               <svg className="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35,11.1H12.18V13.83H18.69C18.36,17.64 15.19,19.27 12.19,19.27C8.36,19.27 5,16.25 5,12C5,7.9 8.2,4.73 12.2,4.73C15.29,4.73 17.1,6.7 17.1,6.7L19,4.72C19,4.72 16.56,2 12.1,2C6.42,2 2.03,6.8 2.03,12C2.03,17.05 6.16,22 12.25,22C17.6,22 21.5,18.33 21.5,12.91C21.5,11.76 21.35,11.1 21.35,11.1V11.1Z" /></svg>
@@ -1041,7 +852,7 @@ export default async function Page() {
             <a 
               href="https://www.tripadvisor.com/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html" 
               target="_blank" 
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 bg-white dark:bg-zinc-900 hover:bg-stone-50 dark:hover:bg-zinc-800 border-2 border-stone-200 dark:border-zinc-700 hover:border-green-500 dark:hover:border-green-500 text-stone-900 dark:text-white px-8 py-4 rounded-full font-bold transition-all hover:-translate-y-1 shadow-md w-full sm:w-1/2"
             >
               <svg className="w-6 h-6 text-green-500" viewBox="0 0 24 24" fill="currentColor">
@@ -1057,9 +868,9 @@ export default async function Page() {
       <section id="who-this-is-for" className="py-24 px-6 max-w-7xl mx-auto border-t border-stone-200 dark:border-zinc-800">
         <div className="flex flex-col items-center mb-16 text-center">
           <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2">Designed For Everyone</span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Who This Cooking Class Is For</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Who This Experience Is For</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg font-light">
-            Our Ubud cooking class is perfect for travelers, food lovers, and families looking for an authentic cultural experience.
+            Our village kitchen sessions suit travelers, food lovers, and families looking for an authentic cultural half-day.
           </p>
         </div>
 
@@ -1070,7 +881,7 @@ export default async function Page() {
             </div>
             <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-3">Travelers & Explorers</h3>
             <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed font-light">
-              Dive deep into Balinese heritage. From picking ingredients at the local Ubud market to exploring scenic rice fields, it's a true cultural immersion.
+              Dive deep into Balinese heritage. From shopping ingredients at the local pasar to exploring scenic paddies, it is a true cultural immersion.
             </p>
           </div>
 
@@ -1153,37 +964,28 @@ export default async function Page() {
         </div>
       </section>
 
+      </main>
+
       {/* External Listings Footer */}
       <footer className="bg-stone-900 dark:bg-black text-stone-400 py-16 border-t border-stone-800">
         {/* Internal links to dedicated class pages (SEO) */}
         <div className="max-w-7xl mx-auto px-6 mb-12 pb-12 border-b border-stone-800">
-          <p className="text-sm font-semibold text-white mb-4 uppercase tracking-wider text-center md:text-left">Our Cooking Classes in Ubud</p>
+          <p className="text-sm font-semibold text-white mb-4 uppercase tracking-wider text-center md:text-left">Explore Tumang Bali</p>
           <div className="flex flex-wrap gap-x-6 gap-y-3 justify-center md:justify-start text-sm">
-            <Link href="/authentic-balinese-cooking-class" className="hover:text-orange-500 transition-colors">Authentic Balinese Cooking Class</Link>
-            <Link href="/balinese-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Cooking Class Ubud</Link>
-            <Link href="/best-bali-cooking-class" className="hover:text-orange-500 transition-colors">Best Bali Cooking Classes</Link>
-            <Link href="/bali-cooking-class-for-beginners" className="hover:text-orange-500 transition-colors">Cooking Class for Beginners</Link>
-            <Link href="/vegetarian-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Vegetarian Cooking Class</Link>
-            <Link href="/private-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Private Cooking Class</Link>
-            <Link href="/family-cooking-class-bali" className="hover:text-orange-500 transition-colors">Family Cooking Class</Link>
-            <Link href="/cooking-class-with-market-tour-ubud" className="hover:text-orange-500 transition-colors">Cooking Class with Market Tour</Link>
-            <Link href="/half-day-cooking-class-bali" className="hover:text-orange-500 transition-colors">Half-Day Cooking Class</Link>
-            <Link href="/where-to-stay-bali-cooking-class" className="hover:text-orange-500 transition-colors">Where to Stay in Bali</Link>
-            <Link href="/what-to-wear-bali-cooking-class" className="hover:text-orange-500 transition-colors">What to Wear</Link>
-            <Link href="/cooking-class-bali" className="hover:text-orange-500 transition-colors">Cooking Class in Bali</Link>
-            <Link href="/balinese-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Balinese Cooking Class in Ubud</Link>
-            <Link href="/best-cooking-classes-bali" className="hover:text-orange-500 transition-colors">Best Cooking Classes in Bali</Link>
-            <Link href="/compare-ubud-cooking-classes" className="hover:text-orange-500 transition-colors">Compare Cooking Classes</Link>
-            <Link href="/tumang-village" className="hover:text-orange-500 transition-colors">Tumang Village</Link>
-            <Link href="/tumpeng-making-class" className="hover:text-orange-500 transition-colors">Tumpeng Making Class</Link>
-            <Link href="/bali-cooking-experience" className="hover:text-orange-500 transition-colors">Bali Cooking Experience</Link>
+            <Link href="/about" className="hover:text-orange-500 transition-colors">About Us</Link>
+            <Link href="/balinese-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Ubud Culinary Experience</Link>
+            <Link href="/vegetarian-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Vegetarian Menu</Link>
+            <Link href="/private-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Private Session</Link>
+            <Link href="/compare-ubud-cooking-classes" className="hover:text-orange-500 transition-colors">Compare Options</Link>
             <Link href="/recipes" className="hover:text-orange-500 transition-colors">Balinese Recipes</Link>
-            <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog &amp; Recipes</Link>
-            <LanguageSwitcher current="en" className="hover:text-orange-500 transition-colors" />
+            <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog</Link>
             <Link href="/press" className="hover:text-orange-500 transition-colors">Press</Link>
             <Link href="/contact" className="hover:text-orange-500 transition-colors">Contact</Link>
+            <Link href="/terms-of-service" className="hover:text-orange-500 transition-colors">Terms of Service</Link>
+            <Link href="/editorial-policy" className="hover:text-orange-500 transition-colors">Editorial Policy</Link>
             <Link href="/refund-policy" className="hover:text-orange-500 transition-colors">Refund Policy</Link>
             <Link href="/privacy-policy" className="hover:text-orange-500 transition-colors">Privacy Policy</Link>
+            <LanguageSwitcher current="en" className="hover:text-orange-500 transition-colors" />
           </div>
         </div>
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -1193,7 +995,7 @@ export default async function Page() {
             <div className="mt-4 space-y-1 text-sm">
               <p>
                 WhatsApp:{' '}
-                <a href="https://wa.me/6282210132418" target="_blank" rel="noreferrer" className="text-orange-500 hover:text-orange-400">
+                <a href="https://wa.me/6282210132418" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-400">
                   +62 822-1013-2418
                 </a>
               </p>
@@ -1210,7 +1012,7 @@ export default async function Page() {
           <div className="flex flex-col items-center md:items-end">
             <p className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Find us on</p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="https://www.instagram.com/tumangbali_/?hl=en" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full border border-stone-700 hover:border-pink-500 hover:text-pink-500 transition-colors text-sm">
+              <a href="https://www.instagram.com/tumangbali_/?hl=en" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full border border-stone-700 hover:border-pink-500 hover:text-pink-500 transition-colors text-sm">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                 </svg>
@@ -1226,7 +1028,7 @@ export default async function Page() {
                   instagram: 'Instagram',
                 }
                 return (
-                  <a key={listing.id} id={`footer-listing-${listing.platformName}`} href={listing.url} target="_blank" rel="noreferrer" className="flex items-center px-4 py-2 rounded-full border border-stone-700 hover:border-orange-500 hover:text-orange-500 transition-colors text-sm">
+                  <a key={listing.id} id={`footer-listing-${listing.platformName}`} href={listing.url} target="_blank" rel="noopener noreferrer" className="flex items-center px-4 py-2 rounded-full border border-stone-700 hover:border-orange-500 hover:text-orange-500 transition-colors text-sm">
                     {platformLabels[listing.platformName] || listing.platformName}
                   </a>
                 )

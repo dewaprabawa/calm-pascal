@@ -20,13 +20,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tumangbaliclass.com'),
   title: {
-    default: "Authentic Balinese Cooking Class in Ubud | Tumang Bali",
+    default: "Cooking Class Ubud | Tumang Bali",
     template: "%s | Tumang Bali",
   },
-  description: "Authentic Balinese cooking class in Ubud with market tour, rice field walk & 10+ traditional dishes. Vegetarian friendly, hotel pickup.",
+  description: "Hands-on Balinese cooking in Ubud: market tour, rice paddies, 10+ dishes, veg options & free hotel pickup.",
   openGraph: {
-    title: "Authentic Balinese Cooking Class in Ubud | Tumang Bali",
-    description: "Join our Ubud cooking class. Learn 10+ traditional Balinese dishes with a local chef, tour a market, and take home a recipe booklet.",
+    title: "Cooking Class Ubud | Tumang Bali",
+    description: "Join our Ubud kitchen for a market tour, rice-field walk, and 10+ traditional dishes with a local chef.",
     url: 'https://tumangbaliclass.com',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'en_US',
@@ -48,21 +48,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Cooking Class in Ubud | Tumang Bali ⭐ 5-Star Rated',
-    description: 'Authentic Balinese cooking class with market tour, rice field walk & 10+ dishes. Vegetarian friendly. Hotel pickup. Book today!',
+    title: 'Cooking Class Ubud | Tumang Bali',
+    description: 'Market tour, rice-field walk & 10+ dishes. Vegetarian friendly. Hotel pickup. Book today!',
     images: ['/images/gallery-group.jpg'],
     creator: '@tumangbali',
   },
+  // Avoid googleBot max-snippet overrides — some SEO tools misread max-snippet:-1 as blocking.
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   alternates: {
     canonical: 'https://tumangbaliclass.com',
@@ -101,13 +95,27 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Site summary files for crawlers */}
         <link rel="describedby" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_FULL} type="text/plain" title="Full site summary" />
         <link rel="author" href={LLMS_TXT} />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/gallery-girls.jpg.webp"
+          fetchPriority="high"
+        />
       </head>
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-lg bg-orange-600 px-4 py-2 font-semibold text-white transition focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-orange-300"
+        >
+          Skip to main content
+        </a>
         {children}
         <GoogleAnalytics />
       </body>

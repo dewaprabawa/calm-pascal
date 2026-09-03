@@ -63,7 +63,7 @@ export default function LegalPageShell({
                 href={`${SITE_CONTACT.whatsappUrl}?text=${encodeURIComponent('Hi Tumang Bali — I have a question')}`}
                 className="text-orange-600 font-semibold hover:underline"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {SITE_CONTACT.whatsappDisplay}
               </a>
@@ -83,7 +83,7 @@ export default function LegalPageShell({
                 href={SITE_CONTACT.mapsUrl}
                 className="text-orange-600 font-semibold hover:underline"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {SITE_CONTACT.venueName}, {SITE_CONTACT.streetAddress}, {SITE_CONTACT.locality},{' '}
                 {SITE_CONTACT.region}
@@ -91,6 +91,15 @@ export default function LegalPageShell({
             </li>
           </ul>
           <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            <Link href="/about" className="text-orange-600 font-semibold hover:underline">
+              About
+            </Link>
+            <Link href="/terms-of-service" className="text-orange-600 font-semibold hover:underline">
+              Terms of Service
+            </Link>
+            <Link href="/editorial-policy" className="text-orange-600 font-semibold hover:underline">
+              Editorial Policy
+            </Link>
             <Link href="/refund-policy" className="text-orange-600 font-semibold hover:underline">
               Refund Policy
             </Link>

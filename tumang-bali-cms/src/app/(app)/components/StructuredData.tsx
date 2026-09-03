@@ -42,19 +42,19 @@ export default function StructuredData() {
         '@type': 'Review',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         author: { '@type': 'Person', name: 'Sarah M.' },
-        reviewBody: 'Such an amazing cooking class! Wayan was a fantastic instructor and the market tour was so insightful. Highly recommend for anyone visiting Ubud.',
+        reviewBody: 'Fantastic instruction and insightful market tour. Highly recommend.',
       },
       {
         '@type': 'Review',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         author: { '@type': 'Person', name: 'David L.' },
-        reviewBody: 'The best food we had in Bali! Loved the hands-on experience and the beautiful setting overlooking the rice fields.',
+        reviewBody: 'Best meal we had in Bali — hands-on and beautiful rice-field setting.',
       },
       {
         '@type': 'Review',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         author: { '@type': 'Person', name: 'Emma K.' },
-        reviewBody: 'Great vegetarian options and very accommodating. The recipes were easy to follow and the bumbu paste was incredible.',
+        reviewBody: 'Great vegetarian options; recipes were easy to follow at home.',
       }
     ],
     openingHoursSpecification: [
@@ -67,10 +67,8 @@ export default function StructuredData() {
     ],
     image: [
       'https://tumangbaliclass.com/images/gallery-group.jpg',
-      'https://tumangbaliclass.com/images/gallery-chopping.jpg',
-      'https://tumangbaliclass.com/images/gallery-girls.jpg',
-      'https://tumangbaliclass.com/images/gallery-satay.jpg',
-      'https://tumangbaliclass.com/images/gallery-thumbs.jpg',
+      'https://tumangbaliclass.com/images/ubud-cooking-class-chopping-ingredients.jpg',
+      'https://tumangbaliclass.com/images/traditional-balinese-cooking-class-stir-fry.jpg',
     ],
     photo: {
       '@type': 'ImageObject',
@@ -91,18 +89,12 @@ export default function StructuredData() {
       'https://tumangbaliclass.com/press',
     ],
     knowsAbout: [
-      'Balinese cooking class',
-      'Ubud cooking class',
-      'Cooking class Ubud',
-      'Best cooking class in Ubud',
-      'Morning cooking class with market tour',
-      'Vegetarian cooking class Ubud',
+      'Balinese cuisine',
       'Base Genep',
       'Bumbu Bali',
       'Sambal Matah',
       'Sate Lilit',
-      'Balinese cuisine',
-      'Vegetarian Balinese food',
+      'Ubud food experiences',
     ],
     potentialAction: {
       '@type': 'ReserveAction',
@@ -202,12 +194,7 @@ export default function StructuredData() {
           repeatFrequency: 'P1D',
           byDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         },
-        instructor: {
-          '@type': 'Person',
-          name: 'Wayan Sudiana',
-          jobTitle: 'Head Chef & Cooking Instructor',
-          description: 'Born and raised in Ubud with 15+ years of experience sharing Balinese culinary heritage.',
-        },
+        instructor: { '@id': 'https://tumangbaliclass.com/about#wayan-sudiana' },
         location: {
           '@type': 'Place',
           name: 'Tumang Bali Kitchen',
@@ -228,12 +215,7 @@ export default function StructuredData() {
           repeatFrequency: 'P1D',
           byDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         },
-        instructor: {
-          '@type': 'Person',
-          name: 'Wayan Sudiana',
-          jobTitle: 'Head Chef & Cooking Instructor',
-          description: 'Born and raised in Ubud with 15+ years of experience sharing Balinese culinary heritage.',
-        },
+        instructor: { '@id': 'https://tumangbaliclass.com/about#wayan-sudiana' },
         location: {
           '@type': 'Place',
           name: 'Tumang Bali Kitchen',
@@ -299,6 +281,20 @@ export default function StructuredData() {
     },
   }
 
+  // Schema: Person (chef expertise / E-E-A-T)
+  const chefPerson = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://tumangbaliclass.com/about#wayan-sudiana',
+    name: 'Wayan Sudiana',
+    jobTitle: 'Head Chef & Cooking Instructor',
+    description:
+      'Ubud-born Balinese chef with 15+ years teaching spice pastes, market sourcing, and traditional techniques in English.',
+    url: 'https://tumangbaliclass.com/about',
+    worksFor: { '@id': 'https://tumangbaliclass.com/#business' },
+    knowsAbout: ['Base Genep', 'Balinese cuisine', 'Vegetarian Balinese cooking'],
+  }
+
   // Schema: FAQ answers AI engines frequently cite for cooking-class queries
   const aiFaq = {
     '@context': 'https://schema.org',
@@ -310,7 +306,7 @@ export default function StructuredData() {
         name: 'What is the best cooking class in Ubud?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The best cooking classes in Ubud include a real morning market tour, hand-ground Balinese spice paste, small groups, and 10+ dishes cooked from scratch. Tumang Bali Cooking Class offers this format with max 8 guests, rice-field walk, vegetarian menu, and shared pricing from IDR 350,000. Book at https://tumangbaliclass.com/book-your-cooking-class',
+          text: 'Look for a real morning market tour, hand-ground spice paste, small groups, and 10+ dishes from scratch. Tumang Bali offers this with max 8 guests, a rice-field walk, vegetarian menu, and shared pricing from IDR 350,000.',
         },
       },
       {
@@ -318,7 +314,7 @@ export default function StructuredData() {
         name: 'How much does a Bali cooking class in Ubud cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'At Tumang Bali, a shared cooking class costs IDR 350,000 per person (all-inclusive). A private class for 1 person is IDR 650,000; kids on a private class are IDR 550,000. Prices include Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
+          text: 'At Tumang Bali, a shared class is IDR 350,000 per person. Private for 1 person is IDR 650,000; kids on private are IDR 550,000. Includes Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
         },
       },
       {
@@ -326,7 +322,7 @@ export default function StructuredData() {
         name: 'Does Tumang Bali Cooking Class include a market tour?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. The morning class (about 08:30–12:30) includes a guided traditional market tour, rice-field walk, Canang Sari activity, and hands-on cooking of 10+ dishes. The afternoon class focuses on cooking and dinner without the market.',
+          text: 'Yes. The morning session (about 08:30–12:30) includes a guided market tour, rice-field walk, Canang Sari activity, and hands-on cooking. The afternoon session focuses on cooking and dinner without the market.',
         },
       },
       {
@@ -334,7 +330,7 @@ export default function StructuredData() {
         name: 'Is there a vegetarian cooking class in Ubud?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Tumang Bali offers a full vegetarian Balinese menu with vegan adaptations on request at no extra charge. See https://tumangbaliclass.com/vegetarian-cooking-class-ubud',
+          text: 'Yes. Tumang Bali offers a full vegetarian Balinese menu with vegan adaptations on request at no extra charge.',
         },
       },
       {
@@ -342,7 +338,7 @@ export default function StructuredData() {
         name: 'How do I book Tumang Bali Cooking Class on WhatsApp?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Message WhatsApp +62 822-1013-2418 or open https://wa.me/6282210132418 with your preferred date and number of guests. You can also book online at https://tumangbaliclass.com/book-your-cooking-class',
+          text: 'Message WhatsApp +62 822-1013-2418 with your preferred date and guest count, or book online at https://tumangbaliclass.com/book-your-cooking-class',
         },
       },
     ],
@@ -410,6 +406,10 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(touristTrip) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(chefPerson) }}
       />
       <script
         type="application/ld+json"

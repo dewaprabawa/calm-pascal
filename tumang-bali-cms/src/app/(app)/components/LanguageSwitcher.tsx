@@ -25,7 +25,7 @@ export default function LanguageSwitcher({ current, className = '', compact = fa
         className={className || 'hover:text-orange-500 transition-colors'}
         aria-label="Tampilkan situs dalam Bahasa Indonesia"
       >
-        {compact ? 'ID' : 'Bahasa Indonesia'}
+        {compact ? 'Indonesia' : 'Bahasa Indonesia'}
       </Link>
     )
   }
@@ -39,7 +39,7 @@ export default function LanguageSwitcher({ current, className = '', compact = fa
       className={className || 'hover:text-orange-500 transition-colors'}
       aria-label="Show site in English"
     >
-      {compact ? 'EN' : 'English'}
+      {compact ? 'English' : 'English'}
     </Link>
   )
 }

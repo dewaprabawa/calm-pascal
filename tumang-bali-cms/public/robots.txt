@@ -1,8 +1,7 @@
 # Tumang Bali Cooking Class — https://tumangbaliclass.com
 # AI citation index: https://tumangbaliclass.com/llms.txt
 # Full AI context: https://tumangbaliclass.com/llms-full.txt
-# Allow AI search / answer engines so the site can be cited in
-# ChatGPT, Gemini, Meta AI (WhatsApp AI), Perplexity, and Claude.
+# Allow search engines and AI answer engines so the site can be cited.
 
 User-agent: *
 Allow: /
@@ -10,7 +9,6 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 
 # --- OpenAI (ChatGPT search + training) ---
-# OAI-SearchBot powers citations in ChatGPT search — keep Allow.
 User-agent: OAI-SearchBot
 Allow: /
 
@@ -50,7 +48,7 @@ Allow: /
 User-agent: Claude-User
 Allow: /
 
-# --- Other AI answer engines ---
+# --- Other AI answer engines & research crawlers ---
 User-agent: PerplexityBot
 Allow: /
 
@@ -60,14 +58,13 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-# Block bulk scrapers with no answer-engine benefit
 User-agent: Bytespider
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: PetalBot
-Disallow: /
+Allow: /
 
 Sitemap: https://tumangbaliclass.com/sitemap.xml

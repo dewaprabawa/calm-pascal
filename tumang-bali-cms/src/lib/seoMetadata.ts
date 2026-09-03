@@ -14,16 +14,19 @@ export const BRAND_SUFFIX = ` | ${BRAND}`
 export const PRIMARY_COOKING_CLASS_PATH = '/balinese-cooking-class-ubud'
 export const PRIMARY_COOKING_CLASS_URL = `${SITE}${PRIMARY_COOKING_CLASS_PATH}`
 
-/** Build a title that bypasses the layout template suffix (avoids double "| Tumang Bali"). */
-export function pageTitle(text: string, maxBaseLen = 58): Metadata['title'] {
+/** Build a title that bypasses the layout template suffix (avoids double "| Tumang Bali").
+ * Total length stays within the ~60-character SERP title budget. */
+export function pageTitle(text: string, maxTotalLen = 60): Metadata['title'] {
   const base = text.replace(/\s*\|\s*Tumang Bali\s*$/i, '').trim()
-  const trimmed = base.length > maxBaseLen ? `${base.slice(0, maxBaseLen - 3)}...` : base
+  const maxBaseLen = Math.max(20, maxTotalLen - BRAND_SUFFIX.length)
+  const trimmed = base.length > maxBaseLen ? `${base.slice(0, maxBaseLen - 1).trimEnd()}…` : base
   return { absolute: `${trimmed}${BRAND_SUFFIX}` }
 }
 
-export function truncateDescription(text: string, maxLen = 160): string {
+/** Keep meta descriptions inside typical SERP pixel width (~920px ≈ 145–155 chars). */
+export function truncateDescription(text: string, maxLen = 150): string {
   if (text.length <= maxLen) return text
-  return `${text.slice(0, maxLen - 3)}...`
+  return `${text.slice(0, maxLen - 1).trimEnd()}…`
 }
 
 export function buildPageMetadata(opts: {
