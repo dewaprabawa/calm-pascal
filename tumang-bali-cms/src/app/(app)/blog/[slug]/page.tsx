@@ -5,12 +5,10 @@ import { notFound } from 'next/navigation'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { Metadata } from 'next'
-import { pageTitle, truncateDescription } from '@/lib/seoMetadata'
+import { pageTitle, truncateDescription, SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 
 export const revalidate = 60
-
-const SITE = 'https://tumangbaliclass.com'
 
 function toIsoDate(value: string | Date | undefined): string {
   if (!value) return new Date().toISOString().split('T')[0]
@@ -144,8 +142,26 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   if (!article) notFound()
 
+  const articleUrl = `${SITE}/blog/${article.slug}`
+  const articleDescription = (article.meta?.description as string) || article.excerpt || article.title
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${articleUrl}#webpage`,
+    url: articleUrl,
+    name: article.title,
+    description: articleDescription,
+    dateModified: toIsoDate(article.updatedAt || article.publishedDate || article.createdAt) || SITE_CONTENT_UPDATED,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '[data-speakable]'],
+    },
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950 text-stone-900 dark:text-stone-50 font-sans">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <nav className="w-full bg-stone-50 dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
         <Link href="/blog" className="flex items-center gap-3">
           <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
@@ -161,6 +177,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight tracking-tight text-stone-900 dark:text-white">
             {article.title}
           </h1>
+          {article.excerpt ? (
+            <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed max-w-2xl mx-auto mb-6" data-speakable>
+              {article.excerpt}
+            </p>
+          ) : null}
           <div className="flex items-center justify-center gap-3 text-sm font-semibold text-stone-600 dark:text-stone-400">
             <div className="w-10 h-10 rounded-full bg-orange-100 dark:bg-zinc-800 flex items-center justify-center text-orange-600 text-lg">
               {(article.author || 'T')[0]}

@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
-import { PRIMARY_COOKING_CLASS_PATH, SITE } from '@/lib/seoMetadata'
+import { PRIMARY_COOKING_CLASS_PATH, SITE, SITE_CONTENT_UPDATED, SITE_CONTENT_UPDATED_LABEL } from '@/lib/seoMetadata'
 import ViatorBookButtons from '../components/ViatorBookButtons'
 
 export function StaticBlogArticle({ article }: { article: StaticArticle }) {
@@ -15,7 +15,7 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
     description: article.excerpt,
     image: `${SITE}${article.image}`,
     datePublished: article.publishedDate,
-    dateModified: article.publishedDate,
+    dateModified: SITE_CONTENT_UPDATED,
     author: {
       '@type': 'Person',
       name: article.author,
@@ -57,7 +57,7 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
     url,
     name: article.title,
     description: article.excerpt,
-    dateModified: article.publishedDate,
+    dateModified: SITE_CONTENT_UPDATED,
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', 'h2', '[data-speakable]'],
@@ -110,7 +110,7 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
           <span className="text-stone-700 dark:text-stone-300">{article.slug.replace(/-/g, ' ')}</span>
         </p>
         <p className="text-sm font-semibold text-orange-600 mb-3 uppercase tracking-wider">
-          {article.authorRole} · Updated August 2026
+          {article.authorRole} · Updated {SITE_CONTENT_UPDATED_LABEL}
         </p>
         <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-[1.15] mb-5">{article.title}</h1>
         <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-6">{article.excerpt}</p>

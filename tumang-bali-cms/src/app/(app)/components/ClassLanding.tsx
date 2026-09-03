@@ -4,7 +4,7 @@ import Link from 'next/link'
 import BookButton from './BookButton'
 import BookingModal, { ActivityOption } from './BookingModal'
 import WhatsAppFloat from './WhatsAppFloat'
-import { PRIMARY_COOKING_CLASS_PATH, SITE } from '@/lib/seoMetadata'
+import { PRIMARY_COOKING_CLASS_PATH, SITE, SITE_CONTENT_UPDATED_LABEL } from '@/lib/seoMetadata'
 import {
   buildLandingBreadcrumb,
   buildLandingCourseSchema,
@@ -138,7 +138,7 @@ export default function ClassLanding({
           <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-lg" data-speakable>
             {content.citabilityBlock}
           </p>
-          <p className="text-xs text-stone-400 mt-3">Last updated August 2026</p>
+          <p className="text-xs text-stone-400 mt-3">Last updated {SITE_CONTENT_UPDATED_LABEL}</p>
         </section>
       ) : null}
 

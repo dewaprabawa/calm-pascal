@@ -8,6 +8,7 @@ import { sortActivities } from '@/lib/sortActivities'
 import BookButton from '../components/BookButton'
 import BookingModal from '../components/BookingModal'
 import WhatsAppFloat from '../components/WhatsAppFloat'
+import { SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 
 export const revalidate = 60
 
@@ -162,6 +163,22 @@ export default async function IndonesianPage() {
     },
   }
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE}/id#webpage`,
+    url: `${SITE}/id`,
+    name: 'Kelas Memasak Ubud Bali — Tumang Bali',
+    description:
+      'Kelas memasak Bali di Ubud: tur pasar pagi, jalan sawah, masak 10+ hidangan. Harga IDR 350K.',
+    dateModified: SITE_CONTENT_UPDATED,
+    inLanguage: 'id-ID',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '[data-speakable]'],
+    },
+  }
+
   return (
     <div
       lang="id"
@@ -171,6 +188,7 @@ export default async function IndonesianPage() {
       <script dangerouslySetInnerHTML={{ __html: "document.documentElement.setAttribute('lang','id')" }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
 
       <nav className="w-full bg-white dark:bg-zinc-900 border-b border-stone-200 dark:border-zinc-800 h-20 flex items-center px-6">
         <div className="max-w-5xl mx-auto w-full flex items-center justify-between">

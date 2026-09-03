@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
+import { STATIC_COMMERCIAL_SLUGS } from '@/lib/staticCommercialSlugs'
 
 export const revalidate = 3600
 
@@ -100,28 +101,12 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/family-cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
   // Blog article about Tumang
   { path: '/blog/what-is-tumang-bali', priority: 0.7, changeFrequency: 'monthly' },
-  // Static commercial articles (no CMS/cron required)
-  { path: '/blog/cooking-class-ubud-for-couples', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/cooking-class-ubud-guide-2026', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/ubud-cooking-class-for-families', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/vegetarian-cooking-class-ubud-guide', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/morning-cooking-class-ubud-market-tour', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/lemongrass-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/tumang-bali-cooking-class-experience', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/sambal-matah-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/small-group-cooking-class-ubud', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/balinese-spice-paste-cooking-class', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/book-cooking-class-ubud-getyourguide', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/book-cooking-class-ubud-tripadvisor', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/book-cooking-class-ubud-viator', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/book-cooking-class-ubud-airbnb', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/ubud-cooking-class-price', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/private-cooking-class-ubud-price', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/best-cooking-class-in-ubud', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/best-cooking-class-in-bali', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/cooking-class-ubud-from-canggu', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/is-a-bali-cooking-class-worth-it', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/blog/morning-vs-afternoon-tours-bali', priority: 0.8, changeFrequency: 'monthly' },
+  // Static commercial articles derived from STATIC_COMMERCIAL_SLUGS (no hand-list drift)
+  ...STATIC_COMMERCIAL_SLUGS.map((slug) => ({
+    path: `/blog/${slug}`,
+    priority: 0.8,
+    changeFrequency: 'monthly' as const,
+  })),
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/llms.txt', priority: 0.7, changeFrequency: 'weekly' },

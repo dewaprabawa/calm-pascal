@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { Metadata } from 'next'
-import { pageTitle, truncateDescription, SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
+import { pageTitle, truncateDescription, SITE, SITE_CONTENT_UPDATED, SITE_CONTENT_UPDATED_LABEL } from '@/lib/seoMetadata'
 import { staticCommercialArticles } from './staticCommercialContent'
 
 export const metadata: Metadata = {
@@ -127,7 +127,7 @@ export default async function BlogPage() {
                 </div>
                 <div className="p-6">
                   <div className="text-xs font-bold text-orange-500 mb-2 uppercase tracking-wide">
-                    Updated August 2026
+                    Updated {SITE_CONTENT_UPDATED_LABEL}
                   </div>
                   <h3 className="text-xl font-bold mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
                     {article.title}
