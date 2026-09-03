@@ -3,6 +3,7 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
 import { STATIC_COMMERCIAL_SLUGS } from '@/lib/staticCommercialSlugs'
+import { FOREIGN_SEARCH_SLUGS } from '@/lib/foreignSearchSlugs'
 
 export const revalidate = 3600
 
@@ -107,6 +108,12 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   ...STATIC_COMMERCIAL_SLUGS.map((slug) => ({
     path: `/blog/${slug}`,
     priority: 0.8,
+    changeFrequency: 'monthly' as const,
+  })),
+  // Bali trip-planning cluster — top-of-funnel volume feeding the cooking class pages
+  ...FOREIGN_SEARCH_SLUGS.map((slug) => ({
+    path: `/blog/${slug}`,
+    priority: 0.7,
     changeFrequency: 'monthly' as const,
   })),
   { path: '/recipes', priority: 0.8, changeFrequency: 'weekly' },
