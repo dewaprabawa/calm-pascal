@@ -9,9 +9,10 @@ const NAV_ITEMS = [
   { href: '#classes', label: 'Classes', emoji: '👨‍🍳' },
   { href: '#itinerary', label: 'Itinerary', emoji: '🗺️' },
   { href: '#menu', label: 'Menu', emoji: '🍽️' },
-  { href: '#instructors', label: 'Instructors', emoji: '👩‍🏫' },
+  { href: '#instructors', label: 'Chefs', emoji: '👩‍🏫' },
   { href: '#reviews', label: 'Reviews', emoji: '⭐' },
-  { href: '/compare-ubud-cooking-classes', label: 'Compare Classes', emoji: '⚖️' },
+  { href: '/about', label: 'About Us', emoji: '🏡' },
+  { href: '/compare-ubud-cooking-classes', label: 'Compare Options', emoji: '⚖️' },
   { href: '#faq', label: 'FAQ', emoji: '❓' },
   { href: '#location', label: 'Location', emoji: '📍' },
 ]
@@ -62,7 +63,7 @@ export default function MobileMenu() {
             aria-label="Close menu"
             className="flex h-11 w-11 items-center justify-center rounded-xl border border-stone-200 bg-white text-stone-900 shadow-sm dark:border-zinc-700 dark:bg-zinc-900 dark:text-white"
           >
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>

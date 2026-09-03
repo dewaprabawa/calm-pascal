@@ -21,12 +21,13 @@ export default function TikTokEmbed() {
           src={POSTER_SRC}
           alt="Guests enjoying a Balinese cooking class feast in Ubud"
           fill
-          loading="lazy"
+          priority
+          fetchPriority="high"
           sizes="(max-width: 768px) 90vw, 384px"
           className="object-cover"
         />
-        <span className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
-        <span className="absolute inset-0 flex items-center justify-center">
+        <span className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" aria-hidden="true" />
+        <span className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 text-orange-600 shadow-lg group-hover:scale-105 transition-transform">
             <svg className="ml-1 h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M8 5v14l11-7z" />
