@@ -2,11 +2,11 @@ import React from 'react'
 import { Metadata } from 'next'
 import { buildStaticArticleMetadata } from '@/lib/seoMetadata'
 import { StaticBlogArticle } from '../StaticBlogArticle'
-import { smallGroupCookingClassUbud } from '../staticCommercialContent'
+import { riceTerraceCookingClassUbud } from '../relatedKeywordArticles'
 
 export const revalidate = 3600
 
-const article = smallGroupCookingClassUbud
+const article = riceTerraceCookingClassUbud
 
 export const metadata: Metadata = buildStaticArticleMetadata(article)
 

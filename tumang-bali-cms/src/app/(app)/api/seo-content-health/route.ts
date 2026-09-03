@@ -70,7 +70,7 @@ export async function GET() {
   const traditionalChecks: Check[] = [
     {
       id: 'static-commercial-count',
-      ok: STATIC_COMMERCIAL_SLUGS.length >= 21,
+      ok: STATIC_COMMERCIAL_SLUGS.length >= 23,
       detail: `${STATIC_COMMERCIAL_SLUGS.length} static commercial articles registered`,
     },
     {

@@ -9,13 +9,20 @@ import { marketTourClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cooking Class with Market Tour & Rice Field Walk',
+  title: 'Cooking Class with Market Tour Ubud — Rice Field Walk Included',
   description:
-    'Start your Ubud cooking class with a guided morning market tour. Pick fresh ingredients, walk the rice fields, then cook 10+ traditional dishes. Hotel pickup included.',
+    'Cooking class with market tour in Ubud — guided morning pasar, rice-field walk, then cook 10+ traditional dishes. Free hotel pickup from IDR 350K.',
   path: '/cooking-class-with-market-tour-ubud',
   ogTitle: 'Cooking Class with Market Tour & Rice Field Walk',
   image: '/images/img2.jpg',
   imageAlt: 'Ubud morning market tour during a Balinese cooking class',
+  keywords: [
+    'cooking class with market tour ubud',
+    'ubud market cooking class',
+    'morning market tour cooking class bali',
+    'rice field cooking class ubud',
+    'pasar cooking class ubud',
+  ],
 })
 
 export default async function Page() {

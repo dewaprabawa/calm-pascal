@@ -22,6 +22,9 @@ export const STATIC_COMMERCIAL_SLUGS = [
   'cooking-class-ubud-from-canggu',
   'is-a-bali-cooking-class-worth-it',
   'morning-vs-afternoon-tours-bali',
+  // Related keyword cluster (rice terrace, home cooking / local family)
+  'rice-terrace-cooking-class-ubud',
+  'balinese-home-cooking-class-ubud',
 ] as const
 
 export type StaticCommercialSlug = (typeof STATIC_COMMERCIAL_SLUGS)[number]

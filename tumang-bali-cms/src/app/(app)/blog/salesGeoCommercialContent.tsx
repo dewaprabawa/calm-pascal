@@ -419,6 +419,8 @@ export const cookingClassUbudFromCanggu: StaticArticle = {
     'canggu to ubud cooking class',
     'day trip cooking class bali',
     'ubud cooking class pickup',
+    'cooking class ubud hotel transfer',
+    'cooking class from sanur',
   ],
   faqs: [
     {

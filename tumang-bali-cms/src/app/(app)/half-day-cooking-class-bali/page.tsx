@@ -16,6 +16,14 @@ export const metadata: Metadata = buildPageMetadata({
   ogTitle: 'Half-Day Cooking Class in Bali',
   image: '/images/gallery-satay.jpg',
   imageAlt: 'Half-day Balinese cooking class in Bali',
+  keywords: [
+    'half day cooking class bali',
+    'half day cooking class ubud',
+    'short cooking class ubud',
+    'morning cooking class ubud',
+    'afternoon cooking class ubud',
+    'cooking class with hotel transfer ubud',
+  ],
 })
 
 export default async function Page() {

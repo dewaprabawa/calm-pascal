@@ -51,6 +51,8 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'book-cooking-class-ubud-viator',
   'book-cooking-class-ubud-airbnb',
   'morning-vs-afternoon-tours-bali',
+  'rice-terrace-cooking-class-ubud',
+  'balinese-home-cooking-class-ubud',
   // Foreign search intent cluster (top Bali queries → cooking class funnel)
   'bali-villas-guide-where-to-stay',
   'best-time-to-visit-bali',

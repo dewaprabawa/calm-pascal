@@ -33,6 +33,7 @@ export function buildPageMetadata(opts: {
   ogTitle?: string
   image?: string
   imageAlt?: string
+  keywords?: string[]
 }): Metadata {
   const title = pageTitle(opts.title)
   const description = truncateDescription(opts.description)
@@ -40,6 +41,7 @@ export function buildPageMetadata(opts: {
   return {
     title,
     description,
+    keywords: opts.keywords?.length ? opts.keywords : undefined,
     alternates: { canonical: url },
     openGraph: {
       title: opts.ogTitle ?? (typeof title === 'object' && title && 'absolute' in title ? title.absolute : opts.title),
@@ -53,4 +55,24 @@ export function buildPageMetadata(opts: {
         : undefined,
     },
   }
+}
+
+/** Metadata helper for static commercial blog articles (includes keyword tags). */
+export function buildStaticArticleMetadata(article: {
+  slug: string
+  metaTitle: string
+  metaDescription: string
+  image: string
+  imageAlt: string
+  keywords: string[]
+}): Metadata {
+  return buildPageMetadata({
+    title: article.metaTitle,
+    description: article.metaDescription,
+    path: `/blog/${article.slug}`,
+    ogTitle: article.metaTitle,
+    image: article.image,
+    imageAlt: article.imageAlt,
+    keywords: article.keywords,
+  })
 }

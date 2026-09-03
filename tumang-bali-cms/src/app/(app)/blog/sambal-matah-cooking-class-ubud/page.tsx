@@ -1,6 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { buildPageMetadata } from '@/lib/seoMetadata'
+import { buildStaticArticleMetadata } from '@/lib/seoMetadata'
 import { StaticBlogArticle } from '../StaticBlogArticle'
 import { sambalMatahCookingClassUbud } from '../staticCommercialContent'
 
@@ -8,14 +8,7 @@ export const revalidate = 3600
 
 const article = sambalMatahCookingClassUbud
 
-export const metadata: Metadata = buildPageMetadata({
-  title: article.metaTitle,
-  description: article.metaDescription,
-  path: `/blog/${article.slug}`,
-  ogTitle: article.metaTitle,
-  image: article.image,
-  imageAlt: article.imageAlt,
-})
+export const metadata: Metadata = buildStaticArticleMetadata(article)
 
 export default function Page() {
   return <StaticBlogArticle article={article} />
