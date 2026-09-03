@@ -32,10 +32,24 @@ const Layout = ({ children }: Args) => (
       type="module"
       src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
     />
-    <div className="fixed left-4 bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto">
-      <div className="block">
-        <div className="rounded-full bg-orange-600/95 text-white text-[10px] sm:text-[11px] font-bold px-2 py-0.5 sm:px-3 sm:py-1 shadow-lg border border-orange-500/40">
-          Ask anything
+    <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
+      <div className="flex flex-col items-start sm:items-end gap-1">
+        <div className="w-9 h-9 rounded-full bg-orange-600/95 flex items-center justify-center shadow-lg border border-orange-500/40">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-5 h-5 text-white"
+            aria-hidden="true"
+          >
+            <path d="M21 15a4 4 0 0 1-4 4H8l-5 3 1-5a4 4 0 0 1-1-3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+          </svg>
+        </div>
+        <div className="rounded-full bg-orange-600/95 text-white text-[10px] font-bold px-2 py-0.5 sm:px-3 sm:py-1 shadow-lg border border-orange-500/40 whitespace-nowrap">
+          Ask AI agent here
         </div>
       </div>
       <ZapierChatbotEmbed
