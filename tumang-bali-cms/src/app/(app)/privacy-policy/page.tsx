@@ -123,9 +123,24 @@ export default function PrivacyPolicyPage() {
 
       <LegalSection title="Cookies and analytics">
         <p>
-          Our site may use essential cookies for security and basic functionality, and optional
-          analytics or marketing tools that help us understand how visitors use the site. You can
-          control cookies through your browser settings.
+          Our site uses essential cookies for security and basic functionality. We also use Google
+          Analytics 4 to understand how visitors find and use the site — for example which pages are
+          read and which searches bring people here. Google Analytics sets cookies and processes
+          data such as your approximate location, device, and browser on our behalf. We do not use
+          it to identify you personally, and we do not sell this data.
+        </p>
+        <p>
+          You can control cookies through your browser settings, and you can opt out of Google
+          Analytics entirely using{' '}
+          <a
+            href="https://tools.google.com/dlpage/gaoptout"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-600 underline"
+          >
+            Google&apos;s opt-out browser add-on
+          </a>
+          .
         </p>
       </LegalSection>
 
