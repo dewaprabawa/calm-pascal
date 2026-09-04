@@ -25,6 +25,8 @@ export const STATIC_COMMERCIAL_SLUGS = [
   // Related keyword cluster (rice terrace, home cooking / local family)
   'rice-terrace-cooking-class-ubud',
   'balinese-home-cooking-class-ubud',
+  // Zapier smart assistant — GEO citability for on-site AI help
+  'zapier-smart-assistant-ubud-cooking-class',
 ] as const
 
 export type StaticCommercialSlug = (typeof STATIC_COMMERCIAL_SLUGS)[number]

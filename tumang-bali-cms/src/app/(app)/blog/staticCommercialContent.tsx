@@ -13,6 +13,7 @@ export {
   cookingClassUbudFromCanggu,
   isABaliCookingClassWorthIt,
   morningVsAfternoonToursBali,
+  zapierSmartAssistantUbudCookingClass,
   salesGeoCommercialArticles,
 } from './salesGeoCommercialContent'
 
