@@ -18,11 +18,21 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+# --- Microsoft Bing (powers ChatGPT web search + Copilot) ---
+User-agent: bingbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 # --- Google (Search + Gemini / AI Overviews) ---
 User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
 Allow: /
 
 # --- Meta AI / WhatsApp AI / Facebook ---

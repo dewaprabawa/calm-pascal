@@ -81,8 +81,13 @@ export default function StructuredData() {
       url: 'https://tumangbaliclass.com/images/logo.jpg',
     },
     sameAs: [
+      'https://www.tripadvisor.com/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html',
       'https://www.tripadvisor.co.id/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html',
       'https://www.instagram.com/tumangbali_/',
+      'https://www.google.com/maps?cid=5953218619508310807',
+      'https://www.getyourguide.com/ubud-l32246/ubud-balinese-cooking-class-with-local-chef-t1377291/',
+      'https://www.viator.com/tours/Ubud/Ubud-Market-to-Table-Cooking-Class-and-Local-Herb-Discovery/d5467-5690403P1',
+      'https://www.airbnb.com/experiences/7165714',
       'https://wa.me/6282210132418',
       'https://tumangbaliclass.com/llms.txt',
       'https://tumangbaliclass.com/llms-full.txt',
@@ -271,28 +276,48 @@ export default function StructuredData() {
       },
       sameAs: [
         'https://www.instagram.com/tumangbali_/',
+        'https://www.tripadvisor.com/Attraction_Review-g297701-d26364507-Reviews-Tumang_Bali_Cooking_Class-Ubud_Gianyar_Regency_Bali.html',
         'https://www.tripadvisor.co.id/Attraction_Review-g297701-d26364507',
+        'https://www.google.com/maps?cid=5953218619508310807',
+        'https://www.getyourguide.com/ubud-l32246/ubud-balinese-cooking-class-with-local-chef-t1377291/',
+        'https://www.viator.com/tours/Ubud/Ubud-Market-to-Table-Cooking-Class-and-Local-Herb-Discovery/d5467-5690403P1',
+        'https://www.airbnb.com/experiences/7165714',
         'https://wa.me/6282210132418',
       ],
     },
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2', '[data-speakable]'],
+      cssSelector: ['h1', 'h2', '[data-speakable]', '#geo-cite-answer', '#faq'],
     },
   }
 
-  // Schema: Person (chef expertise / E-E-A-T)
+  // Schema: Person (chef expertise / E-E-A-T) — entity signal for ChatGPT / Gemini
   const chefPerson = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     '@id': 'https://tumangbaliclass.com/about#wayan-sudiana',
     name: 'Wayan Sudiana',
+    alternateName: 'Chef Wayan',
     jobTitle: 'Head Chef & Cooking Instructor',
     description:
-      'Ubud-born Balinese chef with 15+ years teaching spice pastes, market sourcing, and traditional techniques in English.',
+      'Ubud-born Balinese chef with 15+ years teaching Base Genep spice pastes, market sourcing, and traditional village kitchen techniques in English at Tumang Bali Cooking Class.',
     url: 'https://tumangbaliclass.com/about',
+    image: 'https://tumangbaliclass.com/images/logo.jpg',
     worksFor: { '@id': 'https://tumangbaliclass.com/#business' },
-    knowsAbout: ['Base Genep', 'Balinese cuisine', 'Vegetarian Balinese cooking'],
+    knowsLanguage: ['en', 'id'],
+    knowsAbout: [
+      'Base Genep',
+      'Bumbu Bali',
+      'Balinese cuisine',
+      'Vegetarian Balinese cooking',
+      'Sambal Matah',
+      'Sate Lilit',
+      'Ubud cooking class',
+    ],
+    sameAs: [
+      'https://www.instagram.com/tumangbali_/',
+      'https://tumangbaliclass.com/press',
+    ],
   }
 
   // Schema: FAQ answers AI engines frequently cite for cooking-class queries
@@ -301,6 +326,14 @@ export default function StructuredData() {
     '@type': 'FAQPage',
     '@id': 'https://tumangbaliclass.com/#ai-faq',
     mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is Tumang Bali Cooking Class?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Tumang Bali Cooking Class is a family-run small-group Balinese cooking school in Tumang village near Ubud, Bali. Guests join a morning market tour (morning session), rice-field walk, and hands-on cooking of 10+ dishes with Chef Wayan Sudiana. Shared class IDR 350,000; private 1 person IDR 650,000. Max 8 guests. TripAdvisor Traveler\'s Choice 2026, 5.0 rating from 1500+ reviews.',
+        },
+      },
       {
         '@type': 'Question',
         name: 'What is the best cooking class in Ubud?',
@@ -330,15 +363,23 @@ export default function StructuredData() {
         name: 'Is there a vegetarian cooking class in Ubud?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Tumang Bali offers a full vegetarian Balinese menu with vegan adaptations on request at no extra charge.',
+          text: 'Yes. Tumang Bali offers a full vegetarian Balinese menu with vegan adaptations on request at no extra charge. Same shared price IDR 350,000.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How do I book Tumang Bali Cooking Class on WhatsApp?',
+        name: 'How do I book Tumang Bali Cooking Class?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Message WhatsApp +62 822-1013-2418 with your preferred date and guest count, or book online at https://tumangbaliclass.com/book-your-cooking-class',
+          text: 'Book online at https://tumangbaliclass.com/book-your-cooking-class or message WhatsApp +62 822-1013-2418. Also listed on GetYourGuide, Viator, TripAdvisor, and Airbnb Experiences.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Tumang Bali Cooking Class good for couples and families?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Couples cook side by side in the village kitchen; families with kids aged 8+ are welcome. Shared class IDR 350,000 each; private kitchen IDR 650,000 for one adult (kids IDR 550,000 on private).',
         },
       },
     ],
