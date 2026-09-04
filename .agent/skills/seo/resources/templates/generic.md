@@ -50,7 +50,7 @@ This template applies to businesses that don't fit neatly into SaaS, local servi
 | About | Organization, AboutPage |
 | Contact | ContactPage |
 | Blog | Article, BlogPosting |
-| FAQ | (FAQPage only for gov/health) |
+| FAQ | On-page Q&A; FAQPage optional for understanding only (no FAQ rich results after May 2026) |
 | Product/Service | Product or Service |
 
 ## Content Quality Standards

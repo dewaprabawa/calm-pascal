@@ -117,7 +117,7 @@ For Answer Engine Optimization (Featured Snippets, PAA):
 
 For AI citation and AI Overview inclusion:
 - Clear, quotable factual statements (not opinions)
-- Structured data (`Article`, `FAQPage` if eligible, `speakable`)
+- Structured data (`Article`, `speakable`; optional `FAQPage` for understanding only — FAQ rich results removed May 2026)
 - Brand mentions with consistent entity naming
 - `llms.txt` file at site root
 
