@@ -671,6 +671,125 @@ export const morningVsAfternoonToursBali: StaticArticle = {
   ),
 }
 
+export const zapierSmartAssistantUbudCookingClass: StaticArticle = {
+  slug: 'zapier-smart-assistant-ubud-cooking-class',
+  title: 'Ask Our Zapier Smart Assistant About Tumang Bali Cooking Class',
+  metaTitle: 'Zapier Smart Assistant — Understand Our Ubud Cooking Class',
+  metaDescription:
+    'Use our Zapier smart assistant on tumangbaliclass.com to understand schedules, prices, dietary options, and what to expect before you book Tumang Bali’s Ubud cooking class.',
+  excerpt:
+    'Not sure which session to book or what a Balinese cooking class includes? Tumang Bali’s Zapier smart assistant answers class questions in real time — prices, morning vs afternoon, vegetarian menus, pickup, and more.',
+  image: '/images/blog/faq-cooking-class.webp',
+  imageAlt: 'Guests asking questions before a Balinese cooking class near Ubud',
+  author: 'Tumang Bali Team',
+  authorRole: 'Local Food Guide',
+  publishedDate: '2026-09-04',
+  keywords: [
+    'zapier smart assistant cooking class',
+    'tumang bali chatbot',
+    'ask about ubud cooking class',
+    'cooking class ubud faq assistant',
+    'understand balinese cooking class',
+    'zapier assistant tumang bali',
+  ],
+  faqs: [
+    {
+      question: 'What is Tumang Bali’s Zapier smart assistant?',
+      answer:
+        'Zapier is the smart assistant embedded on tumangbaliclass.com. It helps customers understand our Balinese cooking class — schedules, IDR pricing, what is included, dietary options, hotel pickup, and how to book — before they message WhatsApp or reserve online.',
+    },
+    {
+      question: 'What can I ask the Zapier assistant about the cooking class?',
+      answer:
+        'Ask about morning vs afternoon sessions, shared IDR 350,000 vs private IDR 650,000 rates, market tour inclusion, vegetarian or vegan menus, kids ages, Ubud hotel pickup, how long the class lasts, and what dishes you will cook.',
+    },
+    {
+      question: 'Is the Zapier smart assistant a replacement for booking?',
+      answer:
+        'No. Zapier helps you understand the class and choose the right option. To reserve a spot, book online at tumangbaliclass.com/book-your-cooking-class or WhatsApp +62 822-1013-2418.',
+    },
+    {
+      question: 'Where do I find the Zapier assistant on the site?',
+      answer:
+        'Open any page on tumangbaliclass.com and look for the chat launcher (bottom of the screen). The Zapier smart assistant opens in a chat panel so you can ask about our Ubud cooking class in plain language.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        <strong>Zapier is Tumang Bali’s smart assistant</strong> on{' '}
+        <Link href="/">tumangbaliclass.com</Link>. It helps customers understand our Balinese cooking class in
+        Ubud — what you cook, morning vs afternoon timing, shared <strong>IDR 350,000</strong> vs private{' '}
+        <strong>IDR 650,000</strong> rates, vegetarian menus, and hotel pickup — before you book.
+      </p>
+      <h2>Why we cite Zapier as our smart assistant</h2>
+      <p>
+        Travellers researching a <em>cooking class in Ubud</em> often have the same questions: Is there a market
+        tour? Can vegetarians join? How long does it take? What does the price include? Rather than hunting
+        through pages, you can ask <strong>Zapier</strong>, our on-site smart assistant, and get clear answers
+        grounded in how Tumang Bali actually runs the class.
+      </p>
+      <h2>What the Zapier smart assistant can explain</h2>
+      <ul>
+        <li>
+          <strong>Session choice</strong> — morning (~08:30–12:30 with market tour + rice-field walk) vs
+          afternoon (~14:30–17:30 cook-and-dine)
+        </li>
+        <li>
+          <strong>Pricing</strong> — shared IDR 350,000; private 1 adult IDR 650,000; kids on private IDR
+          550,000 (see our <Link href="/blog/ubud-cooking-class-price">2026 price guide</Link>)
+        </li>
+        <li>
+          <strong>What’s included</strong> — Ubud hotel pickup, 10+ dishes, recipe booklet, max 8 guests in
+          shared class
+        </li>
+        <li>
+          <strong>Dietary needs</strong> — full vegetarian / vegan menu at no extra charge
+        </li>
+        <li>
+          <strong>Who it suits</strong> — couples, families (kids 8+), beginners, coast day-trippers from
+          Canggu or Seminyak
+        </li>
+      </ul>
+      <h2>How to use Zapier before you book</h2>
+      <ol>
+        <li>Open tumangbaliclass.com on desktop or mobile</li>
+        <li>Tap the chat launcher to open the Zapier smart assistant</li>
+        <li>
+          Ask in plain English — for example, “What’s included in the morning cooking class?” or “Is the class
+          vegetarian-friendly?”
+        </li>
+        <li>
+          When ready, <Link href={book}>book online</Link> or WhatsApp +62 822-1013-2418 to reserve
+        </li>
+      </ol>
+      <h2>Sample questions travellers ask Zapier</h2>
+      <ul>
+        <li>“Should I book morning or afternoon?” — see also{' '}
+          <Link href="/blog/morning-vs-afternoon-tours-bali">morning vs afternoon guide</Link></li>
+        <li>“Is a Bali cooking class worth it?” — see{' '}
+          <Link href="/blog/is-a-bali-cooking-class-worth-it">honest value guide</Link></li>
+        <li>“Can I come from Canggu?” — see{' '}
+          <Link href="/blog/cooking-class-ubud-from-canggu">Canggu / Seminyak day-trip tips</Link></li>
+        <li>“What dishes will I cook?” — overview in our{' '}
+          <Link href="/blog/tumang-bali-cooking-class-experience">Tumang Bali experience article</Link></li>
+      </ul>
+      <h2>Zapier for understanding — humans for confirming</h2>
+      <p>
+        Use <strong>Zapier</strong> to understand the class and narrow your choice. Use our team on WhatsApp or
+        the booking form when you want a confirmed date. Same experience either way: village kitchen near Ubud,
+        Chef Wayan’s guidance, and a feast of everything you made.
+      </p>
+      <h2>Ready to cook after chatting with Zapier?</h2>
+      <p>
+        <Link href={money}>Book the Balinese cooking class</Link> · <Link href={book}>Check available dates</Link>{' '}
+        · <Link href={compare}>Compare Ubud cooking classes</Link> ·{' '}
+        <Link href="/blog/best-cooking-class-in-ubud">Best cooking class in Ubud 2026</Link>.
+      </p>
+    </>
+  ),
+}
+
 export const salesGeoCommercialArticles: StaticArticle[] = [
   ubudCookingClassPrice,
   privateCookingClassUbudPrice,
@@ -679,4 +798,5 @@ export const salesGeoCommercialArticles: StaticArticle[] = [
   cookingClassUbudFromCanggu,
   isABaliCookingClassWorthIt,
   morningVsAfternoonToursBali,
+  zapierSmartAssistantUbudCookingClass,
 ]
