@@ -265,8 +265,12 @@ export const bestCookingClassInUbud: StaticArticle = {
         </li>
       </ul>
       <p>
-        Full matrix: <Link href={compare}>compare Ubud cooking classes</Link>. Island-wide view:{' '}
-        <Link href="/blog/best-cooking-class-in-bali">best cooking class in Bali</Link>.
+        Full matrix: <Link href={compare}>compare Ubud cooking classes</Link>. Farm vs garden vs cultural
+        schools:{' '}
+        <Link href="/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class">
+          Taman Dukuh vs Tresna vs Lemongrass
+        </Link>
+        . Island-wide view: <Link href="/blog/best-cooking-class-in-bali">best cooking class in Bali</Link>.
       </p>
       <h2>Why village classes rank highest</h2>
       <p>
@@ -790,6 +794,260 @@ export const zapierSmartAssistantUbudCookingClass: StaticArticle = {
   ),
 }
 
+export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
+  slug: 'taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
+  title:
+    'Taman Dukuh vs Tresna vs Lemongrass Cooking Class — Ubud Comparison 2026',
+  metaTitle: 'Taman Dukuh vs Tresna vs Lemongrass 2026',
+  metaDescription:
+    'Compare Taman Dukuh Bali Farm, Tresna Bali, and Lemongrass Cooking Class in Ubud — price, market tour, farm visit, group size, and who each class suits in 2026.',
+  excerpt:
+    'Choosing between Taman Dukuh Bali Farm Cooking Class, Tresna Bali Cooking Class, and Lemongrass Cooking Class Ubud? Here is a fair side-by-side on price, inclusions, and experience style — updated September 2026.',
+  image: '/images/blog/tumang-vibe.webp',
+  imageAlt:
+    'Hands-on Balinese cooking class near Ubud — comparing Taman Dukuh, Tresna, and Lemongrass options',
+  author: 'Tumang Bali Team',
+  authorRole: 'Local Food Guide',
+  publishedDate: '2026-09-04',
+  keywords: [
+    'taman dukuh vs tresna cooking class',
+    'taman dukuh bali farm cooking class',
+    'tresna bali cooking class',
+    'lemongrass cooking class ubud',
+    'ubud cooking class comparison',
+    'best cooking class ubud 2026',
+  ],
+  faqs: [
+    {
+      question: 'Which is better: Taman Dukuh, Tresna, or Lemongrass cooking class?',
+      answer:
+        'It depends on your priority. Choose Taman Dukuh for an organic farm harvest in Taro Village (IDR 450–480K, about 6 dishes). Choose Tresna for a premium ceremonial feast with max 8 guests and 15 recipes (~USD 71–92 + tax, limited weekly slots). Choose Lemongrass Cooking Class for a mid-price cultural package with market tour, rice field, and Canang Sari (IDR 400K). Tumang Bali is a strong alternative at IDR 350K with 10+ dishes, hotel pickup, and max 8 guests.',
+    },
+    {
+      question: 'How much does Taman Dukuh Bali Farm Cooking Class cost?',
+      answer:
+        'As of September 2026, Taman Dukuh daily Balinese farm classes start from about IDR 450,000 (afternoon/evening) to IDR 480,000 (morning class with market tour), all-inclusive with farm tour, feast, recipe book, and free shuttle from a central Ubud meeting point. Confirm current rates on tamandukuh.com.',
+    },
+    {
+      question: 'How much is Tresna Bali Cooking Class?',
+      answer:
+        'Tresna publishes around USD 85 plus 10% government tax per person, with prepaid direct rates often closer to USD 71 plus tax (platform listings may show ~USD 92 all-in). Classes are limited to max 8 guests and only a few sessions per week. Verify the latest price on tresnabali.com before booking.',
+    },
+    {
+      question: 'What does Lemongrass Cooking Class Ubud include?',
+      answer:
+        'Lemongrass Cooking Class (lemongrassubud.com) lists IDR 400,000 per person with free Ubud-area shuttle. The morning class is the full program: traditional market, rice field, Balinese house concepts, Canang Sari offering, and cooking. Afternoon skips the market; evening skips market and rice field. This is a different school from Tumang’s “lemongrass cooking class” blog post about cooking with serai.',
+    },
+    {
+      question: 'Do these Ubud cooking classes include a market tour?',
+      answer:
+        'Taman Dukuh includes a market tour on morning sessions. Lemongrass includes the market on morning classes only. Tresna focuses on harvesting from its riverside organic garden rather than a traditional pasar tour. Tumang Bali includes a guided morning market tour plus a rice-field walk.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        Searching for an honest <strong>Ubud cooking class comparison</strong> between{' '}
+        <strong>Taman Dukuh Bali Farm Cooking Class</strong>, <strong>Tresna Bali Cooking Class</strong>, and{' '}
+        <strong>Lemongrass Cooking Class</strong>? All three teach authentic Balinese food near Ubud — but price,
+        setting, dish count, and schedule differ a lot. This guide compares them side-by-side (prices as of
+        September 2026) so you can match the class to your trip. Disclosure: we run{' '}
+        <Link href={money}>Tumang Bali Cooking Class</Link>; we include it only as a fourth reference point for
+        value and inclusions.
+      </p>
+
+      <h2>At a glance: Taman Dukuh vs Tresna vs Lemongrass</h2>
+      <div className="overflow-x-auto my-6 not-prose">
+        <table className="w-full text-left text-sm border-collapse min-w-[640px]">
+          <thead>
+            <tr className="border-b border-stone-300 dark:border-zinc-700">
+              <th className="py-3 pr-3 font-bold">Feature</th>
+              <th className="py-3 pr-3 font-bold">Taman Dukuh</th>
+              <th className="py-3 pr-3 font-bold">Tresna Bali</th>
+              <th className="py-3 pr-3 font-bold">Lemongrass</th>
+              <th className="py-3 font-bold text-orange-700 dark:text-orange-400">Tumang Bali</th>
+            </tr>
+          </thead>
+          <tbody className="text-stone-700 dark:text-stone-300">
+            <tr className="border-b border-stone-200 dark:border-zinc-800">
+              <td className="py-3 pr-3 font-semibold">Shared price</td>
+              <td className="py-3 pr-3">IDR 450–480K</td>
+              <td className="py-3 pr-3">~USD 71–92 + tax</td>
+              <td className="py-3 pr-3">IDR 400K</td>
+              <td className="py-3 font-semibold">IDR 350K</td>
+            </tr>
+            <tr className="border-b border-stone-200 dark:border-zinc-800">
+              <td className="py-3 pr-3 font-semibold">Setting</td>
+              <td className="py-3 pr-3">Organic farm, Taro</td>
+              <td className="py-3 pr-3">Riverside garden school</td>
+              <td className="py-3 pr-3">Village cultural program</td>
+              <td className="py-3">Village kitchen, Tumang</td>
+            </tr>
+            <tr className="border-b border-stone-200 dark:border-zinc-800">
+              <td className="py-3 pr-3 font-semibold">Market tour</td>
+              <td className="py-3 pr-3">Morning only</td>
+              <td className="py-3 pr-3">Garden harvest focus</td>
+              <td className="py-3 pr-3">Morning only</td>
+              <td className="py-3">Morning included</td>
+            </tr>
+            <tr className="border-b border-stone-200 dark:border-zinc-800">
+              <td className="py-3 pr-3 font-semibold">Dishes / recipes</td>
+              <td className="py-3 pr-3">~6 dishes</td>
+              <td className="py-3 pr-3">15 recipes · 9-course feast</td>
+              <td className="py-3 pr-3">Full hands-on class</td>
+              <td className="py-3">10+ dishes</td>
+            </tr>
+            <tr className="border-b border-stone-200 dark:border-zinc-800">
+              <td className="py-3 pr-3 font-semibold">Group size</td>
+              <td className="py-3 pr-3">Shared daily classes</td>
+              <td className="py-3 pr-3">Max 8 · ~3 classes/week</td>
+              <td className="py-3 pr-3">Shared (group rates)</td>
+              <td className="py-3">Max 8 daily</td>
+            </tr>
+            <tr className="border-b border-stone-200 dark:border-zinc-800">
+              <td className="py-3 pr-3 font-semibold">Transport</td>
+              <td className="py-3 pr-3">Free Ubud meeting-point shuttle</td>
+              <td className="py-3 pr-3">~7 min from Ubud centre</td>
+              <td className="py-3 pr-3">Free Ubud-area shuttle</td>
+              <td className="py-3">Free hotel pickup (Ubud)</td>
+            </tr>
+            <tr>
+              <td className="py-3 pr-3 font-semibold">Best for</td>
+              <td className="py-3 pr-3">Farm-to-table vibe</td>
+              <td className="py-3 pr-3">Premium ceremonial depth</td>
+              <td className="py-3 pr-3">Culture + mid price</td>
+              <td className="py-3">Value + 10+ dishes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-sm text-stone-500">
+        Pricing and inclusions change — verify on each school’s official site before you book. Broader matrix of
+        Ubud options:{' '}
+        <Link href={compare}>compare Ubud cooking classes</Link>.
+      </p>
+
+      <h2>Taman Dukuh Bali Farm Cooking Class</h2>
+      <p>
+        <strong>Taman Dukuh</strong> is a family-run organic farm cooking school in Taro Village — one of Bali’s
+        oldest agricultural areas, a short drive from central Ubud. The signature sell is farm-to-table: you walk
+        the garden with a bamboo basket, harvest spices and vegetables you will cook, then prepare a multi-course
+        Balinese feast in an open-air kitchen.
+      </p>
+      <h3>Strengths</h3>
+      <ul>
+        <li>Strong organic farm experience — harvesting is the differentiator vs town kitchens</li>
+        <li>Morning class pairs Tegallalang/local market with farm tour (~5.5 hours)</li>
+        <li>Vegetarian and vegan menus available; free shuttle from a central Ubud meeting point</li>
+        <li>High review volume across major OTAs; recipe booklet included</li>
+      </ul>
+      <h3>Trade-offs</h3>
+      <ul>
+        <li>Shared price (IDR 450–480K) sits above many village classes at IDR 350–400K</li>
+        <li>Typical daily class cooks about six dishes — fewer than recipe-heavy schools</li>
+        <li>Shuttle is usually from a meeting point, not door-to-door hotel pickup</li>
+      </ul>
+      <p>
+        Book Taman Dukuh if the farm harvest and Taro setting matter more than maximising dish count or shaving
+        the ticket price. Official site: tamandukuh.com.
+      </p>
+
+      <h2>Tresna Bali Cooking Class</h2>
+      <p>
+        <strong>Tresna</strong> (Balinese for “love”) positions itself as a purpose-built cooking school with a
+        riverside organic garden near Bedulu — roughly seven minutes from Ubud centre. Classes are intentionally
+        scarce: maximum eight participants and only a few sessions per week, with individual modern cooking
+        stations and a deep ceremonial or pure-plant vegan menu.
+      </p>
+      <h3>Strengths</h3>
+      <ul>
+        <li>Intimate caps (max 8) and limited weekly schedule keep classes uncrowded</li>
+        <li>15 step-by-step recipes and a generous 9-course ceremonial lunch feast</li>
+        <li>Dedicated vegan / pure-plant Balinese menu option</li>
+        <li>Garden picking plus traditional outdoor kitchen atmosphere</li>
+      </ul>
+      <h3>Trade-offs</h3>
+      <ul>
+        <li>Premium pricing (~USD 71–92 + tax) — often 2–3× an IDR 350–400K village class</li>
+        <li>Harder to book last-minute because slots are limited</li>
+        <li>Focus is garden harvest and ceremonial recipes, not a classic traditional market tour</li>
+      </ul>
+      <p>
+        Choose Tresna if you want a premium, small-group ceremonial feast and are happy to pay for recipe depth
+        and polished stations. Confirm dates and prepaid rates on tresnabali.com.
+      </p>
+
+      <h2>Lemongrass Cooking Class (Ubud)</h2>
+      <p>
+        <strong>Lemongrass Cooking Class</strong> (lemongrassubud.com) is a cultural cooking program in the Ubud
+        area — not the same as Tumang’s blog guide about cooking <em>with</em> lemongrass (serai) for sate
+        lilit. Their listed rate is IDR 400,000 per person (group discounts for more than one guest), with free
+        shuttle in the Ubud area.
+      </p>
+      <h3>Strengths</h3>
+      <ul>
+        <li>
+          Morning “full program”: traditional market, rice field / subak explanation, Balinese house & life
+          concept, Canang Sari offering philosophy, then cooking Base Gede / Base Rajang
+        </li>
+        <li>Competitive mid-tier price vs farm and premium garden schools</li>
+        <li>Afternoon and evening sessions for travellers who sleep in or want a dinner class</li>
+      </ul>
+      <h3>Trade-offs</h3>
+      <ul>
+        <li>Afternoon class skips the market; evening skips market and rice field</li>
+        <li>Public dish-count marketing is less specific than “10+” or “15 recipes” competitors</li>
+        <li>Special group pricing is quoted case-by-case — ask before you book</li>
+      </ul>
+      <p>
+        Book Lemongrass if you want culture (offering + house concepts) bundled with cooking at a mid price.
+        Details: lemongrassubud.com/rate-and-time/.
+      </p>
+
+      <h2>Who should book which class?</h2>
+      <ul>
+        <li>
+          <strong>Farm lovers & Instagram garden vibes</strong> → Taman Dukuh Bali Farm Cooking Class
+        </li>
+        <li>
+          <strong>Food nerds wanting ceremonial depth & small groups</strong> → Tresna Bali (if budget allows)
+        </li>
+        <li>
+          <strong>Culture + cooking at a mid price</strong> → Lemongrass Cooking Class morning program
+        </li>
+        <li>
+          <strong>Best value: hotel pickup, 10+ dishes, max 8, IDR 350K</strong> →{' '}
+          <Link href={money}>Tumang Bali</Link>
+        </li>
+      </ul>
+
+      <h2>How Tumang Bali compares (for context)</h2>
+      <p>
+        Tumang Bali runs a family village kitchen near Ubud with Chef Wayan: guided morning{' '}
+        <Link href={marketTour}>market tour</Link>, rice-field walk, Canang Sari activity, hands-on cooking of{' '}
+        <strong>10+ dishes</strong> (including{' '}
+        <Link href="/blog/lemongrass-cooking-class-ubud">lemongrass sate lilit</Link> and sambal matah), full
+        vegetarian menu, recipe booklet, and complimentary Ubud hotel pickup. Shared class{' '}
+        <Link href="/blog/ubud-cooking-class-price">IDR 350,000</Link>; private kitchen from IDR 650,000 for one
+        person. See also{' '}
+        <Link href="/blog/best-cooking-class-in-ubud">best cooking class in Ubud</Link> and{' '}
+        <Link href="/blog/is-a-bali-cooking-class-worth-it">is a Bali cooking class worth it?</Link>
+      </p>
+
+      <h2>Verdict: which Ubud cooking class should you book?</h2>
+      <p data-speakable>
+        There is no single “best” among Taman Dukuh, Tresna, and Lemongrass — only the best fit. Pick{' '}
+        <strong>Taman Dukuh</strong> for organic farm harvesting in Taro. Pick <strong>Tresna</strong> for a
+        premium, max-8 ceremonial feast with many recipes. Pick <strong>Lemongrass Cooking Class</strong> for a
+        cultural morning program at IDR 400K. If you want the strongest inclusions-to-price ratio — market tour,
+        rice fields, Canang Sari, 10+ dishes, max 8 guests, hotel pickup at IDR 350K — book{' '}
+        <Link href={money}>Tumang Bali</Link> or check dates on the{' '}
+        <Link href={book}>online booking page</Link>.
+      </p>
+    </>
+  ),
+}
+
 export const salesGeoCommercialArticles: StaticArticle[] = [
   ubudCookingClassPrice,
   privateCookingClassUbudPrice,
@@ -799,4 +1057,5 @@ export const salesGeoCommercialArticles: StaticArticle[] = [
   isABaliCookingClassWorthIt,
   morningVsAfternoonToursBali,
   zapierSmartAssistantUbudCookingClass,
+  tamanDukuhVsTresnaVsLemongrass,
 ]

@@ -26,6 +26,21 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
   { query: 'is bali cooking class worth it', path: '/blog/is-a-bali-cooking-class-worth-it', label: 'Is a Bali cooking class worth it?' },
   { query: 'things to do in ubud cooking class', path: '/blog/cooking-class-ubud-guide-2026', label: 'Things to do in Ubud — cooking class' },
   { query: 'afternoon cooking class ubud', path: '/blog/morning-vs-afternoon-tours-bali', label: 'Afternoon cooking class Ubud' },
+  {
+    query: 'taman dukuh vs tresna vs lemongrass cooking class',
+    path: '/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
+    label: 'Taman Dukuh vs Tresna vs Lemongrass',
+  },
+  {
+    query: 'taman dukuh bali farm cooking class',
+    path: '/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
+    label: 'Taman Dukuh cooking class compared',
+  },
+  {
+    query: 'tresna bali cooking class',
+    path: '/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
+    label: 'Tresna Bali cooking class compared',
+  },
 ]
 
 export function relatedKeywordsForSlug(slug: string, limit = 6): typeof RELATED_COOKING_CLASS_KEYWORDS {

@@ -14,6 +14,7 @@ export {
   isABaliCookingClassWorthIt,
   morningVsAfternoonToursBali,
   zapierSmartAssistantUbudCookingClass,
+  tamanDukuhVsTresnaVsLemongrass,
   salesGeoCommercialArticles,
 } from './salesGeoCommercialContent'
 

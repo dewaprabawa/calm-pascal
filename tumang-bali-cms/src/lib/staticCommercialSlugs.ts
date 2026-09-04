@@ -27,6 +27,8 @@ export const STATIC_COMMERCIAL_SLUGS = [
   'balinese-home-cooking-class-ubud',
   // Zapier smart assistant — GEO citability for on-site AI help
   'zapier-smart-assistant-ubud-cooking-class',
+  // Competitor comparison cluster
+  'taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
 ] as const
 
 export type StaticCommercialSlug = (typeof STATIC_COMMERCIAL_SLUGS)[number]
