@@ -1,5 +1,15 @@
 export const faqs = [
   {
+    question: 'What is Tumang Bali Cooking Class?',
+    answer:
+      'Tumang Bali Cooking Class is a family-run Balinese cooking school in Tumang village near Ubud. Guests take a morning market tour (morning session), walk rice paddies, and cook 10+ traditional dishes with Chef Wayan Sudiana. Shared class IDR 350,000 per person; private 1 person IDR 650,000. Max 8 guests, English instruction, complimentary Ubud hotel pickup. TripAdvisor Travelers\' Choice 2026 with a 5.0 rating from 1500+ reviews.',
+  },
+  {
+    question: 'How much does a cooking class in Ubud cost?',
+    answer:
+      'At Tumang Bali, a shared morning or afternoon class is IDR 350,000 per person (September 2026). A private class for one adult is IDR 650,000; kids on a private class are IDR 550,000. The price includes instruction, ingredients, the meal you cook, a recipe booklet, and Ubud-area hotel transport. Morning sessions also include the market tour and rice-field walk.',
+  },
+  {
     question: 'What is included in the cooking class?',
     answer: 'Our cooking class includes a guided local market tour, a welcome drink, hands-on cooking of 10+ traditional Balinese dishes (both regular and vegetarian options), a full lunch or dinner with the food you prepared, a recipe book to take home, and complimentary hotel pickup from the Ubud area.',
   },
@@ -23,10 +33,10 @@ export const faqs = [
     question: 'How do I get to the cooking class?',
     answer: 'We offer complimentary hotel pickup and drop-off from the Ubud area. For guests staying outside Ubud, we can arrange transport for a small additional fee. You can also arrange your own transportation — we\'ll send you our exact location via WhatsApp after booking.',
   },
-    {
-      question: 'Can I book for a group or a private class?',
-      answer: 'Yes. Shared classes are IDR 350K per person. A private class for 1 person is IDR 650K; kids in a private class are IDR 550K. For groups of 6 or more we can keep the kitchen exclusive — contact us via WhatsApp.',
-    },
+  {
+    question: 'Can I book for a group or a private class?',
+    answer: 'Yes. Shared classes are IDR 350K per person. A private class for 1 person is IDR 650K; kids in a private class are IDR 550K. For groups of 6 or more we can keep the kitchen exclusive — contact us via WhatsApp.',
+  },
   {
     question: 'What should I bring?',
     answer: 'Just bring yourself, comfortable clothing, and a great appetite! We provide aprons, all cooking equipment, and ingredients. We recommend wearing closed-toe shoes for the market tour and bringing sunscreen and a hat for the rice field walk.',
@@ -43,10 +53,10 @@ export const faqs = [
     question: 'Do you offer a vegetarian or vegan cooking class?',
     answer: 'Yes! We serve a fully plant-based Balinese menu upon request, featuring dishes like Veggie Sate, Tempe Curry, and local vegetable soups. Just let us know when you book.',
   },
-    {
-      question: 'Can kids join the cooking class?',
-      answer: 'Kids aged 8 and above are very welcome. In a shared class they join at the adult rate unless we agree a family quote. In a private class, kids are IDR 550K and one adult is IDR 650K. Little hands love grinding spices and wrapping sate.',
-    },
+  {
+    question: 'Can kids join the cooking class?',
+    answer: 'Kids aged 8 and above are very welcome. In a shared class they join at the adult rate unless we agree a family quote. In a private class, kids are IDR 550K and one adult is IDR 650K. Little hands love grinding spices and wrapping sate.',
+  },
   {
     question: 'Will I get a recipe booklet to take home?',
     answer: 'Yes! Every guest receives a printed recipe booklet with all 10+ dishes we cook, so you can recreate the authentic flavors long after your cooking class in Ubud.',
@@ -56,4 +66,3 @@ export const faqs = [
     answer: 'Cancellations made at least 24 hours before the class starts receive a 100% refund for direct Tumang Bali bookings. Cancel via WhatsApp (+62 822-1013-2418) or email tumangbalicookingclass@gmail.com. Bookings made on GetYourGuide, Viator, Airbnb, or other partners follow that platform’s refund rules. Full details are on our Refund Policy page.',
   },
 ]
-

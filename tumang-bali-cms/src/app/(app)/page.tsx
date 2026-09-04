@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { buildPageMetadata } from '@/lib/seoMetadata'
+import { buildPageMetadata, SITE_CONTENT_UPDATED_LABEL } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ItinerarySection from './components/ItinerarySection'
@@ -11,6 +11,7 @@ import StructuredData from './components/StructuredData'
 import TripAdvisorWidget from './components/TripAdvisorWidget'
 import TripAdvisorWriteReviewWidget from './components/TripAdvisorWriteReviewWidget'
 import TrackedBookingLink from './components/TrackedBookingLink'
+import FAQSection from './components/FAQSection'
 import dynamic from 'next/dynamic'
 import { sortActivities } from '@/lib/sortActivities'
 
@@ -18,7 +19,6 @@ const MobileMenu = dynamic(() => import('./components/MobileMenu'))
 const LanguageSwitcher = dynamic(() => import('./components/LanguageSwitcher'))
 const TikTokEmbed = dynamic(() => import('./components/TikTokEmbed'))
 const MenuSection = dynamic(() => import('./components/MenuSection'))
-const FAQSection = dynamic(() => import('./components/FAQSection'))
 const PickupSchedule = dynamic(() => import('./components/PickupSchedule'))
 const LazyGoogleMap = dynamic(() => import('./components/LazyGoogleMap'))
 const BookingModal = dynamic(() => import('./components/BookingModal'))
@@ -268,6 +268,32 @@ export default async function Page() {
           </div>
         </div>
       </header>
+
+      {/* GEO citability block — self-contained ~150-word answer for ChatGPT / Gemini */}
+      <section
+        id="geo-cite-answer"
+        className="px-6 max-w-3xl mx-auto py-10 md:py-14"
+        aria-label="Cooking class Ubud quick facts"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-center md:text-left">
+          What is Tumang Bali Cooking Class?
+        </h2>
+        <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-lg" data-speakable>
+          Tumang Bali Cooking Class is an authentic Balinese cooking class near Ubud for foreign
+          travellers. Guests shop a traditional morning market (morning session only), walk working
+          rice paddies, then cook 10+ dishes from scratch with Head Chef Wayan Sudiana — including
+          Base Genep spice paste, sate lilit, pepes, and sambal matah. Shared classes cost IDR
+          350,000 per person; a private class for one person is IDR 650,000 (kids IDR 550,000).
+          Groups are capped at 8 guests, classes are taught in English, and Ubud-area hotel pickup
+          is complimentary. Full vegetarian and vegan menus are available. TripAdvisor Travelers&apos;
+          Choice 2026 with a 5.0 rating from 1500+ reviews. Book at{' '}
+          <Link href="/balinese-cooking-class-ubud" className="text-orange-600 hover:underline font-medium">
+            tumangbaliclass.com/balinese-cooking-class-ubud
+          </Link>{' '}
+          or WhatsApp +62 822-1013-2418.
+        </p>
+        <p className="text-xs text-stone-400 mt-3">Last updated {SITE_CONTENT_UPDATED_LABEL}</p>
+      </section>
 
       {/* Animated Stats */}
       <div className="perf-defer">

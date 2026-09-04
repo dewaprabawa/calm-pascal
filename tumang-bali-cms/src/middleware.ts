@@ -3,8 +3,10 @@ import type { NextRequest } from 'next/server'
 
 export const LOCALE_COOKIE = 'tb_locale'
 
+// Include ChatGPT-User / OAI-SearchBot / Gemini-adjacent agents so locale
+// redirects never alter the English homepage AI crawlers should index.
 const BOT_UA =
-  /bot|crawl|spider|slurp|facebookexternalhit|preview|whatsapp|telegram|discord|linkedinbot|embedly|quora|pinterest|redditbot|applebot|bingbot|yandex|duckduck|baidu|semrush|ahrefs|mj12|dotbot|petalbot|bytespider|gptbot|claudebot|google-extended/i
+  /bot|crawl|spider|slurp|facebookexternalhit|preview|whatsapp|telegram|discord|linkedinbot|embedly|quora|pinterest|redditbot|applebot|bingbot|yandex|duckduck|baidu|semrush|ahrefs|mj12|dotbot|petalbot|bytespider|gptbot|chatgpt-user|oai-searchbot|claudebot|claude-user|claude-searchbot|perplexity|google-extended|googleother|meta-externalagent|amazonbot|cohere/i
 
 function preferredLocale(acceptLanguage: string | null): 'id' | 'en' {
   if (!acceptLanguage) return 'en'

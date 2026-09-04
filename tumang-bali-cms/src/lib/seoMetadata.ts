@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const SITE = 'https://tumangbaliclass.com'
 /** ISO date for schema dateModified and visible freshness signals. */
-export const SITE_CONTENT_UPDATED = '2026-09-03'
+export const SITE_CONTENT_UPDATED = '2026-09-04'
 /** Human-readable freshness label for UI + GEO citability blocks. */
 export const SITE_CONTENT_UPDATED_LABEL = 'September 2026'
 /** TripAdvisor aggregate review count used in schema (keep consistent sitewide). */
