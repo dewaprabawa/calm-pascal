@@ -5,6 +5,8 @@ declare namespace JSX {
     "zapier-interfaces-chatbot-embed": {
       "is-popup"?: string
       "chatbot-id"?: string
+      title?: string
+      "aria-label"?: string
     }
   }
 }

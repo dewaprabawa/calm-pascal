@@ -42,7 +42,7 @@ export default function PickupSchedule() {
               Includes guided local morning market tour (morning classes only), rice field walk, hands-on cooking of 10+ dishes in English, and a full lunch feast.
             </p>
             <div className="space-y-3 relative z-10 border-t border-stone-100 dark:border-zinc-800 pt-4 mb-6">
-              <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Pickup Times by Area</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-stone-600">Pickup Times by Area</p>
               {schedule.map(s => (
                 <div key={s.area} className="flex justify-between items-center py-1.5 border-b border-stone-50 dark:border-zinc-800/50 last:border-0 text-sm">
                   <span className="font-semibold text-stone-700 dark:text-stone-300">
@@ -79,7 +79,7 @@ export default function PickupSchedule() {
               No market visit — afternoon classes start with the rice-field walk, then hands-on cooking in English, spice grinding, and a Balinese dinner feast.
             </p>
             <div className="space-y-3 relative z-10 border-t border-stone-100 dark:border-zinc-800 pt-4 mb-6">
-              <p className="text-xs font-bold uppercase tracking-wider text-stone-400">Pickup Times by Area</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-stone-600">Pickup Times by Area</p>
               {schedule.map(s => (
                 <div key={s.area} className="flex justify-between items-center py-1.5 border-b border-stone-50 dark:border-zinc-800/50 last:border-0 text-sm">
                   <span className="font-semibold text-stone-700 dark:text-stone-300">

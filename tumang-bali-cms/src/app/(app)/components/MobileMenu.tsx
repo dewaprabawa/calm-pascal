@@ -69,7 +69,7 @@ export default function MobileMenu() {
           </button>
         </div>
         <div className="flex flex-col gap-2 px-6 pt-4">
-          <p className="mb-2 px-4 text-xs font-bold uppercase tracking-wider text-stone-400 dark:text-stone-500">
+          <p className="mb-2 px-4 text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-500">
             Navigation
           </p>
           {NAV_ITEMS.map((item) => (

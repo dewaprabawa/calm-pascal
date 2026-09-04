@@ -45,8 +45,24 @@ export default function ZapierChatbotPositioner() {
 
     const apply = () => {
       const bot = document.querySelector('zapier-interfaces-chatbot-embed') as any
+      if (bot instanceof HTMLElement) {
+        if (!bot.getAttribute('title')) {
+          bot.setAttribute('title', 'Tumang Bali cooking class chat assistant')
+        }
+        if (!bot.getAttribute('aria-label')) {
+          bot.setAttribute('aria-label', 'Open Tumang Bali cooking class chat assistant')
+        }
+      }
+
       const shadow: ShadowRoot | null = bot?.shadowRoot ?? null
       if (!shadow) return false
+
+      // Accessibility: Zapier injects untitled iframes inside shadow DOM
+      shadow.querySelectorAll('iframe').forEach((frame) => {
+        if (frame instanceof HTMLIFrameElement && !frame.title) {
+          frame.title = 'Tumang Bali cooking class chat assistant'
+        }
+      })
 
       const isMobile = window.innerWidth < 640
       const left = isMobile ? '12px' : 'auto'

@@ -359,7 +359,7 @@ export default async function Page() {
             </tbody>
           </table>
         </div>
-        <p className="text-center text-xs text-stone-400 mt-3">
+        <p className="text-center text-xs text-stone-600 mt-3">
           ✓ = Yes &nbsp;·&nbsp; – = No &nbsp;·&nbsp; Text = Partial/Varies &nbsp;·&nbsp; Source: official websites & Viator listings (Aug 2026)
         </p>
       </section>
