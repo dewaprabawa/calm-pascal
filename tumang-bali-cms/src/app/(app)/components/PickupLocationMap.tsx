@@ -219,7 +219,7 @@ export default function PickupLocationMap({
           className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow"
         />
         {searching && (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] font-semibold text-stone-400">
+          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] font-semibold text-stone-600">
             Searching…
           </span>
         )}

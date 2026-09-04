@@ -292,7 +292,7 @@ export default async function Page() {
           </Link>{' '}
           or WhatsApp +62 822-1013-2418.
         </p>
-        <p className="text-xs text-stone-400 mt-3">Last updated {SITE_CONTENT_UPDATED_LABEL}</p>
+        <p className="text-xs text-stone-600 mt-3">Last updated {SITE_CONTENT_UPDATED_LABEL}</p>
       </section>
 
       {/* Animated Stats */}
@@ -369,7 +369,7 @@ export default async function Page() {
                     ) : null}
                   </div>
                 </div>
-                <div className="flex items-center gap-4 mb-6 text-sm font-medium text-stone-500 dark:text-stone-400">
+                <div className="flex items-center gap-4 mb-6 text-sm font-medium text-stone-600 dark:text-stone-400">
                   <div className="flex items-center gap-1.5 bg-stone-100 dark:bg-zinc-800 px-3 py-1 rounded-full">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     {activity.durationHours} Hours
@@ -385,7 +385,7 @@ export default async function Page() {
                 {/* Included Items */}
                 {activity.includedItems && activity.includedItems.length > 0 && (
                   <div className="mb-8 mt-auto">
-                    <p className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">What's Included</p>
+                    <p className="text-xs font-bold uppercase tracking-wider text-stone-600 mb-3">What's Included</p>
                     <ul className="space-y-2">
                       {activity.includedItems.map((item: any, i: number) => (
                         <li key={i} className="flex items-center gap-2 text-stone-600 dark:text-stone-300 text-sm">
@@ -693,8 +693,8 @@ export default async function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col items-center mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Cook with Local Balinese Chef Wayan Suryana</h2>
-            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Led by Chef Wayan Sudiana — Ubud-born instructor with 15+ years teaching Balinese spice pastes, market sourcing, and traditional techniques in English for international guests.</p>
-            <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-sm mt-3">
+            <p className="text-stone-600 dark:text-stone-400 max-w-2xl text-lg">Led by Chef Wayan Sudiana — Ubud-born instructor with 15+ years teaching Balinese spice pastes, market sourcing, and traditional techniques in English for international guests.</p>
+            <p className="text-stone-600 dark:text-stone-400 max-w-2xl text-sm mt-3">
               <Link href="/about" className="text-orange-600 hover:underline font-semibold">Read our story &amp; chef credentials</Link>
             </p>
           </div>
@@ -949,7 +949,7 @@ export default async function Page() {
                  channel="airbnb"
                  showIcon
                  linkLabel="Homepage — Book on Airbnb"
-                 className="flex items-center justify-center gap-3 bg-[#FF385C] hover:bg-[#E61E4D] text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-[1.03] hover:-translate-y-1 shadow-md hover:shadow-lg active:scale-[0.98] w-full sm:w-auto whitespace-nowrap"
+                 className="flex items-center justify-center gap-3 bg-[#D70466] hover:bg-[#B8005A] text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-[1.03] hover:-translate-y-1 shadow-md hover:shadow-lg active:scale-[0.98] w-full sm:w-auto whitespace-nowrap"
                >
                  Book on Airbnb
                </TrackedBookingLink>
@@ -959,7 +959,7 @@ export default async function Page() {
                  channel="getyourguide"
                  showIcon
                  linkLabel="Homepage — Book on GetYourGuide"
-                 className="flex items-center justify-center gap-3 bg-[#FF5533] hover:bg-[#E04B2D] text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-[1.03] hover:-translate-y-1 shadow-md hover:shadow-lg active:scale-[0.98] w-full sm:w-auto whitespace-nowrap"
+                 className="flex items-center justify-center gap-3 bg-[#C13515] hover:bg-[#9A2A10] text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-[1.03] hover:-translate-y-1 shadow-md hover:shadow-lg active:scale-[0.98] w-full sm:w-auto whitespace-nowrap"
                >
                  Book on GetYourGuide
                </TrackedBookingLink>
@@ -1022,13 +1022,13 @@ export default async function Page() {
             <div className="mt-4 space-y-1 text-sm">
               <p>
                 WhatsApp:{' '}
-                <a href="https://wa.me/6282210132418" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-400">
+                <a href="https://wa.me/6282210132418" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">
                   +62 822-1013-2418
                 </a>
               </p>
               <p>
                 Email:{' '}
-                <a href="mailto:tumangbalicookingclass@gmail.com" className="text-orange-500 hover:text-orange-400">
+                <a href="mailto:tumangbalicookingclass@gmail.com" className="text-orange-400 hover:text-orange-300">
                   tumangbalicookingclass@gmail.com
                 </a>
               </p>

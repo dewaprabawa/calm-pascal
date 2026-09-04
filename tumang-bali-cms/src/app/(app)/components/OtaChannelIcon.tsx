@@ -46,7 +46,7 @@ export default function OtaChannelIcon({ channel, className = 'w-5 h-5 shrink-0'
 
 export const OTA_BUTTON_STYLES: Record<OtaChannel, string> = {
   bokun: 'bg-[#bd5f25] hover:bg-[#7d3f18] text-white',
-  getyourguide: 'bg-[#FF5533] hover:bg-[#e54c2d] text-white',
+  getyourguide: 'bg-[#C13515] hover:bg-[#9A2A10] text-white',
   viator: 'bg-[#00A19C] hover:bg-[#008a86] text-white',
   airbnb: 'bg-[#FF5A5F] hover:bg-[#e04e52] text-white',
   tripadvisor: 'bg-[#34E0A1] hover:bg-[#2bc990] text-[#000B1E]',

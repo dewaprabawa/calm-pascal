@@ -28,7 +28,7 @@ export default function FAQSection() {
             className="group rounded-2xl border border-stone-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/80 open:bg-orange-50 dark:open:bg-orange-950/20 open:border-orange-200 dark:open:border-orange-800/40 open:shadow-lg open:shadow-orange-500/5 overflow-hidden"
           >
             <summary className="flex cursor-pointer list-none items-center gap-4 p-5 md:p-6 text-left [&::-webkit-details-marker]:hidden">
-              <span className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center bg-stone-100 dark:bg-zinc-800 text-stone-500 dark:text-stone-400 group-open:bg-orange-500 group-open:text-white transition-colors">
+              <span className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center bg-stone-100 dark:bg-zinc-800 text-stone-600 dark:text-stone-400 group-open:bg-orange-600 group-open:text-white transition-colors">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                   <path
                     strokeLinecap="round"
@@ -42,7 +42,7 @@ export default function FAQSection() {
                 {faq.question}
               </h3>
               <svg
-                className="w-5 h-5 flex-shrink-0 text-stone-400 transition-transform group-open:rotate-180"
+                className="w-5 h-5 flex-shrink-0 text-stone-600 transition-transform group-open:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

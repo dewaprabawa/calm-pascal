@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
-import ZapierChatbotPositioner from "./components/ZapierChatbotPositioner";
-
-// Zapier custom element (web component) doesn't exist in JSX intrinsic types by default.
-// Typing it as `any` keeps Next/TS builds passing.
-const ZapierChatbotEmbed = "zapier-interfaces-chatbot-embed" as any;
+import ZapierChatbotLazy from "./components/ZapierChatbotLazy";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -100,12 +96,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        {/* Zapier chatbot embed (site-wide) */}
-        <script
-          async
-          type="module"
-          src="https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js"
-        />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         {/* Site summary files for crawlers */}
@@ -123,21 +113,14 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <a
           href="#main-content"
-          className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-lg bg-orange-600 px-4 py-2 font-semibold text-white transition focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-orange-300"
+          className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-lg bg-orange-700 px-4 py-2 font-semibold text-white transition focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-orange-300"
         >
           Skip to main content
         </a>
         {children}
 
-        {/* Fixed-position chatbot on the left side */}
-        <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
-          <ZapierChatbotEmbed
-            is-popup="true"
-            chatbot-id="cmtlla8tc0084rm7xj52d7m6w"
-          />
-        </div>
-
-        <ZapierChatbotPositioner />
+        {/* Chat loads after interaction to avoid PSI Best Practices cookie/iframe hits */}
+        <ZapierChatbotLazy />
 
         <GoogleAnalytics />
       </body>

@@ -138,7 +138,7 @@ export default function ClassLanding({
           <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-lg" data-speakable>
             {content.citabilityBlock}
           </p>
-          <p className="text-xs text-stone-400 mt-3">Last updated {SITE_CONTENT_UPDATED_LABEL}</p>
+          <p className="text-xs text-stone-600 mt-3">Last updated {SITE_CONTENT_UPDATED_LABEL}</p>
         </section>
       ) : null}
 

@@ -38,7 +38,7 @@ const PARTNER_OPTIONS: PartnerOption[] = [
     channel: 'getyourguide',
     label: 'GetYourGuide',
     href: 'https://gyg.me/dE6n3Lwg',
-    className: 'bg-[#FF5533] hover:bg-[#e54c2d]',
+    className: 'bg-[#C13515] hover:bg-[#9A2A10]',
   },
   {
     channel: 'viator',
