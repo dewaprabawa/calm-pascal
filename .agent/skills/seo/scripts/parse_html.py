@@ -264,7 +264,8 @@ def parse_html(
         "HowTo", "SpecialAnnouncement", "CourseInfo", "EstimatedSalary",
         "LearningVideo", "ClaimReview", "VehicleListing", "PracticeProblems",
     }
-    RESTRICTED_SCHEMA = {"FAQPage"}  # government/healthcare only
+    RESTRICTED_SCHEMA = set()  # FAQPage no longer gov/health-restricted
+    UNDERSTANDING_ONLY_SCHEMA = {"FAQPage"}  # FAQ rich results removed May 7, 2026
 
     for script in soup.find_all("script", type="application/ld+json"):
         try:
@@ -292,9 +293,12 @@ def parse_html(
             if primary_type in DEPRECATED_SCHEMA:
                 status = "deprecated"
                 note = f"{primary_type} was deprecated/removed from rich results. Remove or replace."
+            elif primary_type in UNDERSTANDING_ONLY_SCHEMA:
+                status = "understanding_only"
+                note = f"{primary_type}: FAQ rich results removed for all sites (May 7, 2026). Optional for content understanding / AI surfaces only."
             elif primary_type in RESTRICTED_SCHEMA:
                 status = "restricted"
-                note = f"{primary_type} is restricted to government/healthcare authority sites only."
+                note = f"{primary_type} has eligibility restrictions."
 
             result["schema"].append({
                 "@type": primary_type,

@@ -28,7 +28,7 @@ description: >
   - Invalid date formats
 - Flag deprecated types (see below)
 
-## Schema Type Status (as of Feb 2026)
+## Schema Type Status (as of Sep 2026)
 
 Read `references/schema-types.md` for the full list. Key rules:
 
@@ -42,8 +42,11 @@ See `schema/templates.json` for ready-to-use JSON-LD templates for these types.
 
 > **JSON-LD and JavaScript rendering:** Per Google's December 2025 JS SEO guidance, structured data injected via JavaScript may face delayed processing. For time-sensitive markup (especially Product, Offer), include JSON-LD in the initial server-rendered HTML.
 
-### RESTRICTED — only for specific sites:
-- **FAQ**: ONLY for government and healthcare authority sites (restricted Aug 2023)
+### FAQPage — understanding only (no rich results):
+- **FAQ rich results removed May 7, 2026 for all site types**
+- Do NOT recommend FAQPage as a rich-result / SERP visual tactic
+- Optional FAQPage markup only when on-page Q&A is visible and truthful — may aid content understanding / AI Overview eligibility
+- Prefer clear H2/H3 Q&A structure regardless of schema
 
 ### DEPRECATED — never recommend:
 - **HowTo**: Rich results removed September 2023
@@ -53,7 +56,7 @@ See `schema/templates.json` for ready-to-use JSON-LD templates for these types.
 - **VehicleListing**: Retired from rich results June 2025
 - **Practice Problem**: Retired from rich results late 2025
 - **Dataset**: Retired from rich results late 2025
-- **Book Actions**: Deprecated then reversed — still functional as of Feb 2026 (historical note)
+- **Book Actions**: Deprecated then reversed — still functional as of Sep 2026 (historical note)
 
 ## Generation
 

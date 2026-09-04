@@ -40,7 +40,7 @@ When analyzing pages:
 
 | Type | Restriction |
 |------|------------|
-| `FAQPage` | Government and healthcare authority sites only (Aug 2023) |
+| `FAQPage` | FAQ rich results removed for all sites (May 7, 2026). Optional understanding markup only when Q&A is visible/truthful — never a rich-result tactic |
 | `QAPage` | Sites with user-generated Q&A only |
 
 ### Always Prefer

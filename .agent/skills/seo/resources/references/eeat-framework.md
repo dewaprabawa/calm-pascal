@@ -1,8 +1,8 @@
-<!-- Updated: 2026-05-14 -->
+<!-- Updated: 2026-09-04 -->
 
 # E-E-A-T Evaluation Framework
 ## Updated per Google Quality Rater Guidelines — September 11, 2025
-## Plus December 2025 Core Update Implications
+## Plus December 2025 and March/May 2026 Core Update Implications
 
 ## Overview
 
@@ -11,7 +11,7 @@ E-E-A-T = **E**xperience, **E**xpertise, **A**uthoritativeness, **T**rustworthin
 Trustworthiness is the most important factor. It is assessed based on the
 other three signals plus direct trust indicators.
 
-## CRITICAL: December 2025 Core Update
+## CRITICAL: December 2025 → Mid-2026 Core Updates
 
 > **E-E-A-T now applies to ALL competitive queries, not just YMYL.**
 
@@ -21,14 +21,20 @@ The December 2025 core update was described as a "watershed moment" that:
 - Penalized anonymous or generic authorship even for non-YMYL content
 - Significantly improved AI content quality detection
 
-**Impact by industry:**
+**March + May 2026 core updates reinforced and escalated this direction:**
+- Higher weighting for **originality**, **information gain**, and **first-party data**
+- Stronger brand / authoritative-source preference
+- Continued demotion of aggregators, thin pages, and scaled “commodity” AI content
+- Recovery after 2026 demotions generally required **real content changes**, not waiting
+
+**Impact by industry (December 2025 industry reporting — directional):**
 | Industry | Traffic Drops |
 |----------|--------------|
 | Affiliate sites | 71% average decline |
 | Health/YMYL | 67% average decline |
 | E-commerce | 52% average decline |
 
-**Key takeaway:** Even entertainment and lifestyle content now requires demonstrated expertise. Generic content no longer ranks.
+**Key takeaway:** Even entertainment and lifestyle content now requires demonstrated expertise. Generic and templated content no longer ranks reliably. First-hand experience and unique insights are primary differentiators in 2026.
 
 ## YMYL (Your Money or Your Life)
 
@@ -148,9 +154,16 @@ Raters now formally evaluate whether content appears AI-generated:
 - **Expired domain abuse**: Buying expired domains for their backlinks
 - **Site reputation abuse**: Using reputable site to host low-quality content
 - **Scaled content abuse**: Mass-producing content without value
+- **AI search citation manipulation** (2026): Buying or fabricating citations to influence AI Overviews / AI Mode — officially covered by spam policy
 
 ### AI Overview Evaluation
 Raters assess quality of AI-generated summaries in search results.
+
+### 2026 Agent Guardrails
+- Prefer case studies, original photos/data, and verifiable first-hand process over rewritten commodity summaries
+- Do not recommend “publish more AI pages at scale” as an SEO strategy
+- Separate Discover performance advice from Search ranking advice
+- Track Search Console AI Performance separately from classic organic metrics when available
 
 ### RSL 1.0 (Really Simple Licensing)
 New machine-readable content licensing standard (December 2025) for AI training:

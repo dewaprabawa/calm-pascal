@@ -10,7 +10,7 @@ description: >
   "ChatGPT search", or "AI visibility".
 ---
 
-# AI Search / GEO Optimization (February 2026)
+# AI Search / GEO Optimization (September 2026)
 
 ## Key Statistics
 
@@ -36,6 +36,13 @@ description: >
 | Domain Rating (backlinks) | ~0.266 (weak) |
 
 **Only 11% of domains** are cited by both ChatGPT and Google AI Overviews for the same query — platform-specific optimization is essential.
+
+### 2026 Policy Guardrails (apply carefully)
+- **AI citation manipulation is spam** — do not buy, fabricate, or game citations for AI Overviews / AI Mode
+- Optimize genuine citability (clear facts, authority, structure, first-party insight)
+- Monitor Search Console **AI Performance** separately from classic organic metrics when available
+- FAQ rich results are gone (May 7, 2026); on-page Q&A + optional understanding markup still help AI surfaces
+- Agentic / multi-step AI Mode sessions reward durable entity clarity and passage-level answers, not keyword stuffing
 
 ---
 
@@ -253,7 +260,7 @@ Google Passage Indexing (active since 2021) ranks individual passages independen
 3. Ensure server-side rendering for key content
 4. Build entity presence on Reddit, YouTube
 5. Add comparison tables with data
-6. Implement FAQ sections (structured, not schema for commercial sites)
+6. Implement FAQ sections (structured on-page Q&A; FAQPage schema optional for understanding only — no FAQ rich results after May 2026)
 
 ## High Impact
 

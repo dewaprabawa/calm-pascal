@@ -39,7 +39,7 @@ Apply `resources/references/llm-audit-rubric.md` for evidence standards, confide
 - Detect all types (JSON-LD preferred)
 - Validate required properties
 - Identify missing opportunities
-- NEVER recommend HowTo (deprecated) or FAQ (restricted to gov/health)
+- NEVER recommend HowTo (deprecated). Do NOT recommend FAQPage for rich results (FAQ rich results removed May 7, 2026 for all sites). Optional FAQPage only for truthful on-page Q&A understanding / AI surfaces.
 
 ### Images
 - Alt text: present, descriptive, includes keywords where natural

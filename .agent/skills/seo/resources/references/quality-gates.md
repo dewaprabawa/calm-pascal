@@ -1,4 +1,4 @@
-<!-- Updated: 2026-05-14 -->
+<!-- Updated: 2026-09-04 -->
 
 # Content Quality Gates
 
@@ -155,3 +155,10 @@ Google's doorway page algorithm penalizes programmatic location pages with thin/
 - Publication date visible (for articles/blogs)
 - Last updated date (if significantly revised)
 - Changelog for major updates (optional but good)
+
+### 2026 Quality Emphasis (apply with audits)
+- Prefer first-party data, original photos/process, and unique insights over aggregated rewrites
+- Flag near-duplicate / templated AI page sets as scaled-content risk
+- Discover freshness/engagement advice is separate from Search ranking advice
+- For e-commerce: accurate Product schema + Merchant Center feed quality matters for Universal Cart / shopping AI surfaces
+- Recovery recommendations after 2026 demotions must include real content changes, not “wait for the next update”

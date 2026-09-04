@@ -20,11 +20,12 @@ DEPRECATED_TYPES = {
     "VehicleListing": "vehicle listing structured data discontinued in 2025",
     "PracticeProblem": "rich result discontinued in late 2025",
     "Dataset": "rich result discontinued in late 2025",
+    "HowTo": "no longer broadly shown as a Google rich result",
 }
 
-RESTRICTED_TYPES = {
-    "FAQPage": "eligible mainly for authoritative government and health sites",
-    "HowTo": "no longer broadly shown as a Google rich result",
+# FAQPage: rich results gone May 2026 — warn that it is not a visual rich-result tactic
+NO_RICH_RESULT_TYPES = {
+    "FAQPage": "FAQ rich results removed for all sites on May 7, 2026; schema may still aid understanding / AI surfaces when Q&A is visible and truthful",
 }
 
 RICH_RESULT_REQUIRED = {
@@ -45,8 +46,8 @@ def guard_rich_results(documents: list[Any]) -> dict[str, Any]:
         for type_name in type_names:
             if type_name in DEPRECATED_TYPES:
                 row_issues.append(issue("error", f"{type_name} is deprecated/restricted: {DEPRECATED_TYPES[type_name]}", evidence=row["path"]))
-            if type_name in RESTRICTED_TYPES:
-                row_issues.append(issue("warning", f"{type_name} has eligibility limits: {RESTRICTED_TYPES[type_name]}", evidence=row["path"]))
+            if type_name in NO_RICH_RESULT_TYPES:
+                row_issues.append(issue("warning", f"{type_name}: {NO_RICH_RESULT_TYPES[type_name]}", evidence=row["path"]))
             for prop in sorted(RICH_RESULT_REQUIRED.get(type_name, set())):
                 if not node.get(prop):
                     row_issues.append(issue("error", f"{type_name} missing rich-result property '{prop}'", evidence=row["path"]))

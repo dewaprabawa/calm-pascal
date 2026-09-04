@@ -71,7 +71,10 @@ PAA questions are selected by Google based on semantic relatedness to the primar
 - [ ] Each PAA question should have its own H2 or H3 phrased **exactly as the question** users ask
 - [ ] Directly below each question H-tag: a 30-50 word direct answer paragraph
 - [ ] Avoid filler phrases ("Great question!", "In this article we will...") — Google penalizes these for PAA
-- [ ] Add `FAQPage` schema **only if your site qualifies** (restricted to government/healthcare authority sites post-2023); for others, use `Article` with `speakable`
+- [ ] Add on-page FAQ / PAA-style Q&A with clear question H2/H3 + concise answers
+- [ ] Do **not** rely on FAQ rich results — removed for all site types on May 7, 2026
+- [ ] FAQPage schema is optional for content understanding / AI surfaces only when Q&A is visible and truthful; never sell it as a SERP rich-result win
+- [ ] Prefer `Article` / `WebPage` + `speakable` for answer-block citability
 
 **Example HTML structure for PAA:**
 ```html

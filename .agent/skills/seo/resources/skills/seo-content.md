@@ -88,15 +88,15 @@ Compare against page type minimums:
 - Open in new tab for user experience
 - Reasonable count (not excessive)
 
-## AI Content Assessment (Sept 2025 QRG addition)
+## AI Content Assessment (Sept 2025 QRG + 2026 enforcement)
 
-Google's raters now formally assess whether content appears AI-generated.
+Google's raters formally assess whether content appears AI-generated. March/May/June 2026 spam and core updates continued aggressive demotion of scaled low-value AI / commodity content.
 
 ### Acceptable AI Content
 - Demonstrates genuine E-E-A-T
 - Provides unique value
 - Has human oversight and editing
-- Contains original insights
+- Contains original insights / first-party data
 
 ### Low-Quality AI Content Markers
 - Generic phrasing, lack of specificity
@@ -104,8 +104,11 @@ Google's raters now formally assess whether content appears AI-generated.
 - Repetitive structure across pages
 - No author attribution
 - Factual inaccuracies
+- Templated “commodity” pages that could belong to any brand
 
 > **Helpful Content System (March 2024):** The Helpful Content System was merged into Google's core ranking algorithm during the March 2024 core update. It no longer operates as a standalone classifier. Helpfulness signals are now weighted within every core update — the same principles apply (people-first content, demonstrating E-E-A-T, satisfying user intent), but enforcement is continuous rather than through separate HCU updates.
+
+> **2026 recovery rule:** Sites hit by commodity-content / AI-spam pressure generally did **not** recover by waiting. Recommend substantive rewrites, consolidation, and E-E-A-T upgrades.
 
 ## AI Citation Readiness (GEO signals)
 
@@ -120,15 +123,16 @@ Optimize for AI search engines (ChatGPT, Perplexity, Google AI Overviews):
 
 ### AI Search Visibility & GEO (2025-2026)
 
-**Google AI Mode** launched publicly in May 2025 as a separate tab in Google Search, available in 180+ countries. Unlike AI Overviews (which appear above organic results), AI Mode provides a fully conversational search experience with **zero organic blue links** — making AI citation the only visibility mechanism.
+**Google AI Mode** launched publicly in May 2025 as a separate tab in Google Search, available in 180+ countries (expanded further through 2026, including Search Agents announced at I/O 2026). Unlike AI Overviews (which appear above organic results), AI Mode provides a fully conversational search experience with **zero organic blue links** — making AI citation the only visibility mechanism.
 
 **Key optimization strategies for AI citation:**
 - **Structured answers:** Clear question-answer formats, definition patterns, and step-by-step instructions that AI systems can extract and cite
 - **First-party data:** Original research, statistics, case studies, and unique datasets are highly cited by AI systems
-- **Schema markup:** Article, FAQ (for non-Google AI platforms), and structured content schemas help AI systems parse and attribute content
+- **Schema markup:** Article, Product, Organization, Person, speakable; FAQPage only as optional understanding markup (FAQ rich results removed May 7, 2026)
 - **Topical authority:** AI systems preferentially cite sources that demonstrate deep expertise — build content clusters, not isolated pages
 - **Entity clarity:** Ensure brand, authors, and key concepts are clearly defined with structured data (Organization, Person schema)
-- **Multi-platform tracking:** Monitor visibility across Google AI Overviews, AI Mode, ChatGPT, Perplexity, and Bing Copilot — not just traditional rankings. Treat AI citation as a standalone KPI alongside organic rankings and traffic.
+- **No citation manipulation:** Buying or fabricating citations for AI Overviews / AI Mode is spam under 2026 policy
+- **Multi-platform tracking:** Monitor visibility across Google AI Overviews, AI Mode (Search Console AI Performance report), ChatGPT, Perplexity, and Bing Copilot — not just traditional rankings. Treat AI citation as a standalone KPI alongside organic rankings and traffic.
 
 **Generative Engine Optimization (GEO):**
 GEO is the emerging discipline of optimizing content specifically for AI-generated answers. Key GEO signals include: quotability (clear, concise extractable facts), attribution (source citations within your content), structure (well-organized heading hierarchy), and freshness (regularly updated data). Cross-reference the `seo-geo` skill for detailed GEO workflows.

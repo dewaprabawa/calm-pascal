@@ -75,11 +75,14 @@ Design templates that produce unique, valuable pages:
 
 ### Scaled Content Abuse — Enforcement Context (2025-2026)
 
-Google's Scaled Content Abuse policy (introduced March 2024) saw major enforcement escalation in 2025:
+Google's Scaled Content Abuse policy (introduced March 2024) saw major enforcement escalation in 2025–2026:
 
 - **June 2025:** Wave of manual actions targeting websites with AI-generated content at scale
 - **August 2025:** SpamBrain spam update enhanced pattern detection for AI-generated link schemes and content farms
-- **Result:** Google reported 45% reduction in low-quality, unoriginal content in search results post-March 2024 enforcement
+- **March 2026 Spam Update:** Very fast cleanup (~20 hours) targeting templated / bulk AI-spam before the March core update
+- **March & May 2026 Core Updates:** Broad demotion of commodity / aggregated / low-effort AI pages; stronger preference for first-party expertise
+- **June 2026 Spam Update:** Fast global enforcement of existing spam policies (no new named category announced; industry speculation about AI-spam/citation tactics — treat as Hypothesis)
+- **Result:** Google reported 45% reduction in low-quality, unoriginal content in search results post-March 2024 enforcement; 2026 updates continued that trajectory
 
 **Enhanced quality gates for programmatic pages:**
 - **Content differentiation:** ≥30-40% of content must be genuinely unique between any two programmatic pages (not just city/keyword string replacement)
@@ -87,6 +90,7 @@ Google's Scaled Content Abuse policy (introduced March 2024) saw major enforceme
 - **Progressive rollout:** Publish in batches of 50-100 pages. Monitor indexing and rankings for 2-4 weeks before expanding. Never publish 500+ programmatic pages simultaneously without explicit quality review.
 - **Standalone value test:** Each page should pass: "Would this page be worth publishing even if no other similar pages existed?"
 - **Site reputation abuse:** If publishing programmatic content under a high-authority domain (not your own), this may trigger site reputation abuse penalties. Google began enforcing this aggressively in November 2024.
+- **2026 recovery rule:** Do not advise waiting out demotions — require substantive uniqueness, E-E-A-T, and consolidation work
 
 > **Recommendation:** The WARNING gate at `<40% unique content` remains appropriate. Consider a HARD STOP at `<30%` unique content to prevent scaled content abuse risk.
 

@@ -61,7 +61,8 @@ DEPRECATED_SCHEMA = {
     "HowTo", "SpecialAnnouncement", "CourseInfo", "EstimatedSalary",
     "LearningVideo", "ClaimReview", "VehicleListing", "PracticeProblems",
 }
-RESTRICTED_SCHEMA = {"FAQPage"}  # government / healthcare only
+RESTRICTED_SCHEMA = set()  # FAQPage no longer gov/health-restricted; see UNDERSTANDING_ONLY_SCHEMA
+UNDERSTANDING_ONLY_SCHEMA = {"FAQPage"}  # FAQ rich results removed May 7, 2026 — understanding / AI only
 
 
 # ---------------------------------------------------------------------------
@@ -272,9 +273,12 @@ def extract_structured_data(soup: BeautifulSoup) -> list:
         if schema_type in DEPRECATED_SCHEMA:
             status = "deprecated"
             note = f"{schema_type} was deprecated/removed from rich results. Remove or replace."
+        elif schema_type in UNDERSTANDING_ONLY_SCHEMA:
+            status = "understanding_only"
+            note = f"{schema_type}: FAQ rich results removed for all sites (May 7, 2026). Optional for content understanding / AI surfaces only — not a SERP visual tactic."
         elif schema_type in RESTRICTED_SCHEMA:
             status = "restricted"
-            note = f"{schema_type} is restricted to government/healthcare authority sites only."
+            note = f"{schema_type} has eligibility restrictions."
 
         blocks.append({
             "@type": schema_type,
@@ -494,8 +498,10 @@ def detect_seo_issues(content: dict, structured_data: list, readability: dict) -
         for sd in structured_data:
             if sd.get("status") == "deprecated":
                 issues.append({"severity": "Critical", "area": "Schema", "finding": sd["note"], "fix": "Remove deprecated schema type immediately."})
+            elif sd.get("status") == "understanding_only":
+                issues.append({"severity": "Info", "area": "Schema", "finding": sd["note"], "fix": "Keep FAQPage only if on-page Q&A is visible and truthful; do not expect FAQ rich results."})
             elif sd.get("status") == "restricted":
-                issues.append({"severity": "Warning", "area": "Schema", "finding": sd["note"], "fix": "Remove FAQPage schema unless you are a government or healthcare authority site."})
+                issues.append({"severity": "Warning", "area": "Schema", "finding": sd["note"], "fix": "Verify schema eligibility for this site type."})
 
     # Readability
     fre = readability.get("flesch_reading_ease")
