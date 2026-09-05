@@ -1,5 +1,6 @@
 # GSC Action Plan — tumangbaliclass.com
 
+**Report date:** 2026-09-05  
 Based on Search Console Web export (**2026-06-27 → 2026-09-02**).  
 Prioritized by impact × effort. Re-check GSC 14–28 days after each batch ships.
 

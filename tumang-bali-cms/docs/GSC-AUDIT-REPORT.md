@@ -1,5 +1,6 @@
 # Google Search Console Performance Audit — tumangbaliclass.com
 
+**Report date:** 2026-09-05  
 **Scope:** Search Console Web performance export (Last 3 months filter; chart covers **2026-06-27 → 2026-09-02**, 68 days)  
 **Property:** `https://tumangbaliclass.com`  
 **Search type:** Web  
