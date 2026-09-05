@@ -1,6 +1,7 @@
 /**
  * Updates meta titles/descriptions for high-impression, low-CTR pages in Search Console.
- * Idempotent — safe to re-run.
+ * Idempotent — safe to re-run. Also applied by the SEO maintenance cron via
+ * `runMetaSeedBatch` in `src/lib/articleMetaSeedRunner.ts`.
  *
  * Run: npx tsx --env-file=.env seedSeoMetaQuickWins.ts
  */
@@ -8,77 +9,98 @@ import { getPayload } from 'payload'
 import configPromise from './src/payload.config'
 
 const META_UPDATES: { slug: string; metaTitle: string; metaDescription: string }[] = [
+  // P0 — impression leaders (CTR leak)
   {
     slug: 'how-to-make-bumbu-bali',
-    metaTitle: 'How to Make Bumbu Bali — Learn It in Our Ubud Cooking Class',
+    metaTitle: 'Bumbu Bali Recipe — Balinese Spice Paste Step by Step',
     metaDescription:
-      'Make authentic Balinese bumbu spice paste from scratch. Step-by-step guide from Tumang Bali — book a hands-on cooking class in Ubud to grind it yourself.',
+      'Make authentic bumbu Bali (base genep) spice paste at home. Ingredients, pounding tips, and cook it hands-on in our Ubud class — IDR 350K, free hotel pickup.',
   },
   {
     slug: 'dadar-gulung-balinese-dessert-recipe',
-    metaTitle: 'Dadar Gulung Recipe — Balinese Coconut Pancake | Cook in Ubud',
+    metaTitle: 'Dadar Gulung Recipe — Balinese Pandan Coconut Crepe',
     metaDescription:
-      'Learn to make Dadar Gulung — Bali\'s green pandan coconut crepe. Authentic recipe from our Ubud cooking class. Book a class to cook it hands-on.',
+      'Dadar gulung recipe: green pandan crepe with sweet coconut filling. Exact steps from our Ubud cooking class. Book to cook it yourself — pickup included.',
   },
   {
     slug: 'sambal-matah-recipe',
-    metaTitle: 'Sambal Matah Recipe — Fresh Balinese Chili Salsa | Ubud Class',
+    metaTitle: 'Sambal Matah Recipe — Fresh Balinese Chili Salsa',
     metaDescription:
-      'Make sambal matah the Balinese way — fresh shallots, lemongrass, and chili. Recipe from Tumang Bali cooking class in Ubud. Book to cook it live.',
+      'Sambal matah recipe: raw shallot, lemongrass, chili, and coconut oil. 10-minute Balinese salsa from Tumang Bali in Ubud. Cook it live in class from IDR 350K.',
   },
+  // P1 — extend coverage from GSC audit
+  {
+    slug: 'ayam-betutu-recipe-bali',
+    metaTitle: 'Ayam Betutu Recipe — Balinese Spiced Chicken in Banana Leaf',
+    metaDescription:
+      'Ayam betutu recipe: chicken in base genep, wrapped in banana leaf. Home method plus tips from our Ubud cooking class. Book a class to cook Balinese classics.',
+  },
+  {
+    slug: 'what-is-the-subak-system-bali',
+    metaTitle: 'What Is the Subak System in Bali? Rice Terraces Explained',
+    metaDescription:
+      'What is Bali’s subak system? UNESCO rice-terrace irrigation, how villages share water, and why it still shapes food culture near Ubud — clear visitor guide.',
+  },
+  {
+    slug: 'best-time-to-visit-bali-ubud',
+    metaTitle: 'Best Time to Visit Bali & Ubud 2026 — Month-by-Month Guide',
+    metaDescription:
+      'Best time to visit Bali and Ubud: dry vs wet season, crowds, prices, and month-by-month tips. Plan weather, festivals, and when cooking classes run year-round.',
+  },
+  // Existing commercial / supporting posts
   {
     slug: 'best-things-to-do-in-ubud',
     metaTitle: '10 Best Things to Do in Ubud — Include a Balinese Cooking Class',
     metaDescription:
-      'Top Ubud experiences for food lovers and culture seekers — rice terraces, markets, temples, and an authentic Balinese cooking class in Tumang village.',
+      'Top Ubud experiences for food lovers — rice terraces, markets, temples, and a hands-on Balinese cooking class in Tumang village from IDR 350K with hotel pickup.',
   },
   {
     slug: 'cooking-class-bali-faqs',
-    metaTitle: 'Bali Cooking Class FAQs — Price, What to Wear, Pickup & More',
+    metaTitle: 'Bali Cooking Class FAQs — Price, Pickup, What to Wear',
     metaDescription:
-      'Answers to the most common Bali cooking class questions — cost, duration, dietary options, hotel pickup, and what to expect at Tumang Bali in Ubud.',
+      'Bali cooking class FAQs: IDR 350K shared / 650K private, free hotel pickup near Ubud, max 8 guests, vegetarian options, what to wear, and how long it takes.',
   },
   {
     slug: 'best-cooking-class-in-ubud',
     metaTitle: 'Best Cooking Class in Ubud 2026 — Market Tour & 10+ Dishes',
     metaDescription:
-      'Looking for the best cooking class in Ubud? Compare what matters — market tour, hands-on cooking, group size, and authentic Balinese dishes at Tumang Bali.',
+      'Best cooking class in Ubud: compare market tour, group size, price, and hands-on cooking. Tumang Bali — IDR 350K, max 8 guests, free pickup, TripAdvisor favorite.',
   },
   {
     slug: 'best-cooking-class-in-bali',
     metaTitle: 'Best Cooking Class in Bali 2026 — Authentic Ubud Experience',
     metaDescription:
-      'The best Bali cooking classes include a real market tour and hands-on cooking with local chefs. See why travelers choose Tumang Bali in Ubud village.',
+      'Best cooking class in Bali: real market tour, village kitchen near Ubud, 10+ dishes. From IDR 350K with free hotel pickup — why travelers pick Tumang Bali.',
   },
   {
     slug: 'ubud-cooking-class-price',
     metaTitle: 'Ubud Cooking Class Price 2026 — IDR 350K Shared, Private Rates',
     metaDescription:
-      'How much is a cooking class in Ubud in 2026? Shared class IDR 350K, private IDR 650K, kids IDR 550K. Full inclusions: market tour, 10+ dishes, pickup, recipes.',
+      'Ubud cooking class price 2026: shared IDR 350K, private IDR 650K, kids IDR 550K. Includes market tour, 10+ dishes, recipes, and free hotel pickup near Ubud.',
   },
   {
     slug: 'morning-vs-afternoon-tours-bali',
     metaTitle: 'Morning vs Afternoon Cooking Class Ubud — Which to Book?',
     metaDescription:
-      'Morning class includes market tour and rice-field walk. Afternoon class is cook-and-dine without the market. Compare times, menus, and which suits your Ubud itinerary.',
+      'Morning Ubud cooking class includes market tour and rice-field walk. Afternoon is cook-and-dine. Compare times, menus, and pickup — from IDR 350K.',
   },
   {
     slug: 'is-a-bali-cooking-class-worth-it',
     metaTitle: 'Is a Bali Cooking Class Worth It? Honest 2026 Answer',
     metaDescription:
-      'Weighing cost vs experience for a Bali cooking class. What you get for IDR 350K, who should book, and when a class is not worth it — honest guide from Tumang Bali.',
+      'Is a Bali cooking class worth it? Cost vs experience at IDR 350K, who should book, and when to skip — honest guide from Tumang Bali near Ubud.',
   },
   {
     slug: 'what-to-expect-bali-cooking-class',
     metaTitle: 'What to Expect at a Bali Cooking Class — Full Day Guide',
     metaDescription:
-      'Step-by-step: market tour, spice grinding, 10+ dishes, and shared feast. What to wear, how long it takes, and what makes Tumang Bali different in Ubud.',
+      'What to expect at a Bali cooking class: market tour, spice grinding, 10+ dishes, shared feast. Duration, what to wear, group size, and free hotel pickup.',
   },
   {
     slug: 'ubud-morning-market-guide',
-    metaTitle: 'Ubud Morning Market Guide — What to See Before Your Cooking Class',
+    metaTitle: 'Ubud Morning Market Guide — Before Your Cooking Class',
     metaDescription:
-      'Guide to Ubud\'s traditional morning market — ingredients, spices, and what you will buy before cooking. Pairs with our Balinese cooking class in Tumang village.',
+      'Ubud morning market guide: spices, produce, and what you buy before cooking. Pairs with Tumang Bali’s class — IDR 350K, free pickup, max 8 guests.',
   },
 ]
 

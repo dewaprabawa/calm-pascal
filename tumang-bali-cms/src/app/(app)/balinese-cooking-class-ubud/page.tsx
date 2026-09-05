@@ -9,15 +9,16 @@ import { balineseCookingClassUbud } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cooking Class Ubud — Balinese Cooking with Local Chefs',
+  title: 'Cooking Class Ubud — Market Tour, 10+ Dishes, Max 8 Guests',
   description:
-    'Book the best cooking class in Ubud — morning market tour, rice-field walk, 10+ traditional dishes, and hands-on cooking with local chefs. From IDR 350K. Free hotel pickup.',
+    'Cooking class in Ubud: morning market tour, rice-field walk, 10+ dishes with local chefs. From IDR 350K, free hotel pickup, max 8 guests. TripAdvisor favorite.',
   path: '/balinese-cooking-class-ubud',
-  ogTitle: 'Cooking Class Ubud — Authentic Balinese Class | TripAdvisor 2026',
+  ogTitle: 'Cooking Class Ubud — Hands-On Balinese Class from IDR 350K',
   image: '/images/gallery-group.jpg',
   imageAlt: 'Cooking class in Ubud Bali with local chefs',
   keywords: [
     'cooking class ubud',
+    'ubud cooking class',
     'balinese cooking class ubud',
     'best cooking class in ubud',
     'cooking class with market tour ubud',

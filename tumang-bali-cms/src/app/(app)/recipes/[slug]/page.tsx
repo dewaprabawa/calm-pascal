@@ -13,6 +13,48 @@ export const revalidate = 60
 
 const SITE = 'https://tumangbaliclass.com'
 
+/**
+ * CTR overrides for high-impression / low-CTR recipe URLs from GSC.
+ * Blog posts remain primary for some dishes; recipe titles stay distinct (“recipe card”).
+ */
+const RECIPE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  'tempe-manis': {
+    title: 'Tempe Manis Recipe — Sweet Soy Tempeh (15 Minutes)',
+    description:
+      'Tempe manis recipe: crispy tempeh in sweet soy and palm sugar. Serves 2–3, about 15 minutes. From our vegetarian Balinese cooking class in Ubud.',
+  },
+  'nasi-kuning': {
+    title: 'Nasi Kuning Recipe — Balinese Turmeric Coconut Rice',
+    description:
+      'Nasi kuning recipe: fluffy turmeric coconut rice with lemongrass and lime leaf. Serves 4, about 30 minutes. Cook it in our Ubud village class.',
+  },
+  'nasi-goreng-atau-nasi-kuning': {
+    title: 'Nasi Goreng or Nasi Kuning — Class Recipe Card',
+    description:
+      'Choose nasi goreng or nasi kuning in class: fried rice vs turmeric coconut rice. Ingredients and steps from Tumang Bali’s Ubud cooking class.',
+  },
+  'pepes-ikan': {
+    title: 'Pepes Ikan Recipe — Spiced Fish in Banana Leaf',
+    description:
+      'Pepes ikan recipe: spiced fish steamed in banana leaf. Ingredients, steam or grill method, ~40 minutes. Primary recipe from our Ubud cooking class.',
+  },
+  'sambal-matah': {
+    title: 'Sambal Matah Recipe Card — Raw Shallot Chili Salsa',
+    description:
+      'Sambal matah recipe card: shallots, lemongrass, chili, coconut oil. Ready in 10 minutes. Pair with the full blog guide or cook it live in Ubud.',
+  },
+  'sate-ayam': {
+    title: 'Sate Ayam Recipe — Balinese Chicken Satay with Peanut Sauce',
+    description:
+      'Sate ayam recipe: marinated chicken skewers and peanut sauce. Grill time ~20 minutes. From Tumang Bali’s hands-on cooking class near Ubud.',
+  },
+  'dadar-gulung': {
+    title: 'Dadar Gulung Recipe Card — Pandan Coconut Crepe',
+    description:
+      'Dadar gulung recipe card: pandan crepe and palm-sugar coconut filling. For the full story and tips, see our Dadar Gulung blog — or cook it in class.',
+  },
+}
+
 // Resolve a recipe by its derived slug (no slug field in the CMS).
 async function findRecipeBySlug(slug: string) {
   try {
@@ -35,22 +77,22 @@ export async function generateMetadata({
   const recipe = await findRecipeBySlug(slug)
   if (!recipe) return { title: pageTitle('Recipe Not Found') }
 
-  const titleBase = `${recipe.title} Recipe — Balinese Cooking Class`
+  const override = RECIPE_SEO_OVERRIDES[slug]
+  const titleBase = override?.title ?? `${recipe.title} Recipe — Balinese Cooking Class`
   const description = truncateDescription(
-    `Authentic ${recipe.title} recipe from our Balinese cooking class in Ubud. ` +
-      `${recipe.description ? `${recipe.description}. ` : ''}` +
-      `Real ingredients and step-by-step instructions from local chefs.`,
+    override?.description ??
+      (`Authentic ${recipe.title} recipe from our Balinese cooking class in Ubud. ` +
+        `${recipe.description ? `${recipe.description}. ` : ''}` +
+        `Real ingredients and step-by-step instructions from local chefs.`),
   )
   const img =
     recipe.image && typeof recipe.image === 'object' && 'url' in recipe.image
       ? (recipe.image.url as string)
       : '/images/itinerary/dadar-gulung-close.jpg'
 
-  const trimmedDesc = description
-
   return {
     title: pageTitle(titleBase),
-    description: trimmedDesc,
+    description,
     alternates: { canonical: `${SITE}/recipes/${slug}` },
     openGraph: {
       title: titleBase + ' | Tumang Bali',

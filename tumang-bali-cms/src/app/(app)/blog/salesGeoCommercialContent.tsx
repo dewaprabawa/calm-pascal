@@ -498,9 +498,9 @@ export const cookingClassUbudFromCanggu: StaticArticle = {
 export const isABaliCookingClassWorthIt: StaticArticle = {
   slug: 'is-a-bali-cooking-class-worth-it',
   title: 'Is a Bali Cooking Class Worth It? An Honest Look (2026)',
-  metaTitle: 'Is a Bali Cooking Class Worth It? Honest Guide | Tumang Bali',
+  metaTitle: 'Is a Bali Cooking Class Worth It? Honest 2026 Answer',
   metaDescription:
-    'Is a Bali cooking class worth it? Honest look at cost, what you get, who enjoys it most, and how to choose an authentic Ubud cooking class in 2026.',
+    'Is a Bali cooking class worth IDR 350K? What you get (market tour, 10+ dishes, pickup), who should book, and when to skip — honest Ubud guide from Tumang Bali.',
   excerpt:
     'Thinking about a Bali cooking class but not sure it is worth the money? An honest look at what you get, who it suits, and how to choose a good one near Ubud.',
   image: '/images/blog/worth-it.jpg.webp',

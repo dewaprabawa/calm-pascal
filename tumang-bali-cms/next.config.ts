@@ -65,6 +65,18 @@ const nextConfig: NextConfig = {
         destination: '/authentic-balinese-cooking-class',
         permanent: true,
       },
+      // GSC: zero-click pepes blog cannibalizing /recipes/pepes-ikan (primary).
+      {
+        source: '/blog/pepes-ikan-recipe-bali',
+        destination: '/recipes/pepes-ikan',
+        permanent: true,
+      },
+      // GSC: consolidate thin commercial URL into the "cooking class ubud" money page.
+      {
+        source: '/cooking-class-bali',
+        destination: '/balinese-cooking-class-ubud',
+        permanent: true,
+      },
       // Common URL patterns that visitors and bots try — redirect to homepage anchors.
       {
         source: '/faq',

@@ -9,11 +9,11 @@ import { vegetarianClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Vegetarian Cooking Class in Ubud',
+  title: 'Vegetarian Cooking Class Ubud — Tempe, Tofu & Sambal Matah',
   description:
-    'Plant-based Balinese cooking class in Ubud. Cook tempe, tofu, sayur urap Cook tempe, tofu, sayur urap & sambal matah from scratch with local chefs. Vegan on request. Market tour & hotel pickup. sambal matah from scratch with local chefs. Vegan on request. Hotel pickup included.',
+    'Vegetarian Balinese cooking class in Ubud: tempe, tofu, sayur urap & sambal matah. Vegan on request. Max 8 guests, free hotel pickup, from IDR 350K.',
   path: '/vegetarian-cooking-class-ubud',
-  ogTitle: 'Vegetarian Cooking Class in Ubud',
+  ogTitle: 'Vegetarian Cooking Class in Ubud — Plant-Based Balinese Menu',
   image: '/images/gallery-chopping.jpg',
   imageAlt: 'Vegetarian Balinese cooking class in Ubud',
 })

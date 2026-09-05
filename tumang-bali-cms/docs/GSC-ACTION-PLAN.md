@@ -139,3 +139,26 @@ Do not add more recipe/blog pairs for the same dish until primary URLs are clear
 - Do not treat Discover or AI Overview shifts as proven (not in export).
 - Do not mass-produce additional AI/templated class pages — dilution is already a risk.
 - Do not chase FID; use INP for any CWV follow-up (separate from this GSC file).
+
+---
+
+## Implemented in code (2026-09-05)
+
+Shipped on branch `cursor/gsc-performance-audit-bc59`:
+
+| Action | Status | Where |
+|--------|--------|--------|
+| 1. CTR meta quick wins (P0 + P1 articles) | Seed updated; apply via cron or `npx tsx --env-file=.env seedSeoMetaQuickWins.ts` | `seedSeoMetaQuickWins.ts` (+ SEO maintenance cron) |
+| 2. Zero-click pepes blog | **301** → `/recipes/pepes-ikan` | `next.config.ts` |
+| 2. Zero-click `/cooking-class-bali` | **301** → `/balinese-cooking-class-ubud` (money page) | `next.config.ts` |
+| 2. Recipe CTR titles (tempe manis, nasi kuning, etc.) | Code overrides in `generateMetadata` | `src/app/(app)/recipes/[slug]/page.tsx` |
+| 2. Static worth-it SERP copy | Meta rewritten | `salesGeoCommercialContent.tsx` |
+| 3. Dish cannibalization (pepes) | Blog → recipe primary via redirect; dadar/sambal recipe titles marked “recipe card” | redirects + recipe overrides |
+| 4. Commercial head-term money page | `/balinese-cooking-class-ubud` meta sharpened for “cooking class ubud” + price/pickup/max 8 | page metadata |
+| 5. International CTR | Price, pickup, group size in commercial metas (private, vegetarian, market tour, half-day, authentic) | landing page metadata |
+
+**Still manual / post-deploy:**
+- Run or wait for SEO maintenance cron so CMS article metas go live.
+- Re-export GSC in 14 days to validate CTR lift.
+- Internal-link hub pass from top blogs → `/balinese-cooking-class-ubud` (not fully automated here).
+- GBP NAP check for branded queries (off-site).
