@@ -1,27 +1,36 @@
 'use client'
 
-import React, { useEffect, useId } from 'react'
-import {
-  ZAPIER_CHATBOT_ID,
-  ensureZapierScriptLoaded,
-} from '../lib/openZapierChat'
+import React, { useEffect, useId, useState } from 'react'
+import { ZAPIER_CHATBOT_ID } from '../lib/openZapierChat'
 
 type AskAiChatSheetProps = {
   open: boolean
   onClose: () => void
 }
 
+/** Direct Zapier embed URL — more reliable than the web component inside a sheet. */
+function zapierEmbedSrc() {
+  const params = new URLSearchParams({
+    // Keep the chat UI expanded inside our sheet (not a tiny floating launcher).
+  })
+  return `https://interfaces.zapier.com/embed/chatbot/${ZAPIER_CHATBOT_ID}?${params.toString()}`
+}
+
 /**
- * Full-screen (mobile) / large (desktop) sheet with an inline Zapier chatbot.
- * Used because the floating Zapier popup lives in a cross-origin iframe and
- * cannot be opened reliably from a custom button click.
+ * Full-screen (mobile) / large (desktop) sheet with Zapier chat.
+ * Uses a direct iframe so the chat fills the sheet reliably — the floating
+ * Zapier web-component popup cannot be opened from a custom button on iOS
+ * because its launcher lives in a cross-origin iframe.
  */
 export default function AskAiChatSheet({ open, onClose }: AskAiChatSheetProps) {
   const titleId = useId()
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    if (!open) return
-    ensureZapierScriptLoaded()
+    if (!open) {
+      setLoaded(false)
+      return
+    }
     const prev = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     return () => {
@@ -38,77 +47,7 @@ export default function AskAiChatSheet({ open, onClose }: AskAiChatSheetProps) {
     return () => window.removeEventListener('keydown', onKey)
   }, [open, onClose])
 
-  // Zapier renders its iframe inside shadow DOM — page CSS cannot size it.
-  // Stencil also re-applies width/height attributes on re-render, so keep
-  // constraining while the sheet is open.
-  useEffect(() => {
-    if (!open) return
-    let cancelled = false
-
-    const constrain = () => {
-      if (cancelled) return false
-      const wrap = document.querySelector('.tumang-ai-inline-embed') as HTMLElement | null
-      const host = wrap?.querySelector('zapier-interfaces-chatbot-embed') as
-        | (HTMLElement & { shadowRoot?: ShadowRoot | null })
-        | null
-      if (!wrap || !host) return false
-
-      const box = wrap.getBoundingClientRect()
-      if (box.height < 40 || box.width < 40) return false
-
-      const w = Math.round(box.width)
-      const h = Math.round(box.height)
-
-      host.style.display = 'block'
-      host.style.position = 'relative'
-      host.style.width = `${w}px`
-      host.style.height = `${h}px`
-      host.style.maxHeight = `${h}px`
-      host.style.overflow = 'hidden'
-
-      const iframe = host.shadowRoot?.querySelector('iframe') as HTMLIFrameElement | null
-      if (!iframe) return false
-
-      iframe.style.position = 'absolute'
-      iframe.style.left = '0'
-      iframe.style.top = '0'
-      iframe.style.right = '0'
-      iframe.style.bottom = '0'
-      iframe.style.width = `${w}px`
-      iframe.style.height = `${h}px`
-      iframe.style.maxWidth = `${w}px`
-      iframe.style.maxHeight = `${h}px`
-      iframe.style.border = '0'
-      iframe.setAttribute('width', `${w}`)
-      iframe.setAttribute('height', `${h}`)
-      return true
-    }
-
-    let tries = 0
-    const run = () => {
-      if (cancelled) return
-      tries += 1
-      constrain()
-      if (tries < 60) {
-        window.setTimeout(run, 250)
-      }
-    }
-    run()
-
-    const interval = window.setInterval(() => constrain(), 500)
-    const observer = new MutationObserver(() => constrain())
-    observer.observe(document.body, { childList: true, subtree: true, attributes: true })
-
-    return () => {
-      cancelled = true
-      window.clearInterval(interval)
-      observer.disconnect()
-    }
-  }, [open])
-
   if (!open) return null
-
-  const ZapierChatbotEmbed = 'zapier-interfaces-chatbot-embed' as any
 
   return (
     <div
@@ -144,14 +83,23 @@ export default function AskAiChatSheet({ open, onClose }: AskAiChatSheetProps) {
           </button>
         </div>
 
-        <div className="relative flex-1 min-h-0 overflow-hidden bg-white dark:bg-zinc-950 tumang-ai-inline-embed">
-          <ZapierChatbotEmbed
-            is-popup="false"
-            chatbot-id={ZAPIER_CHATBOT_ID}
-            height="100%"
-            width="100%"
+        <div className="relative flex-1 min-h-0 overflow-hidden bg-white dark:bg-zinc-950">
+          {!loaded ? (
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-white dark:bg-zinc-950 text-stone-500 dark:text-stone-400">
+              <div
+                className="h-8 w-8 rounded-full border-2 border-orange-500 border-t-transparent animate-spin"
+                aria-hidden="true"
+              />
+              <p className="text-sm font-medium">Opening chat…</p>
+            </div>
+          ) : null}
+          <iframe
+            key={open ? 'open' : 'closed'}
+            src={zapierEmbedSrc()}
             title="Tumang Bali cooking class chat assistant"
-            aria-label="Tumang Bali cooking class chat assistant"
+            className="absolute inset-0 h-full w-full border-0 bg-white"
+            allow="clipboard-write *"
+            onLoad={() => setLoaded(true)}
           />
         </div>
       </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { ensureZapierScriptLoaded } from '../lib/openZapierChat'
 import AskAiChatSheet from './AskAiChatSheet'
 
 type AskAiAssistantButtonProps = {
@@ -9,12 +8,27 @@ type AskAiAssistantButtonProps = {
 }
 
 /**
- * Hero CTA that opens the on-site Zapier AI assistant in an inline chat sheet.
+ * Hero CTA that opens the on-site Zapier AI assistant in a chat sheet.
  * The floating Zapier popup cannot be opened reliably from a custom button
- * (cross-origin iframe), so the sheet hosts an inline embed instead.
+ * on mobile (cross-origin iframe), so we open our own sheet with a direct
+ * Zapier embed iframe instead.
  */
 export default function AskAiAssistantButton({ className }: AskAiAssistantButtonProps) {
   const [sheetOpen, setSheetOpen] = useState(false)
+
+  const openSheet = () => {
+    document.documentElement.classList.add('tumang-ai-sheet-open')
+    const popup = document.querySelector('.tumang-zapier-popup-wrap') as HTMLElement | null
+    if (popup) popup.style.display = 'none'
+    setSheetOpen(true)
+  }
+
+  const closeSheet = () => {
+    document.documentElement.classList.remove('tumang-ai-sheet-open')
+    const popup = document.querySelector('.tumang-zapier-popup-wrap') as HTMLElement | null
+    if (popup) popup.style.display = ''
+    setSheetOpen(false)
+  }
 
   return (
     <>
@@ -22,12 +36,12 @@ export default function AskAiAssistantButton({ className }: AskAiAssistantButton
         type="button"
         id="zapier-chatbot-open-label"
         data-open-zapier-chat
-        onClick={() => {
-          ensureZapierScriptLoaded()
-          document.documentElement.classList.add('tumang-ai-sheet-open')
-          const popup = document.querySelector('.tumang-zapier-popup-wrap') as HTMLElement | null
-          if (popup) popup.style.display = 'none'
-          setSheetOpen(true)
+        onClick={openSheet}
+        onPointerUp={(e) => {
+          // Extra safety for iOS Safari where click can be delayed/missed
+          // after touch; ignore if sheet already open.
+          if (sheetOpen) return
+          if (e.pointerType === 'touch') openSheet()
         }}
         className={
           className ??
@@ -55,15 +69,7 @@ export default function AskAiAssistantButton({ className }: AskAiAssistantButton
         Ask our AI assistant
       </button>
 
-      <AskAiChatSheet
-        open={sheetOpen}
-        onClose={() => {
-          document.documentElement.classList.remove('tumang-ai-sheet-open')
-          const popup = document.querySelector('.tumang-zapier-popup-wrap') as HTMLElement | null
-          if (popup) popup.style.display = ''
-          setSheetOpen(false)
-        }}
-      />
+      <AskAiChatSheet open={sheetOpen} onClose={closeSheet} />
     </>
   )
 }
