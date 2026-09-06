@@ -9,8 +9,6 @@ declare namespace JSX {
       width?: string
       title?: string
       "aria-label"?: string
-      "data-tumang-popup"?: string
-      "data-tumang-inline"?: string
       style?: Record<string, string | number> | string
     }
   }
