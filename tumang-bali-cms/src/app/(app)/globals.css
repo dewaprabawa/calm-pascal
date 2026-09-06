@@ -91,3 +91,15 @@ body {
   transform: rotate(-45deg);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.28);
 }
+
+/* Hide the floating Zapier launcher while the Ask-AI sheet is open */
+html.tumang-ai-sheet-open .tumang-zapier-popup-wrap,
+html.tumang-ai-sheet-open zapier-interfaces-chatbot-embed[is-popup="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.tumang-ai-inline-embed {
+  position: relative;
+}
