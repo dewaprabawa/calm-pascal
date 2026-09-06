@@ -62,7 +62,7 @@ export default function ZapierChatbotLazy() {
       {/* Always mounted so hero CTA open events are never missed */}
       <ZapierChatbotPositioner />
       {ready ? (
-        <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
+        <div className="tumang-zapier-popup-wrap fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
           <ZapierChatbotEmbed
             is-popup="true"
             chatbot-id={ZAPIER_CHATBOT_ID}

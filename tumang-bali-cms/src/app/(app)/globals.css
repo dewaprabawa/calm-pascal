@@ -93,15 +93,13 @@ body {
 }
 
 /* Hide the floating Zapier launcher while the Ask-AI sheet is open */
+html.tumang-ai-sheet-open .tumang-zapier-popup-wrap,
 html.tumang-ai-sheet-open zapier-interfaces-chatbot-embed[is-popup="true"] {
+  display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
 }
 
-.tumang-ai-inline-embed zapier-interfaces-chatbot-embed,
-.tumang-ai-inline-embed iframe {
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 480px;
-  border: 0;
+.tumang-ai-inline-embed {
+  position: relative;
 }
