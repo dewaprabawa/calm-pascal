@@ -1,6 +1,12 @@
 'use client'
 
 import { useEffect } from 'react'
+import {
+  OPEN_ZAPIER_CHAT_EVENT,
+  clickZapierLauncher,
+  hasPendingZapierOpen,
+  clearPendingZapierOpen,
+} from '../lib/openZapierChat'
 
 function setStyle(el: Element | null, styles: Partial<CSSStyleDeclaration>) {
   if (!(el instanceof HTMLElement)) return
@@ -12,35 +18,48 @@ function setStyle(el: Element | null, styles: Partial<CSSStyleDeclaration>) {
 /**
  * Zapier's popup launcher is rendered inside a Shadow DOM.
  * The fixed-position wrapper on the page often doesn't reliably control the launcher icon on all devices.
- * This effect repositions the internal launcher/close controls toward the bottom-left.
+ * This effect repositions the internal launcher/close controls toward the bottom-left,
+ * and opens the popup when hero/CTA buttons request it.
  */
 export default function ZapierChatbotPositioner() {
   useEffect(() => {
-    const openChat = () => {
-      const bot = document.querySelector('zapier-interfaces-chatbot-embed') as any
-      const shadow: ShadowRoot | null = bot?.shadowRoot ?? null
-      if (!shadow) return
+    let openPending = hasPendingZapierOpen()
+    let openTries = 0
+    let openTimer: number | undefined
 
-      const launcher =
-        shadow.querySelector('[part="launcher"]') ||
-        shadow.querySelector('.launcher') ||
-        shadow.querySelector('button') ||
-        shadow.querySelector('a')
+    const tryOpenChat = () => {
+      if (clickZapierLauncher()) {
+        openPending = false
+        openTries = 0
+        return
+      }
 
-      if (launcher instanceof HTMLElement) {
-        launcher.click()
+      openTries += 1
+      if (openTries < 40) {
+        openTimer = window.setTimeout(tryOpenChat, 200)
+      } else {
+        openPending = false
+        openTries = 0
+        clearPendingZapierOpen()
       }
     }
 
-    const labelEl = document.getElementById('zapier-chatbot-open-label')
-    const onLabelClick = (e: MouseEvent) => {
-      e.preventDefault()
-      e.stopPropagation()
-      openChat()
+    const requestOpen = () => {
+      openPending = true
+      openTries = 0
+      if (openTimer) window.clearTimeout(openTimer)
+      tryOpenChat()
     }
 
-    if (labelEl) {
-      labelEl.addEventListener('click', onLabelClick)
+    const onOpenEvent = () => {
+      requestOpen()
+    }
+
+    window.addEventListener(OPEN_ZAPIER_CHAT_EVENT, onOpenEvent)
+
+    // If the hero button was clicked before this mounted, open as soon as possible.
+    if (openPending) {
+      requestOpen()
     }
 
     const apply = () => {
@@ -117,6 +136,10 @@ export default function ZapierChatbotPositioner() {
         borderRadius: '9999px',
       })
 
+      if (openPending || hasPendingZapierOpen()) {
+        tryOpenChat()
+      }
+
       return true
     }
 
@@ -143,10 +166,10 @@ export default function ZapierChatbotPositioner() {
     return () => {
       cancelled = true
       observer.disconnect()
-      labelEl?.removeEventListener('click', onLabelClick)
+      if (openTimer) window.clearTimeout(openTimer)
+      window.removeEventListener(OPEN_ZAPIER_CHAT_EVENT, onOpenEvent)
     }
   }, [])
 
   return null
 }
-
