@@ -24,6 +24,17 @@ const nextConfig: NextConfig = {
         source: '/(.*)',
         headers: [
           {
+            // Next may advertise Sec-CH-Prefers-Color-Scheme as Critical-CH, which
+            // forces a second document request (~800ms+) and tanks mobile LCP.
+            // Clear both so the first HTML response is final.
+            key: 'Accept-CH',
+            value: '',
+          },
+          {
+            key: 'Critical-CH',
+            value: '',
+          },
+          {
             key: 'Content-Security-Policy',
             value: "default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' https: data: blob:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https:;",
           },

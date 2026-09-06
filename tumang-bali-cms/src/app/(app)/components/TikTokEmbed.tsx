@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const TIKTOK_VIDEO_ID = '7368745244579335441'
-const POSTER_SRC = '/images/gallery-girls.jpg.webp'
+const POSTER_SRC = '/images/gallery-girls-poster.webp'
 
 export default function TikTokEmbed() {
   const [loaded, setLoaded] = useState(false)
@@ -21,9 +21,9 @@ export default function TikTokEmbed() {
           src={POSTER_SRC}
           alt="Guests enjoying a Balinese cooking class feast in Ubud"
           fill
-          priority
-          fetchPriority="high"
-          sizes="(max-width: 768px) 90vw, 384px"
+          // LCP is the hero H1 — do not compete with font/CSS for early bandwidth
+          loading="lazy"
+          sizes="(max-width: 768px) 360px, 384px"
           className="object-cover"
         />
         <span className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" aria-hidden="true" />

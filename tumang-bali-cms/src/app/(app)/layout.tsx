@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import ZapierChatbotLazy from "./components/ZapierChatbotLazy";
@@ -9,13 +9,6 @@ const geistSans = Geist({
   subsets: ["latin"],
   display: "swap",
   preload: true,
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -93,22 +86,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} h-full antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        {/* Site summary files for crawlers */}
+        {/* Site summary files for crawlers — no early third-party preconnects (hurts LCP) */}
         <link rel="describedby" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_FULL} type="text/plain" title="Full site summary" />
         <link rel="author" href={LLMS_TXT} />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/gallery-girls.jpg.webp"
-          fetchPriority="high"
-        />
       </head>
       <body className="min-h-full flex flex-col">
         <a
