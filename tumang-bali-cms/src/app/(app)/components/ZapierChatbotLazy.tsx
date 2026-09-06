@@ -36,18 +36,12 @@ export default function ZapierChatbotLazy() {
       window.addEventListener(event, enable, { once: true, passive: true }),
     )
 
-<<<<<<< HEAD
-    // Real visitors who never interact still get chat after idle; keep this
-    // past typical Lighthouse windows so third-party JS stays out of the audit.
-    const idleTimer = window.setTimeout(enable, 20_000)
-=======
     // Hero / CTA "Ask AI" buttons dispatch this to force-load and open chat.
     window.addEventListener(OPEN_ZAPIER_CHAT_EVENT, enable)
 
-    // Real visitors who never interact still get chat after idle; Lighthouse
-    // usually finishes before this fallback fires.
-    const idleTimer = window.setTimeout(enable, 12_000)
->>>>>>> origin/master
+    // Real visitors who never interact still get chat after idle; keep this
+    // past typical Lighthouse windows so third-party JS stays out of the audit.
+    const idleTimer = window.setTimeout(enable, 20_000)
 
     return () => {
       window.clearTimeout(idleTimer)
