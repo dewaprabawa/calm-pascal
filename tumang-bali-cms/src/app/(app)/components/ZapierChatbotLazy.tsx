@@ -60,24 +60,22 @@ export default function ZapierChatbotLazy() {
     document.head.appendChild(script)
   }, [ready])
 
-  if (!ready) {
-    return <ZapierChatbotPositioner />
-  }
-
   const ZapierChatbotEmbed = 'zapier-interfaces-chatbot-embed' as any
 
   return (
     <>
-      {/* Always mount so open-chat events are never missed before embed loads */}
+      {/* Always mounted so hero CTA open events are never missed */}
       <ZapierChatbotPositioner />
-      <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
-        <ZapierChatbotEmbed
-          is-popup="true"
-          chatbot-id={CHATBOT_ID}
-          title="Tumang Bali cooking class chat assistant"
-          aria-label="Open Tumang Bali cooking class chat assistant"
-        />
-      </div>
+      {ready ? (
+        <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
+          <ZapierChatbotEmbed
+            is-popup="true"
+            chatbot-id={CHATBOT_ID}
+            title="Tumang Bali cooking class chat assistant"
+            aria-label="Open Tumang Bali cooking class chat assistant"
+          />
+        </div>
+      ) : null}
     </>
   )
 }
