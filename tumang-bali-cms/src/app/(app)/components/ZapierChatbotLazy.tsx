@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from 'react'
 import ZapierChatbotPositioner from './ZapierChatbotPositioner'
-import { OPEN_ZAPIER_CHAT_EVENT } from '../lib/openZapierChat'
-
-const SCRIPT_SRC =
-  'https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'
-const CHATBOT_ID = 'cmtlla8tc0084rm7xj52d7m6w'
+import {
+  OPEN_ZAPIER_CHAT_EVENT,
+  ZAPIER_CHATBOT_ID,
+  ensureZapierScriptLoaded,
+} from '../lib/openZapierChat'
 
 /**
  * Defer Zapier until user interaction (or a long idle fallback).
@@ -52,33 +52,26 @@ export default function ZapierChatbotLazy() {
 
   useEffect(() => {
     if (!ready) return
-    if (document.querySelector(`script[src="${SCRIPT_SRC}"]`)) return
-
-    const script = document.createElement('script')
-    script.type = 'module'
-    script.async = true
-    script.src = SCRIPT_SRC
-    document.head.appendChild(script)
+    ensureZapierScriptLoaded()
   }, [ready])
-
-  if (!ready) {
-    return <ZapierChatbotPositioner />
-  }
 
   const ZapierChatbotEmbed = 'zapier-interfaces-chatbot-embed' as any
 
   return (
     <>
-      {/* Always mount so open-chat events are never missed before embed loads */}
+      {/* Always mounted so hero CTA open events are never missed */}
       <ZapierChatbotPositioner />
-      <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
-        <ZapierChatbotEmbed
-          is-popup="true"
-          chatbot-id={CHATBOT_ID}
-          title="Tumang Bali cooking class chat assistant"
-          aria-label="Open Tumang Bali cooking class chat assistant"
-        />
-      </div>
+      {ready ? (
+        <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
+          <ZapierChatbotEmbed
+            data-tumang-popup="true"
+            is-popup="true"
+            chatbot-id={ZAPIER_CHATBOT_ID}
+            title="Tumang Bali cooking class chat assistant"
+            aria-label="Open Tumang Bali cooking class chat assistant"
+          />
+        </div>
+      ) : null}
     </>
   )
 }
