@@ -8,6 +8,7 @@ import { pageTitle, truncateDescription, SITE, SITE_CONTENT_UPDATED, SITE_CONTEN
 import { staticCommercialArticles } from './staticCommercialContent'
 import { foreignSearchArticles } from './foreignSearchContent'
 import type { StaticArticle } from './staticCommercialArticles'
+import { REDIRECTED_BLOG_SLUGS } from '@/lib/seoRedirects'
 
 export const metadata: Metadata = {
   title: pageTitle('Ubud Food & Culture Blog'),
@@ -102,7 +103,9 @@ export default async function BlogPage() {
   }
 
   const staticSlugs = new Set([...staticCommercialArticles, ...foreignSearchArticles].map((a) => a.slug))
-  const cmsOnly = cmsArticles.filter((a) => !staticSlugs.has(a.slug as string))
+  const cmsOnly = cmsArticles.filter(
+    (a) => !staticSlugs.has(a.slug as string) && !REDIRECTED_BLOG_SLUGS.has(a.slug as string),
+  )
 
   const itemListSchema = {
     '@context': 'https://schema.org',

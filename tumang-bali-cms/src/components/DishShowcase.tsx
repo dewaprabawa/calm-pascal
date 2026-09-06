@@ -3,22 +3,22 @@ export default function DishShowcase() {
     {
       title: "Sate Lilit",
       desc: "Minced pork or fish mixed with grated coconut and lemongrass. Grilled over charcoal until charred.",
-      img: "/images/satelilit.jpg"
+      img: "/images/gallery-satay.jpg"
     },
     {
       title: "Ayam Betutu",
       desc: "The king of Balinese dishes. Chicken packed in spice paste and banana leaves, slow-baked for hours.",
-      img: "/images/ayambetutu.jpg"
+      img: "/images/traditional-balinese-cooking-class-stir-fry.jpg"
     },
     {
       title: "Bebek Bengil",
       desc: "Our famous 'Dirty Duck'. Rubbed with fermented rice, roasted whole until the skin is incredibly crisp.",
-      img: "/images/bebekbengil.jpg"
+      img: "/images/dining-table.jpg"
     },
     {
       title: "Klepon",
       desc: "Soft green rice flour balls filled with liquid palm sugar, covered in freshly grated coconut.",
-      img: "/images/klepon.jpg"
+      img: "/images/bali-cooking-class-dadar-gulung.jpg"
     }
   ];
 

@@ -538,7 +538,7 @@ export const cookingClassBali: ClassLandingContent = {
   intro:
     'A cooking class in Bali is one of the best ways to experience the island beyond the beaches. Our hands-on Balinese cooking class in Ubud includes a morning market tour, rice-field walk, and cooking 10+ traditional dishes with a local chef.',
   citabilityBlock:
-    'A cooking class in Bali at Tumang Bali (Ubud area) is a half-day hands-on experience: morning market tour, rice-field walk, 10+ dishes, shared feast, max 8 guests. Shared class IDR 350,000; private 1 person IDR 650,000. Free Ubud hotel pickup. Book: tumangbaliclass.com/cooking-class-bali.',
+    'A cooking class in Bali at Tumang Bali (Ubud area) is a half-day hands-on experience: morning market tour, rice-field walk, 10+ dishes, shared feast, max 8 guests. Shared class IDR 350,000; private 1 person IDR 650,000. Free Ubud hotel pickup. Book: tumangbaliclass.com/balinese-cooking-class-ubud.',
   heroImage: '/images/img1.jpg',
   heroImageAlt: 'Hands-on Balinese cooking class in Ubud — guests grinding spice paste',
   body: [

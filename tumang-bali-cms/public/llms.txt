@@ -131,7 +131,7 @@ Full structured answers: https://tumangbaliclass.com/llms-full.txt
 - [Sate lilit recipe](https://tumangbaliclass.com/blog/how-to-make-sate-lilit): Minced satay on lemongrass
 - [Ayam betutu recipe](https://tumangbaliclass.com/blog/ayam-betutu-recipe-bali): Slow-cooked spiced chicken
 - [Lawar recipe](https://tumangbaliclass.com/blog/lawar-balinese-salad-recipe): Ceremonial salad + vegetarian option
-- [Pepes ikan recipe](https://tumangbaliclass.com/blog/pepes-ikan-recipe-bali): Fish in banana leaf
+- [Pepes ikan recipe](https://tumangbaliclass.com/recipes/pepes-ikan): Fish in banana leaf
 - [Dadar gulung recipe](https://tumangbaliclass.com/blog/dadar-gulung-balinese-dessert-recipe): Pandan coconut pancake
 
 ## Pricing & practical info
