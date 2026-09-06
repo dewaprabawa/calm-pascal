@@ -21,8 +21,11 @@ export default function TikTokEmbed() {
           src={POSTER_SRC}
           alt="Guests enjoying a Balinese cooking class feast in Ubud"
           fill
-          // LCP is the hero H1 — do not compete with font/CSS for early bandwidth
+          // LCP is the hero H1 — do not compete with font/CSS for early bandwidth.
+          // Poster is already a 480w WebP (~31KB); skip the optimizer so mobile
+          // does not fetch a larger generated variant.
           loading="lazy"
+          unoptimized
           sizes="(max-width: 768px) 360px, 384px"
           className="object-cover"
         />

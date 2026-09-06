@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 import { withPayload } from '@payloadcms/next/withPayload'
 
+const CH_HEADER_KEYS = new Set(['Accept-CH', 'Critical-CH'])
+
 const nextConfig: NextConfig = {
   async headers() {
     return [
@@ -23,17 +25,6 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: [
-          {
-            // Next may advertise Sec-CH-Prefers-Color-Scheme as Critical-CH, which
-            // forces a second document request (~800ms+) and tanks mobile LCP.
-            // Clear both so the first HTML response is final.
-            key: 'Accept-CH',
-            value: '',
-          },
-          {
-            key: 'Critical-CH',
-            value: '',
-          },
           {
             key: 'Content-Security-Policy',
             value: "default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' https: data: blob:; font-src 'self' https: data:; frame-src 'self' https:; connect-src 'self' https:;",
@@ -127,4 +118,24 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withPayload(nextConfig);
+/**
+ * Payload's withPayload appends Accept-CH / Critical-CH for admin theming.
+ * Those headers force a Client Hints restart (~600–900ms) on every public page
+ * and tank mobile LCP. Strip them after wrapping.
+ */
+const payloadConfig = withPayload(nextConfig) as NextConfig
+const payloadHeaders = payloadConfig.headers
+
+payloadConfig.headers = async () => {
+  const entries = typeof payloadHeaders === 'function' ? await payloadHeaders() : []
+  return (entries || []).map((entry) => ({
+    ...entry,
+    headers: (entry.headers || []).filter((header) => {
+      if (CH_HEADER_KEYS.has(header.key)) return false
+      if (header.key === 'Vary' && header.value === 'Sec-CH-Prefers-Color-Scheme') return false
+      return true
+    }),
+  }))
+}
+
+export default payloadConfig
