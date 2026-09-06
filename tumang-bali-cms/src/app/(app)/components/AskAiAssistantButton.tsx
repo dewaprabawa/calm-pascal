@@ -25,6 +25,8 @@ export default function AskAiAssistantButton({ className }: AskAiAssistantButton
         onClick={() => {
           ensureZapierScriptLoaded()
           document.documentElement.classList.add('tumang-ai-sheet-open')
+          const popup = document.querySelector('.tumang-zapier-popup-wrap') as HTMLElement | null
+          if (popup) popup.style.display = 'none'
           setSheetOpen(true)
         }}
         className={
@@ -57,6 +59,8 @@ export default function AskAiAssistantButton({ className }: AskAiAssistantButton
         open={sheetOpen}
         onClose={() => {
           document.documentElement.classList.remove('tumang-ai-sheet-open')
+          const popup = document.querySelector('.tumang-zapier-popup-wrap') as HTMLElement | null
+          if (popup) popup.style.display = ''
           setSheetOpen(false)
         }}
       />
