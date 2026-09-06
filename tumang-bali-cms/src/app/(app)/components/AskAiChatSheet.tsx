@@ -39,35 +39,48 @@ export default function AskAiChatSheet({ open, onClose }: AskAiChatSheetProps) {
   }, [open, onClose])
 
   // Zapier renders its iframe inside shadow DOM — page CSS cannot size it.
+  // Stencil also re-applies width/height attributes on re-render, so keep
+  // constraining while the sheet is open.
   useEffect(() => {
     if (!open) return
     let cancelled = false
 
     const constrain = () => {
       if (cancelled) return false
-      const host = document.querySelector(
-        '.tumang-ai-inline-embed zapier-interfaces-chatbot-embed',
-      ) as (HTMLElement & { shadowRoot?: ShadowRoot | null }) | null
-      if (!host) return false
+      const wrap = document.querySelector('.tumang-ai-inline-embed') as HTMLElement | null
+      const host = wrap?.querySelector('zapier-interfaces-chatbot-embed') as
+        | (HTMLElement & { shadowRoot?: ShadowRoot | null })
+        | null
+      if (!wrap || !host) return false
+
+      const box = wrap.getBoundingClientRect()
+      if (box.height < 40 || box.width < 40) return false
+
+      const w = Math.round(box.width)
+      const h = Math.round(box.height)
 
       host.style.display = 'block'
-      host.style.width = '100%'
-      host.style.height = '100%'
-      host.style.maxHeight = '100%'
+      host.style.position = 'relative'
+      host.style.width = `${w}px`
+      host.style.height = `${h}px`
+      host.style.maxHeight = `${h}px`
       host.style.overflow = 'hidden'
 
       const iframe = host.shadowRoot?.querySelector('iframe') as HTMLIFrameElement | null
       if (!iframe) return false
 
       iframe.style.position = 'absolute'
-      iframe.style.inset = '0'
-      iframe.style.width = '100%'
-      iframe.style.height = '100%'
-      iframe.style.maxWidth = '100%'
-      iframe.style.maxHeight = '100%'
+      iframe.style.left = '0'
+      iframe.style.top = '0'
+      iframe.style.right = '0'
+      iframe.style.bottom = '0'
+      iframe.style.width = `${w}px`
+      iframe.style.height = `${h}px`
+      iframe.style.maxWidth = `${w}px`
+      iframe.style.maxHeight = `${h}px`
       iframe.style.border = '0'
-      iframe.removeAttribute('width')
-      iframe.removeAttribute('height')
+      iframe.setAttribute('width', `${w}`)
+      iframe.setAttribute('height', `${h}`)
       return true
     }
 
@@ -75,17 +88,20 @@ export default function AskAiChatSheet({ open, onClose }: AskAiChatSheetProps) {
     const run = () => {
       if (cancelled) return
       tries += 1
-      if (!constrain() && tries < 40) {
+      constrain()
+      if (tries < 60) {
         window.setTimeout(run, 250)
       }
     }
     run()
 
+    const interval = window.setInterval(() => constrain(), 500)
     const observer = new MutationObserver(() => constrain())
-    observer.observe(document.body, { childList: true, subtree: true })
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true })
 
     return () => {
       cancelled = true
+      window.clearInterval(interval)
       observer.disconnect()
     }
   }, [open])
