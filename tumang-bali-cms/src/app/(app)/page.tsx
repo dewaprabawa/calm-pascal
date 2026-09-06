@@ -133,7 +133,6 @@ export default async function Page() {
                 width={40}
                 height={40}
                 priority
-                fetchPriority="high"
                 className="object-cover w-full h-full"
               />
             </div>
@@ -179,10 +178,7 @@ export default async function Page() {
           {/* Left Column: Text Content */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-400 text-sm font-semibold tracking-wide border border-orange-200 dark:border-orange-900/30 mb-4">
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-              </span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500" aria-hidden="true" />
               TripAdvisor Travelers&apos; Choice 2026
             </div>
             
