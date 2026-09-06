@@ -520,7 +520,7 @@ export const articles: ArticleSeed[] = [
         text(' and '),
         link('how to make bumbu Bali', '/blog/how-to-make-bumbu-bali'),
         text('. Related banana-leaf technique: '),
-        link('pepes ikan recipe', '/blog/pepes-ikan-recipe-bali'),
+        link('pepes ikan recipe', '/recipes/pepes-ikan'),
         text('.'),
       ]),
       heading('h2', 'Cook it on your Bali trip'),

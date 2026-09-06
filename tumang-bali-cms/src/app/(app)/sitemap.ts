@@ -4,6 +4,7 @@ import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
 import { STATIC_COMMERCIAL_SLUGS } from '@/lib/staticCommercialSlugs'
 import { FOREIGN_SEARCH_SLUGS } from '@/lib/foreignSearchSlugs'
+import { REDIRECTED_BLOG_SLUGS, SEO_REDIRECTS } from '@/lib/seoRedirects'
 
 export const revalidate = 3600
 
@@ -35,7 +36,6 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'nasi-campur-bali-explained',
   'ayam-betutu-recipe-bali',
   'lawar-balinese-salad-recipe',
-  'pepes-ikan-recipe-bali',
   'balinese-vs-indonesian-food',
   'cooking-class-ubud-for-couples',
   'cooking-class-ubud-guide-2026',
@@ -91,7 +91,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/what-to-wear-bali-cooking-class', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/where-to-stay-bali-cooking-class', priority: 0.7, changeFrequency: 'monthly' },
   // SERP feature landing pages
-  { path: '/cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
+  // `/cooking-class-bali` permanently redirects → omit from sitemap (Ahrefs 3XX)
   { path: '/balinese-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/best-cooking-classes-bali', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/tumang-village', priority: 0.8, changeFrequency: 'monthly' },
@@ -132,7 +132,9 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date()
-  const entries: MetadataRoute.Sitemap = STATIC_PATHS.map((p) => ({
+  const entries: MetadataRoute.Sitemap = STATIC_PATHS.filter(
+    (p) => !(p.path in SEO_REDIRECTS),
+  ).map((p) => ({
     url: `${SITE}${p.path}`,
     lastModified: now,
     changeFrequency: p.changeFrequency,
@@ -160,6 +162,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     // Published blog articles — tiered priority based on commercial intent.
+    // Skip slugs that permanently redirect (e.g. pepes blog → recipe page).
     const { docs: articles } = await payload.find({
       collection: 'articles',
       where: { status: { equals: 'published' } },
@@ -167,6 +170,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
     for (const a of articles) {
       if (!a.slug) continue
+      if (REDIRECTED_BLOG_SLUGS.has(a.slug as string)) continue
       const url = `${SITE}/blog/${a.slug as string}`
       if (seenUrls.has(url)) continue
       seenUrls.add(url)

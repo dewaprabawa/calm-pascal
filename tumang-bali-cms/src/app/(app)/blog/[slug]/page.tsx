@@ -7,6 +7,7 @@ import configPromise from '@/payload.config'
 import { Metadata } from 'next'
 import { pageTitle, truncateDescription, SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
+import { REDIRECTED_BLOG_SLUGS, resolveSeoHref } from '@/lib/seoRedirects'
 
 export const revalidate = 60
 
@@ -83,7 +84,15 @@ function renderLexical(node: any, index: number = 0): React.ReactNode {
     case 'listitem':
       return <li key={index} className="text-stone-700 dark:text-stone-300 text-lg">{children}</li>;
     case 'link':
-      return <a key={index} href={node.fields?.url} className="text-orange-600 hover:underline">{children}</a>;
+      return (
+        <a
+          key={index}
+          href={resolveSeoHref(node.fields?.url) || node.fields?.url}
+          className="text-orange-600 hover:underline"
+        >
+          {children}
+        </a>
+      );
     case 'quote':
       return <blockquote key={index} className="border-l-4 border-orange-500 pl-4 italic text-stone-600 dark:text-stone-400 my-6 text-xl">{children}</blockquote>;
     case 'upload':
@@ -131,10 +140,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           slug: { not_equals: resolvedParams.slug }
         },
         depth: 1,
-        limit: 3,
+        limit: 12,
         sort: '-publishedDate'
       })
+      // Prefer non-redirecting destinations so related cards are not 3XX hops.
       relatedArticles = relatedDocs
+        .filter((doc) => !REDIRECTED_BLOG_SLUGS.has(doc.slug as string))
+        .slice(0, 3)
     }
   } catch (err) {
     console.error('blog slug page: could not load article from CMS', err)

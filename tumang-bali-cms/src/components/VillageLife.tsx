@@ -44,7 +44,7 @@ export default function VillageLife() {
         {/* Image Grid */}
         <div className="relative">
            <img 
-             src="/images/buffalo-rice-field.jpg" 
+             src="/images/itinerary/offerings-detail.jpg" 
              alt="Water buffalo ploughing in Tumang village" 
              className="rounded-2xl shadow-2xl w-full h-[500px] object-cover hover:scale-105 transition duration-500" 
            />
