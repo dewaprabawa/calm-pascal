@@ -64,7 +64,6 @@ export default function ZapierChatbotLazy() {
       {ready ? (
         <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
           <ZapierChatbotEmbed
-            data-tumang-popup="true"
             is-popup="true"
             chatbot-id={ZAPIER_CHATBOT_ID}
             title="Tumang Bali cooking class chat assistant"

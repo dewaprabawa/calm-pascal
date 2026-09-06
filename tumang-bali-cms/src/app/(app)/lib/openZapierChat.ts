@@ -28,15 +28,13 @@ export function clearPendingZapierOpen() {
  * an inline Ask-AI sheet for a reliable chat surface.
  */
 export function clickZapierLauncher(): boolean {
-  const bot = document.querySelector(
-    'zapier-interfaces-chatbot-embed[data-tumang-popup="true"]',
-  ) as (HTMLElement & { shadowRoot?: ShadowRoot | null }) | null
+  // Prefer the floating popup embed (first popup instance on the page).
+  const embeds = Array.from(
+    document.querySelectorAll('zapier-interfaces-chatbot-embed'),
+  ) as Array<HTMLElement & { shadowRoot?: ShadowRoot | null }>
 
   const embed =
-    bot ||
-    (document.querySelector('zapier-interfaces-chatbot-embed') as
-      | (HTMLElement & { shadowRoot?: ShadowRoot | null })
-      | null)
+    embeds.find((el) => el.getAttribute('is-popup') === 'true') || embeds[0] || null
 
   const shadow = embed?.shadowRoot ?? null
   if (!shadow) return false

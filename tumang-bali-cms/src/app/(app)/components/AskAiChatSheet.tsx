@@ -76,16 +76,15 @@ export default function AskAiChatSheet({ open, onClose }: AskAiChatSheetProps) {
           </button>
         </div>
 
-        <div className="relative flex-1 min-h-0 bg-white dark:bg-zinc-950">
+        <div className="relative flex-1 min-h-0 bg-white dark:bg-zinc-950 tumang-ai-inline-embed">
           <ZapierChatbotEmbed
-            data-tumang-inline="true"
             is-popup="false"
             chatbot-id={ZAPIER_CHATBOT_ID}
             height="100%"
             width="100%"
             title="Tumang Bali cooking class chat assistant"
             aria-label="Tumang Bali cooking class chat assistant"
-            style={{ display: 'block', width: '100%', height: '100%' }}
+            style={{ display: 'block', width: '100%', height: '100%', minHeight: '480px' }}
           />
         </div>
       </div>

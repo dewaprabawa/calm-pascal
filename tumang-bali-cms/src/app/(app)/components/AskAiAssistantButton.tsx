@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { openZapierChat } from '../lib/openZapierChat'
+import { ensureZapierScriptLoaded } from '../lib/openZapierChat'
 import AskAiChatSheet from './AskAiChatSheet'
 
 type AskAiAssistantButtonProps = {
@@ -9,9 +9,9 @@ type AskAiAssistantButtonProps = {
 }
 
 /**
- * Hero CTA that opens the on-site Zapier AI assistant.
- * Opens an inline chat sheet (reliable on mobile) and also requests the
- * floating Zapier popup to load/open as a best-effort companion.
+ * Hero CTA that opens the on-site Zapier AI assistant in an inline chat sheet.
+ * The floating Zapier popup cannot be opened reliably from a custom button
+ * (cross-origin iframe), so the sheet hosts an inline embed instead.
  */
 export default function AskAiAssistantButton({ className }: AskAiAssistantButtonProps) {
   const [sheetOpen, setSheetOpen] = useState(false)
@@ -23,7 +23,8 @@ export default function AskAiAssistantButton({ className }: AskAiAssistantButton
         id="zapier-chatbot-open-label"
         data-open-zapier-chat
         onClick={() => {
-          openZapierChat()
+          ensureZapierScriptLoaded()
+          document.documentElement.classList.add('tumang-ai-sheet-open')
           setSheetOpen(true)
         }}
         className={
@@ -52,7 +53,13 @@ export default function AskAiAssistantButton({ className }: AskAiAssistantButton
         Ask our AI assistant
       </button>
 
-      <AskAiChatSheet open={sheetOpen} onClose={() => setSheetOpen(false)} />
+      <AskAiChatSheet
+        open={sheetOpen}
+        onClose={() => {
+          document.documentElement.classList.remove('tumang-ai-sheet-open')
+          setSheetOpen(false)
+        }}
+      />
     </>
   )
 }

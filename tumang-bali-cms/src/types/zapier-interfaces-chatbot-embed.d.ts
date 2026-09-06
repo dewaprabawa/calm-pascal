@@ -11,7 +11,7 @@ declare namespace JSX {
       "aria-label"?: string
       "data-tumang-popup"?: string
       "data-tumang-inline"?: string
-      style?: React.CSSProperties | string
+      style?: Record<string, string | number> | string
     }
   }
 }
