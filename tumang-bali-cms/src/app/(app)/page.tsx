@@ -24,7 +24,7 @@ const LazyGoogleMap = dynamic(() => import('./components/LazyGoogleMap'))
 const BookingModal = dynamic(() => import('./components/BookingModal'))
 const WhatsAppFloat = dynamic(() => import('./components/WhatsAppFloat'))
 const StatsCounter = dynamic(() => import('./components/StatsCounter'))
-
+const AskAiAssistantButton = dynamic(() => import('./components/AskAiAssistantButton'))
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
@@ -221,7 +221,11 @@ export default async function Page() {
               <Link href="/balinese-cooking-class-ubud" className="w-full sm:w-auto flex items-center justify-center bg-white/50 hover:bg-white/80 dark:bg-zinc-900/50 dark:hover:bg-zinc-800/80 backdrop-blur-md border border-stone-200 dark:border-zinc-700 text-stone-800 dark:text-stone-200 px-8 py-4 rounded-full font-semibold text-lg shadow-md transition-all hover:-translate-y-1">
                 See class details
               </Link>
+              <AskAiAssistantButton />
             </div>
+            <p className="text-sm text-stone-500 dark:text-stone-400 max-w-xl">
+              Not sure which session fits? Ask our AI assistant — it opens our chat so you can ask about schedules, prices, vegetarian options, and pickup.
+            </p>
           </div>
           
           {/* Right Column: Visual Showcase */}
