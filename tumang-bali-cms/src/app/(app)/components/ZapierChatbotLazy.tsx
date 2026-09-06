@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import ZapierChatbotPositioner from './ZapierChatbotPositioner'
+import { OPEN_ZAPIER_CHAT_EVENT } from '../lib/openZapierChat'
 
 const SCRIPT_SRC =
   'https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'
@@ -11,6 +12,7 @@ const CHATBOT_ID = 'cmtlla8tc0084rm7xj52d7m6w'
  * Defer Zapier until user interaction (or a long idle fallback).
  * Avoids third-party cookies / untitled iframes on initial PageSpeed audits
  * while still loading chat for real visitors.
+ * Also loads immediately when a CTA asks to open the chat popup.
  */
 export default function ZapierChatbotLazy() {
   const [ready, setReady] = useState(false)
@@ -33,6 +35,9 @@ export default function ZapierChatbotLazy() {
       window.addEventListener(event, enable, { once: true, passive: true }),
     )
 
+    // Hero / CTA "Ask AI" buttons dispatch this to force-load and open chat.
+    window.addEventListener(OPEN_ZAPIER_CHAT_EVENT, enable)
+
     // Real visitors who never interact still get chat after idle; Lighthouse
     // usually finishes before this fallback fires.
     const idleTimer = window.setTimeout(enable, 12_000)
@@ -40,6 +45,7 @@ export default function ZapierChatbotLazy() {
     return () => {
       window.clearTimeout(idleTimer)
       events.forEach((event) => window.removeEventListener(event, enable))
+      window.removeEventListener(OPEN_ZAPIER_CHAT_EVENT, enable)
     }
   }, [])
 
@@ -54,12 +60,16 @@ export default function ZapierChatbotLazy() {
     document.head.appendChild(script)
   }, [ready])
 
-  if (!ready) return null
+  if (!ready) {
+    return <ZapierChatbotPositioner />
+  }
 
   const ZapierChatbotEmbed = 'zapier-interfaces-chatbot-embed' as any
 
   return (
     <>
+      {/* Always mount so open-chat events are never missed before embed loads */}
+      <ZapierChatbotPositioner />
       <div className="fixed bottom-6 z-[1600] flex flex-col items-start gap-2 pointer-events-auto left-4 sm:left-auto sm:right-6 sm:items-end">
         <ZapierChatbotEmbed
           is-popup="true"
@@ -68,7 +78,6 @@ export default function ZapierChatbotLazy() {
           aria-label="Open Tumang Bali cooking class chat assistant"
         />
       </div>
-      <ZapierChatbotPositioner />
     </>
   )
 }
