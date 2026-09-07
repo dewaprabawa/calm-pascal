@@ -22,6 +22,7 @@ export default function TermsOfServicePage() {
       eyebrow="Policies"
       title="Terms of Service"
       intro="These Terms of Service govern bookings, payments, attendance, and use of tumangbaliclass.com for Tumang Bali Cooking Class."
+      updatedLabel="Last updated: October 2026"
     >
       <LegalSection title="Agreement">
         <p>
@@ -46,8 +47,29 @@ export default function TermsOfServicePage() {
           to these Terms.
         </p>
         <p>
-          Published shared and private rates are in Indonesian Rupiah. OTA prices can be slightly higher
-          — rates match our website; the experience itself is the same.
+          Published shared and private rates are in Indonesian Rupiah and are{' '}
+          <strong>all-inclusive</strong> for the core class experience (instruction, ingredients,
+          meal, recipe booklet, and Ubud-area hotel pickup where advertised). We do not add
+          required on-site fees to participate. Optional extras (for example discretionary tips or
+          souvenirs) are never required to complete the class.
+        </p>
+        <p>
+          Rates are the same on tumangbaliclass.com, WhatsApp, GetYourGuide, Viator, and Airbnb
+          Experiences — we do not overcharge for partner checkout. Currency display or platform
+          formatting may differ; the experience and inclusions are the same.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="GetYourGuide bookings">
+        <p>
+          When you book through GetYourGuide, you purchase the class directly from Tumang Bali.
+          GetYourGuide acts as our commercial agent for checkout, payment collection, and customer
+          service on that booking. Cancel, modify, or request refunds for GetYourGuide bookings
+          through GetYourGuide (see our{' '}
+          <a href="/refund-policy" className="text-orange-600 font-semibold hover:underline">
+            Refund Policy
+          </a>
+          ). We do not accept GetYourGuide cancellations directly via WhatsApp or email.
         </p>
       </LegalSection>
 

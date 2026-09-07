@@ -9,7 +9,7 @@ export const revalidate = 3600
 export const metadata: Metadata = buildPageMetadata({
   title: 'Refund Policy — Tumang Bali Cooking Class',
   description:
-    'Tumang Bali Cooking Class refund policy: cancel at least 24 hours before your class starts for a 100% refund. Learn how to request a refund or reschedule.',
+    'Tumang Bali refund policy: cancel ≥24 hours before class for a 100% refund on direct bookings. GetYourGuide: free cancellation until 24 hours before start — cancel only via GetYourGuide.',
   path: '/refund-policy',
   ogTitle: 'Refund Policy | Tumang Bali',
   image: '/images/gallery-group.jpg',
@@ -21,7 +21,8 @@ export default function RefundPolicyPage() {
     <LegalPageShell
       eyebrow="Policies"
       title="Refund Policy"
-      intro="Cancellations made at least 24 hours before the class starts will receive a 100% refund. This page explains our cancellation, refund, and reschedule rules for Tumang Bali Cooking Class."
+      intro="Cancellations made at least 24 hours before the class starts will receive a 100% refund. This page explains our cancellation, refund, and reschedule rules for Tumang Bali Cooking Class — including GetYourGuide bookings."
+      updatedLabel="Last updated: October 2026"
     >
       <LegalSection title="100% refund with 24 hours’ notice">
         <p>
@@ -83,9 +84,36 @@ export default function RefundPolicyPage() {
       <LegalSection title="Bookings made on partner platforms">
         <p>
           If you booked through GetYourGuide, Viator, Airbnb Experiences, TripAdvisor, or
-          another partner, that platform’s cancellation and refund rules apply. Please request
-          changes or refunds through the platform where you paid. We are happy to help via WhatsApp
-          if you need our booking reference.
+          another partner, that platform’s cancellation and refund rules apply. Request changes
+          or refunds through the platform where you paid — we cannot process partner-platform
+          cancellations or refunds directly.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="GetYourGuide bookings">
+        <p>
+          GetYourGuide bookings are a contract between you and Tumang Bali; GetYourGuide acts as
+          commercial agent for the booking. For cancellation and refunds:
+        </p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>
+            Cancel only through GetYourGuide (app, website, or GetYourGuide customer service) —
+            not via WhatsApp or email to Tumang Bali.
+          </li>
+          <li>
+            <strong>Free cancellation</strong> until <strong>24 hours before</strong> your class
+            start time: you receive a full refund of the amount paid on GetYourGuide.
+          </li>
+          <li>
+            Cancellations after that window, and no-shows, are non-refundable under GetYourGuide’s
+            standard rules (GetYourGuide may still grant a refund for documented extenuating
+            circumstances at its discretion).
+          </li>
+        </ul>
+        <p>
+          If you need our booking reference for a GetYourGuide support request, message WhatsApp{' '}
+          {SITE_CONTACT.whatsappDisplay} — we will still direct the cancellation itself back to
+          GetYourGuide.
         </p>
       </LegalSection>
 

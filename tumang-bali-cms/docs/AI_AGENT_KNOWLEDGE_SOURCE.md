@@ -242,7 +242,8 @@ A: Try WhatsApp for same-day availability. OTAs show live availability for insta
 A: OTAs accept card online. WhatsApp bookings arrange bank transfer, cash, or other methods with the team.
 
 **Q: What if I need to cancel or change date?**  
-A: For direct Tumang Bali bookings, cancel at least 24 hours before class start for a **100% refund**. Message WhatsApp (+62 822-1013-2418) or email tumangbalicookingclass@gmail.com. Full policy: https://tumangbaliclass.com/refund-policy. OTA bookings follow that platform’s rules.
+A: For **direct** Tumang Bali bookings, cancel at least 24 hours before class start for a **100% refund**. Message WhatsApp (+62 822-1013-2418) or email tumangbalicookingclass@gmail.com. Full policy: https://tumangbaliclass.com/refund-policy.  
+For **GetYourGuide** bookings: cancel only through GetYourGuide (app/website/support) — not via WhatsApp. Free cancellation until 24 hours before class start = full refund; later cancellations and no-shows are non-refundable under GYG rules. Other OTAs (Viator, Airbnb) follow that platform’s cancellation rules.
 
 ---
 
