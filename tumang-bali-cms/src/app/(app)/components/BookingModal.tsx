@@ -277,12 +277,15 @@ _(WhatsApp consultation from website)_`
                         ? activity.groupPrice * 1000
                         : activity.groupPrice
                       : null
+                  const isPrivate = String(activity.title || '').toLowerCase().includes('private')
                   const priceLabel =
                     solo == null
                       ? ''
                       : group == null
                         ? ` - ${solo.toLocaleString('id-ID')} IDR`
-                        : ` - ${solo.toLocaleString('id-ID')} (1) / ${group.toLocaleString('id-ID')} (2+)`
+                        : isPrivate || group >= solo
+                          ? ` - ${solo.toLocaleString('id-ID')} (1) / ${group.toLocaleString('id-ID')} (2+)`
+                          : ` - from ${group.toLocaleString('id-ID')} IDR (2+) · ${solo.toLocaleString('id-ID')} (1)`
                   return (
                   <option key={activity.id} value={activity.title}>
                     {activity.title}{priceLabel}

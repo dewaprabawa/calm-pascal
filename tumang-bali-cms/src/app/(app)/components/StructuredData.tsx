@@ -155,8 +155,8 @@ export default function StructuredData() {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Shared Cooking Class — 1 adult',
-        price: '616032',
+        name: 'Shared Cooking Class — 2+ adults',
+        price: '506370',
         priceCurrency: 'IDR',
         availability: 'https://schema.org/InStock',
         validFrom: '2026-01-01',
@@ -165,8 +165,8 @@ export default function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: 'Shared Cooking Class — 2+ adults',
-        price: '506370',
+        name: 'Shared Cooking Class — 1 adult',
+        price: '616032',
         priceCurrency: 'IDR',
         availability: 'https://schema.org/InStock',
         validFrom: '2026-01-01',
@@ -357,7 +357,7 @@ export default function StructuredData() {
         name: 'How much does a Bali cooking class in Ubud cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'At Tumang Bali, a shared class is IDR 616,032 for 1 adult or IDR 506,370 per adult for 2+. Private is IDR 633,090 for 1 adult or IDR 1,266,180 for a minimum of 2 participants. Same price on every channel. Includes Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
+          text: 'At Tumang Bali, a shared class is from IDR 506,370 per adult for 2+ guests (best value for couples). Solo is IDR 616,032 for 1 adult. Private is IDR 633,090 for 1 adult or IDR 1,266,180 for a minimum of 2 participants. Same price on every channel. Includes Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
         },
       },
       {
@@ -389,7 +389,7 @@ export default function StructuredData() {
         name: 'Is Tumang Bali Cooking Class good for couples and families?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Couples cook side by side in the village kitchen; families with kids aged 8+ are welcome. Shared class IDR 506,370 each; private kitchen IDR 633,090 for 1 adult (IDR 1,266,180 min. 2) (min. 2 participants IDR 1,266,180 on private).',
+          text: 'Yes. Couples cook side by side in the village kitchen; families with kids aged 8+ are welcome. Shared from IDR 506,370 per adult for 2+ guests (1 adult IDR 616,032). Private: IDR 633,090 (1) / IDR 1,266,180 (min. 2).',
         },
       },
     ],
