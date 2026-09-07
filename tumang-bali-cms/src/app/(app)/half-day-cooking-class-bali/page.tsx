@@ -11,7 +11,7 @@ export const revalidate = 60
 export const metadata: Metadata = buildPageMetadata({
   title: 'Half-Day Cooking Class Ubud — ~4 Hours, Pickup Included',
   description:
-    'Half-day cooking class near Ubud (~4 hours): market tour, rice-field walk, 10+ dishes. Morning or afternoon. Free hotel pickup from IDR 350K. Max 8 guests.',
+    'Half-day cooking class near Ubud (~4 hours): market tour, rice-field walk, 10+ dishes. Morning or afternoon. Free hotel pickup from IDR 506,370. Max 8 guests.',
   path: '/half-day-cooking-class-bali',
   ogTitle: 'Half-Day Cooking Class Ubud — Morning or Afternoon',
   image: '/images/gallery-satay.jpg',

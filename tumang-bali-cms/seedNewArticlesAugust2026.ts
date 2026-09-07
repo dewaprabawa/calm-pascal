@@ -83,12 +83,12 @@ const articles = [
     slug: 'ubud-cooking-class-price',
     title: 'Ubud Cooking Class Price 2026 — What You Actually Pay',
     excerpt:
-      'How much does a cooking class in Ubud cost in 2026? Shared classes start at IDR 350K. A private class for 1 person is IDR 650K; kids are IDR 550K. Full inclusions explained.',
+      'How much does a cooking class in Ubud cost in 2026? Shared classes start at IDR 506,370. A private class for 1 person is IDR 633,090; kids are IDR 1,266,180. Full inclusions explained.',
     image: 'img2.jpg',
     imageAlt: 'Guests cooking together during a Balinese cooking class in Ubud',
     metaTitle: 'Ubud Cooking Class Price 2026 | Tumang Bali',
     metaDescription:
-      'Ubud cooking class prices in 2026: IDR 350K shared, IDR 650K private for 1 person, IDR 550K kids. Includes pickup, market tour, 10+ dishes and lunch.',
+      'Ubud cooking class prices in 2026: IDR 506,370 shared, IDR 633,090 private for 1 person, IDR 1,266,180 kids. Includes pickup, market tour, 10+ dishes and lunch.',
     content: root([
       paragraph([
         text('Travellers searching '),
@@ -99,16 +99,16 @@ const articles = [
       ]),
       heading('h2', 'Quick answer'),
       list([
-        'Shared morning or afternoon class: IDR 350,000 per person',
-        'Private class for 1 person (adult): IDR 650,000',
-        'Kids on a private class: IDR 550,000',
+        'Shared morning or afternoon class: IDR 506,370 per adult (2+ participants; IDR 616,032 for 1)',
+        'Private class for 1 person (adult): IDR 633,090',
+        'Kids on a private class: IDR 1,266,180',
       ]),
       paragraph([
         text('Those prices include Ubud hotel pickup and drop-off, the class itself, ingredients, the meal you cook, and a printed recipe booklet. Morning sessions also include the traditional market tour and rice-field walk.'),
       ]),
       heading('h2', 'What other Ubud classes typically charge'),
       paragraph([
-        text('Independent 2026 guides put village and family-run Ubud classes around IDR 450,000–650,000, mid-range school kitchens around IDR 600,000–800,000, and hotel-style classes higher still. Private 1–2 person sessions elsewhere often sit at IDR 1,200,000–2,500,000. Our shared class at IDR 350K is positioned for value; our private 1-person rate at IDR 650K is still well below many exclusive villa chefs.'),
+        text('Independent 2026 guides put village and family-run Ubud classes around IDR 450,000–650,000, mid-range school kitchens around IDR 600,000–800,000, and hotel-style classes higher still. Private 1–2 person sessions elsewhere often sit at IDR 1,200,000–2,500,000. Our shared class at IDR 506,370 is positioned for value; our private 1-person rate at IDR 633,090 is still well below many exclusive villa chefs.'),
       ]),
       heading('h2', 'Shared vs private — which should you book?'),
       paragraph([
@@ -134,14 +134,14 @@ const articles = [
   },
   {
     slug: 'private-cooking-class-ubud-price',
-    title: 'Private Cooking Class Ubud — 1 Person IDR 650K, Kids IDR 550K',
+    title: 'Private Cooking Class Ubud — 1 Person IDR 633,090, Min. 2 IDR 1,266,180',
     excerpt:
-      'Want a private Balinese cooking class in Ubud for one person or a family? Adult / solo rate is IDR 650K. Kids are IDR 550K. Your own chef, your menu, no other guests.',
+      'Want a private Balinese cooking class in Ubud for one person or a family? Adult / solo rate is IDR 633,090. Kids are IDR 1,266,180. Your own chef, your menu, no other guests.',
     image: 'gallery-group.jpg',
     imageAlt: 'Private group cooking class in a Balinese kitchen in Ubud',
     metaTitle: 'Private Cooking Class Ubud Price | 1 Person 650K, Kids 550K',
     metaDescription:
-      'Private cooking class in Ubud: IDR 650,000 for 1 person, IDR 550,000 for kids. Exclusive kitchen, local chef, market tour and hotel pickup.',
+      'Private cooking class in Ubud: IDR 633,090 for 1 person, IDR 1,266,180 for kids. Exclusive kitchen, local chef, market tour and hotel pickup.',
     content: root([
       paragraph([
         text('Searches like '),
@@ -154,9 +154,9 @@ const articles = [
       ]),
       heading('h2', 'Private class prices'),
       list([
-        '1 person / adult: IDR 650,000',
-        'Kids: IDR 550,000',
-        'Shared (non-private) class, if you prefer a group: IDR 350,000 per person',
+        '1 person / adult: IDR 633,090',
+        'Kids: IDR 1,266,180',
+        'Shared (non-private) class, if you prefer a group: IDR 506,370 per adult (2+ participants; IDR 616,032 for 1)',
       ]),
       heading('h2', 'Who the 1-person class is for'),
       paragraph([
@@ -166,7 +166,7 @@ const articles = [
       ]),
       heading('h2', 'Families and kids'),
       paragraph([
-        text('Children in a private class pay IDR 550,000. They grind spices, wrap sate lilit, and mix sambal — adults handle hot pans. Kids under 4 can usually sit in without a cooking station; ask us when you book.'),
+        text('Children in a private class pay IDR 1,266,180. They grind spices, wrap sate lilit, and mix sambal — adults handle hot pans. Kids under 4 can usually sit in without a cooking station; ask us when you book.'),
       ]),
       heading('h2', 'What you get'),
       list([
@@ -276,9 +276,9 @@ const articles = [
       paragraph([
         text('Message WhatsApp with your hotel name and preferred date. Or book online via '),
         link('book your cooking class', '/book-your-cooking-class'),
-        text('. Shared class IDR 350K; '),
+        text('. Shared class IDR 506,370; '),
         link('private 1 person', '/private-cooking-class-ubud'),
-        text(' IDR 650K, kids IDR 550K.'),
+        text(' IDR 633,090, min. 2 IDR 1,266,180.'),
       ]),
     ]),
   },
@@ -292,15 +292,14 @@ async function upsertPrivateActivity(payload: Awaited<ReturnType<typeof getPaylo
   })
 
   const data = {
-    title: 'Private Cooking Class (1 Person)',
+    title: 'Private Cooking Class',
     durationHours: 4,
-    price: 650,
-    kidsPrice: 550,
+    price: 633090,
+    groupPrice: 1266180,
     includedItems: [
       { item: 'Kitchen exclusive to you' },
       { item: 'Market Tour (morning)' },
       { item: 'Hands-on Cooking (10+ Dishes)' },
-      { item: 'Kids rate IDR 550K' },
       { item: 'Ubud Hotel Transport' },
       { item: 'Recipe Book' },
     ],

@@ -100,7 +100,7 @@ export function commercialClose(extra?: string): LexNode[] {
       ),
     ]),
     paragraph([
-      text('Shared class from IDR 350,000 per person. Private 1-person class IDR 650,000. Free Ubud-area pickup. '),
+      text('Shared class from IDR 506,370 per adult (2+ participants; IDR 616,032 for 1). Private 1-person class IDR 633,090. Free Ubud-area pickup. '),
       link('Book your cooking class', '/book-your-cooking-class'),
       text(' or see the full '),
       link('Balinese cooking class in Ubud', '/balinese-cooking-class-ubud'),

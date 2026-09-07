@@ -56,7 +56,7 @@ export default function ClassLanding({
     name: content.h1Plain,
     description: content.intro,
     pagePath: content.path,
-    priceIdr: content.path === PRIMARY_COOKING_CLASS_PATH ? 350000 : undefined,
+    priceIdr: content.path === PRIMARY_COOKING_CLASS_PATH ? 506370 : undefined,
   })
   const localBusinessSchema = buildLandingLocalBusinessRef(content.path, content.h1Plain)
   const webPageSchema = buildLandingWebPageSchema({

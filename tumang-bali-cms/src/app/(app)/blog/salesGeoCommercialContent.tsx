@@ -11,12 +11,12 @@ const halfDay = '/half-day-cooking-class-bali'
 
 export const ubudCookingClassPrice: StaticArticle = {
   slug: 'ubud-cooking-class-price',
-  title: 'Ubud Cooking Class Price 2026 — Shared IDR 350K, Private Rates Explained',
-  metaTitle: 'Ubud Cooking Class Price 2026 — IDR 350K Shared | Tumang Bali',
+  title: 'Ubud Cooking Class Price 2026 — Shared & Private Adult Rates',
+  metaTitle: 'Ubud Cooking Class Price 2026 — Shared & Private | Tumang Bali',
   metaDescription:
-    'Ubud cooking class price 2026: shared IDR 350,000, private 1 person IDR 650,000, kids IDR 550,000. Includes pickup, market tour, 10+ dishes. Book Tumang Bali.',
+    'Ubud cooking class price 2026: shared IDR 616,032 (1) / IDR 506,370 (2+), private IDR 633,090 (1) / IDR 1,266,180 (min. 2). Same price on every channel. Book Tumang Bali.',
   excerpt:
-    'How much does a cooking class in Ubud cost in 2026? Shared classes start at IDR 350K. A private class for 1 person is IDR 650K; kids are IDR 550K. Full inclusions explained.',
+    'How much does a cooking class in Ubud cost in 2026? Shared: IDR 616,032 for 1 adult, IDR 506,370 for 2+. Private: IDR 633,090 for 1 adult, IDR 1,266,180 for min. 2. Full inclusions explained.',
   image: '/images/blog/rice-field-class.webp',
   imageAlt: 'Guests dining after a Balinese cooking class near Ubud — 2026 price guide',
   author: 'Tumang Bali Team',
@@ -33,43 +33,42 @@ export const ubudCookingClassPrice: StaticArticle = {
     {
       question: 'How much is a cooking class in Ubud in 2026?',
       answer:
-        'Tumang Bali shared morning or afternoon class is IDR 350,000 per person. Private class for 1 adult is IDR 650,000; kids on a private class are IDR 550,000. Prices include Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
+        'Tumang Bali shared class is IDR 616,032 for 1 adult or IDR 506,370 per adult for 2+. Private is IDR 633,090 for 1 adult or IDR 1,266,180 for min. 2 participants. Same price on website, WhatsApp, and OTAs.',
     },
     {
-      question: 'What is included in the IDR 350,000 cooking class price?',
+      question: 'What is included in the shared cooking class price?',
       answer:
         'Hotel pickup and drop-off in the Ubud area, guided morning market tour (AM class), rice-field walk, hands-on cooking of 10+ dishes, the shared feast, and a printed recipe booklet. Vegetarian and vegan menus at no extra charge.',
     },
     {
-      question: 'Why are GetYourGuide or Viator prices sometimes higher?',
+      question: 'Do GetYourGuide or Viator cost more?',
       answer:
-        'OTA platforms (GetYourGuide, Viator, Airbnb) charge a booking commission, so their listed price may sit slightly above our direct IDR 350,000 rate. Same class — the difference is the platform fee. Book direct for the lowest price, or use an OTA for instant checkout.',
+        'No. OTA platforms (GetYourGuide, Viator, Airbnb) list the same Tumang Bali rates — no overcharge. Use an OTA for instant checkout.',
     },
     {
       question: 'Is Tumang Bali cheaper than other Ubud cooking classes?',
       answer:
-        'Independent 2026 guides put village classes around IDR 450,000–650,000 and hotel-style classes higher. Our shared rate at IDR 350K is positioned for value while keeping market tour, max 8 guests, and 10+ dishes.',
+        'Independent 2026 guides put village classes around IDR 450,000–650,000 and hotel-style classes higher. Our shared rate at IDR 506,370 is positioned for value while keeping market tour, max 8 guests, and 10+ dishes.',
     },
   ],
   body: (
     <>
       <p data-speakable>
         <strong>Ubud cooking class price in 2026 at Tumang Bali:</strong> shared morning or afternoon class{' '}
-        <strong>IDR 350,000</strong> per person; private class for 1 adult <strong>IDR 650,000</strong>; kids on
-        a private class <strong>IDR 550,000</strong>. Those rates include Ubud-area hotel pickup, ingredients,
+        <strong>IDR 616,032</strong> for 1 adult / <strong>IDR 506,370</strong> for 2+; private <strong>IDR 633,090</strong> for 1 adult / <strong>IDR 1,266,180</strong> for min. 2. Those rates include Ubud-area hotel pickup, ingredients,
         the meal you cook, and a recipe booklet. Morning sessions also include the traditional market tour and
         rice-field walk.
       </p>
       <h2>2026 price table — Tumang Bali</h2>
       <ul>
         <li>
-          <strong>Shared class</strong> (morning or afternoon): IDR 350,000 per person
+          <strong>Shared class</strong> (morning or afternoon): IDR 616,032 (1 adult) · IDR 506,370 (2+)
         </li>
         <li>
-          <strong>Private class — 1 adult</strong>: IDR 650,000
+          <strong>Private class — 1 adult</strong>: IDR 633,090
         </li>
         <li>
-          <strong>Kids on a private class</strong>: IDR 550,000
+          <strong>Private — min. 2 participants</strong>: IDR 1,266,180
         </li>
       </ul>
       <p>
@@ -90,14 +89,14 @@ export const ubudCookingClassPrice: StaticArticle = {
       <p>
         Village and family-run Ubud classes often sit around IDR 450,000–650,000. Mid-range school kitchens run
         IDR 600,000–800,000. Hotel or villa chef sessions can exceed IDR 1,200,000 for private 1–2 person
-        bookings. Our shared class at IDR 350K keeps authenticity (market tour, hand-ground bumbu, small
+        bookings. Our shared class at IDR 506,370 keeps authenticity (market tour, hand-ground bumbu, small
         groups) without resort markups. Full side-by-side:{' '}
         <Link href={compare}>compare Ubud cooking classes</Link>.
       </p>
       <h2>OTA vs direct booking price</h2>
       <p>
-        Booking on GetYourGuide, Viator, or Airbnb Experiences may show a slightly higher price because
-        those platforms take a commission. Use an OTA when you want instant checkout; book on{' '}
+        Booking on GetYourGuide, Viator, or Airbnb Experiences uses the same Tumang Bali rates as our website
+        and WhatsApp — no commission overcharge. Use an OTA when you want instant checkout; book on{' '}
         <Link href={book}>tumangbaliclass.com</Link> or WhatsApp for the lowest direct rate. Guides:{' '}
         <Link href="/blog/book-cooking-class-ubud-getyourguide">GetYourGuide</Link> ·{' '}
         <Link href="/blog/book-cooking-class-ubud-viator">Viator</Link> ·{' '}
@@ -115,12 +114,12 @@ export const ubudCookingClassPrice: StaticArticle = {
 
 export const privateCookingClassUbudPrice: StaticArticle = {
   slug: 'private-cooking-class-ubud-price',
-  title: 'Private Cooking Class Ubud Price — 1 Person IDR 650K, Kids IDR 550K',
-  metaTitle: 'Private Cooking Class Ubud Price | 1 Person 650K, Kids 550K',
+  title: 'Private Cooking Class Ubud Price — 1 Adult IDR 633,090, Min. 2 IDR 1,266,180',
+  metaTitle: 'Private Cooking Class Ubud Price | 1 Adult IDR 633,090, Min. 2 IDR 1,266,180',
   metaDescription:
-    'Private cooking class in Ubud: IDR 650,000 for 1 person, IDR 550,000 for kids. Exclusive kitchen, local chef, market tour and hotel pickup. Book Tumang Bali.',
+    'Private cooking class in Ubud: IDR 633,090 for 1 adult, IDR 1,266,180 for min. 2 participants. Exclusive kitchen, local chef, market tour and hotel pickup. Book Tumang Bali.',
   excerpt:
-    'Want a private Balinese cooking class in Ubud for one person or a family? Adult / solo rate is IDR 650K. Kids are IDR 550K. Your own chef, your menu, no other guests.',
+    'Want a private Balinese cooking class in Ubud for one person or a couple? Adult / solo rate is IDR 633,090. Minimum 2 participants is IDR 1,266,180. Your own chef, your menu, no other guests.',
   image: '/images/blog/private-group-class.webp',
   imageAlt: 'Private Balinese cooking class for one guest in a village kitchen near Ubud',
   author: 'Chef Wayan',
@@ -131,13 +130,13 @@ export const privateCookingClassUbudPrice: StaticArticle = {
     'private cooking class ubud',
     'solo cooking class bali',
     'private chef cooking class ubud',
-    'kids private cooking class bali',
+    'private cooking class bali couple',
   ],
   faqs: [
     {
       question: 'How much is a private cooking class in Ubud?',
       answer:
-        'At Tumang Bali, a private cooking class for 1 adult is IDR 650,000. Kids on a private class are IDR 550,000. Shared (non-private) class is IDR 350,000 per person if you prefer a small group.',
+        'At Tumang Bali, a private cooking class for 1 adult is IDR 633,090. For a minimum of 2 participants it is IDR 1,266,180. Shared class is IDR 616,032 for 1 adult or IDR 506,370 per adult for 2+.',
     },
     {
       question: 'What do I get in a private class that shared does not?',
@@ -154,15 +153,15 @@ export const privateCookingClassUbudPrice: StaticArticle = {
     <>
       <p data-speakable>
         Looking for a <strong>private cooking class in Ubud</strong>? Tumang Bali rates in 2026:{' '}
-        <strong>IDR 650,000</strong> for 1 adult and <strong>IDR 550,000</strong> for kids. The kitchen is
-        exclusive — your chef, your menu pace, no other guests. Shared class remains IDR 350,000 if you prefer
-        a friendly max-8 group.
+        <strong>IDR 633,090</strong> for 1 adult and <strong>IDR 1,266,180</strong> for a minimum of 2
+        participants. The kitchen is exclusive — your chef, your menu pace, no other guests. Shared class is
+        IDR 616,032 for 1 adult or IDR 506,370 per adult for 2+.
       </p>
       <h2>Private cooking class price list</h2>
       <ul>
-        <li>1 person / adult: IDR 650,000</li>
-        <li>Kids (private class): IDR 550,000</li>
-        <li>Shared class alternative: IDR 350,000 per person</li>
+        <li>1 adult: IDR 633,090</li>
+        <li>Minimum 2 participants: IDR 1,266,180</li>
+        <li>Shared class alternative: IDR 616,032 (1) / IDR 506,370 (2+)</li>
       </ul>
       <h2>Why book private</h2>
       <p>
@@ -172,9 +171,9 @@ export const privateCookingClassUbudPrice: StaticArticle = {
         private for intimacy — see our{' '}
         <Link href="/blog/cooking-class-ubud-for-couples">couples cooking class guide</Link>.
       </p>
-      <h2>Kids on a private class</h2>
+      <h2>Private — min. 2 participants</h2>
       <p>
-        Children in a private class pay IDR 550,000. They grind spices, wrap sate lilit, and mix sambal —
+        Children in a private class pay IDR 1,266,180. They grind spices, wrap sate lilit, and mix sambal —
         adults handle hot pans. Kids under 4 can usually sit in without a cooking station; ask when you book.
         Family overview: <Link href="/blog/ubud-cooking-class-for-families">Ubud cooking class for families</Link>.
       </p>
@@ -225,7 +224,7 @@ export const bestCookingClassInUbud: StaticArticle = {
     {
       question: 'How much does the best cooking class in Ubud cost?',
       answer:
-        'Quality Ubud cooking classes range from IDR 350,000 for a shared village class to IDR 650,000+ for a private session. Avoid classes under IDR 300K — they often skip the market or use premade spice jars.',
+        'Quality Ubud cooking classes range from IDR 506,370 for a shared village class to IDR 633,090+ for a private session. Avoid classes under IDR 300K — they often skip the market or use premade spice jars.',
     },
     {
       question: 'Is Ubud the best place in Bali for a cooking class?',
@@ -238,7 +237,7 @@ export const bestCookingClassInUbud: StaticArticle = {
       <p data-speakable>
         If you are searching for the <strong>best cooking class in Ubud</strong>, look for a real morning
         market tour, spice paste ground on a cobek, 10+ dishes from scratch, and a local Balinese chef — not a
-        hotel demo. Tumang Bali matches that profile: max 8 guests, village kitchen, IDR 350,000 shared,
+        hotel demo. Tumang Bali matches that profile: max 8 guests, village kitchen, IDR 506,370 shared,
         TripAdvisor Travelers&apos; Choice 2026.
       </p>
       <h2>What makes the best cooking class in Ubud</h2>
@@ -292,14 +291,14 @@ export const bestCookingClassInUbud: StaticArticle = {
       <h2>Best cooking class in Ubud for different travellers</h2>
       <p>
         Solo travellers and anniversary couples often prefer a{' '}
-        <Link href={privateClass}>private cooking class</Link> (IDR 650K for one). Families love the shared
+        <Link href={privateClass}>private cooking class</Link> (IDR 633,090 for one). Families love the shared
         morning class — kids grind spices. Vegetarians need every dish adapted:{' '}
         <Link href="/blog/vegetarian-cooking-class-ubud-guide">vegetarian cooking class guide</Link>. Couples:{' '}
         <Link href="/blog/cooking-class-ubud-for-couples">couples guide</Link>.
       </p>
       <h2>Book the best cooking class in Ubud</h2>
       <p>
-        Shared from IDR 350,000 · private 1-person IDR 650,000 · free Ubud pickup.{' '}
+        Shared from IDR 506,370 · private 1-person IDR 633,090 · free Ubud pickup.{' '}
         <Link href={money}>Book Tumang Bali</Link> · <Link href={book}>online booking</Link> · read{' '}
         <Link href="/blog/is-a-bali-cooking-class-worth-it">is a Bali cooking class worth it?</Link>
       </p>
@@ -350,7 +349,7 @@ export const bestCookingClassInBali: StaticArticle = {
         The <strong>best cooking class in Bali</strong> is rarely in a hotel lobby. Travellers who want an
         authentic half-day — market, spices, rice fields, and a meal they cooked — usually book in or near{' '}
         <strong>Ubud</strong>. Tumang Bali is a village kitchen with market tour, max 8 guests, 10+ dishes,
-        and IDR 350,000 shared — a top pick for foreign food travellers in 2026.
+        and IDR 506,370 shared — a top pick for foreign food travellers in 2026.
       </p>
       <h2>Why the best cooking class in Bali is near Ubud</h2>
       <p>
@@ -388,8 +387,8 @@ export const bestCookingClassInBali: StaticArticle = {
       </ul>
       <h2>Price guide (2026)</h2>
       <p>
-        Expect IDR 350,000–450,000 for a quality shared village class, IDR 600,000–800,000 for central Ubud
-        schools, and IDR 650,000+ for private. Full breakdown:{' '}
+        Expect IDR 506,370–450,000 for a quality shared village class, IDR 600,000–800,000 for central Ubud
+        schools, and IDR 633,090+ for private. Full breakdown:{' '}
         <Link href="/blog/ubud-cooking-class-price">Ubud cooking class price 2026</Link>. Anything much cheaper
         usually cuts the market tour or uses premade ingredients.
       </p>
@@ -409,7 +408,7 @@ export const cookingClassUbudFromCanggu: StaticArticle = {
   title: 'Cooking Class in Ubud from Canggu or Seminyak — Pickup Guide 2026',
   metaTitle: 'Ubud Cooking Class from Canggu or Seminyak | Pickup Guide',
   metaDescription:
-    'Doing an Ubud cooking class from Canggu or Seminyak: travel time, pickup fees, morning vs afternoon, and how to book with Tumang Bali. Shared IDR 350K.',
+    'Doing an Ubud cooking class from Canggu or Seminyak: travel time, pickup fees, morning vs afternoon, and how to book with Tumang Bali. Shared IDR 506,370.',
   excerpt:
     'Can you do a cooking class in Ubud if you stay in Canggu or Seminyak? Yes. Free pickup is for the Ubud area; we arrange extra transport from the coast. Timing and what to expect.',
   image: '/images/blog/walkthrough-class.webp',
@@ -449,7 +448,7 @@ export const cookingClassUbudFromCanggu: StaticArticle = {
         Staying in <strong>Canggu or Seminyak</strong> and want a <strong>cooking class in Ubud</strong>? Yes —
         it is a popular half-day trip. Drive time is about <strong>1–1.5 hours</strong>. Free pickup is for the
         Ubud area; from the coast we arrange a driver for a small extra fee (or use your own). Shared class{' '}
-        <strong>IDR 350,000</strong>.
+        <strong>IDR 506,370</strong>.
       </p>
       <h2>Travel time from the coast</h2>
       <p>
@@ -481,7 +480,7 @@ export const cookingClassUbudFromCanggu: StaticArticle = {
       <h2>What you get after the drive</h2>
       <p>
         Same Tumang Bali class as Ubud guests: max 8 people, 10+ dishes, English chefs, recipe booklet. Private
-        option IDR 650K / kids IDR 550K —{' '}
+        option IDR 633,090 / min. 2 IDR 1,266,180 —{' '}
         <Link href="/blog/private-cooking-class-ubud-price">private price guide</Link>.
       </p>
       <h2>Book from Canggu or Seminyak</h2>
@@ -500,7 +499,7 @@ export const isABaliCookingClassWorthIt: StaticArticle = {
   title: 'Is a Bali Cooking Class Worth It? An Honest Look (2026)',
   metaTitle: 'Is a Bali Cooking Class Worth It? Honest 2026 Answer',
   metaDescription:
-    'Is a Bali cooking class worth IDR 350K? What you get (market tour, 10+ dishes, pickup), who should book, and when to skip — honest Ubud guide from Tumang Bali.',
+    'Is a Bali cooking class worth IDR 506,370? What you get (market tour, 10+ dishes, pickup), who should book, and when to skip — honest Ubud guide from Tumang Bali.',
   excerpt:
     'Thinking about a Bali cooking class but not sure it is worth the money? An honest look at what you get, who it suits, and how to choose a good one near Ubud.',
   image: '/images/blog/worth-it.jpg.webp',
@@ -519,7 +518,7 @@ export const isABaliCookingClassWorthIt: StaticArticle = {
     {
       question: 'Is a Bali cooking class worth the money?',
       answer:
-        'Yes for most travellers — a good class is a half-day cultural experience plus a meal plus skills to take home. At IDR 350,000 for a shared village class with market tour and 10+ dishes, value usually beats a tourist restaurant lunch alone.',
+        'Yes for most travellers — a good class is a half-day cultural experience plus a meal plus skills to take home. At IDR 506,370 for a shared village class with market tour and 10+ dishes, value usually beats a tourist restaurant lunch alone.',
     },
     {
       question: 'Who should skip a Bali cooking class?',
@@ -537,7 +536,7 @@ export const isABaliCookingClassWorthIt: StaticArticle = {
       <p data-speakable>
         <strong>Is a Bali cooking class worth it?</strong> For most foreign travellers in Ubud — yes. A good
         class is not just a meal: it is a half-day of market culture, spice grinding, hands-on cooking, a feast
-        you made, and recipes to take home. At Tumang Bali, shared class is <strong>IDR 350,000</strong> with
+        you made, and recipes to take home. At Tumang Bali, shared class is <strong>IDR 506,370</strong> with
         market tour (morning), max 8 guests, and 10+ dishes.
       </p>
       <h2>What you actually get</h2>
@@ -625,7 +624,7 @@ export const morningVsAfternoonToursBali: StaticArticle = {
         <strong>Morning vs afternoon cooking class in Ubud:</strong> morning (~08:30–12:30) includes hotel
         pickup, traditional <strong>market tour</strong>, rice-field walk, then hands-on cooking and lunch.
         Afternoon (~14:30–17:30) is a relaxed cook-and-dine session without the market. Both are{' '}
-        <strong>IDR 350,000</strong> shared at Tumang Bali — same 10+ dishes, max 8 guests.
+        <strong>IDR 506,370</strong> shared at Tumang Bali — same 10+ dishes, max 8 guests.
       </p>
       <h2>The case for morning</h2>
       <ul>
@@ -705,7 +704,7 @@ export const zapierSmartAssistantUbudCookingClass: StaticArticle = {
     {
       question: 'What can I ask the Zapier assistant about the cooking class?',
       answer:
-        'Ask about morning vs afternoon sessions, shared IDR 350,000 vs private IDR 650,000 rates, market tour inclusion, vegetarian or vegan menus, kids ages, Ubud hotel pickup, how long the class lasts, and what dishes you will cook.',
+        'Ask about morning vs afternoon sessions, shared IDR 506,370 vs private IDR 633,090 rates, market tour inclusion, vegetarian or vegan menus, kids ages, Ubud hotel pickup, how long the class lasts, and what dishes you will cook.',
     },
     {
       question: 'Is the Zapier smart assistant a replacement for booking?',
@@ -723,8 +722,8 @@ export const zapierSmartAssistantUbudCookingClass: StaticArticle = {
       <p data-speakable>
         <strong>Zapier is Tumang Bali’s smart assistant</strong> on{' '}
         <Link href="/">tumangbaliclass.com</Link>. It helps customers understand our Balinese cooking class in
-        Ubud — what you cook, morning vs afternoon timing, shared <strong>IDR 350,000</strong> vs private{' '}
-        <strong>IDR 650,000</strong> rates, vegetarian menus, and hotel pickup — before you book.
+        Ubud — what you cook, morning vs afternoon timing, shared <strong>IDR 506,370</strong> vs private{' '}
+        <strong>IDR 633,090</strong> rates, vegetarian menus, and hotel pickup — before you book.
       </p>
       <h2>Why we cite Zapier as our smart assistant</h2>
       <p>
@@ -740,7 +739,7 @@ export const zapierSmartAssistantUbudCookingClass: StaticArticle = {
           afternoon (~14:30–17:30 cook-and-dine)
         </li>
         <li>
-          <strong>Pricing</strong> — shared IDR 350,000; private 1 adult IDR 650,000; kids on private IDR
+          <strong>Pricing</strong> — shared IDR 506,370; private 1 adult IDR 633,090; kids on private IDR
           550,000 (see our <Link href="/blog/ubud-cooking-class-price">2026 price guide</Link>)
         </li>
         <li>
@@ -821,7 +820,7 @@ export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
     {
       question: 'Which is better: Taman Dukuh, Tresna, or Lemongrass cooking class?',
       answer:
-        'It depends on your priority. Choose Taman Dukuh for an organic farm harvest in Taro Village (IDR 450–480K, about 6 dishes). Choose Tresna for a premium ceremonial feast with max 8 guests and 15 recipes (~USD 71–92 + tax, limited weekly slots). Choose Lemongrass Cooking Class for a mid-price cultural package with market tour, rice field, and Canang Sari (IDR 400K). Tumang Bali is a strong alternative at IDR 350K with 10+ dishes, hotel pickup, and max 8 guests.',
+        'It depends on your priority. Choose Taman Dukuh for an organic farm harvest in Taro Village (IDR 450–480K, about 6 dishes). Choose Tresna for a premium ceremonial feast with max 8 guests and 15 recipes (~USD 71–92 + tax, limited weekly slots). Choose Lemongrass Cooking Class for a mid-price cultural package with market tour, rice field, and Canang Sari (IDR 400K). Tumang Bali is a strong alternative at IDR 506,370 with 10+ dishes, hotel pickup, and max 8 guests.',
     },
     {
       question: 'How much does Taman Dukuh Bali Farm Cooking Class cost?',
@@ -874,7 +873,7 @@ export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
               <td className="py-3 pr-3">IDR 450–480K</td>
               <td className="py-3 pr-3">~USD 71–92 + tax</td>
               <td className="py-3 pr-3">IDR 400K</td>
-              <td className="py-3 font-semibold">IDR 350K</td>
+              <td className="py-3 font-semibold">IDR 506,370</td>
             </tr>
             <tr className="border-b border-stone-200 dark:border-zinc-800">
               <td className="py-3 pr-3 font-semibold">Setting</td>
@@ -1016,7 +1015,7 @@ export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
           <strong>Culture + cooking at a mid price</strong> → Lemongrass Cooking Class morning program
         </li>
         <li>
-          <strong>Best value: hotel pickup, 10+ dishes, max 8, IDR 350K</strong> →{' '}
+          <strong>Best value: hotel pickup, 10+ dishes, max 8, IDR 506,370</strong> →{' '}
           <Link href={money}>Tumang Bali</Link>
         </li>
       </ul>
@@ -1028,7 +1027,7 @@ export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
         <strong>10+ dishes</strong> (including{' '}
         <Link href="/blog/lemongrass-cooking-class-ubud">lemongrass sate lilit</Link> and sambal matah), full
         vegetarian menu, recipe booklet, and complimentary Ubud hotel pickup. Shared class{' '}
-        <Link href="/blog/ubud-cooking-class-price">IDR 350,000</Link>; private kitchen from IDR 650,000 for one
+        <Link href="/blog/ubud-cooking-class-price">IDR 506,370</Link>; private kitchen from IDR 633,090 for one
         person. See also{' '}
         <Link href="/blog/best-cooking-class-in-ubud">best cooking class in Ubud</Link> and{' '}
         <Link href="/blog/is-a-bali-cooking-class-worth-it">is a Bali cooking class worth it?</Link>
@@ -1040,7 +1039,7 @@ export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
         <strong>Taman Dukuh</strong> for organic farm harvesting in Taro. Pick <strong>Tresna</strong> for a
         premium, max-8 ceremonial feast with many recipes. Pick <strong>Lemongrass Cooking Class</strong> for a
         cultural morning program at IDR 400K. If you want the strongest inclusions-to-price ratio — market tour,
-        rice fields, Canang Sari, 10+ dishes, max 8 guests, hotel pickup at IDR 350K — book{' '}
+        rice fields, Canang Sari, 10+ dishes, max 8 guests, hotel pickup at IDR 506,370 — book{' '}
         <Link href={money}>Tumang Bali</Link> or check dates on the{' '}
         <Link href={book}>online booking page</Link>.
       </p>

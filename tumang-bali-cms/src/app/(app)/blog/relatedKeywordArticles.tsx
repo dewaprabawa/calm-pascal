@@ -12,9 +12,9 @@ export const riceTerraceCookingClassUbud: StaticArticle = {
   title: 'Rice Terrace Cooking Class in Ubud — Village Kitchen & Paddy Walk 2026',
   metaTitle: 'Rice Terrace Cooking Class Ubud — Village Kitchen 2026',
   metaDescription:
-    'Rice terrace cooking class near Ubud — walk working paddies, cook 10+ Balinese dishes in a village kitchen. Market tour (morning), max 8 guests, IDR 350K. Book Tumang Bali.',
+    'Rice terrace cooking class near Ubud — walk working paddies, cook 10+ Balinese dishes in a village kitchen. Market tour (morning), max 8 guests, IDR 506,370. Book Tumang Bali.',
   excerpt:
-    'Looking for a rice terrace cooking class in Ubud? Tumang Bali pairs a gentle paddy walk with hands-on Balinese cooking in a village kitchen — market tour on morning sessions, max 8 guests, from IDR 350,000.',
+    'Looking for a rice terrace cooking class in Ubud? Tumang Bali pairs a gentle paddy walk with hands-on Balinese cooking in a village kitchen — market tour on morning sessions, max 8 guests, from IDR 506,370.',
   image: '/images/blog/rice-field-class.webp',
   imageAlt: 'Rice terrace cooking class near Ubud — guests walking paddies to village kitchen',
   author: 'Tumang Bali Team',
@@ -42,7 +42,7 @@ export const riceTerraceCookingClassUbud: StaticArticle = {
     {
       question: 'How much is a rice terrace cooking class in Ubud?',
       answer:
-        'Tumang Bali shared class is IDR 350,000 per person and includes the paddy walk, cooking of 10+ dishes, the meal, recipe booklet, and Ubud hotel pickup. Morning sessions also include the market tour.',
+        'Tumang Bali shared class is IDR 506,370 per adult (2+ participants; IDR 616,032 for 1) and includes the paddy walk, cooking of 10+ dishes, the meal, recipe booklet, and Ubud hotel pickup. Morning sessions also include the market tour.',
     },
   ],
   body: (
@@ -50,7 +50,7 @@ export const riceTerraceCookingClassUbud: StaticArticle = {
       <p data-speakable>
         A <strong>rice terrace cooking class in Ubud</strong> at Tumang Bali means you walk working paddies,
         then cook 10+ Balinese dishes in a village kitchen — not a hotel demo overlooking a parking lot.
-        Morning sessions add a traditional market tour. Shared class <strong>IDR 350,000</strong> · max 8
+        Morning sessions add a traditional market tour. Shared class <strong>IDR 506,370</strong> · max 8
         guests · free Ubud hotel pickup.
       </p>
       <h2>Why travellers search for rice terrace cooking classes</h2>
@@ -84,7 +84,7 @@ export const riceTerraceCookingClassUbud: StaticArticle = {
       </p>
       <h2>Book your rice terrace cooking class</h2>
       <p>
-        Shared from IDR 350,000 · private IDR 650,000.{' '}
+        Shared from IDR 506,370 · private IDR 633,090.{' '}
         <Link href={money}>Book cooking class Ubud</Link> · <Link href={book}>online booking</Link> · GetYourGuide
         rice-terrace listing guide:{' '}
         <Link href="/blog/book-cooking-class-ubud-getyourguide">book on GetYourGuide</Link>.
@@ -98,9 +98,9 @@ export const balineseHomeCookingClassUbud: StaticArticle = {
   title: 'Balinese Home Cooking Class in Ubud — Cook with a Local Family 2026',
   metaTitle: 'Balinese Home Cooking Class Ubud — Local Family Kitchen',
   metaDescription:
-    'Balinese home cooking class in Ubud — cook with a local family in Tumang village. Market tour, rice-field walk, 10+ dishes, max 8 guests, IDR 350K. Book Tumang Bali.',
+    'Balinese home cooking class in Ubud — cook with a local family in Tumang village. Market tour, rice-field walk, 10+ dishes, max 8 guests, IDR 506,370. Book Tumang Bali.',
   excerpt:
-    'Want a Balinese home cooking class in Ubud — not a hotel workshop? Tumang Bali is a family-run village kitchen: market tour, rice-field walk, hand-ground spices, and a feast you cook together from IDR 350,000.',
+    'Want a Balinese home cooking class in Ubud — not a hotel workshop? Tumang Bali is a family-run village kitchen: market tour, rice-field walk, hand-ground spices, and a feast you cook together from IDR 506,370.',
   image: '/images/blog/cooking-local-family.webp',
   imageAlt: 'Balinese home cooking class with a local family near Ubud',
   author: 'Chef Wayan',
@@ -123,7 +123,7 @@ export const balineseHomeCookingClassUbud: StaticArticle = {
     {
       question: 'What is included in a Balinese home cooking class in Ubud?',
       answer:
-        'Ubud hotel pickup, morning market tour (AM class), rice-field walk, hands-on cooking of 10+ dishes, the shared meal, and a recipe booklet. Vegetarian and vegan menus available. Shared IDR 350,000; private kitchen from IDR 650,000.',
+        'Ubud hotel pickup, morning market tour (AM class), rice-field walk, hands-on cooking of 10+ dishes, the shared meal, and a recipe booklet. Vegetarian and vegan menus available. Shared IDR 506,370; private kitchen from IDR 633,090.',
     },
     {
       question: 'Is a home cooking class good for beginners and honeymooners?',
@@ -136,7 +136,7 @@ export const balineseHomeCookingClassUbud: StaticArticle = {
       <p data-speakable>
         A <strong>Balinese home cooking class in Ubud</strong> at Tumang Bali means cooking with a local
         family kitchen in Tumang village — grind spices by hand, wrap sate lilit, and eat what you made
-        overlooking rice fields. Shared class <strong>IDR 350,000</strong> · max 8 guests · morning market
+        overlooking rice fields. Shared class <strong>IDR 506,370</strong> · max 8 guests · morning market
         tour available · free Ubud pickup.
       </p>
       <h2>Home cooking class vs hotel cooking demo</h2>

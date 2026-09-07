@@ -16,7 +16,7 @@ export const revalidate = 3600
 export const metadata: Metadata = buildPageMetadata({
   title: 'Tumang Bali on TripAdvisor — Travelers’ Choice Cooking Class Ubud 2026',
   description:
-    'TripAdvisor Travelers’ Choice 2026 cooking class in Ubud — 5.0 rating, 1500+ reviews. Book Tumang Bali via Viator or read reviews on TripAdvisor. Market tour, max 8 guests, IDR 350K.',
+    'TripAdvisor Travelers’ Choice 2026 cooking class in Ubud — 5.0 rating, 1500+ reviews. Book Tumang Bali via Viator or read reviews on TripAdvisor. Market tour, max 8 guests, IDR 506,370.',
   path: '/tripadvisor-cooking-class-ubud',
   ogTitle: 'TripAdvisor Cooking Class Ubud — Tumang Bali | Book on Viator',
   image: '/images/gallery-girls.jpg',
@@ -47,7 +47,7 @@ const faqs = [
   {
     question: 'Why is the Viator price higher than booking direct on your website?',
     answer:
-      'Viator and other OTAs (GetYourGuide, Airbnb) charge a booking commission. Their listed price may be slightly above our direct rate of IDR 350,000 per shared class. Same experience — the difference is the platform fee, not Tumang Bali charging you more.',
+      'Viator and other OTAs (GetYourGuide, Airbnb) list the same Tumang Bali rates — no overcharge. Their listed price may be slightly above our direct rate of IDR 506,370 per shared class. Same experience — prices are the same on every channel, not Tumang Bali charging you more.',
   },
 ]
 

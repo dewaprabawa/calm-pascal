@@ -13,7 +13,10 @@ const PickupLocationMap = dynamic(() => import('./PickupLocationMap'), { ssr: fa
 export type ActivityOption = {
   id: string
   title: string
+  /** Adult solo (1 participant) price in full IDR, or legacy thousands. */
   price?: number
+  /** Adult 2+ / private min-2 price in full IDR. */
+  groupPrice?: number
   kidsPrice?: number
 }
 
@@ -245,9 +248,8 @@ _(WhatsApp consultation from website)_`
               </p>
               <p className="text-center text-xs text-stone-500 dark:text-stone-400 leading-relaxed px-1 pt-2 border-t border-stone-200 dark:border-zinc-800 mt-3">
                 <strong>Use an OTA above</strong> (GetYourGuide, Viator, Airbnb) to secure your spot
-                with <strong>instant checkout</strong>. Prices may be slightly higher than booking direct
-                (IDR 350,000 shared) because those platforms charge a commission. Same class — you are not
-                being overcharged by us.
+                with <strong>instant checkout</strong>. Prices are the same as direct booking — no
+                commission overcharge.
               </p>
             </div>
           ) : (
@@ -262,11 +264,31 @@ _(WhatsApp consultation from website)_`
                 className="w-full px-4 py-3 rounded-xl border border-stone-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-stone-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 transition-shadow appearance-none"
               >
                 <option value="" disabled>Select an experience...</option>
-                {orderedActivities.map((activity) => (
+                {orderedActivities.map((activity) => {
+                  const solo =
+                    activity.price != null
+                      ? activity.price < 10_000
+                        ? activity.price * 1000
+                        : activity.price
+                      : null
+                  const group =
+                    activity.groupPrice != null
+                      ? activity.groupPrice < 10_000
+                        ? activity.groupPrice * 1000
+                        : activity.groupPrice
+                      : null
+                  const priceLabel =
+                    solo == null
+                      ? ''
+                      : group == null
+                        ? ` - ${solo.toLocaleString('id-ID')} IDR`
+                        : ` - ${solo.toLocaleString('id-ID')} (1) / ${group.toLocaleString('id-ID')} (2+)`
+                  return (
                   <option key={activity.id} value={activity.title}>
-                    {activity.title} {activity.price ? (activity.price < 1000 ? `- ${activity.price}K IDR` : `- ${activity.price.toLocaleString('id-ID')} IDR`) : ''}{activity.kidsPrice ? ` · kids ${activity.kidsPrice}K` : ''}
+                    {activity.title}{priceLabel}
                   </option>
-                ))}
+                  )
+                })}
               </select>
             </div>
 

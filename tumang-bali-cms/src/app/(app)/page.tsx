@@ -14,6 +14,17 @@ import TrackedBookingLink from './components/TrackedBookingLink'
 import FAQSection from './components/FAQSection'
 import dynamic from 'next/dynamic'
 import { sortActivities } from '@/lib/sortActivities'
+import ActivityPrice from './components/ActivityPrice'
+import { normalizeActivityPricing } from '@/lib/normalizeActivityPricing'
+import {
+  PRIVATE_ADULT_MIN2_IDR,
+  PRIVATE_ADULT_SOLO_IDR,
+  PRIVATE_PRICING_SUMMARY,
+  SHARED_ADULT_GROUP_IDR,
+  SHARED_ADULT_SOLO_IDR,
+  SHARED_PRICING_SUMMARY,
+  formatIdr,
+} from '@/lib/pricing'
 
 const MobileMenu = dynamic(() => import('./components/MobileMenu'))
 const LanguageSwitcher = dynamic(() => import('./components/LanguageSwitcher'))
@@ -69,14 +80,13 @@ export default async function Page() {
   }
 
   let displayActivities = sortActivities(
-    activities.length > 0
-      ? [...activities]
-      : [
+    (activities.length > 0 ? [...activities] : [
     {
       id: 'morning-class',
       title: 'Morning Market Tour & Balinese Kitchen Masterclass',
       durationHours: '3–4',
-      price: 350,
+      price: SHARED_ADULT_SOLO_IDR,
+      groupPrice: SHARED_ADULT_GROUP_IDR,
       instructor: { name: 'Wayan Sudiana' },
       includedItems: [
         { item: 'Guided Morning Market Tour' },
@@ -91,7 +101,8 @@ export default async function Page() {
       id: 'afternoon-class',
       title: 'Afternoon Balinese Kitchen Session',
       durationHours: '3',
-      price: 350,
+      price: SHARED_ADULT_SOLO_IDR,
+      groupPrice: SHARED_ADULT_GROUP_IDR,
       instructor: { name: 'Wayan Sudiana' },
       includedItems: [
         { item: 'Scenic Rice Field Walk' },
@@ -103,21 +114,20 @@ export default async function Page() {
     },
     {
       id: 'private-class',
-      title: 'Private Kitchen Session (1 Person)',
+      title: 'Private Kitchen Session',
       durationHours: '3–4',
-      price: 650,
-      kidsPrice: 550,
+      price: PRIVATE_ADULT_SOLO_IDR,
+      groupPrice: PRIVATE_ADULT_MIN2_IDR,
       instructor: { name: 'Wayan Sudiana' },
       includedItems: [
         { item: 'Kitchen exclusive to you' },
         { item: 'Guided Morning Market Tour' },
         { item: 'Hands-on prep (10+ dishes)' },
-        { item: 'Kids rate IDR 550K' },
         { item: 'Complimentary Ubud Hotel Transport' },
         { item: 'Printed Recipe Booklet' }
       ]
     }
-  ]
+  ]).map((a) => normalizeActivityPricing(a as any))
   )
 
   return (
@@ -282,8 +292,8 @@ export default async function Page() {
           Tumang Bali Cooking Class is an authentic Balinese cooking class near Ubud for foreign
           travellers. Guests shop a traditional morning market (morning session only), walk working
           rice paddies, then cook 10+ dishes from scratch with Head Chef Wayan Sudiana — including
-          Base Genep spice paste, sate lilit, pepes, and sambal matah. Shared classes cost IDR
-          350,000 per person; a private class for one person is IDR 650,000 (kids IDR 550,000).
+          Base Genep spice paste, sate lilit, pepes, and sambal matah. Shared classes:{' '}
+          {SHARED_PRICING_SUMMARY}. Private classes: {PRIVATE_PRICING_SUMMARY}. Same price on every booking channel.
           Groups are capped at 8 guests, classes are taught in English, and Ubud-area hotel pickup
           is complimentary. Full vegetarian and vegan menus are available. TripAdvisor Travelers&apos;
           Choice 2026 with a 5.0 rating from 1500+ reviews. Book at{' '}
@@ -362,12 +372,12 @@ export default async function Page() {
               <div className="p-8 flex-1 flex flex-col">
                 <div className="flex justify-between items-start mb-4 gap-3">
                   <h3 className="text-2xl font-bold tracking-tight group-hover:text-orange-600 transition-colors">{activity.title}</h3>
-                  <div className="text-right flex-shrink-0">
-                    <span className="text-2xl font-black text-orange-500">IDR {activity.price}K</span>
-                    {activity.kidsPrice ? (
-                      <p className="text-xs font-semibold text-stone-500 mt-0.5">Kids IDR {activity.kidsPrice}K</p>
-                    ) : null}
-                  </div>
+                  <ActivityPrice
+                    price={activity.price as number}
+                    groupPrice={(activity as { groupPrice?: number }).groupPrice}
+                    kidsPrice={(activity as { kidsPrice?: number }).kidsPrice}
+                    isPrivate={String(activity.title || '').toLowerCase().includes('private')}
+                  />
                 </div>
                 <div className="flex items-center gap-4 mb-6 text-sm font-medium text-stone-600 dark:text-stone-400">
                   <div className="flex items-center gap-1.5 bg-stone-100 dark:bg-zinc-800 px-3 py-1 rounded-full">
@@ -984,9 +994,8 @@ export default async function Page() {
            </div>
            <p className="text-xs text-stone-500 dark:text-stone-400 text-center w-full max-w-2xl mx-auto leading-relaxed">
              <strong>Use an OTA</strong> (GetYourGuide, Viator, Airbnb) to secure your spot with{' '}
-             <strong>instant checkout</strong>. Partner prices may be slightly higher than our direct rate
-             (IDR 350,000 shared) due to platform commission. Same class — you are not being overcharged by
-             Tumang Bali.
+             <strong>instant checkout</strong>. Prices are the same as direct booking (
+             {formatIdr(SHARED_ADULT_GROUP_IDR)} shared for 2+ adults) — no commission overcharge.
            </p>
         </div>
       </section>
@@ -1069,7 +1078,7 @@ export default async function Page() {
       <WhatsAppFloat />
 
       {/* Booking Modal */}
-      <BookingModal activities={displayActivities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number, kidsPrice: a.kidsPrice as number | undefined }))} />
+      <BookingModal activities={displayActivities.map(a => ({ id: a.id as string, title: a.title, price: a.price as number, groupPrice: (a as { groupPrice?: number }).groupPrice, kidsPrice: a.kidsPrice as number | undefined }))} />
 
 
     </div>

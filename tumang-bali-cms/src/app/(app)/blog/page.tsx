@@ -137,7 +137,7 @@ export default async function BlogPage() {
           <p className="text-lg text-stone-500 max-w-3xl mx-auto" data-speakable>
             Guides from Tumang Bali Cooking Class in Ubud — lemongrass sate lilit, sambal matah, Base Genep
             spice paste, market tours, couples and family classes, and how to book an authentic village
-            kitchen experience from IDR 350,000.
+            kitchen experience from IDR 506,370.
           </p>
         </div>
 

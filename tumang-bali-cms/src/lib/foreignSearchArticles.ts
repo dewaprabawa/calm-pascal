@@ -41,7 +41,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       {
         question: 'How much do Bali villas cost per night?',
         answer:
-          'Budget villas start around USD 80–120; mid-range pool villas USD 150–300; luxury beachfront villas USD 400+. Cooking classes (IDR 350K shared) are one of the best-value cultural experiences to pair with a villa stay.',
+          'Budget villas start around USD 80–120; mid-range pool villas USD 150–300; luxury beachfront villas USD 400+. Cooking classes (IDR 506,370 shared) are one of the best-value cultural experiences to pair with a villa stay.',
       },
       {
         question: 'Can I book a cooking class if I stay in a villa outside Ubud?',
@@ -246,7 +246,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       {
         question: 'Are there true all-inclusive resorts in Bali?',
         answer:
-          'Full all-inclusive is rare; most resorts offer breakfast packages or dining credits. Budget for experiences like cooking classes (IDR 350K shared) and temple tours separately.',
+          'Full all-inclusive is rare; most resorts offer breakfast packages or dining credits. Budget for experiences like cooking classes (IDR 506,370 shared) and temple tours separately.',
       },
       {
         question: 'Do Bali resorts offer cooking classes on-site?',
@@ -277,7 +277,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       ]),
       heading('h2', 'Planning one cultural day from your resort'),
       paragraph([
-        text('Arrange a driver for the morning session (08:30 pickup in Ubud area; ask us if you are staying at an Ubud resort). You will shop the market, cook 10+ dishes, and eat lunch — back at the pool by mid-afternoon. Private class (IDR 650K for one person) suits honeymoon resort stays.'),
+        text('Arrange a driver for the morning session (08:30 pickup in Ubud area; ask us if you are staying at an Ubud resort). You will shop the market, cook 10+ dishes, and eat lunch — back at the pool by mid-afternoon. Private class (IDR 633,090 for one person) suits honeymoon resort stays.'),
       ]),
       ...commercialClose(
         'Resort comfort is wonderful — but the story you tell friends usually comes from the village day. Reserve your cooking class before checkout-heavy departure days.',
@@ -312,7 +312,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       {
         question: 'Can I do a cooking class if I stay in Canggu or Seminyak?',
         answer:
-          'Yes. Leave early for the 08:30 morning class with market tour, or book the afternoon session. See our Canggu transport guide; shared class IDR 350K includes Ubud pickup only — coastal guests arrange driver or self-drive.',
+          'Yes. Leave early for the 08:30 morning class with market tour, or book the afternoon session. See our Canggu transport guide; shared class IDR 506,370 includes Ubud pickup only — coastal guests arrange driver or self-drive.',
       },
     ],
     ...TEAM,
@@ -342,7 +342,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
         text('.'),
       ]),
       ...commercialClose(
-        'Coast or jungle — block one Ubud morning for the cooking class foreigners call their trip highlight. Shared from IDR 350K.',
+        'Coast or jungle — block one Ubud morning for the cooking class foreigners call their trip highlight. Shared from IDR 506,370.',
       ),
     ]),
   },
@@ -407,7 +407,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
         link('is Bali cheap or expensive', '/blog/is-bali-cheap-or-expensive'),
         text(' and '),
         link('how to pay in Bali', '/blog/how-to-pay-in-bali'),
-        text(' for money planning. A cooking class at IDR 350K is mid-range value — lunch included.'),
+        text(' for money planning. A cooking class at IDR 506,370 is mid-range value — lunch included.'),
       ]),
       ...commercialClose(
         'Visa sorted? Lock in your Balinese cooking class — the experience that turns "I visited Bali" into "I cooked Bali."',
@@ -491,7 +491,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
     imageAlt: 'Balinese feast — value comparison for is Bali cheap or expensive',
     metaTitle: 'Is Bali Cheap or Expensive? — 2026 Budget Guide',
     metaDescription:
-      'Is Bali cheap or expensive? Budget vs luxury daily costs, villa prices, dining tiers, and where a IDR 350K cooking class fits as top value for money.',
+      'Is Bali cheap or expensive? Budget vs luxury daily costs, villa prices, dining tiers, and where a IDR 506,370 cooking class fits as top value for money.',
     articleSection: 'Money & Logistics',
     keywords: ['is Bali cheap or expensive', 'Bali cost of travel', 'Bali budget', 'Bali daily costs', 'how much Bali trip'],
     faq: [
@@ -503,7 +503,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       {
         question: 'What is good value in Bali?',
         answer:
-          'Warung meals, local transport, and small-group cultural experiences. A cooking class with market tour, 10+ dishes, and lunch at IDR 350K beats many tourist dinners on value.',
+          'Warung meals, local transport, and small-group cultural experiences. A cooking class with market tour, 10+ dishes, and lunch at IDR 506,370 beats many tourist dinners on value.',
       },
       {
         question: 'What makes Bali expensive for tourists?',
@@ -527,13 +527,13 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       paragraph([
         text('Accommodation and transport dominate. A single taxi from Seminyak to Ubud can cost more than a '),
         link('shared cooking class', '/blog/ubud-cooking-class-price'),
-        text(' (IDR 350K). Alcohol is taxed heavily. ATM fees and poor exchange booths add up — read '),
+        text(' (IDR 506,370). Alcohol is taxed heavily. ATM fees and poor exchange booths add up — read '),
         link('how to pay in Bali', '/blog/how-to-pay-in-bali'),
         text('.'),
       ]),
       heading('h2', 'Best-value splurge: cook instead of another beach club'),
       paragraph([
-        text('Beach clubs charge cover plus minimums that rival a family cooking class. For IDR 350K you get pickup (Ubud area), market tour, hands-on cooking, feast, and recipes. Compare full pricing on '),
+        text('Beach clubs charge cover plus minimums that rival a family cooking class. For IDR 506,370 you get pickup (Ubud area), market tour, hands-on cooking, feast, and recipes. Compare full pricing on '),
         link('Ubud cooking class price 2026', '/blog/ubud-cooking-class-price'),
         text(' and decide if '),
         link('is a Bali cooking class worth it', '/blog/is-a-bali-cooking-class-worth-it'),

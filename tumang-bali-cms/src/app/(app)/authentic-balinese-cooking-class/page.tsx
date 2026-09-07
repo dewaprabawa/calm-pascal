@@ -11,7 +11,7 @@ export const revalidate = 60
 export const metadata: Metadata = buildPageMetadata({
   title: 'Authentic Balinese Cooking Class — Base Genep in a Village Kitchen',
   description:
-    'Authentic Balinese cooking: hand-ground base genep, market tour, rice-field walk, 10+ dishes in a Tumang village kitchen near Ubud. From IDR 350K, free pickup.',
+    'Authentic Balinese cooking: hand-ground base genep, market tour, rice-field walk, 10+ dishes in a Tumang village kitchen near Ubud. From IDR 506,370, free pickup.',
   path: '/authentic-balinese-cooking-class',
   ogTitle: 'Authentic Balinese Cooking Class — Village Kitchen near Ubud',
   image: '/images/img4.jpg',

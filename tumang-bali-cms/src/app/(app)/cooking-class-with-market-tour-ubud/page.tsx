@@ -9,9 +9,9 @@ import { marketTourClass } from '../components/landingContent'
 export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cooking Class with Market Tour Ubud — From IDR 350K',
+  title: 'Cooking Class with Market Tour Ubud — From IDR 506,370',
   description:
-    'Ubud cooking class with morning market tour and rice-field walk, then 10+ dishes. Free hotel pickup, max 8 guests, from IDR 350K. Ideal for first-timers.',
+    'Ubud cooking class with morning market tour and rice-field walk, then 10+ dishes. Free hotel pickup, max 8 guests, from IDR 506,370. Ideal for first-timers.',
   path: '/cooking-class-with-market-tour-ubud',
   ogTitle: 'Cooking Class with Market Tour Ubud — Pickup Included',
   image: '/images/img2.jpg',

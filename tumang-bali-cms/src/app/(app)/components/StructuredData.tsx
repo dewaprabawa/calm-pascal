@@ -27,7 +27,7 @@ export default function StructuredData() {
       longitude: 115.2810863,
     },
     hasMap: 'https://www.google.com/maps?cid=5953218619508310807',
-    priceRange: 'IDR 350,000–650,000',
+    priceRange: 'IDR 506,370–1,266,180',
     currenciesAccepted: 'IDR, USD',
     paymentAccepted: 'Cash, Credit Card, WhatsApp Transfer',
     aggregateRating: {
@@ -155,8 +155,8 @@ export default function StructuredData() {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Morning Market Tour & Cooking Masterclass',
-        price: '350000',
+        name: 'Shared Cooking Class — 1 adult',
+        price: '616032',
         priceCurrency: 'IDR',
         availability: 'https://schema.org/InStock',
         validFrom: '2026-01-01',
@@ -165,8 +165,18 @@ export default function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: 'Private Cooking Class (1 Person)',
-        price: '650000',
+        name: 'Shared Cooking Class — 2+ adults',
+        price: '506370',
+        priceCurrency: 'IDR',
+        availability: 'https://schema.org/InStock',
+        validFrom: '2026-01-01',
+        priceValidUntil: '2027-12-31',
+        url: 'https://tumangbaliclass.com/#classes',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Private Cooking Class — 1 adult',
+        price: '633090',
         priceCurrency: 'IDR',
         availability: 'https://schema.org/InStock',
         validFrom: '2026-01-01',
@@ -175,8 +185,8 @@ export default function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: 'Private Cooking Class (Kids)',
-        price: '550000',
+        name: 'Private Cooking Class — minimum 2 participants',
+        price: '1266180',
         priceCurrency: 'IDR',
         availability: 'https://schema.org/InStock',
         validFrom: '2026-01-01',
@@ -256,7 +266,7 @@ export default function StructuredData() {
       'Tumang Bali',
       'Tumang Bali Cooking Class Ubud',
     ],
-    description: 'Top-rated authentic Balinese cooking class in Ubud with market tour, rice field walk & hands-on cooking of 10+ traditional dishes. Shared IDR 350,000. Private 1 person IDR 650,000.',
+    description: 'Top-rated authentic Balinese cooking class in Ubud with market tour, rice field walk & hands-on cooking of 10+ traditional dishes. Shared IDR 506,370. Private 1 person IDR 633,090.',
     url: 'https://tumangbaliclass.com',
     dateModified: SITE_CONTENT_UPDATED,
     inLanguage: ['en-US', 'id-ID'],
@@ -331,7 +341,7 @@ export default function StructuredData() {
         name: 'What is Tumang Bali Cooking Class?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Tumang Bali Cooking Class is a family-run small-group Balinese cooking school in Tumang village near Ubud, Bali. Guests join a morning market tour (morning session), rice-field walk, and hands-on cooking of 10+ dishes with Chef Wayan Sudiana. Shared class IDR 350,000; private 1 person IDR 650,000. Max 8 guests. TripAdvisor Traveler\'s Choice 2026, 5.0 rating from 1500+ reviews.',
+          text: 'Tumang Bali Cooking Class is a family-run small-group Balinese cooking school in Tumang village near Ubud, Bali. Guests join a morning market tour (morning session), rice-field walk, and hands-on cooking of 10+ dishes with Chef Wayan Sudiana. Shared class IDR 506,370; private 1 person IDR 633,090. Max 8 guests. TripAdvisor Traveler\'s Choice 2026, 5.0 rating from 1500+ reviews.',
         },
       },
       {
@@ -339,7 +349,7 @@ export default function StructuredData() {
         name: 'What is the best cooking class in Ubud?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Look for a real morning market tour, hand-ground spice paste, small groups, and 10+ dishes from scratch. Tumang Bali offers this with max 8 guests, a rice-field walk, vegetarian menu, and shared pricing from IDR 350,000.',
+          text: 'Look for a real morning market tour, hand-ground spice paste, small groups, and 10+ dishes from scratch. Tumang Bali offers this with max 8 guests, a rice-field walk, vegetarian menu, and shared pricing from IDR 506,370.',
         },
       },
       {
@@ -347,7 +357,7 @@ export default function StructuredData() {
         name: 'How much does a Bali cooking class in Ubud cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'At Tumang Bali, a shared class is IDR 350,000 per person. Private for 1 person is IDR 650,000; kids on private are IDR 550,000. Includes Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
+          text: 'At Tumang Bali, a shared class is IDR 506,370 per adult (2+ participants; IDR 616,032 for 1). Private for 1 person is IDR 633,090; kids on private are IDR 1,266,180. Includes Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
         },
       },
       {
@@ -363,7 +373,7 @@ export default function StructuredData() {
         name: 'Is there a vegetarian cooking class in Ubud?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Tumang Bali offers a full vegetarian Balinese menu with vegan adaptations on request at no extra charge. Same shared price IDR 350,000.',
+          text: 'Yes. Tumang Bali offers a full vegetarian Balinese menu with vegan adaptations on request at no extra charge. Same shared price IDR 506,370.',
         },
       },
       {
@@ -379,7 +389,7 @@ export default function StructuredData() {
         name: 'Is Tumang Bali Cooking Class good for couples and families?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Couples cook side by side in the village kitchen; families with kids aged 8+ are welcome. Shared class IDR 350,000 each; private kitchen IDR 650,000 for one adult (kids IDR 550,000 on private).',
+          text: 'Yes. Couples cook side by side in the village kitchen; families with kids aged 8+ are welcome. Shared class IDR 506,370 each; private kitchen IDR 633,090 for 1 adult (IDR 1,266,180 min. 2) (min. 2 participants IDR 1,266,180 on private).',
         },
       },
     ],
@@ -417,7 +427,7 @@ export default function StructuredData() {
     },
     offers: {
       '@type': 'Offer',
-      price: '350000',
+      price: '506370',
       priceCurrency: 'IDR',
       availability: 'https://schema.org/InStock',
     },

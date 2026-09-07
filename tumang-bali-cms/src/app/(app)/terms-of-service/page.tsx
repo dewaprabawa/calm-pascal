@@ -47,7 +47,7 @@ export default function TermsOfServicePage() {
         </p>
         <p>
           Published shared and private rates are in Indonesian Rupiah. OTA prices can be slightly higher
-          due to platform commission; the experience itself is the same.
+          — rates match our website; the experience itself is the same.
         </p>
       </LegalSection>
 

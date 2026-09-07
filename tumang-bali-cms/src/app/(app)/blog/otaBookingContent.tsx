@@ -15,7 +15,7 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
   title: 'Book Tumang Bali Cooking Class on GetYourGuide — Ubud Market Tour & 10+ Dishes',
   metaTitle: 'Book Cooking Class Ubud on GetYourGuide — Tumang Bali 2026',
   metaDescription:
-    'Book Tumang Bali Cooking Class on GetYourGuide — morning market tour, rice-field walk, 10+ Balinese dishes, max 8 guests. IDR 350K. Two official GYG listings + direct links.',
+    'Book Tumang Bali Cooking Class on GetYourGuide — morning market tour, rice-field walk, 10+ Balinese dishes, max 8 guests. IDR 506,370. Two official GYG listings + direct links.',
   excerpt:
     'Prefer booking through GetYourGuide? Tumang Bali Cooking Class is listed on GYG with morning market tours, village kitchen, and hands-on Balinese cooking near Ubud. Official booking links inside.',
   image: '/images/gallery-group.jpg',
@@ -44,7 +44,7 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
     {
       question: 'What is included when I book Tumang Bali on GetYourGuide?',
       answer:
-        'Shared class IDR 350,000 per person direct (GYG may show a slightly higher price in USD due to platform commission). Includes Ubud-area hotel pickup, ingredients, hands-on cooking of 10+ dishes, shared meal, recipe booklet, and English-speaking chefs. Morning sessions include a traditional market tour.',
+        'Shared class IDR 506,370 per adult (2+ participants; IDR 616,032 for 1) direct (GYG may show a the same price in USD — same price on every channel). Includes Ubud-area hotel pickup, ingredients, hands-on cooking of 10+ dishes, shared meal, recipe booklet, and English-speaking chefs. Morning sessions include a traditional market tour.',
     },
     OTA_PRICING_FAQ,
   ],
@@ -150,7 +150,7 @@ export const bookCookingClassUbudTripAdvisor: StaticArticle = {
         <strong>Tumang Bali Cooking Class on TripAdvisor</strong> is one of the highest-rated Ubud cooking
         experiences for foreign travellers — Travelers&apos; Choice 2026, 5.0 stars, 1500+ reviews. Read
         reviews on TripAdvisor, then <strong>book on Viator</strong> for instant confirmation. Village
-        kitchen, morning market tour, rice-field walk, 10+ dishes. Shared class IDR 350,000 · max 8 guests
+        kitchen, morning market tour, rice-field walk, 10+ dishes. Shared class IDR 506,370 · max 8 guests
         · free Ubud pickup.
       </p>
       <OtaPricingNotice />
@@ -238,7 +238,7 @@ export const bookCookingClassUbudViator: StaticArticle = {
     {
       question: 'Viator vs booking direct — which is better?',
       answer:
-        'Same class and chefs. Viator suits travellers who want Viator’s checkout, cancellation policy, and app. Direct booking at tumangbaliclass.com or WhatsApp +62 822-1013-2418 is usually the lowest price (IDR 350,000 shared) because Viator adds a platform commission to the listed price.',
+        'Same class and chefs. Viator suits travellers who want Viator’s checkout, cancellation policy, and app. Direct booking at tumangbaliclass.com or WhatsApp +62 822-1013-2418 is usually the lowest price (IDR 506,370 shared) because Viator adds a booking channel (same price) to the listed price.',
     },
     OTA_PRICING_FAQ,
   ],
@@ -247,7 +247,7 @@ export const bookCookingClassUbudViator: StaticArticle = {
       <p data-speakable>
         You can <strong>book Tumang Bali Cooking Class on Viator</strong> under our Market-to-Table listing —
         a hands-on Ubud experience with traditional market visit, local herb discovery, rice-field walk, and
-        10+ Balinese dishes in a village kitchen. Max 8 guests · IDR 350,000 shared · TripAdvisor
+        10+ Balinese dishes in a village kitchen. Max 8 guests · IDR 506,370 shared · TripAdvisor
         Travelers&apos; Choice 2026.
       </p>
       <OtaPricingNotice />
@@ -334,7 +334,7 @@ export const bookCookingClassUbudAirbnb: StaticArticle = {
       <p data-speakable>
         <strong>Book Tumang Bali Cooking Class on Airbnb Experiences</strong> if you already plan trips in the
         Airbnb app. Our experience is a family-run village cooking class near Ubud — morning market tour,
-        rice terraces, max 8 guests, and 10+ authentic Balinese dishes. Shared from IDR 350,000 equivalent ·
+        rice terraces, max 8 guests, and 10+ authentic Balinese dishes. Shared from IDR 506,370 equivalent ·
         Travelers&apos; Choice 2026 on TripAdvisor.
       </p>
       <OtaPricingNotice />

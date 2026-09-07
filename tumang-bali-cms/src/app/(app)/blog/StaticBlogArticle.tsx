@@ -160,7 +160,7 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
         <div className="bg-orange-50 dark:bg-orange-950/20 border border-orange-200/60 dark:border-orange-900/30 rounded-3xl p-8">
           <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-3">Ready to book?</h2>
           <p className="text-stone-600 dark:text-stone-400 mb-6">
-            Shared class from IDR 350K · Free Ubud hotel pickup · TripAdvisor Travelers&apos; Choice 2026
+            Shared class from IDR 506,370 · Free Ubud hotel pickup · TripAdvisor Travelers&apos; Choice 2026
           </p>
           {article.slug === 'book-cooking-class-ubud-tripadvisor' ? (
             <>

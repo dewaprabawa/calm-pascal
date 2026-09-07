@@ -11,7 +11,7 @@ export const vegetarianClass: ClassLandingContent = {
   intro:
     'A fully plant-based Balinese cooking class in Ubud. Cook tempe manis, tofu pepes, sayur urap and sambal matah from scratch — no meat, no compromise on flavour, just authentic Balinese vegetarian cuisine.',
   citabilityBlock:
-    'Tumang Bali offers a full vegetarian and vegan cooking class in Ubud — plant-based Balinese dishes (tempeh satay, tofu pepes, vegetable kare, sambal matah, dadar gulung), not a meat class with one side option. Shared IDR 350,000, max 8 guests, market tour on morning sessions, free Ubud pickup. Page: tumangbaliclass.com/vegetarian-cooking-class-ubud.',
+    'Tumang Bali offers a full vegetarian and vegan cooking class in Ubud — plant-based Balinese dishes (tempeh satay, tofu pepes, vegetable kare, sambal matah, dadar gulung), not a meat class with one side option. Shared IDR 506,370, max 8 guests, market tour on morning sessions, free Ubud pickup. Page: tumangbaliclass.com/vegetarian-cooking-class-ubud.',
   heroImage: '/images/gallery-chopping.jpg',
   heroImageAlt: 'Fresh vegetables and spices prepared for a vegetarian Balinese cooking class in Ubud',
   body: [
@@ -61,17 +61,17 @@ export const privateClass: ClassLandingContent = {
   h1: 'Private Cooking Class in Ubud',
   h1Plain: 'Private Cooking Class in Ubud',
   intro:
-    'Book the kitchen for just your group. A private Balinese cooking class in Ubud for one person, couples, families and special occasions — your own chef, your pace, your menu. Private class: IDR 650K per adult, IDR 550K per child.',
+    'Book the kitchen for just your group. A private Balinese cooking class in Ubud for one person, couples, families and special occasions — your own chef, your pace, your menu. Private adult: IDR 633,090 for 1 participant; IDR 1,266,180 for a minimum of 2 participants.',
   citabilityBlock:
-    'A private cooking class in Ubud at Tumang Bali costs IDR 650,000 for one adult and IDR 550,000 for kids. The kitchen is exclusive — dedicated chef, tailored pace, optional morning market tour, rice-field walk, and 10+ Balinese dishes. Shared classes remain IDR 350,000 per person (max 8 guests). Free Ubud hotel pickup. Book at tumangbaliclass.com/private-cooking-class-ubud.',
+    'A private cooking class in Ubud at Tumang Bali costs IDR 633,090 for 1 adult, or IDR 1,266,180 for a minimum of 2 participants. The kitchen is exclusive — dedicated chef, tailored pace, optional morning market tour, rice-field walk, and 10+ Balinese dishes. Shared classes: IDR 616,032 for 1 adult, IDR 506,370 per adult for 2+ participants. Same price on every booking channel. Free Ubud hotel pickup. Book at tumangbaliclass.com/private-cooking-class-ubud.',
   heroImage: '/images/gallery-group.jpg',
   heroImageAlt: 'A private group enjoying a hands-on Balinese cooking class together in Ubud',
   pricing: {
-    adultLabel: '1 person / adult',
-    adultPrice: 'IDR 650K',
-    kidsLabel: 'Kids',
-    kidsPrice: 'IDR 550K',
-    note: 'Private class rates. Shared group classes remain IDR 350K per person. Hotel pickup in Ubud, market tour (morning), cooking of 10+ dishes, the meal you cook, and a recipe booklet are included.',
+    adultLabel: '1 participant',
+    adultPrice: 'IDR 633,090',
+    kidsLabel: 'Min. 2 participants',
+    kidsPrice: 'IDR 1,266,180',
+    note: 'Private adult rates. Shared: IDR 616,032 (1 adult) or IDR 506,370 per adult (2+). Same price on website, WhatsApp, and OTAs. Hotel pickup in Ubud, market tour (morning), cooking of 10+ dishes, the meal you cook, and a recipe booklet are included.',
   },
   body: [
     {
@@ -82,9 +82,9 @@ export const privateClass: ClassLandingContent = {
       ],
     },
     {
-      heading: 'Private class prices — 1 person and kids',
+      heading: 'Private class prices — 1 person and min. 2',
       paragraphs: [
-        'A private cooking class for 1 person is IDR 650,000. Children are IDR 550,000. These rates keep the kitchen exclusive to you — no other guests — with a dedicated chef.',
+        'A private cooking class for 1 adult is IDR 633,090. For a minimum of 2 participants the adult private rate is IDR 1,266,180. These rates keep the kitchen exclusive to you — no other guests — with a dedicated chef.',
         'We host private classes for one person right up to larger parties of six or more. For bigger groups we can still run an exclusive session; message us on WhatsApp if you need a family or group quote.',
       ],
     },
@@ -104,12 +104,12 @@ export const privateClass: ClassLandingContent = {
     {
       question: 'How much is a private cooking class for 1 person?',
       answer:
-        'A private class for 1 person is IDR 650,000. Kids are IDR 550,000. Shared (non-private) morning and afternoon classes are IDR 350,000 per person.',
+        'A private class for 1 adult is IDR 633,090. For a minimum of 2 participants it is IDR 1,266,180. Shared (non-private) morning and afternoon classes are IDR 616,032 for 1 adult, or IDR 506,370 per adult for 2+ participants.',
     },
     {
       question: 'How many people can join a private class?',
       answer:
-        'Private classes work for one person, a couple, or groups of six or more. For larger parties we arrange an exclusive session — contact us on WhatsApp for group rates.',
+        'Private classes work for one person, a couple, or groups of six or more. Minimum 2 participants is priced at IDR 1,266,180. For larger parties we arrange an exclusive session — contact us on WhatsApp for group rates.',
     },
     {
       question: 'Is hotel pickup included?',
@@ -134,7 +134,7 @@ export const marketTourClass: ClassLandingContent = {
   intro:
     'Start at the traditional Ubud morning market, then cook what you buy. This Balinese cooking class pairs a guided local market tour with hands-on cooking of 10+ dishes.',
   citabilityBlock:
-    'Tumang Bali’s cooking class with market tour in Ubud starts ~08:30: guided traditional pasar visit, rice-field walk, then hands-on cooking of 10+ dishes including Base Genep, sate lilit, and sambal matah. Shared class IDR 350,000 per person, max 8 guests, free Ubud hotel pickup. Guide: tumangbaliclass.com/cooking-class-with-market-tour-ubud.',
+    'Tumang Bali’s cooking class with market tour in Ubud starts ~08:30: guided traditional pasar visit, rice-field walk, then hands-on cooking of 10+ dishes including Base Genep, sate lilit, and sambal matah. Shared class IDR 506,370 per adult (2+ participants; IDR 616,032 for 1), max 8 guests, free Ubud hotel pickup. Guide: tumangbaliclass.com/cooking-class-with-market-tour-ubud.',
   heroImage: '/images/img2.jpg',
   heroImageAlt: 'Guests exploring the traditional Ubud morning market during a cooking class tour',
   body: [
@@ -538,7 +538,7 @@ export const cookingClassBali: ClassLandingContent = {
   intro:
     'A cooking class in Bali is one of the best ways to experience the island beyond the beaches. Our hands-on Balinese cooking class in Ubud includes a morning market tour, rice-field walk, and cooking 10+ traditional dishes with a local chef.',
   citabilityBlock:
-    'A cooking class in Bali at Tumang Bali (Ubud area) is a half-day hands-on experience: morning market tour, rice-field walk, 10+ dishes, shared feast, max 8 guests. Shared class IDR 350,000; private 1 person IDR 650,000. Free Ubud hotel pickup. Book: tumangbaliclass.com/balinese-cooking-class-ubud.',
+    'A cooking class in Bali at Tumang Bali (Ubud area) is a half-day hands-on experience: morning market tour, rice-field walk, 10+ dishes, shared feast, max 8 guests. Shared class IDR 506,370; private 1 person IDR 633,090. Free Ubud hotel pickup. Book: tumangbaliclass.com/balinese-cooking-class-ubud.',
   heroImage: '/images/img1.jpg',
   heroImageAlt: 'Hands-on Balinese cooking class in Ubud — guests grinding spice paste',
   body: [
@@ -576,7 +576,7 @@ export const cookingClassBali: ClassLandingContent = {
     },
     {
       question: 'How much does a cooking class in Bali cost?',
-      answer: 'Our shared class starts at IDR 350,000 per person, which includes everything: market tour, cooking class, lunch, recipe booklet, and hotel pickup. Private class for 1 person is IDR 650,000.',
+      answer: 'Our shared class starts at IDR 506,370 per adult (2+ participants; IDR 616,032 for 1), which includes everything: market tour, cooking class, lunch, recipe booklet, and hotel pickup. Private class for 1 person is IDR 633,090.',
     },
     {
       question: 'Do I need to book a cooking class in advance?',
@@ -584,7 +584,7 @@ export const cookingClassBali: ClassLandingContent = {
     },
   ],
   ctaHeading: 'Book a Cooking Class in Bali',
-  ctaSubtext: 'Hands-on cooking, market tour, rice-field walk — from IDR 350,000 per person.',
+  ctaSubtext: 'Hands-on cooking, market tour, rice-field walk — from IDR 506,370 per adult (2+ participants; IDR 616,032 for 1).',
 }
 
 export const balineseCookingClassUbud: ClassLandingContent = {
@@ -593,9 +593,9 @@ export const balineseCookingClassUbud: ClassLandingContent = {
   h1: 'Cooking Class Ubud — Balinese Cooking with Local Chefs',
   h1Plain: 'Cooking Class Ubud — Balinese Cooking with Local Chefs',
   intro:
-    'Book the best cooking class in Ubud — morning market tour, rice-field walk, hands-on cooking of 10+ traditional dishes, and a shared feast with local chefs in Tumang village. Free hotel pickup. Vegetarian friendly. From IDR 350K per person.',
+    'Book the best cooking class in Ubud — morning market tour, rice-field walk, hands-on cooking of 10+ traditional dishes, and a shared feast with local chefs in Tumang village. Free hotel pickup. Vegetarian friendly. From IDR 506,370 per person.',
   citabilityBlock:
-    'A cooking class in Ubud at Tumang Bali is a hands-on Balinese culinary experience in Tumang village, about 30 minutes from central Ubud. The shared class costs IDR 350,000 per person and includes a guided morning market tour, rice-field walk, Canang Sari flower offering, and cooking 10+ traditional dishes from scratch with Chef Wayan Sudiana. Guests grind Base Genep spice paste by hand, prepare sate lilit, pepes ikan, sambal matah, and a full Balinese feast, then dine together overlooking the paddies. Classes are vegetarian friendly with vegan options on request, small groups of maximum 8 people, and complimentary hotel pickup in the Ubud area. Private classes for one person cost IDR 650,000; kids on private classes are IDR 550,000.',
+    'A cooking class in Ubud at Tumang Bali is a hands-on Balinese culinary experience in Tumang village, about 30 minutes from central Ubud. The shared class costs IDR 506,370 per adult (2+ participants; IDR 616,032 for 1) and includes a guided morning market tour, rice-field walk, Canang Sari flower offering, and cooking 10+ traditional dishes from scratch with Chef Wayan Sudiana. Guests grind Base Genep spice paste by hand, prepare sate lilit, pepes ikan, sambal matah, and a full Balinese feast, then dine together overlooking the paddies. Classes are vegetarian friendly with vegan options on request, small groups of maximum 8 people, and complimentary hotel pickup in the Ubud area. Private classes for one person cost IDR 633,090; kids on private classes are IDR 1,266,180.',
   heroImage: '/images/gallery-group.jpg',
   heroImageAlt: 'Cooking class in Ubud Bali — guests learning Balinese cooking with local chefs',
   body: [
@@ -609,7 +609,7 @@ export const balineseCookingClassUbud: ClassLandingContent = {
     {
       heading: 'Ubud cooking class price (2026)',
       paragraphs: [
-        'Shared morning or afternoon class: IDR 350,000 per person (includes market tour, cooking, lunch or dinner, pickup, and recipes). Private class for one person: IDR 650,000. Kids rate: IDR 550,000. See our full price guide for details on what is included and how we compare to other Ubud cooking classes.',
+        'Shared morning or afternoon class: IDR 506,370 per adult (2+ participants; IDR 616,032 for 1) (includes market tour, cooking, lunch or dinner, pickup, and recipes). Private class for one person: IDR 633,090. Kids rate: IDR 1,266,180. See our full price guide for details on what is included and how we compare to other Ubud cooking classes.',
       ],
     },
     {
@@ -620,27 +620,27 @@ export const balineseCookingClassUbud: ClassLandingContent = {
     },
   ],
   sellingPoints: [
-    { title: 'IDR 350K All-Inclusive', description: 'Market tour, 10+ dishes, meal, pickup, and recipe booklet included.' },
+    { title: 'IDR 506,370 All-Inclusive', description: 'Market tour, 10+ dishes, meal, pickup, and recipe booklet included.' },
     { title: 'Morning Market + Rice Fields', description: 'A full cultural immersion before you even start cooking.' },
     { title: 'Local Balinese Chefs', description: 'Chef Wayan — 10+ years teaching, fluent English, patient with beginners.' },
   ],
   pricing: {
     adultLabel: 'Shared class (morning or afternoon)',
-    adultPrice: 'IDR 350K',
+    adultPrice: 'IDR 506,370',
     kidsLabel: 'Kids (8+)',
-    kidsPrice: 'IDR 550K',
-    note: 'Private class for 1 person: IDR 650K. Complimentary pickup from Ubud hotels.',
+    kidsPrice: 'IDR 1,266,180',
+    note: 'Private class for 1 person: IDR 633,090. Complimentary pickup from Ubud hotels.',
   },
   faqs: [
     {
       question: 'What is the best cooking class in Ubud?',
       answer:
-        'The best cooking class in Ubud includes a real morning market tour, hand-ground spice paste, 10+ dishes cooked from scratch, small groups, and a village setting — not a hotel demo kitchen. Tumang Bali offers all of this with complimentary hotel pickup from IDR 350K.',
+        'The best cooking class in Ubud includes a real morning market tour, hand-ground spice paste, 10+ dishes cooked from scratch, small groups, and a village setting — not a hotel demo kitchen. Tumang Bali offers all of this with complimentary hotel pickup from IDR 506,370.',
     },
     {
       question: 'How much does a cooking class in Ubud cost?',
       answer:
-        'Our shared Ubud cooking class is IDR 350,000 per person in 2026, including market tour, all ingredients, the full meal, hotel pickup, and a recipe booklet. Private class for one person is IDR 650,000; kids are IDR 550,000.',
+        'Our shared Ubud cooking class is IDR 506,370 per adult (2+ participants; IDR 616,032 for 1) in 2026, including market tour, all ingredients, the full meal, hotel pickup, and a recipe booklet. Private class for one person is IDR 633,090; min. 2 participants IDR 1,266,180.',
     },
     {
       question: 'Where exactly is the cooking class held in Ubud?',
@@ -657,7 +657,7 @@ export const balineseCookingClassUbud: ClassLandingContent = {
     },
   ],
   ctaHeading: 'Book Your Cooking Class in Ubud',
-  ctaSubtext: 'Market tour · 10+ dishes · local chefs · IDR 350K — TripAdvisor Travelers\' Choice 2026.',
+  ctaSubtext: 'Market tour · 10+ dishes · local chefs · IDR 506,370 — TripAdvisor Travelers\' Choice 2026.',
 }
 
 export const tumpengMakingClass: ClassLandingContent = {
@@ -770,7 +770,7 @@ export const bestCookingClassesBali: ClassLandingContent = {
   intro:
     'We reviewed the 10 best cooking classes in Bali so you don\'t have to. From village-based experiences to resort workshops, we rate each on authenticity, value, location, and overall experience — and explain why Tumang Bali ranks #1 for authentic hands-on Balinese cooking.',
   citabilityBlock:
-    'The best cooking classes in Bali for authenticity are village-based near Ubud with a real market tour, hand-ground spice paste, 10+ dishes, and small groups. Tumang Bali ranks #1 on our 2026 list: shared IDR 350,000, max 8 guests, Travelers’ Choice. Comparison: tumangbaliclass.com/best-cooking-classes-bali.',
+    'The best cooking classes in Bali for authenticity are village-based near Ubud with a real market tour, hand-ground spice paste, 10+ dishes, and small groups. Tumang Bali ranks #1 on our 2026 list: shared IDR 506,370, max 8 guests, Travelers’ Choice. Comparison: tumangbaliclass.com/best-cooking-classes-bali.',
   heroImage: '/images/img1.jpg',
   heroImageAlt: 'Best cooking classes in Bali 2026 — reviewed and compared options',
   body: [
@@ -784,7 +784,7 @@ export const bestCookingClassesBali: ClassLandingContent = {
     {
       heading: '#1 Tumang Bali Cooking Class — Best Overall',
       paragraphs: [
-        'Tumang Bali ranks first because it delivers everything: a genuine morning market tour, a rice-field walk to the kitchen, hand-ground Base Genep spice paste, 10+ authentic dishes, a shared meal in a village surrounded by terraces, complimentary hotel pickup, and a printed recipe booklet. Chef Wayan has been teaching for over ten years and consistently receives five-star reviews on TripAdvisor. From IDR 350,000 per person.',
+        'Tumang Bali ranks first because it delivers everything: a genuine morning market tour, a rice-field walk to the kitchen, hand-ground Base Genep spice paste, 10+ authentic dishes, a shared meal in a village surrounded by terraces, complimentary hotel pickup, and a printed recipe booklet. Chef Wayan has been teaching for over ten years and consistently receives five-star reviews on TripAdvisor. From IDR 506,370 per adult (2+ participants; IDR 616,032 for 1).',
       ],
     },
     {
@@ -820,11 +820,11 @@ export const bestCookingClassesBali: ClassLandingContent = {
   faqs: [
     {
       question: 'What is the best cooking class in Bali?',
-      answer: 'Tumang Bali Cooking Class ranks #1 on our list. It offers a full morning market tour, rice-field walk, hand-ground spice paste, 10+ authentic dishes, and dining in a village surrounded by rice paddies — all from IDR 350,000 per person.',
+      answer: 'Tumang Bali Cooking Class ranks #1 on our list. It offers a full morning market tour, rice-field walk, hand-ground spice paste, 10+ authentic dishes, and dining in a village surrounded by rice paddies — all from IDR 506,370 per adult (2+ participants; IDR 616,032 for 1).',
     },
     {
       question: 'How much does a cooking class in Bali cost?',
-      answer: 'Prices range from IDR 350,000 at village-based classes like Tumang Bali, to IDR 2,000,000+ at luxury resort options like Sokasi at Four Seasons. Most mid-range classes in Ubud cost IDR 450,000–800,000 per person.',
+      answer: 'Prices range from IDR 506,370 at village-based classes like Tumang Bali, to IDR 2,000,000+ at luxury resort options like Sokasi at Four Seasons. Most mid-range classes in Ubud cost IDR 450,000–800,000 per person.',
     },
     {
       question: 'Is a village cooking class better than an Ubud class?',
@@ -886,7 +886,7 @@ export const baliCookingExperience: ClassLandingContent = {
     },
   ],
   ctaHeading: 'Book Your Bali Experience',
-  ctaSubtext: 'The complete Balinese cooking day — market tour, rice-field walk, cooking, and feast — from IDR 350,000 per person.',
+  ctaSubtext: 'The complete Balinese cooking day — market tour, rice-field walk, cooking, and feast — from IDR 506,370 per adult (2+ participants; IDR 616,032 for 1).',
 }
 
 export const familyCookingClass: ClassLandingContent = {
@@ -897,7 +897,7 @@ export const familyCookingClass: ClassLandingContent = {
   intro:
     'A Bali cooking class designed for families with children. Our kid-friendly Balinese cooking experience in Ubud welcomes little chefs aged 4 and up — with patient local instructors, safe kitchen stations, and hands-on activities the whole family will love.',
   citabilityBlock:
-    'Tumang Bali’s family cooking class in Bali welcomes kids 8+ (younger children can sit in). Shared class IDR 350,000; kids on private class IDR 550,000. Hands-on spice grinding, sate wrapping, max 8 guests, free Ubud hotel pickup. Page: tumangbaliclass.com/family-cooking-class-bali.',
+    'Tumang Bali’s family cooking class in Bali welcomes kids 8+ (younger children can sit in). Shared class IDR 506,370; kids on private class IDR 1,266,180. Hands-on spice grinding, sate wrapping, max 8 guests, free Ubud hotel pickup. Page: tumangbaliclass.com/family-cooking-class-bali.',
   heroImage: '/images/gallery-group.jpg',
   heroImageAlt: 'Family enjoying a hands-on Balinese cooking class together in Ubud with children',
   body: [
@@ -918,7 +918,7 @@ export const familyCookingClass: ClassLandingContent = {
     {
       heading: 'Ages, pricing and private family sessions',
       paragraphs: [
-        'Children aged 4 and above are welcome in every class. Kids under 4 can attend for free but will not have their own cooking station. For a private family session the kitchen is exclusive to you: 1 person / adult is IDR 650,000; kids are IDR 550,000. Shared morning and afternoon classes remain IDR 350,000 per person.',
+        'Children aged 4 and above are welcome in every class. Kids under 4 can attend for free but will not have their own cooking station. For a private family session the kitchen is exclusive to you: 1 person / adult is IDR 633,090; min. 2 participants IDR 1,266,180. Shared morning and afternoon classes remain IDR 506,370 per adult (2+ participants; IDR 616,032 for 1).',
         'Private family sessions are ideal for birthday celebrations, multi-generational trips, or families with very young children who need extra flexibility. Message us on WhatsApp to book.',
       ],
     },
@@ -942,7 +942,7 @@ export const familyCookingClass: ClassLandingContent = {
     {
       question: 'Can we book a private class for just our family?',
       answer:
-        'Absolutely. A private class for 1 person is IDR 650,000 and kids are IDR 550,000. The kitchen, chef, and market guide are exclusively for your family — so you can go at your own pace and customise the experience for your children.',
+        'Absolutely. A private class for 1 person is IDR 633,090 and min. 2 participants IDR 1,266,180. The kitchen, chef, and market guide are exclusively for your family — so you can go at your own pace and customise the experience for your children.',
     },
     {
       question: 'Is there a kid-friendly menu?',

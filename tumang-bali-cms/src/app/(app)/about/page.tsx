@@ -86,8 +86,8 @@ export default function AboutPage() {
             shared feast at the end of the session.
           </p>
           <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
-            Shared sessions start at IDR 350,000 per person. Private one-person sessions are IDR 650,000
-            (kids IDR 550,000). Hotel pickup in the Ubud area is complimentary.
+            Shared sessions start at IDR 506,370 per adult (2+ participants; IDR 616,032 for 1). Private one-person sessions are IDR 633,090
+            (min. 2 participants IDR 1,266,180). Hotel pickup in the Ubud area is complimentary.
           </p>
         </section>
 
