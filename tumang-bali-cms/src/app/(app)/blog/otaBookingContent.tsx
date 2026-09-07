@@ -47,6 +47,11 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
         'Shared class IDR 506,370 per adult (2+ participants; IDR 616,032 for 1) direct (GYG may show a the same price in USD — same price on every channel). Includes Ubud-area hotel pickup, ingredients, hands-on cooking of 10+ dishes, shared meal, recipe booklet, and English-speaking chefs. Morning sessions include a traditional market tour.',
     },
     OTA_PRICING_FAQ,
+    {
+      question: 'How do I cancel a GetYourGuide booking with Tumang Bali?',
+      answer:
+        'Cancel only through GetYourGuide (app, website, or GetYourGuide customer service) — not via WhatsApp or email to Tumang Bali. Free cancellation until 24 hours before class start for a full refund. Later cancellations and no-shows are non-refundable under GetYourGuide’s standard rules. Full details: https://tumangbaliclass.com/refund-policy',
+    },
   ],
   body: (
     <>
@@ -89,12 +94,19 @@ export const bookCookingClassUbudGetYourGuide: StaticArticle = {
         <li>Full vegetarian / vegan menu available — not a side option</li>
         <li>Free Ubud hotel pickup included</li>
       </ul>
+      <h2>Cancellation on GetYourGuide</h2>
+      <p>
+        GetYourGuide bookings include <strong>free cancellation until 24 hours before</strong> class
+        start for a full refund. Cancel in the GetYourGuide app or website (or contact GetYourGuide
+        support) — we cannot cancel GetYourGuide bookings directly via WhatsApp. See our{' '}
+        <Link href="/refund-policy">Refund Policy</Link> for the full partner-platform rules.
+      </p>
       <h2>GetYourGuide vs booking direct</h2>
       <p>
         GYG is ideal if you already use the app abroad. You can also{' '}
         <Link href={book}>book direct on tumangbaliclass.com</Link> or compare platforms on our{' '}
-        <Link href={compare}>Ubud cooking class comparison</Link>. Same class, same chefs — choose the
-        checkout you trust.
+        <Link href={compare}>Ubud cooking class comparison</Link>. Same class, same chefs, same
+        all-inclusive rates — choose the checkout you trust.
       </p>
       <h2>What you will cook</h2>
       <p>

@@ -45,9 +45,9 @@ const faqs = [
       'Yes. Our Viator tour “Ubud Market-to-Table Cooking Class and Local Herb Discovery” is the same Tumang Bali village experience listed on TripAdvisor — same kitchen, chefs, menu, and Ubud hotel pickup.',
   },
   {
-    question: 'Why is the Viator price higher than booking direct on your website?',
+    question: 'Is the Viator or GetYourGuide price higher than booking direct?',
     answer:
-      'Viator and other OTAs (GetYourGuide, Airbnb) list the same Tumang Bali rates — no overcharge. Their listed price may be slightly above our direct rate of IDR 506,370 per shared class. Same experience — prices are the same on every channel, not Tumang Bali charging you more.',
+      'No. Viator, GetYourGuide, and Airbnb list the same Tumang Bali rates as our website and WhatsApp — no overcharge. Shared class from IDR 506,370 per adult (2+). Same experience and inclusions on every channel.',
   },
 ]
 

@@ -22,6 +22,7 @@ export default function PrivacyPolicyPage() {
       eyebrow="Policies"
       title="Privacy Policy"
       intro="This Privacy Policy explains how Tumang Bali Cooking Class collects, uses, and protects your personal information and payment-related data when you visit our website, book a class, or contact us."
+      updatedLabel="Last updated: October 2026"
     >
       <LegalSection title="Who we are">
         <p>
@@ -102,6 +103,13 @@ export default function PrivacyPolicyPage() {
           <li>Website hosting, email, and form providers that process data on our behalf</li>
           <li>Authorities if legally required</li>
         </ul>
+        <p>
+          If you book through GetYourGuide, GetYourGuide and Tumang Bali each act as separate
+          controllers of the personal data needed for that booking. GetYourGuide may transfer to us
+          only what is necessary to run your class (for example name, contact details, date,
+          guest count, and pickup notes). GetYourGuide’s own privacy notice also applies to data
+          collected on their platform.
+        </p>
       </LegalSection>
 
       <LegalSection title="Data security">

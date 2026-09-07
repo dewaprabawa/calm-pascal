@@ -22,6 +22,7 @@ export default function EditorialPolicyPage() {
       eyebrow="Trust & Content"
       title="Editorial Policy"
       intro="This policy explains how Tumang Bali researches, reviews, and updates the guides, recipes, and planning articles we publish for travelers."
+      updatedLabel="Last updated: October 2026"
     >
       <LegalSection title="Who writes our content">
         <p>
@@ -57,8 +58,9 @@ export default function EditorialPolicyPage() {
       <LegalSection title="Commercial disclosure">
         <p>
           Tumang Bali operates a cooking school. Educational articles may include links to our booking
-          pages. When we recommend partner booking channels, we disclose that OTA prices can include
-          platform commission. We do not accept payment for undisclosed positive reviews.
+          pages. When we recommend partner booking channels (GetYourGuide, Viator, Airbnb), we note
+          that listed rates match our direct prices — we do not add a commission markup for those
+          checkouts. We do not accept payment for undisclosed positive reviews.
         </p>
       </LegalSection>
 
