@@ -21,6 +21,7 @@ function setStyle(el: Element | null, styles: Partial<CSSStyleDeclaration>) {
  * This effect repositions the internal launcher toward the bottom-left,
  * and opens the popup when hero/CTA buttons request it.
  * Native Zapier close controls are left alone so an open chat can be dismissed.
+ */
 export default function ZapierChatbotPositioner() {
   useEffect(() => {
     let openPending = hasPendingZapierOpen()
