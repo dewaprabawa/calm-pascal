@@ -28,7 +28,7 @@ const competitors = [
   {
     name: 'Tumang Bali',
     tagline: 'Most Inclusions · Best Value',
-    price: 'IDR 350K (~$21)',
+    price: 'IDR 506,370 (~$21)',
     groupSize: 'Max 8',
     marketTour: true,
     ricefield: true,
@@ -76,7 +76,7 @@ const competitors = [
   {
     name: "Ketut's Class",
     tagline: '4.9/5 Rating · Individual Stations',
-    price: 'IDR 350K (~$21)',
+    price: 'IDR 506,370 (~$21)',
     groupSize: 'Max 10',
     marketTour: true,
     ricefield: false,
@@ -115,7 +115,7 @@ const faqs = [
   {
     question: 'How much does a cooking class in Ubud cost in 2026?',
     answer:
-      'Prices range from IDR 350,000 (~$21 USD) at Tumang Bali and Ketut\'s, up to IDR 450,000–650,000 (~$28–$40) at Casa Luna. All prices are as of September 2026 — verify via official websites.',
+      'Prices range from IDR 506,370 (~$21 USD) at Tumang Bali and Ketut\'s, up to IDR 450,000–650,000 (~$28–$40) at Casa Luna. All prices are as of September 2026 — verify via official websites.',
   },
 ]
 
@@ -134,6 +134,7 @@ export default async function Page() {
       id: a.id as string,
       title: a.title as string,
       price: a.price as number,
+      groupPrice: (a as { groupPrice?: number }).groupPrice,
       kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
     }))
   } catch (err) {
@@ -142,9 +143,9 @@ export default async function Page() {
 
   if (bookingActivities.length === 0) {
     bookingActivities = [
-      { id: 'morning-class', title: 'Morning Market Tour & Cooking Class (3–4 Hours)', price: 350 },
-      { id: 'afternoon-class', title: 'Afternoon Balinese Cooking Class (3 Hours)', price: 350 },
-      { id: 'private-class', title: 'Private Cooking Class (1 Person)', price: 650, kidsPrice: 550 },
+      { id: 'morning-class', title: 'Morning Market Tour & Cooking Class (3–4 Hours)', price: 616032, groupPrice: 506370 },
+      { id: 'afternoon-class', title: 'Afternoon Balinese Cooking Class (3 Hours)', price: 616032, groupPrice: 506370 },
+      { id: 'private-class', title: 'Private Cooking Class (1 Person)', price: 633090, groupPrice: 1266180 },
     ]
   }
 
@@ -250,7 +251,7 @@ export default async function Page() {
             { label: 'Classes Compared', value: '4' },
             { label: 'Tumang Group Size', value: '≤ 8' },
             { label: 'Tumang Dishes', value: '10+' },
-            { label: 'Tumang Price', value: 'IDR 350K' },
+            { label: 'Tumang Price', value: 'IDR 506,370' },
           ].map((s) => (
             <div key={s.label} className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 text-center">
               <p className="text-3xl font-black text-orange-600 dark:text-orange-500 mb-1">{s.value}</p>
@@ -264,14 +265,14 @@ export default async function Page() {
       <section className="py-12 px-6 max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-black tracking-tight mb-4">How we compared these classes</h2>
         <p className="text-stone-600 dark:text-stone-400 leading-relaxed mb-4" data-speakable>
-          This page is updated for <strong>September 2026</strong>. Tumang Bali ranks best overall value among Ubud cooking classes at IDR 350,000 with a real morning market tour, rice-field walk, max 8 guests, and 10+ dishes cooked from scratch. Casa Luna suits travelers who want an established in-town school with themed classes. Paon Bali offers a home-kitchen village vibe with market tour. Ketut&apos;s gives each guest an individual cooking station. We scored each school on inclusions travelers actually ask about: market tour, rice-field setting, max group size, dish count, vegetarian depth, hotel pickup, and published price.
+          This page is updated for <strong>September 2026</strong>. Tumang Bali ranks best overall value among Ubud cooking classes at IDR 506,370 with a real morning market tour, rice-field walk, max 8 guests, and 10+ dishes cooked from scratch. Casa Luna suits travelers who want an established in-town school with themed classes. Paon Bali offers a home-kitchen village vibe with market tour. Ketut&apos;s gives each guest an individual cooking station. We scored each school on inclusions travelers actually ask about: market tour, rice-field setting, max group size, dish count, vegetarian depth, hotel pickup, and published price.
         </p>
         <p className="text-sm text-stone-500 mb-4">
           Prices and policies change — always confirm on the official site before you book.
         </p>
         <ul className="list-disc pl-6 space-y-2 text-stone-600 dark:text-stone-400 mb-4">
           <li>
-            <strong>Best overall value:</strong> Tumang Bali — most inclusions at IDR 350K with max 8 guests.
+            <strong>Best overall value:</strong> Tumang Bali — most inclusions at IDR 506,370 with max 8 guests.
           </li>
           <li>
             <strong>Best for cultural depth in town:</strong> Casa Luna — long-running school with themed classes.
@@ -398,7 +399,7 @@ export default async function Page() {
             {
               icon: '💰',
               title: 'Best Value',
-              desc: 'IDR 350,000 with the most inclusions — hotel pickup, market tour, rice field walk, flower offering, and a recipe booklet.',
+              desc: 'IDR 506,370 with the most inclusions — hotel pickup, market tour, rice field walk, flower offering, and a recipe booklet.',
             },
           ].map((sp) => (
             <div
@@ -426,7 +427,7 @@ export default async function Page() {
                 'You want the most inclusions (market + rice field + flower offering)',
                 'You are vegetarian or vegan',
                 'You prefer a small, intimate group (max 8)',
-                'You want the best value at IDR 350K',
+                'You want the best value at IDR 506,370',
                 'You are visiting Ubud and want a full cultural half-day',
               ],
             },
@@ -496,7 +497,7 @@ export default async function Page() {
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">Ready to Book in Ubud?</h2>
           <p className="text-lg text-stone-600 dark:text-stone-400 mb-8">
-            Tumang Bali offers 2 daily sessions — morning (8 AM, with market tour) and afternoon (2 PM). Small groups, IDR 350K, hotel pickup included.
+            Tumang Bali offers 2 daily sessions — morning (8 AM, with market tour) and afternoon (2 PM). Small groups, IDR 506,370, hotel pickup included.
           </p>
           <BookButton className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-full font-bold text-lg transition-transform hover:scale-105 active:scale-95">
             Book Tumang Bali Now

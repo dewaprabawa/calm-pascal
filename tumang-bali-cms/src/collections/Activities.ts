@@ -24,14 +24,23 @@ export const Activities: CollectionConfig = {
       type: 'number',
       required: true,
       admin: {
-        description: 'Price in thousands of IDR (e.g. 350 = IDR 350,000). For private class, this is the adult / 1-person rate.',
+        description:
+          'Adult price in full IDR for 1 participant (e.g. 616032). Shared solo / private solo rate.',
+      },
+    },
+    {
+      name: 'groupPrice',
+      type: 'number',
+      admin: {
+        description:
+          'Adult price in full IDR for 2+ participants. Shared: per adult. Private: package for minimum 2 participants (e.g. 1266180).',
       },
     },
     {
       name: 'kidsPrice',
       type: 'number',
       admin: {
-        description: 'Optional kids price in thousands of IDR (e.g. 550 = IDR 550,000).',
+        description: 'Optional kids price in full IDR (legacy; adult tiered rates are preferred).',
       },
     },
     {

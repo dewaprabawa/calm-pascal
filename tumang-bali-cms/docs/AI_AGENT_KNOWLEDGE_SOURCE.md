@@ -27,16 +27,16 @@
 
 ## Pricing (September 2026)
 
-All prices in **Indonesian Rupiah (IDR)**. Prices are **all-inclusive** unless noted.
+All prices in **Indonesian Rupiah (IDR)**. Prices are **all-inclusive** unless noted. **Same rates on every booking channel** (website, WhatsApp, GetYourGuide, Viator, Airbnb) — no commission overcharge.
 
 | Class type | Price | Who it’s for |
 |------------|-------|--------------|
-| **Shared morning class** | IDR 350,000 / person | Standard group experience (max 8 guests) |
-| **Shared afternoon class** | IDR 350,000 / person | Same price; no market tour |
-| **Private class (1 adult / solo)** | IDR 650,000 | Exclusive kitchen, dedicated chef |
-| **Private class (kids)** | IDR 550,000 | Children aged 8+ on a private booking |
+| **Shared — 1 adult** | IDR 616,032 | Solo shared-class booking |
+| **Shared — 2+ adults** | IDR 506,370 per adult | Morning or afternoon shared class (max 8 guests) |
+| **Private — 1 adult** | IDR 633,090 | Exclusive kitchen, dedicated chef |
+| **Private — min. 2 participants** | IDR 1,266,180 | Private booking for at least 2 adults |
 
-### What IDR 350,000 includes (shared class)
+### What the shared class includes
 
 - Class instruction with local chef
 - All ingredients
@@ -45,7 +45,7 @@ All prices in **Indonesian Rupiah (IDR)**. Prices are **all-inclusive** unless n
 - Complimentary hotel pickup and drop-off (central Ubud area)
 - **Morning session only:** traditional market tour + rice-field walk + Canang Sari flower offering
 
-### What IDR 650,000 / IDR 550,000 includes (private class)
+### What the private class includes
 
 - Everything above, but the kitchen and chef are exclusive to your party
 - Morning private sessions include market tour
@@ -53,9 +53,9 @@ All prices in **Indonesian Rupiah (IDR)**. Prices are **all-inclusive** unless n
 
 ### OTA vs direct pricing
 
-- **Direct (lowest price):** Website or WhatsApp — IDR 350,000 shared
-- **OTA (instant checkout):** GetYourGuide, Viator, Airbnb Experiences — **slightly higher** because platforms charge commission
-- Same class, menu, and inclusions on all channels — Tumang Bali is not charging extra; the difference is the platform fee
+- **Same price everywhere:** Website, WhatsApp, GetYourGuide, Viator, and Airbnb Experiences
+- **OTA:** best when you want instant checkout
+- **WhatsApp / website:** best when you want a personal confirmation
 
 ---
 
@@ -70,7 +70,7 @@ Classes run **every day**. Customers choose a **date** and **session**.
 | **Time** | 08:30 – 12:30 (approximately 3–4 hours) |
 | **Pickup** | Typically 07:30 – 08:30 depending on hotel location |
 | **Includes** | Market tour · rice-field walk · Canang Sari · hands-on cooking · lunch |
-| **Price** | IDR 350,000 / person (shared) |
+| **Price** | IDR 616,032 (1 adult) · IDR 506,370 per adult (2+) |
 
 ### Afternoon class
 
@@ -79,7 +79,7 @@ Classes run **every day**. Customers choose a **date** and **session**.
 | **Time** | 14:30 – 17:30 (approximately 3 hours) |
 | **Includes** | Hands-on cooking · Balinese dinner feast |
 | **Does NOT include** | Market tour or rice-field walk |
-| **Price** | IDR 350,000 / person (shared) |
+| **Price** | IDR 616,032 (1 adult) · IDR 506,370 per adult (2+) |
 
 ### Which session to recommend
 
@@ -104,9 +104,9 @@ Classes run **every day**. Customers choose a **date** and **session**.
 
 | Experience | Duration | Price (shared) | Price (private) |
 |------------|----------|----------------|-----------------|
-| Morning Market Tour & Cooking Class | 3–4 hours | IDR 350K | IDR 650K adult · IDR 550K kids |
-| Afternoon Balinese Cooking Class | 3 hours | IDR 350K | IDR 650K adult · IDR 550K kids |
-| Private Cooking Class (1 person) | 3–4 hours | — | IDR 650K adult · IDR 550K kids |
+| Morning Market Tour & Cooking Class | 3–4 hours | IDR 506,370 | IDR 633,090 adult · IDR 1,266,180 kids |
+| Afternoon Balinese Cooking Class | 3 hours | IDR 506,370 | IDR 633,090 adult · IDR 1,266,180 kids |
+| Private Cooking Class (1 person) | 3–4 hours | — | IDR 633,090 adult · IDR 1,266,180 kids |
 
 ---
 
@@ -164,9 +164,9 @@ Ask (if not already clear):
 
 ### Step 2 — Recommend the right class
 
-- **Default recommendation:** Shared morning class — IDR 350,000, best value and most complete experience
-- **Couples / anniversary:** Shared morning or private (IDR 650,000)
-- **Families with kids 8+:** Shared morning; kids on private = IDR 550,000
+- **Default recommendation:** Shared morning class — IDR 506,370, best value and most complete experience
+- **Couples / anniversary:** Shared morning or private (IDR 633,090)
+- **Families with kids 8+:** Shared morning; kids on private = IDR 1,266,180
 - **Solo traveller:** Shared morning (small group, max 8) or private for full attention
 - **Vegetarian/vegan:** Full plant-based menu at same price — mention when booking
 - **From Canggu/Seminyak:** Afternoon easier; free pickup is Ubud only — extra transport fee from coast
@@ -175,19 +175,19 @@ Ask (if not already clear):
 
 Example responses:
 
-> "Our shared morning class is **IDR 350,000 per person** (about USD 22). That includes Ubud hotel pickup, market tour, rice-field walk, cooking 10+ dishes, lunch, and a recipe booklet."
+> "Our shared morning class is **IDR 506,370 per adult (2+ participants; IDR 616,032 for 1)** (about USD 22). That includes Ubud hotel pickup, market tour, rice-field walk, cooking 10+ dishes, lunch, and a recipe booklet."
 
-> "Private class for one person is **IDR 650,000**; kids on a private booking are **IDR 550,000**."
+> "Private class for one person is **IDR 633,090**; kids on a private booking are **IDR 1,266,180**."
 
 ### Step 4 — Route to checkout
 
 **If customer wants instant booking:**
 
-> "You can book and pay instantly here: https://tumangbaliclass.com/book-your-cooking-class — choose GetYourGuide, Viator, or Airbnb. Prices may be slightly above IDR 350K on those sites due to platform fees, but you get immediate confirmation."
+> "You can book and pay instantly here: https://tumangbaliclass.com/book-your-cooking-class — choose GetYourGuide, Viator, or Airbnb. Prices may be the same as IDR 506,370 on those sites due to platform fees, but you get immediate confirmation."
 
 **If customer wants best price or has questions:**
 
-> "Message us on WhatsApp at +62 822-1013-2418 with your date, session (morning/afternoon), guest count, and hotel name. We'll confirm availability and arrange payment at the direct rate of IDR 350,000."
+> "Message us on WhatsApp at +62 822-1013-2418 with your date, session (morning/afternoon), guest count, and hotel name. We'll confirm availability and arrange payment at the direct rate of IDR 506,370."
 
 ### Step 5 — Confirm next steps
 
@@ -203,7 +203,7 @@ After directing to checkout, remind them:
 ## Frequently asked questions (booking, date, price)
 
 **Q: How much does a cooking class in Ubud cost?**  
-A: Tumang Bali shared class = **IDR 350,000/person**. Private 1 person = **IDR 650,000**. Kids (private) = **IDR 550,000**. All-inclusive.
+A: Tumang Bali shared class = **IDR 506,370/person**. Private 1 person = **IDR 633,090**. Kids (private) = **IDR 1,266,180**. All-inclusive.
 
 **Q: What days are classes available?**  
 A: **Every day**, Monday through Sunday.
@@ -227,13 +227,13 @@ A: No. Free hotel pickup is provided.
 A: Maximum **8 guests** in shared classes.
 
 **Q: Can children join?**  
-A: Yes — **aged 8+** for hands-on cooking. Private kids rate = IDR 550,000. Under 4 can sit in on private bookings (ask when booking).
+A: Yes — **aged 8+** for hands-on cooking. Shared and private adult rates apply by participant count. Under 4 can sit in on private bookings (ask when booking).
 
 **Q: Is vegetarian/vegan available?**  
 A: Yes — full plant-based Balinese menu (not just a side option). Same price. Vegan = no shrimp paste in sambal.
 
-**Q: Why is GetYourGuide/Viator more expensive?**  
-A: Platform commission. Same class — book direct or WhatsApp for IDR 350,000.
+**Q: Do GetYourGuide/Viator cost more?**  
+A: No. Same price on every channel. Shared: IDR 616,032 for 1 adult, IDR 506,370 for 2+; private: IDR 633,090 for 1, IDR 1,266,180 min. 2.
 
 **Q: Can I book for today?**  
 A: Try WhatsApp for same-day availability. OTAs show live availability for instant booking.
@@ -304,14 +304,14 @@ Recipe hub: https://tumangbaliclass.com/recipes
 
 ### Price inquiry
 
-> Tumang Bali Cooking Class costs **IDR 350,000 per person** for the shared morning or afternoon class. That includes Ubud hotel pickup, all ingredients, cooking 10+ Balinese dishes, your meal, and a recipe booklet. The morning session (08:30–12:30) also includes a traditional market tour and rice-field walk.  
+> Tumang Bali Cooking Class costs **IDR 506,370 per adult (2+ participants; IDR 616,032 for 1)** for the shared morning or afternoon class. That includes Ubud hotel pickup, all ingredients, cooking 10+ Balinese dishes, your meal, and a recipe booklet. The morning session (08:30–12:30) also includes a traditional market tour and rice-field walk.  
 >  
 > Book instantly: https://tumangbaliclass.com/book-your-cooking-class  
 > Or WhatsApp for the direct rate: https://wa.me/6282210132418
 
 ### Date / session inquiry
 
-> Classes run **every day**. I'd recommend the **morning session (08:30–12:30)** — you'll visit the local market, walk through rice paddies, then cook and eat lunch. The afternoon session (14:30–17:30) is cooking and dinner only, with no market tour. Both are IDR 350,000 per person.  
+> Classes run **every day**. I'd recommend the **morning session (08:30–12:30)** — you'll visit the local market, walk through rice paddies, then cook and eat lunch. The afternoon session (14:30–17:30) is cooking and dinner only, with no market tour. Both are IDR 506,370 per adult (2+ participants; IDR 616,032 for 1).  
 >  
 > Which date works for you? I can point you to instant booking or WhatsApp to secure your spot.
 
@@ -322,7 +322,7 @@ Recipe hub: https://tumangbaliclass.com/recipes
 >  
 > Choose **GetYourGuide**, **Viator**, or **Airbnb** for instant confirmation. Select your date, morning or afternoon, and number of guests.  
 >  
-> Prefer the **lowest direct price**? WhatsApp **+62 822-1013-2418** with your date, session, guest count, and Ubud hotel — we'll confirm availability at IDR 350,000.
+> Prefer the **lowest direct price**? WhatsApp **+62 822-1013-2418** with your date, session, guest count, and Ubud hotel — we'll confirm availability at IDR 506,370.
 
 ---
 

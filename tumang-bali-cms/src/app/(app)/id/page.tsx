@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  title: 'Kelas Memasak Ubud Bali — Harga IDR 350K | Tumang Bali',
+  title: 'Kelas Memasak Ubud Bali — Harga IDR 506,370 | Tumang Bali',
   description:
-    'Kelas memasak Bali di Ubud: tur pasar pagi, jalan sawah, masak 10+ hidangan tradisional. Harga IDR 350K, vegetarian, penjemputan hotel gratis. TripAdvisor Travelers\' Choice 2026.',
+    'Kelas memasak Bali di Ubud: tur pasar pagi, jalan sawah, masak 10+ hidangan tradisional. Harga IDR 506,370, vegetarian, penjemputan hotel gratis. TripAdvisor Travelers\' Choice 2026.',
   alternates: {
     canonical: 'https://tumangbaliclass.com/id',
     languages: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kelas Memasak Bali Autentik di Ubud | Tumang Bali',
     description:
-      'Tur pasar + jalan sawah + 10+ hidangan. Harga IDR 350K. Menu vegetarian. Penjemputan hotel termasuk.',
+      'Tur pasar + jalan sawah + 10+ hidangan. Harga IDR 506,370. Menu vegetarian. Penjemputan hotel termasuk.',
     url: 'https://tumangbaliclass.com/id',
     siteName: 'Tumang Bali Cooking Class',
     locale: 'id_ID',
@@ -79,7 +79,7 @@ const faqs = [
   {
     question: 'Berapa harga kelas memasak di Ubud?',
     answer:
-      'Kelas bersama pagi atau sore: IDR 350.000 per orang (termasuk tur pasar untuk sesi pagi saja, masak 10+ hidangan, makan, penjemputan hotel Ubud, dan buku resep). Kelas privat 1 orang: IDR 650.000. Anak 8+: IDR 550.000.',
+      'Kelas bersama pagi atau sore: IDR 506.370 per dewasa (2+ peserta; IDR 616.032 untuk 1) (termasuk tur pasar untuk sesi pagi saja, masak 10+ hidangan, makan, penjemputan hotel Ubud, dan buku resep). Kelas privat 1 orang: IDR 633.090. Min. 2 peserta: IDR 1.266.180.',
   },
   {
     question: 'Apa perbedaan kelas pagi dan sore?',
@@ -127,9 +127,9 @@ export default async function IndonesianPage() {
 
   if (bookingActivities.length === 0) {
     bookingActivities = [
-      { id: 'morning-class', title: 'Kelas Pagi: Tur Pasar & Memasak (3–4 Jam)', price: 350 },
-      { id: 'afternoon-class', title: 'Kelas Sore: Memasak Masakan Bali (3 Jam)', price: 350 },
-      { id: 'private-class', title: 'Kelas Privat (1 Orang)', price: 650, kidsPrice: 550 },
+      { id: 'morning-class', title: 'Kelas Pagi: Tur Pasar & Memasak (3–4 Jam)', price: 616032, groupPrice: 506370 },
+      { id: 'afternoon-class', title: 'Kelas Sore: Memasak Masakan Bali (3 Jam)', price: 616032, groupPrice: 506370 },
+      { id: 'private-class', title: 'Kelas Privat (1 Orang)', price: 633090, groupPrice: 1266180 },
     ]
   }
 
@@ -148,7 +148,7 @@ export default async function IndonesianPage() {
     '@type': 'Course',
     name: 'Kelas Memasak Bali di Ubud — Tumang Bali',
     description:
-      'Kelas memasak tradisional Bali dengan tur pasar, jalan sawah, dan 10+ hidangan. Harga dari IDR 350.000.',
+      'Kelas memasak tradisional Bali dengan tur pasar, jalan sawah, dan 10+ hidangan. Harga dari IDR 506.370.',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Tumang Bali Cooking Class',
@@ -162,7 +162,7 @@ export default async function IndonesianPage() {
     },
     offers: {
       '@type': 'Offer',
-      price: 350000,
+      price: 506370,
       priceCurrency: 'IDR',
       availability: 'https://schema.org/InStock',
       url: 'https://tumangbaliclass.com/book-your-cooking-class',
@@ -176,7 +176,7 @@ export default async function IndonesianPage() {
     url: `${SITE}/id`,
     name: 'Kelas Memasak Ubud Bali — Tumang Bali',
     description:
-      'Kelas memasak Bali di Ubud: tur pasar pagi, jalan sawah, masak 10+ hidangan. Harga IDR 350K.',
+      'Kelas memasak Bali di Ubud: tur pasar pagi, jalan sawah, masak 10+ hidangan. Harga IDR 506,370.',
     dateModified: SITE_CONTENT_UPDATED,
     inLanguage: 'id-ID',
     speakable: {
@@ -232,7 +232,7 @@ export default async function IndonesianPage() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-red-500">
               Ubud
             </span>{' '}
-            — Dari IDR 350K
+            — Dari IDR 506,370
           </h1>
           <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-2xl font-light leading-relaxed mb-8" data-speakable>
             Tur pasar hanya di kelas pagi, jalan di sawah, dan masak 10+ hidangan Bali tradisional
@@ -319,19 +319,19 @@ export default async function IndonesianPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                label: 'Kelas Bersama',
-                price: 'IDR 350K',
-                note: 'Pagi atau sore · maks. 8 orang',
+                label: 'Kelas Bersama — 1 orang',
+                price: 'IDR 616.032',
+                note: 'Pagi atau sore · peserta tunggal',
               },
               {
-                label: 'Anak (8+)',
-                price: 'IDR 550K',
-                note: 'Menu & aktivitas yang sama',
+                label: 'Kelas Bersama — 2+',
+                price: 'IDR 506.370',
+                note: 'Per dewasa · maks. 8 orang',
               },
               {
                 label: 'Kelas Privat',
-                price: 'IDR 650K',
-                note: '1 orang · dapur eksklusif',
+                price: 'IDR 633.090 / 1.266.180',
+                note: '1 orang · atau min. 2 peserta',
               },
             ].map((tier) => (
               <div

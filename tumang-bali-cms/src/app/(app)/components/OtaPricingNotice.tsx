@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { DIRECT_SHARED_CLASS_IDR, OTA_INSTANT_CHECKOUT_NOTE } from '@/lib/otaBookingLinks'
+import { OTA_SAME_PRICE_NOTE, formatIdr } from '@/lib/pricing'
 
 type Props = {
   compact?: boolean
@@ -15,12 +16,12 @@ export default function OtaPricingNotice({ compact = false, className = '' }: Pr
     return (
       <p className={`text-sm text-stone-600 dark:text-stone-400 ${className}`}>
         <strong>Use an OTA</strong> (GetYourGuide, Viator, Airbnb) to{' '}
-        <strong>secure your spot with instant checkout</strong> — prices may be slightly above our direct IDR{' '}
-        {DIRECT_SHARED_CLASS_IDR.toLocaleString('id-ID')} rate due to platform commission. Same class —{' '}
+        <strong>secure your spot with instant checkout</strong> — same price as direct (
+        {formatIdr(DIRECT_SHARED_CLASS_IDR)} shared for 2+ adults). No commission overcharge.{' '}
         <Link href="/book-your-cooking-class" className="text-orange-600 font-semibold underline">
-          book direct
+          Book any channel
         </Link>{' '}
-        for the lowest price (WhatsApp is a consultation, not instant checkout).
+        at the same rate (WhatsApp is a consultation, not instant checkout).
       </p>
     )
   }
@@ -30,27 +31,19 @@ export default function OtaPricingNotice({ compact = false, className = '' }: Pr
       className={`${boxClass} p-5 md:p-6 my-6 ${className}`}
       aria-label="OTA pricing transparency note"
     >
-      <p className="font-bold text-stone-900 dark:text-stone-100 mb-2">Transparent pricing — please read</p>
+      <p className="font-bold text-stone-900 dark:text-stone-100 mb-2">Transparent pricing — same on every channel</p>
       <p className="text-base mb-3">
-        <strong>{OTA_INSTANT_CHECKOUT_NOTE}</strong> OTA checkout is best when you are travelling soon and
-        want immediate confirmation.
+        <strong>{OTA_INSTANT_CHECKOUT_NOTE}</strong>
       </p>
       <p className="text-base mb-3">
-        Our <strong>direct rate</strong> is{' '}
-        <strong>IDR {DIRECT_SHARED_CLASS_IDR.toLocaleString('id-ID')}</strong> per person for a shared class
-        when you book on{' '}
+        Our shared class from{' '}
+        <strong>{formatIdr(DIRECT_SHARED_CLASS_IDR)}</strong> per adult (2+ participants) applies on{' '}
         <Link href="/book-your-cooking-class" className="text-orange-600 font-semibold underline">
           tumangbaliclass.com
-        </Link>{' '}
-        or WhatsApp — usually the lowest price, but WhatsApp is a consultation to secure your spot, not
-        instant payment checkout.
+        </Link>
+        , WhatsApp, GetYourGuide, Viator, and Airbnb Experiences.
       </p>
-      <p className="text-base">
-        If you book through <strong>GetYourGuide</strong>, <strong>Viator</strong>, or{' '}
-        <strong>Airbnb Experiences</strong>, the price shown may be <strong>slightly higher</strong> because
-        those platforms charge a booking commission. You get the same experience, chefs, and inclusions — we
-        are not trying to charge you more; the difference is the platform fee.
-      </p>
+      <p className="text-base">{OTA_SAME_PRICE_NOTE}</p>
     </aside>
   )
 }

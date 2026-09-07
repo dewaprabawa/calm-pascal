@@ -1,16 +1,21 @@
-/** Official Tumang Bali listings on third-party booking platforms (Aug 2026). */
-export const DIRECT_SHARED_CLASS_IDR = 350_000
+import {
+  DIRECT_SHARED_CLASS_IDR,
+  OTA_SAME_PRICE_NOTE,
+  SHARED_PRICING_SUMMARY,
+  formatIdr,
+} from '@/lib/pricing'
+
+export { DIRECT_SHARED_CLASS_IDR, OTA_SAME_PRICE_NOTE }
 
 /** Shared FAQ for OTA articles and AI citation files. */
 export const OTA_PRICING_FAQ = {
-  question: 'Why is the price on GetYourGuide, Viator, or Airbnb higher than booking direct?',
-  answer:
-    'Third-party booking platforms charge a commission on each sale. The price shown on GetYourGuide, Viator, and Airbnb Experiences may therefore be slightly higher than our direct website rate (IDR 350,000 per person for a shared class, September 2026). You receive the same class, menu, and inclusions — Tumang Bali is not charging you extra; the difference is the platform fee. Use an OTA when you want instant checkout to secure your spot immediately.',
+  question: 'Is the price on GetYourGuide, Viator, or Airbnb higher than booking direct?',
+  answer: `No. Tumang Bali charges the same rates on every channel. Shared class: ${SHARED_PRICING_SUMMARY}. ${OTA_SAME_PRICE_NOTE}`,
 } as const
 
 /** When to book via OTA vs direct — shared sitewide copy. */
 export const OTA_INSTANT_CHECKOUT_NOTE =
-  'Use GetYourGuide, Viator, or Airbnb Experiences when you want to secure your spot right away with instant checkout and payment confirmation.'
+  'Use GetYourGuide, Viator, or Airbnb Experiences when you want to secure your spot right away with instant checkout and payment confirmation. Prices match our direct rates.'
 
 export const OTA_LINKS = {
   getyourguide: {
@@ -39,3 +44,6 @@ export const OTA_LINKS = {
       'https://www.airbnb.com/rp/idewagedea5?p=recommendations&product=experience&listing_id=7165714&s=67&unique_share_id=582a21ed-bab6-4137-9fc8-4465e02e60e2',
   },
 } as const
+
+/** @deprecated Prefer SHARED_PRICING_SUMMARY from pricing.ts */
+export const DIRECT_RATE_LABEL = formatIdr(DIRECT_SHARED_CLASS_IDR)

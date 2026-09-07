@@ -10,6 +10,15 @@ import BookingModal from '../components/BookingModal'
 import OtaPricingNotice from '../components/OtaPricingNotice'
 import WhatsAppFloat from '../components/WhatsAppFloat'
 import { SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
+import {
+  PRIVATE_ADULT_MIN2_IDR,
+  PRIVATE_ADULT_SOLO_IDR,
+  PRIVATE_PRICING_SUMMARY,
+  SHARED_ADULT_GROUP_IDR,
+  SHARED_ADULT_SOLO_IDR,
+  SHARED_PRICING_SUMMARY,
+} from '@/lib/pricing'
+import { normalizeActivityPricing } from '@/lib/normalizeActivityPricing'
 
 export const revalidate = 60
 
@@ -25,12 +34,15 @@ export default async function Page() {
     const payload = await getPayload({ config: configPromise })
     const { docs: activities } = await payload.find({ collection: 'activities' })
     bookingActivities = sortActivities(
-      activities.map((a) => ({
-        id: a.id as string,
-        title: a.title as string,
-        price: a.price as number,
-        kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
-      })),
+      activities.map((a) =>
+        normalizeActivityPricing({
+          id: a.id as string,
+          title: a.title as string,
+          price: a.price as number,
+          groupPrice: (a as { groupPrice?: number }).groupPrice,
+          kidsPrice: (a as { kidsPrice?: number }).kidsPrice,
+        }),
+      ),
     )
   } catch (err) {
     console.error('book your class page: could not load activities from CMS', err)
@@ -38,9 +50,24 @@ export default async function Page() {
 
   if (bookingActivities.length === 0) {
     bookingActivities = [
-      { id: 'morning-class', title: 'Morning Market Tour & Cooking Class (3–4 Hours)', price: 350 },
-      { id: 'afternoon-class', title: 'Afternoon Balinese Cooking Class (3 Hours)', price: 350 },
-      { id: 'private-class', title: 'Private Cooking Class (1 Person)', price: 650, kidsPrice: 550 },
+      {
+        id: 'morning-class',
+        title: 'Morning Market Tour & Cooking Class (3–4 Hours)',
+        price: SHARED_ADULT_SOLO_IDR,
+        groupPrice: SHARED_ADULT_GROUP_IDR,
+      },
+      {
+        id: 'afternoon-class',
+        title: 'Afternoon Balinese Cooking Class (3 Hours)',
+        price: SHARED_ADULT_SOLO_IDR,
+        groupPrice: SHARED_ADULT_GROUP_IDR,
+      },
+      {
+        id: 'private-class',
+        title: 'Private Cooking Class',
+        price: PRIVATE_ADULT_SOLO_IDR,
+        groupPrice: PRIVATE_ADULT_MIN2_IDR,
+      },
     ]
   }
 
@@ -50,7 +77,7 @@ export default async function Page() {
     "name": "Tumang Bali Cooking Class",
     "description": "Join an authentic 5-star rated Balinese cooking class in Ubud. Includes market tour, transport, and traditional recipes.",
     "url": "https://tumangbaliclass.com/book-your-cooking-class",
-    "priceRange": "IDR 350000-650000",
+    "priceRange": `IDR ${SHARED_ADULT_GROUP_IDR}-${PRIVATE_ADULT_MIN2_IDR}`,
     "telephone": "+62 82210132418", // Defaulting to the number used in WhatsApp link
     "address": {
       "@type": "PostalAddress",
@@ -83,7 +110,7 @@ export default async function Page() {
     url: `${SITE}/book-your-cooking-class`,
     name: 'Book Your Cooking Class — Tumang Bali',
     description:
-      'Book your authentic Balinese cooking class in Ubud. Shared IDR 350,000 · private IDR 650,000. Free hotel pickup.',
+      `Book your authentic Balinese cooking class in Ubud. Shared ${SHARED_PRICING_SUMMARY}. Private ${PRIVATE_PRICING_SUMMARY}. Free hotel pickup.`,
     dateModified: SITE_CONTENT_UPDATED,
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -130,7 +157,7 @@ export default async function Page() {
               Book Your Balinese Cooking Class in Ubud
             </h1>
             <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-6" data-speakable>
-              Ready to experience the flavors of Bali? Join our authentic Balinese cooking class in Ubud for a complete culinary adventure. From the traditional morning market to the rice fields, you'll learn the secrets of Balinese cuisine with a local chef. Shared class from IDR 350,000 · private from IDR 650,000.
+              Ready to experience the flavors of Bali? Join our authentic Balinese cooking class in Ubud for a complete culinary adventure. From the traditional morning market to the rice fields, you'll learn the secrets of Balinese cuisine with a local chef. Shared: {SHARED_PRICING_SUMMARY}. Private: {PRIVATE_PRICING_SUMMARY}. Same price on every booking channel.
             </p>
             <div className="mb-8">
               <p className="font-bold text-stone-800 dark:text-stone-200 mb-3">What's included in your class:</p>
@@ -225,12 +252,11 @@ export default async function Page() {
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">A: Yes, we offer free hotel pickup and drop-off for all guests staying in central Ubud.</p>
           </div>
           <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800">
-            <h3 className="font-bold text-lg mb-2">Q: Why is the price higher on GetYourGuide or Viator?</h3>
+            <h3 className="font-bold text-lg mb-2">Q: Do OTA prices differ from booking direct?</h3>
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
-              A: Third-party platforms (GetYourGuide, Viator, Airbnb) charge a booking commission, so
-              their listed price may be slightly above our direct rate of IDR 350,000. You get the same class
-              — the difference is the platform fee, not us charging you more. Use an OTA when you want instant
-              checkout to secure your spot immediately.
+              A: No. We charge the same rates on GetYourGuide, Viator, Airbnb, our website, and WhatsApp —
+              no platform commission overcharge. Shared: {SHARED_PRICING_SUMMARY}. Private:{' '}
+              {PRIVATE_PRICING_SUMMARY}. Use an OTA when you want instant checkout.
             </p>
           </div>
           <OtaPricingNotice />

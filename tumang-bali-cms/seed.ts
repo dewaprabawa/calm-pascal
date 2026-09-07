@@ -33,12 +33,14 @@ async function seed() {
   })
 
   // 2. Create Activities
+  // Shared: 616,032 (1 adult) / 506,370 (2+). Private: 633,090 (1) / 1,266,180 (min 2).
   const activity1 = await payload.create({
     collection: 'activities',
     data: {
       title: 'Morning Market Tour & Cooking Masterclass',
       durationHours: 4,
-      price: 350,
+      price: 616032,
+      groupPrice: 506370,
       instructor: instructor1.id,
       includedItems: [{ item: 'Market Tour' }, { item: 'Rice Field Walk' }, { item: 'Welcome Drink' }, { item: 'Lunch' }, { item: 'Recipe Book' }],
       excludedItems: [],
@@ -50,7 +52,8 @@ async function seed() {
     data: {
       title: 'Afternoon Balinese Cooking Class',
       durationHours: 3,
-      price: 350,
+      price: 616032,
+      groupPrice: 506370,
       instructor: instructor1.id,
       includedItems: [{ item: 'Rice Field Walk' }, { item: 'Welcome Drink' }, { item: 'Dinner' }, { item: 'Recipe Book' }],
       excludedItems: [],
@@ -60,17 +63,16 @@ async function seed() {
   await payload.create({
     collection: 'activities',
     data: {
-      title: 'Private Cooking Class (1 Person)',
+      title: 'Private Cooking Class',
       durationHours: 4,
-      price: 650,
-      kidsPrice: 550,
+      price: 633090,
+      groupPrice: 1266180,
       instructor: instructor1.id,
       includedItems: [
         { item: 'Kitchen exclusive to you' },
         { item: 'Market Tour' },
         { item: 'Welcome Drink' },
         { item: 'Lunch' },
-        { item: 'Kids rate IDR 550K' },
         { item: 'Recipe Book' },
       ],
       excludedItems: [],
