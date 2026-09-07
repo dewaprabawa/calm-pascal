@@ -389,7 +389,7 @@ export default function StructuredData() {
         name: 'Is Tumang Bali Cooking Class good for couples and families?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Couples cook side by side in the village kitchen; families with kids aged 8+ are welcome. Shared from IDR 506,370 per adult for 2+ guests (1 adult IDR 616,032). Private: IDR 633,090 (1) / IDR 1,266,180 (min. 2).',
+          text: 'Yes. Couples cook side by side in the village kitchen; families with kids aged 8+ are welcome. Shared from IDR 506,370 per adult for 2+ guests (1 adult IDR 616,032). Private: IDR 633,090 (1) / IDR 1,266,180 (min. 2); kids same as adult.',
         },
       },
     ],

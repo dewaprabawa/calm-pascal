@@ -68,7 +68,11 @@ export default function ActivityPrice({
           </p>
         </>
       ) : null}
-      {kids != null ? (
+      {privateGuess ? (
+        <p className="text-[11px] sm:text-xs font-semibold text-stone-500 mt-1.5">
+          Kids same as adult
+        </p>
+      ) : kids != null ? (
         <p className="text-xs font-semibold text-stone-500 mt-1">Kids {formatIdr(kids)}</p>
       ) : null}
     </div>

@@ -67,6 +67,7 @@ async function seed() {
       durationHours: 4,
       price: 633090,
       groupPrice: 1266180,
+      kidsPrice: 633090,
       instructor: instructor1.id,
       includedItems: [
         { item: 'Kitchen exclusive to you' },

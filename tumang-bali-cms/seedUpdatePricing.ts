@@ -7,6 +7,7 @@ import configPromise from './src/payload.config'
 import {
   PRIVATE_ADULT_MIN2_IDR,
   PRIVATE_ADULT_SOLO_IDR,
+  PRIVATE_KIDS_IDR,
   SHARED_ADULT_GROUP_IDR,
   SHARED_ADULT_SOLO_IDR,
 } from './src/lib/pricing'
@@ -23,7 +24,7 @@ async function main() {
           title: title.includes('1 Person') ? 'Private Cooking Class' : title,
           price: PRIVATE_ADULT_SOLO_IDR,
           groupPrice: PRIVATE_ADULT_MIN2_IDR,
-          kidsPrice: null as unknown as undefined,
+          kidsPrice: PRIVATE_KIDS_IDR,
         }
       : {
           price: SHARED_ADULT_SOLO_IDR,

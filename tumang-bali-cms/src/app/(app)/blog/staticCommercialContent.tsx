@@ -95,7 +95,7 @@ export const cookingClassUbudForCouples: StaticArticle = {
       <p>
         For anniversaries or honeymoons, book a{' '}
         <Link href="/private-cooking-class-ubud">private cooking class in Ubud</Link> — IDR 633,090 for one
-        person with the kitchen to yourselves. Kids rate IDR 1,266,180 if you are travelling as a family. See
+        person with the kitchen to yourselves. Kids same as adult rates if you are travelling as a family. See
         our <Link href={priceGuide}>Ubud cooking class price guide</Link> for the full 2026 pricing table.
       </p>
       <h2>What you will cook together</h2>
@@ -222,9 +222,9 @@ export const ubudCookingClassForFamilies: StaticArticle = {
   title: 'Ubud Cooking Class for Families — Kids Welcome from Age 8+',
   metaTitle: 'Ubud Cooking Class for Families — Kids 8+ Welcome | 2026',
   metaDescription:
-    'Best family cooking class in Ubud — kids grind spices, wrap sate lilit, and eat the feast they made. IDR 1,266,180 kids, IDR 506,370 adults. Market tour, 10+ dishes, free pickup.',
+    'Best family cooking class in Ubud — kids grind spices, wrap sate lilit, and eat the feast they made. kids same as adult, IDR 506,370 adults. Market tour, 10+ dishes, free pickup.',
   excerpt:
-    'Planning a family trip to Ubud? A Balinese cooking class is one of the best activities for kids and parents — hands-on, educational, and you eat what you make. Kids rate IDR 1,266,180. Free hotel pickup.',
+    'Planning a family trip to Ubud? A Balinese cooking class is one of the best activities for kids and parents — hands-on, educational, and you eat what you make. Kids same as adult rates. Free hotel pickup.',
   image: '/images/blog/cooking-local-family.webp',
   imageAlt: 'Family with children enjoying a Balinese cooking class in Ubud village kitchen',
   author: 'Tumang Bali Team',
@@ -241,7 +241,7 @@ export const ubudCookingClassForFamilies: StaticArticle = {
     {
       question: 'Can children join a cooking class in Ubud?',
       answer:
-        'Yes — children aged 8 and above are welcome in our shared cooking class. Younger kids can join with adult supervision on a case-by-case basis — message us before booking. Kids rate is IDR 1,266,180 per child.',
+        'Yes — children aged 8 and above are welcome in our shared cooking class. Younger kids can join with adult supervision on a case-by-case basis — message us before booking. Kids pay the same adult rates — no kids discount.',
     },
     {
       question: 'Is a Ubud cooking class safe for kids?',
@@ -305,7 +305,7 @@ export const ubudCookingClassForFamilies: StaticArticle = {
       </p>
       <h2>Book a family cooking class in Ubud</h2>
       <p>
-        Kids 8+ welcome. IDR 506,370 adults, IDR 1,266,180 kids. Market tour, 10+ dishes, free pickup.{' '}
+        Kids 8+ welcome. IDR 506,370 adults, kids same as adult. Market tour, 10+ dishes, free pickup.{' '}
         <Link href={money}>Book our Ubud cooking class</Link> or <Link href={book}>reserve online</Link>.
       </p>
     </>

@@ -739,8 +739,8 @@ export const zapierSmartAssistantUbudCookingClass: StaticArticle = {
           afternoon (~14:30–17:30 cook-and-dine)
         </li>
         <li>
-          <strong>Pricing</strong> — shared IDR 506,370; private 1 adult IDR 633,090; kids on private IDR
-          550,000 (see our <Link href="/blog/ubud-cooking-class-price">2026 price guide</Link>)
+          <strong>Pricing</strong> — shared IDR 506,370; private 1 adult IDR 633,090; kids on private same as adult
+          (IDR 633,090) (see our <Link href="/blog/ubud-cooking-class-price">2026 price guide</Link>)
         </li>
         <li>
           <strong>What’s included</strong> — Ubud hotel pickup, 10+ dishes, recipe booklet, max 8 guests in
