@@ -14,7 +14,7 @@ export default function OtaPricingNotice({ compact = false, className = '' }: Pr
   if (compact) {
     return (
       <p className={`text-sm text-stone-600 dark:text-stone-400 ${className}`}>
-        <strong>Use an OTA</strong> (Bokun, GetYourGuide, Viator, Airbnb) to{' '}
+        <strong>Use an OTA</strong> (GetYourGuide, Viator, Airbnb) to{' '}
         <strong>secure your spot with instant checkout</strong> — prices may be slightly above our direct IDR{' '}
         {DIRECT_SHARED_CLASS_IDR.toLocaleString('id-ID')} rate due to platform commission. Same class —{' '}
         <Link href="/book-your-cooking-class" className="text-orange-600 font-semibold underline">
@@ -46,7 +46,7 @@ export default function OtaPricingNotice({ compact = false, className = '' }: Pr
         instant payment checkout.
       </p>
       <p className="text-base">
-        If you book through <strong>Bokun</strong>, <strong>GetYourGuide</strong>, <strong>Viator</strong>, or{' '}
+        If you book through <strong>GetYourGuide</strong>, <strong>Viator</strong>, or{' '}
         <strong>Airbnb Experiences</strong>, the price shown may be <strong>slightly higher</strong> because
         those platforms charge a booking commission. You get the same experience, chefs, and inclusions — we
         are not trying to charge you more; the difference is the platform fee.

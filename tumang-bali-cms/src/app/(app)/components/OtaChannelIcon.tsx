@@ -1,6 +1,6 @@
 import React from 'react'
 
-export type OtaChannel = 'bokun' | 'getyourguide' | 'viator' | 'airbnb' | 'tripadvisor'
+export type OtaChannel = 'getyourguide' | 'viator' | 'airbnb' | 'tripadvisor'
 
 type Props = {
   channel: OtaChannel
@@ -27,12 +27,6 @@ export default function OtaChannelIcon({ channel, className = 'w-5 h-5 shrink-0'
           <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z" />
         </svg>
       )
-    case 'bokun':
-      return (
-        <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4.5a1.5 1.5 0 0 1 0-3V10.5a1.5 1.5 0 0 1 0-3zM4 18V6h16v2H4v10zm14-4H6v-2h12z" />
-        </svg>
-      )
     case 'tripadvisor':
       return (
         <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -45,7 +39,6 @@ export default function OtaChannelIcon({ channel, className = 'w-5 h-5 shrink-0'
 }
 
 export const OTA_BUTTON_STYLES: Record<OtaChannel, string> = {
-  bokun: 'bg-[#bd5f25] hover:bg-[#7d3f18] text-white',
   getyourguide: 'bg-[#C13515] hover:bg-[#9A2A10] text-white',
   viator: 'bg-[#00A19C] hover:bg-[#008a86] text-white',
   airbnb: 'bg-[#FF5A5F] hover:bg-[#e04e52] text-white',

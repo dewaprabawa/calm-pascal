@@ -54,7 +54,7 @@ All prices in **Indonesian Rupiah (IDR)**. Prices are **all-inclusive** unless n
 ### OTA vs direct pricing
 
 - **Direct (lowest price):** Website or WhatsApp — IDR 350,000 shared
-- **OTA (instant checkout):** Bokun, GetYourGuide, Viator, Airbnb Experiences — **slightly higher** because platforms charge commission
+- **OTA (instant checkout):** GetYourGuide, Viator, Airbnb Experiences — **slightly higher** because platforms charge commission
 - Same class, menu, and inclusions on all channels — Tumang Bali is not charging extra; the difference is the platform fee
 
 ---
@@ -120,7 +120,6 @@ Use when the customer says: *"book now"*, *"pay today"*, *"secure my spot immedi
 
 | Platform | Link | Notes |
 |----------|------|-------|
-| **Bokun (direct widget)** | https://widgets.bokun.io/online-sales/0645b8f9-315f-426f-bb3b-a4eda41f198e/experience/1267345 | Official direct booking engine |
 | **GetYourGuide** | https://gyg.me/dE6n3Lwg | Instant checkout + reviews |
 | **Viator** | https://www.viator.com/tours/Ubud/Ubud-Market-to-Table-Cooking-Class-and-Local-Herb-Discovery/d5467-5690403P1 | Often reached via TripAdvisor |
 | **Airbnb Experiences** | https://www.airbnb.com/experiences/7165714?direct_open=true | Good for Airbnb users |
@@ -184,7 +183,7 @@ Example responses:
 
 **If customer wants instant booking:**
 
-> "You can book and pay instantly here: https://tumangbaliclass.com/book-your-cooking-class — choose Bokun, GetYourGuide, Viator, or Airbnb. Prices may be slightly above IDR 350K on those sites due to platform fees, but you get immediate confirmation."
+> "You can book and pay instantly here: https://tumangbaliclass.com/book-your-cooking-class — choose GetYourGuide, Viator, or Airbnb. Prices may be slightly above IDR 350K on those sites due to platform fees, but you get immediate confirmation."
 
 **If customer wants best price or has questions:**
 
@@ -286,7 +285,7 @@ Recipe hub: https://tumangbaliclass.com/recipes
 
 - Quote prices in **IDR** and mention they are all-inclusive
 - Recommend **morning class** as the default for first-time visitors
-- Offer **instant checkout** (Bokun/GYG/Viator/Airbnb) when the customer wants to pay now
+- Offer **instant checkout** (GYG/Viator/Airbnb) when the customer wants to pay now
 - Offer **WhatsApp** when the customer wants the lowest direct price or has custom requests
 - Ask for **hotel name**, **date**, **session**, **guest count**, and **dietary needs**
 - Mention **max 8 guests** and **TripAdvisor Traveler's Choice 2026**
@@ -321,7 +320,7 @@ Recipe hub: https://tumangbaliclass.com/recipes
 > Great — to **book and pay now**, go to:  
 > **https://tumangbaliclass.com/book-your-cooking-class**  
 >  
-> Choose **Bokun**, **GetYourGuide**, **Viator**, or **Airbnb** for instant confirmation. Select your date, morning or afternoon, and number of guests.  
+> Choose **GetYourGuide**, **Viator**, or **Airbnb** for instant confirmation. Select your date, morning or afternoon, and number of guests.  
 >  
 > Prefer the **lowest direct price**? WhatsApp **+62 822-1013-2418** with your date, session, guest count, and Ubud hotel — we'll confirm availability at IDR 350,000.
 

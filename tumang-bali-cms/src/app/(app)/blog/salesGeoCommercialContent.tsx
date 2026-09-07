@@ -43,7 +43,7 @@ export const ubudCookingClassPrice: StaticArticle = {
     {
       question: 'Why are GetYourGuide or Viator prices sometimes higher?',
       answer:
-        'OTA platforms (Bokun, GetYourGuide, Viator, Airbnb) charge a booking commission, so their listed price may sit slightly above our direct IDR 350,000 rate. Same class — the difference is the platform fee. Book direct for the lowest price, or use an OTA for instant checkout.',
+        'OTA platforms (GetYourGuide, Viator, Airbnb) charge a booking commission, so their listed price may sit slightly above our direct IDR 350,000 rate. Same class — the difference is the platform fee. Book direct for the lowest price, or use an OTA for instant checkout.',
     },
     {
       question: 'Is Tumang Bali cheaper than other Ubud cooking classes?',
@@ -96,7 +96,7 @@ export const ubudCookingClassPrice: StaticArticle = {
       </p>
       <h2>OTA vs direct booking price</h2>
       <p>
-        Booking on GetYourGuide, Viator, Airbnb Experiences, or Bokun may show a slightly higher price because
+        Booking on GetYourGuide, Viator, or Airbnb Experiences may show a slightly higher price because
         those platforms take a commission. Use an OTA when you want instant checkout; book on{' '}
         <Link href={book}>tumangbaliclass.com</Link> or WhatsApp for the lowest direct rate. Guides:{' '}
         <Link href="/blog/book-cooking-class-ubud-getyourguide">GetYourGuide</Link> ·{' '}

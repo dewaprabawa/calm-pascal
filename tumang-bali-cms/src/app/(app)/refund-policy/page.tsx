@@ -82,7 +82,7 @@ export default function RefundPolicyPage() {
 
       <LegalSection title="Bookings made on partner platforms">
         <p>
-          If you booked through GetYourGuide, Viator, Airbnb Experiences, TripAdvisor, Bokun, or
+          If you booked through GetYourGuide, Viator, Airbnb Experiences, TripAdvisor, or
           another partner, that platform’s cancellation and refund rules apply. Please request
           changes or refunds through the platform where you paid. We are happy to help via WhatsApp
           if you need our booking reference.

@@ -180,7 +180,7 @@ const articles = [
       paragraph([
         text('See the full private class page: '),
         link('Private Cooking Class in Ubud', '/private-cooking-class-ubud'),
-        text('. WhatsApp is best if you need a specific date; Bokun Book now is instant paid checkout.'),
+        text('. WhatsApp is best if you need a specific date; GetYourGuide, Viator, or Airbnb Book now is instant paid checkout.'),
       ]),
     ]),
   },

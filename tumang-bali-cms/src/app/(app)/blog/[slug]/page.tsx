@@ -6,7 +6,6 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { Metadata } from 'next'
 import { pageTitle, truncateDescription, SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
-import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 import { REDIRECTED_BLOG_SLUGS, resolveSeoHref } from '@/lib/seoRedirects'
 
 export const revalidate = 60
@@ -214,9 +213,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         
         <div className="mt-20 pt-10 border-t border-stone-200 dark:border-zinc-800 text-center">
           <h3 className="text-2xl font-bold mb-4">Ready to taste the real Bali?</h3>
-          <a href={BOKUN_BOOK_PAGE} target="_blank" rel="noopener noreferrer" className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold transition-transform hover:-translate-y-1 shadow-lg">
+          <Link href="/book-your-cooking-class" className="inline-flex bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold transition-transform hover:-translate-y-1 shadow-lg">
             Book Your Cooking Class Today
-          </a>
+          </Link>
         </div>
 
         {relatedArticles.length > 0 && (

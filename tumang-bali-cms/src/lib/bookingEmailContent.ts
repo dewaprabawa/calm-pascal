@@ -1,4 +1,4 @@
-export type BookingChannel = 'whatsapp' | 'airbnb' | 'getyourguide' | 'bokun' | 'viator'
+export type BookingChannel = 'whatsapp' | 'airbnb' | 'getyourguide' | 'viator'
 
 export type WhatsAppBookingPayload = {
   channel: 'whatsapp'
@@ -36,7 +36,7 @@ export function formatPickupForMessage(data: {
 }
 
 export type PartnerClickPayload = {
-  channel: 'airbnb' | 'getyourguide' | 'bokun' | 'viator'
+  channel: 'airbnb' | 'getyourguide' | 'viator'
   pageUrl: string
   linkLabel?: string
 }
@@ -65,7 +65,6 @@ function formatWhatsAppMessage(data: WhatsAppBookingPayload): string {
 const PARTNER_LABELS: Record<PartnerClickPayload['channel'], string> = {
   airbnb: 'Airbnb',
   getyourguide: 'GetYourGuide',
-  bokun: 'Bokun',
   viator: 'Viator',
 }
 

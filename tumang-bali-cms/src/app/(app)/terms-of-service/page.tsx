@@ -42,7 +42,7 @@ export default function TermsOfServicePage() {
         <p>
           Class spots are confirmed after we accept your booking request and receive any required deposit
           or full payment (direct WhatsApp booking, our online book page, or an OTA partner such as
-          GetYourGuide, Viator, Airbnb, or Bokun). Partner platform checkout rules may apply in addition
+          GetYourGuide, Viator, or Airbnb). Partner platform checkout rules may apply in addition
           to these Terms.
         </p>
         <p>

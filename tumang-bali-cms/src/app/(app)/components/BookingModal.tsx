@@ -4,7 +4,6 @@ import React, { useState, useEffect, useMemo } from 'react'
 import dynamic from 'next/dynamic'
 import { trackBooking } from '@/lib/bookingTracking'
 import { formatPickupForMessage } from '@/lib/bookingEmailContent'
-import { BOKUN_BOOK_PAGE } from '@/lib/bokun'
 import { sortActivities } from '@/lib/sortActivities'
 import type { PickupLocationValue } from './PickupLocationMap'
 import OtaChannelIcon from './OtaChannelIcon'
@@ -21,19 +20,13 @@ export type ActivityOption = {
 type BookingStep = 'choose' | 'whatsapp'
 
 type PartnerOption = {
-  channel: 'bokun' | 'getyourguide' | 'viator' | 'airbnb'
+  channel: 'getyourguide' | 'viator' | 'airbnb'
   label: string
   href: string
   className: string
 }
 
 const PARTNER_OPTIONS: PartnerOption[] = [
-  {
-    channel: 'bokun',
-    label: 'Bokun',
-    href: BOKUN_BOOK_PAGE,
-    className: 'bg-[#bd5f25] hover:bg-[#7d3f18]',
-  },
   {
     channel: 'getyourguide',
     label: 'GetYourGuide',
@@ -251,7 +244,7 @@ _(WhatsApp consultation from website)_`
                 WhatsApp is a consultation to secure your spot and arrange payment — not instant checkout.
               </p>
               <p className="text-center text-xs text-stone-500 dark:text-stone-400 leading-relaxed px-1 pt-2 border-t border-stone-200 dark:border-zinc-800 mt-3">
-                <strong>Use an OTA above</strong> (Bokun, GetYourGuide, Viator, Airbnb) to secure your spot
+                <strong>Use an OTA above</strong> (GetYourGuide, Viator, Airbnb) to secure your spot
                 with <strong>instant checkout</strong>. Prices may be slightly higher than booking direct
                 (IDR 350,000 shared) because those platforms charge a commission. Same class — you are not
                 being overcharged by us.
