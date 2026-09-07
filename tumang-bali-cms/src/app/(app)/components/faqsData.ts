@@ -15,7 +15,7 @@ export const faqs = [
   },
   {
     question: 'How much does a cooking class in Ubud cost?',
-    answer: `At Tumang Bali, a shared morning or afternoon class is ${formatIdr(SHARED_ADULT_SOLO_IDR)} for 1 adult, or ${formatIdr(SHARED_ADULT_GROUP_IDR)} per adult for 2+ participants. A private class is ${formatIdr(PRIVATE_ADULT_SOLO_IDR)} for 1 adult, or ${formatIdr(PRIVATE_ADULT_MIN2_IDR)} for a minimum of 2 participants. Same price on website, WhatsApp, GetYourGuide, Viator, and Airbnb — no commission overcharge. Includes instruction, ingredients, the meal you cook, a recipe booklet, and Ubud-area hotel transport. Morning sessions also include the market tour and rice-field walk.`,
+    answer: `At Tumang Bali, a shared morning or afternoon class is ${formatIdr(SHARED_ADULT_GROUP_IDR)} per adult for 2+ guests — the best value for couples and friends. Solo (1 adult) is ${formatIdr(SHARED_ADULT_SOLO_IDR)}. A private class is ${formatIdr(PRIVATE_ADULT_SOLO_IDR)} for 1 adult, or ${formatIdr(PRIVATE_ADULT_MIN2_IDR)} for a minimum of 2 participants. Same price on website, WhatsApp, GetYourGuide, Viator, and Airbnb — no commission overcharge. Includes instruction, ingredients, the meal you cook, a recipe booklet, and Ubud-area hotel transport. Morning sessions also include the market tour and rice-field walk.`,
   },
   {
     question: 'What is included in the cooking class?',

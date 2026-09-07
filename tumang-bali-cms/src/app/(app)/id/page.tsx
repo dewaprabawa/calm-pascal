@@ -319,14 +319,14 @@ export default async function IndonesianPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
+                label: 'Kelas Bersama — 2+',
+                price: 'IDR 506.370',
+                note: 'Per dewasa · harga terbaik untuk pasangan',
+              },
+              {
                 label: 'Kelas Bersama — 1 orang',
                 price: 'IDR 616.032',
                 note: 'Pagi atau sore · peserta tunggal',
-              },
-              {
-                label: 'Kelas Bersama — 2+',
-                price: 'IDR 506.370',
-                note: 'Per dewasa · maks. 8 orang',
               },
               {
                 label: 'Kelas Privat',
