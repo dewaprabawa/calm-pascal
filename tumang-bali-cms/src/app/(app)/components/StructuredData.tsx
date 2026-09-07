@@ -357,7 +357,7 @@ export default function StructuredData() {
         name: 'How much does a Bali cooking class in Ubud cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'At Tumang Bali, a shared class is IDR 506,370 per adult (2+ participants; IDR 616,032 for 1). Private for 1 person is IDR 633,090; kids on private are IDR 1,266,180. Includes Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
+          text: 'At Tumang Bali, a shared class is IDR 616,032 for 1 adult or IDR 506,370 per adult for 2+. Private is IDR 633,090 for 1 adult or IDR 1,266,180 for a minimum of 2 participants. Same price on every channel. Includes Ubud hotel pickup, ingredients, the meal, and a recipe booklet.',
         },
       },
       {
