@@ -63,7 +63,7 @@ export const faqs = [
   },
   {
     question: 'Can kids join the cooking class?',
-    answer: `Kids aged 8 and above are very welcome. Shared adult rates apply (${SHARED_PRICING_SUMMARY}). Private bookings use adult private rates (${PRIVATE_PRICING_SUMMARY}). Little hands love grinding spices and wrapping sate.`,
+    answer: `Kids aged 8 and above are very welcome. Shared adult rates apply (${SHARED_PRICING_SUMMARY}). On private bookings kids pay the same as adults (${PRIVATE_PRICING_SUMMARY}). Little hands love grinding spices and wrapping sate.`,
   },
   {
     question: 'Will I get a recipe booklet to take home?',

@@ -35,6 +35,7 @@ All prices in **Indonesian Rupiah (IDR)**. Prices are **all-inclusive** unless n
 | **Shared — 2+ adults** | IDR 506,370 per adult | Morning or afternoon shared class (max 8 guests) |
 | **Private — 1 adult** | IDR 633,090 | Exclusive kitchen, dedicated chef |
 | **Private — min. 2 participants** | IDR 1,266,180 | Private booking for at least 2 adults |
+| **Private — kids** | Same as adult | No kids discount on private (IDR 633,090 each) |
 
 ### What the shared class includes
 
@@ -104,9 +105,9 @@ Classes run **every day**. Customers choose a **date** and **session**.
 
 | Experience | Duration | Price (shared) | Price (private) |
 |------------|----------|----------------|-----------------|
-| Morning Market Tour & Cooking Class | 3–4 hours | IDR 506,370 | IDR 633,090 adult · IDR 1,266,180 kids |
-| Afternoon Balinese Cooking Class | 3 hours | IDR 506,370 | IDR 633,090 adult · IDR 1,266,180 kids |
-| Private Cooking Class (1 person) | 3–4 hours | — | IDR 633,090 adult · IDR 1,266,180 kids |
+| Morning Market Tour & Cooking Class | 3–4 hours | IDR 506,370 | IDR 633,090 (1) · IDR 1,266,180 (min. 2) · kids = adult |
+| Afternoon Balinese Cooking Class | 3 hours | IDR 506,370 | IDR 633,090 (1) · IDR 1,266,180 (min. 2) · kids = adult |
+| Private Cooking Class | 3–4 hours | — | IDR 633,090 (1) · IDR 1,266,180 (min. 2) · kids = adult |
 
 ---
 
@@ -166,7 +167,7 @@ Ask (if not already clear):
 
 - **Default recommendation:** Shared morning class — IDR 506,370, best value and most complete experience
 - **Couples / anniversary:** Shared morning or private (IDR 633,090)
-- **Families with kids 8+:** Shared morning; kids on private = IDR 1,266,180
+- **Families with kids 8+:** Shared morning; kids on private = same as adult (IDR 633,090)
 - **Solo traveller:** Shared morning (small group, max 8) or private for full attention
 - **Vegetarian/vegan:** Full plant-based menu at same price — mention when booking
 - **From Canggu/Seminyak:** Afternoon easier; free pickup is Ubud only — extra transport fee from coast
@@ -177,7 +178,7 @@ Example responses:
 
 > "Our shared morning class is **IDR 506,370 per adult (2+ participants; IDR 616,032 for 1)** (about USD 22). That includes Ubud hotel pickup, market tour, rice-field walk, cooking 10+ dishes, lunch, and a recipe booklet."
 
-> "Private class for one person is **IDR 633,090**; kids on a private booking are **IDR 1,266,180**."
+> "Private class for one person is **IDR 633,090**; kids on a private booking pay the same as adults (**IDR 633,090**)."
 
 ### Step 4 — Route to checkout
 
@@ -203,7 +204,7 @@ After directing to checkout, remind them:
 ## Frequently asked questions (booking, date, price)
 
 **Q: How much does a cooking class in Ubud cost?**  
-A: Tumang Bali shared class = **IDR 506,370/person**. Private 1 person = **IDR 633,090**. Kids (private) = **IDR 1,266,180**. All-inclusive.
+A: Tumang Bali shared class = **IDR 506,370/person**. Private 1 person = **IDR 633,090**. Kids (private) = same as adult (**IDR 633,090**). All-inclusive.
 
 **Q: What days are classes available?**  
 A: **Every day**, Monday through Sunday.

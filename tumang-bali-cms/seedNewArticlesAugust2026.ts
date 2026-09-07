@@ -83,12 +83,12 @@ const articles = [
     slug: 'ubud-cooking-class-price',
     title: 'Ubud Cooking Class Price 2026 — What You Actually Pay',
     excerpt:
-      'How much does a cooking class in Ubud cost in 2026? Shared classes start at IDR 506,370. A private class for 1 person is IDR 633,090; kids are IDR 1,266,180. Full inclusions explained.',
+      'How much does a cooking class in Ubud cost in 2026? Shared classes start at IDR 506,370. A private class for 1 person is IDR 633,090; kids pay the same as adults (IDR 633,090 on private). Full inclusions explained.',
     image: 'img2.jpg',
     imageAlt: 'Guests cooking together during a Balinese cooking class in Ubud',
     metaTitle: 'Ubud Cooking Class Price 2026 | Tumang Bali',
     metaDescription:
-      'Ubud cooking class prices in 2026: IDR 506,370 shared, IDR 633,090 private for 1 person, IDR 1,266,180 kids. Includes pickup, market tour, 10+ dishes and lunch.',
+      'Ubud cooking class prices in 2026: IDR 506,370 shared, IDR 633,090 private for 1 person, kids same as adult. Includes pickup, market tour, 10+ dishes and lunch.',
     content: root([
       paragraph([
         text('Travellers searching '),
@@ -141,7 +141,7 @@ const articles = [
     imageAlt: 'Private group cooking class in a Balinese kitchen in Ubud',
     metaTitle: 'Private Cooking Class Ubud Price | 1 Person 650K, Kids 550K',
     metaDescription:
-      'Private cooking class in Ubud: IDR 633,090 for 1 person, IDR 1,266,180 for kids. Exclusive kitchen, local chef, market tour and hotel pickup.',
+      'Private cooking class in Ubud: IDR 633,090 for 1 person, kids same as adult (IDR 633,090). Exclusive kitchen, local chef, market tour and hotel pickup.',
     content: root([
       paragraph([
         text('Searches like '),

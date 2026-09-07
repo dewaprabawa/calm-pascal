@@ -23,6 +23,7 @@ import {
   SHARED_ADULT_GROUP_IDR,
   SHARED_ADULT_SOLO_IDR,
   SHARED_PRICING_SUMMARY,
+  PRIVATE_KIDS_IDR,
   formatIdr,
 } from '@/lib/pricing'
 
@@ -118,6 +119,7 @@ export default async function Page() {
       durationHours: '3–4',
       price: PRIVATE_ADULT_SOLO_IDR,
       groupPrice: PRIVATE_ADULT_MIN2_IDR,
+      kidsPrice: PRIVATE_KIDS_IDR,
       instructor: { name: 'Wayan Sudiana' },
       includedItems: [
         { item: 'Kitchen exclusive to you' },

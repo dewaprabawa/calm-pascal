@@ -15,6 +15,9 @@ export const PRIVATE_ADULT_SOLO_IDR = 633_090
 /** Private class — adult rate for minimum 2 participants (package for 2) */
 export const PRIVATE_ADULT_MIN2_IDR = 1_266_180
 
+/** Private kids — same as adult private solo rate (no kids discount). */
+export const PRIVATE_KIDS_IDR = PRIVATE_ADULT_SOLO_IDR
+
 /** Default shared rate used in “from” marketing copy (typical 2+ booking). */
 export const DIRECT_SHARED_CLASS_IDR = SHARED_ADULT_GROUP_IDR
 
@@ -41,7 +44,7 @@ export const SHARED_PRICING_SUMMARY =
   `${formatIdr(SHARED_ADULT_GROUP_IDR)} per adult for 2+ guests (1 adult ${formatIdr(SHARED_ADULT_SOLO_IDR)})`
 
 export const PRIVATE_PRICING_SUMMARY =
-  `${formatIdr(PRIVATE_ADULT_SOLO_IDR)} for 1 adult; ${formatIdr(PRIVATE_ADULT_MIN2_IDR)} for a minimum of 2 participants`
+  `${formatIdr(PRIVATE_ADULT_SOLO_IDR)} for 1 adult; ${formatIdr(PRIVATE_ADULT_MIN2_IDR)} for a minimum of 2 participants; kids same as adult (${formatIdr(PRIVATE_KIDS_IDR)})`
 
 export const OTA_SAME_PRICE_NOTE =
   'Prices are the same whether you book on tumangbaliclass.com, WhatsApp, GetYourGuide, Viator, or Airbnb Experiences — we do not add platform commission or overcharge. Use an OTA when you want instant checkout; use WhatsApp when you prefer a personal confirmation.'
