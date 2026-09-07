@@ -18,9 +18,9 @@ function setStyle(el: Element | null, styles: Partial<CSSStyleDeclaration>) {
 /**
  * Zapier's popup launcher is rendered inside a Shadow DOM.
  * The fixed-position wrapper on the page often doesn't reliably control the launcher icon on all devices.
- * This effect repositions the internal launcher/close controls toward the bottom-left,
+ * This effect repositions the internal launcher toward the bottom-left,
  * and opens the popup when hero/CTA buttons request it.
- */
+ * Native Zapier close controls are left alone so an open chat can be dismissed.
 export default function ZapierChatbotPositioner() {
   useEffect(() => {
     let openPending = hasPendingZapierOpen()
@@ -95,18 +95,15 @@ export default function ZapierChatbotPositioner() {
         shadow.querySelector('button') ||
         shadow.querySelector('a')
 
-      const close =
-        shadow.querySelector('[part="close"], [part="close-button"]') ||
-        shadow.querySelector('.close') ||
-        shadow.querySelector('button[aria-label*="close" i]')
-
-      // Move the visible launcher button
+      // Move only the floating launcher — do NOT relocate Zapier's native
+      // close control (pinning it to the bottom made the open chat feel
+      // impossible to dismiss on mobile).
       setStyle(launcher, {
         position: 'fixed',
         left,
         right,
         bottom,
-        zIndex: '2147483600',
+        zIndex: '2147483000',
         pointerEvents: 'auto',
       })
 
@@ -115,26 +112,10 @@ export default function ZapierChatbotPositioner() {
         setStyle(launcher, {
           borderRadius: '9999px',
           overflow: 'hidden',
-        })
-      }
-
-      if (launcher instanceof HTMLElement && launcher.tagName !== 'IFRAME') {
-        setStyle(launcher, {
           width: isMobile ? '54px' : '62px',
           height: isMobile ? '54px' : '62px',
         })
       }
-
-      // Move close button too (when open)
-      setStyle(close, {
-        position: 'fixed',
-        left,
-        right,
-        bottom,
-        zIndex: '2147483601',
-        pointerEvents: 'auto',
-        borderRadius: '9999px',
-      })
 
       if (openPending || hasPendingZapierOpen()) {
         tryOpenChat()

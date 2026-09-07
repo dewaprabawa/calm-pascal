@@ -92,6 +92,7 @@ html.tumang-ai-sheet-open zapier-interfaces-chatbot-embed[is-popup="true"] {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
+  z-index: -1 !important;
 }
 
 .tumang-ai-inline-embed {
