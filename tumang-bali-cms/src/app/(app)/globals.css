@@ -61,12 +61,6 @@ body {
   contain-intrinsic-size: auto 800px;
 }
 
-/* Keep Bokun checkout overlay above the site booking modal */
-#bokun-modal-container,
-#bokun-widgets-cart-wrapper {
-  z-index: 2147483000 !important;
-}
-
 /* Leaflet inside the booking modal — keep panes below the modal chrome */
 .pickup-map-wrap {
   isolation: isolate;

@@ -47,7 +47,7 @@ const faqs = [
   {
     question: 'Why is the Viator price higher than booking direct on your website?',
     answer:
-      'Viator and other OTAs (Bokun, GetYourGuide, Airbnb) charge a booking commission. Their listed price may be slightly above our direct rate of IDR 350,000 per shared class. Same experience — the difference is the platform fee, not Tumang Bali charging you more.',
+      'Viator and other OTAs (GetYourGuide, Airbnb) charge a booking commission. Their listed price may be slightly above our direct rate of IDR 350,000 per shared class. Same experience — the difference is the platform fee, not Tumang Bali charging you more.',
   },
 ]
 

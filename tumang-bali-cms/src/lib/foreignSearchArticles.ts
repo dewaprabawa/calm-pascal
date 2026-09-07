@@ -469,7 +469,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       paragraph([
         text('Crackdowns target illegal operators and disrespectful behaviour, not small family businesses. Our '),
         link('village cooking class', '/tumang-village'),
-        text(' employs local staff, teaches temple-offering food culture, and books through official channels — direct site, Bokun, TripAdvisor, Viator, GetYourGuide, and Airbnb Experiences.'),
+        text(' employs local staff, teaches temple-offering food culture, and books through official channels — direct site, TripAdvisor, Viator, GetYourGuide, and Airbnb Experiences.'),
       ]),
       heading('h2', 'Plan ahead despite rule headlines'),
       paragraph([
@@ -572,7 +572,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       {
         question: 'Can I book a cooking class with a foreign card?',
         answer:
-          'Yes — book Tumang Bali online via Bokun with international cards before you land, or pay on approved OTAs. On-site market shopping during class is cash (small notes help).',
+          'Yes — book Tumang Bali online via GetYourGuide, Viator, or Airbnb with international cards before you land, or pay on our website booking flow. On-site market shopping during class is cash (small notes help).',
       },
     ],
     ...TEAM,

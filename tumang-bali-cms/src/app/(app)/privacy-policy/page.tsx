@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <ul className="list-disc pl-5 space-y-2">
           <li>
-            <strong>Online / OTA bookings</strong> (Bokun, GetYourGuide, Viator, Airbnb, and similar):
+            <strong>Online / OTA bookings</strong> (GetYourGuide, Viator, Airbnb, and similar):
             card payments are processed by those platforms or their payment providers under their
             own security and PCI-compliant systems. Tumang Bali receives booking details needed to
             run your class — not your full card number.
