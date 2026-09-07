@@ -11,7 +11,9 @@ type Props = {
 }
 
 /**
- * Activity card price block: solo rate + optional 2+ / min-2 rate.
+ * Activity card price block.
+ * Shared: lead with the cheaper 2+ rate so couples see the best price first.
+ * Private: lead with 1-person rate; show min-2 package below.
  * Accepts full IDR or legacy thousands-of-IDR CMS values.
  */
 export default function ActivityPrice({
@@ -29,6 +31,26 @@ export default function ActivityPrice({
     (solo != null && group != null && group >= solo * 1.5)
 
   if (solo == null) return null
+
+  // Shared with a cheaper group rate: emphasize 2+ price first
+  if (!privateGuess && group != null && group < solo) {
+    return (
+      <div className={`text-right flex-shrink-0 ${className}`}>
+        <span className="text-xl sm:text-2xl font-black text-orange-500 leading-tight block">
+          {formatIdr(group)}
+        </span>
+        <p className="text-[11px] sm:text-xs font-semibold text-stone-500 mt-0.5">
+          per adult · 2+ guests
+        </p>
+        <p className="text-[11px] sm:text-xs text-stone-500 mt-1.5 leading-snug">
+          1 guest {formatIdr(solo)}
+        </p>
+        {kids != null ? (
+          <p className="text-xs font-semibold text-stone-500 mt-1">Kids {formatIdr(kids)}</p>
+        ) : null}
+      </div>
+    )
+  }
 
   return (
     <div className={`text-right flex-shrink-0 ${className}`}>

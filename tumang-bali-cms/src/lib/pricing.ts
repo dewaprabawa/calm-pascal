@@ -38,7 +38,7 @@ export function toFullIdr(value: number | null | undefined): number | undefined 
 }
 
 export const SHARED_PRICING_SUMMARY =
-  `${formatIdr(SHARED_ADULT_SOLO_IDR)} for 1 adult; ${formatIdr(SHARED_ADULT_GROUP_IDR)} per adult for 2+ participants`
+  `${formatIdr(SHARED_ADULT_GROUP_IDR)} per adult for 2+ guests (1 adult ${formatIdr(SHARED_ADULT_SOLO_IDR)})`
 
 export const PRIVATE_PRICING_SUMMARY =
   `${formatIdr(PRIVATE_ADULT_SOLO_IDR)} for 1 adult; ${formatIdr(PRIVATE_ADULT_MIN2_IDR)} for a minimum of 2 participants`
