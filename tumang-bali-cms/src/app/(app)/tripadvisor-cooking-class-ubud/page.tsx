@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { buildPageMetadata, SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 import { OTA_LINKS } from '@/lib/otaBookingLinks'
+import { sharedHeroPriceText } from '@/lib/pricing'
 import TripAdvisorWidget from '../components/TripAdvisorWidget'
 import TripAdvisorWriteReviewWidget from '../components/TripAdvisorWriteReviewWidget'
 import ViatorBookButtons from '../components/ViatorBookButtons'
@@ -105,8 +106,8 @@ export default function TripAdvisorCookingClassPage() {
         </h1>
         <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-2xl mx-auto leading-relaxed mb-8" data-speakable>
           One of Ubud&apos;s highest-rated cooking classes on TripAdvisor — 5.0 stars, 1500+ reviews,
-          morning market tour, rice-field walk, and 10+ hands-on Balinese dishes. Max 8 guests · IDR
-          350,000 shared · free Ubud pickup.
+          morning market tour, rice-field walk, and 10+ hands-on Balinese dishes. Max 8 guests ·{' '}
+          {sharedHeroPriceText()} · free Ubud pickup.
         </p>
         <div className="flex justify-center mb-8">
           <TripAdvisorWidget />
