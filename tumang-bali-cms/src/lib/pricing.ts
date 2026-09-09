@@ -12,7 +12,7 @@ export const SHARED_ADULT_GROUP_IDR = 506_370
 /** Private class — 1 adult participant */
 export const PRIVATE_ADULT_SOLO_IDR = 633_090
 
-/** Private class — adult rate for minimum 2 participants (package for 2) */
+/** Private class — adult rate for a minimum of 2 participants (package for 2) */
 export const PRIVATE_ADULT_MIN2_IDR = 1_266_180
 
 /** Private kids — same as adult private solo rate (no kids discount). */
@@ -22,15 +22,41 @@ export const PRIVATE_KIDS_IDR = PRIVATE_ADULT_SOLO_IDR
 export const DIRECT_SHARED_CLASS_IDR = SHARED_ADULT_GROUP_IDR
 
 /**
- * Limited-time discount promo for a single (solo) shared-class guest.
- * Flip PROMO_ACTIVE to false to revert to the regular SHARED_ADULT_SOLO_IDR rate everywhere.
+ * September 2026 promo — Bali (WITA) calendar month only.
+ * Regular/shared class: IDR 350,000 · Private class: IDR 700,000.
+ * After September, isPromoActive() returns false and normal rates apply everywhere.
  */
-export const PROMO_ACTIVE = true
+const PROMO_TIME_ZONE = 'Asia/Makassar'
+const PROMO_YEAR = 2026
+const PROMO_MONTH = 9 // September
 
-/** Promo price for 1 person on the shared class (regular SHARED_ADULT_SOLO_IDR rate applies otherwise). */
-export const PROMO_SHARED_SOLO_IDR = 500_000
+/** Promo price for the regular (shared) cooking class. */
+export const PROMO_SHARED_IDR = 350_000
 
-export const PROMO_LABEL = 'Promo'
+/** @deprecated Use PROMO_SHARED_IDR — kept for older call sites. */
+export const PROMO_SHARED_SOLO_IDR = PROMO_SHARED_IDR
+
+/** Promo price for the private cooking class (1 participant / lead rate). */
+export const PROMO_PRIVATE_IDR = 700_000
+
+export const PROMO_LABEL = 'September Promo'
+
+export function isPromoActive(now: Date = new Date()): boolean {
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: PROMO_TIME_ZONE,
+    year: 'numeric',
+    month: 'numeric',
+  }).formatToParts(now)
+  const year = Number(parts.find((p) => p.type === 'year')?.value)
+  const month = Number(parts.find((p) => p.type === 'month')?.value)
+  return year === PROMO_YEAR && month === PROMO_MONTH
+}
+
+/**
+ * Request-time promo flag. Prefer isPromoActive() in render paths so static
+ * builds do not permanently bake September in or out.
+ */
+export const PROMO_ACTIVE = isPromoActive()
 
 export function formatIdr(amount: number): string {
   return `IDR ${amount.toLocaleString('id-ID')}`

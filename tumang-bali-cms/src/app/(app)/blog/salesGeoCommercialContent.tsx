@@ -1,7 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
-import { PROMO_ACTIVE, PROMO_SHARED_SOLO_IDR, SHARED_ADULT_SOLO_IDR, formatIdr } from '@/lib/pricing'
+import {
+  isPromoActive,
+  PROMO_SHARED_IDR,
+  PROMO_PRIVATE_IDR,
+  SHARED_ADULT_SOLO_IDR,
+  PRIVATE_ADULT_SOLO_IDR,
+  formatIdr,
+} from '@/lib/pricing'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -1048,10 +1055,11 @@ export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
   ),
 }
 
-const soloPromoLine = PROMO_ACTIVE ? (
+const soloPromoLine = isPromoActive() ? (
   <>
-    only <strong>{formatIdr(PROMO_SHARED_SOLO_IDR)}</strong> for 1 person during our current promo
-    (regular rate {formatIdr(SHARED_ADULT_SOLO_IDR)})
+    only <strong>{formatIdr(PROMO_SHARED_IDR)}</strong> for the regular class during our September promo
+    (normal rate {formatIdr(SHARED_ADULT_SOLO_IDR)}; private kitchen {formatIdr(PROMO_PRIVATE_IDR)}, normally{' '}
+    {formatIdr(PRIVATE_ADULT_SOLO_IDR)})
   </>
 ) : (
   <>{formatIdr(SHARED_ADULT_SOLO_IDR)} for 1 person</>
