@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import type { StaticArticle } from './staticCommercialArticles'
+import { PROMO_ACTIVE, PROMO_SHARED_SOLO_IDR, SHARED_ADULT_SOLO_IDR, formatIdr } from '@/lib/pricing'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -1047,6 +1048,179 @@ export const tamanDukuhVsTresnaVsLemongrass: StaticArticle = {
   ),
 }
 
+const soloPromoLine = PROMO_ACTIVE ? (
+  <>
+    only <strong>{formatIdr(PROMO_SHARED_SOLO_IDR)}</strong> for 1 person during our current promo
+    (regular rate {formatIdr(SHARED_ADULT_SOLO_IDR)})
+  </>
+) : (
+  <>{formatIdr(SHARED_ADULT_SOLO_IDR)} for 1 person</>
+)
+
+export const isUbudBusyInHighSeason: StaticArticle = {
+  slug: 'ubud-high-season-crowds',
+  title: 'Is Ubud Busy in High Season? What to Expect (+ Free Hotel & Villa Pickup)',
+  metaTitle: 'Is Ubud Busy in High Season? 2026 Crowd Guide | Tumang Bali',
+  metaDescription:
+    'Is Ubud busy during high season (Jul–Aug, Dec–Jan)? What actually gets crowded, when it eases, and how our free hotel & villa pickup skips the traffic. Book Tumang Bali.',
+  excerpt:
+    'Wondering if Ubud is busy in high season? Yes — July–August and the Christmas–New Year week bring heavy Jalan Raya Ubud traffic and packed sights. Here is what actually gets crowded, when it eases, and how free hotel & villa pickup makes it a non-issue for your cooking class.',
+  image: '/images/blog/best-things-to-do-in-ubud.webp',
+  imageAlt: 'A quiet temple gateway tucked away from Ubud\'s busy high-season streets',
+  author: 'Tumang Bali Team',
+  authorRole: 'Local Food Guide',
+  publishedDate: '2026-09-09',
+  keywords: [
+    'is ubud busy',
+    'ubud high season',
+    'ubud peak season',
+    'is ubud crowded',
+    'ubud traffic high season',
+    'when is ubud busy',
+    'avoid crowds ubud',
+    'free hotel pickup ubud',
+  ],
+  faqs: [
+    {
+      question: 'Is Ubud busy in high season?',
+      answer:
+        'Yes. Ubud\'s high season — July, August, and the Christmas–New Year week (roughly Dec 20–Jan 5) — brings heavy traffic on Jalan Raya Ubud and Monkey Forest Road, packed rice-terrace viewpoints, and restaurants that need reservations. Shoulder months (April–June, September–October) have the same dry, sunny weather with noticeably fewer crowds.',
+    },
+    {
+      question: 'When is Ubud\'s high season?',
+      answer:
+        'Ubud\'s two busiest windows are July–August (European and Australian school holidays, plus the Bali Arts Festival) and the Christmas–New Year week. June ramps up toward peak, while April–May and September–October are quieter shoulder months with equally good weather.',
+    },
+    {
+      question: 'What times of day are worst for Ubud traffic?',
+      answer:
+        'Jalan Raya Ubud and Monkey Forest Road typically gridlock around 08:00–10:00, 13:00–15:00, and 18:00–20:00 during high season. Early morning (before 8am) and the mid-afternoon lull are the easiest windows to move around town.',
+    },
+    {
+      question: 'How does Tumang Bali help during high season crowds?',
+      answer:
+        'We cap every shared class at 8 guests regardless of season, and we include free pickup and drop-off from any hotel or villa in the main Ubud area — so our driver deals with the traffic timing, not you. Booking ahead during July–August and Dec–Jan is recommended since dates fill faster.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        <strong>Is Ubud busy in high season?</strong> Yes — July, August, and the Christmas–New Year
+        week are Ubud&apos;s busiest stretches. Jalan Raya Ubud and Monkey Forest Road see heavy traffic,
+        the Tegallalang rice-terrace swings and Monkey Forest queue up by mid-morning, and popular
+        restaurants need reservations. It is still absolutely worth visiting — you just plan around it.
+        And whichever week you land, Tumang Bali includes free pickup and drop-off from any hotel or
+        villa in the main Ubud area, so the traffic is our driver&apos;s problem, not yours.
+      </p>
+
+      <h2>When exactly is Ubud&apos;s high season?</h2>
+      <ul>
+        <li>
+          <strong>July–August</strong> — the biggest peak. European and Australian school holidays
+          collide with the Bali Arts Festival, so rooms, restaurants, and activities book out weeks
+          ahead.
+        </li>
+        <li>
+          <strong>Christmas–New Year (~Dec 20–Jan 5)</strong> — Ubud&apos;s second-highest demand
+          period, with prices and crowds spiking sharply for about two weeks.
+        </li>
+        <li>
+          <strong>June</strong> — the ramp-up month. Prices creep toward peak but crowds are still
+          manageable.
+        </li>
+        <li>
+          <strong>Shoulder season (April–May, September–October)</strong> — the same dry, sunny
+          weather as peak season with noticeably fewer visitors and lower rates. Many repeat travellers
+          consider this the real sweet spot.
+        </li>
+      </ul>
+      <p>
+        For a full month-by-month weather breakdown, see our{' '}
+        <Link href="/blog/best-time-to-visit-bali">best time to visit Bali guide</Link>.
+      </p>
+
+      <h2>What actually gets crowded (and what doesn&apos;t)</h2>
+      <p>
+        The crowding in Ubud is real but shallow — it pools in a handful of well-known spots rather
+        than swallowing the whole town.
+      </p>
+      <ul>
+        <li>
+          <strong>Jalan Raya Ubud &amp; Monkey Forest Road</strong> — the main traffic bottleneck,
+          worst around 08:00–10:00, 13:00–15:00, and 18:00–20:00.
+        </li>
+        <li>
+          <strong>Tegallalang rice terraces</strong> — the famous swings and viewpoints are packed by
+          9–10am in high season; they are near-empty before 7am.
+        </li>
+        <li>
+          <strong>Sacred Monkey Forest Sanctuary</strong> — a midday crush; mornings and late afternoon
+          are far calmer.
+        </li>
+        <li>
+          <strong>Popular cafés and restaurants</strong> — expect a wait or book ahead in the
+          11am–2pm and evening rush.
+        </li>
+        <li>
+          <strong>A few streets over</strong> — Penestanan, Nyuh Kuning, and the village lanes around
+          Tumang stay quiet even at the height of high season.
+        </li>
+      </ul>
+
+      <h2>The midday retreat window works in your favour</h2>
+      <p>
+        Even seasoned Ubud travellers plan their day the same way: move early (6–10am) while it is
+        cool and quiet, then retreat from 11am–2pm when heat, humidity, and traffic all peak at once.
+        A hands-on <Link href={money}>cooking class in Ubud</Link> fits that midday window perfectly —
+        you are indoors in an open-air village kitchen, not stuck in a Jalan Raya jam or queuing under
+        the sun at a viewpoint. It is one of the few high-season activities that gets <em>better</em>{' '}
+        while the streets outside get busier.
+      </p>
+      <p>
+        Prefer to start early and beat the crowds elsewhere first? Our{' '}
+        <Link href="/blog/morning-vs-afternoon-tours-bali">morning vs afternoon class guide</Link>{' '}
+        breaks down both sessions so you can build the rest of your day around whichever traffic
+        window suits you.
+      </p>
+
+      <h2>Skip the traffic stress: free hotel &amp; villa pickup, every season</h2>
+      <p>
+        High season is exactly when you do not want to be the one navigating a scooter through gridlock
+        or hunting for parking near Monkey Forest Road. That is why every Tumang Bali class includes{' '}
+        <strong>free pickup and drop-off from any hotel or villa in the main Ubud area</strong> — no
+        surcharge, no season-based fee, and no need to book a driver yourself. We confirm your exact
+        pickup time on WhatsApp after booking and plan around the same traffic windows described above,
+        so you spend the ride relaxing instead of watching the clock.
+      </p>
+      <p>
+        Staying outside the main Ubud area (Canggu, Seminyak, Sanur)? See our{' '}
+        <Link href="/blog/cooking-class-ubud-from-canggu">cooking class from Canggu guide</Link> for
+        transport options, or message us on <Link href="/contact">the contact page</Link> and we will
+        quote a small transfer fee.
+      </p>
+
+      <h2>Small groups stay small — even in July and August</h2>
+      <p>
+        We cap the shared class at 8 guests year-round, so high season never turns your cooking class
+        into a crowd. It does mean dates fill faster in July–August and over Christmas–New Year — book
+        a few weeks ahead if your trip lands in those windows. Shared class is {soloPromoLine} (per
+        adult IDR 506,370 for 2+ guests); private class keeps the kitchen exclusive at IDR 633,090 for
+        1 person. See the full breakdown on our{' '}
+        <Link href="/blog/ubud-cooking-class-price">Ubud cooking class price guide</Link>.
+      </p>
+
+      <h2>Book your high-season cooking class in Ubud</h2>
+      <p>
+        Same small groups, same free hotel and villa pickup, whatever month you visit.{' '}
+        <Link href={book}>Check dates and book</Link> or head to the{' '}
+        <Link href={money}>main cooking class page</Link> for full details. Curious how the village
+        setting compares to a class in central Ubud town? Read{' '}
+        <Link href="/blog/tumang-vs-ubud-cooking-class">why we chose the village over the town</Link>.
+      </p>
+    </>
+  ),
+}
+
 export const salesGeoCommercialArticles: StaticArticle[] = [
   ubudCookingClassPrice,
   privateCookingClassUbudPrice,
@@ -1057,4 +1231,5 @@ export const salesGeoCommercialArticles: StaticArticle[] = [
   morningVsAfternoonToursBali,
   zapierSmartAssistantUbudCookingClass,
   tamanDukuhVsTresnaVsLemongrass,
+  isUbudBusyInHighSeason,
 ]
