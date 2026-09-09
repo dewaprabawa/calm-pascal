@@ -39,7 +39,7 @@ export const faqs = [
   },
   {
     question: 'How do I get to the cooking class?',
-    answer: 'We offer complimentary hotel pickup and drop-off from the Ubud area. For guests staying outside Ubud, we can arrange transport for a small additional fee. You can also arrange your own transportation — we\'ll send you our exact location via WhatsApp after booking.',
+    answer: 'We offer free pickup and drop-off from any hotel or villa in the main Ubud area. For guests staying outside Ubud, we can arrange transport for a small additional fee. You can also arrange your own transportation — we\'ll send you our exact location via WhatsApp after booking.',
   },
   {
     question: 'Can I book for a group or a private class?',

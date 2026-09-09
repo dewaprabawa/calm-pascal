@@ -24,6 +24,8 @@ import {
   SHARED_ADULT_SOLO_IDR,
   SHARED_PRICING_SUMMARY,
   PRIVATE_KIDS_IDR,
+  PROMO_ACTIVE,
+  PROMO_SHARED_SOLO_IDR,
   formatIdr,
 } from '@/lib/pricing'
 
@@ -201,7 +203,7 @@ export default async function Page() {
             </h1>
             
             <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed" data-speakable>
-              Join Tumang Bali for a hands-on village kitchen session. Shop a morning pasar, stroll the paddies, then prepare 10+ traditional dishes from scratch — vegetarian options and complimentary hotel pickup included.
+              Join Tumang Bali for a hands-on village kitchen session. Shop a morning pasar, stroll the paddies, then prepare 10+ traditional dishes from scratch — vegetarian options plus free pickup and drop-off from your hotel or villa anywhere in the main Ubud area.
             </p>
             
             {/* Quick Badges / Stats */}
@@ -342,6 +344,33 @@ export default async function Page() {
         </div>
       </section>
 
+      {/* Limited-Time Solo Promo Banner */}
+      {PROMO_ACTIVE ? (
+        <section className="px-6 max-w-7xl mx-auto mb-16">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500 text-white p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="space-y-3 max-w-2xl text-center md:text-left z-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-widest">
+                Limited-Time Promo
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+                Traveling solo? Just{' '}
+                <span className="line-through opacity-70 font-medium">{formatIdr(SHARED_ADULT_SOLO_IDR)}</span>{' '}
+                {formatIdr(PROMO_SHARED_SOLO_IDR)} for 1 person
+              </h2>
+              <p className="text-white/90 text-base md:text-lg font-light leading-relaxed">
+                Book our shared cooking class alone and pay only {formatIdr(PROMO_SHARED_SOLO_IDR)} — plus free
+                pickup and drop-off from your hotel or villa anywhere in the main Ubud area.
+              </p>
+            </div>
+            <div className="z-10 w-full md:w-auto flex justify-center">
+              <BookButton className="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-orange-50 text-orange-700 font-bold px-8 py-4 rounded-full transition-transform hover:-translate-y-1 shadow-lg text-center whitespace-nowrap">
+                Claim This Price
+              </BookButton>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {/* Activities / Classes */}
       <section id="classes" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
@@ -437,8 +466,8 @@ export default async function Page() {
             <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
             </span>
-            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Hotel Pickup & Drop-off</h3>
-            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Complimentary transport for all major Ubud areas.</p>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Free Hotel & Villa Pickup / Drop-off</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Complimentary pickup and drop-off from any hotel or villa in the main Ubud area.</p>
           </div>
 
           <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">

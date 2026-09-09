@@ -47,26 +47,14 @@ export default function ContactPage() {
       </LegalSection>
 
       <LegalSection title="Email">
-        <ul className="list-none space-y-2 pl-0">
-          <li>
-            Primary:{' '}
-            <a
-              href={`mailto:${SITE_CONTACT.emailPrimary}`}
-              className="text-orange-600 font-semibold hover:underline"
-            >
-              {SITE_CONTACT.emailPrimary}
-            </a>
-          </li>
-          <li>
-            Alternative:{' '}
-            <a
-              href={`mailto:${SITE_CONTACT.emailSecondary}`}
-              className="text-orange-600 font-semibold hover:underline"
-            >
-              {SITE_CONTACT.emailSecondary}
-            </a>
-          </li>
-        </ul>
+        <p>
+          <a
+            href={`mailto:${SITE_CONTACT.emailPrimary}`}
+            className="text-orange-600 font-semibold hover:underline"
+          >
+            {SITE_CONTACT.emailPrimary}
+          </a>
+        </p>
       </LegalSection>
 
       <LegalSection title="Cooking class address">
@@ -86,8 +74,8 @@ export default function ContactPage() {
           </a>
         </p>
         <p className="text-sm">
-          Most guests use complimentary hotel pickup from the Ubud area. After you book, we confirm
-          your exact pickup time on WhatsApp.
+          Most guests use free pickup and drop-off from any hotel or villa in the main Ubud area.
+          After you book, we confirm your exact pickup time on WhatsApp.
         </p>
       </LegalSection>
 
