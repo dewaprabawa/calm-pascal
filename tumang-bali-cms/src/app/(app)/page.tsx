@@ -842,6 +842,10 @@ export default async function Page() {
               <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">2026 pricing & what is included</h3>
               <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Shared and private rates, hotel pickup, and how OTA prices compare.</p>
             </Link>
+            <Link href="/blog/ubud-high-season-crowds" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
+              <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Is Ubud busy in high season?</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">What actually gets crowded, and how free hotel & villa pickup skips the traffic.</p>
+            </Link>
             <Link href="/about" className="group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-stone-200 dark:border-zinc-800 hover:shadow-xl hover:shadow-orange-500/5 hover:-translate-y-1 transition-all duration-300">
               <h3 className="font-bold text-stone-900 dark:text-white mb-1 group-hover:text-orange-600 transition-colors">Meet the Tumang Bali family</h3>
               <p className="text-sm text-stone-500 dark:text-stone-400 leading-relaxed">Chef credentials, village roots, and why we teach in English for travelers.</p>

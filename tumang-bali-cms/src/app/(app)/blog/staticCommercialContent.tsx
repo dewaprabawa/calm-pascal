@@ -15,6 +15,7 @@ export {
   morningVsAfternoonToursBali,
   zapierSmartAssistantUbudCookingClass,
   tamanDukuhVsTresnaVsLemongrass,
+  isUbudBusyInHighSeason,
   salesGeoCommercialArticles,
 } from './salesGeoCommercialContent'
 
