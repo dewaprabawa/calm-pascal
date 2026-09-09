@@ -77,6 +77,17 @@ export function toFullIdr(value: number | null | undefined): number | undefined 
   return Math.round(value)
 }
 
+/**
+ * Promo-aware "shared class" price line for hero/intro copy on landing pages.
+ * Change PROMO_SHARED_IDR / SHARED_ADULT_GROUP_IDR above and every page using
+ * this helper updates automatically — no need to hunt down hardcoded prices.
+ */
+export function sharedHeroPriceText(now: Date = new Date()): string {
+  return isPromoActive(now)
+    ? `${formatIdr(PROMO_SHARED_IDR)} shared (${PROMO_LABEL})`
+    : `${formatIdr(SHARED_ADULT_GROUP_IDR)} shared`
+}
+
 export const SHARED_PRICING_SUMMARY =
   `${formatIdr(SHARED_ADULT_GROUP_IDR)} per adult for 2+ guests (1 adult ${formatIdr(SHARED_ADULT_SOLO_IDR)})`
 
