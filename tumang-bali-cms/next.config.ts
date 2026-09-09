@@ -90,6 +90,28 @@ const nextConfig: NextConfig = {
         destination: '/#reviews',
         permanent: true,
       },
+      // GSC 404s from the pre-Next.js static site (crawled as /index.html, /blog.html).
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/blog.html',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/:path(.*)\\.html',
+        destination: '/:path',
+        permanent: true,
+      },
+      // Alias cited in llms.txt / older internal links — canonical is the GSC URL.
+      {
+        source: '/blog/2-days-ubud-food-itinerary',
+        destination: '/blog/ubud-food-lovers-itinerary',
+        permanent: true,
+      },
     ];
   },
   // Keep pdfkit external so webpack does not bundle it. Bundling rewrites the

@@ -65,7 +65,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       ]),
       paragraph([
         text('If your villa search started with "luxury" or "beachfront," you may still want one inland day. Our '),
-        link('Ubud food-lovers itinerary', '/blog/2-days-ubud-food-itinerary'),
+        link('Ubud food-lovers itinerary', '/blog/ubud-food-lovers-itinerary'),
         text(' centres on a '),
         link('morning cooking class with market tour', '/cooking-class-with-market-tour-ubud'),
         text(' — the single most-booked experience among villa guests who message us from Seminyak and Canggu.'),

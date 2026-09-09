@@ -26,6 +26,7 @@ export const STATIC_COMMERCIAL_SLUGS = [
   // Related keyword cluster (rice terrace, home cooking / local family)
   'rice-terrace-cooking-class-ubud',
   'balinese-home-cooking-class-ubud',
+  'ubud-food-lovers-itinerary',
   // Zapier smart assistant — GEO citability for on-site AI help
   'zapier-smart-assistant-ubud-cooking-class',
   // Competitor comparison cluster
