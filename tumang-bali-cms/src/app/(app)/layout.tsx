@@ -92,8 +92,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} h-full antialiased`}
     >
-      <GoogleTagManagerScript />
       <head>
+        <GoogleTagManagerScript />
         {/* Site summary files for crawlers — no early third-party preconnects (hurts LCP) */}
         <link rel="describedby" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_TXT} type="text/plain" title="Site summary" />
