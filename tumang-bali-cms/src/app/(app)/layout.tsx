@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import {
+  GoogleTagManagerNoscript,
+  GoogleTagManagerScript,
+} from "./components/GoogleTagManager";
 import ZapierChatbotLazy from "./components/ZapierChatbotLazy";
 
 const geistSans = Geist({
@@ -89,6 +93,7 @@ export default function RootLayout({
       className={`${geistSans.variable} h-full antialiased`}
     >
       <head>
+        <GoogleTagManagerScript />
         {/* Site summary files for crawlers — no early third-party preconnects (hurts LCP) */}
         <link rel="describedby" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_TXT} type="text/plain" title="Site summary" />
@@ -96,6 +101,7 @@ export default function RootLayout({
         <link rel="author" href={LLMS_TXT} />
       </head>
       <body className="min-h-full flex flex-col">
+        <GoogleTagManagerNoscript />
         <a
           href="#main-content"
           className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-lg bg-orange-700 px-4 py-2 font-semibold text-white transition focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-orange-300"
