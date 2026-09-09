@@ -7,8 +7,8 @@ export const GTM_ID = 'GTM-W79WCBZS'
 const analyticsEnabled = process.env.VERCEL_ENV === 'production'
 
 /**
- * Official GTM bootstrap. Place {@link GoogleTagManagerScript} on the root
- * `<html>` (Next.js injects it after hydration) and
+ * Official GTM bootstrap. `beforeInteractive` injects the snippet into the
+ * document `<head>` (what Google's install check looks for). Place
  * {@link GoogleTagManagerNoscript} immediately after the opening `<body>` tag.
  *
  * Keep the existing gtag GA4 tag (`G-WXH5VLNNKS`) out of this GTM container
@@ -18,7 +18,7 @@ export function GoogleTagManagerScript() {
   if (!analyticsEnabled) return null
 
   return (
-    <Script id="google-tag-manager" strategy="afterInteractive">
+    <Script id="google-tag-manager" strategy="beforeInteractive">
       {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
