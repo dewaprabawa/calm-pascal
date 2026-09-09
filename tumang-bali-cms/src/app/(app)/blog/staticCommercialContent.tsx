@@ -22,6 +22,7 @@ export {
 export {
   riceTerraceCookingClassUbud,
   balineseHomeCookingClassUbud,
+  ubudFoodLoversItinerary,
   relatedKeywordArticles,
 } from './relatedKeywordArticles'
 

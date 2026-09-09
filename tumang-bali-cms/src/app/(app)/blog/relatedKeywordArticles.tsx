@@ -188,7 +188,127 @@ export const balineseHomeCookingClassUbud: StaticArticle = {
   ),
 }
 
+export const ubudFoodLoversItinerary: StaticArticle = {
+  slug: 'ubud-food-lovers-itinerary',
+  title: '2 Days in Ubud: A Food-Lover’s Itinerary',
+  metaTitle: '2 Days in Ubud: A Food-Lover’s Itinerary | Tumang Bali',
+  metaDescription:
+    'A food-lover’s 2-day Ubud itinerary: morning market, rice-field walk, a Balinese cooking class, warungs and temples — planned so you eat well without rushing.',
+  excerpt:
+    'How to spend two delicious days in Ubud — markets, rice fields, a cooking class, and the best local food, mapped into an easy itinerary for first-time visitors.',
+  image: '/images/gallery-group.jpg',
+  imageAlt: 'Guests sharing a Balinese meal after a cooking class near Ubud',
+  author: 'Tumang Bali Team',
+  authorRole: 'Local Food Guide',
+  publishedDate: '2026-08-01',
+  keywords: [
+    '2 days in ubud itinerary',
+    'ubud food lovers itinerary',
+    'ubud food itinerary',
+    'what to eat in ubud 2 days',
+    'ubud cooking class itinerary',
+    'food trip ubud bali',
+  ],
+  faqs: [
+    {
+      question: 'How should a food lover spend 2 days in Ubud?',
+      answer:
+        'Day 1: morning market, rice-field walk, and a Balinese cooking class, then a warung dinner. Day 2: coffee and jamu, a temple visit, Tegallalang or a quieter paddy walk, and a long dinner of dishes you now know how to cook.',
+    },
+    {
+      question: 'Should I book the cooking class on day 1 or day 2?',
+      answer:
+        'Book it on day 1 if you can. You learn what goes into bumbu, sambal matah, and lawar, then eat smarter at warungs for the rest of the trip. Morning sessions include the traditional market tour.',
+    },
+    {
+      question: 'Is two days in Ubud enough for food and a cooking class?',
+      answer:
+        'Yes for a focused food trip. A half-day class (morning or afternoon) leaves room for temples, a ridge walk, and two proper warung meals. Stay a third night if you also want a full spa or water-temple day.',
+    },
+  ],
+  body: (
+    <>
+      <p data-speakable>
+        Two days in Ubud is enough to eat very well — if you plan around food instead of a packed temple
+        checklist. This <strong>Ubud food-lover itinerary</strong> puts a{' '}
+        <Link href="/cooking-class-with-market-tour-ubud">Balinese cooking class with market tour</Link> at
+        the centre of day 1, then uses day 2 for coffee, temples, and the dishes you just learned to cook.
+      </p>
+
+      <h2>Day 1: Market, rice fields, and a cooking class</h2>
+      <ul>
+        <li>
+          <strong>Early morning:</strong> Ubud market before the souvenir stalls take over — spices, shallots,
+          fresh coconut, and the ingredients you will cook later. Pair it with our{' '}
+          <Link href="/blog/morning-cooking-class-ubud-market-tour">morning market-tour class</Link>.
+        </li>
+        <li>
+          <strong>Mid-morning:</strong> Ride out to a village kitchen. Walk working rice paddies, grind Base
+          Genep by hand, and cook 10+ dishes (sate lilit, sambal matah, lawar, pepes, and more).
+        </li>
+        <li>
+          <strong>Afternoon:</strong> Eat the feast you cooked, then a slow Campuhan Ridge Walk if you still
+          have legs.
+        </li>
+        <li>
+          <strong>Evening:</strong> Dinner at a local warung — babi guling if you eat pork, or a vegetarian
+          nasi campur. You will recognise the sambals from class.
+        </li>
+      </ul>
+      <p>
+        The cooking class is the anchor of the day. Our{' '}
+        <Link href="/half-day-cooking-class-bali">half-day cooking class</Link> fits a 2-day stay; a{' '}
+        <Link href="/private-cooking-class-ubud">private class</Link> lets couples or families pick the time.
+        Shared from IDR 506,370 with free Ubud hotel pickup.
+      </p>
+
+      <h2>Day 2: Coffee, temples, and slow food</h2>
+      <ul>
+        <li>
+          <strong>Morning:</strong> Balinese coffee and a jamu (herbal tonic). Skip the tourist “luwak coffee”
+          hard-sell if the civets look confined.
+        </li>
+        <li>
+          <strong>Late morning:</strong> Tirta Empul or Goa Gajah, then lunch at a warung nearby — order the
+          vegetables and sambal you practised yesterday.
+        </li>
+        <li>
+          <strong>Afternoon:</strong> Tegallalang if you want the famous terraces, or a quieter paddy walk.
+          Our class already includes a village rice-field walk, so you do not need both.{' '}
+          <Link href="/blog/rice-terrace-cooking-class-ubud">Rice terrace cooking class guide</Link>.
+        </li>
+        <li>
+          <strong>Evening:</strong> A long dinner. Try lawar, pepes, or sate lilit now that you know how they
+          are built.
+        </li>
+      </ul>
+
+      <h2>Where this sits in a longer Bali trip</h2>
+      <p>
+        If you are splitting time between the coast and the uplands, park these two food days in Ubud and keep
+        beach time in Canggu or Seminyak. Area comparison:{' '}
+        <Link href="/blog/ubud-vs-canggu-vs-seminyak">Ubud vs Canggu vs Seminyak</Link>. Broader island list:{' '}
+        <Link href="/blog/things-to-do-in-bali">things to do in Bali</Link>.
+      </p>
+      <p>
+        Plant-based travellers can follow the same itinerary — our kitchen runs a full vegetarian and vegan
+        menu, not a side plate. See the{' '}
+        <Link href="/blog/vegetarian-cooking-class-ubud-guide">vegetarian cooking class Ubud guide</Link>.
+      </p>
+
+      <h2>Eat like you mean it</h2>
+      <p>
+        The fastest way to eat well in Ubud is to cook it yourself first. Still deciding?{' '}
+        <Link href="/blog/is-a-bali-cooking-class-worth-it">Is a Bali cooking class worth it?</Link> Then{' '}
+        <Link href="/balinese-cooking-class-ubud">book the Ubud cooking class</Link> or{' '}
+        <Link href="/book-your-cooking-class">check morning and afternoon dates</Link>.
+      </p>
+    </>
+  ),
+}
+
 export const relatedKeywordArticles: StaticArticle[] = [
   riceTerraceCookingClassUbud,
   balineseHomeCookingClassUbud,
+  ubudFoodLoversItinerary,
 ]

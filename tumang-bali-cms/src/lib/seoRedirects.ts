@@ -9,6 +9,9 @@ export const SEO_REDIRECTS: Record<string, string> = {
   '/blog/dishes-you-cook-balinese-cooking-class': '/authentic-balinese-cooking-class',
   '/faq': '/#faq',
   '/reviews': '/#reviews',
+  '/index.html': '/',
+  '/blog.html': '/blog',
+  '/blog/2-days-ubud-food-itinerary': '/blog/ubud-food-lovers-itinerary',
 }
 
 /** Blog slugs that 308 elsewhere — never list or sitemap them. */
