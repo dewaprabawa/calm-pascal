@@ -5,7 +5,13 @@ import dynamic from 'next/dynamic'
 import { trackBooking } from '@/lib/bookingTracking'
 import { formatPickupForMessage } from '@/lib/bookingEmailContent'
 import { sortActivities } from '@/lib/sortActivities'
-import { PROMO_ACTIVE, PROMO_SHARED_SOLO_IDR, SHARED_ADULT_SOLO_IDR } from '@/lib/pricing'
+import {
+  isPromoActive,
+  PROMO_SHARED_IDR,
+  PROMO_PRIVATE_IDR,
+  SHARED_ADULT_SOLO_IDR,
+  PRIVATE_ADULT_SOLO_IDR,
+} from '@/lib/pricing'
 import type { PickupLocationValue } from './PickupLocationMap'
 import OtaChannelIcon from './OtaChannelIcon'
 
@@ -279,20 +285,30 @@ _(WhatsApp consultation from website)_`
                         : activity.groupPrice
                       : null
                   const isPrivate = String(activity.title || '').toLowerCase().includes('private')
-                  const showPromo = PROMO_ACTIVE && !isPrivate && solo === SHARED_ADULT_SOLO_IDR
-                  const soloLabel = showPromo
-                    ? `${PROMO_SHARED_SOLO_IDR.toLocaleString('id-ID')} promo`
-                    : solo != null
-                      ? solo.toLocaleString('id-ID')
-                      : ''
+                  const promoOn = isPromoActive()
+                  const showSharedPromo =
+                    promoOn && !isPrivate && solo === SHARED_ADULT_SOLO_IDR
+                  const showPrivatePromo =
+                    promoOn && isPrivate && solo === PRIVATE_ADULT_SOLO_IDR
+                  const soloLabel = showSharedPromo
+                    ? `${PROMO_SHARED_IDR.toLocaleString('id-ID')} promo`
+                    : showPrivatePromo
+                      ? `${PROMO_PRIVATE_IDR.toLocaleString('id-ID')} promo`
+                      : solo != null
+                        ? solo.toLocaleString('id-ID')
+                        : ''
                   const priceLabel =
                     solo == null
                       ? ''
-                      : group == null
+                      : showSharedPromo
                         ? ` - ${soloLabel} IDR`
-                        : isPrivate || group >= solo
-                          ? ` - ${soloLabel} (1) / ${group.toLocaleString('id-ID')} (2+)`
-                          : ` - from ${group.toLocaleString('id-ID')} IDR (2+) · ${soloLabel} (1)`
+                        : showPrivatePromo
+                          ? ` - ${soloLabel} IDR`
+                          : group == null
+                            ? ` - ${soloLabel} IDR`
+                            : isPrivate || group >= solo
+                              ? ` - ${soloLabel} (1) / ${group.toLocaleString('id-ID')} (2+)`
+                              : ` - from ${group.toLocaleString('id-ID')} IDR (2+) · ${soloLabel} (1)`
                   return (
                   <option key={activity.id} value={activity.title}>
                     {activity.title}{priceLabel}
