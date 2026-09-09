@@ -203,7 +203,7 @@ export default async function Page() {
             </h1>
             
             <p className="text-lg md:text-xl text-stone-600 dark:text-stone-400 max-w-xl font-light leading-relaxed" data-speakable>
-              Join Tumang Bali for a hands-on village kitchen session. Shop a morning pasar, stroll the paddies, then prepare 10+ traditional dishes from scratch — vegetarian options and complimentary hotel pickup included.
+              Join Tumang Bali for a hands-on village kitchen session. Shop a morning pasar, stroll the paddies, then prepare 10+ traditional dishes from scratch — vegetarian options plus free pickup and drop-off from your hotel or villa anywhere in the main Ubud area.
             </p>
             
             {/* Quick Badges / Stats */}
@@ -466,8 +466,8 @@ export default async function Page() {
             <span className="p-3 rounded-xl bg-orange-100 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 mb-4">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
             </span>
-            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Hotel Pickup & Drop-off</h3>
-            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Complimentary transport for all major Ubud areas.</p>
+            <h3 className="font-bold text-stone-900 dark:text-white mb-2">Free Hotel & Villa Pickup / Drop-off</h3>
+            <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed font-light">Complimentary pickup and drop-off from any hotel or villa in the main Ubud area.</p>
           </div>
 
           <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-start hover:-translate-y-1 transition-all duration-300 shadow-sm">

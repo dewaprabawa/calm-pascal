@@ -17,7 +17,7 @@ export default function PickupSchedule() {
         <span className="text-orange-600 dark:text-orange-500 text-sm font-bold uppercase tracking-wider mb-2 block">Daily Sessions & Transport</span>
         <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4">Session Schedule & Pickup Times</h2>
         <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg font-light">
-          Choose between our immersive <strong className="font-bold text-stone-900 dark:text-white">Morning Session (3–4 Hours)</strong> or focused <strong className="font-bold text-stone-900 dark:text-white">Afternoon Session (3 Hours)</strong>. <strong className="font-bold text-stone-900 dark:text-white">Free shuttle service</strong> is available for the Ubud area.
+          Choose between our immersive <strong className="font-bold text-stone-900 dark:text-white">Morning Session (3–4 Hours)</strong> or focused <strong className="font-bold text-stone-900 dark:text-white">Afternoon Session (3 Hours)</strong>. <strong className="font-bold text-stone-900 dark:text-white">Free pickup and drop-off</strong> from any hotel or villa in the main Ubud area.
         </p>
       </div>
 

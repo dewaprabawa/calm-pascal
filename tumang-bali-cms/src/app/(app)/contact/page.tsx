@@ -74,8 +74,8 @@ export default function ContactPage() {
           </a>
         </p>
         <p className="text-sm">
-          Most guests use complimentary hotel pickup from the Ubud area. After you book, we confirm
-          your exact pickup time on WhatsApp.
+          Most guests use free pickup and drop-off from any hotel or villa in the main Ubud area.
+          After you book, we confirm your exact pickup time on WhatsApp.
         </p>
       </LegalSection>
 
