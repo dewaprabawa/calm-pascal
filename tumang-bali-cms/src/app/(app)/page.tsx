@@ -24,6 +24,8 @@ import {
   SHARED_ADULT_SOLO_IDR,
   SHARED_PRICING_SUMMARY,
   PRIVATE_KIDS_IDR,
+  PROMO_ACTIVE,
+  PROMO_SHARED_SOLO_IDR,
   formatIdr,
 } from '@/lib/pricing'
 
@@ -341,6 +343,33 @@ export default async function Page() {
           </div>
         </div>
       </section>
+
+      {/* Limited-Time Solo Promo Banner */}
+      {PROMO_ACTIVE ? (
+        <section className="px-6 max-w-7xl mx-auto mb-16">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500 text-white p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="space-y-3 max-w-2xl text-center md:text-left z-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold uppercase tracking-widest">
+                Limited-Time Promo
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+                Traveling solo? Just{' '}
+                <span className="line-through opacity-70 font-medium">{formatIdr(SHARED_ADULT_SOLO_IDR)}</span>{' '}
+                {formatIdr(PROMO_SHARED_SOLO_IDR)} for 1 person
+              </h2>
+              <p className="text-white/90 text-base md:text-lg font-light leading-relaxed">
+                Book our shared cooking class alone and pay only {formatIdr(PROMO_SHARED_SOLO_IDR)} — plus free
+                pickup and drop-off from your hotel or villa anywhere in the main Ubud area.
+              </p>
+            </div>
+            <div className="z-10 w-full md:w-auto flex justify-center">
+              <BookButton className="w-full md:w-auto inline-flex items-center justify-center bg-white hover:bg-orange-50 text-orange-700 font-bold px-8 py-4 rounded-full transition-transform hover:-translate-y-1 shadow-lg text-center whitespace-nowrap">
+                Claim This Price
+              </BookButton>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Activities / Classes */}
       <section id="classes" className="py-24 px-6 max-w-7xl mx-auto">

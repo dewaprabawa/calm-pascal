@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import { trackBooking } from '@/lib/bookingTracking'
 import { formatPickupForMessage } from '@/lib/bookingEmailContent'
 import { sortActivities } from '@/lib/sortActivities'
+import { PROMO_ACTIVE, PROMO_SHARED_SOLO_IDR, SHARED_ADULT_SOLO_IDR } from '@/lib/pricing'
 import type { PickupLocationValue } from './PickupLocationMap'
 import OtaChannelIcon from './OtaChannelIcon'
 
@@ -278,14 +279,20 @@ _(WhatsApp consultation from website)_`
                         : activity.groupPrice
                       : null
                   const isPrivate = String(activity.title || '').toLowerCase().includes('private')
+                  const showPromo = PROMO_ACTIVE && !isPrivate && solo === SHARED_ADULT_SOLO_IDR
+                  const soloLabel = showPromo
+                    ? `${PROMO_SHARED_SOLO_IDR.toLocaleString('id-ID')} promo`
+                    : solo != null
+                      ? solo.toLocaleString('id-ID')
+                      : ''
                   const priceLabel =
                     solo == null
                       ? ''
                       : group == null
-                        ? ` - ${solo.toLocaleString('id-ID')} IDR`
+                        ? ` - ${soloLabel} IDR`
                         : isPrivate || group >= solo
-                          ? ` - ${solo.toLocaleString('id-ID')} (1) / ${group.toLocaleString('id-ID')} (2+)`
-                          : ` - from ${group.toLocaleString('id-ID')} IDR (2+) · ${solo.toLocaleString('id-ID')} (1)`
+                          ? ` - ${soloLabel} (1) / ${group.toLocaleString('id-ID')} (2+)`
+                          : ` - from ${group.toLocaleString('id-ID')} IDR (2+) · ${soloLabel} (1)`
                   return (
                   <option key={activity.id} value={activity.title}>
                     {activity.title}{priceLabel}

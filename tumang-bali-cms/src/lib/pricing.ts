@@ -21,6 +21,17 @@ export const PRIVATE_KIDS_IDR = PRIVATE_ADULT_SOLO_IDR
 /** Default shared rate used in “from” marketing copy (typical 2+ booking). */
 export const DIRECT_SHARED_CLASS_IDR = SHARED_ADULT_GROUP_IDR
 
+/**
+ * Limited-time discount promo for a single (solo) shared-class guest.
+ * Flip PROMO_ACTIVE to false to revert to the regular SHARED_ADULT_SOLO_IDR rate everywhere.
+ */
+export const PROMO_ACTIVE = true
+
+/** Promo price for 1 person on the shared class (regular SHARED_ADULT_SOLO_IDR rate applies otherwise). */
+export const PROMO_SHARED_SOLO_IDR = 500_000
+
+export const PROMO_LABEL = 'Promo'
+
 export function formatIdr(amount: number): string {
   return `IDR ${amount.toLocaleString('id-ID')}`
 }
