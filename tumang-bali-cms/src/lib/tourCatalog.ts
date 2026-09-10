@@ -93,7 +93,7 @@ export const TOUR_CATALOG: TourCatalogItem[] = [
     id: 'family',
     title: 'Family Cooking Class in Bali',
     href: '/family-cooking-class-bali',
-    image: '/images/gallery-girls.jpg',
+    image: '/images/gallery-group.jpg',
     imageAlt: 'Family enjoying a hands-on Balinese cooking class in Ubud',
     categoryLabel: 'Family',
     location: 'Ubud',

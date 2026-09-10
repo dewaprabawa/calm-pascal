@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildPageMetadata, SITE, TRIPADVISOR_REVIEW_COUNT } from '@/lib/seoMetadata'
 import { formatIdr } from '@/lib/pricing'
-import { TOUR_CATALOG, tourFromPrice } from '@/lib/tourCatalog'
+import { TOUR_CATALOG, TOUR_FILTERS, filterTourCatalog, tourFromPrice, type TourFilterId } from '@/lib/tourCatalog'
 import { buildLandingBreadcrumb, buildLandingWebPageSchema } from '@/lib/landingPageSchema'
 import ToursCatalog from './ToursCatalog'
 
@@ -23,7 +23,19 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 })
 
-export default function ToursPage() {
+function parseFilter(value: string | undefined): TourFilterId {
+  return TOUR_FILTERS.some((f) => f.id === value) ? (value as TourFilterId) : 'all'
+}
+
+export default async function ToursPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string; filter?: string }>
+}) {
+  const params = await searchParams
+  const query = (params.q ?? '').trim()
+  const filter = parseFilter(params.filter)
+  const visible = filterTourCatalog(TOUR_CATALOG, { query, filter })
   const now = new Date()
   const itemList = {
     '@context': 'https://schema.org',
@@ -69,7 +81,7 @@ export default function ToursPage() {
         All Tumang Bali cooking class tours in Ubud — 5.0 from {TRIPADVISOR_REVIEW_COUNT}+ reviews, from{' '}
         {formatIdr(tourFromPrice(TOUR_CATALOG[0], now))}
       </h1>
-      <ToursCatalog />
+      <ToursCatalog visible={visible} filter={filter} query={query} />
     </main>
   )
 }
