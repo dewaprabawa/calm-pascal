@@ -8,6 +8,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <a href="https://www.instagram.com/tumangbali_/?hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a>
           <a href="https://wa.me/6282210132418" target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp</a>
+          <a href="/tours" className="hover:text-white">Tours</a>
           <a href="/about" className="hover:text-white">About</a>
           <a href="/contact" className="hover:text-white">Contact</a>
           <a href="/terms-of-service" className="hover:text-white">Terms</a>

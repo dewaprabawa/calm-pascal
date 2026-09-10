@@ -12,6 +12,8 @@ export const SEO_REDIRECTS: Record<string, string> = {
   '/index.html': '/',
   '/blog.html': '/blog',
   '/blog/2-days-ubud-food-itinerary': '/blog/ubud-food-lovers-itinerary',
+  '/experiences': '/tours',
+  '/tour': '/tours',
 }
 
 /** Blog slugs that 308 elsewhere — never list or sitemap them. */

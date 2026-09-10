@@ -154,6 +154,7 @@ export default async function Page() {
             <div className="text-lg sm:text-2xl font-black tracking-tighter text-orange-600 dark:text-orange-500 truncate">TUMANG BALI</div>
           </div>
           <div className="hidden lg:flex items-center gap-3 xl:gap-4 2xl:gap-5 font-medium text-[11px] xl:text-xs 2xl:text-sm tracking-wide whitespace-nowrap">
+            <Link href="/tours" className="hover:text-orange-500 transition-colors">TOURS</Link>
             <a href="#classes" className="hover:text-orange-500 transition-colors">CLASSES</a>
             <a href="#itinerary" className="hover:text-orange-500 transition-colors">ITINERARY</a>
             <a href="#menu" className="hover:text-orange-500 transition-colors">MENU</a>
@@ -377,6 +378,9 @@ export default async function Page() {
         <div className="flex flex-col items-center mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Our Culinary Experiences</h2>
           <p className="text-stone-500 dark:text-stone-400 max-w-2xl text-lg">Choose from our hand-crafted cooking experiences, designed to suit both beginners and seasoned foodies.</p>
+          <Link href="/tours" className="mt-4 font-semibold text-orange-600 hover:underline">
+            See all tours
+          </Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1044,6 +1048,7 @@ export default async function Page() {
         <div className="max-w-7xl mx-auto px-6 mb-12 pb-12 border-b border-stone-800">
           <p className="text-sm font-semibold text-white mb-4 uppercase tracking-wider text-center md:text-left">Explore Tumang Bali</p>
           <div className="flex flex-wrap gap-x-6 gap-y-3 justify-center md:justify-start text-sm">
+            <Link href="/tours" className="hover:text-orange-500 transition-colors">All Tours</Link>
             <Link href="/about" className="hover:text-orange-500 transition-colors">About Us</Link>
             <Link href="/balinese-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Ubud Culinary Experience</Link>
             <Link href="/vegetarian-cooking-class-ubud" className="hover:text-orange-500 transition-colors">Vegetarian Menu</Link>

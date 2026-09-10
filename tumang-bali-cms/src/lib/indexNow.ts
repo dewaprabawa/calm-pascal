@@ -7,6 +7,7 @@ export const INDEXNOW_KEY = 'tumangbali-indexnow-chatgpt-bing-2026'
 export const INDEXNOW_PRIORITY_URLS = [
   `${SITE}/`,
   `${SITE}/balinese-cooking-class-ubud`,
+  `${SITE}/tours`,
   `${SITE}/book-your-cooking-class`,
   `${SITE}/compare-ubud-cooking-classes`,
   `${SITE}/llms.txt`,
