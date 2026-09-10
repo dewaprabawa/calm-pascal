@@ -6,6 +6,7 @@ import BookButton from './BookButton'
 import LanguageSwitcher from './LanguageSwitcher'
 
 const NAV_ITEMS = [
+  { href: '/tours', label: 'All Tours', emoji: '🍳' },
   { href: '#classes', label: 'Classes', emoji: '👨‍🍳' },
   { href: '#itinerary', label: 'Itinerary', emoji: '🗺️' },
   { href: '#menu', label: 'Menu', emoji: '🍽️' },

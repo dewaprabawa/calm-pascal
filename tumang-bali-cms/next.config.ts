@@ -112,6 +112,17 @@ const nextConfig: NextConfig = {
         destination: '/blog/ubud-food-lovers-itinerary',
         permanent: true,
       },
+      // Short catalog URL for Instagram / Facebook ads and bio links.
+      {
+        source: '/experiences',
+        destination: '/tours',
+        permanent: true,
+      },
+      {
+        source: '/tour',
+        destination: '/tours',
+        permanent: true,
+      },
     ];
   },
   // Keep pdfkit external so webpack does not bundle it. Bundling rewrites the

@@ -102,6 +102,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/tripadvisor-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },
   // Family & kids cooking class
   { path: '/family-cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
+  { path: '/tours', priority: 0.9, changeFrequency: 'weekly' },
   // Blog article about Tumang
   { path: '/blog/what-is-tumang-bali', priority: 0.7, changeFrequency: 'monthly' },
   // Static commercial articles derived from STATIC_COMMERCIAL_SLUGS (no hand-list drift)

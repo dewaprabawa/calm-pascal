@@ -80,6 +80,9 @@ export default function ClassLanding({
             </span>
           </Link>
           <div className="hidden sm:flex items-center gap-6 text-sm font-medium">
+            <Link href="/tours" className="hover:text-orange-500 transition-colors">
+              Tours
+            </Link>
             <Link href="/#classes" className="hover:text-orange-500 transition-colors">
               Classes
             </Link>
