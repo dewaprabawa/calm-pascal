@@ -7,6 +7,7 @@ import { pageTitle, truncateDescription } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
+import { recipeImageAbsoluteUrl, recipeImageSrc } from '@/lib/recipeImage'
 
 export const revalidate = 60
 
@@ -58,7 +59,7 @@ const RECIPE_SEO_OVERRIDES: Record<string, { title: string; description: string 
 async function findRecipeBySlug(slug: string) {
   try {
     const payload = await getPayload({ config: configPromise })
-    const { docs } = await payload.find({ collection: 'recipes', limit: 1000 })
+    const { docs } = await payload.find({ collection: 'recipes', limit: 1000, depth: 1 })
     const recipe = docs.find((r) => recipeSlug(r.title as string) === slug)
     return recipe ?? null
   } catch (err) {
@@ -84,10 +85,7 @@ export async function generateMetadata({
         `${recipe.description ? `${recipe.description}. ` : ''}` +
         `Real ingredients and step-by-step instructions from local chefs.`),
   )
-  const img =
-    recipe.image && typeof recipe.image === 'object' && 'url' in recipe.image
-      ? (recipe.image.url as string)
-      : '/images/itinerary/dadar-gulung-close.jpg'
+  const imgAbs = recipeImageAbsoluteUrl(slug, recipe.image)
 
   return {
     title: pageTitle(titleBase),
@@ -100,7 +98,7 @@ export async function generateMetadata({
       siteName: 'Tumang Bali Cooking Class',
       locale: 'en_US',
       type: 'article',
-      images: [{ url: img, width: 1200, height: 630, alt: `${recipe.title} recipe` }],
+      images: [{ url: imgAbs, width: 1200, height: 630, alt: `${recipe.title} recipe` }],
     },
   }
 }
@@ -177,10 +175,8 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
   const recipe = await findRecipeBySlug(slug)
   if (!recipe) notFound()
 
-  const img =
-    recipe.image && typeof recipe.image === 'object' && 'url' in recipe.image
-      ? (recipe.image.url as string)
-      : null
+  const img = recipeImageSrc(slug, recipe.image)
+  const imgAbs = recipeImageAbsoluteUrl(slug, recipe.image)
 
   const ingredients: { item?: string; quantity?: string }[] = Array.isArray(recipe.ingredients)
     ? (recipe.ingredients as any[])
@@ -191,12 +187,13 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
       ? lexicalToSteps((recipe.instructions as any).root)
       : []
 
-  // schema.org/Recipe — eligible for rich results (rich snippet card in Google).
+  // schema.org/Recipe — `image` is required for Google recipe rich results.
   const recipeSchema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
     name: `${recipe.title}${recipe.description ? ` (${recipe.description})` : ''}`,
     description: recipe.description || `Authentic ${recipe.title} from Tumang Bali Cooking Class.`,
+    image: [imgAbs],
     recipeCuisine: 'Balinese',
     recipeCategory: recipe.menuType === 'vegetarian' ? 'Vegetarian' : 'Main',
     author: { '@type': 'Organization', name: 'Tumang Bali Cooking Class', url: SITE },
@@ -209,7 +206,6 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
       .map((i) => [i.quantity, i.item].filter(Boolean).join(' ').trim())
       .filter(Boolean),
   }
-  if (img) recipeSchema.image = [img]
   if (steps.length) {
     recipeSchema.recipeInstructions = steps.map((s) => ({ '@type': 'HowToStep', text: s }))
   }
@@ -248,11 +244,9 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           )}
         </div>
 
-        {img && (
-          <div className="w-full aspect-video md:aspect-[2/1] relative rounded-3xl overflow-hidden mb-12 shadow-xl border border-stone-200 dark:border-zinc-800">
-            <Image src={img} alt={`${recipe.title} recipe`} fill className="object-cover" priority />
-          </div>
-        )}
+        <div className="w-full aspect-video md:aspect-[2/1] relative rounded-3xl overflow-hidden mb-12 shadow-xl border border-stone-200 dark:border-zinc-800">
+          <Image src={img} alt={`${recipe.title} recipe`} fill className="object-cover" priority />
+        </div>
 
         <p className="text-lg leading-relaxed text-stone-700 dark:text-stone-300 mb-12">
           This authentic <strong>{recipe.title as string}</strong> recipe comes straight from the kitchen of our

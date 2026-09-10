@@ -6,6 +6,7 @@ import { buildPageMetadata } from '@/lib/seoMetadata'
 import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import { recipeSlug } from '@/lib/recipeSlug'
+import { recipeImageSrc } from '@/lib/recipeImage'
 
 export const revalidate = 60
 
@@ -39,7 +40,7 @@ export default async function RecipesIndexPage() {
   let recipes: any[] = []
   try {
     const payload = await getPayload({ config: configPromise })
-    const { docs } = await payload.find({ collection: 'recipes', limit: 1000 })
+    const { docs } = await payload.find({ collection: 'recipes', limit: 1000, depth: 1 })
     recipes = docs || []
   } catch (err) {
     console.error('recipes page: could not load recipes from CMS', err)
@@ -105,10 +106,7 @@ export default async function RecipesIndexPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {sorted.map((r) => {
             const slug = recipeSlug(r.title as string)
-            const img =
-              r.image && typeof r.image === 'object' && 'url' in r.image
-                ? (r.image.url as string)
-                : null
+            const img = recipeImageSrc(slug, r.image)
             return (
               <Link
                 key={r.id as string}
@@ -116,16 +114,12 @@ export default async function RecipesIndexPage() {
                 className="group bg-white dark:bg-zinc-900 rounded-3xl border border-stone-200 dark:border-zinc-800 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="aspect-[4/3] relative bg-stone-100 dark:bg-zinc-800">
-                  {img ? (
-                    <Image
-                      src={img}
-                      alt={r.title as string}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-4xl">🍲</div>
-                  )}
+                  <Image
+                    src={img}
+                    alt={r.title as string}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                   {r.menuType === 'vegetarian' && (
                     <span className="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 bg-green-500 text-white rounded-full shadow">
                       Vegetarian
