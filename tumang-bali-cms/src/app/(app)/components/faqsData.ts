@@ -11,7 +11,7 @@ import {
 export const faqs = [
   {
     question: 'What is Tumang Bali Cooking Class?',
-    answer: `Tumang Bali Cooking Class is a family-run Balinese cooking school in Tumang village near Ubud. Guests take a morning market tour (morning session), walk rice paddies, and cook 10+ traditional dishes with Chef Wayan Sudiana. Shared class: ${SHARED_PRICING_SUMMARY}. Private: ${PRIVATE_PRICING_SUMMARY}. Max 8 guests, English instruction, complimentary Ubud hotel pickup. TripAdvisor Travelers' Choice 2026 with a 5.0 rating from 1500+ reviews.`,
+    answer: `Tumang Bali Cooking Class is a family-run Balinese cooking school in Tumang village near Ubud. Guests take a morning market tour (morning session), walk rice paddies, and cook 10+ traditional dishes with Chef Wayan Suryana. Shared class: ${SHARED_PRICING_SUMMARY}. Private: ${PRIVATE_PRICING_SUMMARY}. Max 8 guests, English instruction, complimentary Ubud hotel pickup. TripAdvisor Travelers' Choice 2026 with a 5.0 rating from 1500+ reviews.`,
   },
   {
     question: 'How much does a cooking class in Ubud cost?',

@@ -10,11 +10,11 @@ export const revalidate = 3600
 export const metadata: Metadata = buildPageMetadata({
   title: 'About Tumang Bali',
   description:
-    'Meet the Tumang Bali family and Chef Wayan Sudiana — Ubud-born instructors sharing Balinese spice pastes, market sourcing, and village kitchen traditions.',
+    'Meet the Tumang Bali family and Chef Wayan Suryana — Ubud-born instructors sharing Balinese spice pastes, market sourcing, and village kitchen traditions.',
   path: '/about',
   ogTitle: 'About Tumang Bali | Family Cooking School',
-  image: '/images/instructor-wayan.jpg',
-  imageAlt: 'Chef Wayan Sudiana teaching Balinese cooking near Ubud',
+  image: '/images/chef-wayan-suryana.jpg',
+  imageAlt: 'Chef Wayan Suryana with Balinese dishes at Tumang Bali Cooking Class',
 })
 
 export default function AboutPage() {
@@ -51,19 +51,25 @@ export default function AboutPage() {
       </header>
 
       <main id="main-content" className="px-6 pb-16 max-w-3xl mx-auto space-y-12">
-        <section id="wayan-sudiana" className="grid gap-8 md:grid-cols-[180px_1fr] items-start">
-          <div className="relative mx-auto w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-zinc-800 shadow-lg">
+        {/* Legacy hash from older pages linking #wayan-sudiana */}
+        <span id="wayan-sudiana" className="sr-only" aria-hidden="true" />
+        <section id="wayan-suryana" className="overflow-hidden rounded-3xl border border-orange-100 bg-[#fff8f1] dark:border-orange-950/40 dark:bg-zinc-900">
+          <div className="relative aspect-[16/11] w-full overflow-hidden sm:aspect-[2/1]">
             <Image
-              src="/images/instructor-wayan.jpg"
-              alt="Chef Wayan Sudiana, head instructor at Tumang Bali"
-              width={160}
-              height={160}
-              className="object-cover w-full h-full"
+              src="/images/chef-wayan-suryana.jpg"
+              alt="Chef Wayan Suryana with Balinese dishes at Tumang Bali Cooking Class"
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover object-[center_25%]"
+              priority
             />
           </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-black">Chef Wayan Sudiana</h2>
-            <p className="text-sm font-semibold text-orange-600">Head Chef & Cooking Instructor · Ubud, Bali</p>
+          <div className="space-y-4 p-6 md:p-8">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-orange-700 dark:text-orange-400">
+              Head chef
+            </p>
+            <h2 className="text-3xl font-black tracking-tight md:text-4xl">Wayan Suryana</h2>
+            <p className="text-sm font-semibold text-stone-500">Cooking Instructor · Ubud, Bali</p>
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
               Wayan was born and raised in the Ubud area and has more than 15 years of experience teaching
               Balinese culinary heritage to international guests. He specializes in Base Genep spice paste,

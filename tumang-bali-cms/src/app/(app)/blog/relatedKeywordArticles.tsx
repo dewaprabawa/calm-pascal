@@ -118,7 +118,7 @@ export const balineseHomeCookingClassUbud: StaticArticle = {
     {
       question: 'Is Tumang Bali a real home / family cooking class?',
       answer:
-        'Yes. Tumang Bali is a family-run village kitchen near Ubud led by Chef Wayan Sudiana — not a hotel demo or resort classroom. You cook in an open-air family compound setting with a small group (max 8).',
+        'Yes. Tumang Bali is a family-run village kitchen near Ubud led by Chef Wayan Suryana — not a hotel demo or resort classroom. You cook in an open-air family compound setting with a small group (max 8).',
     },
     {
       question: 'What is included in a Balinese home cooking class in Ubud?',

@@ -91,7 +91,7 @@ export default async function Page() {
       durationHours: '3–4',
       price: SHARED_ADULT_SOLO_IDR,
       groupPrice: SHARED_ADULT_GROUP_IDR,
-      instructor: { name: 'Wayan Sudiana' },
+      instructor: { name: 'Wayan Suryana' },
       includedItems: [
         { item: 'Guided Morning Market Tour' },
         { item: 'Scenic Rice Field Walk' },
@@ -107,7 +107,7 @@ export default async function Page() {
       durationHours: '3',
       price: SHARED_ADULT_SOLO_IDR,
       groupPrice: SHARED_ADULT_GROUP_IDR,
-      instructor: { name: 'Wayan Sudiana' },
+      instructor: { name: 'Wayan Suryana' },
       includedItems: [
         { item: 'Scenic Rice Field Walk' },
         { item: 'Hands-on prep (10+ dishes)' },
@@ -123,7 +123,7 @@ export default async function Page() {
       price: PRIVATE_ADULT_SOLO_IDR,
       groupPrice: PRIVATE_ADULT_MIN2_IDR,
       kidsPrice: PRIVATE_KIDS_IDR,
-      instructor: { name: 'Wayan Sudiana' },
+      instructor: { name: 'Wayan Suryana' },
       includedItems: [
         { item: 'Kitchen exclusive to you' },
         { item: 'Guided Morning Market Tour' },
@@ -297,7 +297,7 @@ export default async function Page() {
         <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-lg" data-speakable>
           Tumang Bali Cooking Class is an authentic Balinese cooking class near Ubud for foreign
           travellers. Guests shop a traditional morning market (morning session only), walk working
-          rice paddies, then cook 10+ dishes from scratch with Head Chef Wayan Sudiana — including
+          rice paddies, then cook 10+ dishes from scratch with Head Chef Wayan Suryana — including
           Base Genep spice paste, sate lilit, pepes, and sambal matah. Shared classes:{' '}
           {SHARED_PRICING_SUMMARY}. Private classes: {PRIVATE_PRICING_SUMMARY}. Same price on every booking channel.
           Groups are capped at 8 guests, classes are taught in English, and Ubud-area hotel pickup
@@ -734,64 +734,120 @@ export default async function Page() {
         <MenuSection recipes={recipes} />
       </div>
 
-      {/* Instructors */}
-      <section id="instructors" className="py-24 bg-stone-100 dark:bg-zinc-900">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col items-center mb-16 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Cook with Local Balinese Chef Wayan Suryana</h2>
-            <p className="text-stone-600 dark:text-stone-400 max-w-2xl text-lg">Led by Chef Wayan Sudiana — Ubud-born instructor with 15+ years teaching Balinese spice pastes, market sourcing, and traditional techniques in English for international guests.</p>
-            <p className="text-stone-600 dark:text-stone-400 max-w-2xl text-sm mt-3">
-              <Link href="/about" className="text-orange-600 hover:underline font-semibold">Read our story &amp; chef credentials</Link>
+      {/* Head Chef — Wayan Suryana */}
+      <section
+        id="instructors"
+        className="relative scroll-mt-24 overflow-hidden border-y border-orange-100/80 bg-[#fff8f1] dark:border-orange-950/40 dark:bg-zinc-950"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 opacity-40 dark:opacity-20"
+          style={{
+            backgroundImage:
+              'radial-gradient(ellipse 80% 60% at 100% 0%, rgba(234,88,12,0.18), transparent 55%), radial-gradient(ellipse 50% 40% at 0% 100%, rgba(180,83,9,0.12), transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-20 md:grid-cols-2 md:gap-14 md:py-28">
+          <div className="order-2 animate-[fade-in-up_0.8s_ease-out_both] md:order-1">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-orange-700 dark:text-orange-400">
+              Head chef
             </p>
+            <h2 className="text-5xl font-black tracking-tighter text-stone-900 dark:text-stone-50 sm:text-6xl md:text-7xl">
+              Wayan Suryana
+            </h2>
+            <p className="mt-2 text-lg font-medium text-stone-500 dark:text-stone-400">
+              Tumang Bali Cooking Class · Ubud
+            </p>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-stone-600 dark:text-stone-300">
+              Ubud-born chef with 15+ years teaching travellers to grind Base Genep, shop the morning
+              market, and cook a full Balinese feast — in English, in a real village kitchen.
+            </p>
+            <ul className="mt-8 space-y-3 text-sm text-stone-700 dark:text-stone-300">
+              <li className="flex gap-3">
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600" aria-hidden="true" />
+                Hands-on teaching — you cook every dish, not a demo
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600" aria-hidden="true" />
+                Spice pastes, market sourcing &amp; banana-leaf techniques
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-600" aria-hidden="true" />
+                Vegetarian &amp; vegan menus on request · max 8 guests
+              </li>
+            </ul>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <BookButton className="inline-flex cursor-pointer rounded-full bg-orange-600 px-7 py-3.5 text-base font-semibold text-white transition-transform hover:-translate-y-0.5 hover:bg-orange-700 active:scale-95">
+                Book with Wayan
+              </BookButton>
+              <a
+                href="https://wa.me/6282210132418?text=Hi%20Tumang%20Bali%20%E2%80%94%20I%20would%20like%20to%20book%20with%20Chef%20Wayan%20Suryana"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white/70 px-6 py-3.5 text-base font-semibold text-stone-800 backdrop-blur transition hover:border-orange-300 hover:text-orange-700 dark:border-zinc-700 dark:bg-zinc-900/70 dark:text-stone-100"
+              >
+                WhatsApp
+              </a>
+              <Link href="/about#wayan-suryana" className="text-sm font-semibold text-orange-700 underline-offset-4 hover:underline dark:text-orange-400">
+                Full credentials
+              </Link>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {instructors.map((instructor) => (
-              <div key={instructor.id} className="bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-stone-200 dark:border-zinc-800 text-center hover:-translate-y-2 transition-transform duration-300">
-                <div className="w-32 h-32 mx-auto bg-stone-200 dark:bg-zinc-800 rounded-full mb-6 border-4 border-white dark:border-zinc-900 shadow-lg flex items-center justify-center text-3xl overflow-hidden relative">
-                  {(() => {
-                    const hasPhoto = instructor.photo && typeof instructor.photo === 'object' && instructor.photo.url;
-                    if (hasPhoto) {
-                      return <Image src={instructor.photo.url} alt={instructor.name} fill sizes="128px" className="object-cover" />;
-                    }
-                    
-                    // Fallback to our custom images
-                    let fallbackPhoto = '/images/img1.jpg';
-                    let objectPosition = 'center';
-                    if (instructor.name.toLowerCase().includes('made') || instructor.name.toLowerCase().includes('ayu')) {
-                      fallbackPhoto = '/images/img3.jpg';
-                    } else if (instructor.name.toLowerCase().includes('wayan') || instructor.name.toLowerCase().includes('sudiana')) {
-                      fallbackPhoto = '/images/instructor-wayan.jpg';
-                      // Focus on Wayan's face (the chef is on the left/middle of the photo)
-                      objectPosition = '41% 36%';
-                    }
-                    return (
-                      <Image 
-                        src={fallbackPhoto} 
-                        alt={instructor.name} 
-                        fill
-                        sizes="128px" 
-                        style={{ objectPosition }}
-                        className="object-cover" 
-                      />
-                    );
-                  })()}
-                </div>
-                <h3 className="text-2xl font-bold mb-2">{instructor.name}</h3>
-                {instructor.specialties && (
-                  <div className="flex flex-wrap justify-center gap-2 mb-4">
-                    {instructor.specialties.map((s: any, i: number) => (
-                      <span key={i} className="text-xs font-semibold px-2 py-1 bg-stone-100 dark:bg-zinc-800 text-stone-600 dark:text-stone-300 rounded-md">
-                        {s.specialty}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">{instructor.bio}</p>
+
+          <div className="order-1 animate-[fade-in-up_1s_ease-out_0.15s_both] md:order-2">
+            <figure className="relative group">
+              <div className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-orange-200/50 via-amber-100/30 to-transparent transition-transform duration-700 group-hover:scale-[1.02] dark:from-orange-900/30 dark:via-amber-950/20" aria-hidden="true" />
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] shadow-[0_25px_60px_-20px_rgba(154,52,18,0.45)] sm:aspect-[5/6]">
+                <Image
+                  src="/images/chef-wayan-suryana.jpg"
+                  alt="Chef Wayan Suryana with Balinese dishes at Tumang Bali Cooking Class in Ubud"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-[center_20%] transition-transform duration-700 ease-out group-hover:scale-105"
+                  priority={false}
+                />
               </div>
-            ))}
+              <figcaption className="mt-4 text-center text-sm text-stone-500 dark:text-stone-400 md:text-left">
+                Chef Wayan Suryana — village kitchen, Tumang near Ubud
+              </figcaption>
+            </figure>
           </div>
         </div>
+
+        {instructors.filter((i) => {
+          const n = String(i.name || '').toLowerCase()
+          return !n.includes('wayan') && !n.includes('suryana')
+        }).length > 0 ? (
+          <div className="relative mx-auto max-w-7xl border-t border-orange-100/80 px-6 pb-16 pt-4 dark:border-orange-950/40">
+            <p className="mb-6 text-center text-xs font-bold uppercase tracking-wider text-stone-500">
+              Also in our kitchen
+            </p>
+            <div className="flex flex-wrap justify-center gap-8">
+              {instructors
+                .filter((i) => {
+                  const n = String(i.name || '').toLowerCase()
+                  return !n.includes('wayan') && !n.includes('suryana')
+                })
+                .map((instructor) => (
+                  <div key={instructor.id} className="flex max-w-xs flex-col items-center text-center">
+                    <div className="relative mb-3 h-20 w-20 overflow-hidden rounded-full border-2 border-white shadow-md dark:border-zinc-800">
+                      {instructor.photo && typeof instructor.photo === 'object' && instructor.photo.url ? (
+                        <Image src={instructor.photo.url} alt={instructor.name} fill sizes="80px" className="object-cover" />
+                      ) : (
+                        <Image src="/images/img3.jpg" alt={instructor.name} fill sizes="80px" className="object-cover" />
+                      )}
+                    </div>
+                    <h3 className="text-base font-bold text-stone-900 dark:text-stone-50">{instructor.name}</h3>
+                    {instructor.bio ? (
+                      <p className="mt-1 text-sm leading-relaxed text-stone-500 dark:text-stone-400 line-clamp-3">
+                        {instructor.bio}
+                      </p>
+                    ) : null}
+                  </div>
+                ))}
+            </div>
+          </div>
+        ) : null}
       </section>
 
       {/* Reviews */}

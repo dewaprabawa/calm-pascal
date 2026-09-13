@@ -605,7 +605,7 @@ export const tumangBaliCookingClassExperience: StaticArticle = {
       <p data-speakable>
         The <strong>Tumang Bali Cooking Class experience</strong> is a half-day in a real Balinese village
         kitchen near Ubud. You meet your guide at the morning market, walk rice paddies, grind spice paste
-        with Chef Wayan Sudiana, cook 10+ dishes, and eat together overlooking the fields. Shared class from
+        with Chef Wayan Suryana, cook 10+ dishes, and eat together overlooking the fields. Shared class from
         IDR 506,370.
       </p>
       <h2>What happens during the day</h2>

@@ -209,7 +209,7 @@ export default function StructuredData() {
           repeatFrequency: 'P1D',
           byDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         },
-        instructor: { '@id': 'https://tumangbaliclass.com/about#wayan-sudiana' },
+        instructor: { '@id': 'https://tumangbaliclass.com/about#wayan-suryana' },
         location: {
           '@type': 'Place',
           name: 'Tumang Bali Kitchen',
@@ -230,7 +230,7 @@ export default function StructuredData() {
           repeatFrequency: 'P1D',
           byDay: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         },
-        instructor: { '@id': 'https://tumangbaliclass.com/about#wayan-sudiana' },
+        instructor: { '@id': 'https://tumangbaliclass.com/about#wayan-suryana' },
         location: {
           '@type': 'Place',
           name: 'Tumang Bali Kitchen',
@@ -305,14 +305,14 @@ export default function StructuredData() {
   const chefPerson = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://tumangbaliclass.com/about#wayan-sudiana',
-    name: 'Wayan Sudiana',
+    '@id': 'https://tumangbaliclass.com/about#wayan-suryana',
+    name: 'Wayan Suryana',
     alternateName: 'Chef Wayan',
     jobTitle: 'Head Chef & Cooking Instructor',
     description:
       'Ubud-born Balinese chef with 15+ years teaching Base Genep spice pastes, market sourcing, and traditional village kitchen techniques in English at Tumang Bali Cooking Class.',
     url: 'https://tumangbaliclass.com/about',
-    image: 'https://tumangbaliclass.com/images/logo.jpg',
+    image: 'https://tumangbaliclass.com/images/chef-wayan-suryana.jpg',
     worksFor: { '@id': 'https://tumangbaliclass.com/#business' },
     knowsLanguage: ['en', 'id'],
     knowsAbout: [
@@ -341,7 +341,7 @@ export default function StructuredData() {
         name: 'What is Tumang Bali Cooking Class?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Tumang Bali Cooking Class is a family-run small-group Balinese cooking school in Tumang village near Ubud, Bali. Guests join a morning market tour (morning session), rice-field walk, and hands-on cooking of 10+ dishes with Chef Wayan Sudiana. Shared class IDR 506,370; private 1 person IDR 633,090. Max 8 guests. TripAdvisor Traveler\'s Choice 2026, 5.0 rating from 1500+ reviews.',
+          text: 'Tumang Bali Cooking Class is a family-run small-group Balinese cooking school in Tumang village near Ubud, Bali. Guests join a morning market tour (morning session), rice-field walk, and hands-on cooking of 10+ dishes with Chef Wayan Suryana. Shared class IDR 506,370; private 1 person IDR 633,090. Max 8 guests. TripAdvisor Traveler\'s Choice 2026, 5.0 rating from 1500+ reviews.',
         },
       },
       {

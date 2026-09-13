@@ -27,7 +27,7 @@ export default function EditorialPolicyPage() {
       <LegalSection title="Who writes our content">
         <p>
           Articles are produced by the Tumang Bali team with review from our kitchen instructors,
-          including Chef Wayan Sudiana (Ubud-born head chef with 15+ years teaching Balinese cuisine to
+          including Chef Wayan Suryana (Ubud-born head chef with 15+ years teaching Balinese cuisine to
           international guests). Practical details — prices, pickup, menu inclusions — are checked against
           our live booking operations.
         </p>

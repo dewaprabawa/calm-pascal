@@ -17,7 +17,7 @@ async function seed() {
   const instructor1 = await payload.create({
     collection: 'instructors',
     data: {
-      name: 'Wayan Sudiana',
+      name: 'Wayan Suryana',
       bio: 'Born and raised in Ubud, Wayan learned traditional Balinese cooking from his grandmother. He has over 15 years of experience sharing his culinary heritage.',
       specialties: [{ specialty: 'Traditional Spice Pastes (Bumbu)' }, { specialty: 'Balinese Sate' }],
     },
