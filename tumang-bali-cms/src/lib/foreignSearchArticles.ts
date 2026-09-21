@@ -200,7 +200,7 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       ]),
       paragraph([
         text('Our '),
-        link('best things to do in Ubud', '/blog/best-things-to-do-in-ubud'),
+        link('best things to do in Ubud', '/blog/things-to-do-in-ubud'),
         text(' list goes deeper on local picks. For island-wide planning, start with '),
         link('best cooking class in Bali', '/blog/best-cooking-class-in-bali'),
         text(' — most "things to do" searches end up here for at least one food day.'),
@@ -1430,6 +1430,10 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
         link('things to do in Bali', '/blog/things-to-do-in-bali'),
         text('.'),
       ]),
+      heading('h2', 'What are the best things to do in Ubud?'),
+      paragraph([
+        text('If you care about food: a morning market tour and Balinese cooking class, a rice-field walk, one temple (Tirta Empul or a quieter pura), and warung meals. Monkey Forest and Tegallalang are optional — they are crowded and not how locals spend a morning. Two full days is the minimum; three nights is comfortable.'),
+      ]),
       heading('h2', 'Do these first (food and culture)'),
       list([
         'Morning cooking class with pasar tour — shop, grind bumbu, cook 10+ dishes (IDR 506,370 shared)',
@@ -1446,6 +1450,19 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
         text('. Two-day map: '),
         link('Ubud food-lover itinerary', '/blog/ubud-food-lovers-itinerary'),
         text('.'),
+      ]),
+      heading('h2', 'The classic 10 (if you have extra days)'),
+      list([
+        'Cooking class in Tumang village — market, paddies, 10+ dishes (do this first)',
+        'Tegallalang rice terraces — go before 7am if you still want the famous viewpoint',
+        'Sacred Monkey Forest — no food in bags; go early',
+        'Sukawati Art Market — batik and crafts south of Ubud; bargain',
+        'Pura Tirta Empul — sarong required; purification springs',
+        'A Balinese dance performance in Ubud (kecak is usually a separate Uluwatu evening)',
+        'Ubud traditional market at dawn — not the souvenir afternoon',
+        'Yoga or a spa afternoon if you need a rest day',
+        'Warung crawl: nasi campur, lawar, sate lilit after you know the sambals',
+        'Mount Batur sunrise — only if you skip stacking it on the same day as a cooking class',
       ]),
       heading('h2', 'Optional (crowded, still fine once)'),
       list([

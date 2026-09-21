@@ -75,6 +75,8 @@ own as a primary URL. Chosen to avoid another wave of near-duplicate
 
 **Explicitly skipped (cannibalization / thin variants):** extra coast-origin pages (Seminyak/Nusa Dua/Kuta) — keep `/blog/cooking-class-ubud-from-canggu`; more dish-named cooking-class blogs until recipe/blog primaries are settled; generic “best cooking class” clones.
 
+**21 Sep 2026 content update:** expanded market-to-table (comparison table + question H2s), gluten-free / solo internal links, folded CMS `/blog/best-things-to-do-in-ubud` → `/blog/things-to-do-in-ubud` (301), refreshed GSC meta seeds off stale IDR 350K copy.
+
 GEO: each new URL is cited in `public/llms.txt` and `public/llms-full.txt` with
 self-contained answers (price, inclusions, honest caveats for halal/GF).
 

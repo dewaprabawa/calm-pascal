@@ -48,6 +48,11 @@ export const marketToTableCookingClassUbud: StaticArticle = {
         'Not exactly. Farm-to-table packages (often in Taro) emphasise harvesting from an organic plot. Market-to-table starts at a working pasar used by local cooks — the same ingredients Balinese families actually buy. Tumang is market-to-table plus a walk through working subak paddies, not a ticketed farm tour.',
     },
     {
+      question: 'Does the afternoon class include a market tour?',
+      answer:
+        'No. Market-to-table is morning only (about 08:30–12:30). Afternoon is cook-and-dine with pre-sourced ingredients. Book morning if the pasar is the reason you searched.',
+    },
+    {
       question: 'How much is a market-to-table cooking class near Ubud?',
       answer:
         'Tumang Bali shared class is IDR 506,370 per adult (2+ participants; IDR 616,032 for 1). Morning sessions include the pasar tour. Private kitchen from IDR 633,090. Free hotel pickup in central Ubud. Max 8 guests.',
@@ -56,26 +61,66 @@ export const marketToTableCookingClassUbud: StaticArticle = {
   body: (
     <>
       <p data-speakable>
-        A <strong>market-to-table cooking class in Ubud</strong> at Tumang Bali means you shop a working
-        traditional pasar, walk rice paddies, then cook 10+ Balinese dishes from those ingredients — the
-        same flow listed on our Viator “Market-to-Table” tour. Shared class <strong>IDR 506,370</strong> ·
-        max 8 guests · free Ubud hotel pickup. Morning session only for the market.
+        A <strong>market-to-table cooking class in Ubud</strong> is a morning that starts where Balinese
+        cooks actually shop: a working traditional pasar. At Tumang Bali you pick turmeric root, lemongrass,
+        coconut, and chilies with a local chef, walk working subak rice paddies, then cook 10+ dishes in a
+        village kitchen — sate lilit, sambal matah, pepes, lawar, Base Genep — and eat the feast you made.
+        That is the same arc as our Viator “Market-to-Table” listing. It is not a staged organic-farm harvest
+        in Taro and not a hotel demo overlooking a parking lot. Shared class <strong>IDR 506,370</strong> per
+        adult (2+; IDR 616,032 for 1) · max 8 guests · free Ubud hotel pickup. Book the morning session if
+        the pasar is the reason you searched.
       </p>
 
-      <h2>Market-to-table vs farm-to-table in Ubud</h2>
+      <h2>What is a market-to-table cooking class in Ubud?</h2>
       <p>
-        Travellers searching <em>farm to table cooking class Ubud</em> or <em>organic farm cooking class
-        Bali</em> usually want ingredients they can see, smell, and cook the same morning. Competitors in
-        Taro sell a harvest walk on a private farm. Tumang is different on purpose: we start at a{' '}
-        <Link href={marketTour}>traditional market cooking class</Link> because that is how Balinese home
-        cooks actually source food — turmeric root, kencur, salam leaves, fresh coconut, and lemongrass
-        sold by the bunch, not a supermarket tray.
+        Market-to-table means the ingredients on your cutting board were bought that morning in a pasar used
+        by local families — not a supermarket tray and not a photo-op farm stall. You see whole spices,
+        smell kencur, and learn which banana leaf is for pepes. Then you cook. Farm-to-table packages nearby
+        (often Taro) emphasise picking vegetables on a private plot. Both can be good; they answer different
+        searches. Tumang is market-to-table on purpose because that is how village cooks source food. After
+        the pasar we still walk paddies to the kitchen, so you get scenery without a Tegallalang ticket.
       </p>
+
+      <h2>Market-to-table vs farm-to-table vs hotel demo</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Style</th>
+            <th>Where ingredients come from</th>
+            <th>Typical group</th>
+            <th>Tumang?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Market-to-table</td>
+            <td>Traditional pasar the same morning</td>
+            <td>Small village kitchen</td>
+            <td>Yes — morning class</td>
+          </tr>
+          <tr>
+            <td>Farm-to-table</td>
+            <td>Harvest walk on a private farm (often Taro)</td>
+            <td>Farm school / larger plots</td>
+            <td>No — we send you to the pasar instead</td>
+          </tr>
+          <tr>
+            <td>Hotel / resort demo</td>
+            <td>Pre-prepped trays</td>
+            <td>Often 12–20</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
       <p>
-        After the pasar we walk working subak paddies to the village kitchen — scenery without a Tegallalang
-        ticket booth. Rice-terrace angle:{' '}
-        <Link href="/blog/rice-terrace-cooking-class-ubud">rice terrace cooking class Ubud</Link>. Home-kitchen
-        angle: <Link href="/blog/balinese-home-cooking-class-ubud">Balinese home cooking class</Link>.
+        Compare village vs farm schools on{' '}
+        <Link href="/compare-ubud-cooking-classes">compare Ubud cooking classes</Link> and{' '}
+        <Link href="/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class">
+          Taman Dukuh vs Tresna vs Lemongrass
+        </Link>
+        . Rice-paddy walk:{' '}
+        <Link href="/blog/rice-terrace-cooking-class-ubud">rice terrace cooking class Ubud</Link>. Family
+        kitchen: <Link href="/blog/balinese-home-cooking-class-ubud">Balinese home cooking class</Link>.
       </p>
 
       <h2>What you buy at the pasar (and then cook)</h2>
@@ -93,12 +138,13 @@ export const marketToTableCookingClassUbud: StaticArticle = {
         <Link href="/blog/lemongrass-cooking-class-ubud">lemongrass sate lilit</Link>.
       </p>
 
-      <h2>Morning only — why the pasar matters</h2>
+      <h2>Does the afternoon class include the market?</h2>
       <p>
-        The market tour is a morning-class inclusion (about 08:30–12:30). Afternoon class skips the pasar and
-        starts in the kitchen with pre-sourced ingredients. If “market to table” is why you searched, book
-        morning. Timing guide:{' '}
-        <Link href="/blog/morning-vs-afternoon-tours-bali">morning vs afternoon cooking class</Link>.
+        No. The market tour is a morning-class inclusion (about 08:30–12:30). Afternoon class (about
+        14:30–17:30) skips the pasar and starts in the kitchen with pre-sourced ingredients. If “market to
+        table” or “farm to table cooking class Ubud” is why you searched, book morning. Timing guide:{' '}
+        <Link href="/blog/morning-vs-afternoon-tours-bali">morning vs afternoon cooking class</Link>. Landing
+        page: <Link href={marketTour}>cooking class with market tour Ubud</Link>.
       </p>
 
       <h2>Book a market-to-table class near Ubud</h2>
@@ -160,6 +206,16 @@ export const glutenFreeCookingClassUbud: StaticArticle = {
         menu — sambal matah, pepes, lawar, sate lilit, Base Genep — with mie goreng and wheat kecap removed
         when you give <strong>24 hours’ notice</strong>. Shared <strong>IDR 506,370</strong> · max 8 · we
         are not a certified gluten-free kitchen.
+      </p>
+
+      <h2>Is Balinese food gluten-free?</h2>
+      <p>
+        Most home-style Balinese dishes are built on rice, coconut, fresh roots, and banana leaf — not wheat.
+        Hidden gluten usually arrives in bottled kecap manis, soy sauce, mie goreng, and factory spice mixes.
+        We grind Base Genep from whole spices on a stone mortar, skip mie and wheat kecap on a gluten-conscious
+        booking, and keep a separate pan when the shared group is mixed. Give 24 hours’ notice. The kitchen is
+        not a certified gluten-free facility, so medical celiac guests should prefer a{' '}
+        <Link href={privateClass}>private cooking class</Link> if they need tighter control of oil and utensils.
       </p>
 
       <h2>What is naturally gluten-free on the Tumang menu</h2>
@@ -375,6 +431,7 @@ export const cookingClassUbudForSoloTravelers: StaticArticle = {
       <p>
         Island safety context: <Link href="/blog/is-bali-safe-for-tourists">is Bali safe for tourists</Link>.
         Beginners page: <Link href="/bali-cooking-class-for-beginners">cooking class for beginners</Link>.
+        Market morning: <Link href="/blog/market-to-table-cooking-class-ubud">market-to-table class</Link>.
       </p>
 
       <h2>Book a solo cooking class in Ubud</h2>

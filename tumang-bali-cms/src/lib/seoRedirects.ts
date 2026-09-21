@@ -12,6 +12,7 @@ export const SEO_REDIRECTS: Record<string, string> = {
   '/index.html': '/',
   '/blog.html': '/blog',
   '/blog/2-days-ubud-food-itinerary': '/blog/ubud-food-lovers-itinerary',
+  '/blog/best-things-to-do-in-ubud': '/blog/things-to-do-in-ubud',
   '/experiences': '/tours',
   '/tour': '/tours',
 }
