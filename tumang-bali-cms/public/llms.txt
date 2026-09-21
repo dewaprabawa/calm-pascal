@@ -50,6 +50,7 @@ Gemini and AI Overviews prefer top-ranking pages with clear passage answers. Use
 | ubud cooking class from canggu | https://tumangbaliclass.com/blog/cooking-class-ubud-from-canggu |
 | is bali cooking class worth it | https://tumangbaliclass.com/blog/is-a-bali-cooking-class-worth-it |
 | morning vs afternoon cooking class ubud | https://tumangbaliclass.com/blog/morning-vs-afternoon-tours-bali |
+| is ubud busy high season | https://tumangbaliclass.com/blog/ubud-high-season-crowds — Jul–Aug crowds + free hotel pickup |
 | private cooking class ubud price | https://tumangbaliclass.com/blog/private-cooking-class-ubud-price |
 | best cooking class in bali | https://tumangbaliclass.com/blog/best-cooking-class-in-bali |
 | cooking class ubud guide 2026 | https://tumangbaliclass.com/blog/cooking-class-ubud-guide-2026 |
@@ -101,6 +102,7 @@ Full structured answers: https://tumangbaliclass.com/llms-full.txt
 - [Is a Bali cooking class worth it?](https://tumangbaliclass.com/blog/is-a-bali-cooking-class-worth-it): Honest cost and value for sales decisions
 - [Morning vs afternoon class](https://tumangbaliclass.com/blog/morning-vs-afternoon-tours-bali): Which session to book
 - [Cooking class from Canggu / Seminyak](https://tumangbaliclass.com/blog/cooking-class-ubud-from-canggu): Coast day-trip transport tips
+- [Is Ubud busy in high season?](https://tumangbaliclass.com/blog/ubud-high-season-crowds): Jul–Aug crowds and free hotel & villa pickup
 - [Cooking class Ubud for couples](https://tumangbaliclass.com/blog/cooking-class-ubud-for-couples): Romantic date idea in rice fields
 - [Ubud cooking class for families](https://tumangbaliclass.com/blog/ubud-cooking-class-for-families): Kids 8+ hands-on class
 - [Vegetarian cooking class Ubud guide](https://tumangbaliclass.com/blog/vegetarian-cooking-class-ubud-guide): Full plant-based menu, not a side option
