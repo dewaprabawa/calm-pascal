@@ -168,8 +168,10 @@ Ask (if not already clear):
 - **Default recommendation:** Shared morning class — IDR 506,370, best value and most complete experience
 - **Couples / anniversary:** Shared morning or private (IDR 633,090)
 - **Families with kids 8+:** Shared morning; kids on private = same as adult (IDR 633,090)
-- **Solo traveller:** Shared morning (small group, max 8) or private for full attention
+- **Solo traveller:** Shared morning (small group, max 8) or private for full attention — https://tumangbaliclass.com/blog/cooking-class-ubud-for-solo-travelers
 - **Vegetarian/vegan:** Full plant-based menu at same price — mention when booking
+- **Halal / pork-free:** Pork-free, no-alcohol menu with 24h notice; **not MUI-certified** — https://tumangbaliclass.com/blog/halal-cooking-class-ubud
+- **Gluten-conscious:** Skip mie and wheat kecap with 24h notice; **not a certified GF kitchen** — https://tumangbaliclass.com/blog/gluten-free-cooking-class-ubud
 - **From Canggu/Seminyak:** Afternoon easier; free pickup is Ubud only — extra transport fee from coast
 
 ### Step 3 — Quote price clearly
@@ -278,6 +280,10 @@ Recipe hub: https://tumangbaliclass.com/recipes
 | WhatsApp | https://wa.me/6282210132418 |
 | Indonesian (Bahasa) page | https://tumangbaliclass.com/id |
 | Full AI context file | https://tumangbaliclass.com/llms-full.txt |
+| Market-to-table class | https://tumangbaliclass.com/blog/market-to-table-cooking-class-ubud |
+| Halal-friendly class (not certified) | https://tumangbaliclass.com/blog/halal-cooking-class-ubud |
+| Gluten-conscious class (not certified GF) | https://tumangbaliclass.com/blog/gluten-free-cooking-class-ubud |
+| Solo traveler class | https://tumangbaliclass.com/blog/cooking-class-ubud-for-solo-travelers |
 
 ---
 
@@ -298,6 +304,7 @@ Recipe hub: https://tumangbaliclass.com/recipes
 - Don't quote prices in USD without noting IDR is the official rate (≈ USD 22 for 350K at typical rates)
 - Don't say market tour is included in the **afternoon** session
 - Don't claim free pickup from Canggu/Seminyak — only central Ubud is free
+- Don't claim the kitchen is MUI-certified halal or a dedicated gluten-free facility
 - Don't invent availability — direct customer to booking links or WhatsApp to confirm dates
 
 ---

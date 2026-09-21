@@ -31,6 +31,11 @@ export const STATIC_COMMERCIAL_SLUGS = [
   'zapier-smart-assistant-ubud-cooking-class',
   // Competitor comparison cluster
   'taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
+  // September 2026 keyword cluster (market-to-table, dietary, solo)
+  'market-to-table-cooking-class-ubud',
+  'gluten-free-cooking-class-ubud',
+  'halal-cooking-class-ubud',
+  'cooking-class-ubud-for-solo-travelers',
 ] as const
 
 export type StaticCommercialSlug = (typeof STATIC_COMMERCIAL_SLUGS)[number]

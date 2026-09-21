@@ -15,6 +15,8 @@ export const INDEXNOW_PRIORITY_URLS = [
   `${SITE}/blog/best-cooking-class-in-ubud`,
   `${SITE}/blog/ubud-cooking-class-price`,
   `${SITE}/blog/cooking-class-ubud-guide-2026`,
+  `${SITE}/blog/market-to-table-cooking-class-ubud`,
+  `${SITE}/blog/things-to-do-in-ubud`,
   `${SITE}/press`,
 ] as const
 

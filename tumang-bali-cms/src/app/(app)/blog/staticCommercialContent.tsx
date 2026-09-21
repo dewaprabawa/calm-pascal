@@ -4,6 +4,7 @@ import type { StaticArticle } from './staticCommercialArticles'
 import { otaBookingArticles } from './otaBookingContent'
 import { salesGeoCommercialArticles } from './salesGeoCommercialContent'
 import { relatedKeywordArticles } from './relatedKeywordArticles'
+import { seoKeywordClusterArticles } from './seoKeywordCluster'
 
 export {
   ubudCookingClassPrice,
@@ -25,6 +26,14 @@ export {
   ubudFoodLoversItinerary,
   relatedKeywordArticles,
 } from './relatedKeywordArticles'
+
+export {
+  marketToTableCookingClassUbud,
+  glutenFreeCookingClassUbud,
+  halalCookingClassUbud,
+  cookingClassUbudForSoloTravelers,
+  seoKeywordClusterArticles,
+} from './seoKeywordCluster'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -334,7 +343,6 @@ export const vegetarianCookingClassUbudGuide: StaticArticle = {
     'vegetarian balinese cooking class',
     'vegan cooking class ubud',
     'vegan balinese cooking class',
-    'gluten free cooking class bali',
   ],
   faqs: [
     {
@@ -380,6 +388,9 @@ export const vegetarianCookingClassUbudGuide: StaticArticle = {
         <Link href="/vegetarian-cooking-class-ubud">vegetarian cooking class landing page</Link> for
         inclusions and booking, or read the broader{' '}
         <Link href="/blog/vegetarian-guide-eating-ubud">vegetarian eating guide for Ubud</Link>.
+        Need wheat-free or pork-free rather than vegetarian? See{' '}
+        <Link href="/blog/gluten-free-cooking-class-ubud">gluten-free cooking class Ubud</Link> and{' '}
+        <Link href="/blog/halal-cooking-class-ubud">halal cooking class Ubud</Link>.
       </p>
       <h2>Why book a vegetarian cooking class in Ubud</h2>
       <ul>
@@ -876,6 +887,7 @@ export const staticCommercialArticles: StaticArticle[] = [
   ...otaBookingArticles,
   ...salesGeoCommercialArticles,
   ...relatedKeywordArticles,
+  ...seoKeywordClusterArticles,
 ]
 
 export function getStaticCommercialArticle(slug: string): StaticArticle | undefined {

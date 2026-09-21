@@ -15,6 +15,11 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
   { query: 'half day cooking class bali', path: '/half-day-cooking-class-bali', label: 'Half-day cooking class Bali' },
   { query: 'vegetarian cooking class ubud', path: '/blog/vegetarian-cooking-class-ubud-guide', label: 'Vegetarian cooking class Ubud' },
   { query: 'vegan cooking class bali', path: '/vegetarian-cooking-class-ubud', label: 'Vegan cooking class Bali' },
+  { query: 'gluten free cooking class ubud', path: '/blog/gluten-free-cooking-class-ubud', label: 'Gluten-free cooking class Ubud' },
+  { query: 'halal cooking class ubud', path: '/blog/halal-cooking-class-ubud', label: 'Halal cooking class Ubud' },
+  { query: 'market to table cooking class ubud', path: '/blog/market-to-table-cooking-class-ubud', label: 'Market-to-table cooking class Ubud' },
+  { query: 'farm to table cooking class ubud', path: '/blog/market-to-table-cooking-class-ubud', label: 'Farm-to-table cooking class Ubud' },
+  { query: 'cooking class ubud solo traveler', path: '/blog/cooking-class-ubud-for-solo-travelers', label: 'Cooking class for solo travelers' },
   { query: 'family cooking class bali', path: '/family-cooking-class-bali', label: 'Family cooking class Bali' },
   { query: 'cooking class ubud for couples', path: '/blog/cooking-class-ubud-for-couples', label: 'Couples cooking class Ubud' },
   { query: 'honeymoon cooking class ubud', path: '/blog/cooking-class-ubud-for-couples', label: 'Honeymoon cooking class Ubud' },
@@ -43,6 +48,10 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
     path: '/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
     label: 'Tresna Bali cooking class compared',
   },
+  { query: 'things to do in ubud', path: '/blog/things-to-do-in-ubud', label: 'Things to do in Ubud' },
+  { query: '7 day bali itinerary', path: '/blog/7-day-bali-itinerary', label: '7-day Bali itinerary' },
+  { query: 'bali airport to ubud', path: '/blog/bali-airport-to-ubud', label: 'Bali airport to Ubud' },
+  { query: 'bali packing list', path: '/blog/bali-packing-list', label: 'Bali packing list' },
 ]
 
 export function relatedKeywordsForSlug(slug: string, limit = 6): typeof RELATED_COOKING_CLASS_KEYWORDS {

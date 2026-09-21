@@ -1295,4 +1295,346 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       ),
     ]),
   },
+
+  // 21 — 7-day Bali itinerary (head-term planning)
+  {
+    slug: '7-day-bali-itinerary',
+    title: '7-Day Bali Itinerary — Ubud Culture, Coast Days & a Cooking Class',
+    excerpt:
+      'A realistic 7-day Bali itinerary for first-timers: three nights in Ubud (with a morning cooking class), then the south coast — without packing every day with ticketed photo stops.',
+    image: 'blog/itinerary.jpg',
+    imageAlt: 'Seven-day Bali itinerary — travellers sharing a Balinese meal after a cooking class in Ubud',
+    metaTitle: '7-Day Bali Itinerary 2026 — Ubud + Coast',
+    metaDescription:
+      '7-day Bali itinerary: 3 nights Ubud with a market-to-table cooking class, then Seminyak or Canggu. Airport transfer, crowds, and what to book ahead.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      '7 day Bali itinerary',
+      'one week in Bali',
+      '7 days in Bali first time',
+      'Bali itinerary Ubud Seminyak',
+      'week in Bali itinerary',
+    ],
+    faq: [
+      {
+        question: 'Is 7 days enough for Bali?',
+        answer:
+          'Yes for a first visit if you use two bases: about three nights in Ubud (culture, markets, cooking class) and three to four nights on the south coast (Seminyak, Canggu, or Uluwatu). Adding Nusa Penida or Gili usually needs a 10-day trip.',
+      },
+      {
+        question: 'Where should I spend a week in Bali — Ubud or the beach?',
+        answer:
+          'Split it. A full week only in Canggu skips the island’s food culture; a full week only in Ubud skips the ocean. The classic first-timer split is Ubud first (recover from the flight with a village cooking class), then the coast before you fly out of DPS.',
+      },
+      {
+        question: 'Which day should I book a cooking class on a 7-day Bali trip?',
+        answer:
+          'Day 2 or 3 in Ubud, morning session. You shop the pasar, cook 10+ dishes, then eat smarter at warungs for the rest of the week. Shared class IDR 506,370 with free Ubud hotel pickup. Book before you fly in July–August.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('A '),
+        text('7-day Bali itinerary', 1),
+        text(' works when you stop trying to see the whole island. Seven nights is two bases, one cooking morning, and enough unscheduled time that you actually enjoy the food. This is the split we recommend to guests who message us from the airport: Ubud first, coast second, cooking class booked before you land.'),
+      ]),
+      heading('h2', 'The 3 + 4 split (Ubud then coast)'),
+      list([
+        'Days 1–3: Ubud — recover, markets, temples, cooking class',
+        'Days 4–7: Seminyak, Canggu, or Uluwatu — beach, sunset, fly out from DPS',
+        'Skip a third hotel if you only have a week — packing eats half a day',
+      ]),
+      paragraph([
+        text('Area comparison: '),
+        link('Ubud vs Canggu vs Seminyak', '/blog/ubud-vs-canggu-vs-seminyak'),
+        text('. Villa vs resort: '),
+        link('Bali villas guide', '/blog/bali-villas-guide-where-to-stay'),
+        text('. Season: '),
+        link('best time to visit Bali', '/blog/best-time-to-visit-bali'),
+        text('.'),
+      ]),
+      heading('h2', 'Day-by-day (food-first, not swing-first)'),
+      list([
+        'Day 1: Land DPS, transfer to Ubud (60–90 min). Early dinner at a warung. See our airport-to-Ubud guide.',
+        'Day 2: Morning market-to-table cooking class (08:30–12:30) — the anchor of the week. Afternoon Campuhan Ridge or a slow café.',
+        'Day 3: Tirta Empul or a quieter water temple, Tegallalang only if you still want the famous terraces (you already walked paddies in class).',
+        'Day 4: Transfer south. Optional Tegenungan waterfall stop if you have a driver.',
+        'Day 5–6: Beach time. One cultural evening (Uluwatu kecak) if you chose the Bukit.',
+        'Day 7: Buffer morning, airport. Do not book a 08:30 class on departure day.',
+      ]),
+      paragraph([
+        text('The cooking morning is '),
+        link('market-to-table in Ubud', '/blog/market-to-table-cooking-class-ubud'),
+        text(' — pasar, rice fields, 10+ dishes. Tight on time? '),
+        link('Half-day cooking class Bali', '/half-day-cooking-class-bali'),
+        text('. Two-day food zoom: '),
+        link('Ubud food-lover itinerary', '/blog/ubud-food-lovers-itinerary'),
+        text('.'),
+      ]),
+      heading('h2', 'What not to cram into seven days'),
+      paragraph([
+        text('Nusa Penida as a day trip from Ubud is a 12-hour ordeal. Mount Batur sunrise plus a cooking class on the same calendar day burns people out. Island-wide list: '),
+        link('things to do in Bali', '/blog/things-to-do-in-bali'),
+        text('. Ubud-only list: '),
+        link('things to do in Ubud', '/blog/things-to-do-in-ubud'),
+        text('.'),
+      ]),
+      ...commercialClose(
+        'Lock the Ubud cooking morning before you lock the beach hotel — shared classes cap at 8 and fill in peak season.',
+      ),
+    ]),
+  },
+
+  // 22 — Things to do in Ubud (head term; island-wide page already exists)
+  {
+    slug: 'things-to-do-in-ubud',
+    title: 'Things to Do in Ubud — Food, Temples, Rice Fields & a Cooking Class',
+    excerpt:
+      'The best things to do in Ubud, ranked by a village cooking school: morning market, a hands-on Balinese class, rice-field walks, temples, and warungs — without a packed ticket trail.',
+    image: 'blog/best-things-to-do-in-ubud.webp',
+    imageAlt: 'Things to do in Ubud — guests cooking Balinese food in a village kitchen near the rice fields',
+    metaTitle: 'Things to Do in Ubud 2026 — Food-First List',
+    metaDescription:
+      'Things to do in Ubud: cooking class with market tour, rice paddies, Monkey Forest, temples, and warungs. A local kitchen’s shortlist — not another 40-item dump.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      'things to do in Ubud',
+      'best things to do in Ubud',
+      'Ubud activities',
+      'what to do in Ubud Bali',
+      'Ubud attractions',
+    ],
+    faq: [
+      {
+        question: 'What are the best things to do in Ubud?',
+        answer:
+          'If you care about food: a morning market tour and Balinese cooking class, a rice-field walk, one temple (Tirta Empul or a quieter pura), and warung meals. Monkey Forest and Tegallalang are optional — they are crowded and not how locals spend a morning.',
+      },
+      {
+        question: 'How many days do you need in Ubud?',
+        answer:
+          'Two full days is the minimum for a cooking class plus one temple/walk day. Three nights is comfortable. One night is a day trip, not a stay.',
+      },
+      {
+        question: 'Is a cooking class one of the best things to do in Ubud?',
+        answer:
+          'For most foreign travellers, yes — it is a half-day that explains every warung meal that follows. Tumang Bali shared class is IDR 506,370, max 8 guests, with Ubud hotel pickup.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('Things to do in Ubud', 1),
+        text(' should not be a 40-link dump of swings, ATVs, and the same three temples. This shortlist is how we tell guests to spend two or three days: cook once, walk paddies that are actually farmed, eat at warungs, and pick one sacred site. Island-wide ideas live on '),
+        link('things to do in Bali', '/blog/things-to-do-in-bali'),
+        text('.'),
+      ]),
+      heading('h2', 'Do these first (food and culture)'),
+      list([
+        'Morning cooking class with pasar tour — shop, grind bumbu, cook 10+ dishes (IDR 506,370 shared)',
+        'Village rice-field walk (included with morning class) instead of only Tegallalang tickets',
+        'Ubud morning market if you are not already in a class — go early, before souvenir stalls dominate',
+        'One water temple (Tirta Empul) or a quieter pura — sarong required',
+        'Warung lunch/dinner: nasi campur, lawar, sate lilit now that you know the sambals',
+      ]),
+      paragraph([
+        text('Book the class: '),
+        link('cooking class Ubud', '/balinese-cooking-class-ubud'),
+        text('. Market-to-table detail: '),
+        link('market-to-table cooking class', '/blog/market-to-table-cooking-class-ubud'),
+        text('. Two-day map: '),
+        link('Ubud food-lover itinerary', '/blog/ubud-food-lovers-itinerary'),
+        text('.'),
+      ]),
+      heading('h2', 'Optional (crowded, still fine once)'),
+      list([
+        'Sacred Monkey Forest — go early; do not carry food or wear dangling jewellery',
+        'Tegallalang rice terraces — photo stop with fees; our class already includes working paddies',
+        'Campuhan Ridge Walk — free, best at 07:00',
+        'Yoga Barn or a spa afternoon if you need a rest day',
+      ]),
+      heading('h2', 'Skip or save for a longer stay'),
+      paragraph([
+        text('All-day ATV + swing combos eat the only morning you had for a cooking class. Nusa Penida is not an Ubud day trip. High-season crowds: '),
+        link('is Ubud busy in high season', '/blog/ubud-high-season-crowds'),
+        text('. Temple dress: '),
+        link('what to wear in Bali temples', '/blog/what-to-wear-in-bali-temples'),
+        text('.'),
+      ]),
+      ...commercialClose(
+        'If you only book one paid activity in Ubud, make it the village cooking morning — you will taste the rest of the trip differently.',
+      ),
+    ]),
+  },
+
+  // 23 — Airport to Ubud
+  {
+    slug: 'bali-airport-to-ubud',
+    title: 'Bali Airport to Ubud — Transfer Time, Grab vs Driver, Costs 2026',
+    excerpt:
+      'How to get from Ngurah Rai (DPS) airport to Ubud: 60–90 minutes, Grab vs official taxi vs private driver, typical IDR prices, and why you should not scooter it after a long-haul flight.',
+    image: 'blog/tumang-vibe.webp',
+    imageAlt: 'Arriving in Ubud from Bali airport — village road toward a cooking class kitchen',
+    metaTitle: 'Bali Airport to Ubud Transfer 2026',
+    metaDescription:
+      'Bali airport to Ubud: 60–90 min from DPS. Grab, taxi, and private driver prices, pickup tips, and how to plan a cooking class the next morning.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      'Bali airport to Ubud',
+      'DPS to Ubud',
+      'Ngurah Rai to Ubud transfer',
+      'airport transfer Ubud',
+      'how long airport to Ubud',
+    ],
+    faq: [
+      {
+        question: 'How long from Bali airport to Ubud?',
+        answer:
+          'Typically 60–90 minutes from Ngurah Rai (DPS) to central Ubud, longer in late-afternoon rain or Galungan traffic. Plan two hours door-to-door including immigration if you land in peak hours.',
+      },
+      {
+        question: 'How much is a taxi or Grab from DPS to Ubud?',
+        answer:
+          'Grab/Gojek often runs about IDR 300,000–400,000 depending on traffic and surge. Official airport taxis and pre-booked private cars are often IDR 350,000–500,000. Ignore kerbside touts quoting USD cash at a premium.',
+      },
+      {
+        question: 'Should I book a cooking class the same day I land?',
+        answer:
+          'No. Immigration plus a 90-minute transfer makes a 08:30 morning class unrealistic. Book the class for the next morning, sleep in Ubud, and use free hotel pickup. See our packing and visa guides before you fly.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('Bali airport to Ubud', 1),
+        text(' is a 60–90 minute drive north from Ngurah Rai (DPS) — not a “quick hop.” Foreigners search this on the plane. Here is how we tell guests to do it so they still enjoy a cooking class the next morning.'),
+      ]),
+      heading('h2', 'Time and route'),
+      paragraph([
+        text('DPS sits in the south; Ubud is in the Gianyar uplands. Off-peak mornings can be close to an hour. 16:00–19:00 and wet-season storms stretch toward two hours. Geography: '),
+        link('where is Bali located', '/blog/where-is-bali-located'),
+        text('. Getting around the rest of the week: '),
+        link('how to get around Bali', '/blog/how-to-get-around-bali'),
+        text('.'),
+      ]),
+      heading('h2', 'Grab vs taxi vs private driver'),
+      list([
+        'Grab/Gojek: usually cheapest; follow official pickup signs (often Level 1) — do not negotiate with kerb touts',
+        'Airport taxi counter: prepaid, clear, slightly higher than app prices',
+        'Hotel or villa driver: convenient with a child seat or lots of luggage; confirm IDR price before you land',
+        'Scooter after a long-haul: do not — jet lag plus traffic is how tourist accidents start',
+      ]),
+      paragraph([
+        text('Have IDR cash or a working card/e-wallet. Payments: '),
+        link('how to pay in Bali', '/blog/how-to-pay-in-bali'),
+        text('. Visa/levy before you queue: '),
+        link('Bali visa requirements', '/blog/bali-visa-requirements'),
+        text(' and '),
+        link('Bali new tourist rules 2026', '/blog/bali-new-tourist-rules-2026'),
+        text('.'),
+      ]),
+      heading('h2', 'Land today, cook tomorrow'),
+      paragraph([
+        text('Free pickup for class is Ubud-area hotels, not the airport. Sleep, then take the '),
+        link('morning cooking class with market tour', '/blog/morning-cooking-class-ubud-market-tour'),
+        text('. If you stay south the first night, read '),
+        link('cooking class Ubud from Canggu', '/blog/cooking-class-ubud-from-canggu'),
+        text(' before you day-trip inland.'),
+      ]),
+      ...commercialClose(
+        'Get the transfer right so Day 2 can be the cooking morning — not a stressed taxi argument at arrivals.',
+      ),
+    ]),
+  },
+
+  // 24 — Packing list
+  {
+    slug: 'bali-packing-list',
+    title: 'Bali Packing List 2026 — What to Bring for Ubud, Temples & a Cooking Class',
+    excerpt:
+      'A practical Bali packing list for Ubud: temple sarong, rain layer, mosquito repellent, Type C adapter, and what you do not need for a village cooking class (aprons and ingredients are provided).',
+    image: 'blog/what-to-expect.jpg',
+    imageAlt: 'What to pack for Bali and an Ubud cooking class — light clothes and closed-toe shoes',
+    metaTitle: 'Bali Packing List 2026 — Ubud & Class Day',
+    metaDescription:
+      'Bali packing list: sarong, DEET, reef-safe SPF, Type C plug, light rain jacket. What to wear to a cooking class — closed-toe shoes, no scooter required.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      'Bali packing list',
+      'what to pack for Bali',
+      'Bali packing list 2026',
+      'Ubud packing list',
+      'what to bring Bali cooking class',
+    ],
+    faq: [
+      {
+        question: 'What should I pack for Bali in 2026?',
+        answer:
+          'Light cotton or linen, a sarong for temples, DEET mosquito repellent, SPF 50, a compact rain jacket, sandals plus one pair of closed-toe shoes, and a Type C/F power adapter. Buy extra sarongs cheaply in Ubud if you forget.',
+      },
+      {
+        question: 'What do I bring to a Balinese cooking class?',
+        answer:
+          'Closed-toe shoes for the rice-field walk, sun protection, and any dietary notes (vegetarian, gluten-free, pork-free). Tumang Bali provides ingredients, tools, and aprons. Hotel pickup in Ubud is included — you do not need a scooter.',
+      },
+      {
+        question: 'Do I need a rain jacket in dry season?',
+        answer:
+          'A packable layer still helps. Dry season (April–October) is sunnier, but tropical showers happen. Wet season (November–March) makes the jacket non-negotiable for scooter-free travellers walking between cars and warungs.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('A '),
+        text('Bali packing list', 1),
+        text(' for Ubud is shorter than influencer checklists imply. You need heat-proof clothes, temple coverage, mosquito protection, and one pair of shoes that can walk a paddy path. You do not need a chef kit — the class provides that.'),
+      ]),
+      heading('h2', 'Clothes and temple kit'),
+      list([
+        'Breathable shirts and shorts/trousers — modest-casual for villages',
+        'Sarong (kamen) + sash for temples; rentals exist but a personal one is nicer',
+        'Swimwear if you add a coast stay later in the week',
+        'Light rain jacket even in “dry” months',
+      ]),
+      paragraph([
+        text('Temple rules: '),
+        link('what to wear in Bali temples', '/blog/what-to-wear-in-bali-temples'),
+        text('. Class-day clothes: '),
+        link('what to wear to a Bali cooking class', '/what-to-wear-bali-cooking-class'),
+        text('.'),
+      ]),
+      heading('h2', 'Health, plugs, and money'),
+      list([
+        'DEET or picaridin — dengue risk is real at dawn/dusk',
+        'Reef-safe SPF 50; local sunscreen is often expensive',
+        'Oral rehydration sachets; tap water is not for drinking',
+        'Type C/F adapter; power cuts happen — a small power bank helps',
+        'Some IDR cash for warungs; cards for hotels and online class booking',
+      ]),
+      paragraph([
+        text('Water: '),
+        link('can you drink tap water in Bali', '/blog/can-you-drink-tap-water-bali'),
+        text('. Stomach: '),
+        link('how to avoid Bali Belly', '/blog/how-to-avoid-bali-belly'),
+        text('. Cash vs card: '),
+        link('how to pay in Bali', '/blog/how-to-pay-in-bali'),
+        text('. Mosquitoes: '),
+        link('dangerous animals in Bali', '/blog/dangerous-animals-bali'),
+        text('.'),
+      ]),
+      heading('h2', 'What you can leave at the hotel on class day'),
+      paragraph([
+        text('Laptop, jewellery, and a huge backpack. Bring a small day bag, closed-toe shoes, and sunscreen. We provide aprons and a recipe booklet. Solo travellers: '),
+        link('cooking class Ubud for solo travelers', '/blog/cooking-class-ubud-for-solo-travelers'),
+        text('. Then '),
+        link('book the cooking class', '/balinese-cooking-class-ubud'),
+        text('.'),
+      ]),
+      ...commercialClose(
+        'Pack light, pack a sarong, and leave one morning free — the cooking class does not need extra gear from home.',
+      ),
+    ]),
+  },
 ]
