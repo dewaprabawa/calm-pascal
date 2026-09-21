@@ -4,7 +4,7 @@ import { relatedKeywordsForSlug } from '@/lib/relatedCookingClassKeywords'
 
 /** Internal links for related commercial keywords (SEO + GEO discovery). */
 export default function RelatedKeywordLinks({ slug, className = '' }: { slug: string; className?: string }) {
-  const links = relatedKeywordsForSlug(slug, 8)
+  const links = relatedKeywordsForSlug(slug, 12)
   if (!links.length) return null
 
   return (

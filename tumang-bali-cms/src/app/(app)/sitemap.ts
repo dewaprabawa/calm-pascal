@@ -75,6 +75,14 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'is-bali-safe-for-tourists',
   'what-religion-is-bali',
   'bali-day-of-silence-nyepi',
+  'market-to-table-cooking-class-ubud',
+  'gluten-free-cooking-class-ubud',
+  'halal-cooking-class-ubud',
+  'cooking-class-ubud-for-solo-travelers',
+  '7-day-bali-itinerary',
+  'things-to-do-in-ubud',
+  'bali-airport-to-ubud',
+  'bali-packing-list',
 ])
 
 // Static, hand-built routes under (app).

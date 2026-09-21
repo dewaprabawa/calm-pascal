@@ -133,7 +133,7 @@ export function StaticBlogArticle({ article }: { article: StaticArticle }) {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-6 pb-12 prose-custom [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:text-stone-700 dark:[&_p]:text-stone-300 [&_p]:mb-5 [&_ul]:my-4 [&_ul]:pl-8 [&_ul]:list-disc [&_ul]:space-y-2 [&_li]:text-lg [&_li]:text-stone-700 dark:[&_li]:text-stone-300 [&_a]:text-orange-600 [&_a]:font-semibold [&_a]:underline">
+      <div className="max-w-3xl mx-auto px-6 pb-12 prose-custom [&_h2]:text-3xl [&_h2]:font-bold [&_h2]:mt-10 [&_h2]:mb-4 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:text-stone-700 dark:[&_p]:text-stone-300 [&_p]:mb-5 [&_ul]:my-4 [&_ul]:pl-8 [&_ul]:list-disc [&_ul]:space-y-2 [&_li]:text-lg [&_li]:text-stone-700 dark:[&_li]:text-stone-300 [&_a]:text-orange-600 [&_a]:font-semibold [&_a]:underline [&_table]:w-full [&_table]:my-6 [&_table]:text-left [&_table]:text-base [&_table]:border-collapse [&_th]:border [&_th]:border-stone-200 dark:[&_th]:border-zinc-700 [&_th]:bg-stone-100 dark:[&_th]:bg-zinc-800 [&_th]:px-3 [&_th]:py-2 [&_td]:border [&_td]:border-stone-200 dark:[&_td]:border-zinc-700 [&_td]:px-3 [&_td]:py-2">
         {article.body}
       </div>
 

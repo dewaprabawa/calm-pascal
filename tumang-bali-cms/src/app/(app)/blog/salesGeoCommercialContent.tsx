@@ -113,7 +113,8 @@ export const ubudCookingClassPrice: StaticArticle = {
       <h2>Book at the 2026 rate</h2>
       <p>
         Ready to cook? <Link href={money}>Book our Balinese cooking class in Ubud</Link> or{' '}
-        <Link href={book}>reserve online</Link>. Still deciding? Read{' '}
+        <Link href={book}>reserve online</Link>. Market morning:{' '}
+        <Link href="/blog/market-to-table-cooking-class-ubud">market-to-table class</Link>. Still deciding?{' '}
         <Link href="/blog/is-a-bali-cooking-class-worth-it">is a Bali cooking class worth it?</Link>
       </p>
     </>
@@ -581,8 +582,12 @@ export const isABaliCookingClassWorthIt: StaticArticle = {
       <h2>Verdict — book if you want more than a meal</h2>
       <p>
         If you want one cultural highlight that feeds you and teaches you, a village cooking class near Ubud is
-        worth it for most visitors. <Link href={money}>Book Tumang Bali</Link> ·{' '}
-        <Link href={book}>online booking</Link> ·{' '}
+        worth it for most visitors. Solo travellers:{' '}
+        <Link href="/blog/cooking-class-ubud-for-solo-travelers">cooking class for one</Link>. Dietary
+        notes:{' '}
+        <Link href="/blog/gluten-free-cooking-class-ubud">gluten-free</Link> ·{' '}
+        <Link href="/blog/halal-cooking-class-ubud">halal-friendly</Link>.{' '}
+        <Link href={money}>Book Tumang Bali</Link> · <Link href={book}>online booking</Link> ·{' '}
         <Link href="/blog/best-cooking-class-in-ubud">best cooking class in Ubud</Link>.
       </p>
     </>

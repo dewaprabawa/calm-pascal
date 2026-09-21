@@ -49,6 +49,37 @@ with "recipe/interest" posts (drive links & long-tail traffic).
 > stagger by editing each article's `publishedDate` in the Payload admin, or
 > set `status: 'draft'` for later posts and flip to `published` over time.
 
+## September 2026 keyword expansion (SEO + GEO)
+
+New **static** posts (no CMS required) targeting queries we did **not** already
+own as a primary URL. Chosen to avoid another wave of near-duplicate
+`*cooking-class-ubud*` pages (GSC already flags dilution).
+
+### Commercial / mid-funnel (static commercial cluster)
+
+| Target phrase | URL | Why this keyword | Distinct from |
+|---------------|-----|------------------|---------------|
+| market to table cooking class ubud / farm to table cooking class ubud | `/blog/market-to-table-cooking-class-ubud` | Matches Viator listing language + competitor farm-school SERPs (Taman Dukuh, Pemulan) | Market-tour landing; rice-terrace blog |
+| gluten free cooking class ubud | `/blog/gluten-free-cooking-class-ubud` | Dietary converters; honest GF vs celiac notes | Vegetarian guide (plant-based, not wheat) |
+| halal cooking class ubud | `/blog/halal-cooking-class-ubud` | SG / MY / Middle East travellers; US/UK/SG CTR was weak in GSC | Vegetarian (pork-free is not the same intent) |
+| cooking class ubud solo traveler | `/blog/cooking-class-ubud-for-solo-travelers` | Audience page; 1-adult price IDR 616,032 | Couples + families pages |
+
+### Top-of-funnel trip planning (foreign-search cluster)
+
+| Target phrase | URL | Why this keyword | Distinct from |
+|---------------|-----|------------------|---------------|
+| 7 day bali itinerary | `/blog/7-day-bali-itinerary` | High-volume first-timer planning; cooking class as Day 2/3 | 2-day Ubud food itinerary |
+| things to do in ubud | `/blog/things-to-do-in-ubud` | Head term; island-wide “things to do in Bali” already exists | `/blog/things-to-do-in-bali` |
+| bali airport to ubud / DPS to Ubud | `/blog/bali-airport-to-ubud` | Practical transfer query on every inbound flight | How to get around Bali (island-wide) |
+| bali packing list | `/blog/bali-packing-list` | Evergreen planning + class-day gear | What to wear (class-only clothes) |
+
+**Explicitly skipped (cannibalization / thin variants):** extra coast-origin pages (Seminyak/Nusa Dua/Kuta) — keep `/blog/cooking-class-ubud-from-canggu`; more dish-named cooking-class blogs until recipe/blog primaries are settled; generic “best cooking class” clones.
+
+**21 Sep 2026 content update:** expanded market-to-table (comparison table + question H2s), gluten-free / solo internal links, folded CMS `/blog/best-things-to-do-in-ubud` → `/blog/things-to-do-in-ubud` (301), refreshed GSC meta seeds off stale IDR 350K copy.
+
+GEO: each new URL is cited in `public/llms.txt` and `public/llms-full.txt` with
+self-contained answers (price, inclusions, honest caveats for halal/GF).
+
 ## How to publish a post
 Posts live in the Payload `articles` collection (DB-driven), not as repo files.
 Two ways to add one:

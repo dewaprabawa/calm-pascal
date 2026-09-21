@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   keywords: [
     'Balinese cooking blog',
     'Ubud cooking class tips',
+    'market to table cooking class Ubud',
+    'things to do in Ubud',
     'lemongrass cooking class',
     'Tumang Bali',
     'sambal matah class',
@@ -136,8 +138,8 @@ export default async function BlogPage() {
           <h1 className="text-5xl font-black mb-4">Balinese Food & Culture Blog</h1>
           <p className="text-lg text-stone-500 max-w-3xl mx-auto" data-speakable>
             Guides from Tumang Bali Cooking Class in Ubud — lemongrass sate lilit, sambal matah, Base Genep
-            spice paste, market tours, couples and family classes, and how to book an authentic village
-            kitchen experience from IDR 506,370.
+            spice paste, market-to-table classes, gluten-free and halal-friendly menus, and how to book an
+            authentic village kitchen experience from IDR 506,370.
           </p>
         </div>
 

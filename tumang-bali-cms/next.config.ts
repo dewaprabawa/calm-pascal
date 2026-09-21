@@ -112,6 +112,12 @@ const nextConfig: NextConfig = {
         destination: '/blog/ubud-food-lovers-itinerary',
         permanent: true,
       },
+      // Head-term "things to do in Ubud" — fold the older CMS listicle into the static page.
+      {
+        source: '/blog/best-things-to-do-in-ubud',
+        destination: '/blog/things-to-do-in-ubud',
+        permanent: true,
+      },
       // Short catalog URL for Instagram / Facebook ads and bio links.
       {
         source: '/experiences',
