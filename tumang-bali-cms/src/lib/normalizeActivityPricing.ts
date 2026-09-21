@@ -14,7 +14,7 @@ type ActivityLike = {
   kidsPrice?: number | null
 }
 
-const LEGACY_SHARED = new Set([350, 350_000])
+const LEGACY_SHARED = new Set([300, 300_000, 350, 350_000])
 const LEGACY_PRIVATE = new Set([650, 650_000])
 /** Old discounted kids rates (before kids = adult) */
 const LEGACY_KIDS_DISCOUNT = new Set([550, 550_000])
