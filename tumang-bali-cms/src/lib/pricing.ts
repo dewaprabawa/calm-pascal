@@ -23,7 +23,7 @@ export const DIRECT_SHARED_CLASS_IDR = SHARED_ADULT_GROUP_IDR
 
 /**
  * September 2026 promo — Bali (WITA) calendar month only.
- * Regular/shared class: IDR 350,000 · Private class: IDR 700,000.
+ * Regular/shared class: IDR 300,000 · Private class: IDR 700,000.
  * After September, isPromoActive() returns false and normal rates apply everywhere.
  */
 const PROMO_TIME_ZONE = 'Asia/Makassar'
@@ -31,7 +31,7 @@ const PROMO_YEAR = 2026
 const PROMO_MONTH = 9 // September
 
 /** Promo price for the regular (shared) cooking class. */
-export const PROMO_SHARED_IDR = 350_000
+export const PROMO_SHARED_IDR = 300_000
 
 /** @deprecated Use PROMO_SHARED_IDR — kept for older call sites. */
 export const PROMO_SHARED_SOLO_IDR = PROMO_SHARED_IDR
