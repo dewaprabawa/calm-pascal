@@ -7,8 +7,9 @@ export const GTM_ID = 'GTM-W79WCBZS'
  * Included on every production build (Vercel production and preview). Local
  * `next dev` omits it so localhost hits do not pollute the container.
  *
- * Keep the existing gtag GA4 tag (`G-WXH5VLNNKS`) out of this GTM container
- * while `GoogleAnalytics` still loads it, or pageviews will double-count.
+ * Keep the GA4 Measurement ID (`G-WXH5VLNNKS`) out of this GTM container —
+ * it is loaded via the official gtag snippet in `GoogleAnalyticsScript`,
+ * and adding it again in GTM would double-count pageviews.
  */
 const gtmEnabled = process.env.NODE_ENV !== 'development'
 
