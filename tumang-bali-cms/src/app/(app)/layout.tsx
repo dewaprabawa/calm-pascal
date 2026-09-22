@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import GoogleAnalytics from "./components/GoogleAnalytics";
+import { GoogleAnalyticsScript } from "./components/GoogleAnalytics";
 import {
   GoogleTagManagerNoscript,
   GoogleTagManagerScript,
@@ -94,6 +94,7 @@ export default function RootLayout({
     >
       <head>
         <GoogleTagManagerScript />
+        <GoogleAnalyticsScript />
         {/* Site summary files for crawlers — no early third-party preconnects (hurts LCP) */}
         <link rel="describedby" href={LLMS_TXT} type="text/plain" title="Site summary" />
         <link rel="alternate" href={LLMS_TXT} type="text/plain" title="Site summary" />
@@ -112,8 +113,6 @@ export default function RootLayout({
 
         {/* Chat loads after interaction to avoid PSI Best Practices cookie/iframe hits */}
         <ZapierChatbotLazy />
-
-        <GoogleAnalytics />
       </body>
     </html>
   );
