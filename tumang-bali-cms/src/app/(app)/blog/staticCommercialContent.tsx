@@ -5,6 +5,7 @@ import { otaBookingArticles } from './otaBookingContent'
 import { salesGeoCommercialArticles } from './salesGeoCommercialContent'
 import { relatedKeywordArticles } from './relatedKeywordArticles'
 import { seoKeywordClusterArticles } from './seoKeywordCluster'
+import { competitorKeywordClusterArticles } from './competitorKeywordCluster'
 
 export {
   ubudCookingClassPrice,
@@ -34,6 +35,14 @@ export {
   cookingClassUbudForSoloTravelers,
   seoKeywordClusterArticles,
 } from './seoKeywordCluster'
+
+export {
+  paonBaliVsTumangCookingClass,
+  casaLunaVsTumangCookingClass,
+  handsOnCookingClassUbud,
+  cookingClassUbudHotelPickup,
+  competitorKeywordClusterArticles,
+} from './competitorKeywordCluster'
 
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -888,6 +897,7 @@ export const staticCommercialArticles: StaticArticle[] = [
   ...salesGeoCommercialArticles,
   ...relatedKeywordArticles,
   ...seoKeywordClusterArticles,
+  ...competitorKeywordClusterArticles,
 ]
 
 export function getStaticCommercialArticle(slug: string): StaticArticle | undefined {
