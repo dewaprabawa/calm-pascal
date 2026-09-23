@@ -36,6 +36,11 @@ export const STATIC_COMMERCIAL_SLUGS = [
   'gluten-free-cooking-class-ubud',
   'halal-cooking-class-ubud',
   'cooking-class-ubud-for-solo-travelers',
+  // Competitor SERP cluster (Paon, Casa Luna, hands-on, hotel pickup)
+  'paon-bali-vs-tumang-cooking-class',
+  'casa-luna-vs-tumang-cooking-class',
+  'hands-on-cooking-class-ubud',
+  'cooking-class-ubud-hotel-pickup',
 ] as const
 
 export type StaticCommercialSlug = (typeof STATIC_COMMERCIAL_SLUGS)[number]

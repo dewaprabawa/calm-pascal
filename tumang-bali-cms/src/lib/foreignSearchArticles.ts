@@ -1654,4 +1654,260 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       ),
     ]),
   },
+
+  // --- Sep 2026 competitor / GEO expansion ---
+  {
+    slug: 'tegallalang-rice-terrace-guide',
+    title: 'Tegallalang Rice Terrace Guide — Crowds, Tickets & Better Village Walk',
+    excerpt:
+      'Visiting Tegallalang rice terrace near Ubud? What to expect on tickets and crowds — and why a village cooking-class paddy walk can feel more local than the Instagram swing zone.',
+    image: 'blog/rice-field-class.webp',
+    imageAlt: 'Working rice paddies near Ubud — quieter alternative to crowded Tegallalang swings',
+    metaTitle: 'Tegallalang Rice Terrace Guide 2026',
+    metaDescription:
+      'Tegallalang rice terrace guide: tickets, crowds, swings, best time. Prefer a quiet village paddy walk? Pair with Tumang Bali cooking class from IDR 506,370.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      'tegallalang rice terrace',
+      'tegallalang rice terrace ubud',
+      'tegallalang tickets',
+      'ubud rice terrace',
+      'tegallalang swings',
+      'best rice terrace ubud',
+    ],
+    faq: [
+      {
+        question: 'Is Tegallalang rice terrace worth visiting?',
+        answer:
+          'Yes for the classic postcard view — go early. Expect entrance fees, selfie swings, and crowds by mid-morning. For a quieter working-paddy walk, Tumang Bali’s morning cooking class includes rice fields without the swing park scene.',
+      },
+      {
+        question: 'How much is Tegallalang entrance?',
+        answer:
+          'Fees change; budget roughly IDR 15,000–100,000+ depending on parking, photo spots, and optional swing add-ons. Confirm on-site. The cooking class paddy walk is included in the class price (shared IDR 506,370).',
+      },
+      {
+        question: 'What is a quieter alternative to Tegallalang?',
+        answer:
+          'Jatiluwih is larger and farther. Near Ubud, a village cooking class with a rice-field walk (Tumang Bali) shows working subak paddies with a chef, then lunch you cook — fewer drones and swings.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('A '),
+        text('Tegallalang rice terrace', 1),
+        text(' day is Bali’s most searched Ubud photo stop. Beautiful — and busy. This guide covers timing and expectations, then the quieter village paddy alternative that sits inside a '),
+        link('rice terrace cooking class', '/blog/rice-terrace-cooking-class-ubud'),
+        text('.'),
+      ]),
+      heading('h2', 'Tegallalang: what to expect'),
+      list([
+        'Arrive before 08:00 for softer light and fewer coaches',
+        'Entrance + parking fees stack; swings are usually extra',
+        'Paths can be steep and slippery after rain',
+        'Midday heat and selfie traffic peak hard',
+      ]),
+      paragraph([
+        text('Combine with temples only if you leave buffer time. One-day plan: '),
+        link('one day in Ubud itinerary', '/blog/one-day-ubud-itinerary'),
+        text('.'),
+      ]),
+      heading('h2', 'Quieter alternative — cook among working paddies'),
+      paragraph([
+        text('Tumang Bali’s morning class walks working subak fields to the kitchen after the pasar — scenery without the swing queue. Shared IDR 506,370 · max 8 · free Ubud pickup. '),
+        link('Book cooking class Ubud', '/balinese-cooking-class-ubud'),
+        text(' · '),
+        link('market-to-table class', '/blog/market-to-table-cooking-class-ubud'),
+        text('.'),
+      ]),
+      heading('h2', 'Tegallalang vs cooking-class paddies'),
+      list([
+        'Tegallalang — iconic viewpoint, tickets, swings, crowds',
+        'Class paddy walk — working fields, chef commentary, ends in lunch you cook',
+        'Jatiluwih — UNESCO-scale terraces, longer drive from Ubud',
+      ]),
+      paragraph([
+        text('More Ubud shortlist: '),
+        link('things to do in Ubud', '/blog/things-to-do-in-ubud'),
+        text('. High-season crowd tips: '),
+        link('Ubud high season', '/blog/ubud-high-season-crowds'),
+        text('.'),
+      ]),
+      ...commercialClose(
+        'See Tegallalang once if you want the postcard — cook in the paddies if you want the memory.',
+      ),
+    ]),
+  },
+
+  {
+    slug: 'one-day-ubud-itinerary',
+    title: 'One Day in Ubud Itinerary — Market, Cooking Class & Slow Afternoon',
+    excerpt:
+      'A realistic one-day Ubud itinerary for first-timers: morning market-to-table cooking class, light temple or rice-field time, warung dinner — without packing Tegallalang and Monkey Forest into the same morning.',
+    image: 'blog/best-things-to-do-in-ubud.webp',
+    imageAlt: 'One day in Ubud itinerary — cooking class morning and village views',
+    metaTitle: 'One Day in Ubud Itinerary 2026',
+    metaDescription:
+      'One day in Ubud itinerary: morning cooking class with market tour, optional temple, warung dinner. Skip the overcrowded checklist. Shared class IDR 506,370.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      'one day in ubud',
+      'ubud day itinerary',
+      'ubud in one day',
+      'day trip to ubud itinerary',
+      'best way to spend a day in ubud',
+      'ubud day plan cooking class',
+    ],
+    faq: [
+      {
+        question: 'What is the best one-day itinerary in Ubud?',
+        answer:
+          'Morning: market-to-table cooking class (pasar + cook + lunch). Afternoon: one temple or a slow café, not five attractions. Evening: warung near your hotel. Tumang Bali shared class IDR 506,370 with free Ubud pickup.',
+      },
+      {
+        question: 'Can I do Monkey Forest and a cooking class on the same day?',
+        answer:
+          'Possible but rushed. The morning class runs about 08:30–12:30. Save Monkey Forest or Tegallalang for another morning — or skip them if food is your priority.',
+      },
+      {
+        question: 'Is one day in Ubud enough?',
+        answer:
+          'Enough for a cooking class and a taste of village pace. Not enough for every Instagram pin. Stay two nights if you can — see our 2-day food itinerary and 7-day Bali plan.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('A '),
+        text('one day in Ubud itinerary', 1),
+        text(' works when you pick one deep experience instead of five shallow stops. For food travellers that deep experience is a morning '),
+        link('cooking class with market tour', '/cooking-class-with-market-tour-ubud'),
+        text(' — then a slow afternoon.'),
+      ]),
+      heading('h2', 'Morning — market to table'),
+      list([
+        'Pickup from your Ubud hotel (included with Tumang)',
+        'Traditional pasar with a chef',
+        'Rice-field walk to the village kitchen',
+        'Cook 10+ dishes and eat lunch you made',
+      ]),
+      paragraph([
+        text('Class overview: '),
+        link('cooking class Ubud', '/balinese-cooking-class-ubud'),
+        text('. Price: '),
+        link('Ubud cooking class price', '/blog/ubud-cooking-class-price'),
+        text('.'),
+      ]),
+      heading('h2', 'Afternoon — pick one, not five'),
+      list([
+        'One temple (Saraswati or a quieter village pura) with a sarong',
+        'Café + journal time in central Ubud',
+        'Spa or pool if you flew in yesterday',
+        'Skip stacking Monkey Forest + Tegallalang + waterfalls after a 4-hour class',
+      ]),
+      paragraph([
+        text('Wider shortlist: '),
+        link('things to do in Ubud', '/blog/things-to-do-in-ubud'),
+        text('. Two-day food focus: '),
+        link('Ubud food lovers itinerary', '/blog/ubud-food-lovers-itinerary'),
+        text('.'),
+      ]),
+      heading('h2', 'Evening'),
+      paragraph([
+        text('Warung nasi campur near your hotel. You will taste spices you ground that morning. Coming from Canggu for the day? '),
+        link('Cooking class from Canggu', '/blog/cooking-class-ubud-from-canggu'),
+        text('. Week-long plan: '),
+        link('7-day Bali itinerary', '/blog/7-day-bali-itinerary'),
+        text('.'),
+      ]),
+      ...commercialClose(
+        'One Ubud day: cook in the morning, wander lightly after — that beats a exhausted selfie trail.',
+      ),
+    ]),
+  },
+
+  {
+    slug: 'bali-rainy-season-what-to-do',
+    title: 'Bali Rainy Season — What to Do (Cooking Class Still Works)',
+    excerpt:
+      'Bali rainy season (roughly November–March) is humid and green, not cancelled. Best indoor-friendly plans: village cooking class, temples, cafés, and flexible morning slots.',
+    image: 'blog/best-time.jpg',
+    imageAlt: 'Green Bali rice fields in rainy season — cooking class still runs in Ubud',
+    metaTitle: 'Bali Rainy Season What to Do 2026',
+    metaDescription:
+      'Bali rainy season what to do: cooking class Ubud, temples, cafés. Showers are usually short. Shared class IDR 506,370 with covered kitchen and hotel pickup.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      'bali rainy season',
+      'bali wet season what to do',
+      'visit bali in rainy season',
+      'ubud rainy season',
+      'bali november to march',
+      'indoor activities ubud',
+    ],
+    faq: [
+      {
+        question: 'Is Bali rainy season a bad time to visit?',
+        answer:
+          'No — it is greener, often quieter, and showers are frequently short. Pack a rain jacket and plan one flexible indoor-friendly highlight per day. A village cooking class still runs year-round in Ubud.',
+      },
+      {
+        question: 'Can I take a cooking class in Bali rainy season?',
+        answer:
+          'Yes. Tumang Bali’s kitchen is covered; the rice-field walk may be muddy — wear closed-toe shoes. Morning and afternoon sessions operate through wet season. Shared IDR 506,370.',
+      },
+      {
+        question: 'When is Bali rainy season?',
+        answer:
+          'Roughly November to March (WITA), with regional variation. Dry season is roughly April–October. See our best-time guide for month-by-month nuance.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('Bali rainy season', 1),
+        text(' (about November–March) scares first-timers who imagine all-day storms. Reality: humid mornings, green paddies, and short tropical showers. Plan flexible, covered activities — a '),
+        link('hands-on cooking class in Ubud', '/blog/hands-on-cooking-class-ubud'),
+        text(' is one of the best.'),
+      ]),
+      heading('h2', 'What rainy season is actually like'),
+      list([
+        'Afternoons more likely to shower than mornings — good reason to book a morning class',
+        'Rice terraces look lush; paths get muddy',
+        'Fewer crowds than July–August peak',
+        'Bring a packable jacket (see packing list)',
+      ]),
+      paragraph([
+        text('Season overview: '),
+        link('best time to visit Bali', '/blog/best-time-to-visit-bali'),
+        text('. Pack: '),
+        link('Bali packing list', '/blog/bali-packing-list'),
+        text('.'),
+      ]),
+      heading('h2', 'Best rainy-season activities near Ubud'),
+      list([
+        'Morning cooking class (covered kitchen, pickup included)',
+        'Temples with a sarong — showers pass',
+        'Cafés and spa time between cells of rain',
+        'Museum or art space if you want zero outdoor risk',
+      ]),
+      paragraph([
+        text('Book: '),
+        link('cooking class Ubud', '/balinese-cooking-class-ubud'),
+        text('. Pickup details: '),
+        link('cooking class with hotel pickup', '/blog/cooking-class-ubud-hotel-pickup'),
+        text('.'),
+      ]),
+      heading('h2', 'What to skip insisting on'),
+      paragraph([
+        text('All-day outdoor waterfall circuits with no buffer, scooter rides in lightning, and packing five outdoor pins into one wet afternoon. High-season crowds guide (dry months): '),
+        link('Ubud high season crowds', '/blog/ubud-high-season-crowds'),
+        text('.'),
+      ]),
+      ...commercialClose(
+        'Rainy season is for cooking, temples, and green views — not for cancelling Bali.',
+      ),
+    ]),
+  },
 ]

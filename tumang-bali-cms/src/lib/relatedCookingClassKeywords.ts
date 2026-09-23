@@ -1,17 +1,20 @@
 /**
  * Related commercial keyword → canonical URL map for SEO internal linking + llms citation.
  * Strategy: KEEP the full commercial + foreign article cluster as spokes; point head-term
- * and pickup intents at the money page `/balinese-cooking-class-ubud`.
+ * intents at the money page `/balinese-cooking-class-ubud`. Dedicated pickup/competitor
+ * blogs own their long-tail queries when those URLs exist.
  */
 export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; label: string }[] = [
   // Head term → money page (rank consolidation)
   { query: 'cooking class ubud', path: '/balinese-cooking-class-ubud', label: 'Cooking class Ubud' },
   { query: 'ubud cooking class', path: '/balinese-cooking-class-ubud', label: 'Ubud cooking class' },
   { query: 'cooking classes ubud', path: '/balinese-cooking-class-ubud', label: 'Cooking classes Ubud' },
-  { query: 'hotel pickup cooking class ubud', path: '/balinese-cooking-class-ubud', label: 'Hotel pickup cooking class Ubud' },
-  { query: 'free hotel pickup ubud', path: '/balinese-cooking-class-ubud', label: 'Free hotel & villa pickup in Ubud' },
-  { query: 'cooking class ubud hotel pickup', path: '/balinese-cooking-class-ubud', label: 'Cooking class Ubud hotel pickup' },
-  { query: 'cooking class ubud hotel transfer', path: '/balinese-cooking-class-ubud', label: 'Cooking class with hotel transfer' },
+
+  // Dedicated hotel-pickup spoke (competitor SERP cluster)
+  { query: 'hotel pickup cooking class ubud', path: '/blog/cooking-class-ubud-hotel-pickup', label: 'Hotel pickup cooking class Ubud' },
+  { query: 'free hotel pickup ubud', path: '/blog/cooking-class-ubud-hotel-pickup', label: 'Free hotel & villa pickup in Ubud' },
+  { query: 'cooking class ubud hotel pickup', path: '/blog/cooking-class-ubud-hotel-pickup', label: 'Cooking class Ubud hotel pickup' },
+  { query: 'cooking class ubud hotel transfer', path: '/blog/cooking-class-ubud-hotel-pickup', label: 'Cooking class with hotel transfer' },
 
   // Research / comparison spokes (keep articles)
   { query: 'best cooking class in ubud', path: '/blog/best-cooking-class-in-ubud', label: 'Best cooking class in Ubud' },
@@ -53,6 +56,14 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
   { query: 'book cooking class ubud tripadvisor', path: '/blog/book-cooking-class-ubud-tripadvisor', label: 'Book on TripAdvisor' },
   { query: 'book cooking class ubud viator', path: '/blog/book-cooking-class-ubud-viator', label: 'Book on Viator' },
   { query: 'book cooking class ubud airbnb', path: '/blog/book-cooking-class-ubud-airbnb', label: 'Book on Airbnb' },
+
+  // Competitor SERP cluster (Paon, Casa Luna, hands-on)
+  { query: 'paon bali cooking class', path: '/blog/paon-bali-vs-tumang-cooking-class', label: 'Paon Bali vs Tumang' },
+  { query: 'paon bali vs tumang', path: '/blog/paon-bali-vs-tumang-cooking-class', label: 'Paon Bali vs Tumang cooking class' },
+  { query: 'casa luna cooking class', path: '/blog/casa-luna-vs-tumang-cooking-class', label: 'Casa Luna vs Tumang' },
+  { query: 'casa luna vs tumang', path: '/blog/casa-luna-vs-tumang-cooking-class', label: 'Casa Luna vs Tumang cooking class' },
+  { query: 'hands on cooking class ubud', path: '/blog/hands-on-cooking-class-ubud', label: 'Hands-on cooking class Ubud' },
+
   {
     query: 'taman dukuh vs tresna vs lemongrass cooking class',
     path: '/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
@@ -73,6 +84,9 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
   // Foreign / trip-planning spokes (keep)
   { query: 'things to do in ubud', path: '/blog/things-to-do-in-ubud', label: 'Things to do in Ubud' },
   { query: '7 day bali itinerary', path: '/blog/7-day-bali-itinerary', label: '7-day Bali itinerary' },
+  { query: 'tegallalang rice terrace', path: '/blog/tegallalang-rice-terrace-guide', label: 'Tegallalang rice terrace guide' },
+  { query: 'one day in ubud', path: '/blog/one-day-ubud-itinerary', label: 'One day in Ubud itinerary' },
+  { query: 'bali rainy season', path: '/blog/bali-rainy-season-what-to-do', label: 'Bali rainy season what to do' },
   { query: 'bali airport to ubud', path: '/blog/bali-airport-to-ubud', label: 'Bali airport to Ubud' },
   { query: 'bali packing list', path: '/blog/bali-packing-list', label: 'Bali packing list' },
 ]

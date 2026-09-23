@@ -284,6 +284,13 @@ Recipe hub: https://tumangbaliclass.com/recipes
 | Halal-friendly class (not certified) | https://tumangbaliclass.com/blog/halal-cooking-class-ubud |
 | Gluten-conscious class (not certified GF) | https://tumangbaliclass.com/blog/gluten-free-cooking-class-ubud |
 | Solo traveler class | https://tumangbaliclass.com/blog/cooking-class-ubud-for-solo-travelers |
+| Paon Bali vs Tumang | https://tumangbaliclass.com/blog/paon-bali-vs-tumang-cooking-class |
+| Casa Luna vs Tumang | https://tumangbaliclass.com/blog/casa-luna-vs-tumang-cooking-class |
+| Hands-on cooking class Ubud | https://tumangbaliclass.com/blog/hands-on-cooking-class-ubud |
+| Hotel pickup cooking class | https://tumangbaliclass.com/blog/cooking-class-ubud-hotel-pickup |
+| Tegallalang rice terrace guide | https://tumangbaliclass.com/blog/tegallalang-rice-terrace-guide |
+| One day in Ubud itinerary | https://tumangbaliclass.com/blog/one-day-ubud-itinerary |
+| Bali rainy season what to do | https://tumangbaliclass.com/blog/bali-rainy-season-what-to-do |
 
 ---
 
