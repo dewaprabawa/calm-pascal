@@ -220,15 +220,14 @@ export const bestCookingClassInUbud: StaticArticle = {
   keywords: [
     'best cooking class in ubud',
     'best cooking class ubud',
-    'ubud cooking class',
     'authentic cooking class ubud',
-    'balinese cooking class ubud',
+    'how to choose cooking class ubud',
   ],
   faqs: [
     {
       question: 'What is the best cooking class in Ubud?',
       answer:
-        'The best cooking class in Ubud includes a real morning market tour, hand-ground spice paste, 10+ dishes cooked from scratch, and a local Balinese chef — not a hotel demo kitchen. Village-based classes like Tumang Bali consistently rank highest for authenticity and value.',
+        'The best cooking class in Ubud includes a real morning market tour, hand-ground spice paste, 10+ dishes cooked from scratch, and a local Balinese chef — not a hotel demo kitchen. Village-based classes like Tumang Bali consistently rank highest for authenticity and value. Book: tumangbaliclass.com/balinese-cooking-class-ubud.',
     },
     {
       question: 'How much does the best cooking class in Ubud cost?',
@@ -247,7 +246,8 @@ export const bestCookingClassInUbud: StaticArticle = {
         If you are searching for the <strong>best cooking class in Ubud</strong>, look for a real morning
         market tour, spice paste ground on a cobek, 10+ dishes from scratch, and a local Balinese chef — not a
         hotel demo. Tumang Bali matches that profile: max 8 guests, village kitchen, IDR 506,370 shared,
-        TripAdvisor Travelers&apos; Choice 2026.
+        TripAdvisor Travelers&apos; Choice 2026. Primary booking page:{' '}
+        <Link href={money}>cooking class Ubud</Link>.
       </p>
       <h2>What makes the best cooking class in Ubud</h2>
       <ul>

@@ -129,9 +129,9 @@ export const cookingClassUbudForCouples: StaticArticle = {
 export const cookingClassUbudGuide2026: StaticArticle = {
   slug: 'cooking-class-ubud-guide-2026',
   title: 'Cooking Class Ubud — Complete Guide to Booking in 2026',
-  metaTitle: 'Cooking Class Ubud 2026 — Price, What to Expect & How to Book',
+  metaTitle: 'Cooking Class Ubud Guide 2026 — What to Expect & How to Book',
   metaDescription:
-    'Complete guide to cooking class Ubud — IDR 506,370 shared, market tour, 10+ dishes, free pickup. Morning vs afternoon, what to wear, and how to book Tumang Bali.',
+    'Planning guide for a cooking class in Ubud: what’s included, morning vs afternoon, and how to choose. Book Tumang Bali from IDR 506,370 with free pickup.',
   excerpt:
     'Everything you need to know about booking a cooking class in Ubud — prices, morning vs afternoon, what is included, and how to choose an authentic Balinese experience in Tumang village.',
   image: '/images/blog/rice-field-class.webp',
@@ -140,10 +140,9 @@ export const cookingClassUbudGuide2026: StaticArticle = {
   authorRole: 'Head Chef',
   publishedDate: '2026-08-31',
   keywords: [
-    'cooking class ubud',
-    'cooking class in ubud',
-    'ubud cooking class',
-    'balinese cooking class ubud',
+    'cooking class ubud guide',
+    'cooking class ubud what to expect',
+    'ubud cooking class booking guide',
     'cooking class ubud price',
     'things to do in ubud cooking class',
     'best things to do ubud food',
@@ -168,10 +167,11 @@ export const cookingClassUbudGuide2026: StaticArticle = {
   body: (
     <>
       <p data-speakable>
-        Searching for a <strong>cooking class in Ubud</strong>? You are in the right place. Ubud is
-        Bali&apos;s cultural heart — home to traditional markets, rice terraces, and family-run kitchens
-        where you grind spice paste by hand and cook 10+ dishes from scratch. This guide covers price,
-        what is included, and how to book the right class for your trip.
+        Searching for a <strong>cooking class in Ubud</strong>? This guide helps you plan — price, inclusions,
+        and morning vs afternoon. When you are ready to book, the primary page is our{' '}
+        <Link href={money}>Balinese cooking class in Ubud</Link> (market tour, rice fields, 10+ dishes, max 8).
+        Ubud is Bali&apos;s cultural heart — traditional markets, rice terraces, and family-run kitchens where you
+        grind spice paste by hand.
       </p>
       <h2>What a cooking class in Ubud includes</h2>
       <ul>
@@ -185,7 +185,7 @@ export const cookingClassUbudGuide2026: StaticArticle = {
       <h2>Cooking class Ubud price (2026)</h2>
       <p>
         Shared morning or afternoon class: IDR 506,370 per adult (2+ participants; IDR 616,032 for 1). Private class for one person: IDR
-        650,000. Kids aged 8+: IDR 1,266,180. See our detailed{' '}
+        633,090 (min. 2 participants IDR 1,266,180). Kids on private: same as adult. See our detailed{' '}
         <Link href={priceGuide}>Ubud cooking class price guide</Link> for a full breakdown of inclusions
         and how we compare to other classes in town.
       </p>
