@@ -77,8 +77,33 @@ own as a primary URL. Chosen to avoid another wave of near-duplicate
 
 **21 Sep 2026 content update:** expanded market-to-table (comparison table + question H2s), gluten-free / solo internal links, folded CMS `/blog/best-things-to-do-in-ubud` → `/blog/things-to-do-in-ubud` (301), refreshed GSC meta seeds off stale IDR 350K copy.
 
+## September 2026 competitor SERP + GEO expansion
+
+Static posts targeting competitor comparison queries and high-volume trip-planning
+searches that competitors (Paon, Casa Luna, Lobong, Tegallalang photo guides) own
+in SERPs — without cloning existing cooking-class URLs.
+
+### Commercial / mid-funnel (competitor cluster)
+
+| Target phrase | URL | Why this keyword | Distinct from |
+|---------------|-----|------------------|---------------|
+| paon bali cooking class / paon bali vs tumang | `/blog/paon-bali-vs-tumang-cooking-class` | Paon dominates “village cooking class Ubud” SERPs | Compare landing; Taman Dukuh vs Tresna |
+| casa luna cooking class / casa luna vs tumang | `/blog/casa-luna-vs-tumang-cooking-class` | Casa Luna owns central-Ubud school intent | `/compare-ubud-cooking-classes` matrix |
+| hands on cooking class ubud | `/blog/hands-on-cooking-class-ubud` | Demo-vs-hands-on converter language | Small-group blog (size, not technique) |
+| cooking class ubud hotel pickup / free transfer | `/blog/cooking-class-ubud-hotel-pickup` | Pickup-first SERP; was mis-pointed at Canggu guide | `/blog/cooking-class-ubud-from-canggu` (coast) |
+
+### Top-of-funnel trip planning (foreign-search cluster)
+
+| Target phrase | URL | Why this keyword | Distinct from |
+|---------------|-----|------------------|---------------|
+| tegallalang rice terrace | `/blog/tegallalang-rice-terrace-guide` | Huge Ubud photo SERP; funnel to class paddies | Rice-terrace cooking-class blog |
+| one day in ubud / ubud day itinerary | `/blog/one-day-ubud-itinerary` | Single-day planners; class as the morning anchor | 2-day food itinerary; 7-day Bali |
+| bali rainy season / wet season what to do | `/blog/bali-rainy-season-what-to-do` | Nov–Mar planners; indoor-friendly class pitch | Best time to visit Bali (season overview) |
+
+**Explicitly skipped:** `ubud-traditional-market-guide` (overlaps CMS `/blog/ubud-morning-market-guide`); extra Lobong/Ketut clone pages until review volume justifies them.
+
 GEO: each new URL is cited in `public/llms.txt` and `public/llms-full.txt` with
-self-contained answers (price, inclusions, honest caveats for halal/GF).
+self-contained answers (price, inclusions, honest competitor caveats).
 
 ## How to publish a post
 Posts live in the Payload `articles` collection (DB-driven), not as repo files.
