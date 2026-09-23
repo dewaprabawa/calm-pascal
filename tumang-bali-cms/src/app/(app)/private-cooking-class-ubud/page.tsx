@@ -5,15 +5,29 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
 import { privateClass } from '../components/landingContent'
+import {
+  formatIdr,
+  isPromoActive,
+  PRIVATE_ADULT_MIN2_IDR,
+  PRIVATE_ADULT_SOLO_IDR,
+  PROMO_LABEL,
+  PROMO_PRIVATE_IDR,
+} from '@/lib/pricing'
 
 export const revalidate = 60
 
+const privateSolo = isPromoActive()
+  ? `${formatIdr(PROMO_PRIVATE_IDR)} ${PROMO_LABEL}`
+  : formatIdr(PRIVATE_ADULT_SOLO_IDR)
+const privateMin2 = isPromoActive()
+  ? formatIdr(PROMO_PRIVATE_IDR)
+  : formatIdr(PRIVATE_ADULT_MIN2_IDR)
+
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Private Cooking Class Ubud — 1 Person IDR 633,090, Free Pickup',
-  description:
-    'Private cooking class in Ubud: your own chef, tailored menu, market tour. 1 person IDR 633,090, min. 2 IDR 1,266,180, free hotel pickup. Ideal for couples and solo travelers.',
+  title: `Private Cooking Class Ubud — From ${privateSolo}, Free Pickup`,
+  description: `Private cooking class in Ubud: your own chef, tailored menu, market tour. From ${privateSolo}${isPromoActive() ? '' : `, min. 2 ${privateMin2}`}, free hotel pickup. Ideal for couples and solo travelers.`,
   path: '/private-cooking-class-ubud',
-  ogTitle: 'Private Cooking Class Ubud — From IDR 633,090 with Pickup',
+  ogTitle: `Private Cooking Class Ubud — From ${privateSolo} with Pickup`,
   image: '/images/gallery-group.jpg',
   imageAlt: 'Private Balinese cooking class for a group in Ubud',
   keywords: [

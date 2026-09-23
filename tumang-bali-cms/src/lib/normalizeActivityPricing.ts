@@ -1,7 +1,10 @@
 import {
+  isPromoActive,
   PRIVATE_ADULT_MIN2_IDR,
   PRIVATE_ADULT_SOLO_IDR,
   PRIVATE_KIDS_IDR,
+  PROMO_PRIVATE_IDR,
+  PROMO_SHARED_IDR,
   SHARED_ADULT_GROUP_IDR,
   SHARED_ADULT_SOLO_IDR,
   toFullIdr,
@@ -26,8 +29,12 @@ function isPrivateTitle(title: string | null | undefined): boolean {
 /**
  * Normalize activity prices from CMS (legacy thousands or stale 350/650)
  * to the current adult tiered rates. Private kids = adult private rate.
+ * When the September promo is active, surface promo IDR on booking UIs.
  */
-export function normalizeActivityPricing<T extends ActivityLike>(activity: T): T & {
+export function normalizeActivityPricing<T extends ActivityLike>(
+  activity: T,
+  now: Date = new Date(),
+): T & {
   price: number
   groupPrice: number
   kidsPrice?: number
@@ -35,6 +42,7 @@ export function normalizeActivityPricing<T extends ActivityLike>(activity: T): T
   const privateActivity = isPrivateTitle(activity.title)
   const rawPrice = toFullIdr(activity.price)
   const rawGroup = toFullIdr(activity.groupPrice)
+  const promo = isPromoActive(now)
 
   const priceLooksLegacy =
     rawPrice == null ||
@@ -43,6 +51,14 @@ export function normalizeActivityPricing<T extends ActivityLike>(activity: T): T
     LEGACY_KIDS_DISCOUNT.has(rawPrice)
 
   if (privateActivity) {
+    if (promo) {
+      return {
+        ...activity,
+        price: PROMO_PRIVATE_IDR,
+        groupPrice: PROMO_PRIVATE_IDR,
+        kidsPrice: PROMO_PRIVATE_IDR,
+      }
+    }
     return {
       ...activity,
       price:
@@ -59,6 +75,15 @@ export function normalizeActivityPricing<T extends ActivityLike>(activity: T): T
           : rawGroup,
       // Kids pay the same as adults on private bookings
       kidsPrice: PRIVATE_KIDS_IDR,
+    }
+  }
+
+  if (promo) {
+    return {
+      ...activity,
+      price: PROMO_SHARED_IDR,
+      groupPrice: PROMO_SHARED_IDR,
+      kidsPrice: undefined,
     }
   }
 
