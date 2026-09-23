@@ -118,6 +118,32 @@ const nextConfig: NextConfig = {
         destination: '/blog/things-to-do-in-ubud',
         permanent: true,
       },
+      // GSC decline fix: consolidate near-duplicate cooking-class URLs into stronger primaries.
+      {
+        source: '/best-bali-cooking-class',
+        destination: '/best-cooking-classes-bali',
+        permanent: true,
+      },
+      {
+        source: '/blog/more-about-our-cooking-class',
+        destination: '/balinese-cooking-class-ubud',
+        permanent: true,
+      },
+      {
+        source: '/blog/rice-field-cooking-class',
+        destination: '/blog/rice-terrace-cooking-class-ubud',
+        permanent: true,
+      },
+      {
+        source: '/blog/tumang-vs-ubud-cooking-class',
+        destination: '/compare-ubud-cooking-classes',
+        permanent: true,
+      },
+      {
+        source: '/bali-cooking-experience',
+        destination: '/balinese-cooking-class-ubud',
+        permanent: true,
+      },
       // Short catalog URL for Instagram / Facebook ads and bio links.
       {
         source: '/experiences',

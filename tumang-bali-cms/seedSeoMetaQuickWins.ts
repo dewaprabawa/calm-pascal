@@ -12,21 +12,21 @@ const META_UPDATES: { slug: string; metaTitle: string; metaDescription: string }
   // P0 — impression leaders (CTR leak)
   {
     slug: 'how-to-make-bumbu-bali',
-    metaTitle: 'Bumbu Bali Recipe — Balinese Spice Paste Step by Step',
+    metaTitle: 'Bumbu Bali Recipe — Make Balinese Spice Paste at Home',
     metaDescription:
-      'Make authentic bumbu Bali (base genep) spice paste at home. Ingredients, pounding tips, and cook it hands-on in our Ubud class — from IDR 506,370, free hotel pickup.',
+      'Bumbu Bali (base genep) recipe: ingredients, stone-mortar tips, and how we cook with it in class. Step-by-step paste — then book an Ubud hands-on class with free pickup.',
   },
   {
     slug: 'dadar-gulung-balinese-dessert-recipe',
-    metaTitle: 'Dadar Gulung Recipe — Balinese Pandan Coconut Crepe',
+    metaTitle: 'Dadar Gulung Recipe — Pandan Coconut Crepe (Easy)',
     metaDescription:
-      'Dadar gulung recipe: green pandan crepe with sweet coconut filling. Exact steps from our Ubud cooking class. Book to cook it yourself — pickup included.',
+      'Dadar gulung recipe: green pandan crepe + sweet coconut filling. Exact home steps from our Ubud kitchen. Cook it live in class — free hotel pickup included.',
   },
   {
     slug: 'sambal-matah-recipe',
-    metaTitle: 'Sambal Matah Recipe — Fresh Balinese Chili Salsa',
+    metaTitle: 'Sambal Matah Recipe — Raw Balinese Chili Salsa',
     metaDescription:
-      'Sambal matah recipe: raw shallot, lemongrass, chili, and coconut oil. 10-minute Balinese salsa from Tumang Bali in Ubud. Cook it live in class from IDR 506,370.',
+      'Sambal matah recipe in 10 minutes: shallot, lemongrass, chili, coconut oil. Authentic Balinese salsa from Tumang Bali Ubud — cook it hands-on in class.',
   },
   // P1 — extend coverage from GSC audit
   {

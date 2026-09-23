@@ -5,13 +5,15 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
 import { marketTourClass } from '../components/landingContent'
+import { fromPriceMetaSnippet } from '@/lib/pricing'
 
 export const revalidate = 60
 
+const fromPrice = fromPriceMetaSnippet()
+
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cooking Class with Market Tour Ubud — From IDR 506,370',
-  description:
-    'Ubud cooking class with morning market tour and rice-field walk, then 10+ dishes. Free hotel pickup, max 8 guests, from IDR 506,370. Ideal for first-timers.',
+  title: `Cooking Class with Market Tour Ubud — From ${fromPrice}`,
+  description: `Ubud cooking class with morning market tour and rice-field walk, then 10+ dishes. Free hotel pickup, max 8 guests, from ${fromPrice}. Ideal for first-timers.`,
   path: '/cooking-class-with-market-tour-ubud',
   ogTitle: 'Cooking Class with Market Tour Ubud — Pickup Included',
   image: '/images/img2.jpg',

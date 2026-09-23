@@ -136,6 +136,17 @@ GSC delays ~**2–3 days**. The newest week always looks incomplete. Always comp
 
 ---
 
+## Fixes shipped (this PR)
+
+| Fix | Detail |
+|-----|--------|
+| Money page promo meta + body | `/balinese-cooking-class-ubud` uses September promo when active |
+| Booking + commercial landing metas | `/book-your-cooking-class`, market-tour, vegetarian, authentic, half-day, private, homepage — promo-aware “from” price |
+| Booking UI rates | `normalizeActivityPricing` surfaces promo IDR while September is active |
+| Dilution redirects (301) | `/best-bali-cooking-class` → `/best-cooking-classes-bali`; `/blog/more-about-our-cooking-class` → money page; `/blog/rice-field-cooking-class` → rice-terrace blog; `/blog/tumang-vs-ubud-cooking-class` → compare; `/bali-cooking-experience` → money page |
+| Sitemap | Redirect targets removed / filtered via `SEO_REDIRECTS` |
+| CTR meta seed | Sharper titles/descriptions for bumbu, dadar gulung, sambal matah |
+
 ## Appendix — evidence sources
 
 - `docs/GSC-AUDIT-REPORT.md` (2026-09-05)  

@@ -94,7 +94,7 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/cooking-class-with-market-tour-ubud', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/half-day-cooking-class-bali', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/authentic-balinese-cooking-class', priority: 0.9, changeFrequency: 'monthly' },
-  { path: '/best-bali-cooking-class', priority: 0.9, changeFrequency: 'monthly' },
+  // `/best-bali-cooking-class` and `/bali-cooking-experience` permanently redirect → omit
   { path: '/bali-cooking-class-for-beginners', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/what-to-wear-bali-cooking-class', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/where-to-stay-bali-cooking-class', priority: 0.7, changeFrequency: 'monthly' },
@@ -104,7 +104,6 @@ const STATIC_PATHS: { path: string; priority: number; changeFrequency: MetadataR
   { path: '/best-cooking-classes-bali', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/tumang-village', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/tumpeng-making-class', priority: 0.8, changeFrequency: 'monthly' },
-  { path: '/bali-cooking-experience', priority: 0.9, changeFrequency: 'monthly' },
   // Competitor comparison page
   { path: '/compare-ubud-cooking-classes', priority: 0.9, changeFrequency: 'monthly' },
   { path: '/tripadvisor-cooking-class-ubud', priority: 0.9, changeFrequency: 'monthly' },

@@ -15,6 +15,12 @@ export const SEO_REDIRECTS: Record<string, string> = {
   '/blog/best-things-to-do-in-ubud': '/blog/things-to-do-in-ubud',
   '/experiences': '/tours',
   '/tour': '/tours',
+  // GSC decline consolidation (2026-09-23)
+  '/best-bali-cooking-class': '/best-cooking-classes-bali',
+  '/blog/more-about-our-cooking-class': '/balinese-cooking-class-ubud',
+  '/blog/rice-field-cooking-class': '/blog/rice-terrace-cooking-class-ubud',
+  '/blog/tumang-vs-ubud-cooking-class': '/compare-ubud-cooking-classes',
+  '/bali-cooking-experience': '/balinese-cooking-class-ubud',
 }
 
 /** Blog slugs that 308 elsewhere — never list or sitemap them. */

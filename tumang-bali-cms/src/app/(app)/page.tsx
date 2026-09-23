@@ -28,6 +28,7 @@ import {
   PROMO_SHARED_IDR,
   PROMO_PRIVATE_IDR,
   formatIdr,
+  fromPriceMetaSnippet,
 } from '@/lib/pricing'
 
 const MobileMenu = dynamic(() => import('./components/MobileMenu'))
@@ -44,8 +45,7 @@ export const revalidate = 60
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Cooking Class Ubud',
-  description:
-    'Hands-on Balinese cooking in Ubud: market tour, rice paddies, 10+ dishes, veg options & free hotel pickup. TripAdvisor Choice 2026.',
+  description: `Hands-on Balinese cooking in Ubud: market tour, rice paddies, 10+ dishes, veg options & free hotel pickup. From ${fromPriceMetaSnippet()}. TripAdvisor Choice 2026.`,
   path: '/',
   ogTitle: 'Cooking Class Ubud | Tumang Bali',
   image: '/images/gallery-group.jpg',

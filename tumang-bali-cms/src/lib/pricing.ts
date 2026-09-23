@@ -88,6 +88,27 @@ export function sharedHeroPriceText(now: Date = new Date()): string {
     : `${formatIdr(SHARED_ADULT_GROUP_IDR)} shared`
 }
 
+/** Short “from …” phrase for meta descriptions / OG titles. */
+export function fromPriceMetaSnippet(now: Date = new Date()): string {
+  return isPromoActive(now)
+    ? `${formatIdr(PROMO_SHARED_IDR)} ${PROMO_LABEL}`
+    : formatIdr(SHARED_ADULT_GROUP_IDR)
+}
+
+/**
+ * Promo-aware shared/private summaries for booking + FAQ copy.
+ * After September, falls back to regular SHARED_/PRIVATE_ summaries.
+ */
+export function sharedPricingSummaryForDisplay(now: Date = new Date()): string {
+  if (!isPromoActive(now)) return SHARED_PRICING_SUMMARY
+  return `${formatIdr(PROMO_SHARED_IDR)} shared (${PROMO_LABEL}; regular ${formatIdr(SHARED_ADULT_GROUP_IDR)} for 2+)`
+}
+
+export function privatePricingSummaryForDisplay(now: Date = new Date()): string {
+  if (!isPromoActive(now)) return PRIVATE_PRICING_SUMMARY
+  return `${formatIdr(PROMO_PRIVATE_IDR)} private (${PROMO_LABEL}; regular from ${formatIdr(PRIVATE_ADULT_SOLO_IDR)})`
+}
+
 export const SHARED_PRICING_SUMMARY =
   `${formatIdr(SHARED_ADULT_GROUP_IDR)} per adult for 2+ guests (1 adult ${formatIdr(SHARED_ADULT_SOLO_IDR)})`
 

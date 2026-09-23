@@ -5,13 +5,15 @@ import { getPayload } from 'payload'
 import configPromise from '@/payload.config'
 import ClassLanding from '../components/ClassLanding'
 import { halfDayClass } from '../components/landingContent'
+import { fromPriceMetaSnippet } from '@/lib/pricing'
 
 export const revalidate = 60
 
+const fromPrice = fromPriceMetaSnippet()
+
 export const metadata: Metadata = buildPageMetadata({
   title: 'Half-Day Cooking Class Ubud — ~4 Hours, Pickup Included',
-  description:
-    'Half-day cooking class near Ubud (~4 hours): market tour, rice-field walk, 10+ dishes. Morning or afternoon. Free hotel pickup from IDR 506,370. Max 8 guests.',
+  description: `Half-day cooking class near Ubud (~4 hours): market tour, rice-field walk, 10+ dishes. Morning or afternoon. Free hotel pickup from ${fromPrice}. Max 8 guests.`,
   path: '/half-day-cooking-class-bali',
   ogTitle: 'Half-Day Cooking Class Ubud — Morning or Afternoon',
   image: '/images/gallery-satay.jpg',

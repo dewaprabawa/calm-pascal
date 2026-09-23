@@ -13,19 +13,23 @@ import { SITE, SITE_CONTENT_UPDATED } from '@/lib/seoMetadata'
 import {
   PRIVATE_ADULT_MIN2_IDR,
   PRIVATE_ADULT_SOLO_IDR,
-  PRIVATE_KIDS_IDR,
-  PRIVATE_PRICING_SUMMARY,
   SHARED_ADULT_GROUP_IDR,
   SHARED_ADULT_SOLO_IDR,
-  SHARED_PRICING_SUMMARY,
+  fromPriceMetaSnippet,
+  privatePricingSummaryForDisplay,
+  sharedPricingSummaryForDisplay,
 } from '@/lib/pricing'
 import { normalizeActivityPricing } from '@/lib/normalizeActivityPricing'
 
 export const revalidate = 60
 
+const fromPrice = fromPriceMetaSnippet()
+const sharedSummary = sharedPricingSummaryForDisplay()
+const privateSummary = privatePricingSummaryForDisplay()
+
 export const metadata: Metadata = {
   title: 'Book Your Cooking Class — Tumang Bali | Prices & Availability',
-  description: 'Book your authentic Balinese cooking class in Ubud. View daily schedules, pricing, inclusions, and vegetarian options. Free hotel pickup included.',
+  description: `Book your authentic Balinese cooking class in Ubud. From ${fromPrice}. View daily schedules, inclusions, and vegetarian options. Free hotel pickup included.`,
   alternates: { canonical: 'https://tumangbaliclass.com/book-your-cooking-class' },
 }
 
@@ -69,7 +73,7 @@ export default async function Page() {
         price: PRIVATE_ADULT_SOLO_IDR,
         groupPrice: PRIVATE_ADULT_MIN2_IDR,
       },
-    ]
+    ].map((a) => normalizeActivityPricing(a))
   }
 
   const schemaData = {
@@ -111,7 +115,7 @@ export default async function Page() {
     url: `${SITE}/book-your-cooking-class`,
     name: 'Book Your Cooking Class — Tumang Bali',
     description:
-      `Book your authentic Balinese cooking class in Ubud. Shared ${SHARED_PRICING_SUMMARY}. Private ${PRIVATE_PRICING_SUMMARY}. Free hotel pickup.`,
+      `Book your authentic Balinese cooking class in Ubud. Shared ${sharedSummary}. Private ${privateSummary}. Free hotel pickup.`,
     dateModified: SITE_CONTENT_UPDATED,
     speakable: {
       '@type': 'SpeakableSpecification',
@@ -158,7 +162,7 @@ export default async function Page() {
               Book Your Balinese Cooking Class in Ubud
             </h1>
             <p className="text-lg text-stone-600 dark:text-stone-400 leading-relaxed mb-6" data-speakable>
-              Ready to experience the flavors of Bali? Join our authentic Balinese cooking class in Ubud for a complete culinary adventure. From the traditional morning market to the rice fields, you'll learn the secrets of Balinese cuisine with a local chef. Shared: {SHARED_PRICING_SUMMARY}. Private: {PRIVATE_PRICING_SUMMARY}. Same price on every booking channel.
+              Ready to experience the flavors of Bali? Join our authentic Balinese cooking class in Ubud for a complete culinary adventure. From the traditional morning market to the rice fields, you'll learn the secrets of Balinese cuisine with a local chef. Shared: {sharedSummary}. Private: {privateSummary}. Same price on every booking channel.
             </p>
             <div className="mb-8">
               <p className="font-bold text-stone-800 dark:text-stone-200 mb-3">What's included in your class:</p>
@@ -256,8 +260,8 @@ export default async function Page() {
             <h3 className="font-bold text-lg mb-2">Q: Do OTA prices differ from booking direct?</h3>
             <p className="text-stone-600 dark:text-stone-400 leading-relaxed">
               A: No. We charge the same rates on GetYourGuide, Viator, Airbnb, our website, and WhatsApp —
-              no platform commission overcharge. Shared: {SHARED_PRICING_SUMMARY}. Private:{' '}
-              {PRIVATE_PRICING_SUMMARY}. Use an OTA when you want instant checkout.
+              no platform commission overcharge. Shared: {sharedSummary}. Private:{' '}
+              {privateSummary}. Use an OTA when you want instant checkout.
             </p>
           </div>
           <OtaPricingNotice />
