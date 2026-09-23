@@ -137,7 +137,7 @@ export default function ClassLanding({
       </header>
 
       {content.citabilityBlock ? (
-        <section className="px-6 max-w-3xl mx-auto pb-2">
+        <section id="geo-cite-answer" className="px-6 max-w-3xl mx-auto pb-2">
           <p className="text-stone-600 dark:text-stone-400 leading-relaxed text-lg" data-speakable>
             {content.citabilityBlock}
           </p>
@@ -211,42 +211,32 @@ export default function ClassLanding({
         {content.path === PRIMARY_COOKING_CLASS_PATH && (
           <div className="bg-white dark:bg-zinc-900 border border-stone-200 dark:border-zinc-800 rounded-3xl p-6 md:p-8 mt-8">
             <p className="text-sm font-bold uppercase tracking-wider text-orange-600 mb-4">Plan your Ubud cooking class</p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/blog/ubud-cooking-class-price" className="text-sm font-semibold text-orange-600 hover:underline">
-                Ubud cooking class price 2026
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/blog/morning-vs-afternoon-tours-bali" className="text-sm font-semibold text-orange-600 hover:underline">
-                Morning vs afternoon class
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/blog/cooking-class-ubud-guide-2026" className="text-sm font-semibold text-orange-600 hover:underline">
-                Cooking class Ubud guide
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/blog/cooking-class-ubud-for-couples" className="text-sm font-semibold text-orange-600 hover:underline">
-                Cooking class for couples
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/blog/ubud-cooking-class-for-families" className="text-sm font-semibold text-orange-600 hover:underline">
-                Family cooking class
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/blog/vegetarian-cooking-class-ubud-guide" className="text-sm font-semibold text-orange-600 hover:underline">
-                Vegetarian class
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/blog/morning-cooking-class-ubud-market-tour" className="text-sm font-semibold text-orange-600 hover:underline">
-                Morning + market tour
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/blog/best-cooking-class-in-ubud" className="text-sm font-semibold text-orange-600 hover:underline">
-                Best cooking class in Ubud
-              </Link>
-              <span className="text-stone-300">·</span>
-              <Link href="/compare-ubud-cooking-classes" className="text-sm font-semibold text-orange-600 hover:underline">
-                Compare Ubud classes
-              </Link>
+            <div className="flex flex-wrap gap-x-3 gap-y-2">
+              {[
+                ['/blog/ubud-cooking-class-price', 'Ubud cooking class price 2026'],
+                ['/blog/morning-vs-afternoon-tours-bali', 'Morning vs afternoon class'],
+                ['/blog/cooking-class-ubud-guide-2026', 'Cooking class Ubud guide'],
+                ['/blog/cooking-class-ubud-for-couples', 'Cooking class for couples'],
+                ['/blog/ubud-cooking-class-for-families', 'Family cooking class'],
+                ['/blog/vegetarian-cooking-class-ubud-guide', 'Vegetarian class'],
+                ['/blog/morning-cooking-class-ubud-market-tour', 'Morning + market tour'],
+                ['/blog/market-to-table-cooking-class-ubud', 'Market-to-table class'],
+                ['/blog/rice-terrace-cooking-class-ubud', 'Rice terrace class'],
+                ['/blog/balinese-home-cooking-class-ubud', 'Home cooking class'],
+                ['/blog/cooking-class-ubud-for-solo-travelers', 'Solo travelers'],
+                ['/blog/halal-cooking-class-ubud', 'Halal-friendly class'],
+                ['/blog/cooking-class-ubud-from-canggu', 'From Canggu / Seminyak'],
+                ['/blog/is-a-bali-cooking-class-worth-it', 'Is it worth it?'],
+                ['/blog/best-cooking-class-in-ubud', 'Best cooking class in Ubud'],
+                ['/compare-ubud-cooking-classes', 'Compare Ubud classes'],
+              ].map(([href, label], i, arr) => (
+                <span key={href} className="inline-flex items-center gap-3">
+                  <Link href={href} className="text-sm font-semibold text-orange-600 hover:underline">
+                    {label}
+                  </Link>
+                  {i < arr.length - 1 ? <span className="text-stone-300" aria-hidden>·</span> : null}
+                </span>
+              ))}
             </div>
           </div>
         )}
@@ -263,7 +253,7 @@ export default function ClassLanding({
       </section>
 
       {/* FAQ */}
-      <section className="py-14 px-6 max-w-3xl mx-auto">
+      <section id="faq" className="py-14 px-6 max-w-3xl mx-auto">
         <h2 className="text-3xl font-black tracking-tight text-center mb-10">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {content.faqs.map((f, i) => (

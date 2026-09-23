@@ -98,7 +98,7 @@ export function buildLandingWebPageSchema(opts: {
     isPartOf: { '@id': `${SITE}/#website` },
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2', '[data-speakable]'],
+      cssSelector: ['h1', 'h2', '[data-speakable]', '#geo-cite-answer', '#faq'],
     },
   }
 }
