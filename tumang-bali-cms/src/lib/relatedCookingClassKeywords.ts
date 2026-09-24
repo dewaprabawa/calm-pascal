@@ -64,6 +64,20 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
   { query: 'casa luna vs tumang', path: '/blog/casa-luna-vs-tumang-cooking-class', label: 'Casa Luna vs Tumang cooking class' },
   { query: 'hands on cooking class ubud', path: '/blog/hands-on-cooking-class-ubud', label: 'Hands-on cooking class Ubud' },
 
+  // Sales / CTA cluster (booking-stage)
+  { query: 'last minute cooking class ubud', path: '/blog/last-minute-cooking-class-ubud', label: 'Last-minute cooking class Ubud' },
+  { query: 'same day cooking class ubud', path: '/blog/last-minute-cooking-class-ubud', label: 'Same-day cooking class Ubud' },
+  { query: 'how to book cooking class ubud', path: '/blog/how-to-book-cooking-class-ubud', label: 'How to book a cooking class in Ubud' },
+  { query: 'book cooking class ubud online', path: '/blog/how-to-book-cooking-class-ubud', label: 'Book cooking class Ubud online' },
+  { query: 'cooking class ubud duration', path: '/blog/cooking-class-ubud-duration-schedule', label: 'Cooking class Ubud duration' },
+  { query: 'cooking class ubud schedule', path: '/blog/cooking-class-ubud-duration-schedule', label: 'Cooking class Ubud schedule' },
+  { query: 'how long cooking class ubud', path: '/blog/cooking-class-ubud-duration-schedule', label: 'How long is a cooking class in Ubud' },
+  { query: 'allergy friendly cooking class ubud', path: '/blog/allergy-friendly-cooking-class-ubud', label: 'Allergy-friendly cooking class Ubud' },
+  { query: 'dairy free cooking class bali', path: '/blog/allergy-friendly-cooking-class-ubud', label: 'Dairy-free cooking class Bali' },
+  { query: 'birthday cooking class ubud', path: '/blog/birthday-cooking-class-ubud', label: 'Birthday cooking class Ubud' },
+  { query: 'team building cooking class bali', path: '/blog/team-building-cooking-class-bali', label: 'Team-building cooking class Bali' },
+  { query: 'corporate cooking class ubud', path: '/blog/team-building-cooking-class-bali', label: 'Corporate cooking class Ubud' },
+
   {
     query: 'taman dukuh vs tresna vs lemongrass cooking class',
     path: '/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',
