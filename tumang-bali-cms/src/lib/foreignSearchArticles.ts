@@ -1910,4 +1910,147 @@ export const foreignSearchArticleSeeds: ArticleSeed[] = [
       ),
     ]),
   },
+
+  {
+    slug: '5-tours-to-anticipate-before-bali',
+    title: '5 Tours to Anticipate Before You Come to Bali',
+    excerpt:
+      'Before you land in Bali, lock five experiences worth planning ahead: a village cooking class, temple circuit, rice terraces, an island day trip, and a sunrise hike — plus what each one really requires.',
+    image: 'blog/best-time.jpg',
+    imageAlt: 'Travellers planning Bali tours before arrival — cooking class, temples, rice fields',
+    metaTitle: '5 Tours to Anticipate Before Bali',
+    metaDescription:
+      '5 tours to anticipate before Bali: cooking class Ubud, temples, rice terraces, island day, sunrise hike. What to book, wear, and expect — plus Tumang Bali from IDR 506,370.',
+    articleSection: 'Trip Planning',
+    keywords: [
+      'tours to book before bali',
+      'what to anticipate before bali',
+      'best tours bali before arrival',
+      'bali tours to plan ahead',
+      'things to book before bali trip',
+      'bali itinerary tours',
+    ],
+    faq: [
+      {
+        question: 'Which Bali tours should I book before I arrive?',
+        answer:
+          'Book capacity-limited experiences first: a small-group cooking class in Ubud, a Mount Batur sunrise seat, and popular Nusa Penida boat days. Temple visits and Tegallalang can often be arranged on island, but planning dress code and traffic buffers in advance saves the trip.',
+      },
+      {
+        question: 'Do I need to book a cooking class before flying to Bali?',
+        answer:
+          'Strongly recommended in July–August and holiday weeks. Tumang Bali caps shared classes at 8 guests. Message WhatsApp or book online with your hotel name for free Ubud pickup. Shared class IDR 506,370 (2+).',
+      },
+      {
+        question: 'What should first-timers anticipate about Bali tours?',
+        answer:
+          'Traffic eats half-days, temple dress codes are enforced, island boats cancel in rough seas, sunrise hikes start before 2 a.m., and “rice terrace” can mean crowded selfie paths or a quiet village walk — pick on purpose.',
+      },
+    ],
+    ...TEAM,
+    content: root([
+      paragraph([
+        text('5 tours to anticipate before you come to Bali', 1),
+        text(
+          ' — not a dump of every activity on the island, but the five experiences most foreigners wish they had locked (or at least researched) before the flight. Book the scarce ones early; understand dress, timing, and cancellation rules for the rest. One of the highest-satisfaction half-days is a village ',
+        ),
+        link('cooking class in Ubud', '/balinese-cooking-class-ubud'),
+        text(' with market tour and rice-field walk.'),
+      ]),
+      heading('h2', '1. Balinese cooking class (Ubud) — book seats early'),
+      paragraph([
+        text(
+          'Anticipate: small kitchens sell out in high season; dietary notes need 24 hours; morning sessions start with a pasar visit. Tumang Bali caps shared groups at ',
+        ),
+        text('8 guests', 1),
+        text(', teaches in English, and includes free central Ubud hotel pickup. Shared rate '),
+        text('IDR 506,370', 1),
+        text(' (2+). Compare sessions: '),
+        link('morning vs afternoon cooking class', '/blog/morning-vs-afternoon-tours-bali'),
+        text('. Price guide: '),
+        link('Ubud cooking class price', '/blog/ubud-cooking-class-price'),
+        text('.'),
+      ]),
+      list([
+        'Morning ~08:30–12:30 = market + paddies + 10+ dishes',
+        'Afternoon ~14:30–17:30 = cook-and-dine (no market)',
+        'Tell allergies / vegetarian / halal preferences at booking',
+      ]),
+      paragraph([
+        text('Book online: '),
+        link('book your cooking class', '/book-your-cooking-class'),
+        text('. Full page: '),
+        link('Balinese cooking class Ubud', '/balinese-cooking-class-ubud'),
+        text('. Pickup notes: '),
+        link('cooking class Ubud hotel pickup', '/blog/cooking-class-ubud-hotel-pickup'),
+        text('.'),
+      ]),
+      heading('h2', '2. Temple circuit — sarong, offerings, respectful timing'),
+      paragraph([
+        text(
+          'Anticipate: Uluwatu, Tirta Empul, and Besakih are not “casual shorts” stops. Bring or rent a sarong and sash; cover shoulders; expect queues at peak sunset. Monkeys at Uluwatu steal glasses and phones. Read ',
+        ),
+        link('what to wear in Bali temples', '/blog/what-to-wear-in-bali-temples'),
+        text(' before you pack. Pair a calm Ubud morning class with a temple afternoon — see '),
+        link('one day in Ubud itinerary', '/blog/one-day-ubud-itinerary'),
+        text('.'),
+      ]),
+      heading('h2', '3. Rice terrace visit — crowds vs quiet village walk'),
+      paragraph([
+        text(
+          'Anticipate: Tegallalang is beautiful and busy — ticket booths, swing upsells, midday heat. If you want paddies without the selfie rail, a village cooking-class walk near Tumang is often the calmer alternative. Guide: ',
+        ),
+        link('Tegallalang rice terrace guide', '/blog/tegallalang-rice-terrace-guide'),
+        text('. Related: '),
+        link('rice terrace cooking class Ubud', '/blog/rice-terrace-cooking-class-ubud'),
+        text('.'),
+      ]),
+      heading('h2', '4. Island day trip (Nusa Penida / Lembongan) — seas and early starts'),
+      paragraph([
+        text(
+          'Anticipate: boat days leave early from Sanur, seas cancel tours without much notice, and the drive from Ubud to the harbour can take 1.5–2+ hours in traffic. Book refundable tickets when possible; keep a buffer day. Do not stack a 4 a.m. volcano hike and a Penida boat on consecutive nights if you value the cooking class (or sleep). Island overview sits inside broader ',
+        ),
+        link('things to do in Bali', '/blog/things-to-do-in-bali'),
+        text('.'),
+      ]),
+      heading('h2', '5. Sunrise hike (Mount Batur) — fitness, altitude, 2 a.m. pickup'),
+      paragraph([
+        text(
+          'Anticipate: most packages collect you between 1:30–2:30 a.m., climbing in the dark with a guide. Bring layers, a headlamp if provided poorly, and realistic fitness. Skip it if you have altitude or knee issues — swap for a sunrise coffee and a morning ',
+        ),
+        link('market-tour cooking class', '/cooking-class-with-market-tour-ubud'),
+        text(' instead. Week-long sample plan: '),
+        link('7-day Bali itinerary', '/blog/7-day-bali-itinerary'),
+        text('.'),
+      ]),
+      heading('h2', 'What else to anticipate before landing'),
+      list([
+        'Visa / VoA and tourist rules — check current entry pages',
+        'Airport → Ubud transfer time (often 1.5–2.5 hours)',
+        'Rainy-season showers Nov–Mar (classes still run)',
+        'Packing: sarong-friendly clothes, closed shoes for markets',
+      ]),
+      paragraph([
+        text('Transfers: '),
+        link('Bali airport to Ubud', '/blog/bali-airport-to-ubud'),
+        text('. Pack: '),
+        link('Bali packing list', '/blog/bali-packing-list'),
+        text('. Wet months: '),
+        link('Bali rainy season what to do', '/blog/bali-rainy-season-what-to-do'),
+        text('. Rules snapshot: '),
+        link('Bali new tourist rules 2026', '/blog/bali-new-tourist-rules-2026'),
+        text('.'),
+      ]),
+      heading('h2', 'Quick booking order (before you fly)'),
+      list([
+        'Reserve cooking class date + hotel pin (especially Jul–Aug)',
+        'Hold refundable island boat / Batur seats if those are must-dos',
+        'Leave temple + terrace timing flexible once you see traffic',
+        'Keep one empty half-day for rain or recovery',
+      ]),
+      ...commercialClose(
+        'Of the five tours above, the cooking class is the one you can book with confidence from home — and the one that teaches you Bali through food, not only photos.',
+      ),
+    ]),
+  },
 ]

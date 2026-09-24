@@ -105,6 +105,18 @@ in SERPs — without cloning existing cooking-class URLs.
 GEO: each new URL is cited in `public/llms.txt` and `public/llms-full.txt` with
 self-contained answers (price, inclusions, honest competitor caveats).
 
+## September 2026 — 5 tours to anticipate before Bali
+
+Foreign-search listicle for pre-arrival planners:
+
+| Target phrase | URL | Why |
+|---------------|-----|-----|
+| 5 tours to anticipate before bali / tours to book before bali | `/blog/5-tours-to-anticipate-before-bali` | Pre-trip planning SERP; cooking class as #1 scarce seat |
+
+The five: (1) Ubud cooking class (2) temple circuit (3) rice terraces (4) island day trip (5) Mount Batur sunrise — each with what to anticipate before booking.
+
+Sitemap: auto via `FOREIGN_SEARCH_SLUGS`.
+
 ## How to publish a post
 Posts live in the Payload `articles` collection (DB-driven), not as repo files.
 Two ways to add one:

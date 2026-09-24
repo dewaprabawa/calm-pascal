@@ -83,6 +83,10 @@ const HIGH_PRIORITY_BLOG_SLUGS = new Set([
   'things-to-do-in-ubud',
   'bali-airport-to-ubud',
   'bali-packing-list',
+  'tegallalang-rice-terrace-guide',
+  'one-day-ubud-itinerary',
+  'bali-rainy-season-what-to-do',
+  '5-tours-to-anticipate-before-bali',
 ])
 
 // Static, hand-built routes under (app).
