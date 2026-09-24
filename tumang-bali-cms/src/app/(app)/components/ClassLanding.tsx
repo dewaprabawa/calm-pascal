@@ -228,6 +228,12 @@ export default function ClassLanding({
                 ['/blog/cooking-class-ubud-from-canggu', 'From Canggu / Seminyak'],
                 ['/blog/is-a-bali-cooking-class-worth-it', 'Is it worth it?'],
                 ['/blog/best-cooking-class-in-ubud', 'Best cooking class in Ubud'],
+                ['/blog/whats-included-cooking-class-ubud', "What's included"],
+                ['/blog/book-direct-vs-ota-cooking-class-ubud', 'Book direct vs OTA'],
+                ['/blog/rainy-day-cooking-class-ubud', 'Rainy day plan'],
+                ['/blog/anniversary-cooking-class-ubud', 'Anniversary class'],
+                ['/blog/english-speaking-cooking-class-ubud', 'English-speaking class'],
+                ['/blog/gift-cooking-class-ubud', 'Gift a class'],
                 ['/compare-ubud-cooking-classes', 'Compare Ubud classes'],
               ].map(([href, label], i, arr) => (
                 <span key={href} className="inline-flex items-center gap-3">

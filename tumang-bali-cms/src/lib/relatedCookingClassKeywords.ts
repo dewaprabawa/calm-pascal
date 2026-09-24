@@ -64,6 +64,19 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
   { query: 'casa luna vs tumang', path: '/blog/casa-luna-vs-tumang-cooking-class', label: 'Casa Luna vs Tumang cooking class' },
   { query: 'hands on cooking class ubud', path: '/blog/hands-on-cooking-class-ubud', label: 'Hands-on cooking class Ubud' },
 
+  // Sales conversion cluster
+  { query: 'whats included cooking class ubud', path: '/blog/whats-included-cooking-class-ubud', label: "What's included cooking class Ubud" },
+  { query: 'cooking class ubud inclusions', path: '/blog/whats-included-cooking-class-ubud', label: 'Cooking class Ubud inclusions' },
+  { query: 'book direct cooking class ubud', path: '/blog/book-direct-vs-ota-cooking-class-ubud', label: 'Book direct vs OTA cooking class' },
+  { query: 'tripadvisor vs direct cooking class', path: '/blog/book-direct-vs-ota-cooking-class-ubud', label: 'TripAdvisor vs direct booking' },
+  { query: 'rainy day cooking class ubud', path: '/blog/rainy-day-cooking-class-ubud', label: 'Rainy day cooking class Ubud' },
+  { query: 'indoor activities ubud rainy day', path: '/blog/rainy-day-cooking-class-ubud', label: 'Indoor rainy day Ubud' },
+  { query: 'anniversary cooking class ubud', path: '/blog/anniversary-cooking-class-ubud', label: 'Anniversary cooking class Ubud' },
+  { query: 'english speaking cooking class ubud', path: '/blog/english-speaking-cooking-class-ubud', label: 'English-speaking cooking class Ubud' },
+  { query: 'cooking class ubud in english', path: '/blog/english-speaking-cooking-class-ubud', label: 'Cooking class Ubud in English' },
+  { query: 'gift cooking class ubud', path: '/blog/gift-cooking-class-ubud', label: 'Gift a cooking class in Ubud' },
+  { query: 'cooking class gift bali', path: '/blog/gift-cooking-class-ubud', label: 'Cooking class gift Bali' },
+
   {
     query: 'taman dukuh vs tresna vs lemongrass cooking class',
     path: '/blog/taman-dukuh-vs-tresna-vs-lemongrass-cooking-class',

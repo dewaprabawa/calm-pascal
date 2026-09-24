@@ -105,6 +105,23 @@ in SERPs — without cloning existing cooking-class URLs.
 GEO: each new URL is cited in `public/llms.txt` and `public/llms-full.txt` with
 self-contained answers (price, inclusions, honest competitor caveats).
 
+## September 2026 sales conversion SEO cluster
+
+Articles that remove booking friction and improve **sales / CTA** (not another best-of clone):
+
+| Target phrase | URL | Sales job |
+|---------------|-----|-----------|
+| what's included cooking class ubud | `/blog/whats-included-cooking-class-ubud` | Clear checklist → book |
+| book direct vs tripadvisor / gyg / viator | `/blog/book-direct-vs-ota-cooking-class-ubud` | Push direct booking |
+| rainy day cooking class ubud | `/blog/rainy-day-cooking-class-ubud` | Weather converter |
+| anniversary cooking class ubud | `/blog/anniversary-cooking-class-ubud` | Occasion → private/shared |
+| english speaking cooking class ubud | `/blog/english-speaking-cooking-class-ubud` | Trust for foreigners |
+| gift cooking class ubud | `/blog/gift-cooking-class-ubud` | Experience gift CTA |
+
+Related open PR: booking-stage cluster (last-minute, how-to-book, duration, allergy, birthday, team-building) on `cursor/seo-geo-sales-cta-articles-aab2`.
+
+Sitemap: `STATIC_COMMERCIAL_SLUGS` → `/blog/{slug}` priority 0.8.
+
 ## How to publish a post
 Posts live in the Payload `articles` collection (DB-driven), not as repo files.
 Two ways to add one:
