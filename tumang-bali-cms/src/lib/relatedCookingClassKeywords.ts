@@ -3,6 +3,9 @@
  * Strategy: KEEP the full commercial + foreign article cluster as spokes; point head-term
  * intents at the money page `/balinese-cooking-class-ubud`. Dedicated pickup/competitor
  * blogs own their long-tail queries when those URLs exist.
+ *
+ * Anti-cannibalization: each `query` appears once. Never map the same query to two paths.
+ * Policy: docs/SEO-CANNIBALIZATION-POLICY.md
  */
 export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; label: string }[] = [
   // Head term → money page (rank consolidation)

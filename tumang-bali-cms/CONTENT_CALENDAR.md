@@ -120,7 +120,12 @@ availability, process, clock times, allergies, birthday, corporate.
 | birthday cooking class ubud | `/blog/birthday-cooking-class-ubud` | Occasion booking | Couples / families audience pages |
 | team building / corporate cooking class bali | `/blog/team-building-cooking-class-bali` | Retreat & offsite planners | Small-group max-8 product; CMS private-group |
 
-**Explicitly skipped:** Seminyak/Kuta origin clones; more dish-named `*cooking-class*` blogs; Lobong/Ketut competitor clones; generic best-of duplicates.
+**Explicitly skipped / frozen (cannibalization):** Seminyak/Kuta origin clones; dish-named
+`*cooking-class*` blogs; Lobong/Ketut competitor clones; generic best-of duplicates;
+**anniversary / gift / English / rainy-day / what’s-included / book-direct** blogs (would
+overlap couples, rainy-season, OTA guides, money-page inclusions) — PR #80 closed for this.
+No new `*cooking-class-ubud*` clones until head term `cooking class ubud` ≤ position 15.
+Policy: `docs/SEO-CANNIBALIZATION-POLICY.md`.
 
 Sitemap: slugs added to `STATIC_COMMERCIAL_SLUGS` → auto `/blog/{slug}` at priority 0.8.
 

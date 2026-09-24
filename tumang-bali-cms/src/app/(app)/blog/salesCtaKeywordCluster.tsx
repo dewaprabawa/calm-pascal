@@ -12,8 +12,12 @@ import {
 /**
  * Sales / CTA keyword cluster (Sep 2026) — booking-stage intents that convert
  * travelers who already want a class: last-minute, how to book, schedule,
- * allergies, birthday, team-building. Distinct from “best of”, competitor,
- * dietary (GF/halal/veg), and OTA channel guides.
+ * allergies, birthday, team-building.
+ *
+ * Anti-cannibalization: each article owns ONE modifier intent only. Head term
+ * “cooking class ubud” stays on /balinese-cooking-class-ubud. See
+ * docs/SEO-CANNIBALIZATION-POLICY.md. Do not add anniversary/gift/English/
+ * rainy-day/inclusions clones that overlap couples, rainy-season, or money page.
  */
 const money = '/balinese-cooking-class-ubud'
 const book = '/book-your-cooking-class'
@@ -49,8 +53,7 @@ export const lastMinuteCookingClassUbud: StaticArticle = {
     'last minute cooking class ubud',
     'same day cooking class ubud',
     'book cooking class ubud today',
-    'cooking class ubud availability',
-    'walk in cooking class ubud',
+    'same day ubud cooking seats',
   ],
   faqs: [
     {
@@ -74,7 +77,8 @@ export const lastMinuteCookingClassUbud: StaticArticle = {
         <strong>same-day or next-day</strong> guests when the shared kitchen still has seats (max{' '}
         <strong>8</strong>). Price stays the published rate — <strong>{shared}</strong> per adult for
         2+ — with free central Ubud hotel pickup. Message WhatsApp first; do not assume a walk-in without
-        confirmation.
+        confirmation. Main booking page (not this guide):{' '}
+        <Link href={money}>cooking class Ubud</Link>.
       </p>
 
       <h2>How same-day booking works</h2>
@@ -136,8 +140,8 @@ export const lastMinuteCookingClassUbud: StaticArticle = {
 export const howToBookCookingClassUbud: StaticArticle = {
   slug: 'how-to-book-cooking-class-ubud',
   title: 'How to Book a Cooking Class in Ubud — Website, WhatsApp & OTAs',
-  metaTitle: 'How to Book a Cooking Class in Ubud',
-  metaDescription: `How to book a cooking class in Ubud: website, WhatsApp, or TripAdvisor/GYG/Viator. Same Tumang rate from ${shared}, free pickup, 24h refund on direct bookings.`,
+  metaTitle: 'How to Book Cooking Class Ubud (Steps)',
+  metaDescription: `How to book Tumang Bali: website, WhatsApp, or TripAdvisor/GYG/Viator. Process guide only — class details live on the money page. Same rate from ${shared}, 24h refund direct.`,
   excerpt: `How to book a cooking class in Ubud without getting lost in OTA fees. Tumang Bali: website or WhatsApp at the published ${shared} shared rate — or book via TripAdvisor, GetYourGuide, Viator, Airbnb if you prefer those apps.`,
   image: '/images/blog/walkthrough-class.webp',
   imageAlt: 'Booking a Balinese cooking class near Ubud online or on WhatsApp',
@@ -147,9 +151,8 @@ export const howToBookCookingClassUbud: StaticArticle = {
   keywords: [
     'how to book cooking class ubud',
     'book cooking class ubud online',
-    'cooking class ubud reservation',
-    'book balinese cooking class',
-    'ubud cooking class booking',
+    'cooking class ubud reservation steps',
+    'ubud cooking class booking process',
   ],
   faqs: [
     {
@@ -170,10 +173,11 @@ export const howToBookCookingClassUbud: StaticArticle = {
   body: (
     <>
       <p data-speakable>
-        <strong>How to book a cooking class in Ubud:</strong> pick a date, choose morning market or
-        afternoon cook-and-dine, tell us dietary needs, and share your hotel pin. At Tumang Bali the
-        published shared rate is <strong>{shared}</strong> (2+) — same class whether you book on our
-        site, WhatsApp, or a major OTA.
+        <strong>How to book a cooking class in Ubud</strong> (process guide — not the class itself): pick a
+        date, choose morning market or afternoon cook-and-dine, tell us dietary needs, and share your hotel
+        pin. At Tumang Bali the published shared rate is <strong>{shared}</strong> (2+) — same class whether
+        you book on our site, WhatsApp, or a major OTA. For inclusions and TripAdvisor proof, use the
+        primary page: <Link href={money}>Balinese cooking class Ubud</Link>.
       </p>
 
       <h2>Three booking paths (pick one)</h2>
@@ -247,9 +251,9 @@ export const howToBookCookingClassUbud: StaticArticle = {
 export const cookingClassUbudDurationSchedule: StaticArticle = {
   slug: 'cooking-class-ubud-duration-schedule',
   title: 'Cooking Class Ubud Duration & Schedule — Morning & Afternoon Times',
-  metaTitle: 'Cooking Class Ubud Duration & Schedule',
-  metaDescription: `Cooking class Ubud duration: ~3–4 hours. Morning ~08:30–12:30 with market tour; afternoon ~14:30–17:30. From ${shared}, free pickup. Exact clock times before you book.`,
-  excerpt: `How long is a cooking class in Ubud? Tumang Bali runs about 3–4 hours: morning market + paddies + 10+ dishes, or afternoon cook-and-dine. Clock times and what fits a short stay.`,
+  metaTitle: 'Cooking Class Ubud — How Long & What Time',
+  metaDescription: `How long is a cooking class in Ubud? ~3–4 hours. Clock times: morning ~08:30–12:30; afternoon ~14:30–17:30. For which session to choose, see morning vs afternoon — not this page.`,
+  excerpt: `How long is a cooking class in Ubud? Tumang Bali runs about 3–4 hours: morning market + paddies + 10+ dishes, or afternoon cook-and-dine. Clock times only — session choice is a separate guide.`,
   image: '/images/blog/walkthrough-class.webp',
   imageAlt: 'Morning and afternoon cooking class schedule near Ubud',
   author: 'Tumang Bali Team',
@@ -260,7 +264,7 @@ export const cookingClassUbudDurationSchedule: StaticArticle = {
     'cooking class ubud schedule',
     'how long cooking class ubud',
     'cooking class ubud what time',
-    'half day cooking class bali schedule',
+    'half day cooking class bali how long',
   ],
   faqs: [
     {
@@ -284,7 +288,10 @@ export const cookingClassUbudDurationSchedule: StaticArticle = {
         <strong>Cooking class Ubud duration</strong> at Tumang Bali is about <strong>3–4 hours</strong>,
         including free central Ubud hotel pickup. Morning runs roughly <strong>08:30–12:30</strong>{' '}
         (market tour + rice-field walk + 10+ dishes + lunch). Afternoon runs roughly{' '}
-        <strong>14:30–17:30</strong> (cook-and-dine). Shared rate <strong>{shared}</strong> (2+).
+        <strong>14:30–17:30</strong> (cook-and-dine). Shared rate <strong>{shared}</strong> (2+). This
+        page is clock times only — for which session to book, see{' '}
+        <Link href={morningVsAfternoon}>morning vs afternoon</Link>. Book the class on{' '}
+        <Link href={money}>cooking class Ubud</Link>.
       </p>
 
       <h2>Schedule at a glance</h2>
@@ -361,7 +368,7 @@ export const allergyFriendlyCookingClassUbud: StaticArticle = {
     'dairy free cooking class bali',
     'nut free cooking class ubud',
     'shellfish allergy cooking class bali',
-    'cooking class ubud allergies',
+    'cooking class ubud food allergies',
   ],
   faqs: [
     {
@@ -382,11 +389,12 @@ export const allergyFriendlyCookingClassUbud: StaticArticle = {
   body: (
     <>
       <p data-speakable>
-        Searching an <strong>allergy-friendly cooking class in Ubud</strong>? Tumang Bali can adapt
-        the menu for <strong>dairy-free, nut-free, shellfish-free, egg-free</strong>, and similar needs
-        when you tell us <strong>at least 24 hours</strong> before class. Shared rate{' '}
-        <strong>{shared}</strong> (2+). We are a village kitchen — not a certified allergen-free
-        facility — so we are honest about cross-contact risk.
+        Searching an <strong>allergy-friendly cooking class in Ubud</strong> (dairy, nut, shellfish — not
+        the gluten-free or halal guides)? Tumang Bali can adapt the menu for{' '}
+        <strong>dairy-free, nut-free, shellfish-free, egg-free</strong>, and similar needs when you tell us{' '}
+        <strong>at least 24 hours</strong> before class. Shared rate <strong>{shared}</strong> (2+). We are
+        a village kitchen — not a certified allergen-free facility — so we are honest about cross-contact
+        risk. Book on <Link href={money}>cooking class Ubud</Link>.
       </p>
 
       <h2>What we can usually adapt</h2>
@@ -443,7 +451,7 @@ export const birthdayCookingClassUbud: StaticArticle = {
     'birthday cooking class bali',
     'celebration cooking class ubud',
     'private birthday cooking class bali',
-    'cooking class for birthday party ubud',
+    'cooking class birthday party ubud',
   ],
   faqs: [
     {
@@ -464,11 +472,12 @@ export const birthdayCookingClassUbud: StaticArticle = {
   body: (
     <>
       <p data-speakable>
-        Planning a <strong>birthday cooking class in Ubud</strong>? Tumang Bali turns the celebration
-        into a market morning (or afternoon feast) you cook yourselves — max <strong>8</strong> on
-        shared, or a <strong>private kitchen</strong> for your party. Shared from{' '}
-        <strong>{shared}</strong>; private from <strong>{privateSolo}</strong>. Free central Ubud
-        hotel pickup.
+        Planning a <strong>birthday cooking class in Ubud</strong> (not a couples honeymoon date — that
+        guide is separate)? Tumang Bali turns the celebration into a market morning (or afternoon feast)
+        you cook yourselves — max <strong>8</strong> on shared, or a <strong>private kitchen</strong> for
+        your party. Shared from <strong>{shared}</strong>; private from <strong>{privateSolo}</strong>.
+        Free central Ubud hotel pickup. Book:{' '}
+        <Link href={money}>cooking class Ubud</Link>.
       </p>
 
       <h2>Shared vs private for birthdays</h2>
@@ -559,10 +568,11 @@ export const teamBuildingCookingClassBali: StaticArticle = {
   body: (
     <>
       <p data-speakable>
-        Looking for a <strong>team-building cooking class in Bali</strong>? Tumang Bali near Ubud runs
-        a hands-on private kitchen for corporate offsites and wellness retreats — your group grinds{' '}
-        <strong>bumbu</strong>, cooks <strong>10+ dishes</strong>, and shares the feast. From{' '}
-        <strong>{privateSolo}</strong>. English instruction. Not a hotel demo line.
+        Looking for a <strong>team-building cooking class in Bali</strong> (corporate / retreat — not the
+        shared max-8 product page)? Tumang Bali near Ubud runs a hands-on private kitchen for offsites —
+        your group grinds <strong>bumbu</strong>, cooks <strong>10+ dishes</strong>, and shares the feast.
+        From <strong>{privateSolo}</strong>. English instruction. Not a hotel demo line. Start on{' '}
+        <Link href={privateClass}>private cooking class Ubud</Link>.
       </p>
 
       <h2>Why cooking works for teams</h2>
