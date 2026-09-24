@@ -41,6 +41,13 @@ export const STATIC_COMMERCIAL_SLUGS = [
   'casa-luna-vs-tumang-cooking-class',
   'hands-on-cooking-class-ubud',
   'cooking-class-ubud-hotel-pickup',
+  // Sales / CTA cluster (booking-stage converters)
+  'last-minute-cooking-class-ubud',
+  'how-to-book-cooking-class-ubud',
+  'cooking-class-ubud-duration-schedule',
+  'allergy-friendly-cooking-class-ubud',
+  'birthday-cooking-class-ubud',
+  'team-building-cooking-class-bali',
 ] as const
 
 export type StaticCommercialSlug = (typeof STATIC_COMMERCIAL_SLUGS)[number]
