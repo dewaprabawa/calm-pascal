@@ -6,6 +6,7 @@ import { salesGeoCommercialArticles } from './salesGeoCommercialContent'
 import { relatedKeywordArticles } from './relatedKeywordArticles'
 import { seoKeywordClusterArticles } from './seoKeywordCluster'
 import { competitorKeywordClusterArticles } from './competitorKeywordCluster'
+import { salesCtaKeywordClusterArticles } from './salesCtaKeywordCluster'
 
 export {
   ubudCookingClassPrice,
@@ -35,6 +36,16 @@ export {
   cookingClassUbudForSoloTravelers,
   seoKeywordClusterArticles,
 } from './seoKeywordCluster'
+
+export {
+  lastMinuteCookingClassUbud,
+  howToBookCookingClassUbud,
+  cookingClassUbudDurationSchedule,
+  allergyFriendlyCookingClassUbud,
+  birthdayCookingClassUbud,
+  teamBuildingCookingClassBali,
+  salesCtaKeywordClusterArticles,
+} from './salesCtaKeywordCluster'
 
 export {
   paonBaliVsTumangCookingClass,
@@ -898,6 +909,7 @@ export const staticCommercialArticles: StaticArticle[] = [
   ...relatedKeywordArticles,
   ...seoKeywordClusterArticles,
   ...competitorKeywordClusterArticles,
+  ...salesCtaKeywordClusterArticles,
 ]
 
 export function getStaticCommercialArticle(slug: string): StaticArticle | undefined {
