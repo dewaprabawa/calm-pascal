@@ -19,39 +19,39 @@ const SITE = 'https://tumangbaliclass.com'
  */
 const RECIPE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   'tempe-manis': {
-    title: 'Tempe Manis Recipe — Sweet Soy Tempeh (15 Minutes)',
+    title: 'Tempe Manis Recipe — Sweet Soy (15 Min)',
     description:
       'Tempe manis recipe: crispy tempeh in sweet soy and palm sugar. Serves 2–3, about 15 minutes. From our vegetarian Balinese cooking class in Ubud.',
   },
   'nasi-kuning': {
-    title: 'Nasi Kuning Recipe — Balinese Turmeric Coconut Rice',
+    title: 'Nasi Kuning Recipe — Turmeric Coconut Rice',
     description:
       'Nasi kuning recipe: fluffy turmeric coconut rice with lemongrass and lime leaf. Serves 4, about 30 minutes. Cook it in our Ubud village class.',
   },
   'nasi-goreng-atau-nasi-kuning': {
-    title: 'Nasi Goreng or Nasi Kuning — Class Recipe Card',
+    title: 'Nasi Goreng or Nasi Kuning — Recipe Card',
     description:
       'Choose nasi goreng or nasi kuning in class: fried rice vs turmeric coconut rice. Ingredients and steps from Tumang Bali’s Ubud cooking class.',
   },
   'pepes-ikan': {
-    title: 'Pepes Ikan Recipe — Spiced Fish in Banana Leaf',
+    title: 'Pepes Ikan Recipe — Banana Leaf Fish',
     description:
-      'Pepes ikan recipe: spiced fish steamed in banana leaf. Ingredients, steam or grill method, ~40 minutes. Primary recipe from our Ubud cooking class.',
+      'Pepes ikan recipe card: spiced fish steamed or grilled in banana leaf. Ingredients + method (~40 min). From Tumang Bali’s Ubud cooking class.',
   },
   'sambal-matah': {
-    title: 'Sambal Matah Recipe Card — Raw Shallot Chili Salsa',
+    title: 'Sambal Matah Recipe Card — 10 Min Salsa',
     description:
-      'Sambal matah recipe card: shallots, lemongrass, chili, coconut oil. Ready in 10 minutes. Pair with the full blog guide or cook it live in Ubud.',
+      'Sambal matah recipe card: shallots, lemongrass, chili, coconut oil — ready in 10 minutes. Full guide on the blog; cook it live in our Ubud class.',
   },
   'sate-ayam': {
-    title: 'Sate Ayam Recipe — Balinese Chicken Satay with Peanut Sauce',
+    title: 'Sate Ayam Recipe — Satay + Peanut Sauce',
     description:
-      'Sate ayam recipe: marinated chicken skewers and peanut sauce. Grill time ~20 minutes. From Tumang Bali’s hands-on cooking class near Ubud.',
+      'Sate ayam recipe: marinated chicken skewers and peanut sauce. Grill ~20 minutes. Hands-on recipe from Tumang Bali’s cooking class near Ubud.',
   },
   'dadar-gulung': {
-    title: 'Dadar Gulung Recipe Card — Pandan Coconut Crepe',
+    title: 'Dadar Gulung Recipe Card — Pandan Crepe',
     description:
-      'Dadar gulung recipe card: pandan crepe and palm-sugar coconut filling. For the full story and tips, see our Dadar Gulung blog — or cook it in class.',
+      'Dadar gulung recipe card: pandan crepe + palm-sugar coconut filling. Full story on the blog — or cook it hands-on in our Ubud village class.',
   },
 }
 

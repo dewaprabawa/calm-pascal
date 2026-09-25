@@ -82,18 +82,20 @@ const fromPrice = isPromoActive()
   ? `${formatIdr(PROMO_SHARED_IDR)} ${PROMO_LABEL}`
   : formatIdr(SHARED_ADULT_GROUP_IDR)
 
+// Keep base title ≤46 chars so pageTitle() does not insert “…” before | Tumang Bali.
 export const metadata: Metadata = buildPageMetadata({
-  title: 'Cooking Class Ubud — Market Tour, 10+ Dishes, Max 8 Guests',
-  description: `Cooking class in Ubud: morning market tour, rice-field walk, 10+ dishes with local chefs. From ${fromPrice}, free hotel pickup, max 8 guests. TripAdvisor favorite.`,
+  title: isPromoActive()
+    ? `Cooking Class Ubud — From ${formatIdr(PROMO_SHARED_IDR)}`
+    : 'Cooking Class Ubud — Market Tour & Pickup',
+  description: `Cooking class in Ubud: morning market tour, rice-field walk, 10+ dishes. From ${fromPrice}. Free hotel pickup, max 8 guests. TripAdvisor favorite.`,
   path: '/balinese-cooking-class-ubud',
-  ogTitle: `Cooking Class Ubud — Hands-On Balinese Class from ${fromPrice}`,
+  ogTitle: `Cooking Class Ubud — Hands-On Class from ${fromPrice}`,
   image: '/images/gallery-group.jpg',
   imageAlt: 'Cooking class in Ubud Bali with local chefs',
   keywords: [
     'cooking class ubud',
     'ubud cooking class',
     'balinese cooking class ubud',
-    'best cooking class in ubud',
     'cooking class with market tour ubud',
     'rice terrace cooking class ubud',
     'balinese home cooking class',

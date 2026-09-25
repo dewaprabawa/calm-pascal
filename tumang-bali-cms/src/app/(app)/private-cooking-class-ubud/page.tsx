@@ -24,10 +24,13 @@ const privateMin2 = isPromoActive()
   : formatIdr(PRIVATE_ADULT_MIN2_IDR)
 
 export const metadata: Metadata = buildPageMetadata({
-  title: `Private Cooking Class Ubud — From ${privateSolo}, Free Pickup`,
-  description: `Private cooking class in Ubud: your own chef, tailored menu, market tour. From ${privateSolo}${isPromoActive() ? '' : `, min. 2 ${privateMin2}`}, free hotel pickup. Ideal for couples and solo travelers.`,
+  // ≤46 chars before brand suffix — avoid SERP “…”
+  title: isPromoActive()
+    ? `Private Cooking Class Ubud — ${formatIdr(PROMO_PRIVATE_IDR)}`
+    : 'Private Cooking Class Ubud — Own Chef',
+  description: `Private cooking class in Ubud: your own chef, tailored menu, market tour. From ${privateSolo}${isPromoActive() ? '' : `, min. 2 ${privateMin2}`}. Free hotel pickup. Ideal for couples and solo travelers.`,
   path: '/private-cooking-class-ubud',
-  ogTitle: `Private Cooking Class Ubud — From ${privateSolo} with Pickup`,
+  ogTitle: `Private Cooking Class Ubud — From ${privateSolo}`,
   image: '/images/gallery-group.jpg',
   imageAlt: 'Private Balinese cooking class for a group in Ubud',
   keywords: [
