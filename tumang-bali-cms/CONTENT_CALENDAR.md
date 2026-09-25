@@ -105,29 +105,17 @@ in SERPs — without cloning existing cooking-class URLs.
 GEO: each new URL is cited in `public/llms.txt` and `public/llms-full.txt` with
 self-contained answers (price, inclusions, honest competitor caveats).
 
-## September 2026 sales / CTA keyword cluster
+## September 2026 — 5 tours to anticipate before Bali
 
-Booking-stage articles that improve **sales and CTA** (not another “best cooking class”
-clone). Keyword research focused on queries travelers ask *after* they decide to book:
-availability, process, clock times, allergies, birthday, corporate.
+Foreign-search listicle for pre-arrival planners:
 
-| Target phrase | URL | Why this keyword | Distinct from |
-|---------------|-----|------------------|---------------|
-| last minute / same day cooking class ubud | `/blog/last-minute-cooking-class-ubud` | Urgency converters; WhatsApp CTA | OTA channel guides |
-| how to book cooking class ubud | `/blog/how-to-book-cooking-class-ubud` | Process intent → website / WA / OTA | GYG/Viator platform posts |
-| cooking class ubud duration / schedule / what time | `/blog/cooking-class-ubud-duration-schedule` | Clock + length before book | Morning-vs-afternoon choice post |
-| allergy friendly / dairy free cooking class ubud | `/blog/allergy-friendly-cooking-class-ubud` | Allergy converters | GF / veg / halal dietary posts |
-| birthday cooking class ubud | `/blog/birthday-cooking-class-ubud` | Occasion booking | Couples / families audience pages |
-| team building / corporate cooking class bali | `/blog/team-building-cooking-class-bali` | Retreat & offsite planners | Small-group max-8 product; CMS private-group |
+| Target phrase | URL | Why |
+|---------------|-----|-----|
+| 5 tours to anticipate before bali / tours to book before bali | `/blog/5-tours-to-anticipate-before-bali` | Pre-trip planning SERP; cooking class as #1 scarce seat |
 
-**Explicitly skipped / frozen (cannibalization):** Seminyak/Kuta origin clones; dish-named
-`*cooking-class*` blogs; Lobong/Ketut competitor clones; generic best-of duplicates;
-**anniversary / gift / English / rainy-day / what’s-included / book-direct** blogs (would
-overlap couples, rainy-season, OTA guides, money-page inclusions) — PR #80 closed for this.
-No new `*cooking-class-ubud*` clones until head term `cooking class ubud` ≤ position 15.
-Policy: `docs/SEO-CANNIBALIZATION-POLICY.md`.
+The five: (1) Ubud cooking class (2) temple circuit (3) rice terraces (4) island day trip (5) Mount Batur sunrise — each with what to anticipate before booking.
 
-Sitemap: slugs added to `STATIC_COMMERCIAL_SLUGS` → auto `/blog/{slug}` at priority 0.8.
+Sitemap: auto via `FOREIGN_SEARCH_SLUGS`.
 
 ## How to publish a post
 Posts live in the Payload `articles` collection (DB-driven), not as repo files.

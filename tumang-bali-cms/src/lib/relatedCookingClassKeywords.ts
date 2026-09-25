@@ -106,6 +106,13 @@ export const RELATED_COOKING_CLASS_KEYWORDS: { query: string; path: string; labe
   { query: 'bali rainy season', path: '/blog/bali-rainy-season-what-to-do', label: 'Bali rainy season what to do' },
   { query: 'bali airport to ubud', path: '/blog/bali-airport-to-ubud', label: 'Bali airport to Ubud' },
   { query: 'bali packing list', path: '/blog/bali-packing-list', label: 'Bali packing list' },
+  {
+    query: '5 tours to anticipate before bali',
+    path: '/blog/5-tours-to-anticipate-before-bali',
+    label: '5 tours to anticipate before Bali',
+  },
+  { query: 'tours to book before bali', path: '/blog/5-tours-to-anticipate-before-bali', label: 'Tours to book before Bali' },
+  { query: 'what to anticipate before bali', path: '/blog/5-tours-to-anticipate-before-bali', label: 'What to anticipate before Bali' },
 ]
 
 export function relatedKeywordsForSlug(slug: string, limit = 6): typeof RELATED_COOKING_CLASS_KEYWORDS {
